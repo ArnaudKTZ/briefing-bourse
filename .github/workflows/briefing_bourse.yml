@@ -5,6 +5,9 @@ on:
     - cron: '0 7 * * 1-5'  # 8h heure française (UTC+1), lundi au vendredi
   workflow_dispatch:         # lancement manuel depuis GitHub
 
+permissions:
+  contents: write
+
 jobs:
   envoyer-briefing:
     runs-on: ubuntu-latest
