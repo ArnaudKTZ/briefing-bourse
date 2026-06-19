@@ -1,0 +1,29 @@
+name: Briefing Bourse Quotidien
+
+on:
+  schedule:
+    - cron: '0 7 * * 1-5'  # 8h heure française (UTC+1) du lundi au vendredi
+  workflow_dispatch:         # permet de lancer manuellement depuis GitHub
+
+jobs:
+  envoyer-briefing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install anthropic
+
+      - name: Lancer le briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+        run: python briefing_bourse.py
