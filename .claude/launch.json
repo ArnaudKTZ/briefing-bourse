@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "AT26 Newsletter",
+      "runtimeExecutable": "/opt/homebrew/bin/node",
+      "runtimeArgs": ["serve.js"],
+      "port": 7788
+    }
+  ]
+}

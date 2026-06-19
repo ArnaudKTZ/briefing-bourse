@@ -1,0 +1,27 @@
+{
+  "capital": 4075.46,
+  "positions": {
+    "Danone": {
+      "nb_actions": 30,
+      "prix_entree": 65.06,
+      "date_entree": "2026-06-19",
+      "cout_total": 1951.8000000000002
+    },
+    "Pernod Ricard": {
+      "nb_actions": 31,
+      "prix_entree": 64.14,
+      "date_entree": "2026-06-19",
+      "cout_total": 1988.34
+    },
+    "Veolia": {
+      "nb_actions": 55,
+      "prix_entree": 36.08,
+      "date_entree": "2026-06-19",
+      "cout_total": 1984.3999999999999
+    }
+  },
+  "historique_valeur": {
+    "2026-06-19": 10000.0
+  },
+  "trades": []
+}

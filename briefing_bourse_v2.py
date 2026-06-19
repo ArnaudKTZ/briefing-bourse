@@ -23,9 +23,9 @@ except ImportError:
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "COLLE_TA_CLE_ICI")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "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")
 ZOHO_EMAIL        = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
-ZOHO_PASSWORD     = os.environ.get("ZOHO_PASSWORD", "")
+ZOHO_PASSWORD     = os.environ.get("ZOHO_PASSWORD", "2a6xXFJMr4GN")
 ZOHO_SMTP         = "smtp.zoho.eu"
 ZOHO_PORT         = 587
 
@@ -55,7 +55,7 @@ CAC40 = {
     "Société Générale":   "GLE.PA",
     "Stellantis":         "STLAM.MI",
     "Saint-Gobain":       "SGO.PA",
-    "ArcelorMittal":      "MT.PA",
+    "ArcelorMittal":      "MT",
     "Pernod Ricard":      "RI.PA",
     "Michelin":           "ML.PA",
     "Capgemini":          "CAP.PA",
@@ -71,7 +71,7 @@ CAC40 = {
     "Alstom":             "ALO.PA",
     "Worldline":          "WLN.PA",
     "Veolia":             "VIE.PA",
-    "STMicroelectronics": "STM.PA",
+    "STMicroelectronics": "STM",
     "Dassault Systèmes":  "DSY.PA",
     "Edenred":            "EDEN.PA",
     "Accor":              "AC.PA",
