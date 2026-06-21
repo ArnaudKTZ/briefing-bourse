@@ -711,7 +711,100 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     with open(FICHIER_PORTEFEUILLE, "w") as f:
         json.dump(pf, f, ensure_ascii=False, indent=2)
 
-    return resume_pf
+    return resume_pf, pf, donnees_dict
+
+
+def generer_html_portefeuille(pf, donnees_dict):
+    """Génère le bloc HTML du tableau portefeuille virtuel pour l'email."""
+    valeur_totale = list(pf["historique_valeur"].values())[-1] if pf["historique_valeur"] else 10000.0
+    perf_pf = round((valeur_totale - 10000) / 10000 * 100, 2)
+    signe_global = "+" if perf_pf >= 0 else ""
+    gain_total = round(valeur_totale - 10000, 2)
+    signe_gain = "+" if gain_total >= 0 else ""
+    couleur_global = "#2e7d32" if perf_pf >= 0 else "#c62828"
+
+    nb_positions = len(pf["positions"])
+    capital_libre = round(pf["capital"], 2)
+
+    lignes_trades = ""
+    derniers_trades = pf["trades"][-10:] if pf["trades"] else []
+    for t in reversed(derniers_trades):
+        pnl = t["pnl_pct"]
+        signe = "+" if pnl >= 0 else ""
+        couleur = "#2e7d32" if pnl >= 0 else "#c62828"
+        date_e = t["date_entree"][8:10] + "/" + t["date_entree"][5:7] + "/" + t["date_entree"][2:4]
+        date_s = t["date_sortie"][8:10] + "/" + t["date_sortie"][5:7] + "/" + t["date_sortie"][2:4]
+        lignes_trades += f"""<tr style='border-bottom:1px solid #eee;'>
+          <td style='padding:7px 10px;font-weight:500;'>{t['nom']}</td>
+          <td style='padding:7px 10px;color:#666;'>{date_e}</td>
+          <td style='padding:7px 10px;color:#666;'>{date_s}</td>
+          <td style='padding:7px 10px;text-align:right;'>{t['entree']:.2f} €</td>
+          <td style='padding:7px 10px;text-align:right;'>{t['sortie']:.2f} €</td>
+          <td style='padding:7px 10px;text-align:right;font-weight:600;color:{couleur};'>{signe}{pnl:.2f} %</td>
+        </tr>"""
+
+    for nom, pos in pf["positions"].items():
+        cours_actuel = donnees_dict.get(nom, {}).get("cours", pos["prix_entree"])
+        pnl = round((cours_actuel - pos["prix_entree"]) / pos["prix_entree"] * 100, 2)
+        signe = "+" if pnl >= 0 else ""
+        couleur = "#2e7d32" if pnl >= 0 else "#c62828"
+        date_e = pos["date_entree"][8:10] + "/" + pos["date_entree"][5:7] + "/" + pos["date_entree"][2:4]
+        lignes_trades += f"""<tr style='border-bottom:1px solid #eee;background:#f9f9f9;'>
+          <td style='padding:7px 10px;font-weight:500;'>{nom}</td>
+          <td style='padding:7px 10px;color:#666;'>{date_e}</td>
+          <td style='padding:7px 10px;color:#999;font-style:italic;'>en cours</td>
+          <td style='padding:7px 10px;text-align:right;'>{pos['prix_entree']:.2f} €</td>
+          <td style='padding:7px 10px;text-align:right;color:#999;'>—</td>
+          <td style='padding:7px 10px;text-align:right;font-weight:600;color:{couleur};'>{signe}{pnl:.2f} %</td>
+        </tr>"""
+
+    if not lignes_trades:
+        lignes_trades = "<tr><td colspan='6' style='padding:12px;text-align:center;color:#999;'>Aucun trade pour l'instant</td></tr>"
+
+    return f"""
+<div style='margin:20px 0;'>
+  <h3 style='margin:0 0 12px;font-size:15px;color:#1a1a2e;'>Portefeuille virtuel</h3>
+  <div style='display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;'>
+    <div style='flex:1;min-width:120px;background:#f5f5f5;border-radius:8px;padding:12px 16px;'>
+      <div style='font-size:11px;color:#666;margin-bottom:4px;'>Capital de départ</div>
+      <div style='font-size:18px;font-weight:600;'>10 000 €</div>
+    </div>
+    <div style='flex:1;min-width:120px;background:#f5f5f5;border-radius:8px;padding:12px 16px;'>
+      <div style='font-size:11px;color:#666;margin-bottom:4px;'>Valeur actuelle</div>
+      <div style='font-size:18px;font-weight:600;'>{valeur_totale:.0f} €</div>
+    </div>
+    <div style='flex:1;min-width:120px;background:#f5f5f5;border-radius:8px;padding:12px 16px;'>
+      <div style='font-size:11px;color:#666;margin-bottom:4px;'>Performance</div>
+      <div style='font-size:18px;font-weight:600;color:{couleur_global};'>{signe_global}{perf_pf:.2f} %</div>
+    </div>
+    <div style='flex:1;min-width:120px;background:#f5f5f5;border-radius:8px;padding:12px 16px;'>
+      <div style='font-size:11px;color:#666;margin-bottom:4px;'>Positions ouvertes</div>
+      <div style='font-size:18px;font-weight:600;'>{nb_positions}</div>
+    </div>
+  </div>
+  <table style='width:100%;border-collapse:collapse;font-size:13px;'>
+    <thead>
+      <tr style='background:#1a1a2e;color:white;'>
+        <th style='padding:8px 10px;text-align:left;font-weight:500;'>Action</th>
+        <th style='padding:8px 10px;text-align:left;font-weight:500;'>Date achat</th>
+        <th style='padding:8px 10px;text-align:left;font-weight:500;'>Date vente</th>
+        <th style='padding:8px 10px;text-align:right;font-weight:500;'>Prix achat</th>
+        <th style='padding:8px 10px;text-align:right;font-weight:500;'>Prix vente</th>
+        <th style='padding:8px 10px;text-align:right;font-weight:500;'>Gain/Perte</th>
+      </tr>
+    </thead>
+    <tbody>
+      {lignes_trades}
+    </tbody>
+    <tfoot>
+      <tr style='background:#f0f0f0;border-top:2px solid #ddd;'>
+        <td colspan='5' style='padding:8px 10px;font-weight:600;'>Gain/Perte total</td>
+        <td style='padding:8px 10px;text-align:right;font-weight:700;font-size:14px;color:{couleur_global};'>{signe_gain}{gain_total:.0f} € ({signe_global}{perf_pf:.2f} %)</td>
+      </tr>
+    </tfoot>
+  </table>
+  <p style='font-size:11px;color:#999;margin-top:8px;'>Capital libre : {capital_libre:.0f} € | Simulation sans frais de courtage</p>
+</div>"""
 
 
 # ─── CONSTRUCTION DU PROMPT ───────────────────────────────────────────────────
@@ -938,7 +1031,7 @@ def markdown_vers_html(texte):
     return "\n".join(html)
 
 
-def envoyer_email(briefing, perf_stats):
+def envoyer_email(briefing, perf_stats, html_portefeuille=""):
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
     sujet     = f"Agent Bourse V3 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
@@ -962,6 +1055,8 @@ color:#222;max-width:1000px;margin:auto;padding:20px;'>
 </div>
 <div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
 {contenu}
+<hr style='border:1px solid #ddd;margin:20px 0;'>
+{html_portefeuille}
 </div>
 </body></html>"""
 
@@ -1007,7 +1102,7 @@ if __name__ == "__main__":
     momentum     = calculer_momentum_sectoriel(donnees_dict)
 
     print("Gestion portefeuille virtuel...")
-    pf_resume = gerer_portefeuille_virtuel(donnees, perf)
+    pf_resume, pf_data, pf_donnees_dict = gerer_portefeuille_virtuel(donnees, perf)
 
     print("Génération briefing par Claude...")
     prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi)
@@ -1023,6 +1118,7 @@ if __name__ == "__main__":
     sauvegarder_recommandations(perf, donnees)
 
     print("Envoi email...")
-    envoyer_email(briefing, perf["stats"])
+    html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict)
+    envoyer_email(briefing, perf["stats"], html_pf)
 
     print("Terminé.")
