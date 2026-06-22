@@ -26,8 +26,16 @@ DESTINATAIRES = [
     "Arnaud.kuntz@zoho.eu",
 ]
 
-SEUIL_ALERTE        = 85   # score minimum pour déclencher une alerte
-FICHIER_ALERTES_VUE = "alertes_envoyees.json"
+SEUIL_ALERTE         = 85
+FICHIER_ALERTES_VUE  = "alertes_envoyees.json"
+FICHIER_PORTEFEUILLE = "portefeuille_virtuel.json"
+FRAIS_TAUX           = 0.005
+FRAIS_MINIMUM        = 0.50
+BUDGET_PAR_POSITION  = 2000.0
+MAX_POSITIONS        = 5
+SEUIL_ACHAT_INTRADAY = 80   # score pour ouvrir une position intraday
+SEUIL_STOP_LOSS      = -5.0
+SEUIL_TAKE_PROFIT    = 8.0
 
 try:
     from ta.momentum import RSIIndicator, StochasticOscillator
@@ -301,6 +309,103 @@ def detecter_alertes(snapshot, alertes_envoyees, today, heure):
     return alertes, alertes_envoyees
 
 
+def calculer_frais(montant):
+    return round(max(FRAIS_MINIMUM, montant * FRAIS_TAUX), 2)
+
+
+def gerer_portefeuille_intraday(snapshot, heure):
+    """Ouvre/ferme des positions en cours de journée selon les signaux intraday."""
+    if not os.path.exists(FICHIER_PORTEFEUILLE):
+        return [], []
+
+    with open(FICHIER_PORTEFEUILLE, "r") as f:
+        pf = json.load(f)
+
+    today    = datetime.date.today().isoformat()
+    fermes   = []
+    ouverts  = []
+
+    # Fermeture des positions si signal ÉVITER, stop-loss ou take-profit
+    positions_a_fermer = []
+    for nom, pos in pf["positions"].items():
+        d = snapshot.get(nom)
+        if not d:
+            continue
+        signal       = d["signal"]
+        cours_actuel = d["cours"]
+        pnl_pct      = (cours_actuel - pos["prix_entree"]) / pos["prix_entree"] * 100
+
+        if signal == "ÉVITER" or pnl_pct <= SEUIL_STOP_LOSS or pnl_pct >= SEUIL_TAKE_PROFIT:
+            positions_a_fermer.append((nom, cours_actuel, pnl_pct, signal))
+
+    for nom, cours_sortie, pnl_pct, raison_signal in positions_a_fermer:
+        pos           = pf["positions"][nom]
+        valeur_sortie = pos["nb_actions"] * cours_sortie
+        frais_vente   = calculer_frais(valeur_sortie)
+        net_sortie    = valeur_sortie - frais_vente
+        frais_total   = round(pos.get("frais_achat", 0) + frais_vente, 2)
+        pnl_net       = round((net_sortie - pos["cout_total"]) / pos["cout_total"] * 100, 2)
+        pf["capital"] += net_sortie
+
+        raison = "ÉVITER intraday" if raison_signal == "ÉVITER" else (
+            f"Stop-loss {pnl_pct:.1f}%" if pnl_pct <= SEUIL_STOP_LOSS else f"Take-profit {pnl_pct:.1f}%"
+        )
+
+        pf["trades"].append({
+            "nom":           nom,
+            "entree":        pos["prix_entree"],
+            "sortie":        cours_sortie,
+            "date_entree":   pos["date_entree"],
+            "heure_entree":  pos.get("heure_entree", "07:00"),
+            "source_entree": pos.get("source_entree", "Briefing"),
+            "date_sortie":   today,
+            "heure_sortie":  heure,
+            "source_sortie": "Intraday",
+            "pnl_pct":       pnl_net,
+            "frais_total":   frais_total,
+            "raison_sortie": raison,
+        })
+        del pf["positions"][nom]
+        fermes.append({"nom": nom, "cours": cours_sortie, "pnl": pnl_net, "raison": raison})
+
+    # Ouverture de nouvelles positions si score >= seuil intraday
+    for nom, d in snapshot.items():
+        if (d["score"] >= SEUIL_ACHAT_INTRADAY and
+                d["signal"] == "ACHETER" and
+                nom not in pf["positions"] and
+                len(pf["positions"]) < MAX_POSITIONS and
+                pf["capital"] >= BUDGET_PAR_POSITION):
+            cours       = d["cours"]
+            nb          = int(BUDGET_PAR_POSITION / cours)
+            if nb > 0:
+                cout        = nb * cours
+                frais_achat = calculer_frais(cout)
+                pf["capital"] -= (cout + frais_achat)
+                pf["positions"][nom] = {
+                    "nb_actions":   nb,
+                    "prix_entree":  cours,
+                    "date_entree":  today,
+                    "heure_entree": heure,
+                    "source_entree":"Intraday",
+                    "cout_total":   cout,
+                    "frais_achat":  frais_achat,
+                }
+                ouverts.append({"nom": nom, "cours": cours, "score": d["score"]})
+
+    # Mise à jour valeur totale
+    valeur_positions = sum(
+        pos["nb_actions"] * snapshot.get(nom, {}).get("cours", pos["prix_entree"])
+        for nom, pos in pf["positions"].items()
+    )
+    valeur_totale = round(pf["capital"] + valeur_positions, 2)
+    pf["historique_valeur"][today] = valeur_totale
+
+    with open(FICHIER_PORTEFEUILLE, "w") as f:
+        json.dump(pf, f, ensure_ascii=False, indent=2)
+
+    return fermes, ouverts
+
+
 if __name__ == "__main__":
     now   = datetime.datetime.now()
     today = datetime.date.today().isoformat()
@@ -339,10 +444,46 @@ if __name__ == "__main__":
     alertes, alertes_envoyees = detecter_alertes(snapshot, alertes_envoyees, today, heure)
     sauvegarder_alertes_envoyees(alertes_envoyees)
 
+    print("Gestion portefeuille intraday...")
+    fermes, ouverts = gerer_portefeuille_intraday(snapshot, heure)
+    if fermes:
+        print(f"  Positions fermées : {[f['nom'] for f in fermes]}")
+    if ouverts:
+        print(f"  Positions ouvertes : {[o['nom'] for o in ouverts]}")
+
+    # Fusionne les mouvements de portefeuille dans les alertes si pertinent
+    for o in ouverts:
+        cle = f"{today}_{o['nom']}_achat"
+        if cle not in alertes_envoyees:
+            alertes.append({
+                "nom":       o["nom"],
+                "cours":     o["cours"],
+                "variation": snapshot.get(o["nom"], {}).get("variation", 0),
+                "score":     o["score"],
+                "signal":    "ACHETER",
+                "raison":    f"Position ouverte en portefeuille virtuel (score {o['score']}/100)",
+            })
+            alertes_envoyees[cle] = heure
+
+    for f in fermes:
+        cle = f"{today}_{f['nom']}_vente"
+        if cle not in alertes_envoyees:
+            alertes.append({
+                "nom":       f["nom"],
+                "cours":     f["cours"],
+                "variation": snapshot.get(f["nom"], {}).get("variation", 0),
+                "score":     snapshot.get(f["nom"], {}).get("score", 0),
+                "signal":    "VENTE",
+                "raison":    f"Position fermée — {f['raison']} | P&L : {'+' if f['pnl'] >= 0 else ''}{f['pnl']:.2f}%",
+            })
+            alertes_envoyees[cle] = heure
+
+    sauvegarder_alertes_envoyees(alertes_envoyees)
+
     if alertes:
-        print(f"  {len(alertes)} alerte(s) détectée(s) — envoi email...")
+        print(f"  {len(alertes)} alerte(s) — envoi email...")
         envoyer_alerte(alertes)
     else:
-        print("  Aucune alerte exceptionnelle.")
+        print("  Aucune alerte.")
 
     print("Scoring intraday terminé.")
