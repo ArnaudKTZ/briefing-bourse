@@ -8,9 +8,26 @@ Sauvegarde dans intraday_scores.json pour enrichir le briefing du lendemain.
 import datetime
 import json
 import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 import yfinance as yf
 import pandas as pd
 import numpy as np
+
+ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
+ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
+ZOHO_SMTP     = "smtp.zoho.eu"
+ZOHO_PORT     = 587
+
+DESTINATAIRES = [
+    "xtrem111team@gmail.com",
+    "ferrey83400@gmail.com",
+    "Arnaud.kuntz@zoho.eu",
+]
+
+SEUIL_ALERTE        = 85   # score minimum pour déclencher une alerte
+FICHIER_ALERTES_VUE = "alertes_envoyees.json"
 
 try:
     from ta.momentum import RSIIndicator, StochasticOscillator
@@ -175,6 +192,115 @@ def sauvegarder_intraday(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def charger_alertes_envoyees():
+    if os.path.exists(FICHIER_ALERTES_VUE):
+        with open(FICHIER_ALERTES_VUE, "r") as f:
+            return json.load(f)
+    return {}
+
+
+def sauvegarder_alertes_envoyees(data):
+    with open(FICHIER_ALERTES_VUE, "w") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def envoyer_alerte(alertes):
+    if not alertes or not ZOHO_PASSWORD:
+        return
+
+    today = datetime.date.today().strftime("%d/%m/%Y")
+    heure = datetime.datetime.now().strftime("%H:%M")
+    sujet = f"ALERTE BOURSE — {len(alertes)} signal(s) exceptionnel(s) — {today} {heure}"
+
+    lignes_html = ""
+    for a in alertes:
+        couleur = "#1b5e20" if a["signal"] == "ACHETER" else "#b71c1c"
+        lignes_html += f"""
+        <tr style='border-bottom:1px solid #eee;'>
+          <td style='padding:10px;font-weight:bold;font-size:15px;'>{a['nom']}</td>
+          <td style='padding:10px;text-align:center;'>
+            <span style='background:{couleur};color:white;padding:4px 10px;border-radius:4px;font-weight:bold;'>
+              {a['signal']} {a['score']}/100
+            </span>
+          </td>
+          <td style='padding:10px;'>{a['cours']} € ({'+' if a['variation'] >= 0 else ''}{a['variation']}%)</td>
+          <td style='padding:10px;color:#555;font-size:13px;'>{a['raison']}</td>
+        </tr>"""
+
+    html = f"""<html><body style='font-family:Arial,sans-serif;max-width:800px;margin:auto;padding:20px;'>
+<div style='background:#b71c1c;color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
+  <h2 style='margin:0;font-size:18px;'>ALERTE — Signal(s) exceptionnel(s) detecte(s)</h2>
+  <p style='margin:6px 0 0;font-size:12px;opacity:0.9;'>{today} a {heure} — Score seuil : {SEUIL_ALERTE}/100</p>
+</div>
+<div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
+  <table style='width:100%;border-collapse:collapse;font-size:14px;'>
+    <thead>
+      <tr style='background:#f5f5f5;'>
+        <th style='padding:10px;text-align:left;'>Valeur</th>
+        <th style='padding:10px;text-align:center;'>Signal</th>
+        <th style='padding:10px;text-align:left;'>Cours</th>
+        <th style='padding:10px;text-align:left;'>Pourquoi</th>
+      </tr>
+    </thead>
+    <tbody>{lignes_html}</tbody>
+  </table>
+  <p style='margin-top:16px;font-size:12px;color:#999;'>
+    Ce briefing est informatif. Tu prends tes propres decisions d investissement.
+  </p>
+</div>
+</body></html>"""
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = sujet
+    msg["From"]    = ZOHO_EMAIL
+    msg["To"]      = ", ".join(DESTINATAIRES)
+    msg.attach(MIMEText(html, "html", "utf-8"))
+
+    try:
+        with smtplib.SMTP(ZOHO_SMTP, ZOHO_PORT) as serveur:
+            serveur.starttls()
+            serveur.login(ZOHO_EMAIL, ZOHO_PASSWORD)
+            serveur.sendmail(ZOHO_EMAIL, DESTINATAIRES, msg.as_string())
+        print(f"Alerte envoyee : {[a['nom'] for a in alertes]}")
+    except Exception as e:
+        print(f"Erreur envoi alerte : {e}")
+
+
+def detecter_alertes(snapshot, alertes_envoyees, today, heure):
+    alertes = []
+    for nom, d in snapshot.items():
+        score  = d["score"]
+        signal = d["signal"]
+        cle    = f"{today}_{nom}"
+
+        if cle in alertes_envoyees:
+            continue
+
+        raisons = []
+
+        if score >= SEUIL_ALERTE and signal == "ACHETER":
+            raisons.append(f"Score exceptionnel {score}/100")
+
+        if d.get("gap_ouverture", 0) > 2 and d.get("volume_ratio", 1) > 2:
+            raisons.append(f"Gap haussier +{d['gap_ouverture']}% avec volume x{d['volume_ratio']}")
+
+        if d.get("momentum_intraday", 0) > 2 and score >= 70:
+            raisons.append(f"Momentum intraday fort +{d['momentum_intraday']}%")
+
+        if raisons:
+            alertes.append({
+                "nom":       nom,
+                "cours":     d["cours"],
+                "variation": d["variation"],
+                "score":     score,
+                "signal":    signal,
+                "raison":    " | ".join(raisons),
+            })
+            alertes_envoyees[cle] = heure
+
+    return alertes, alertes_envoyees
+
+
 if __name__ == "__main__":
     now   = datetime.datetime.now()
     today = datetime.date.today().isoformat()
@@ -203,6 +329,20 @@ if __name__ == "__main__":
 
     data[today][heure] = snapshot
     sauvegarder_intraday(data)
-
     print(f"OK : {ok}/39 snapshots sauvegardés à {heure}")
-    print("Fichier intraday_scores.json mis à jour.")
+
+    print("Détection alertes exceptionnelles...")
+    alertes_envoyees = charger_alertes_envoyees()
+    sept_jours = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    alertes_envoyees = {k: v for k, v in alertes_envoyees.items() if k[:10] >= sept_jours}
+
+    alertes, alertes_envoyees = detecter_alertes(snapshot, alertes_envoyees, today, heure)
+    sauvegarder_alertes_envoyees(alertes_envoyees)
+
+    if alertes:
+        print(f"  {len(alertes)} alerte(s) détectée(s) — envoi email...")
+        envoyer_alerte(alertes)
+    else:
+        print("  Aucune alerte exceptionnelle.")
+
+    print("Scoring intraday terminé.")
