@@ -197,18 +197,20 @@ SECTEURS = {
 # ─── FONDAMENTAUX ─────────────────────────────────────────────────────────────
 
 def recuperer_fondamentaux(ticker_obj):
-    """Récupère PER, croissance CA, dette/fonds propres, marge nette via yfinance."""
+    """Récupère PER, P/B, croissance CA, dette/fonds propres, marge nette via yfinance."""
     try:
         info = ticker_obj.info
         per         = info.get("trailingPE") or info.get("forwardPE")
-        rev_growth  = info.get("revenueGrowth")      # ex: 0.12 = +12%
-        debt_equity = info.get("debtToEquity")        # ex: 45.2 = 45.2%
-        marge_nette = info.get("profitMargins")       # ex: 0.18 = 18%
+        pb          = info.get("priceToBook")
+        rev_growth  = info.get("revenueGrowth")
+        debt_equity = info.get("debtToEquity")
+        marge_nette = info.get("profitMargins")
         per         = round(per, 1) if per else None
+        pb          = round(pb, 2) if pb else None
         rev_growth  = round(rev_growth * 100, 1) if rev_growth else None
         debt_equity = round(debt_equity, 1) if debt_equity else None
         marge_nette = round(marge_nette * 100, 1) if marge_nette else None
-        return {"per": per, "rev_growth": rev_growth, "debt_equity": debt_equity, "marge_nette": marge_nette}
+        return {"per": per, "pb": pb, "rev_growth": rev_growth, "debt_equity": debt_equity, "marge_nette": marge_nette}
     except:
         return {}
 
@@ -242,7 +244,13 @@ def scorer_fondamentaux(fond):
         elif marge > 10: bonus += 2
         elif marge < 0: bonus -= 6
 
-    return max(-15, min(15, bonus))
+    pb = fond.get("pb")
+    if pb is not None:
+        if pb < 1.0:   bonus += 5   # sous la valeur comptable = décote
+        elif pb < 2.0: bonus += 2
+        elif pb > 8.0: bonus -= 4   # trop cher par rapport aux actifs
+
+    return max(-20, min(20, bonus))
 
 
 # ─── ACTUALITÉS EN TEMPS RÉEL ─────────────────────────────────────────────────
@@ -363,6 +371,137 @@ def mettre_a_jour_poids_indicateurs(perf, historique_indicateurs):
                 perf["poids_indicateurs"][secteur][f"{ind_nom}_fiabilite"] = fiabilite
 
     return perf
+
+
+# ─── CALENDRIER BCE/FED ───────────────────────────────────────────────────────
+
+# Dates des annonces de taux BCE et Fed 2026 (J à 0h = jour de l'annonce)
+DATES_BANQUES_CENTRALES = [
+    # BCE 2026
+    "2026-01-30", "2026-03-06", "2026-04-17", "2026-06-05",
+    "2026-07-23", "2026-09-10", "2026-10-29", "2026-12-17",
+    # Fed (FOMC) 2026
+    "2026-01-28", "2026-03-18", "2026-05-06", "2026-06-17",
+    "2026-07-29", "2026-09-16", "2026-11-04", "2026-12-16",
+]
+
+def verifier_annonce_banque_centrale():
+    """
+    Retourne (True, label) si une annonce BCE ou Fed est dans les 48h.
+    Applique un malus de -15 sur tous les scores : volatilité imprévisible.
+    """
+    today = datetime.date.today()
+    for d_str in DATES_BANQUES_CENTRALES:
+        d = datetime.date.fromisoformat(d_str)
+        delta = (d - today).days
+        if 0 <= delta <= 2:
+            label = "BCE" if int(d_str[5:7]) in [1,3,4,6,7,9,10,12] else "Fed"
+            return True, f"Annonce {label} dans {delta}j ({d_str})"
+    return False, ""
+
+
+# ─── INDICATEURS AVANCÉS ──────────────────────────────────────────────────────
+
+def detecter_divergence_rsi(hist, rsi_series):
+    """
+    Divergence haussière : prix fait un nouveau bas mais RSI ne confirme pas (= retournement haussier).
+    Divergence baissière : prix fait un nouveau haut mais RSI ne confirme pas (= retournement baissier).
+    Regarde les 20 dernières séances.
+    Retourne : "haussiere", "baissiere" ou None
+    """
+    try:
+        if len(hist) < 20 or len(rsi_series) < 20:
+            return None
+        close = hist["Close"].tail(20).values
+        rsi   = rsi_series.tail(20).values
+
+        prix_min_idx = close.argmin()
+        prix_max_idx = close.argmax()
+
+        # Divergence haussière : dernier prix < prix min précédent, mais RSI dernier > RSI au min précédent
+        if prix_min_idx < len(close) - 3:
+            if close[-1] <= close[prix_min_idx] and rsi[-1] > rsi[prix_min_idx] + 3:
+                return "haussiere"
+
+        # Divergence baissière : dernier prix >= prix max précédent, mais RSI dernier < RSI au max précédent
+        if prix_max_idx < len(close) - 3:
+            if close[-1] >= close[prix_max_idx] and rsi[-1] < rsi[prix_max_idx] - 3:
+                return "baissiere"
+    except:
+        pass
+    return None
+
+
+def detecter_compression_bollinger(hist):
+    """
+    Compression Bollinger : largeur des bandes < 5% du prix moyen sur 20j.
+    Signale une explosion de volatilité imminente (direction inconnue).
+    Retourne True si compression détectée.
+    """
+    try:
+        close = hist["Close"]
+        boll  = BollingerBands(close=close, window=20, window_dev=2)
+        haut  = boll.bollinger_hband().iloc[-1]
+        bas   = boll.bollinger_lband().iloc[-1]
+        mid   = boll.bollinger_mavg().iloc[-1]
+        largeur_pct = (haut - bas) / mid * 100 if mid > 0 else 100
+        return largeur_pct < 4.0
+    except:
+        return False
+
+
+def calculer_pente_ma200(hist):
+    """
+    Pente de la MA200 sur les 20 derniers jours.
+    Retourne "haussiere", "baissiere" ou "neutre".
+    Une MA200 qui monte = tendance de fond haussière (signal de qualité).
+    """
+    try:
+        if len(hist) < 220:
+            return "neutre"
+        close = hist["Close"]
+        ma200 = SMAIndicator(close=close, window=200).sma_indicator()
+        val_actuelle = ma200.iloc[-1]
+        val_20j      = ma200.iloc[-20]
+        pente_pct    = (val_actuelle - val_20j) / val_20j * 100
+        if pente_pct > 0.5:   return "haussiere"
+        elif pente_pct < -0.5: return "baissiere"
+        else:                  return "neutre"
+    except:
+        return "neutre"
+
+
+def calculer_momentum_multitimeframe(hist):
+    """
+    Performance sur 1j, 5j, 20j, 60j.
+    Convergence = tous les timeframes dans le même sens = signal fort.
+    Retourne dict + bonus_convergence (-10 à +10).
+    """
+    try:
+        close = hist["Close"]
+        n = len(close)
+        p1j  = round((close.iloc[-1] / close.iloc[-2]  - 1) * 100, 2) if n >= 2  else None
+        p5j  = round((close.iloc[-1] / close.iloc[-5]  - 1) * 100, 2) if n >= 5  else None
+        p20j = round((close.iloc[-1] / close.iloc[-20] - 1) * 100, 2) if n >= 20 else None
+        p60j = round((close.iloc[-1] / close.iloc[-60] - 1) * 100, 2) if n >= 60 else None
+
+        perfs = [p for p in [p1j, p5j, p20j, p60j] if p is not None]
+        haussieres = sum(1 for p in perfs if p > 0)
+        baissiers  = sum(1 for p in perfs if p < 0)
+
+        bonus = 0
+        if haussieres == len(perfs) and len(perfs) >= 3:
+            bonus = 10   # tous les timeframes haussiers = conviction maximale
+        elif haussieres >= 3:
+            bonus = 5
+        elif baissiers == len(perfs) and len(perfs) >= 3:
+            bonus = -10
+        elif baissiers >= 3:
+            bonus = -5
+
+        return {"p1j": p1j, "p5j": p5j, "p20j": p20j, "p60j": p60j, "bonus_convergence": bonus}
+    except:
+        return {"bonus_convergence": 0}
 
 
 # ─── PATTERNS BOUGIES JAPONAISES ─────────────────────────────────────────────
@@ -534,8 +673,24 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Malus macro global (VIX, EUR/USD, pétrole)
     score += d.get("malus_macro", 0)
 
+    # Malus annonce BCE/Fed dans les 48h
+    score += d.get("malus_banque_centrale", 0)
+
     # Bonus momentum relatif vs CAC40
     score += d.get("bonus_momentum_rel", 0)
+
+    # Bonus convergence multi-timeframe
+    score += d.get("bonus_convergence_tf", 0)
+
+    # Divergence RSI/prix
+    div = d.get("divergence_rsi")
+    if div == "haussiere":  score += 12
+    elif div == "baissiere": score -= 12
+
+    # Pente MA200
+    pente = d.get("pente_ma200")
+    if pente == "haussiere":  score += 6
+    elif pente == "baissiere": score -= 6
 
     score = max(0, min(100, round(score)))
 
@@ -687,6 +842,19 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             _poids_indicateurs_cache
         )
 
+        # Divergence RSI/prix
+        rsi_series   = RSIIndicator(close=hist["Close"], window=14).rsi() if TA_DISPONIBLE else None
+        div_rsi      = detecter_divergence_rsi(hist, rsi_series) if rsi_series is not None else None
+
+        # Compression Bollinger
+        compression_boll = detecter_compression_bollinger(hist) if TA_DISPONIBLE else False
+
+        # Pente MA200
+        pente_ma200 = calculer_pente_ma200(hist) if TA_DISPONIBLE else "neutre"
+
+        # Momentum multi-timeframe
+        mtf = calculer_momentum_multitimeframe(hist)
+
         data = {
             "nom":          nom,
             "ticker":       ticker,
@@ -724,6 +892,11 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             "resultats_proches":       resultats_proches,
             "bonus_indicateurs_appris":bonus_ind,
             "secteur_nom":             secteur_nom,
+            "divergence_rsi":          div_rsi,
+            "compression_bollinger":   compression_boll,
+            "pente_ma200":             pente_ma200,
+            "momentum_tf":             mtf,
+            "bonus_convergence_tf":    mtf.get("bonus_convergence", 0),
         }
 
         score, signal = calculer_score_confiance(data, persistance_intraday=_persistance_cache)
@@ -1606,6 +1779,14 @@ if __name__ == "__main__":
         print(f"  Alertes macro : {' | '.join(macro['alerte_macro'])}")
     print(f"  Malus global appliqué : {malus_macro} pts")
 
+    print("Vérification annonces BCE/Fed...")
+    annonce_bc, annonce_bc_label = verifier_annonce_banque_centrale()
+    malus_bc = -15 if annonce_bc else 0
+    if annonce_bc:
+        print(f"  ALERTE : {annonce_bc_label} → malus {malus_bc} pts")
+        macro["alerte_macro"].append(annonce_bc_label)
+    malus_total = malus_macro + malus_bc
+
     print("Récupération données temps réel (1 an d'historique)...")
     donnees = []
     for nom, ticker in CAC40.items():
@@ -1613,6 +1794,7 @@ if __name__ == "__main__":
         d = recuperer_donnees_action(nom, ticker, hist_cac)
         if d:
             d["malus_macro"] = malus_macro
+            d["malus_banque_centrale"] = malus_bc
             donnees.append(d)
 
     ok      = [d for d in donnees if "erreur" not in d]
