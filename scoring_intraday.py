@@ -9,6 +9,7 @@ import datetime
 import json
 import os
 import smtplib
+import urllib.request
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import yfinance as yf
@@ -45,7 +46,47 @@ try:
 except ImportError:
     TA_DISPONIBLE = False
 
-FICHIER_INTRADAY = "intraday_scores.json"
+FICHIER_INTRADAY    = "intraday_scores.json"
+FICHIER_PERFORMANCE = "performance.json"
+
+DATES_BANQUES_CENTRALES = [
+    "2026-01-30","2026-03-06","2026-04-17","2026-06-05",
+    "2026-07-23","2026-09-10","2026-10-29","2026-12-17",
+    "2026-01-28","2026-03-18","2026-05-06","2026-06-17",
+    "2026-07-29","2026-09-16","2026-11-04","2026-12-16",
+]
+
+def recuperer_contexte_global():
+    """VIX + Fear&Greed + BCE/Fed → malus global unique à appliquer à tous les scores."""
+    malus = 0
+    infos = []
+    try:
+        vix = yf.Ticker("^VIX").history(period="2d")
+        if not vix.empty:
+            v = round(float(vix["Close"].iloc[-1]), 1)
+            if v > 35:    malus -= 20; infos.append(f"VIX EXTRÊME {v}")
+            elif v > 25:  malus -= 12; infos.append(f"VIX élevé {v}")
+            elif v > 20:  malus -= 5;  infos.append(f"VIX modéré {v}")
+    except: pass
+    try:
+        url = "https://api.alternative.me/fng/?limit=1"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=6) as r:
+            fg = json.loads(r.read())
+        score_fg = int(fg["data"][0]["value"])
+        label_fg = fg["data"][0]["value_classification"]
+        if score_fg <= 15:    malus -= 10; infos.append(f"F&G panique {score_fg}")
+        elif score_fg <= 25:  malus -= 6;  infos.append(f"F&G peur {score_fg}")
+        elif score_fg <= 40:  malus -= 3
+        elif score_fg >= 80:  malus -= 5;  infos.append(f"F&G euphorie {score_fg}")
+    except: pass
+    today = datetime.date.today()
+    for d_str in DATES_BANQUES_CENTRALES:
+        d = datetime.date.fromisoformat(d_str)
+        if 0 <= (d - today).days <= 2:
+            malus -= 15; infos.append(f"Annonce BCE/Fed {d_str}")
+            break
+    return malus, infos
 
 CAC40 = {
     "LVMH":               "MC.PA",
@@ -90,10 +131,10 @@ CAC40 = {
 }
 
 
-def scorer_action(nom, ticker):
+def scorer_action(nom, ticker, malus_global=0):
     try:
         stock = yf.Ticker(ticker)
-        hist  = stock.history(period="60d")
+        hist  = stock.history(period="1y")
 
         if hist.empty or len(hist) < 20:
             return None
@@ -104,25 +145,42 @@ def scorer_action(nom, ticker):
         variation  = round((cours - cours_hier) / cours_hier * 100, 2)
         volume     = int(hist["Volume"].iloc[-1])
         vol_moy    = int(hist["Volume"].iloc[-20:].mean())
-
-        # Gap ouverture vs clôture hier
-        gap_pct = round((ouverture - cours_hier) / cours_hier * 100, 2)
+        gap_pct    = round((ouverture - cours_hier) / cours_hier * 100, 2)
 
         score = 50
+        rsi_val = None
 
         if TA_DISPONIBLE:
             close = hist["Close"]
+            high  = hist["High"]
+            low   = hist["Low"]
 
-            rsi = RSIIndicator(close, window=14).rsi().iloc[-1]
-            if not pd.isna(rsi):
-                rsi = round(rsi, 1)
-                if rsi < 25:   score += 20
-                elif rsi < 35: score += 12
-                elif rsi < 45: score += 5
-                elif rsi > 75: score -= 20
-                elif rsi > 65: score -= 12
-                elif rsi > 55: score -= 5
+            # RSI
+            rsi_series = RSIIndicator(close, window=14).rsi()
+            rsi_val    = rsi_series.iloc[-1]
+            if not pd.isna(rsi_val):
+                rsi_val = round(float(rsi_val), 1)
+                if rsi_val < 25:   score += 20
+                elif rsi_val < 35: score += 12
+                elif rsi_val < 45: score += 5
+                elif rsi_val > 75: score -= 20
+                elif rsi_val > 65: score -= 12
+                elif rsi_val > 55: score -= 5
 
+            # Divergence RSI/prix
+            if len(hist) >= 20 and len(rsi_series) >= 20:
+                try:
+                    c20   = hist["Close"].tail(20).values
+                    r20   = rsi_series.tail(20).values
+                    i_min = c20.argmin()
+                    i_max = c20.argmax()
+                    if i_min < len(c20) - 3 and c20[-1] <= c20[i_min] and r20[-1] > r20[i_min] + 3:
+                        score += 12  # divergence haussière
+                    elif i_max < len(c20) - 3 and c20[-1] >= c20[i_max] and r20[-1] < r20[i_max] - 3:
+                        score -= 12  # divergence baissière
+                except: pass
+
+            # MACD
             macd_ind  = MACD(close)
             macd_line = macd_ind.macd().iloc[-1]
             macd_sig  = macd_ind.macd_signal().iloc[-1]
@@ -131,56 +189,100 @@ def scorer_action(nom, ticker):
                 if macd_line > macd_sig: score += 10
                 else:                    score -= 10
             if len(macd_hist) >= 2:
-                h1 = macd_hist.iloc[-1]
-                h2 = macd_hist.iloc[-2]
+                h1, h2 = macd_hist.iloc[-1], macd_hist.iloc[-2]
                 if not pd.isna(h1) and not pd.isna(h2):
-                    if h1 > h2 and h1 > 0: score += 5
-                    elif h1 < h2 and h1 < 0: score -= 5
+                    if h1 > h2 and h1 > 0:   score += 5
+                    elif h1 < h2 and h1 < 0:  score -= 5
 
-            ma20  = SMAIndicator(close, window=20).sma_indicator().iloc[-1]
-            ma50  = SMAIndicator(close, window=50).sma_indicator().iloc[-1]
-            if not pd.isna(ma20) and not pd.isna(ma50):
-                if cours > ma20 and cours > ma50:  score += 10
-                elif cours < ma20 and cours < ma50: score -= 10
+            # Moyennes mobiles
+            ma20 = SMAIndicator(close, window=20).sma_indicator()
+            ma50 = SMAIndicator(close, window=50).sma_indicator() if len(hist) >= 50 else None
+            v20  = float(ma20.iloc[-1]) if not pd.isna(ma20.iloc[-1]) else None
+            v50  = float(ma50.iloc[-1]) if ma50 is not None and not pd.isna(ma50.iloc[-1]) else None
+            if v20 and v50:
+                if cours > v20 and cours > v50:   score += 10
+                elif cours < v20 and cours < v50:  score -= 10
 
-            bb = BollingerBands(close)
+            # Pente MA200
+            if len(hist) >= 220:
+                try:
+                    ma200 = SMAIndicator(close, window=200).sma_indicator()
+                    pente = (float(ma200.iloc[-1]) - float(ma200.iloc[-20])) / float(ma200.iloc[-20]) * 100
+                    if pente > 0.5:    score += 6
+                    elif pente < -0.5: score -= 6
+                except: pass
+
+            # Bollinger
+            bb      = BollingerBands(close)
             bb_low  = bb.bollinger_lband().iloc[-1]
             bb_high = bb.bollinger_hband().iloc[-1]
             if not pd.isna(bb_low) and not pd.isna(bb_high):
-                if cours < bb_low:   score += 10
-                elif cours > bb_high: score -= 10
+                if cours < float(bb_low):    score += 10
+                elif cours > float(bb_high): score -= 10
+
+        # Momentum multi-timeframe
+        n = len(hist)
+        perfs = []
+        for nb_j in [5, 20, 60]:
+            if n > nb_j:
+                perfs.append(float(hist["Close"].iloc[-1]) / float(hist["Close"].iloc[-nb_j]) - 1)
+        if perfs:
+            haussiers  = sum(1 for p in perfs if p > 0)
+            baissiers  = sum(1 for p in perfs if p < 0)
+            if haussiers == len(perfs): score += 10
+            elif haussiers >= 2:        score += 5
+            elif baissiers == len(perfs): score -= 10
+            elif baissiers >= 2:          score -= 5
 
         # Volume anormal
-        if vol_moy > 0:
-            ratio_vol = round(volume / vol_moy, 1)
-            if ratio_vol > 2:
-                if variation > 0: score += 8
-                else:             score -= 8
+        ratio_vol = round(volume / vol_moy, 1) if vol_moy > 0 else 1.0
+        if ratio_vol > 2:
+            if variation > 0: score += 8
+            else:             score -= 8
 
-        # Gap haussier avec volume fort = signal positif
-        if gap_pct > 0.5 and volume > vol_moy * 1.5: score += 5
+        # Gap + momentum intraday
+        if gap_pct > 0.5 and volume > vol_moy * 1.5:  score += 5
         if gap_pct < -0.5 and volume > vol_moy * 1.5: score -= 5
-
-        # Momentum intraday (cours vs ouverture)
         momentum_intraday = round((cours - ouverture) / ouverture * 100, 2) if ouverture else 0
-        if momentum_intraday > 0.5:  score += 5
+        if momentum_intraday > 0.5:   score += 5
         elif momentum_intraday < -0.5: score -= 5
 
-        score = max(0, min(100, round(score)))
+        # Consensus analystes
+        try:
+            info = stock.info
+            rec  = info.get("recommendationMean")
+            nb_a = info.get("numberOfAnalystOpinions", 0)
+            cible = info.get("targetMeanPrice")
+            if rec and nb_a and nb_a >= 3:
+                if rec <= 1.5:   score += 8
+                elif rec <= 2.2: score += 5
+                elif rec <= 2.8: score += 2
+                elif rec >= 4.0: score -= 8
+                elif rec >= 3.5: score -= 4
+                if cible and cours:
+                    upside = (cible - cours) / cours * 100
+                    if upside > 25:    score += 5
+                    elif upside > 15:  score += 3
+                    elif upside < -10: score -= 4
+        except: pass
 
+        # Malus global (VIX + Fear&Greed + BCE/Fed)
+        score += malus_global
+
+        score = max(0, min(100, round(score)))
         if score >= 65:   signal = "ACHETER"
         elif score <= 35: signal = "ÉVITER"
         else:             signal = "SURVEILLER"
 
         return {
-            "nom":                nom,
-            "cours":              cours,
-            "variation":          variation,
-            "gap_ouverture":      gap_pct,
-            "momentum_intraday":  momentum_intraday,
-            "volume_ratio":       round(volume / vol_moy, 1) if vol_moy > 0 else 1.0,
-            "score":              score,
-            "signal":             signal,
+            "nom":               nom,
+            "cours":             cours,
+            "variation":         variation,
+            "gap_ouverture":     gap_pct,
+            "momentum_intraday": momentum_intraday,
+            "volume_ratio":      ratio_vol,
+            "score":             score,
+            "signal":            signal,
         }
 
     except Exception as e:
@@ -413,6 +515,13 @@ if __name__ == "__main__":
 
     print(f"Scoring intraday — {today} {heure}")
 
+    print("Contexte global (VIX, Fear&Greed, BCE/Fed)...")
+    malus_global, infos_macro = recuperer_contexte_global()
+    if infos_macro:
+        print(f"  Alertes : {' | '.join(infos_macro)} → malus {malus_global} pts")
+    else:
+        print(f"  Marché calme, malus : {malus_global} pts")
+
     data = charger_intraday()
 
     # Garde seulement les 5 derniers jours
@@ -427,7 +536,7 @@ if __name__ == "__main__":
     ok = 0
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
-        result = scorer_action(nom, ticker)
+        result = scorer_action(nom, ticker, malus_global=malus_global)
         if result:
             snapshot[nom] = result
             ok += 1
