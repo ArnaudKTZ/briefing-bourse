@@ -620,6 +620,12 @@ def sauvegarder_recommandations(perf, donnees_actuelles):
 
 # ─── PORTEFEUILLE VIRTUEL ─────────────────────────────────────────────────────
 
+FRAIS_TAUX    = 0.005
+FRAIS_MINIMUM = 0.50
+
+def calculer_frais(montant):
+    return round(max(FRAIS_MINIMUM, montant * FRAIS_TAUX), 2)
+
 def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     """Simule un portefeuille virtuel basé sur les signaux ACHETER."""
     if not os.path.exists(FICHIER_PORTEFEUILLE):
@@ -646,16 +652,21 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
             positions_a_fermer.append((nom, cours_actuel, pnl_pct))
 
     for nom, cours_sortie, pnl_pct in positions_a_fermer:
-        pos = pf["positions"][nom]
+        pos          = pf["positions"][nom]
         valeur_sortie = pos["nb_actions"] * cours_sortie
-        pf["capital"] += valeur_sortie
+        frais_vente  = calculer_frais(valeur_sortie)
+        net_sortie   = valeur_sortie - frais_vente
+        frais_total  = round(pos.get("frais_achat", 0) + frais_vente, 2)
+        pnl_net      = round((net_sortie - pos["cout_total"]) / pos["cout_total"] * 100, 2)
+        pf["capital"] += net_sortie
         pf["trades"].append({
             "nom":         nom,
             "entree":      pos["prix_entree"],
             "sortie":      cours_sortie,
             "date_entree": pos["date_entree"],
             "date_sortie": today,
-            "pnl_pct":     round(pnl_pct, 2),
+            "pnl_pct":     pnl_net,
+            "frais_total": frais_total,
         })
         del pf["positions"][nom]
 
@@ -669,16 +680,18 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
                 len(pf["positions"]) < max_positions and
                 pf["capital"] >= budget_par_position and
                 d.get("score", 0) >= 70):
-            cours = d["cours"]
-            nb    = int(budget_par_position / cours)
+            cours       = d["cours"]
+            nb          = int(budget_par_position / cours)
             if nb > 0:
-                cout = nb * cours
-                pf["capital"] -= cout
+                cout        = nb * cours
+                frais_achat = calculer_frais(cout)
+                pf["capital"] -= (cout + frais_achat)
                 pf["positions"][nom] = {
                     "nb_actions":  nb,
                     "prix_entree": cours,
                     "date_entree": today,
                     "cout_total":  cout,
+                    "frais_achat": frais_achat,
                 }
 
     # Calcul valeur totale
@@ -735,12 +748,14 @@ def generer_html_portefeuille(pf, donnees_dict):
         couleur = "#2e7d32" if pnl >= 0 else "#c62828"
         date_e = t["date_entree"][8:10] + "/" + t["date_entree"][5:7] + "/" + t["date_entree"][2:4]
         date_s = t["date_sortie"][8:10] + "/" + t["date_sortie"][5:7] + "/" + t["date_sortie"][2:4]
+        frais = t.get("frais_total", 0)
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;'>
           <td style='padding:7px 10px;font-weight:500;'>{t['nom']}</td>
           <td style='padding:7px 10px;color:#666;'>{date_e}</td>
           <td style='padding:7px 10px;color:#666;'>{date_s}</td>
           <td style='padding:7px 10px;text-align:right;'>{t['entree']:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;'>{t['sortie']:.2f} €</td>
+          <td style='padding:7px 10px;text-align:right;color:#999;font-size:12px;'>{frais:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;font-weight:600;color:{couleur};'>{signe}{pnl:.2f} %</td>
         </tr>"""
 
@@ -750,17 +765,19 @@ def generer_html_portefeuille(pf, donnees_dict):
         signe = "+" if pnl >= 0 else ""
         couleur = "#2e7d32" if pnl >= 0 else "#c62828"
         date_e = pos["date_entree"][8:10] + "/" + pos["date_entree"][5:7] + "/" + pos["date_entree"][2:4]
+        frais_achat = pos.get("frais_achat", 0)
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;background:#f9f9f9;'>
           <td style='padding:7px 10px;font-weight:500;'>{nom}</td>
           <td style='padding:7px 10px;color:#666;'>{date_e}</td>
           <td style='padding:7px 10px;color:#999;font-style:italic;'>en cours</td>
           <td style='padding:7px 10px;text-align:right;'>{pos['prix_entree']:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;color:#999;'>—</td>
+          <td style='padding:7px 10px;text-align:right;color:#999;font-size:12px;'>{frais_achat:.2f} € (achat)</td>
           <td style='padding:7px 10px;text-align:right;font-weight:600;color:{couleur};'>{signe}{pnl:.2f} %</td>
         </tr>"""
 
     if not lignes_trades:
-        lignes_trades = "<tr><td colspan='6' style='padding:12px;text-align:center;color:#999;'>Aucun trade pour l'instant</td></tr>"
+        lignes_trades = "<tr><td colspan='7' style='padding:12px;text-align:center;color:#999;'>Aucun trade pour l'instant</td></tr>"
 
     return f"""
 <div style='margin:20px 0;'>
@@ -791,6 +808,7 @@ def generer_html_portefeuille(pf, donnees_dict):
         <th style='padding:8px 10px;text-align:left;font-weight:500;'>Date vente</th>
         <th style='padding:8px 10px;text-align:right;font-weight:500;'>Prix achat</th>
         <th style='padding:8px 10px;text-align:right;font-weight:500;'>Prix vente</th>
+        <th style='padding:8px 10px;text-align:right;font-weight:500;'>Frais</th>
         <th style='padding:8px 10px;text-align:right;font-weight:500;'>Gain/Perte</th>
       </tr>
     </thead>
@@ -799,12 +817,12 @@ def generer_html_portefeuille(pf, donnees_dict):
     </tbody>
     <tfoot>
       <tr style='background:#f0f0f0;border-top:2px solid #ddd;'>
-        <td colspan='5' style='padding:8px 10px;font-weight:600;'>Gain/Perte total</td>
+        <td colspan='6' style='padding:8px 10px;font-weight:600;'>Gain/Perte total (frais inclus)</td>
         <td style='padding:8px 10px;text-align:right;font-weight:700;font-size:14px;color:{couleur_global};'>{signe_gain}{gain_total:.0f} € ({signe_global}{perf_pf:.2f} %)</td>
       </tr>
     </tfoot>
   </table>
-  <p style='font-size:11px;color:#999;margin-top:8px;'>Capital libre : {capital_libre:.0f} € | Simulation sans frais de courtage</p>
+  <p style='font-size:11px;color:#999;margin-top:8px;'>Capital libre : {capital_libre:.0f} € | Frais Boursobank simulés : 0,5% par ordre (min 0,50 €)</p>
 </div>"""
 
 
