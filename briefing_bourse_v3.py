@@ -52,6 +52,89 @@ DESTINATAIRES = [
 
 FICHIER_PERFORMANCE  = "performance.json"
 FICHIER_PORTEFEUILLE = "portefeuille_virtuel.json"
+FICHIER_INTRADAY     = "intraday_scores.json"
+
+_persistance_cache = {}  # chargé une fois au démarrage du main
+
+
+def charger_persistance_intraday():
+    """
+    Lit intraday_scores.json et calcule pour chaque valeur :
+    - combien de snapshots hier étaient ACHETER / ÉVITER
+    - si le score montait ou descendait en cours de journée
+    - le gap d'ouverture moyen
+    Retourne un dict {nom: {bonus: int, label: str}}
+    """
+    if not os.path.exists(FICHIER_INTRADAY):
+        return {}
+
+    with open(FICHIER_INTRADAY, "r") as f:
+        data = json.load(f)
+
+    hier = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
+    # Remonte jusqu'à 3 jours en arrière pour trouver le dernier jour de bourse
+    for delta in range(1, 5):
+        candidate = (datetime.date.today() - datetime.timedelta(days=delta)).isoformat()
+        if candidate in data:
+            hier = candidate
+            break
+    else:
+        return {}
+
+    snapshots = data.get(hier, {})
+    if not snapshots:
+        return {}
+
+    heures = sorted(snapshots.keys())
+    persistance = {}
+
+    for nom in CAC40:
+        scores_jour = []
+        signaux     = []
+        for h in heures:
+            d = snapshots[h].get(nom)
+            if d:
+                scores_jour.append(d["score"])
+                signaux.append(d["signal"])
+
+        if not scores_jour:
+            continue
+
+        nb_acheter = signaux.count("ACHETER")
+        nb_eviter  = signaux.count("ÉVITER")
+        total      = len(signaux)
+
+        # Momentum du score (montée ou descente en journée)
+        tendance_score = scores_jour[-1] - scores_jour[0] if len(scores_jour) > 1 else 0
+
+        bonus = 0
+        label = ""
+
+        # Signal persistant toute la journée = fort
+        if nb_acheter == total:
+            bonus += 12
+            label = "Signal ACHETER persistant toute la journée"
+        elif nb_acheter >= total * 0.66:
+            bonus += 6
+            label = f"Signal ACHETER majoritaire ({nb_acheter}/{total} snapshots)"
+        elif nb_eviter == total:
+            bonus -= 12
+            label = "Signal ÉVITER persistant toute la journée"
+        elif nb_eviter >= total * 0.66:
+            bonus -= 6
+            label = f"Signal ÉVITER majoritaire ({nb_eviter}/{total} snapshots)"
+
+        # Momentum du score en hausse = confirmation
+        if tendance_score > 10:
+            bonus += 5
+            label += " | Score en hausse hier"
+        elif tendance_score < -10:
+            bonus -= 5
+            label += " | Score en baisse hier"
+
+        persistance[nom] = {"bonus": bonus, "label": label.strip(" |"), "scores_hier": scores_jour}
+
+    return persistance
 
 # ─── CAC 40 TICKERS ───────────────────────────────────────────────────────────
 
@@ -181,10 +264,11 @@ def detecter_patterns(hist):
 
 # ─── SCORE DE CONFIANCE ───────────────────────────────────────────────────────
 
-def calculer_score_confiance(d):
+def calculer_score_confiance(d, persistance_intraday=None):
     """
     Score de 0 à 100 basé sur la convergence des indicateurs.
     > 65 = ACHETER, < 35 = ÉVITER, sinon SURVEILLER
+    Bonus/malus supplémentaire si le signal a été persistant la veille (intraday).
     """
     score = 50
 
@@ -250,6 +334,14 @@ def calculer_score_confiance(d):
     # Proximité 52 semaines
     if d.get("pct_52w_bas") is not None and d["pct_52w_bas"] < 10:  score += 8
     if d.get("pct_52w_haut") is not None and d["pct_52w_haut"] < 5: score -= 8
+
+    # Bonus persistance intraday (signaux confirmés la veille)
+    nom = d.get("nom", "")
+    if persistance_intraday and nom in persistance_intraday:
+        p = persistance_intraday[nom]
+        score += p["bonus"]
+        d["persistance_label"] = p["label"]
+        d["scores_hier"]       = p["scores_hier"]
 
     score = max(0, min(100, round(score)))
 
@@ -421,7 +513,7 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             "news":         news,
         }
 
-        score, signal = calculer_score_confiance(data)
+        score, signal = calculer_score_confiance(data, persistance_intraday=_persistance_cache)
         data["score"]  = score
         data["signal"] = signal
 
@@ -1094,6 +1186,11 @@ color:#222;max-width:1000px;margin:auto;padding:20px;'>
 if __name__ == "__main__":
     today     = datetime.date.today()
     est_lundi = today.weekday() == 0
+
+    print("Chargement persistance intraday...")
+    _persistance_cache = charger_persistance_intraday()
+    nb_persistance = len(_persistance_cache)
+    print(f"  {nb_persistance} valeurs avec historique intraday")
 
     print("Chargement historique performance...")
     perf = charger_performance()
