@@ -313,10 +313,10 @@ def scorer_consensus_analystes(ticker_obj, cours):
             elif upside < 0:   bonus -= 2
 
         return max(-12, min(12, bonus)), {
-            "rec_score": round(rec, 2),
-            "nb_analystes": nb,
-            "cible_moy": round(cible, 2) if cible else None,
-            "upside_pct": round(upside, 1) if cible and cours else None,
+            "rec_score": round(float(rec), 2),
+            "nb_analystes": int(nb),
+            "cible_moy": round(float(cible), 2) if cible else None,
+            "upside_pct": round(float(upside), 1) if cible and cours else None,
         }
     except:
         return 0, {}
@@ -1885,10 +1885,16 @@ if __name__ == "__main__":
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
         d = recuperer_donnees_action(nom, ticker, hist_cac)
-        if d:
+        if d and "erreur" not in d:
             d["malus_macro"] = malus_macro
             d["malus_banque_centrale"] = malus_bc
             d["malus_fear_greed"] = malus_fg
+            # recalculer le score avec les malus globaux
+            score, signal = calculer_score_confiance(d, persistance_intraday=_persistance_cache)
+            d["score"]  = score
+            d["signal"] = signal
+            donnees.append(d)
+        elif d:
             donnees.append(d)
 
     ok      = [d for d in donnees if "erreur" not in d]
