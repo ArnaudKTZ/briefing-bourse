@@ -752,13 +752,17 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
         pnl_net      = round((net_sortie - pos["cout_total"]) / pos["cout_total"] * 100, 2)
         pf["capital"] += net_sortie
         pf["trades"].append({
-            "nom":         nom,
-            "entree":      pos["prix_entree"],
-            "sortie":      cours_sortie,
-            "date_entree": pos["date_entree"],
-            "date_sortie": today,
-            "pnl_pct":     pnl_net,
-            "frais_total": frais_total,
+            "nom":          nom,
+            "entree":       pos["prix_entree"],
+            "sortie":       cours_sortie,
+            "date_entree":  pos["date_entree"],
+            "heure_entree": pos.get("heure_entree", "07:00"),
+            "source_entree":pos.get("source_entree", "Briefing"),
+            "date_sortie":  today,
+            "heure_sortie": datetime.datetime.now().strftime("%H:%M"),
+            "source_sortie":"Briefing",
+            "pnl_pct":      pnl_net,
+            "frais_total":  frais_total,
         })
         del pf["positions"][nom]
 
@@ -779,11 +783,13 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
                 frais_achat = calculer_frais(cout)
                 pf["capital"] -= (cout + frais_achat)
                 pf["positions"][nom] = {
-                    "nb_actions":  nb,
-                    "prix_entree": cours,
-                    "date_entree": today,
-                    "cout_total":  cout,
-                    "frais_achat": frais_achat,
+                    "nb_actions":   nb,
+                    "prix_entree":  cours,
+                    "date_entree":  today,
+                    "heure_entree": datetime.datetime.now().strftime("%H:%M"),
+                    "source_entree":"Briefing",
+                    "cout_total":   cout,
+                    "frais_achat":  frais_achat,
                 }
 
     # Calcul valeur totale
@@ -832,19 +838,33 @@ def generer_html_portefeuille(pf, donnees_dict):
     nb_positions = len(pf["positions"])
     capital_libre = round(pf["capital"], 2)
 
+    def badge_source(source):
+        styles = {
+            "Briefing":  "background:#e3f0fb;color:#1565c0;",
+            "Intraday":  "background:#fff8e1;color:#e65100;",
+            "Alerte":    "background:#fce4ec;color:#b71c1c;",
+        }
+        st = styles.get(source, "background:#eee;color:#333;")
+        return f"<span style='font-size:10px;{st}padding:2px 6px;border-radius:3px;'>{source}</span>"
+
+    def fmt_date(iso):
+        return iso[8:10] + "/" + iso[5:7] + "/" + iso[2:4]
+
     lignes_trades = ""
     derniers_trades = pf["trades"][-10:] if pf["trades"] else []
     for t in reversed(derniers_trades):
         pnl = t["pnl_pct"]
         signe = "+" if pnl >= 0 else ""
         couleur = "#2e7d32" if pnl >= 0 else "#c62828"
-        date_e = t["date_entree"][8:10] + "/" + t["date_entree"][5:7] + "/" + t["date_entree"][2:4]
-        date_s = t["date_sortie"][8:10] + "/" + t["date_sortie"][5:7] + "/" + t["date_sortie"][2:4]
         frais = t.get("frais_total", 0)
+        heure_e  = t.get("heure_entree", "07:00")
+        heure_s  = t.get("heure_sortie", "")
+        src_e    = badge_source(t.get("source_entree", "Briefing"))
+        src_s    = badge_source(t.get("source_sortie", "Briefing"))
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;'>
           <td style='padding:7px 10px;font-weight:500;'>{t['nom']}</td>
-          <td style='padding:7px 10px;color:#666;'>{date_e}</td>
-          <td style='padding:7px 10px;color:#666;'>{date_s}</td>
+          <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(t['date_entree'])} {heure_e}</div><div style='margin-top:3px;'>{src_e}</div></td>
+          <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(t['date_sortie'])} {heure_s}</div><div style='margin-top:3px;'>{src_s}</div></td>
           <td style='padding:7px 10px;text-align:right;'>{t['entree']:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;'>{t['sortie']:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;color:#999;font-size:12px;'>{frais:.2f} €</td>
@@ -856,15 +876,16 @@ def generer_html_portefeuille(pf, donnees_dict):
         pnl = round((cours_actuel - pos["prix_entree"]) / pos["prix_entree"] * 100, 2)
         signe = "+" if pnl >= 0 else ""
         couleur = "#2e7d32" if pnl >= 0 else "#c62828"
-        date_e = pos["date_entree"][8:10] + "/" + pos["date_entree"][5:7] + "/" + pos["date_entree"][2:4]
         frais_achat = pos.get("frais_achat", 0)
+        heure_e = pos.get("heure_entree", "07:00")
+        src_e   = badge_source(pos.get("source_entree", "Briefing"))
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;background:#f9f9f9;'>
           <td style='padding:7px 10px;font-weight:500;'>{nom}</td>
-          <td style='padding:7px 10px;color:#666;'>{date_e}</td>
+          <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(pos['date_entree'])} {heure_e}</div><div style='margin-top:3px;'>{src_e}</div></td>
           <td style='padding:7px 10px;color:#999;font-style:italic;'>en cours</td>
           <td style='padding:7px 10px;text-align:right;'>{pos['prix_entree']:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;color:#999;'>—</td>
-          <td style='padding:7px 10px;text-align:right;color:#999;font-size:12px;'>{frais_achat:.2f} € (achat)</td>
+          <td style='padding:7px 10px;text-align:right;color:#999;font-size:12px;'>{frais_achat:.2f} €</td>
           <td style='padding:7px 10px;text-align:right;font-weight:600;color:{couleur};'>{signe}{pnl:.2f} %</td>
         </tr>"""
 
@@ -914,7 +935,12 @@ def generer_html_portefeuille(pf, donnees_dict):
       </tr>
     </tfoot>
   </table>
-  <p style='font-size:11px;color:#999;margin-top:8px;'>Capital libre : {capital_libre:.0f} € | Frais Boursobank simulés : 0,5% par ordre (min 0,50 €)</p>
+  <div style='display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:center;'>
+    <span style='font-size:11px;color:#999;'>Capital libre : {capital_libre:.0f} € | Frais Boursobank : 0,5% min 0,50 €</span>
+    <span style='font-size:10px;background:#e3f0fb;color:#1565c0;padding:2px 7px;border-radius:3px;'>Briefing = signal 7h</span>
+    <span style='font-size:10px;background:#fff8e1;color:#e65100;padding:2px 7px;border-radius:3px;'>Intraday = signal 9h/12h/16h</span>
+    <span style='font-size:10px;background:#fce4ec;color:#b71c1c;padding:2px 7px;border-radius:3px;'>Alerte = score 85+</span>
+  </div>
 </div>"""
 
 
@@ -939,7 +965,7 @@ def construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf_stats, mome
 
             score  = d.get("score", 50)
             signal = d.get("signal", "SURVEILLER")
-            emoji  = "BUY" if signal == "ACHETER" else ("SELL" if signal == "ÉVITER" else "WAIT")
+            emoji  = "ACHETER" if signal == "ACHETER" else ("ÉVITER" if signal == "ÉVITER" else "SURVEILLER")
 
             ligne  = f"- **{nom}** [{emoji} {score}/100] : {d['cours']}€ ({'+' if d['variation'] > 0 else ''}{d['variation']}%)"
             if d.get("rsi"):
@@ -1096,9 +1122,9 @@ def markdown_vers_html(texte):
 
             style = ""
             ligne_str = " ".join(cellules)
-            if "ACHETER" in ligne_str or "BUY" in ligne_str:
+            if "ACHETER" in ligne_str:
                 style = "background:#e8f5e9;"
-            elif "ÉVITER" in ligne_str or "SELL" in ligne_str:
+            elif "ÉVITER" in ligne_str:
                 style = "background:#ffebee;"
             elif "GOLDEN CROSS" in ligne_str:
                 style = "background:#fff9c4;"
