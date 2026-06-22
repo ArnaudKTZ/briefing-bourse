@@ -54,7 +54,8 @@ FICHIER_PERFORMANCE  = "performance.json"
 FICHIER_PORTEFEUILLE = "portefeuille_virtuel.json"
 FICHIER_INTRADAY     = "intraday_scores.json"
 
-_persistance_cache = {}  # chargé une fois au démarrage du main
+_persistance_cache        = {}  # chargé une fois au démarrage du main
+_poids_indicateurs_cache  = {}  # poids appris par indicateur/secteur
 
 
 def charger_persistance_intraday():
@@ -191,6 +192,178 @@ SECTEURS = {
     "Télécom/Média":     ["Orange", "Vivendi", "Publicis", "Teleperformance"],
     "Conso/Autre":       ["Danone", "Michelin", "Renault", "Stellantis", "Accor", "Edenred", "Veolia"],
 }
+
+
+# ─── FONDAMENTAUX ─────────────────────────────────────────────────────────────
+
+def recuperer_fondamentaux(ticker_obj):
+    """Récupère PER, croissance CA, dette/fonds propres, marge nette via yfinance."""
+    try:
+        info = ticker_obj.info
+        per         = info.get("trailingPE") or info.get("forwardPE")
+        rev_growth  = info.get("revenueGrowth")      # ex: 0.12 = +12%
+        debt_equity = info.get("debtToEquity")        # ex: 45.2 = 45.2%
+        marge_nette = info.get("profitMargins")       # ex: 0.18 = 18%
+        per         = round(per, 1) if per else None
+        rev_growth  = round(rev_growth * 100, 1) if rev_growth else None
+        debt_equity = round(debt_equity, 1) if debt_equity else None
+        marge_nette = round(marge_nette * 100, 1) if marge_nette else None
+        return {"per": per, "rev_growth": rev_growth, "debt_equity": debt_equity, "marge_nette": marge_nette}
+    except:
+        return {}
+
+
+def scorer_fondamentaux(fond):
+    """Retourne un bonus/malus (-15 à +15) basé sur les fondamentaux."""
+    bonus = 0
+    per = fond.get("per")
+    if per:
+        if per < 12:   bonus += 8
+        elif per < 20: bonus += 4
+        elif per > 40: bonus -= 8
+        elif per > 30: bonus -= 4
+
+    rev = fond.get("rev_growth")
+    if rev is not None:
+        if rev > 15:   bonus += 6
+        elif rev > 5:  bonus += 3
+        elif rev < -5: bonus -= 6
+        elif rev < 0:  bonus -= 3
+
+    de = fond.get("debt_equity")
+    if de is not None:
+        if de < 30:    bonus += 4
+        elif de > 150: bonus -= 6
+        elif de > 100: bonus -= 3
+
+    marge = fond.get("marge_nette")
+    if marge is not None:
+        if marge > 20:  bonus += 4
+        elif marge > 10: bonus += 2
+        elif marge < 0: bonus -= 6
+
+    return max(-15, min(15, bonus))
+
+
+# ─── ACTUALITÉS EN TEMPS RÉEL ─────────────────────────────────────────────────
+
+def recuperer_news_sentiment(ticker_obj, nom):
+    """Récupère les titres de news via yfinance et calcule un sentiment simple."""
+    try:
+        news_raw = ticker_obj.news or []
+        titres = []
+        for n in news_raw[:5]:
+            t = n.get("content", {}).get("title", "") or n.get("title", "")
+            if t:
+                titres.append(t)
+
+        if not titres:
+            return {"news": [], "sentiment": 0}
+
+        mots_positifs = ["hausse", "croissance", "record", "contrat", "acquisition", "bénéfice",
+                         "surpasse", "relève", "dividende", "accord", "partenariat", "commande",
+                         "beat", "profit", "gain", "rise", "up", "growth", "wins", "strong"]
+        mots_negatifs = ["baisse", "perte", "avertissement", "profit warning", "recul", "abandon",
+                         "enquête", "fraude", "sanction", "licenciement", "coupe", "chute",
+                         "miss", "loss", "down", "cut", "weak", "fall", "slump", "warning"]
+
+        score_sent = 0
+        for titre in titres:
+            t_low = titre.lower()
+            for m in mots_positifs:
+                if m in t_low: score_sent += 1
+            for m in mots_negatifs:
+                if m in t_low: score_sent -= 1
+
+        sentiment = max(-3, min(3, score_sent))
+        return {"news": titres[:3], "sentiment": sentiment}
+    except:
+        return {"news": [], "sentiment": 0}
+
+
+# ─── CALENDRIER RÉSULTATS ─────────────────────────────────────────────────────
+
+def verifier_resultats_proches(ticker_obj):
+    """Retourne True si des résultats sont attendus dans les 3 prochains jours."""
+    try:
+        cal = ticker_obj.calendar
+        if cal is None:
+            return False
+        today = datetime.date.today()
+        if hasattr(cal, 'get'):
+            date_res = cal.get("Earnings Date")
+            if date_res is None:
+                return False
+            if hasattr(date_res, '__iter__') and not isinstance(date_res, str):
+                date_res = list(date_res)[0] if date_res else None
+            if date_res:
+                if hasattr(date_res, 'date'):
+                    date_res = date_res.date()
+                delta = (date_res - today).days
+                return 0 <= delta <= 3
+    except:
+        pass
+    return False
+
+
+# ─── AUTO-APPRENTISSAGE PAR INDICATEUR ────────────────────────────────────────
+
+def charger_poids_indicateurs():
+    """Charge les poids appris par indicateur et par secteur depuis performance.json."""
+    if not os.path.exists(FICHIER_PERFORMANCE):
+        return {}
+    try:
+        with open(FICHIER_PERFORMANCE, "r", encoding="utf-8") as f:
+            perf = json.load(f)
+        return perf.get("poids_indicateurs", {})
+    except:
+        return {}
+
+
+def calculer_bonus_indicateurs_appris(d, poids):
+    """Applique les poids appris par secteur pour ajuster le score."""
+    if not poids:
+        return 0
+    secteur = d.get("secteur_nom", "")
+    poids_secteur = poids.get(secteur, {})
+    if not poids_secteur:
+        return 0
+
+    bonus = 0
+    # RSI : si historiquement fiable dans ce secteur, on l'amplifie
+    fiab_rsi = poids_secteur.get("rsi_fiabilite", 0.5)
+    if d.get("rsi") and fiab_rsi > 0.6:
+        rsi = d["rsi"]
+        if rsi < 35:   bonus += round((fiab_rsi - 0.5) * 20)
+        elif rsi > 65: bonus -= round((fiab_rsi - 0.5) * 20)
+
+    # MACD : idem
+    fiab_macd = poids_secteur.get("macd_fiabilite", 0.5)
+    if d.get("macd") and fiab_macd > 0.6:
+        if d["macd"] == "haussier":   bonus += round((fiab_macd - 0.5) * 10)
+        elif d["macd"] == "baissier": bonus -= round((fiab_macd - 0.5) * 10)
+
+    return max(-10, min(10, bonus))
+
+
+def mettre_a_jour_poids_indicateurs(perf, historique_indicateurs):
+    """Met à jour la fiabilité de chaque indicateur par secteur dans performance.json."""
+    if "poids_indicateurs" not in perf:
+        perf["poids_indicateurs"] = {}
+
+    for secteur, indicateurs in historique_indicateurs.items():
+        if secteur not in perf["poids_indicateurs"]:
+            perf["poids_indicateurs"][secteur] = {}
+
+        for ind_nom, stats in indicateurs.items():
+            total   = stats.get("total", 0)
+            corrects = stats.get("corrects", 0)
+            if total >= 5:
+                fiabilite = round(corrects / total, 3)
+                perf["poids_indicateurs"][secteur][f"{ind_nom}_fiabilite"] = fiabilite
+
+    return perf
+
 
 # ─── PATTERNS BOUGIES JAPONAISES ─────────────────────────────────────────────
 
@@ -343,6 +516,21 @@ def calculer_score_confiance(d, persistance_intraday=None):
         d["persistance_label"] = p["label"]
         d["scores_hier"]       = p["scores_hier"]
 
+    # Bonus fondamentaux
+    score += d.get("bonus_fondamentaux", 0)
+
+    # Bonus/malus sentiment news
+    sentiment = d.get("sentiment_news", 0)
+    score += sentiment * 4
+
+    # Malus si résultats dans les 3 jours (risque élevé)
+    if d.get("resultats_proches"):
+        score = max(35, min(score, 64))  # force SURVEILLER
+        d["alerte_resultats"] = True
+
+    # Bonus indicateurs appris par secteur
+    score += d.get("bonus_indicateurs_appris", 0)
+
     score = max(0, min(100, round(score)))
 
     if score >= 65:   signal = "ACHETER"
@@ -470,15 +658,28 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
         # Patterns bougies
         patterns = detecter_patterns(hist.tail(3))
 
-        # News
-        news = []
-        try:
-            for n in stock.news[:3]:
-                title = n.get("content", {}).get("title", "") or n.get("title", "")
-                if title:
-                    news.append(title)
-        except:
-            pass
+        # Fondamentaux
+        fond = recuperer_fondamentaux(stock)
+        bonus_fond = scorer_fondamentaux(fond)
+
+        # News + sentiment
+        news_data = recuperer_news_sentiment(stock, nom)
+
+        # Calendrier résultats
+        resultats_proches = verifier_resultats_proches(stock)
+
+        # Secteur
+        valeur_secteur = {}
+        for sec, vals in SECTEURS.items():
+            for v in vals:
+                valeur_secteur[v] = sec
+        secteur_nom = valeur_secteur.get(nom, "Autre")
+
+        # Poids indicateurs appris
+        bonus_ind = calculer_bonus_indicateurs_appris(
+            {"rsi": rsi, "macd": macd_sig, "secteur_nom": secteur_nom},
+            _poids_indicateurs_cache
+        )
 
         data = {
             "nom":          nom,
@@ -510,7 +711,13 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             "s1": s1, "s2": s2,
             "beta":         beta,
             "patterns":     patterns,
-            "news":         news,
+            "news":         news_data["news"],
+            "sentiment_news":          news_data["sentiment"],
+            "bonus_fondamentaux":      bonus_fond,
+            "fondamentaux":            fond,
+            "resultats_proches":       resultats_proches,
+            "bonus_indicateurs_appris":bonus_ind,
+            "secteur_nom":             secteur_nom,
         }
 
         score, signal = calculer_score_confiance(data, persistance_intraday=_persistance_cache)
@@ -679,6 +886,48 @@ def evaluer_performance_hier(perf, donnees_actuelles):
         ps_pct = round(ps[1]["corrects"] / max(ps[1]["total"], 1) * 100, 0)
         resume += f"\nMeilleur secteur : {ms[0]} ({ms_pct}%) | Pire : {ps[0]} ({ps_pct}%)"
 
+    # Auto-apprentissage par indicateur et secteur
+    hist_ind = {}
+    for nom, data in reco_hier.items():
+        signal    = data.get("signal")
+        prix_hier = data.get("prix")
+        secteur   = data.get("secteur", "Autre")
+        if signal not in ["ACHETER", "ÉVITER"] or not prix_hier:
+            continue
+        d_auj = donnees_dict.get(nom)
+        if not d_auj:
+            continue
+        prix_auj = d_auj.get("cours")
+        if not prix_auj:
+            continue
+        hausse  = prix_auj > prix_hier
+        correct = (signal == "ACHETER" and hausse) or (signal == "ÉVITER" and not hausse)
+
+        if secteur not in hist_ind:
+            hist_ind[secteur] = {}
+
+        # RSI
+        rsi = data.get("rsi")
+        if rsi is not None:
+            rsi_signal = "acheter" if rsi < 40 else ("eviter" if rsi > 60 else None)
+            if rsi_signal:
+                k = "rsi"
+                hist_ind[secteur].setdefault(k, {"total": 0, "corrects": 0})
+                hist_ind[secteur][k]["total"] += 1
+                if (rsi_signal == "acheter" and hausse) or (rsi_signal == "eviter" and not hausse):
+                    hist_ind[secteur][k]["corrects"] += 1
+
+        # MACD
+        macd = data.get("macd")
+        if macd in ["haussier", "baissier"]:
+            k = "macd"
+            hist_ind[secteur].setdefault(k, {"total": 0, "corrects": 0})
+            hist_ind[secteur][k]["total"] += 1
+            if (macd == "haussier" and hausse) or (macd == "baissier" and not hausse):
+                hist_ind[secteur][k]["corrects"] += 1
+
+    perf = mettre_a_jour_poids_indicateurs(perf, hist_ind)
+
     return perf, resume
 
 
@@ -695,10 +944,15 @@ def sauvegarder_recommandations(perf, donnees_actuelles):
     perf["historique"][today] = {}
     for nom, d in donnees_dict.items():
         perf["historique"][today][nom] = {
-            "signal":  d.get("signal", "SURVEILLER"),
-            "score":   d.get("score", 50),
-            "prix":    d.get("cours"),
-            "secteur": valeur_secteur.get(nom, "Autre"),
+            "signal":       d.get("signal", "SURVEILLER"),
+            "score":        d.get("score", 50),
+            "prix":         d.get("cours"),
+            "secteur":      valeur_secteur.get(nom, "Autre"),
+            "rsi":          d.get("rsi"),
+            "macd":         d.get("macd"),
+            "boll_zone":    d.get("boll_zone", ""),
+            "golden_cross": d.get("golden_cross", False),
+            "death_cross":  d.get("death_cross", False),
         }
 
     # Garde 90 jours
@@ -1215,8 +1469,11 @@ if __name__ == "__main__":
 
     print("Chargement persistance intraday...")
     _persistance_cache = charger_persistance_intraday()
-    nb_persistance = len(_persistance_cache)
-    print(f"  {nb_persistance} valeurs avec historique intraday")
+    print(f"  {len(_persistance_cache)} valeurs avec historique intraday")
+
+    print("Chargement poids indicateurs appris...")
+    _poids_indicateurs_cache = charger_poids_indicateurs()
+    print(f"  {len(_poids_indicateurs_cache)} secteurs avec poids appris")
 
     print("Chargement historique performance...")
     perf = charger_performance()
