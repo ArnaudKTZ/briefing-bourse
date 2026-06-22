@@ -1,5 +1,5 @@
 {
-  "capital": 4075.46,
+  "capital": 320.65999999999985,
   "positions": {
     "Danone": {
       "nb_actions": 30,
@@ -7,22 +7,57 @@
       "date_entree": "2026-06-19",
       "cout_total": 1951.8000000000002
     },
-    "Pernod Ricard": {
-      "nb_actions": 31,
-      "prix_entree": 64.14,
-      "date_entree": "2026-06-19",
-      "cout_total": 1988.34
-    },
     "Veolia": {
       "nb_actions": 55,
       "prix_entree": 36.08,
       "date_entree": "2026-06-19",
       "cout_total": 1984.3999999999999
+    },
+    "Schneider Electric": {
+      "nb_actions": 6,
+      "prix_entree": 289.75,
+      "date_entree": "2026-06-22",
+      "heure_entree": "12:08",
+      "source_entree": "Briefing",
+      "cout_total": 1738.5,
+      "frais_achat": 8.69
+    },
+    "BNP Paribas": {
+      "nb_actions": 19,
+      "prix_entree": 101.76,
+      "date_entree": "2026-06-22",
+      "heure_entree": "12:08",
+      "source_entree": "Briefing",
+      "cout_total": 1933.44,
+      "frais_achat": 9.67
+    },
+    "Safran": {
+      "nb_actions": 6,
+      "prix_entree": 330.4,
+      "date_entree": "2026-06-22",
+      "heure_entree": "12:08",
+      "source_entree": "Briefing",
+      "cout_total": 1982.3999999999999,
+      "frais_achat": 9.91
     }
   },
   "historique_valeur": {
     "2026-06-19": 10000.0,
-    "2026-06-22": 10000.0
+    "2026-06-22": 9900.65
   },
-  "trades": []
+  "trades": [
+    {
+      "nom": "Pernod Ricard",
+      "entree": 64.14,
+      "sortie": 62.5,
+      "date_entree": "2026-06-19",
+      "heure_entree": "07:00",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-06-22",
+      "heure_sortie": "12:08",
+      "source_sortie": "Briefing",
+      "pnl_pct": -3.04,
+      "frais_total": 9.69
+    }
+  ]
 }
