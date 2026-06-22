@@ -235,16 +235,285 @@
         "prix": 9.5,
         "secteur": "Industrie/Défense"
       }
+    },
+    "2026-06-22": {
+      "LVMH": {
+        "signal": "ÉVITER",
+        "score": 35,
+        "prix": 499.25,
+        "secteur": "Luxe"
+      },
+      "TotalEnergies": {
+        "signal": "SURVEILLER",
+        "score": 60,
+        "prix": 71.07,
+        "secteur": "Énergie"
+      },
+      "Hermès": {
+        "signal": "SURVEILLER",
+        "score": 55,
+        "prix": 1721.5,
+        "secteur": "Luxe"
+      },
+      "Airbus": {
+        "signal": "SURVEILLER",
+        "score": 55,
+        "prix": 189.42,
+        "secteur": "Industrie/Défense"
+      },
+      "Schneider Electric": {
+        "signal": "SURVEILLER",
+        "score": 57,
+        "prix": 289.25,
+        "secteur": "Industrie/Défense"
+      },
+      "L'Oréal": {
+        "signal": "ÉVITER",
+        "score": 32,
+        "prix": 380.1,
+        "secteur": "Luxe"
+      },
+      "Sanofi": {
+        "signal": "SURVEILLER",
+        "score": 41,
+        "prix": 74.14,
+        "secteur": "Santé"
+      },
+      "BNP Paribas": {
+        "signal": "SURVEILLER",
+        "score": 58,
+        "prix": 101.58,
+        "secteur": "Banques/Finance"
+      },
+      "Air Liquide": {
+        "signal": "ÉVITER",
+        "score": 18,
+        "prix": 164.16,
+        "secteur": "Santé"
+      },
+      "Safran": {
+        "signal": "SURVEILLER",
+        "score": 48,
+        "prix": 329.4,
+        "secteur": "Industrie/Défense"
+      },
+      "Danone": {
+        "signal": "ACHETER",
+        "score": 76,
+        "prix": 65.06,
+        "secteur": "Conso/Autre"
+      },
+      "Vinci": {
+        "signal": "ACHETER",
+        "score": 65,
+        "prix": 129.65,
+        "secteur": "Industrie/Défense"
+      },
+      "Kering": {
+        "signal": "SURVEILLER",
+        "score": 55,
+        "prix": 271.95,
+        "secteur": "Luxe"
+      },
+      "Société Générale": {
+        "signal": "SURVEILLER",
+        "score": 40,
+        "prix": 77.67,
+        "secteur": "Banques/Finance"
+      },
+      "Stellantis": {
+        "signal": "SURVEILLER",
+        "score": 50,
+        "prix": 5.57,
+        "secteur": "Conso/Autre"
+      },
+      "Saint-Gobain": {
+        "signal": "SURVEILLER",
+        "score": 48,
+        "prix": 78.26,
+        "secteur": "Industrie/Défense"
+      },
+      "ArcelorMittal": {
+        "signal": "ÉVITER",
+        "score": 33,
+        "prix": 63.41,
+        "secteur": "Industrie/Défense"
+      },
+      "Pernod Ricard": {
+        "signal": "ACHETER",
+        "score": 93,
+        "prix": 64.14,
+        "secteur": "Luxe"
+      },
+      "Michelin": {
+        "signal": "SURVEILLER",
+        "score": 50,
+        "prix": 33.35,
+        "secteur": "Conso/Autre"
+      },
+      "Capgemini": {
+        "signal": "SURVEILLER",
+        "score": 53,
+        "prix": 89.52,
+        "secteur": "Tech"
+      },
+      "Renault": {
+        "signal": "SURVEILLER",
+        "score": 60,
+        "prix": 28.08,
+        "secteur": "Conso/Autre"
+      },
+      "Legrand": {
+        "signal": "ACHETER",
+        "score": 65,
+        "prix": 151.5,
+        "secteur": "Industrie/Défense"
+      },
+      "Publicis": {
+        "signal": "ACHETER",
+        "score": 65,
+        "prix": 89.88,
+        "secteur": "Télécom/Média"
+      },
+      "Bouygues": {
+        "signal": "SURVEILLER",
+        "score": 62,
+        "prix": 50.32,
+        "secteur": "Industrie/Défense"
+      },
+      "Engie": {
+        "signal": "ÉVITER",
+        "score": 30,
+        "prix": 26.83,
+        "secteur": "Énergie"
+      },
+      "Orange": {
+        "signal": "SURVEILLER",
+        "score": 62,
+        "prix": 17.08,
+        "secteur": "Télécom/Média"
+      },
+      "Vivendi": {
+        "signal": "SURVEILLER",
+        "score": 40,
+        "prix": 2.19,
+        "secteur": "Télécom/Média"
+      },
+      "Eurofins Scientific": {
+        "signal": "ÉVITER",
+        "score": 30,
+        "prix": 62.52,
+        "secteur": "Santé"
+      },
+      "Teleperformance": {
+        "signal": "SURVEILLER",
+        "score": 37,
+        "prix": 55.12,
+        "secteur": "Télécom/Média"
+      },
+      "Alstom": {
+        "signal": "ACHETER",
+        "score": 67,
+        "prix": 16.24,
+        "secteur": "Industrie/Défense"
+      },
+      "Worldline": {
+        "signal": "ÉVITER",
+        "score": 24,
+        "prix": 10.42,
+        "secteur": "Tech"
+      },
+      "Veolia": {
+        "signal": "ACHETER",
+        "score": 72,
+        "prix": 36.08,
+        "secteur": "Conso/Autre"
+      },
+      "STMicroelectronics": {
+        "signal": "SURVEILLER",
+        "score": 47,
+        "prix": 78.39,
+        "secteur": "Tech"
+      },
+      "Dassault Systèmes": {
+        "signal": "SURVEILLER",
+        "score": 37,
+        "prix": 17.23,
+        "secteur": "Tech"
+      },
+      "Edenred": {
+        "signal": "SURVEILLER",
+        "score": 55,
+        "prix": 23.91,
+        "secteur": "Conso/Autre"
+      },
+      "Accor": {
+        "signal": "SURVEILLER",
+        "score": 57,
+        "prix": 48.3,
+        "secteur": "Conso/Autre"
+      },
+      "Eurazeo": {
+        "signal": "ÉVITER",
+        "score": 27,
+        "prix": 42.84,
+        "secteur": "Banques/Finance"
+      },
+      "Thales": {
+        "signal": "SURVEILLER",
+        "score": 60,
+        "prix": 232.4,
+        "secteur": "Industrie/Défense"
+      },
+      "Forvia": {
+        "signal": "SURVEILLER",
+        "score": 45,
+        "prix": 9.5,
+        "secteur": "Industrie/Défense"
+      }
     }
   },
   "stats": {
-    "total": 0,
-    "corrects": 0,
-    "precision": 0.0,
-    "acheter_total": 0,
+    "total": 14,
+    "corrects": 7,
+    "precision": 50.0,
+    "acheter_total": 7,
     "acheter_corrects": 0,
-    "eviter_total": 0,
-    "eviter_corrects": 0,
-    "par_secteur": {}
+    "eviter_total": 7,
+    "eviter_corrects": 7,
+    "par_secteur": {
+      "Luxe": {
+        "total": 3,
+        "corrects": 2
+      },
+      "Santé": {
+        "total": 2,
+        "corrects": 2
+      },
+      "Conso/Autre": {
+        "total": 2,
+        "corrects": 0
+      },
+      "Industrie/Défense": {
+        "total": 3,
+        "corrects": 0
+      },
+      "Télécom/Média": {
+        "total": 1,
+        "corrects": 0
+      },
+      "Énergie": {
+        "total": 1,
+        "corrects": 1
+      },
+      "Tech": {
+        "total": 1,
+        "corrects": 1
+      },
+      "Banques/Finance": {
+        "total": 1,
+        "corrects": 1
+      }
+    }
   }
 }
