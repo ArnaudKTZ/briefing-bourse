@@ -253,6 +253,75 @@ def scorer_fondamentaux(fond):
     return max(-20, min(20, bonus))
 
 
+# ─── FEAR & GREED + CONSENSUS ANALYSTES ───────────────────────────────────────
+
+def recuperer_fear_greed():
+    """
+    Fear & Greed Index via alternative.me (gratuit, pas de clé API).
+    0-24 = Extreme Fear, 25-44 = Fear, 45-55 = Neutral,
+    56-75 = Greed, 76-100 = Extreme Greed.
+    Retourne un dict avec score, label et malus_global (-10 à +5).
+    """
+    try:
+        import urllib.request
+        url = "https://api.alternative.me/fng/?limit=1"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            data = json.loads(r.read())
+        score = int(data["data"][0]["value"])
+        label = data["data"][0]["value_classification"]
+        malus = 0
+        if score <= 15:   malus = -10   # panique totale
+        elif score <= 25: malus = -6    # peur extrême
+        elif score <= 40: malus = -3    # peur modérée
+        elif score >= 80: malus = -5    # euphorie = danger de retournement
+        elif score >= 65: malus = -2    # greed élevé = prudence
+        return {"score": score, "label": label, "malus": malus}
+    except:
+        return {"score": None, "label": "N/A", "malus": 0}
+
+
+def scorer_consensus_analystes(ticker_obj, cours):
+    """
+    Analyse le consensus des analystes via yfinance.
+    recommendationMean : 1=Strong Buy, 3=Hold, 5=Strong Sell
+    upside potentiel = (targetMeanPrice - cours) / cours * 100
+    Retourne bonus -12 à +12.
+    """
+    try:
+        info = ticker_obj.info
+        rec  = info.get("recommendationMean")
+        nb   = info.get("numberOfAnalystOpinions", 0)
+        cible = info.get("targetMeanPrice")
+
+        if not rec or not nb or nb < 3:
+            return 0, {}
+
+        bonus = 0
+        if rec <= 1.5:   bonus += 8    # Strong Buy unanime
+        elif rec <= 2.2: bonus += 5    # Buy
+        elif rec <= 2.8: bonus += 2    # Buy modéré
+        elif rec >= 4.0: bonus -= 8    # Sell
+        elif rec >= 3.5: bonus -= 4    # Underperform
+
+        if cible and cours:
+            upside = (cible - cours) / cours * 100
+            if upside > 25:    bonus += 5
+            elif upside > 15:  bonus += 3
+            elif upside > 5:   bonus += 1
+            elif upside < -10: bonus -= 4
+            elif upside < 0:   bonus -= 2
+
+        return max(-12, min(12, bonus)), {
+            "rec_score": round(rec, 2),
+            "nb_analystes": nb,
+            "cible_moy": round(cible, 2) if cible else None,
+            "upside_pct": round(upside, 1) if cible and cours else None,
+        }
+    except:
+        return 0, {}
+
+
 # ─── ACTUALITÉS EN TEMPS RÉEL ─────────────────────────────────────────────────
 
 def recuperer_news_sentiment(ticker_obj, nom):
@@ -679,6 +748,12 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Bonus momentum relatif vs CAC40
     score += d.get("bonus_momentum_rel", 0)
 
+    # Consensus analystes (cible prix + recommandation)
+    score += d.get("bonus_analystes", 0)
+
+    # Fear & Greed (malus global injecté via d["malus_fear_greed"])
+    score += d.get("malus_fear_greed", 0)
+
     # Bonus convergence multi-timeframe
     score += d.get("bonus_convergence_tf", 0)
 
@@ -842,6 +917,9 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             _poids_indicateurs_cache
         )
 
+        # Consensus analystes
+        bonus_analystes, data_analystes = scorer_consensus_analystes(stock, cours)
+
         # Divergence RSI/prix
         rsi_series   = RSIIndicator(close=hist["Close"], window=14).rsi() if TA_DISPONIBLE else None
         div_rsi      = detecter_divergence_rsi(hist, rsi_series) if rsi_series is not None else None
@@ -897,6 +975,8 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             "pente_ma200":             pente_ma200,
             "momentum_tf":             mtf,
             "bonus_convergence_tf":    mtf.get("bonus_convergence", 0),
+            "bonus_analystes":         bonus_analystes,
+            "analystes":               data_analystes,
         }
 
         score, signal = calculer_score_confiance(data, persistance_intraday=_persistance_cache)
@@ -1559,10 +1639,14 @@ Si un secteur te pose problème, sois plus conservateur dessus.
         brent_str  = f"Brent : {macro.get('brent','N/A')}$ ({macro.get('brent_var', 0):+.1f}%)" if macro.get("brent") else ""
         alertes    = " | ".join(macro.get("alerte_macro", []))
         macro_txt  = f"**Contexte macro :** {' | '.join(filter(None, [vix_str, eurusd_str, brent_str]))}"
+        fg = macro.get("fear_greed", {})
+        if fg.get("score") is not None:
+            macro_txt += f" | Fear&Greed : {fg['score']}/100 ({fg['label']})"
         if alertes:
             macro_txt += f"\n**ALERTES MACRO :** {alertes}"
-        if macro.get("malus_global", 0) < 0:
-            macro_txt += f"\n**Malus macro appliqué sur tous les scores : {macro['malus_global']} pts**"
+        malus_total = macro.get("malus_global", 0) + fg.get("malus", 0)
+        if malus_total < 0:
+            macro_txt += f"\n**Malus global appliqué sur tous les scores : {malus_total} pts**"
 
     return f"""Tu es l'agent trader IA le plus avancé au monde.
 Tu analyses le marché français pour Arnaud, investisseur PEA débutant.
@@ -1787,6 +1871,15 @@ if __name__ == "__main__":
         macro["alerte_macro"].append(annonce_bc_label)
     malus_total = malus_macro + malus_bc
 
+    print("Récupération Fear & Greed Index...")
+    fg = recuperer_fear_greed()
+    malus_fg = fg["malus"]
+    macro["fear_greed"] = fg
+    if fg["score"] is not None:
+        print(f"  Fear & Greed : {fg['score']}/100 ({fg['label']}) → malus {malus_fg} pts")
+        if malus_fg != 0:
+            macro["alerte_macro"].append(f"Fear&Greed {fg['score']}/100 ({fg['label']})")
+
     print("Récupération données temps réel (1 an d'historique)...")
     donnees = []
     for nom, ticker in CAC40.items():
@@ -1795,6 +1888,7 @@ if __name__ == "__main__":
         if d:
             d["malus_macro"] = malus_macro
             d["malus_banque_centrale"] = malus_bc
+            d["malus_fear_greed"] = malus_fg
             donnees.append(d)
 
     ok      = [d for d in donnees if "erreur" not in d]
