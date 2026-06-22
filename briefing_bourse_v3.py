@@ -531,6 +531,12 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Bonus indicateurs appris par secteur
     score += d.get("bonus_indicateurs_appris", 0)
 
+    # Malus macro global (VIX, EUR/USD, pétrole)
+    score += d.get("malus_macro", 0)
+
+    # Bonus momentum relatif vs CAC40
+    score += d.get("bonus_momentum_rel", 0)
+
     score = max(0, min(100, round(score)))
 
     if score >= 65:   signal = "ACHETER"
@@ -742,6 +748,103 @@ def recuperer_indice_cac():
     except:
         pass
     return None, None, None
+
+
+def recuperer_contexte_macro():
+    """
+    Récupère VIX, EUR/USD et pétrole (Brent).
+    Retourne un dict avec les valeurs et un malus_global (-20 à 0)
+    appliqué uniformément à tous les scores quand le marché est sous stress.
+    """
+    ctx = {"vix": None, "eurusd": None, "brent": None, "malus_global": 0, "alerte_macro": []}
+    try:
+        vix = yf.Ticker("^VIX").history(period="2d")
+        if not vix.empty:
+            ctx["vix"] = round(vix["Close"].iloc[-1], 1)
+    except:
+        pass
+    try:
+        eurusd = yf.Ticker("EURUSD=X").history(period="2d")
+        if not eurusd.empty:
+            cours_eu = eurusd["Close"].iloc[-1]
+            hier_eu  = eurusd["Close"].iloc[-2]
+            ctx["eurusd"] = round(cours_eu, 4)
+            ctx["eurusd_var"] = round((cours_eu - hier_eu) / hier_eu * 100, 2)
+    except:
+        pass
+    try:
+        brent = yf.Ticker("BZ=F").history(period="2d")
+        if not brent.empty:
+            cours_br = brent["Close"].iloc[-1]
+            hier_br  = brent["Close"].iloc[-2]
+            ctx["brent"] = round(cours_br, 1)
+            ctx["brent_var"] = round((cours_br - hier_br) / hier_br * 100, 2)
+    except:
+        pass
+
+    malus = 0
+    vix = ctx["vix"]
+    if vix is not None:
+        if vix > 35:
+            malus -= 20
+            ctx["alerte_macro"].append(f"VIX EXTRÊME ({vix}) — marché en panique")
+        elif vix > 25:
+            malus -= 12
+            ctx["alerte_macro"].append(f"VIX élevé ({vix}) — stress de marché")
+        elif vix > 20:
+            malus -= 5
+            ctx["alerte_macro"].append(f"VIX modéré ({vix})")
+
+    eurusd_var = ctx.get("eurusd_var")
+    if eurusd_var is not None and abs(eurusd_var) > 0.8:
+        malus -= 5
+        ctx["alerte_macro"].append(f"EUR/USD instable ({eurusd_var:+.2f}%)")
+
+    brent_var = ctx.get("brent_var")
+    if brent_var is not None and brent_var > 3:
+        malus -= 5
+        ctx["alerte_macro"].append(f"Pétrole en forte hausse ({brent_var:+.1f}%) — pression sur marges")
+    elif brent_var is not None and brent_var < -3:
+        malus -= 3
+        ctx["alerte_macro"].append(f"Pétrole en forte baisse ({brent_var:+.1f}%)")
+
+    ctx["malus_global"] = malus
+    return ctx
+
+
+def calculer_momentum_relatif_cac(donnees_dict, cac_var):
+    """
+    Pour chaque action, calcule la surperformance vs CAC40 sur 5 et 20 jours.
+    Une action qui surperforme son indice = signal de force relative.
+    Retourne un dict {nom: {"perf_relative_5j": x, "bonus_momentum_rel": y}}
+    """
+    result = {}
+    for nom, d in donnees_dict.items():
+        if "erreur" in d:
+            continue
+        try:
+            stock = yf.Ticker(d["ticker"])
+            hist  = stock.history(period="1mo")
+            if len(hist) < 20:
+                continue
+            perf_5j  = round((hist["Close"].iloc[-1] / hist["Close"].iloc[-5]  - 1) * 100, 2)
+            perf_20j = round((hist["Close"].iloc[-1] / hist["Close"].iloc[-20] - 1) * 100, 2)
+            # Approx CAC sur 5j à partir de la variation connue du jour
+            rel_5j = perf_5j - (cac_var or 0)
+            bonus = 0
+            if rel_5j > 3:    bonus += 8
+            elif rel_5j > 1:  bonus += 4
+            elif rel_5j < -3: bonus -= 8
+            elif rel_5j < -1: bonus -= 4
+            result[nom] = {
+                "perf_5j":  perf_5j,
+                "perf_20j": perf_20j,
+                "rel_5j":   round(rel_5j, 2),
+                "bonus_momentum_rel": bonus,
+            }
+        except:
+            pass
+    return result
 
 
 # ─── MOMENTUM SECTORIEL ───────────────────────────────────────────────────────
@@ -1200,7 +1303,7 @@ def generer_html_portefeuille(pf, donnees_dict):
 
 # ─── CONSTRUCTION DU PROMPT ───────────────────────────────────────────────────
 
-def construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf_stats, momentum, pf_resume, est_lundi):
+def construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf_stats, momentum, pf_resume, est_lundi, macro=None):
     today = datetime.date.today()
     jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
     jour  = jours[today.weekday()]
@@ -1276,6 +1379,18 @@ Si un secteur te pose problème, sois plus conservateur dessus.
 
     indice_txt = f"CAC 40 : {cac_cours:.0f} pts ({'+' if cac_var > 0 else ''}{cac_var}%)" if cac_cours else ""
 
+    macro_txt = ""
+    if macro:
+        vix_str   = f"VIX : {macro['vix']}" if macro.get("vix") else ""
+        eurusd_str = f"EUR/USD : {macro.get('eurusd','N/A')} ({macro.get('eurusd_var', 0):+.2f}%)" if macro.get("eurusd") else ""
+        brent_str  = f"Brent : {macro.get('brent','N/A')}$ ({macro.get('brent_var', 0):+.1f}%)" if macro.get("brent") else ""
+        alertes    = " | ".join(macro.get("alerte_macro", []))
+        macro_txt  = f"**Contexte macro :** {' | '.join(filter(None, [vix_str, eurusd_str, brent_str]))}"
+        if alertes:
+            macro_txt += f"\n**ALERTES MACRO :** {alertes}"
+        if macro.get("malus_global", 0) < 0:
+            macro_txt += f"\n**Malus macro appliqué sur tous les scores : {macro['malus_global']} pts**"
+
     return f"""Tu es l'agent trader IA le plus avancé au monde.
 Tu analyses le marché français pour Arnaud, investisseur PEA débutant.
 Nous sommes le {jour} {today.strftime('%d/%m/%Y')}.
@@ -1283,6 +1398,7 @@ Nous sommes le {jour} {today.strftime('%d/%m/%Y')}.
 ## Données marché temps réel
 
 {indice_txt}
+{macro_txt}
 
 {bloc}
 
@@ -1301,6 +1417,8 @@ Nous sommes le {jour} {today.strftime('%d/%m/%Y')}.
 6. Adapte-toi à ta performance passée par secteur.
 7. Sois honnête sur l'incertitude. Ne force pas un signal si les indicateurs divergent.
 8. Intègre le momentum sectoriel dans ton analyse.
+9. Si VIX > 25 ou alerte macro, signale-le en début de briefing et renforce le biais défensif.
+10. Une action qui surperforme le CAC40 sur 5j (rel_5j > 0) confirme la force relative — c'est un facteur de conviction supplémentaire.
 
 ## Format de sortie STRICT
 
@@ -1481,17 +1599,40 @@ if __name__ == "__main__":
     print("Récupération CAC 40...")
     cac_cours, cac_var, hist_cac = recuperer_indice_cac()
 
+    print("Récupération contexte macro (VIX, EUR/USD, Brent)...")
+    macro = recuperer_contexte_macro()
+    malus_macro = macro["malus_global"]
+    if macro["alerte_macro"]:
+        print(f"  Alertes macro : {' | '.join(macro['alerte_macro'])}")
+    print(f"  Malus global appliqué : {malus_macro} pts")
+
     print("Récupération données temps réel (1 an d'historique)...")
     donnees = []
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
         d = recuperer_donnees_action(nom, ticker, hist_cac)
         if d:
+            d["malus_macro"] = malus_macro
             donnees.append(d)
 
     ok      = [d for d in donnees if "erreur" not in d]
     erreurs = [d for d in donnees if "erreur" in d]
     print(f"OK : {len(ok)}/39 | Erreurs : {len(erreurs)}")
+
+    print("Calcul momentum relatif vs CAC40...")
+    donnees_dict = {d["nom"]: d for d in ok}
+    momentum_rel = calculer_momentum_relatif_cac(donnees_dict, cac_var)
+    for nom, mr in momentum_rel.items():
+        if nom in donnees_dict:
+            donnees_dict[nom]["bonus_momentum_rel"] = mr["bonus_momentum_rel"]
+            donnees_dict[nom]["perf_5j"]  = mr["perf_5j"]
+            donnees_dict[nom]["perf_20j"] = mr["perf_20j"]
+            donnees_dict[nom]["rel_5j"]   = mr["rel_5j"]
+            # recalculer le score avec les nouveaux bonus
+            score, signal = calculer_score_confiance(donnees_dict[nom], persistance_intraday=_persistance_cache)
+            donnees_dict[nom]["score"]  = score
+            donnees_dict[nom]["signal"] = signal
+    donnees = list(donnees_dict.values()) + [d for d in donnees if "erreur" in d]
 
     print("Évaluation performance hier...")
     perf, perf_resume = evaluer_performance_hier(perf, donnees)
@@ -1504,7 +1645,7 @@ if __name__ == "__main__":
     pf_resume, pf_data, pf_donnees_dict = gerer_portefeuille_virtuel(donnees, perf)
 
     print("Génération briefing par Claude...")
-    prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi)
+    prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi, macro=macro)
     client  = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     message = client.messages.create(
         model="claude-opus-4-8",
