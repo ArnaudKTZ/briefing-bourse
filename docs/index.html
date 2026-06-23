@@ -604,8 +604,54 @@ async function afficherBriefing() {
   loader.style.display  = 'block';
   content.innerHTML = '';
   try {
-    const d = await fetchJSON('dernier_briefing.json');
+    const [d, pf, id] = await Promise.all([
+      fetchJSON('dernier_briefing.json'),
+      fetchJSON('portefeuille_virtuel.json').catch(() => null),
+      fetchJSON('intraday_scores.json').catch(() => null),
+    ]);
     loader.style.display = 'none';
+
+    // Scores pour prix actuels
+    let scores = {};
+    if (id) {
+      const dates = Object.keys(id).sort();
+      const lastDate = dates[dates.length - 1];
+      if (lastDate) {
+        const heures = Object.keys(id[lastDate]).sort();
+        const lastH  = heures[heures.length - 1];
+        if (lastH) scores = Object.fromEntries(Object.entries(id[lastDate][lastH]).filter(([k]) => k !== '_meta'));
+      }
+    }
+
+    // Bloc portefeuille
+    let pfHtml = '';
+    if (pf) {
+      const capital     = pf.capital || 0;
+      const positions   = pf.positions || {};
+      const histoVal    = pf.historique_valeur || {};
+      const hDates      = Object.keys(histoVal).sort();
+      const valActuelle = hDates.length > 0 ? histoVal[hDates[hDates.length - 1]] : 10000;
+      const perfPf      = ((valActuelle - 10000) / 10000 * 100);
+      const nbPos       = Object.keys(positions).length;
+
+      pfHtml += `<div class="section" style="margin-bottom:12px"><div class="stitle">Portefeuille virtuel</div>`;
+      pfHtml += `<div class="cards2" style="margin-bottom:8px">`;
+      pfHtml += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(perfPf)}">${Math.round(valActuelle).toLocaleString('fr')}€</div><div class="sub ${cp(perfPf)}">${pct(perfPf)}</div></div>`;
+      pfHtml += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(capital).toLocaleString('fr')}€</div><div class="sub">${nbPos} position${nbPos > 1 ? 's' : ''}</div></div>`;
+      pfHtml += `</div>`;
+      if (nbPos > 0) {
+        pfHtml += `<div class="card-wide">`;
+        Object.entries(positions).forEach(([nom, pos]) => {
+          const coursActuel = scores[nom]?.cours;
+          const prixEntree  = pos.prix_entree;
+          const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
+          pfHtml += `<div class="pf-row"><div class="pf-nom">${nom}</div><div class="pf-right"><div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div><div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div></div></div>`;
+        });
+        pfHtml += `</div>`;
+      }
+      pfHtml += `</div>`;
+    }
+
     const cacStr = d.cac_cours ? `CAC ${Math.round(d.cac_cours).toLocaleString('fr')}` : '';
     const varStr = d.cac_var !== undefined ? ` (${d.cac_var > 0 ? '+' : ''}${parseFloat(d.cac_var).toFixed(2)}%)` : '';
     content.innerHTML = `
@@ -615,6 +661,7 @@ async function afficherBriefing() {
           <div class="bsub">${cacStr}${varStr} · Précision ${d.precision || 0}%</div>
         </div>
       </div>
+      ${pfHtml}
       <div class="briefing-texte">${mdToHtml(d.texte || '')}</div>
       <div class="footer" style="margin-top:12px">Briefing généré par Claude · Agent Bourse V4</div>
     `;
