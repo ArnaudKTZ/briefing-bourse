@@ -1,0 +1,36 @@
+name: Agent Watchdog
+
+on:
+  schedule:
+    - cron: '30 5 * * 1-5'  # 7h30 heure française (UTC+2) — 30 min après le briefing
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Lancer le watchdog
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+        run: python agent_watchdog.py
+
+      - name: Sauvegarder le log watchdog
+        run: |
+          git config user.name "Agent Watchdog"
+          git config user.email "actions@github.com"
+          git add watchdog_log.json || true
+          git diff --staged --quiet || git commit -m "Watchdog $(date +%Y-%m-%d\ %H:%M)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
