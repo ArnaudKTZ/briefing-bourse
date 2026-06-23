@@ -57,6 +57,7 @@ FICHIER_INTRADAY     = "intraday_scores.json"
 
 _persistance_cache        = {}  # chargé une fois au démarrage du main
 _poids_indicateurs_cache  = {}  # poids appris par indicateur/secteur
+_rapport_news_cache       = {}  # rapport de l'agent news (rapport_news.json)
 
 
 def charger_persistance_intraday():
@@ -898,8 +899,12 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
         fond = recuperer_fondamentaux(stock)
         bonus_fond = scorer_fondamentaux(fond)
 
-        # News + sentiment
-        news_data = recuperer_news_sentiment(stock, nom)
+        # News + sentiment : priorité au rapport agent_news, fallback Yahoo Finance
+        if _rapport_news_cache and nom in _rapport_news_cache.get("valeurs", {}):
+            nd = _rapport_news_cache["valeurs"][nom]
+            news_data = {"sentiment": nd["sentiment"], "news": nd["titres_cles"]}
+        else:
+            news_data = recuperer_news_sentiment(stock, nom)
 
         # Calendrier résultats
         resultats_proches = verifier_resultats_proches(stock)
@@ -1642,6 +1647,12 @@ Si un secteur te pose problème, sois plus conservateur dessus.
         fg = macro.get("fear_greed", {})
         if fg.get("score") is not None:
             macro_txt += f" | Fear&Greed : {fg['score']}/100 ({fg['label']})"
+        if _rapport_news_cache:
+            sm = _rapport_news_cache.get("marche", {})
+            macro_txt += f"\n**Sentiment presse financière :** {sm.get('sentiment_global', 0):+.2f} | {sm.get('nb_articles', 0)} articles analysés"
+            titres = sm.get("titres_cles", [])[:3]
+            if titres:
+                macro_txt += "\n" + "\n".join(f"- {t}" for t in titres)
         if alertes:
             macro_txt += f"\n**ALERTES MACRO :** {alertes}"
         malus_total = macro.get("malus_global", 0) + fg.get("malus", 0)
@@ -1849,6 +1860,15 @@ if __name__ == "__main__":
     print("Chargement poids indicateurs appris...")
     _poids_indicateurs_cache = charger_poids_indicateurs()
     print(f"  {len(_poids_indicateurs_cache)} secteurs avec poids appris")
+
+    print("Chargement rapport agent news...")
+    FICHIER_RAPPORT_NEWS = "rapport_news.json"
+    if os.path.exists(FICHIER_RAPPORT_NEWS):
+        with open(FICHIER_RAPPORT_NEWS, "r", encoding="utf-8") as f:
+            _rapport_news_cache = json.load(f)
+        print(f"  Rapport du {_rapport_news_cache.get('date','?')} chargé — sentiment global {_rapport_news_cache.get('marche',{}).get('sentiment_global',0):+.2f}")
+    else:
+        print("  Pas de rapport news disponible, fallback Yahoo Finance")
 
     print("Chargement historique performance...")
     perf = charger_performance()

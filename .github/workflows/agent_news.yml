@@ -1,0 +1,33 @@
+name: Agent News CAC40
+
+on:
+  schedule:
+    - cron: '45 4 * * 1-5'  # 6h45 heure française (UTC+2), 15 min avant le briefing
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collecter-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Lancer l'agent news
+        run: python agent_news.py
+
+      - name: Sauvegarder rapport_news.json
+        run: |
+          git config user.name "Agent News"
+          git config user.email "actions@github.com"
+          git add rapport_news.json || true
+          git diff --staged --quiet || git commit -m "Rapport news $(date +%Y-%m-%d\ %H:%M)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
