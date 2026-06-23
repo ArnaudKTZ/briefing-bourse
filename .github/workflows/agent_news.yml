@@ -2,7 +2,9 @@ name: Agent News CAC40
 
 on:
   schedule:
-    - cron: '45 4 * * 1-5'  # 6h45 heure française (UTC+2), 15 min avant le briefing
+    - cron: '45 4 * * 1-5'   # 6h45 heure française — avant le briefing 7h
+    - cron: '45 7 * * 1-5'   # 9h45 heure française — avant scoring intraday 10h
+    - cron: '45 11 * * 1-5'  # 13h45 heure française — avant scoring intraday 14h
   workflow_dispatch:
 
 permissions:

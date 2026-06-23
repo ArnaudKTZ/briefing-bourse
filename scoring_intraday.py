@@ -48,6 +48,7 @@ except ImportError:
 
 FICHIER_INTRADAY    = "intraday_scores.json"
 FICHIER_PERFORMANCE = "performance.json"
+FICHIER_RAPPORT_NEWS = "rapport_news.json"
 
 DATES_BANQUES_CENTRALES = [
     "2026-01-30","2026-03-06","2026-04-17","2026-06-05",
@@ -55,6 +56,13 @@ DATES_BANQUES_CENTRALES = [
     "2026-01-28","2026-03-18","2026-05-06","2026-06-17",
     "2026-07-29","2026-09-16","2026-11-04","2026-12-16",
 ]
+
+def charger_rapport_news():
+    if os.path.exists(FICHIER_RAPPORT_NEWS):
+        with open(FICHIER_RAPPORT_NEWS, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
 
 def recuperer_contexte_global():
     """VIX + Fear&Greed + BCE/Fed → malus global unique à appliquer à tous les scores."""
@@ -131,7 +139,7 @@ CAC40 = {
 }
 
 
-def scorer_action(nom, ticker, malus_global=0):
+def scorer_action(nom, ticker, malus_global=0, rapport_news=None):
     try:
         stock = yf.Ticker(ticker)
         hist  = stock.history(period="1y")
@@ -265,6 +273,12 @@ def scorer_action(nom, ticker, malus_global=0):
                     elif upside > 15:  score += 3
                     elif upside < -10: score -= 4
         except: pass
+
+        # Sentiment news (rapport agent_news)
+        if rapport_news:
+            nd = rapport_news.get("valeurs", {}).get(nom, {})
+            sentiment = nd.get("sentiment", 0)
+            score += int(sentiment * 4)
 
         # Malus global (VIX + Fear&Greed + BCE/Fed)
         score += malus_global
@@ -515,6 +529,14 @@ if __name__ == "__main__":
 
     print(f"Scoring intraday — {today} {heure}")
 
+    print("Chargement rapport agent news...")
+    rapport_news = charger_rapport_news()
+    if rapport_news:
+        sg = rapport_news.get("marche", {}).get("sentiment_global", 0)
+        print(f"  Rapport du {rapport_news.get('date','?')} {rapport_news.get('heure','?')} — sentiment global {sg:+.2f}")
+    else:
+        print("  Pas de rapport news disponible")
+
     print("Contexte global (VIX, Fear&Greed, BCE/Fed)...")
     malus_global, infos_macro = recuperer_contexte_global()
     if infos_macro:
@@ -536,7 +558,7 @@ if __name__ == "__main__":
     ok = 0
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
-        result = scorer_action(nom, ticker, malus_global=malus_global)
+        result = scorer_action(nom, ticker, malus_global=malus_global, rapport_news=rapport_news)
         if result:
             snapshot[nom] = result
             ok += 1
