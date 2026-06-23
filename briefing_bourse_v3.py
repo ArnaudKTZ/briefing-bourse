@@ -1984,6 +1984,18 @@ if __name__ == "__main__":
     print("Sauvegarde recommandations...")
     sauvegarder_recommandations(perf, donnees)
 
+    print("Sauvegarde briefing pour PWA...")
+    briefing_pwa = {
+        "date":      datetime.date.today().isoformat(),
+        "heure":     datetime.datetime.now().strftime("%H:%M"),
+        "texte":     briefing,
+        "cac_cours": cac_cours,
+        "cac_var":   cac_var,
+        "precision": perf["stats"].get("precision", 0),
+    }
+    with open("dernier_briefing.json", "w", encoding="utf-8") as f:
+        json.dump(briefing_pwa, f, ensure_ascii=False, indent=2)
+
     print("Envoi email...")
     html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict)
     envoyer_email(briefing, perf["stats"], html_pf)
