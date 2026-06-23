@@ -384,6 +384,40 @@ async function charger() {
       html += `<div class="alerte-card"><div class="titre">Peur extrême — ${fg}/100</div><div class="body">Biais défensif. Malus ${malus} pts appliqué sur tous les scores.</div></div>`;
     }
 
+    // ── PORTEFEUILLE VIRTUEL ──
+    if (pf) {
+      const capital     = pf.capital || 0;
+      const positions   = pf.positions || {};
+      const histoVal    = pf.historique_valeur || {};
+      const hDates      = Object.keys(histoVal).sort();
+      const valActuelle = hDates.length > 0 ? histoVal[hDates[hDates.length - 1]] : 10000;
+      const perfPf      = ((valActuelle - 10000) / 10000 * 100);
+      const nbPos       = Object.keys(positions).length;
+
+      html += `<div class="section"><div class="stitle">Portefeuille virtuel</div>`;
+      html += `<div class="cards2" style="margin-bottom:8px">`;
+      html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(perfPf)}">${Math.round(valActuelle).toLocaleString('fr')}€</div><div class="sub ${cp(perfPf)}">${pct(perfPf)}</div></div>`;
+      html += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(capital).toLocaleString('fr')}€</div><div class="sub">${nbPos} position${nbPos > 1 ? 's' : ''} ouverte${nbPos > 1 ? 's' : ''}</div></div>`;
+      html += `</div>`;
+      if (nbPos > 0) {
+        html += `<div class="card-wide">`;
+        Object.entries(positions).forEach(([nom, pos]) => {
+          const coursActuel = scores[nom]?.cours;
+          const prixEntree  = pos.prix_entree;
+          const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
+          html += `<div class="pf-row">
+            <div class="pf-nom">${nom}</div>
+            <div class="pf-right">
+              <div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div>
+              <div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div>
+            </div>
+          </div>`;
+        });
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+
     // ── RÉSUMÉ ──
     if (liste.length > 0) {
       html += `<div class="section"><div class="stitle">CAC 40 — résumé</div><div class="stats3">`;
@@ -434,42 +468,6 @@ async function charger() {
         </div>`;
       });
       html += `</div></div>`;
-    }
-
-    // ── PORTEFEUILLE RÉEL ──
-    if (pf) {
-      const capital    = pf.capital || 0;
-      const positions  = pf.positions || {};
-      const histoVal   = pf.historique_valeur || {};
-      const hDates     = Object.keys(histoVal).sort();
-      const valActuelle = hDates.length > 0 ? histoVal[hDates[hDates.length - 1]] : 10000;
-      const valDepart  = 10000;
-      const perfPf     = ((valActuelle - valDepart) / valDepart * 100);
-      const nbPos      = Object.keys(positions).length;
-
-      html += `<div class="section"><div class="stitle">Portefeuille virtuel</div>`;
-      html += `<div class="cards2" style="margin-bottom:8px">`;
-      html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(perfPf)}">${Math.round(valActuelle).toLocaleString('fr')}€</div><div class="sub ${cp(perfPf)}">${pct(perfPf)}</div></div>`;
-      html += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(capital).toLocaleString('fr')}€</div><div class="sub">${nbPos} position${nbPos > 1 ? 's' : ''}</div></div>`;
-      html += `</div>`;
-
-      if (nbPos > 0) {
-        html += `<div class="card-wide">`;
-        Object.entries(positions).forEach(([nom, pos]) => {
-          const coursActuel = scores[nom]?.cours;
-          const prixEntree  = pos.prix_entree;
-          const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
-          html += `<div class="pf-row">
-            <div class="pf-nom">${nom}</div>
-            <div class="pf-right">
-              <div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div>
-              <div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div>
-            </div>
-          </div>`;
-        });
-        html += `</div>`;
-      }
-      html += `</div>`;
     }
 
     // ── AGENTS ──
@@ -592,7 +590,12 @@ function mdToHtml(md) {
 function inlineFormat(t) {
   return t
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\bACHETER\b/g, '<span style="color:#4caf7d;font-weight:700">ACHETER</span>')
+    .replace(/\bÉVITER\b/g,  '<span style="color:#ef5350;font-weight:700">ÉVITER</span>')
+    .replace(/\bSURVEILLER\b/g, '<span style="color:#ffd54f;font-weight:700">SURVEILLER</span>')
+    .replace(/\bHaussier\b/g, '<span style="color:#4caf7d">Haussier</span>')
+    .replace(/\bBaissier\b/g, '<span style="color:#ef5350">Baissier</span>');
 }
 
 async function afficherBriefing() {
