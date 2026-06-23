@@ -58,6 +58,7 @@ FICHIER_INTRADAY     = "intraday_scores.json"
 _persistance_cache        = {}  # chargé une fois au démarrage du main
 _poids_indicateurs_cache  = {}  # poids appris par indicateur/secteur
 _rapport_news_cache       = {}  # rapport de l'agent news (rapport_news.json)
+_rapport_espion_cache     = {}  # rapport de l'agent espion (rapport_espion.json)
 
 
 def charger_persistance_intraday():
@@ -752,6 +753,9 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Consensus analystes (cible prix + recommandation)
     score += d.get("bonus_analystes", 0)
 
+    # Bonus argent institutionnel (agent espion)
+    score += d.get("bonus_espion", 0)
+
     # Fear & Greed (malus global injecté via d["malus_fear_greed"])
     score += d.get("malus_fear_greed", 0)
 
@@ -899,6 +903,13 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
         fond = recuperer_fondamentaux(stock)
         bonus_fond = scorer_fondamentaux(fond)
 
+        # Bonus agent espion (institutionnels + rotations sectorielles)
+        if _rapport_espion_cache and nom in _rapport_espion_cache.get("valeurs", {}):
+            data_esp = _rapport_espion_cache["valeurs"][nom]
+            bonus_esp = data_esp.get("bonus_total", 0)
+        else:
+            bonus_esp = 0
+
         # News + sentiment : priorité au rapport agent_news, fallback Yahoo Finance
         if _rapport_news_cache and nom in _rapport_news_cache.get("valeurs", {}):
             nd = _rapport_news_cache["valeurs"][nom]
@@ -982,6 +993,7 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
             "bonus_convergence_tf":    mtf.get("bonus_convergence", 0),
             "bonus_analystes":         bonus_analystes,
             "analystes":               data_analystes,
+            "bonus_espion":            bonus_esp,
         }
 
         score, signal = calculer_score_confiance(data, persistance_intraday=_persistance_cache)
@@ -1647,6 +1659,11 @@ Si un secteur te pose problème, sois plus conservateur dessus.
         fg = macro.get("fear_greed", {})
         if fg.get("score") is not None:
             macro_txt += f" | Fear&Greed : {fg['score']}/100 ({fg['label']})"
+        if _rapport_espion_cache:
+            res = _rapport_espion_cache.get("resume", {})
+            macro_txt += f"\n**Argent institutionnel (hebdo) :** secteurs en force : {res.get('secteurs_en_force',[])} | en sortie : {res.get('secteurs_en_sortie',[])}"
+            if res.get("top_achats_instit"):
+                macro_txt += f"\n**Accumulation institutions :** {', '.join(res['top_achats_instit'][:5])}"
         if _rapport_news_cache:
             sm = _rapport_news_cache.get("marche", {})
             macro_txt += f"\n**Sentiment presse financière :** {sm.get('sentiment_global', 0):+.2f} | {sm.get('nb_articles', 0)} articles analysés"
@@ -1860,6 +1877,17 @@ if __name__ == "__main__":
     print("Chargement poids indicateurs appris...")
     _poids_indicateurs_cache = charger_poids_indicateurs()
     print(f"  {len(_poids_indicateurs_cache)} secteurs avec poids appris")
+
+    print("Chargement rapport agent espion...")
+    FICHIER_RAPPORT_ESPION = "rapport_espion.json"
+    if os.path.exists(FICHIER_RAPPORT_ESPION):
+        with open(FICHIER_RAPPORT_ESPION, "r", encoding="utf-8") as f:
+            _rapport_espion_cache = json.load(f)
+        resume = _rapport_espion_cache.get("resume", {})
+        print(f"  Rapport du {_rapport_espion_cache.get('date','?')} chargé")
+        print(f"  Secteurs en force : {resume.get('secteurs_en_force', [])}")
+    else:
+        print("  Pas de rapport espion disponible")
 
     print("Chargement rapport agent news...")
     FICHIER_RAPPORT_NEWS = "rapport_news.json"

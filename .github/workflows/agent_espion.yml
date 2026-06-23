@@ -1,0 +1,36 @@
+name: Agent Espion (argent institutionnel)
+
+on:
+  schedule:
+    - cron: '15 4 * * 1'  # Lundi 6h15 heure française — hebdomadaire
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  espion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance pandas numpy
+
+      - name: Lancer l'agent espion
+        run: python agent_espion.py
+
+      - name: Sauvegarder rapport_espion.json
+        run: |
+          git config user.name "Agent Espion"
+          git config user.email "actions@github.com"
+          git add rapport_espion.json || true
+          git diff --staged --quiet || git commit -m "Rapport espion $(date +%Y-%m-%d)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
