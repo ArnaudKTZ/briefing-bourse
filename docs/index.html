@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bourse">
+<meta name="theme-color" content="#1a1a2e">
+<title>Agent Bourse V4</title>
+<link rel="manifest" href="manifest.json">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#0f0f1a;
+  --surface:#1a1a2e;
+  --surface2:#252540;
+  --border:#2a2a4a;
+  --text:#f0f0f0;
+  --muted:#8888aa;
+  --green:#4caf7d;
+  --red:#ef5350;
+  --yellow:#ffd54f;
+  --blue:#64b5f6;
+  --orange:#ffb74d;
+}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+.header{background:var(--surface);padding:16px 16px 12px;padding-top:calc(16px + env(safe-area-inset-top));position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border)}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+.header h1{font-size:17px;font-weight:600;letter-spacing:-.3px}
+.header .sub{font-size:12px;color:var(--muted);margin-top:2px}
+.refresh-btn{background:var(--surface2);border:1px solid var(--border);border-radius:20px;color:var(--text);padding:6px 14px;font-size:13px;cursor:pointer}
+.refresh-btn:active{opacity:.7}
+.content{padding:12px}
+.section{margin-bottom:16px}
+.section-title{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;padding:0 2px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.card .lbl{font-size:11px;color:var(--muted);margin-bottom:4px}
+.card .val{font-size:22px;font-weight:600;letter-spacing:-.5px}
+.card .sub{font-size:12px;color:var(--muted);margin-top:2px}
+.card-wide{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.alerte-card{background:#2a1a1a;border:1px solid #5a2a2a;border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.alerte-card .titre{font-size:12px;font-weight:600;color:var(--red);margin-bottom:4px}
+.alerte-card .body{font-size:12px;color:#ffaaaa;line-height:1.5}
+.signal-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.signal-row:last-child{border-bottom:none}
+.signal-score{font-size:20px;font-weight:700;width:38px;flex-shrink:0;text-align:center}
+.signal-info{flex:1;min-width:0}
+.signal-nom{font-size:14px;font-weight:600}
+.signal-detail{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.signal-var{font-size:12px;font-weight:600;flex-shrink:0}
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;margin-right:4px}
+.badge-ach{background:#1a3a2a;color:var(--green)}
+.badge-evi{background:#3a1a1a;color:var(--red)}
+.badge-sur{background:#2a2a1a;color:var(--yellow)}
+.pf-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.pf-row:last-child{border-bottom:none}
+.pf-nom{font-weight:500}
+.pf-gp{font-weight:600}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
+.stat-card{background:var(--surface2);border-radius:10px;padding:10px;text-align:center}
+.stat-card .num{font-size:24px;font-weight:700}
+.stat-card .lbl{font-size:11px;color:var(--muted);margin-top:2px}
+.news-item{font-size:12px;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);line-height:1.4}
+.news-item:last-child{border-bottom:none}
+.tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:6px;margin:2px}
+.tag-force{background:#1a3a2a;color:var(--green)}
+.tag-sortie{background:#3a1a1a;color:var(--red)}
+.tag-instit{background:#1a2a3a;color:var(--blue)}
+.loader{text-align:center;padding:60px 20px;color:var(--muted)}
+.loader .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-msg{background:#2a1a1a;border:1px solid #5a2a2a;border-radius:12px;padding:16px;text-align:center;color:var(--red);font-size:13px}
+.last-update{text-align:center;font-size:11px;color:var(--muted);padding:8px 0 4px}
+.green{color:var(--green)}
+.red{color:var(--red)}
+.yellow{color:var(--yellow)}
+.blue{color:var(--blue)}
+.sep{height:1px;background:var(--border);margin:4px 0 12px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-row">
+    <div>
+      <h1>Agent Bourse V4</h1>
+      <div class="sub" id="last-update">Chargement...</div>
+    </div>
+    <button class="refresh-btn" onclick="charger()">Actualiser</button>
+  </div>
+</div>
+
+<div class="content" id="content">
+  <div class="loader">
+    <div class="spinner"></div>
+    Chargement des données...
+  </div>
+</div>
+
+<script>
+const REPO = 'ArnaudKTZ/briefing-bourse';
+const RAW  = `https://raw.githubusercontent.com/${REPO}/main`;
+
+async function fetchJSON(fichier) {
+  const r = await fetch(`${RAW}/${fichier}?t=${Date.now()}`);
+  if (!r.ok) throw new Error(`${fichier} introuvable`);
+  return r.json();
+}
+
+function pct(v) {
+  if (v === null || v === undefined) return '';
+  const s = v > 0 ? '+' : '';
+  return `${s}${parseFloat(v).toFixed(2)}%`;
+}
+
+function couleurPct(v) {
+  return parseFloat(v) >= 0 ? 'green' : 'red';
+}
+
+function couleurScore(s) {
+  if (s >= 65) return 'var(--green)';
+  if (s <= 35) return 'var(--red)';
+  return 'var(--yellow)';
+}
+
+function badge(signal) {
+  if (signal === 'ACHETER') return '<span class="badge badge-ach">ACHETER</span>';
+  if (signal === 'ÉVITER')  return '<span class="badge badge-evi">ÉVITER</span>';
+  return '<span class="badge badge-sur">SURVEILLER</span>';
+}
+
+async function charger() {
+  const content = document.getElementById('content');
+  content.innerHTML = '<div class="loader"><div class="spinner"></div>Chargement...</div>';
+
+  try {
+    const [perf, intraday, news, espion] = await Promise.allSettled([
+      fetchJSON('performance.json'),
+      fetchJSON('intraday_scores.json'),
+      fetchJSON('rapport_news.json'),
+      fetchJSON('rapport_espion.json'),
+    ]);
+
+    const p  = perf.status     === 'fulfilled' ? perf.value     : null;
+    const id = intraday.status === 'fulfilled' ? intraday.value : null;
+    const n  = news.status     === 'fulfilled' ? news.value     : null;
+    const e  = espion.status   === 'fulfilled' ? espion.value   : null;
+
+    let html = '';
+
+    // ── MACRO ──────────────────────────────────────────────────────
+    const cac_cours = id?.cac_cours || p?.derniere_execution?.cac_cours || null;
+    const cac_var   = id?.cac_var   || null;
+    const vix       = id?.vix       || null;
+    const fg        = id?.fear_greed_score || null;
+    const fg_lbl    = id?.fear_greed_label || '';
+
+    html += `<div class="section">`;
+    html += `<div class="section-title">Marché</div>`;
+    html += `<div class="cards">`;
+    html += `<div class="card"><div class="lbl">CAC 40</div><div class="val">${cac_cours ? Math.round(cac_cours).toLocaleString('fr') : '—'}</div><div class="sub ${cac_var !== null ? couleurPct(cac_var) : ''}">${cac_var !== null ? pct(cac_var) : '—'}</div></div>`;
+    html += `<div class="card"><div class="lbl">Fear & Greed</div><div class="val ${fg !== null ? (fg < 30 ? 'red' : fg > 60 ? 'green' : 'yellow') : ''}">${fg !== null ? fg : '—'}</div><div class="sub">${fg_lbl || '—'}</div></div>`;
+    if (vix !== null) {
+      html += `<div class="card"><div class="lbl">VIX</div><div class="val ${vix > 25 ? 'red' : 'green'}">${vix}</div><div class="sub">${vix > 25 ? 'Tension' : 'Maîtrisé'}</div></div>`;
+    }
+    const malus = id?.malus_global || 0;
+    if (malus !== 0) {
+      html += `<div class="card"><div class="lbl">Malus global</div><div class="val red">${malus} pts</div><div class="sub">appliqué</div></div>`;
+    }
+    html += `</div></div>`;
+
+    // ── ALERTES MACRO ──────────────────────────────────────────────
+    if (fg !== null && fg < 30) {
+      html += `<div class="alerte-card"><div class="titre">Peur extrême — ${fg}/100</div><div class="body">Biais défensif recommandé. Malus ${malus} pts sur tous les scores.</div></div>`;
+    }
+
+    // ── RÉSUMÉ MARCHÉ ──────────────────────────────────────────────
+    const scores = id?.scores || {};
+    const liste  = Object.entries(scores).filter(([,d]) => !d.erreur);
+    const nb_ach = liste.filter(([,d]) => d.signal === 'ACHETER').length;
+    const nb_evi = liste.filter(([,d]) => d.signal === 'ÉVITER').length;
+    const nb_sur = liste.filter(([,d]) => d.signal === 'SURVEILLER').length;
+
+    if (liste.length > 0) {
+      html += `<div class="section">`;
+      html += `<div class="section-title">Résumé CAC 40</div>`;
+      html += `<div class="stats-row">`;
+      html += `<div class="stat-card"><div class="num green">${nb_ach}</div><div class="lbl">ACHETER</div></div>`;
+      html += `<div class="stat-card"><div class="num yellow">${nb_sur}</div><div class="lbl">SURVEILLER</div></div>`;
+      html += `<div class="stat-card"><div class="num red">${nb_evi}</div><div class="lbl">ÉVITER</div></div>`;
+      html += `</div></div>`;
+    }
+
+    // ── TOP 5 ACHETER ──────────────────────────────────────────────
+    const top_ach = liste
+      .filter(([,d]) => d.signal === 'ACHETER')
+      .sort(([,a],[,b]) => b.score - a.score)
+      .slice(0, 5);
+
+    if (top_ach.length > 0) {
+      html += `<div class="section">`;
+      html += `<div class="section-title">Top opportunités</div>`;
+      html += `<div class="card-wide">`;
+      top_ach.forEach(([nom, d]) => {
+        const rsi = d.rsi ? ` RSI ${d.rsi}` : '';
+        const macd = d.macd ? ` · MACD ${d.macd}` : '';
+        html += `<div class="signal-row">
+          <div class="signal-score" style="color:${couleurScore(d.score)}">${d.score}</div>
+          <div class="signal-info">
+            <div class="signal-nom">${badge(d.signal)}${nom}</div>
+            <div class="signal-detail">${rsi}${macd}</div>
+          </div>
+          <div class="signal-var ${couleurPct(d.variation)}">${pct(d.variation)}</div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ── TOP 3 ÉVITER ───────────────────────────────────────────────
+    const top_evi = liste
+      .filter(([,d]) => d.signal === 'ÉVITER')
+      .sort(([,a],[,b]) => a.score - b.score)
+      .slice(0, 3);
+
+    if (top_evi.length > 0) {
+      html += `<div class="section">`;
+      html += `<div class="section-title">À éviter</div>`;
+      html += `<div class="card-wide">`;
+      top_evi.forEach(([nom, d]) => {
+        html += `<div class="signal-row">
+          <div class="signal-score" style="color:${couleurScore(d.score)}">${d.score}</div>
+          <div class="signal-info">
+            <div class="signal-nom">${badge(d.signal)}${nom}</div>
+            <div class="signal-detail">${d.macd ? 'MACD ' + d.macd : ''}</div>
+          </div>
+          <div class="signal-var ${couleurPct(d.variation)}">${pct(d.variation)}</div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ── PORTEFEUILLE ───────────────────────────────────────────────
+    const pf = p?.portefeuille || null;
+    if (pf) {
+      const val   = pf.valeur_totale || 10000;
+      const depart = pf.capital_depart || 10000;
+      const perf_pf = ((val - depart) / depart * 100).toFixed(2);
+      const libre  = pf.capital_libre || 0;
+      const positions = pf.positions_ouvertes || [];
+
+      html += `<div class="section">`;
+      html += `<div class="section-title">Portefeuille virtuel</div>`;
+      html += `<div class="cards" style="margin-bottom:8px">`;
+      html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${parseFloat(perf_pf) >= 0 ? 'green' : 'red'}">${Math.round(val).toLocaleString('fr')}€</div><div class="sub ${parseFloat(perf_pf) >= 0 ? 'green' : 'red'}">${perf_pf >= 0 ? '+' : ''}${perf_pf}%</div></div>`;
+      html += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(libre).toLocaleString('fr')}€</div><div class="sub">${positions.length} positions</div></div>`;
+      html += `</div>`;
+      if (positions.length > 0) {
+        html += `<div class="card-wide">`;
+        positions.forEach(pos => {
+          const gp = pos.gain_pct !== undefined ? pos.gain_pct : 0;
+          html += `<div class="pf-row">
+            <span class="pf-nom">${pos.nom}</span>
+            <span class="pf-gp ${gp >= 0 ? 'green' : 'red'}">${gp >= 0 ? '+' : ''}${parseFloat(gp).toFixed(2)}%</span>
+          </div>`;
+        });
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+
+    // ── AGENTS ─────────────────────────────────────────────────────
+    if (e || n) {
+      html += `<div class="section">`;
+      html += `<div class="section-title">Agents</div>`;
+      html += `<div class="card-wide">`;
+
+      if (e?.resume) {
+        const res = e.resume;
+        if (res.secteurs_en_force?.length) {
+          html += `<div style="margin-bottom:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Secteurs en force</div>`;
+          res.secteurs_en_force.forEach(s => { html += `<span class="tag tag-force">${s}</span>`; });
+          html += `</div>`;
+        }
+        if (res.secteurs_en_sortie?.length) {
+          html += `<div style="margin-bottom:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Secteurs en sortie</div>`;
+          res.secteurs_en_sortie.forEach(s => { html += `<span class="tag tag-sortie">${s}</span>`; });
+          html += `</div>`;
+        }
+        if (res.top_achats_instit?.length) {
+          html += `<div><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Accumulation institutionnelle</div>`;
+          res.top_achats_instit.slice(0,4).forEach(s => { html += `<span class="tag tag-instit">${s}</span>`; });
+          html += `</div>`;
+        }
+      }
+
+      if (n?.marche) {
+        const m = n.marche;
+        html += `<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">`;
+        html += `<div style="font-size:11px;color:var(--muted);margin-bottom:6px">Presse financière (${n.heure || ''})</div>`;
+        (m.titres_cles || []).slice(0,3).forEach(t => {
+          html += `<div class="news-item">${t}</div>`;
+        });
+        html += `</div>`;
+      }
+
+      html += `</div></div>`;
+    }
+
+    // ── PRÉCISION ──────────────────────────────────────────────────
+    if (p?.precision !== undefined) {
+      const prec = p.precision;
+      html += `<div class="section">`;
+      html += `<div class="section-title">Précision agent</div>`;
+      html += `<div class="card-wide" style="text-align:center">`;
+      html += `<div style="font-size:40px;font-weight:700;color:${prec >= 60 ? 'var(--green)' : prec >= 45 ? 'var(--yellow)' : 'var(--red)'}">${prec}%</div>`;
+      html += `<div style="font-size:12px;color:var(--muted);margin-top:4px">${p.total || 0} signaux évalués</div>`;
+      html += `</div></div>`;
+    }
+
+    // ── DERNIÈRE MISE À JOUR ───────────────────────────────────────
+    const heure_id = id?.heure || '';
+    const date_id  = id?.date  || '';
+    document.getElementById('last-update').textContent =
+      date_id && heure_id ? `Données du ${date_id} à ${heure_id}` : 'Données en temps réel';
+
+    html += `<div class="last-update">Agent Bourse V4 · Données GitHub</div>`;
+    content.innerHTML = html;
+
+  } catch(err) {
+    content.innerHTML = `<div class="error-msg">Erreur de chargement<br><small>${err.message}</small></div>`;
+  }
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+
+charger();
+</script>
+</body>
+</html>
