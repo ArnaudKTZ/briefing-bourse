@@ -57,6 +57,69 @@ DATES_BANQUES_CENTRALES = [
     "2026-07-29","2026-09-16","2026-11-04","2026-12-16",
 ]
 
+ETF_SECTORIELS = {
+    "Banques":    "EXV1.DE",
+    "Energie":    "EXV2.DE",
+    "Tech":       "EXV4.DE",
+    "Santé":      "EXV6.DE",
+    "Industrie":  "EXH8.DE",
+    "Luxe/Conso": "EXV5.DE",
+    "Utilities":  "EXH7.DE",
+    "Matériaux":  "EXV3.DE",
+}
+
+SECTEUR_VALEUR = {
+    "LVMH": "Luxe/Conso", "Hermès": "Luxe/Conso", "Kering": "Luxe/Conso",
+    "L'Oréal": "Luxe/Conso", "Pernod Ricard": "Luxe/Conso", "Danone": "Luxe/Conso",
+    "Accor": "Luxe/Conso",
+    "TotalEnergies": "Energie",
+    "Engie": "Utilities", "Veolia": "Utilities",
+    "Orange": "Telecom", "Vivendi": "Telecom", "Bouygues": "Telecom",
+    "BNP Paribas": "Banques", "Société Générale": "Banques", "Eurazeo": "Banques",
+    "Airbus": "Industrie", "Safran": "Industrie", "Thales": "Industrie",
+    "Schneider Electric": "Industrie", "Legrand": "Industrie", "Vinci": "Industrie",
+    "Michelin": "Industrie", "Renault": "Industrie", "Stellantis": "Industrie",
+    "Alstom": "Industrie", "Forvia": "Industrie",
+    "Saint-Gobain": "Matériaux", "ArcelorMittal": "Matériaux", "Air Liquide": "Matériaux",
+    "Capgemini": "Tech", "Dassault Systèmes": "Tech", "STMicroelectronics": "Tech",
+    "Worldline": "Tech", "Teleperformance": "Tech", "Publicis": "Tech",
+    "Edenred": "Tech",
+    "Sanofi": "Santé", "Eurofins Scientific": "Santé",
+}
+
+
+def analyser_etf_intraday():
+    """Lecture rapide des ETF sectoriels pour détecter les rotations du jour."""
+    signaux = {}
+    try:
+        for secteur, ticker in ETF_SECTORIELS.items():
+            h = yf.Ticker(ticker).history(period="5d")
+            if h.empty or len(h) < 2:
+                continue
+            perf_1j = round((float(h["Close"].iloc[-1]) / float(h["Close"].iloc[-2]) - 1) * 100, 2)
+            vol     = float(h["Volume"].iloc[-1])
+            vol_moy = float(h["Volume"].mean())
+            flux    = round(vol / vol_moy, 2) if vol_moy > 0 else 1.0
+            if perf_1j > 0.5 and flux > 1.1:
+                signaux[secteur] = ("ENTREE", perf_1j, flux)
+            elif perf_1j < -0.5 and flux > 1.1:
+                signaux[secteur] = ("SORTIE", perf_1j, flux)
+    except:
+        pass
+    return signaux
+
+
+def bonus_etf_sectoriel(nom, signaux_etf):
+    """Bonus/malus selon la rotation sectorielle du jour."""
+    secteur = SECTEUR_VALEUR.get(nom)
+    if not secteur or secteur not in signaux_etf:
+        return 0
+    signal, perf, _ = signaux_etf[secteur]
+    if signal == "ENTREE":  return min(8, int(abs(perf) * 2))
+    if signal == "SORTIE":  return max(-8, -int(abs(perf) * 2))
+    return 0
+
+
 def charger_rapport_news():
     if os.path.exists(FICHIER_RAPPORT_NEWS):
         with open(FICHIER_RAPPORT_NEWS, "r", encoding="utf-8") as f:
@@ -139,7 +202,7 @@ CAC40 = {
 }
 
 
-def scorer_action(nom, ticker, malus_global=0, rapport_news=None):
+def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=None):
     try:
         stock = yf.Ticker(ticker)
         hist  = stock.history(period="1y")
@@ -273,6 +336,10 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None):
                     elif upside > 15:  score += 3
                     elif upside < -10: score -= 4
         except: pass
+
+        # Rotation sectorielle intraday (ETF)
+        if signaux_etf:
+            score += bonus_etf_sectoriel(nom, signaux_etf)
 
         # Sentiment news (rapport agent_news)
         if rapport_news:
@@ -537,6 +604,14 @@ if __name__ == "__main__":
     else:
         print("  Pas de rapport news disponible")
 
+    print("Analyse rotations sectorielles ETF...")
+    signaux_etf = analyser_etf_intraday()
+    if signaux_etf:
+        for s, (sig, perf, flux) in signaux_etf.items():
+            print(f"  {s}: {sig} {perf:+.2f}% flux x{flux:.1f}")
+    else:
+        print("  Aucune rotation sectorielle significative")
+
     print("Contexte global (VIX, Fear&Greed, BCE/Fed)...")
     malus_global, infos_macro = recuperer_contexte_global()
     if infos_macro:
@@ -558,7 +633,7 @@ if __name__ == "__main__":
     ok = 0
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
-        result = scorer_action(nom, ticker, malus_global=malus_global, rapport_news=rapport_news)
+        result = scorer_action(nom, ticker, malus_global=malus_global, rapport_news=rapport_news, signaux_etf=signaux_etf)
         if result:
             snapshot[nom] = result
             ok += 1
