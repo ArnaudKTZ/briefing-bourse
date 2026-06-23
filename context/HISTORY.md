@@ -9,6 +9,17 @@
 
 ## 2026-06-19
 
+### Agent bourse V3 — Tests et décision stratégique
+
+- V3 confirmée en production sur GitHub Actions (coche verte, run réussi)
+- Portefeuille virtuel : frais de courtage et dividendes volontairement exclus pour l'instant
+- Décision : laisser tourner 3-4 semaines avant toute amélioration du modèle
+- Bilan prévu fin juillet pour analyser l'historique de performance et décider des évolutions
+
+---
+
+## 2026-06-19
+
 ### Mise en place du briefing bourse automatique
 
 - Ouverture d'un PEA : stratégie mixte ETFs long terme (CAC 40, MSCI World, S&P 500) + actions court/moyen terme

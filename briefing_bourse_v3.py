@@ -21,6 +21,7 @@ import os
 import json
 import re
 import math
+import urllib.request
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import anthropic
@@ -263,7 +264,6 @@ def recuperer_fear_greed():
     Retourne un dict avec score, label et malus_global (-10 à +5).
     """
     try:
-        import urllib.request
         url = "https://api.alternative.me/fng/?limit=1"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=8) as r:
