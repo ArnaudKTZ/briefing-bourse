@@ -21,11 +21,8 @@ ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
 ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
 
-DESTINATAIRES = [
-    "xtrem111team@gmail.com",
-    "ferrey83400@gmail.com",
-    "Arnaud.kuntz@zoho.eu",
-]
+_dest_env = os.environ.get("DESTINATAIRES", "")
+DESTINATAIRES = [d.strip() for d in _dest_env.split(",") if d.strip()] if _dest_env else []
 
 SEUIL_ALERTE         = 85
 FICHIER_ALERTES_VUE  = "alertes_envoyees.json"

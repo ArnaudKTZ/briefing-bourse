@@ -21,7 +21,7 @@ ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
 ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
-DESTINATAIRE  = "Arnaud.kuntz@zoho.eu"  # watchdog → Arnaud uniquement
+DESTINATAIRE  = os.environ.get("DESTINATAIRE_PRINCIPAL", "")
 
 FICHIER_RAPPORT_NEWS  = "rapport_news.json"
 FICHIER_INTRADAY      = "intraday_scores.json"

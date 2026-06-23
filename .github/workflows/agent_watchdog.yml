@@ -25,6 +25,7 @@ jobs:
         env:
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
           ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRE_PRINCIPAL: ${{ secrets.DESTINATAIRE_PRINCIPAL }}
         run: python agent_watchdog.py
 
       - name: Sauvegarder le log watchdog

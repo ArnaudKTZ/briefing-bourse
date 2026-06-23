@@ -31,6 +31,7 @@ jobs:
         env:
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
           ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
         run: python scoring_intraday.py
 
       - name: Sauvegarder sur GitHub

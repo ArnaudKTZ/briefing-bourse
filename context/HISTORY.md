@@ -7,6 +7,21 @@
 
 ---
 
+## 2026-06-23
+
+### Agent Bourse V4 — Architecture multi-agents finalisée
+
+- Architecture V4 en production : 5 agents actifs (Briefing, Scoring intraday, News, Espion, Watchdog)
+- Briefing email enrichi : portefeuille virtuel intégré, narration sectorielle, alertes détaillées, auto-réflexion sur la précision
+- Scoring intraday passé à 4x/jour avec rotation sectorielle ETF en temps réel
+- Document d'architecture créé et téléchargeable (rôles, séquencement, flux de données)
+- Décision : auto-apprentissage des agents secondaires reporté au 22 juillet (pas assez de données)
+- Agents en réserve identifiés : Agent Macro+ et Agent Insider
+- Niveau agent estimé : 8/10
+- Précision actuelle : 50% (base de départ, s'affinera avec le temps)
+
+---
+
 ## 2026-06-19
 
 ### Agent bourse V3 — Tests et décision stratégique
