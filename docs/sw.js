@@ -1,4 +1,4 @@
-const CACHE = 'agent-bourse-v3';
+const CACHE = 'agent-bourse-v4';
 const RAW   = 'https://raw.githubusercontent.com/ArnaudKTZ/briefing-bourse/main';
 
 self.addEventListener('install', e => { self.skipWaiting(); });
