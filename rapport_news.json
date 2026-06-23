@@ -1,20 +1,20 @@
 {
   "date": "2026-06-23",
-  "heure": "09:01",
+  "heure": "16:45",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
+      "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète",
+      "La Bourse de Paris recule, la tech inquiète",
       "La Bourse de Paris en léger recul plombée par le luxe",
-      "La Bourse de Paris en hausse sur un marché tranquille",
-      "L’action Orange chute à son plus bas en 3 mois selon Barclays",
-      "CAC 40 : la Bourse attend la Fed et l’inflation, «l’euphorie sur l'accord de paix avec l’Iran s’est estompée»"
+      "La Bourse de Paris en hausse sur un marché tranquille"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.1,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
         "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
         "VivaTech : Avec MethaneLive, TotalEnergies met la Data au service de la lutte contre les émissions de méthane",
         "Pourquoi TotalEnergies échappe quasiment à l'impôt sur les bénéfices en France",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.55,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
         "GROUPE BNP PARIBAS : descriptif du programme de rachat d'actions Avril",
-        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
+        "Bourse : «les actions Crédit agricole moins chères que SG et BNP Paribas», de gros dividendes et du potentiel"
       ]
     },
     "Air Liquide": {
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Kingswood Capital Management conclut un accord définitif en vue d’acquérir Safran Passenger Innovations",
         "Accord Iran-USA salué par la Bourse de Paris, Safran à la fête, TotalEnergies à la traîne",
@@ -185,13 +185,9 @@
       ]
     },
     "Capgemini": {
-      "sentiment": -0.05,
-      "nb_news": 20,
-      "titres_cles": [
-        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
-        "Capgemini chute de 4% sur fond de risques liés à l’IA",
-        "Le moment de vérité de l’IA pour l’Assurance dommages : les pionniers affichent une croissance de revenus supérieure de 21 %, tandis que le reste du secteur peine à suivre"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Renault": {
       "sentiment": 0.3,
@@ -239,18 +235,22 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.85,
+      "sentiment": 0.95,
       "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Communiqué: Orange a l’intention d’émettre une nouvelle souche d'obligations hybrides et de lancer une offre de rachat sur certaines de ses obligations hybrides existantes",
-        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France"
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes",
+        "Communiqué: Orange a l’intention d’émettre une nouvelle souche d'obligations hybrides et de lancer une offre de rachat sur certaines de ses obligations hybrides existantes"
       ]
     },
     "Vivendi": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.07,
+      "nb_news": 14,
+      "titres_cles": [
+        "Vivendi : Descriptif du programme de rachat d’actions autorisé par l’Assemblée générale mixte des actionnaires du 28 avril 2025 et mis en œuvre sur délégation du Directoire du 23 mars 2026",
+        "VIVENDI PREND ACTE DE LA COMMUNICATION DE GRIEFS DE LA COMMISSION EUROPÉENNE ET EN CONTESTE LES ALLÉGATIONS",
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
+      ]
     },
     "Eurofins Scientific": {
       "sentiment": -0.25,
@@ -289,21 +289,21 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.5,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia Environnement: Un très bon premier trimestre avec une croissance solide et une belle progression de l’EBITDA, en ligne avec la guidance",
-        "Veolia construit un acteur majeur du traitement des déchets dangereux aux Etats-Unis avec l’acquisition de Clean Earth et accélère sa croissance internationale"
+        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032"
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.4,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia",
-        "Les actions européennes clôturent sous leurs records malgré l’optimisme de paix"
+        "Les Bourses européennes clôturent en baisse, mais atténuent le coup de chaud sur la tech"
       ]
     },
     "Dassault Systèmes": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.41,
-      "nb_news": 17,
+      "sentiment": 0.38,
+      "nb_news": 16,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
