@@ -1,15 +1,15 @@
 {
   "date": "2026-06-23",
-  "heure": "16:45",
+  "heure": "18:30",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
       "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète",
-      "La Bourse de Paris recule, la tech inquiète",
       "La Bourse de Paris en léger recul plombée par le luxe",
-      "La Bourse de Paris en hausse sur un marché tranquille"
+      "La Bourse de Paris en hausse sur un marché tranquille",
+      "L’action Orange chute à son plus bas en 3 mois selon Barclays"
     ]
   },
   "valeurs": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
         "Communiqué de presse : Wayrilz de Sanofi a été approuvé au Japon pour traiter la thrombocytopénie immunitaire",
-        "Communiqué de presse : Cenrifki (tolebrutinib) de Sanofi approuvé dans l’UE comme premier médicament ciblant la progression du handicap dans la sclérose en plaques secondairement progressive sans rechutes",
-        "Communiqué de presse : Sanofi nomme Paulo Fontoura à la tête de sa R&D"
+        "Communiqué de presse : Cenrifki (tolebrutinib) de Sanofi approuvé dans l’UE comme premier médicament ciblant la progression du handicap dans la sclérose en plaques secondairement progressive sans rechutes"
       ]
     },
     "BNP Paribas": {
@@ -185,9 +185,13 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": -0.05,
+      "nb_news": 20,
+      "titres_cles": [
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini chute de 4% sur fond de risques liés à l’IA",
+        "Le moment de vérité de l’IA pour l’Assurance dommages : les pionniers affichent une croissance de revenus supérieure de 21 %, tandis que le reste du secteur peine à suivre"
+      ]
     },
     "Renault": {
       "sentiment": 0.3,
@@ -208,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.1,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros",
-        "Microsoft et Publicis Groupe renforcent leur partenariat pour façonner l’avenir du marketing agentique au service des sociétés du monde entier"
+        "Infobip et Digitas Middle East annoncent l'extension de leur partenariat stratégique afin de renforcer l'engagement client basé sur l'IA pour les marques internationales"
       ]
     },
     "Bouygues": {
