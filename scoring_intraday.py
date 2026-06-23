@@ -128,25 +128,38 @@ def recuperer_contexte_global():
     """VIX + Fear&Greed + BCE/Fed → malus global unique à appliquer à tous les scores."""
     malus = 0
     infos = []
+    vix_val = None
+    fg_score = None
+    fg_label = ""
+    cac_cours = None
+    cac_var   = None
     try:
         vix = yf.Ticker("^VIX").history(period="2d")
         if not vix.empty:
-            v = round(float(vix["Close"].iloc[-1]), 1)
-            if v > 35:    malus -= 20; infos.append(f"VIX EXTRÊME {v}")
-            elif v > 25:  malus -= 12; infos.append(f"VIX élevé {v}")
-            elif v > 20:  malus -= 5;  infos.append(f"VIX modéré {v}")
+            vix_val = round(float(vix["Close"].iloc[-1]), 1)
+            if vix_val > 35:    malus -= 20; infos.append(f"VIX EXTRÊME {vix_val}")
+            elif vix_val > 25:  malus -= 12; infos.append(f"VIX élevé {vix_val}")
+            elif vix_val > 20:  malus -= 5;  infos.append(f"VIX modéré {vix_val}")
     except: pass
     try:
         url = "https://api.alternative.me/fng/?limit=1"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=6) as r:
             fg = json.loads(r.read())
-        score_fg = int(fg["data"][0]["value"])
-        label_fg = fg["data"][0]["value_classification"]
-        if score_fg <= 15:    malus -= 10; infos.append(f"F&G panique {score_fg}")
-        elif score_fg <= 25:  malus -= 6;  infos.append(f"F&G peur {score_fg}")
-        elif score_fg <= 40:  malus -= 3
-        elif score_fg >= 80:  malus -= 5;  infos.append(f"F&G euphorie {score_fg}")
+        fg_score = int(fg["data"][0]["value"])
+        fg_label = fg["data"][0]["value_classification"]
+        if fg_score <= 15:    malus -= 10; infos.append(f"F&G panique {fg_score}")
+        elif fg_score <= 25:  malus -= 6;  infos.append(f"F&G peur {fg_score}")
+        elif fg_score <= 40:  malus -= 3
+        elif fg_score >= 80:  malus -= 5;  infos.append(f"F&G euphorie {fg_score}")
+    except: pass
+    try:
+        cac = yf.Ticker("^FCHI").history(period="2d")
+        if not cac.empty and len(cac) >= 2:
+            cac_cours = round(float(cac["Close"].iloc[-1]), 0)
+            cac_var   = round((cac["Close"].iloc[-1] / cac["Close"].iloc[-2] - 1) * 100, 2)
+        elif not cac.empty:
+            cac_cours = round(float(cac["Close"].iloc[-1]), 0)
     except: pass
     today = datetime.date.today()
     for d_str in DATES_BANQUES_CENTRALES:
@@ -154,7 +167,7 @@ def recuperer_contexte_global():
         if 0 <= (d - today).days <= 2:
             malus -= 15; infos.append(f"Annonce BCE/Fed {d_str}")
             break
-    return malus, infos
+    return malus, infos, vix_val, fg_score, fg_label, cac_cours, cac_var
 
 CAC40 = {
     "LVMH":               "MC.PA",
@@ -610,11 +623,12 @@ if __name__ == "__main__":
         print("  Aucune rotation sectorielle significative")
 
     print("Contexte global (VIX, Fear&Greed, BCE/Fed)...")
-    malus_global, infos_macro = recuperer_contexte_global()
+    malus_global, infos_macro, vix_val, fg_score, fg_label, cac_cours, cac_var = recuperer_contexte_global()
     if infos_macro:
         print(f"  Alertes : {' | '.join(infos_macro)} → malus {malus_global} pts")
     else:
         print(f"  Marché calme, malus : {malus_global} pts")
+    print(f"  CAC 40 : {cac_cours} ({cac_var:+.2f}%) | VIX : {vix_val} | F&G : {fg_score} {fg_label}")
 
     data = charger_intraday()
 
@@ -635,7 +649,17 @@ if __name__ == "__main__":
             snapshot[nom] = result
             ok += 1
 
-    data[today][heure] = snapshot
+    data[today][heure] = {
+        "_meta": {
+            "cac_cours":       cac_cours,
+            "cac_var":         cac_var,
+            "vix":             vix_val,
+            "fear_greed_score": fg_score,
+            "fear_greed_label": fg_label,
+            "malus_global":    malus_global,
+        },
+        **snapshot,
+    }
     sauvegarder_intraday(data)
     print(f"OK : {ok}/39 snapshots sauvegardés à {heure}")
 
