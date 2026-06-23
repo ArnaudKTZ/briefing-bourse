@@ -195,6 +195,10 @@ const RAW  = `https://raw.githubusercontent.com/${REPO}/main`;
 const PIN_KEY    = 'ab_pin';
 const PIN_SET_KEY = 'ab_pin_set';
 
+// Cache global des données chargées
+let _cachePf = null;
+let _cacheScores = {};
+
 // ── PIN ──────────────────────────────────────────────────────────────────────
 let saisie = '';
 let modeConfig = false;
@@ -337,6 +341,7 @@ async function charger() {
     const news   = rNews.status   === 'fulfilled' ? rNews.value   : null;
     const espion = rEspion.status === 'fulfilled' ? rEspion.value : null;
     const pf     = rPf.status     === 'fulfilled' ? rPf.value     : null;
+    if (pf) _cachePf = pf;
 
     // Extraire la dernière session intraday
     let scores = {};
@@ -352,6 +357,7 @@ async function charger() {
           const raw = id[lastDate][lastH];
           meta    = raw['_meta'] || {};
           scores  = Object.fromEntries(Object.entries(raw).filter(([k]) => k !== '_meta'));
+          _cacheScores = scores;
           dateId  = lastDate;
           heureId = lastH;
         }
@@ -604,24 +610,11 @@ async function afficherBriefing() {
   loader.style.display  = 'block';
   content.innerHTML = '';
   try {
-    const [d, pf, id] = await Promise.all([
-      fetchJSON('dernier_briefing.json'),
-      fetchJSON('portefeuille_virtuel.json').catch(() => null),
-      fetchJSON('intraday_scores.json').catch(() => null),
-    ]);
+    const d = await fetchJSON('dernier_briefing.json');
     loader.style.display = 'none';
 
-    // Scores pour prix actuels
-    let scores = {};
-    if (id) {
-      const dates = Object.keys(id).sort();
-      const lastDate = dates[dates.length - 1];
-      if (lastDate) {
-        const heures = Object.keys(id[lastDate]).sort();
-        const lastH  = heures[heures.length - 1];
-        if (lastH) scores = Object.fromEntries(Object.entries(id[lastDate][lastH]).filter(([k]) => k !== '_meta'));
-      }
-    }
+    const pf     = _cachePf;
+    const scores = _cacheScores;
 
     // Bloc portefeuille
     let pfHtml = '';
