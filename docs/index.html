@@ -300,20 +300,23 @@ async function charger() {
   document.getElementById('content').innerHTML = '<div class="loader"><div class="spinner"></div>Chargement...</div>';
 
   try {
-    const [rPerf, rId, rNews, rEspion] = await Promise.allSettled([
+    const [rPerf, rId, rNews, rEspion, rPf] = await Promise.allSettled([
       fetchJSON('performance.json'),
       fetchJSON('intraday_scores.json'),
       fetchJSON('rapport_news.json'),
       fetchJSON('rapport_espion.json'),
+      fetchJSON('portefeuille_virtuel.json'),
     ]);
 
     const perf   = rPerf.status   === 'fulfilled' ? rPerf.value   : null;
     const id     = rId.status     === 'fulfilled' ? rId.value     : null;
     const news   = rNews.status   === 'fulfilled' ? rNews.value   : null;
     const espion = rEspion.status === 'fulfilled' ? rEspion.value : null;
+    const pf     = rPf.status     === 'fulfilled' ? rPf.value     : null;
 
     // Extraire la dernière session intraday
     let scores = {};
+    let meta = {};
     let dateId = '', heureId = '';
     if (id) {
       const dates = Object.keys(id).sort();
@@ -322,7 +325,9 @@ async function charger() {
         const heures = Object.keys(id[lastDate]).sort();
         const lastH  = heures[heures.length - 1];
         if (lastH) {
-          scores  = id[lastDate][lastH];
+          const raw = id[lastDate][lastH];
+          meta    = raw['_meta'] || {};
+          scores  = Object.fromEntries(Object.entries(raw).filter(([k]) => k !== '_meta'));
           dateId  = lastDate;
           heureId = lastH;
         }
@@ -337,16 +342,18 @@ async function charger() {
     let html = '';
 
     // ── MACRO ──
-    const cac    = Object.values(scores).find(d => d.cours)?.cours;
-    const cacVar = liste.length > 0 ? (liste.reduce((s,[,d]) => s + (d.variation||0), 0) / liste.length) : null;
-
-    const fg    = news?.marche?.fear_greed_score ?? null;
-    const fgLbl = news?.marche?.fear_greed_label ?? '';
-    const malus = news?.marche?.malus_global ?? 0;
+    const cac    = meta.cac_cours ?? null;
+    const cacVar = meta.cac_var   ?? null;
+    const fg     = meta.fear_greed_score ?? null;
+    const fgLbl  = meta.fear_greed_label ?? '';
+    const malus  = meta.malus_global ?? 0;
+    const vix    = meta.vix ?? null;
 
     html += `<div class="section"><div class="stitle">Marché</div><div class="cards2">`;
     html += `<div class="card"><div class="lbl">CAC 40</div><div class="val">${cac ? Math.round(cac).toLocaleString('fr') : '—'}</div><div class="sub ${cacVar !== null ? cp(cacVar) : ''}">${cacVar !== null ? pct(cacVar) : '—'}</div></div>`;
     html += `<div class="card"><div class="lbl">Fear & Greed</div><div class="val ${fg !== null ? (fg < 30 ? 'red' : fg > 60 ? 'green' : 'yellow') : ''}">${fg ?? '—'}</div><div class="sub">${fgLbl || '—'}</div></div>`;
+    html += `<div class="card"><div class="lbl">VIX</div><div class="val ${vix !== null ? (vix > 25 ? 'red' : 'green') : ''}">${vix ?? '—'}</div><div class="sub">${vix !== null ? (vix > 25 ? 'Tension' : 'Maîtrisé') : '—'}</div></div>`;
+    html += `<div class="card"><div class="lbl">Malus global</div><div class="val ${malus < 0 ? 'red' : 'green'}">${malus > 0 ? '+' : ''}${malus} pts</div><div class="sub">appliqué</div></div>`;
     html += `</div></div>`;
 
     if (fg !== null && fg < 30) {
@@ -405,38 +412,34 @@ async function charger() {
       html += `</div></div>`;
     }
 
-    // ── PORTEFEUILLE ──
-    const histo = perf?.historique || {};
-    const dates = Object.keys(histo).sort();
-    const lastDate = dates[dates.length - 1];
-    const lastSignaux = lastDate ? histo[lastDate] : {};
+    // ── PORTEFEUILLE RÉEL ──
+    if (pf) {
+      const capital    = pf.capital || 0;
+      const positions  = pf.positions || {};
+      const histoVal   = pf.historique_valeur || {};
+      const hDates     = Object.keys(histoVal).sort();
+      const valActuelle = hDates.length > 0 ? histoVal[hDates[hDates.length - 1]] : 10000;
+      const valDepart  = 10000;
+      const perfPf     = ((valActuelle - valDepart) / valDepart * 100);
+      const nbPos      = Object.keys(positions).length;
 
-    // Positions ouvertes = signaux ACHETER d'hier qui ne sont pas encore ÉVITER
-    const positions = Object.entries(lastSignaux).filter(([,d]) => d.signal === 'ACHETER').slice(0, 8);
-
-    if (positions.length > 0 || perf?.stats) {
       html += `<div class="section"><div class="stitle">Portefeuille virtuel</div>`;
+      html += `<div class="cards2" style="margin-bottom:8px">`;
+      html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(perfPf)}">${Math.round(valActuelle).toLocaleString('fr')}€</div><div class="sub ${cp(perfPf)}">${pct(perfPf)}</div></div>`;
+      html += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(capital).toLocaleString('fr')}€</div><div class="sub">${nbPos} position${nbPos > 1 ? 's' : ''}</div></div>`;
+      html += `</div>`;
 
-      if (perf?.stats) {
-        const s = perf.stats;
-        const prec = s.precision || 0;
-        html += `<div class="cards2" style="margin-bottom:8px">`;
-        html += `<div class="card"><div class="lbl">Précision</div><div class="val ${prec >= 55 ? 'green' : prec >= 40 ? 'yellow' : 'red'}">${prec}%</div><div class="sub">${s.total || 0} signaux</div></div>`;
-        html += `<div class="card"><div class="lbl">ACHETER ok</div><div class="val">${s.acheter_corrects || 0}/${s.acheter_total || 0}</div><div class="sub">ÉVITER ok ${s.eviter_corrects || 0}/${s.eviter_total || 0}</div></div>`;
-        html += `</div>`;
-      }
-
-      if (positions.length > 0) {
+      if (nbPos > 0) {
         html += `<div class="card-wide">`;
-        positions.forEach(([nom, d]) => {
-          const cours_actuel = scores[nom]?.cours;
-          const prix_achat   = d.prix;
-          const gp = cours_actuel && prix_achat ? ((cours_actuel - prix_achat) / prix_achat * 100) : null;
+        Object.entries(positions).forEach(([nom, pos]) => {
+          const coursActuel = scores[nom]?.cours;
+          const prixEntree  = pos.prix_entree;
+          const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
           html += `<div class="pf-row">
             <div class="pf-nom">${nom}</div>
             <div class="pf-right">
               <div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div>
-              <div class="pf-cours">${prix_achat ? prix_achat.toFixed(2) + '€' : '—'} ${cours_actuel ? '→ ' + cours_actuel.toFixed(2) + '€' : ''}</div>
+              <div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div>
             </div>
           </div>`;
         });
