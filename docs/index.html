@@ -113,6 +113,14 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .err{background:#2a1010;border:1px solid #5a2020;border-radius:12px;padding:20px;text-align:center;color:var(--red);font-size:13px;line-height:1.5}
 .footer{text-align:center;font-size:11px;color:var(--muted);padding:8px 0 4px}
 
+/* ── BRIEFING ── */
+.briefing-meta{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.briefing-meta .bdate{font-size:13px;font-weight:600}
+.briefing-meta .bsub{font-size:11px;color:var(--muted);margin-top:2px}
+.briefing-texte{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;word-break:break-word}
+.briefing-texte strong,.briefing-texte b{color:#fff;font-weight:600}
+.btn-sm.active{background:var(--blue);border-color:var(--blue);color:#000}
+
 /* ── COULEURS ── */
 .green{color:var(--green)}.red{color:var(--red)}.yellow{color:var(--yellow)}.blue{color:var(--blue)}
 </style>
@@ -151,17 +159,24 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="header">
     <div class="header-row">
       <div>
-        <h1>Agent Bourse V4</h1>
+        <h1 id="page-titre">Agent Bourse V4</h1>
         <div class="sub" id="last-update">Chargement...</div>
       </div>
       <div class="header-actions">
         <button class="notif-btn" id="notif-btn" onclick="demanderNotifs()" title="Activer les notifications">🔔</button>
+        <button class="btn-sm" id="btn-briefing" onclick="toggleBriefing()">Briefing</button>
+        <button class="btn-sm" id="btn-scores" onclick="toggleScores()" style="display:none">Scores</button>
         <button class="btn-sm" onclick="charger()">Actualiser</button>
       </div>
     </div>
   </div>
   <div class="content" id="content">
     <div class="loader"><div class="spinner"></div>Chargement...</div>
+  </div>
+  <!-- ÉCRAN BRIEFING -->
+  <div id="briefing-screen" style="display:none;padding:12px">
+    <div class="loader" id="briefing-loader"><div class="spinner"></div>Chargement du briefing...</div>
+    <div id="briefing-content"></div>
   </div>
 </div>
 
@@ -503,6 +518,54 @@ async function charger() {
   } catch(err) {
     document.getElementById('content').innerHTML =
       `<div class="err">Erreur de chargement<br><small style="color:#ff8888">${err.message}</small></div>`;
+  }
+}
+
+// ── BRIEFING ─────────────────────────────────────────────────────────────────
+let modeBriefing = false;
+
+function toggleBriefing() {
+  modeBriefing = true;
+  document.getElementById('content').style.display = 'none';
+  document.getElementById('briefing-screen').style.display = 'block';
+  document.getElementById('btn-briefing').style.display = 'none';
+  document.getElementById('btn-scores').style.display = 'inline-block';
+  document.getElementById('page-titre').textContent = 'Briefing du matin';
+  afficherBriefing();
+}
+
+function toggleScores() {
+  modeBriefing = false;
+  document.getElementById('content').style.display = 'block';
+  document.getElementById('briefing-screen').style.display = 'none';
+  document.getElementById('btn-briefing').style.display = 'inline-block';
+  document.getElementById('btn-scores').style.display = 'none';
+  document.getElementById('page-titre').textContent = 'Agent Bourse V4';
+}
+
+async function afficherBriefing() {
+  const loader  = document.getElementById('briefing-loader');
+  const content = document.getElementById('briefing-content');
+  loader.style.display  = 'block';
+  content.innerHTML = '';
+  try {
+    const d = await fetchJSON('dernier_briefing.json');
+    loader.style.display = 'none';
+    const cacStr = d.cac_cours ? `CAC ${Math.round(d.cac_cours).toLocaleString('fr')}` : '';
+    const varStr = d.cac_var !== undefined ? ` (${d.cac_var > 0 ? '+' : ''}${parseFloat(d.cac_var).toFixed(2)}%)` : '';
+    content.innerHTML = `
+      <div class="briefing-meta">
+        <div>
+          <div class="bdate">${d.date} à ${d.heure}</div>
+          <div class="bsub">${cacStr}${varStr} · Précision ${d.precision || 0}%</div>
+        </div>
+      </div>
+      <div class="briefing-texte">${(d.texte || '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>')}</div>
+      <div class="footer" style="margin-top:12px">Briefing généré par Claude · Agent Bourse V4</div>
+    `;
+  } catch(e) {
+    loader.style.display = 'none';
+    content.innerHTML = `<div class="err">Briefing non disponible.<br><small>Il sera accessible après le prochain run de 7h.</small></div>`;
   }
 }
 
