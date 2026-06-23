@@ -3,7 +3,8 @@ name: Scoring Intraday CAC40
 on:
   schedule:
     - cron: '0 7 * * 1-5'   # 9h heure française (UTC+2 été)
-    - cron: '0 10 * * 1-5'  # 12h heure française
+    - cron: '30 9 * * 1-5'  # 11h30 heure française
+    - cron: '0 12 * * 1-5'  # 14h heure française
     - cron: '0 14 * * 1-5'  # 16h heure française
   workflow_dispatch:
 
