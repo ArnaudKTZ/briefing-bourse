@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Agent Bourse V3 — Le meilleur agent trader IA
+Agent Bourse V4 — Le meilleur agent trader IA
 - Données temps réel Yahoo Finance
 - RSI, MACD, Stochastique, ATR, Bollinger, MA20/50/200
 - Patterns de bougies japonaises
@@ -1706,7 +1706,7 @@ Nous sommes le {jour} {today.strftime('%d/%m/%Y')}.
 
 ---
 
-**BRIEFING BOURSE V3 — {jour.capitalize()} {today.strftime('%d/%m/%Y')}**
+**BRIEFING BOURSE V4 — {jour.capitalize()} {today.strftime('%d/%m/%Y')}**
 
 **{indice_txt}**
 
@@ -1825,7 +1825,7 @@ def markdown_vers_html(texte):
 def envoyer_email(briefing, perf_stats, html_portefeuille=""):
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
-    sujet     = f"Agent Bourse V3 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
+    sujet     = f"Agent Bourse V4 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = sujet
@@ -1838,7 +1838,7 @@ def envoyer_email(briefing, perf_stats, html_portefeuille=""):
     html = f"""<html><body style='font-family:Arial,sans-serif;font-size:13px;
 color:#222;max-width:1000px;margin:auto;padding:20px;'>
 <div style='background:linear-gradient(135deg,#1a1a2e,#16213e);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
-  <h2 style='margin:0;font-size:18px;'>Agent Bourse V3 — {today.strftime('%d/%m/%Y')}</h2>
+  <h2 style='margin:0;font-size:18px;'>Agent Bourse V4 — {today.strftime('%d/%m/%Y')}</h2>
   <p style='margin:6px 0 0;font-size:12px;opacity:0.8;'>
     RSI + Stochastique + MACD + Bollinger + ATR + Bougies + Pivot Points + Beta + Auto-apprentissage
     | Precision : <strong>{precision}%</strong>
