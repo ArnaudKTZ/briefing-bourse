@@ -1,8 +1,8 @@
 {
   "date": "2026-06-24",
-  "heure": "07:09",
+  "heure": "12:34",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
@@ -59,11 +59,11 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.05,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
+        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
         "Programme de rachat d’actions propres",
-        "Berenberg abaisse la note d’Unilever après un T4 solide, estimant que le redressement est déjà intégré dans le cours",
         "Berenberg voit un potentiel de hausse de 13% pour L’Oréal"
       ]
     },
@@ -329,8 +329,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.38,
-      "nb_news": 16,
+      "sentiment": 0.33,
+      "nb_news": 15,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
@@ -347,12 +347,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.0,
+      "sentiment": -0.1,
       "nb_news": 20,
       "titres_cles": [
+        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
         "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?",
-        "Défense : Thales signe un mega contrat avec la Grèce, que contient-il ?",
-        "Thales annonce un partenariat stratégique avec Google Cloud pour lancer un nouveau cloud souverain en Allemagne"
+        "Défense : Thales signe un mega contrat avec la Grèce, que contient-il ?"
       ]
     },
     "Forvia": {
