@@ -3979,6 +3979,406 @@
         "score": 34,
         "signal": "ÉVITER"
       }
+    },
+    "12:01": {
+      "_meta": {
+        "cac_cours": 8363.0,
+        "cac_var": 0.27,
+        "vix": 19.0,
+        "fear_greed_score": 17,
+        "fear_greed_label": "Extreme Fear",
+        "malus_global": -6
+      },
+      "LVMH": {
+        "nom": "LVMH",
+        "cours": 491.45,
+        "variation": 1.6,
+        "gap_ouverture": 0.2,
+        "momentum_intraday": 1.4,
+        "volume_ratio": 0.2,
+        "score": 57,
+        "signal": "SURVEILLER"
+      },
+      "TotalEnergies": {
+        "nom": "TotalEnergies",
+        "cours": 69.78,
+        "variation": -1.45,
+        "gap_ouverture": 0.13,
+        "momentum_intraday": -1.58,
+        "volume_ratio": 0.2,
+        "score": 35,
+        "signal": "ÉVITER"
+      },
+      "Hermès": {
+        "nom": "Hermès",
+        "cours": 1612.0,
+        "variation": 0.44,
+        "gap_ouverture": 0.34,
+        "momentum_intraday": 0.09,
+        "volume_ratio": 0.2,
+        "score": 21,
+        "signal": "ÉVITER"
+      },
+      "Airbus": {
+        "nom": "Airbus",
+        "cours": 192.74,
+        "variation": -0.27,
+        "gap_ouverture": -0.24,
+        "momentum_intraday": -0.03,
+        "volume_ratio": 0.2,
+        "score": 67,
+        "signal": "ACHETER"
+      },
+      "Schneider Electric": {
+        "nom": "Schneider Electric",
+        "cours": 282.0,
+        "variation": 0.89,
+        "gap_ouverture": 0.21,
+        "momentum_intraday": 0.68,
+        "volume_ratio": 0.1,
+        "score": 89,
+        "signal": "ACHETER"
+      },
+      "L'Oréal": {
+        "nom": "L'Oréal",
+        "cours": 384.75,
+        "variation": 2.33,
+        "gap_ouverture": 1.98,
+        "momentum_intraday": 0.34,
+        "volume_ratio": 0.2,
+        "score": 39,
+        "signal": "SURVEILLER"
+      },
+      "Sanofi": {
+        "nom": "Sanofi",
+        "cours": 73.65,
+        "variation": 0.24,
+        "gap_ouverture": 0.12,
+        "momentum_intraday": 0.12,
+        "volume_ratio": 0.1,
+        "score": 28,
+        "signal": "ÉVITER"
+      },
+      "BNP Paribas": {
+        "nom": "BNP Paribas",
+        "cours": 102.54,
+        "variation": 1.08,
+        "gap_ouverture": 0.69,
+        "momentum_intraday": 0.39,
+        "volume_ratio": 0.2,
+        "score": 69,
+        "signal": "ACHETER"
+      },
+      "Air Liquide": {
+        "nom": "Air Liquide",
+        "cours": 169.8,
+        "variation": 2.02,
+        "gap_ouverture": 0.29,
+        "momentum_intraday": 1.73,
+        "volume_ratio": 0.2,
+        "score": 67,
+        "signal": "ACHETER"
+      },
+      "Safran": {
+        "nom": "Safran",
+        "cours": 335.3,
+        "variation": 1.27,
+        "gap_ouverture": -0.42,
+        "momentum_intraday": 1.7,
+        "volume_ratio": 0.2,
+        "score": 79,
+        "signal": "ACHETER"
+      },
+      "Danone": {
+        "nom": "Danone",
+        "cours": 68.92,
+        "variation": 1.92,
+        "gap_ouverture": 0.53,
+        "momentum_intraday": 1.38,
+        "volume_ratio": 0.3,
+        "score": 74,
+        "signal": "ACHETER"
+      },
+      "Vinci": {
+        "nom": "Vinci",
+        "cours": 128.5,
+        "variation": -0.46,
+        "gap_ouverture": -0.46,
+        "momentum_intraday": 0.0,
+        "volume_ratio": 0.3,
+        "score": 81,
+        "signal": "ACHETER"
+      },
+      "Kering": {
+        "nom": "Kering",
+        "cours": 265.55,
+        "variation": 1.05,
+        "gap_ouverture": -1.03,
+        "momentum_intraday": 2.1,
+        "volume_ratio": 0.2,
+        "score": 75,
+        "signal": "ACHETER"
+      },
+      "Société Générale": {
+        "nom": "Société Générale",
+        "cours": 77.11,
+        "variation": -0.26,
+        "gap_ouverture": 0.28,
+        "momentum_intraday": -0.54,
+        "volume_ratio": 0.1,
+        "score": 71,
+        "signal": "ACHETER"
+      },
+      "Stellantis": {
+        "nom": "Stellantis",
+        "cours": 5.17,
+        "variation": -1.9,
+        "gap_ouverture": -0.38,
+        "momentum_intraday": -1.52,
+        "volume_ratio": 0.5,
+        "score": 17,
+        "signal": "ÉVITER"
+      },
+      "Saint-Gobain": {
+        "nom": "Saint-Gobain",
+        "cours": 77.92,
+        "variation": 0.78,
+        "gap_ouverture": 0.03,
+        "momentum_intraday": 0.75,
+        "volume_ratio": 0.1,
+        "score": 73,
+        "signal": "ACHETER"
+      },
+      "ArcelorMittal": {
+        "nom": "ArcelorMittal",
+        "cours": 63.3,
+        "variation": -0.71,
+        "gap_ouverture": -3.44,
+        "momentum_intraday": 2.83,
+        "volume_ratio": 0.7,
+        "score": 30,
+        "signal": "ÉVITER"
+      },
+      "Pernod Ricard": {
+        "nom": "Pernod Ricard",
+        "cours": 65.74,
+        "variation": 1.95,
+        "gap_ouverture": 0.34,
+        "momentum_intraday": 1.61,
+        "volume_ratio": 0.1,
+        "score": 65,
+        "signal": "ACHETER"
+      },
+      "Michelin": {
+        "nom": "Michelin",
+        "cours": 33.13,
+        "variation": 1.41,
+        "gap_ouverture": -0.09,
+        "momentum_intraday": 1.5,
+        "volume_ratio": 0.1,
+        "score": 52,
+        "signal": "SURVEILLER"
+      },
+      "Capgemini": {
+        "nom": "Capgemini",
+        "cours": 88.68,
+        "variation": 0.02,
+        "gap_ouverture": 0.29,
+        "momentum_intraday": -0.27,
+        "volume_ratio": 0.1,
+        "score": 23,
+        "signal": "ÉVITER"
+      },
+      "Renault": {
+        "nom": "Renault",
+        "cours": 26.83,
+        "variation": 0.79,
+        "gap_ouverture": -0.08,
+        "momentum_intraday": 0.86,
+        "volume_ratio": 0.2,
+        "score": 26,
+        "signal": "ÉVITER"
+      },
+      "Legrand": {
+        "nom": "Legrand",
+        "cours": 146.0,
+        "variation": -0.54,
+        "gap_ouverture": 0.14,
+        "momentum_intraday": -0.68,
+        "volume_ratio": 0.2,
+        "score": 53,
+        "signal": "SURVEILLER"
+      },
+      "Publicis": {
+        "nom": "Publicis",
+        "cours": 86.64,
+        "variation": -1.75,
+        "gap_ouverture": 0.27,
+        "momentum_intraday": -2.01,
+        "volume_ratio": 0.2,
+        "score": 48,
+        "signal": "SURVEILLER"
+      },
+      "Bouygues": {
+        "nom": "Bouygues",
+        "cours": 49.57,
+        "variation": -0.9,
+        "gap_ouverture": -0.14,
+        "momentum_intraday": -0.76,
+        "volume_ratio": 0.1,
+        "score": 49,
+        "signal": "SURVEILLER"
+      },
+      "Engie": {
+        "nom": "Engie",
+        "cours": 26.67,
+        "variation": -1.08,
+        "gap_ouverture": -0.33,
+        "momentum_intraday": -0.74,
+        "volume_ratio": 0.2,
+        "score": 30,
+        "signal": "ÉVITER"
+      },
+      "Orange": {
+        "nom": "Orange",
+        "cours": 16.94,
+        "variation": 0.18,
+        "gap_ouverture": -0.3,
+        "momentum_intraday": 0.47,
+        "volume_ratio": 0.1,
+        "score": 33,
+        "signal": "ÉVITER"
+      },
+      "Vivendi": {
+        "nom": "Vivendi",
+        "cours": 2.14,
+        "variation": -1.38,
+        "gap_ouverture": -0.46,
+        "momentum_intraday": -0.93,
+        "volume_ratio": 0.1,
+        "score": 13,
+        "signal": "ÉVITER"
+      },
+      "Eurofins Scientific": {
+        "nom": "Eurofins Scientific",
+        "cours": 65.96,
+        "variation": 1.1,
+        "gap_ouverture": 0.77,
+        "momentum_intraday": 0.33,
+        "volume_ratio": 0.2,
+        "score": 75,
+        "signal": "ACHETER"
+      },
+      "Teleperformance": {
+        "nom": "Teleperformance",
+        "cours": 51.1,
+        "variation": -4.63,
+        "gap_ouverture": -0.15,
+        "momentum_intraday": -4.49,
+        "volume_ratio": 0.2,
+        "score": 26,
+        "signal": "ÉVITER"
+      },
+      "Alstom": {
+        "nom": "Alstom",
+        "cours": 15.99,
+        "variation": -1.11,
+        "gap_ouverture": -0.62,
+        "momentum_intraday": -0.5,
+        "volume_ratio": 0.2,
+        "score": 49,
+        "signal": "SURVEILLER"
+      },
+      "Worldline": {
+        "nom": "Worldline",
+        "cours": 10.08,
+        "variation": -1.75,
+        "gap_ouverture": -1.36,
+        "momentum_intraday": -0.4,
+        "volume_ratio": 0.3,
+        "score": 18,
+        "signal": "ÉVITER"
+      },
+      "Veolia": {
+        "nom": "Veolia",
+        "cours": 35.75,
+        "variation": -0.72,
+        "gap_ouverture": -0.31,
+        "momentum_intraday": -0.42,
+        "volume_ratio": 0.5,
+        "score": 76,
+        "signal": "ACHETER"
+      },
+      "STMicroelectronics": {
+        "nom": "STMicroelectronics",
+        "cours": 72.43,
+        "variation": -9.26,
+        "gap_ouverture": -9.8,
+        "momentum_intraday": 0.6,
+        "volume_ratio": 1.0,
+        "score": 47,
+        "signal": "SURVEILLER"
+      },
+      "Dassault Systèmes": {
+        "nom": "Dassault Systèmes",
+        "cours": 17.36,
+        "variation": -0.4,
+        "gap_ouverture": -0.17,
+        "momentum_intraday": -0.23,
+        "volume_ratio": 0.1,
+        "score": 36,
+        "signal": "SURVEILLER"
+      },
+      "Edenred": {
+        "nom": "Edenred",
+        "cours": 22.2,
+        "variation": -0.27,
+        "gap_ouverture": 0.09,
+        "momentum_intraday": -0.36,
+        "volume_ratio": 0.1,
+        "score": 66,
+        "signal": "ACHETER"
+      },
+      "Accor": {
+        "nom": "Accor",
+        "cours": 49.43,
+        "variation": 0.84,
+        "gap_ouverture": -0.18,
+        "momentum_intraday": 1.02,
+        "volume_ratio": 0.3,
+        "score": 87,
+        "signal": "ACHETER"
+      },
+      "Eurazeo": {
+        "nom": "Eurazeo",
+        "cours": 41.06,
+        "variation": -2.28,
+        "gap_ouverture": -0.05,
+        "momentum_intraday": -2.24,
+        "volume_ratio": 0.3,
+        "score": 28,
+        "signal": "ÉVITER"
+      },
+      "Thales": {
+        "nom": "Thales",
+        "cours": 222.5,
+        "variation": -2.41,
+        "gap_ouverture": 0.0,
+        "momentum_intraday": -2.41,
+        "volume_ratio": 0.2,
+        "score": 19,
+        "signal": "ÉVITER"
+      },
+      "Forvia": {
+        "nom": "Forvia",
+        "cours": 9.74,
+        "variation": 2.53,
+        "gap_ouverture": 0.63,
+        "momentum_intraday": 1.88,
+        "volume_ratio": 0.6,
+        "score": 34,
+        "signal": "ÉVITER"
+      }
     }
   }
 }
