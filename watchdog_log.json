@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-24",
+  "heure": "13:33",
+  "statuts": {
+    "Agent News": {
+      "ok": true,
+      "msg": "OK — 20 articles, sentiment +0.15"
+    },
+    "Briefing 7h": {
+      "ok": false,
+      "msg": "Aucune trace du briefing pour 2026-06-24"
+    },
+    "Scoring intraday": {
+      "ok": true,
+      "msg": "OK hier — 6 snapshot(s) enregistré(s)"
+    }
+  },
+  "problemes": [
+    "Briefing 7h"
+  ]
+}
