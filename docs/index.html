@@ -82,12 +82,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .bs{background:#2a250a;color:var(--yellow)}
 
 /* ── PORTEFEUILLE ── */
-.pf-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px}
-.pf-row:last-child{border-bottom:none}
-.pf-nom{font-weight:500}
-.pf-right{text-align:right}
-.pf-gp{font-weight:700;font-size:14px}
-.pf-cours{font-size:11px;color:var(--muted);margin-top:1px}
+.pf-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+.pf-table th{background:var(--surface2);color:var(--muted);font-weight:600;padding:6px 8px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
+.pf-table th:first-child{text-align:left}
+.pf-table td{padding:7px 8px;border-bottom:1px solid var(--border);text-align:right;vertical-align:middle}
+.pf-table td:first-child{text-align:left;font-weight:500}
+.pf-table tr:last-child td{border-bottom:none}
 
 /* ── TAGS ── */
 .tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:6px;margin:2px}
@@ -407,19 +407,23 @@ async function charger() {
       html += `</div>`;
       if (nbPos > 0) {
         html += `<div class="card-wide">`;
+        html += `<table class="pf-table"><thead><tr><th>Action</th><th>Qté</th><th>Achat</th><th>Cours</th><th>Valeur</th><th>G/P</th></tr></thead><tbody>`;
         Object.entries(positions).forEach(([nom, pos]) => {
           const coursActuel = scores[nom]?.cours;
           const prixEntree  = pos.prix_entree;
+          const nbActions   = pos.nb_actions || '—';
+          const valeur      = coursActuel && pos.nb_actions ? Math.round(coursActuel * pos.nb_actions) : null;
           const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
-          html += `<div class="pf-row">
-            <div class="pf-nom">${nom}</div>
-            <div class="pf-right">
-              <div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div>
-              <div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div>
-            </div>
-          </div>`;
+          html += `<tr>
+            <td>${nom}</td>
+            <td>${nbActions}</td>
+            <td>${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}</td>
+            <td>${coursActuel ? coursActuel.toFixed(2) + '€' : '—'}</td>
+            <td>${valeur !== null ? valeur.toLocaleString('fr') + '€' : '—'}</td>
+            <td class="${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</td>
+          </tr>`;
         });
-        html += `</div>`;
+        html += `</tbody></table></div>`;
       }
       html += `</div>`;
     }
@@ -633,14 +637,16 @@ async function afficherBriefing() {
       pfHtml += `<div class="card"><div class="lbl">Capital libre</div><div class="val">${Math.round(capital).toLocaleString('fr')}€</div><div class="sub">${nbPos} position${nbPos > 1 ? 's' : ''}</div></div>`;
       pfHtml += `</div>`;
       if (nbPos > 0) {
-        pfHtml += `<div class="card-wide">`;
+        pfHtml += `<div class="card-wide"><table class="pf-table"><thead><tr><th>Action</th><th>Qté</th><th>Achat</th><th>Cours</th><th>Valeur</th><th>G/P</th></tr></thead><tbody>`;
         Object.entries(positions).forEach(([nom, pos]) => {
           const coursActuel = scores[nom]?.cours;
           const prixEntree  = pos.prix_entree;
+          const nbActions   = pos.nb_actions || '—';
+          const valeur      = coursActuel && pos.nb_actions ? Math.round(coursActuel * pos.nb_actions) : null;
           const gp = coursActuel && prixEntree ? ((coursActuel - prixEntree) / prixEntree * 100) : null;
-          pfHtml += `<div class="pf-row"><div class="pf-nom">${nom}</div><div class="pf-right"><div class="pf-gp ${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</div><div class="pf-cours">${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}${coursActuel ? ' → ' + coursActuel.toFixed(2) + '€' : ''}</div></div></div>`;
+          pfHtml += `<tr><td>${nom}</td><td>${nbActions}</td><td>${prixEntree ? prixEntree.toFixed(2) + '€' : '—'}</td><td>${coursActuel ? coursActuel.toFixed(2) + '€' : '—'}</td><td>${valeur !== null ? valeur.toLocaleString('fr') + '€' : '—'}</td><td class="${gp !== null ? cp(gp) : ''}">${gp !== null ? pct(gp) : '—'}</td></tr>`;
         });
-        pfHtml += `</div>`;
+        pfHtml += `</tbody></table></div>`;
       }
       pfHtml += `</div>`;
     }
