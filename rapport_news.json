@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-23",
-  "heure": "18:30",
+  "date": "2026-06-24",
+  "heure": "07:09",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -41,7 +41,7 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.19,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
         "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
