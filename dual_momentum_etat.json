@@ -1,0 +1,14 @@
+{
+  "poche_rotative": "USA",
+  "date": "2026-06-25",
+  "historique": [
+    {
+      "date": "2026-06-25",
+      "poche": "USA",
+      "momentums": {
+        "World": 24.3,
+        "USA": 25.1
+      }
+    }
+  ]
+}
