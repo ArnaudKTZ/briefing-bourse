@@ -1,0 +1,40 @@
+name: Agent Professeur (réunion hebdomadaire)
+
+on:
+  schedule:
+    - cron: '0 16 * * 0'  # Dimanche 18h heure française (UTC+2) — bilan avant la semaine
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  professeur:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance pandas numpy
+
+      - name: Lancer l'agent Professeur
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
+        run: python agent_professeur.py
+
+      - name: Sauvegarder le rapport
+        run: |
+          git config user.name "Agent Professeur"
+          git config user.email "actions@github.com"
+          git add professeur_rapport.json || true
+          git diff --staged --quiet || git commit -m "Professeur reunion $(date +%Y-%m-%d)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
