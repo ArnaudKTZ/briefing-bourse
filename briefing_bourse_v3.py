@@ -1825,7 +1825,31 @@ def markdown_vers_html(texte):
     return "\n".join(html)
 
 
-def envoyer_email(briefing, perf_stats, html_portefeuille=""):
+def generer_html_dual_momentum():
+    """Bandeau 'position sérieuse' alimenté par l'agent Dual Momentum (cœur du patrimoine)."""
+    fichier = "dual_momentum_statut.json"
+    if not os.path.exists(fichier):
+        return ""
+    try:
+        with open(fichier, "r", encoding="utf-8") as f:
+            s = json.load(f)
+    except Exception:
+        return ""
+    alloc = s.get("allocation", "")
+    if not alloc:
+        return ""
+    moms = s.get("momentums", {})
+    mom_txt = " | ".join(f"{k} {v:+.1f}%" for k, v in moms.items())
+    maj = s.get("date", "")
+    return f"""
+<div style='margin:0 0 16px;padding:14px 16px;background:#e8f5ee;border-left:4px solid #1d9e75;border-radius:6px;'>
+  <p style='margin:0;font-size:13px;font-weight:bold;color:#0f6e56;'>Cœur du patrimoine (Dual Momentum) — rien à faire au quotidien</p>
+  <p style='margin:6px 0 0;font-size:14px;color:#222;'>Allocation actuelle : <strong>{alloc}</strong></p>
+  <p style='margin:4px 0 0;font-size:12px;color:#666;'>Momentum 12 mois : {mom_txt} · Revue mensuelle le 1er · MAJ {maj}</p>
+</div>"""
+
+
+def envoyer_email(briefing, perf_stats, html_portefeuille="", html_dual_momentum=""):
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
     sujet     = f"Agent Bourse V4 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
@@ -1848,6 +1872,7 @@ color:#222;max-width:1000px;margin:auto;padding:20px;'>
   </p>
 </div>
 <div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
+{html_dual_momentum}
 {contenu}
 <hr style='border:1px solid #ddd;margin:20px 0;'>
 {html_portefeuille}
@@ -2001,6 +2026,7 @@ if __name__ == "__main__":
 
     print("Envoi email...")
     html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict)
-    envoyer_email(briefing, perf["stats"], html_pf)
+    html_dm = generer_html_dual_momentum()
+    envoyer_email(briefing, perf["stats"], html_pf, html_dm)
 
     print("Terminé.")

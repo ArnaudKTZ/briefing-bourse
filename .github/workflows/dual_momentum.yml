@@ -1,0 +1,40 @@
+name: Agent Dual Momentum (conseiller mensuel)
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'  # 8h heure française (UTC+2 en été), le 1er de chaque mois
+  workflow_dispatch:        # lancement manuel depuis GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  dual-momentum:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance pandas numpy
+
+      - name: Lancer l'agent Dual Momentum
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
+        run: python agent_dual_momentum.py
+
+      - name: Sauvegarder l'état sur GitHub
+        run: |
+          git config user.name "Agent Dual Momentum"
+          git config user.email "actions@github.com"
+          git add dual_momentum_etat.json dual_momentum_statut.json || true
+          git diff --staged --quiet || git commit -m "Dual Momentum $(date +%Y-%m)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
