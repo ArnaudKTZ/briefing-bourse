@@ -22,6 +22,9 @@ import json
 import re
 import math
 import urllib.request
+import zoneinfo
+
+TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import anthropic
@@ -1986,8 +1989,8 @@ if __name__ == "__main__":
 
     print("Sauvegarde briefing pour PWA...")
     briefing_pwa = {
-        "date":      datetime.date.today().isoformat(),
-        "heure":     datetime.datetime.now().strftime("%H:%M"),
+        "date":      datetime.datetime.now(TZ_PARIS).date().isoformat(),
+        "heure":     datetime.datetime.now(TZ_PARIS).strftime("%H:%M"),
         "texte":     briefing,
         "cac_cours": cac_cours,
         "cac_var":   cac_var,
