@@ -51,7 +51,7 @@ PAS_MOIS   = 12
 # ─── DONNÉES ──────────────────────────────────────────────────────────────────
 
 def charger_donnees():
-    tickers = list(set(list(POIDS_WORLD) + [TICKER_USA]))
+    tickers = list(set(list(POIDS_WORLD) + [TICKER_USA, TICKER_EMERGENT]))
     data = yf.download(tickers, start="2003-01-01", auto_adjust=True, progress=False)["Close"]
     mensuel = data.resample("ME").last().dropna()
 
@@ -186,8 +186,9 @@ def walk_forward(df, rotation):
 
 
 def buy_hold_world(df, dates):
+    # Mêmes mois que la stratégie OOS (ne pas sauter le 1er mois : comparaison juste)
     sous = df.loc[dates[0]:dates[-1]]
-    return list(sous["world_ret"].iloc[1:])
+    return list(sous["world_ret"])
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 

@@ -12,6 +12,7 @@ Source gratuite, sans clé API. Tourne 1x/semaine.
 """
 
 import datetime
+import html
 import json
 import os
 import smtplib
@@ -61,10 +62,15 @@ MOTS_CLES = {
 
 
 def fetch_arxiv():
-    req = urllib.request.Request(ARXIV_URL, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as r:
-        contenu = r.read().decode("utf-8", errors="ignore")
-    root = ET.fromstring(contenu)
+    """Récupère les papiers arXiv. Renvoie [] (et le signale) en cas de panne réseau/parse."""
+    try:
+        req = urllib.request.Request(ARXIV_URL, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            contenu = r.read().decode("utf-8", errors="ignore")
+        root = ET.fromstring(contenu)
+    except Exception as e:
+        print(f"  WARN arXiv indisponible : {e}")
+        return []
     articles = []
     for entry in root.findall(f"{ATOM}entry"):
         titre = (entry.findtext(f"{ATOM}title") or "").strip().replace("\n", " ")
@@ -122,8 +128,10 @@ def generer_html(now, top):
     cartes = ""
     for a in top:
         h = set(a["hits"])
+        titre_safe = html.escape(a["titre"])
+        lien_safe  = html.escape(a["lien"], quote=True)
         cartes += f"""<div style='border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:12px;'>
-          <a href='{a['lien']}' style='font-size:15px;font-weight:600;color:#185fa5;text-decoration:none;'>{a['titre']}</a>
+          <a href='{lien_safe}' style='font-size:15px;font-weight:600;color:#185fa5;text-decoration:none;'>{titre_safe}</a>
           <p style='margin:6px 0 0;font-size:13px;color:#0f6e56;'>{pourquoi(h)}</p>
           <p style='margin:4px 0 0;font-size:12px;color:#999;'>{a['date']} · mots-clés : {', '.join(a['hits'][:5])}</p>
         </div>"""
