@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-25",
+  "evaluations": [
+    {
+      "agent": "Dual Momentum (cœur)",
+      "metrique": "50% Amundi MSCI World Screened + 50% Amundi MSCI USA Screened",
+      "note": "B",
+      "confiance": "forte",
+      "verdict": "Validé hors-échantillon : réduit le risque (chute -20% vs -25%), ne bat pas le buy&hold World en rendement. Rôle = airbag, pas moteur."
+    },
+    {
+      "agent": "Briefing V4 (signaux)",
+      "metrique": "42.9% précision (126 signaux)",
+      "note": "E",
+      "confiance": "forte",
+      "verdict": "Précision 42.9% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 42.9
+    },
+    {
+      "agent": "Portefeuille virtuel V4",
+      "metrique": "+0.1% (1 trades)",
+      "note": "—",
+      "confiance": "faible",
+      "verdict": "PF +0.1% vs CAC -0.2% sur 5j : trop tôt.",
+      "valeur_suivie": 0.1
+    },
+    {
+      "agent": "Agent News",
+      "metrique": "actif (rapport du 2026-06-25)",
+      "note": "C",
+      "confiance": "faible",
+      "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
+    },
+    {
+      "agent": "Agent Espion",
+      "metrique": "actif (rapport du 2026-06-23)",
+      "note": "C",
+      "confiance": "faible",
+      "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
+    }
+  ],
+  "evolution": {}
+}
