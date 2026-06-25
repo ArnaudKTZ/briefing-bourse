@@ -1,15 +1,15 @@
 {
   "date": "2026-06-25",
-  "heure": "14:38",
+  "heure": "18:37",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
+      "La Bourse de Paris termine en hausse",
       "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
-      "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète",
-      "La Bourse de Paris en léger recul plombée par le luxe",
-      "La Bourse de Paris en hausse sur un marché tranquille"
+      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule",
+      "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
+        "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes",
         "VivaTech : Avec MethaneLive, TotalEnergies met la Data au service de la lutte contre les émissions de méthane",
-        "Pourquoi TotalEnergies échappe quasiment à l'impôt sur les bénéfices en France",
-        "Accord Iran-USA salué par la Bourse de Paris, Safran à la fête, TotalEnergies à la traîne"
+        "Pourquoi TotalEnergies échappe quasiment à l'impôt sur les bénéfices en France"
       ]
     },
     "Hermès": {
