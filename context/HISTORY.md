@@ -7,7 +7,39 @@
 
 ---
 
+## 2026-06-24
+
+### Fiabilisation V4 + Roadmap V5 validée
+
+- GitHub Actions cron défaillant ce matin : aucun workflow déclenché automatiquement
+- Solution : cron-job.org mis en place (gratuit, externe) — 8 jobs créés pour déclencher tous les workflows via API GitHub à heure fixe
+- Token GitHub Personal Access Token créé (scope workflow) et configuré dans cron-job.org
+- Email V3 → V4 : sujet corrigé dans briefing_bourse_v3.py
+- Analyse du briefing du jour : précision 36.5%, Vinci 99/100, BNP 93/100, Danone 89/100
+- Analyse de la spec V5 rédigée par l'architecte logiciel d'Arnaud — validée et capitalisée
+- Roadmap V5 complète définie en 4 phases (juillet → octobre 2026)
+- Phase 1 (22 juillet) : Data Quality + Feature Engine + Score Engine 4 sous-scores + auto-apprentissage
+- Phase 2 (août) : Risk Engine + Briefing V5 + Alerteur V5 + Watchdog V5
+- Phase 3 (septembre) : Backtest / Walk-forward / Calibration
+- Phase 4 (octobre) : Agent Macro+ + Agent Insider + diversification sources (plus Yahoo seul)
+- Point faible identifié : toutes les données viennent de Yahoo Finance uniquement — risque de panne et données fondamentales en retard
+- Décision : garder Yahoo pour cours intraday, diversifier pour fondamentaux et news en V5
+
+---
+
 ## 2026-06-23
+
+### PWA iPhone + corrections critiques + conformité V4
+
+- Clé API Anthropic révoquée automatiquement par GitHub (était dans le code git avant migration secrets) — nouvelle clé créée et mise en place dans GitHub Secrets
+- PWA iPhone opérationnelle : installée sur écran d'accueil, notifications activées, PIN de sécurité
+- Rendu Markdown dans le briefing PWA : tableaux avec vraies colonnes, titres colorés, ACHETER/ÉVITER/SURVEILLER en vert/rouge/jaune, Haussier/Baissier colorés
+- Portefeuille virtuel visible dans les deux écrans (Scores ET Briefing) via cache global
+- Portefeuille remonté en haut de la vue Scores (juste après les macros)
+- Service worker passé en v4 pour forcer l'invalidation du cache Safari
+- Vérification conformité specs V4 : tous les agents conformes (Briefing, Scoring intraday 4x/jour, News 3x/jour, Espion lundi 6h15, Watchdog 7h30)
+- Repo sécurisé : aucune donnée sensible dans les fichiers, tout dans GitHub Secrets
+- Prochaine échéance : bilan + auto-apprentissage agents secondaires le 22 juillet
 
 ### Agent Bourse V4 — Architecture multi-agents finalisée
 
