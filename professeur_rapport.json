@@ -21,7 +21,7 @@
       "metrique": "+0.1% (1 trades)",
       "note": "—",
       "confiance": "faible",
-      "verdict": "PF +0.1% vs CAC -0.2% sur 5j : trop tôt.",
+      "verdict": "PF +0.1% vs CAC -0.1% sur 5j : trop tôt.",
       "valeur_suivie": 0.1
     },
     {
@@ -39,5 +39,41 @@
       "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
-  "evolution": {}
+  "evolution": {
+    "Briefing V4 (signaux)": 0.0,
+    "Portefeuille virtuel V4": 0.0
+  },
+  "doutes_meta": [],
+  "historique": [
+    {
+      "date": "2026-06-25",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 42.9
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "—",
+          "valeur": 0.1
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null
+        },
+        {
+          "agent": "Agent Espion",
+          "note": "C",
+          "valeur": null
+        }
+      ]
+    }
+  ]
 }
