@@ -61,8 +61,8 @@ def evaluer_briefing_v4():
                 "note": "—", "confiance": "faible",
                 "verdict": "Pas de données de performance."}
     s = perf["stats"]
-    p = s.get("precision", 0)
-    n = s.get("total", 0)
+    p = s.get("precision", 0) or 0   # tolère precision null/absente
+    n = s.get("total", 0) or 0       # tolère total null/absent
     conf = niveau_confiance(n)
 
     if n < 20:
@@ -77,7 +77,8 @@ def evaluer_briefing_v4():
         note, verdict = "E", f"Précision {p}% : sous le hasard. À cantonner en poche satellite."
 
     return {"agent": "Briefing V4 (signaux)", "metrique": f"{p}% précision ({n} signaux)",
-            "note": note, "confiance": conf, "verdict": verdict, "valeur_suivie": p}
+            "note": note, "confiance": conf, "verdict": verdict,
+            "valeur_suivie": p, "meta_borne": True}   # métrique bornée 0-100 : comparable dans le temps
 
 
 def evaluer_portefeuille():
@@ -88,7 +89,11 @@ def evaluer_portefeuille():
                 "note": "—", "confiance": "faible", "verdict": "Pas encore d'historique."}
 
     hv = pf["historique_valeur"]
-    dates = sorted(hv.keys())
+    # Ne garder que les valeurs numériques valides (tolère null / clés malformées)
+    dates = sorted(d for d in hv.keys() if isinstance(hv[d], (int, float)))
+    if not dates:
+        return {"agent": "Portefeuille virtuel V4", "metrique": "—",
+                "note": "—", "confiance": "faible", "verdict": "Historique de valeurs invalide."}
     depart, fin = 10000.0, hv[dates[-1]]
     perf_pf = (fin - depart) / depart * 100
     n_trades = len(pf.get("trades", []))
@@ -174,10 +179,12 @@ def meta_garde_fou(historique):
         return [], (f"Pas encore assez d'historique ({len(historique)} semaine(s)) pour "
                     "m'auto-évaluer. Garde-fou actif dès 3 semaines.")
 
+    # On ne s'auto-évalue QUE sur des métriques bornées et comparables dans le temps
+    # (ex: précision en %, baseline 50). Une perf cumulée ne l'est pas → faux positifs.
     series = {}
     for snap in historique:
         for e in snap.get("evals", []):
-            if e.get("valeur") is not None:
+            if e.get("valeur") is not None and e.get("meta_borne"):
                 series.setdefault(e["agent"], []).append((e.get("note"), e["valeur"]))
 
     doutes = []
@@ -301,7 +308,8 @@ if __name__ == "__main__":
     historique = (precedent or {}).get("historique", [])
     historique.append({
         "date": now.date().isoformat(),
-        "evals": [{"agent": e["agent"], "note": e["note"], "valeur": e.get("valeur_suivie")}
+        "evals": [{"agent": e["agent"], "note": e["note"], "valeur": e.get("valeur_suivie"),
+                   "meta_borne": e.get("meta_borne", False)}
                   for e in evals],
     })
     historique = historique[-12:]

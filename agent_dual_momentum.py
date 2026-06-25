@@ -60,7 +60,9 @@ def momentum_12m(ticker):
         raise RuntimeError(f"Pas assez de mois pour {ticker} ({len(mensuel)})")
     actuel = float(mensuel.iloc[-1])
     ref    = float(mensuel.iloc[-(LOOKBACK_MOIS + 1)])
-    return round((actuel / ref - 1) * 100, 1), round(actuel, 2)
+    # Momentum NON arrondi : la décision doit utiliser la même valeur que la recette.
+    # L'arrondi se fait uniquement à l'affichage.
+    return (actuel / ref - 1) * 100, round(actuel, 2)
 
 
 def charger_etat():
@@ -212,7 +214,7 @@ if __name__ == "__main__":
     etat.setdefault("historique", []).append({
         "date": now.date().isoformat(),
         "poche": nouvelle_poche,
-        "momentums": {k: v[0] for k, v in momentums.items()},
+        "momentums": {k: round(v[0], 1) for k, v in momentums.items()},
     })
     etat["historique"] = etat["historique"][-36:]
     sauvegarder_etat(etat)
@@ -222,7 +224,7 @@ if __name__ == "__main__":
         "date": now.date().isoformat(),
         "allocation": formater_alloc(alloc_apres),
         "poche_rotative": nouvelle_poche,
-        "momentums": {k: v[0] for k, v in momentums.items()},
+        "momentums": {k: round(v[0], 1) for k, v in momentums.items()},
         "derniere_action": action,
     }
     with open(FICHIER_STATUT, "w", encoding="utf-8") as f:
