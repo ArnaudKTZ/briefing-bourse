@@ -6,6 +6,9 @@ Sauvegarde dans intraday_scores.json pour enrichir le briefing du lendemain.
 """
 
 import datetime
+import zoneinfo
+
+TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 import json
 import os
 import smtplib
@@ -101,7 +104,7 @@ def analyser_etf_intraday():
                 signaux[secteur] = ("ENTREE", perf_1j, flux)
             elif perf_1j < -0.5 and flux > 1.1:
                 signaux[secteur] = ("SORTIE", perf_1j, flux)
-    except:
+    except Exception:
         pass
     return signaux
 
@@ -140,7 +143,7 @@ def recuperer_contexte_global():
             if vix_val > 35:    malus -= 20; infos.append(f"VIX EXTRÊME {vix_val}")
             elif vix_val > 25:  malus -= 12; infos.append(f"VIX élevé {vix_val}")
             elif vix_val > 20:  malus -= 5;  infos.append(f"VIX modéré {vix_val}")
-    except: pass
+    except Exception: pass
     try:
         url = "https://api.alternative.me/fng/?limit=1"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -152,7 +155,7 @@ def recuperer_contexte_global():
         elif fg_score <= 25:  malus -= 6;  infos.append(f"F&G peur {fg_score}")
         elif fg_score <= 40:  malus -= 3
         elif fg_score >= 80:  malus -= 5;  infos.append(f"F&G euphorie {fg_score}")
-    except: pass
+    except Exception: pass
     try:
         cac = yf.Ticker("^FCHI").history(period="2d")
         if not cac.empty and len(cac) >= 2:
@@ -160,8 +163,8 @@ def recuperer_contexte_global():
             cac_var   = round((cac["Close"].iloc[-1] / cac["Close"].iloc[-2] - 1) * 100, 2)
         elif not cac.empty:
             cac_cours = round(float(cac["Close"].iloc[-1]), 0)
-    except: pass
-    today = datetime.date.today()
+    except Exception: pass
+    today = datetime.datetime.now(TZ_PARIS).date()
     for d_str in DATES_BANQUES_CENTRALES:
         d = datetime.date.fromisoformat(d_str)
         if 0 <= (d - today).days <= 2:
@@ -169,47 +172,7 @@ def recuperer_contexte_global():
             break
     return malus, infos, vix_val, fg_score, fg_label, cac_cours, cac_var
 
-CAC40 = {
-    "LVMH":               "MC.PA",
-    "TotalEnergies":      "TTE.PA",
-    "Hermès":             "RMS.PA",
-    "Airbus":             "AIR.PA",
-    "Schneider Electric": "SU.PA",
-    "L'Oréal":            "OR.PA",
-    "Sanofi":             "SAN.PA",
-    "BNP Paribas":        "BNP.PA",
-    "Air Liquide":        "AI.PA",
-    "Safran":             "SAF.PA",
-    "Danone":             "BN.PA",
-    "Vinci":              "DG.PA",
-    "Kering":             "KER.PA",
-    "Société Générale":   "GLE.PA",
-    "Stellantis":         "STLAM.MI",
-    "Saint-Gobain":       "SGO.PA",
-    "ArcelorMittal":      "MT",
-    "Pernod Ricard":      "RI.PA",
-    "Michelin":           "ML.PA",
-    "Capgemini":          "CAP.PA",
-    "Renault":            "RNO.PA",
-    "Legrand":            "LR.PA",
-    "Publicis":           "PUB.PA",
-    "Bouygues":           "EN.PA",
-    "Engie":              "ENGI.PA",
-    "Orange":             "ORA.PA",
-    "Vivendi":            "VIV.PA",
-    "Eurofins Scientific":"ERF.PA",
-    "Teleperformance":    "TEP.PA",
-    "Alstom":             "ALO.PA",
-    "Worldline":          "WLN.PA",
-    "Veolia":             "VIE.PA",
-    "STMicroelectronics": "STM",
-    "Dassault Systèmes":  "DSY.PA",
-    "Edenred":            "EDEN.PA",
-    "Accor":              "AC.PA",
-    "Eurazeo":            "RF.PA",
-    "Thales":             "HO.PA",
-    "Forvia":             "FRVIA.PA",
-}
+from marche_config import CAC40
 
 
 def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=None):
@@ -259,7 +222,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                         score += 12  # divergence haussière
                     elif i_max < len(c20) - 3 and c20[-1] >= c20[i_max] and r20[-1] < r20[i_max] - 3:
                         score -= 12  # divergence baissière
-                except: pass
+                except Exception: pass
 
             # MACD
             macd_ind  = MACD(close)
@@ -291,7 +254,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                     pente = (float(ma200.iloc[-1]) - float(ma200.iloc[-20])) / float(ma200.iloc[-20]) * 100
                     if pente > 0.5:    score += 6
                     elif pente < -0.5: score -= 6
-                except: pass
+                except Exception: pass
 
             # Bollinger
             bb      = BollingerBands(close)
@@ -345,7 +308,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                     if upside > 25:    score += 5
                     elif upside > 15:  score += 3
                     elif upside < -10: score -= 4
-        except: pass
+        except Exception: pass
 
         # Rotation sectorielle intraday (ETF)
         if signaux_etf:
@@ -409,8 +372,8 @@ def envoyer_alerte(alertes):
     if not alertes or not ZOHO_PASSWORD:
         return
 
-    today = datetime.date.today().strftime("%d/%m/%Y")
-    heure = datetime.datetime.now().strftime("%H:%M")
+    today = datetime.datetime.now(TZ_PARIS).date().strftime("%d/%m/%Y")
+    heure = datetime.datetime.now(TZ_PARIS).strftime("%H:%M")
     sujet = f"ALERTE BOURSE — {len(alertes)} signal(s) exceptionnel(s) — {today} {heure}"
 
     lignes_html = ""
@@ -514,7 +477,7 @@ def gerer_portefeuille_intraday(snapshot, heure):
     with open(FICHIER_PORTEFEUILLE, "r") as f:
         pf = json.load(f)
 
-    today    = datetime.date.today().isoformat()
+    today    = datetime.datetime.now(TZ_PARIS).date().isoformat()
     fermes   = []
     ouverts  = []
 
@@ -600,8 +563,8 @@ def gerer_portefeuille_intraday(snapshot, heure):
 
 
 if __name__ == "__main__":
-    now   = datetime.datetime.now()
-    today = datetime.date.today().isoformat()
+    now   = datetime.datetime.now(TZ_PARIS)
+    today = datetime.datetime.now(TZ_PARIS).date().isoformat()
     heure = now.strftime("%H:%M")
 
     print(f"Scoring intraday — {today} {heure}")
@@ -665,7 +628,7 @@ if __name__ == "__main__":
 
     print("Détection alertes exceptionnelles...")
     alertes_envoyees = charger_alertes_envoyees()
-    sept_jours = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    sept_jours = (datetime.datetime.now(TZ_PARIS).date() - datetime.timedelta(days=7)).isoformat()
     alertes_envoyees = {k: v for k, v in alertes_envoyees.items() if k[:10] >= sept_jours}
 
     alertes, alertes_envoyees = detecter_alertes(snapshot, alertes_envoyees, today, heure)

@@ -142,47 +142,7 @@ def charger_persistance_intraday():
 
 # ─── CAC 40 TICKERS ───────────────────────────────────────────────────────────
 
-CAC40 = {
-    "LVMH":               "MC.PA",
-    "TotalEnergies":      "TTE.PA",
-    "Hermès":             "RMS.PA",
-    "Airbus":             "AIR.PA",
-    "Schneider Electric": "SU.PA",
-    "L'Oréal":            "OR.PA",
-    "Sanofi":             "SAN.PA",
-    "BNP Paribas":        "BNP.PA",
-    "Air Liquide":        "AI.PA",
-    "Safran":             "SAF.PA",
-    "Danone":             "BN.PA",
-    "Vinci":              "DG.PA",
-    "Kering":             "KER.PA",
-    "Société Générale":   "GLE.PA",
-    "Stellantis":         "STLAM.MI",
-    "Saint-Gobain":       "SGO.PA",
-    "ArcelorMittal":      "MT",
-    "Pernod Ricard":      "RI.PA",
-    "Michelin":           "ML.PA",
-    "Capgemini":          "CAP.PA",
-    "Renault":            "RNO.PA",
-    "Legrand":            "LR.PA",
-    "Publicis":           "PUB.PA",
-    "Bouygues":           "EN.PA",
-    "Engie":              "ENGI.PA",
-    "Orange":             "ORA.PA",
-    "Vivendi":            "VIV.PA",
-    "Eurofins Scientific":"ERF.PA",
-    "Teleperformance":    "TEP.PA",
-    "Alstom":             "ALO.PA",
-    "Worldline":          "WLN.PA",
-    "Veolia":             "VIE.PA",
-    "STMicroelectronics": "STM",
-    "Dassault Systèmes":  "DSY.PA",
-    "Edenred":            "EDEN.PA",
-    "Accor":              "AC.PA",
-    "Eurazeo":            "RF.PA",
-    "Thales":             "HO.PA",
-    "Forvia":             "FRVIA.PA",
-}
+from marche_config import CAC40
 
 SECTEURS = {
     "Luxe":              ["LVMH", "Hermès", "Kering", "L'Oréal", "Pernod Ricard"],
@@ -214,7 +174,7 @@ def recuperer_fondamentaux(ticker_obj):
         debt_equity = round(debt_equity, 1) if debt_equity else None
         marge_nette = round(marge_nette * 100, 1) if marge_nette else None
         return {"per": per, "pb": pb, "rev_growth": rev_growth, "debt_equity": debt_equity, "marge_nette": marge_nette}
-    except:
+    except Exception:
         return {}
 
 
@@ -279,7 +239,7 @@ def recuperer_fear_greed():
         elif score >= 80: malus = -5    # euphorie = danger de retournement
         elif score >= 65: malus = -2    # greed élevé = prudence
         return {"score": score, "label": label, "malus": malus}
-    except:
+    except Exception:
         return {"score": None, "label": "N/A", "malus": 0}
 
 
@@ -320,7 +280,7 @@ def scorer_consensus_analystes(ticker_obj, cours):
             "cible_moy": round(float(cible), 2) if cible else None,
             "upside_pct": round(float(upside), 1) if cible and cours else None,
         }
-    except:
+    except Exception:
         return 0, {}
 
 
@@ -356,7 +316,7 @@ def recuperer_news_sentiment(ticker_obj, nom):
 
         sentiment = max(-3, min(3, score_sent))
         return {"news": titres[:3], "sentiment": sentiment}
-    except:
+    except Exception:
         return {"news": [], "sentiment": 0}
 
 
@@ -380,7 +340,7 @@ def verifier_resultats_proches(ticker_obj):
                     date_res = date_res.date()
                 delta = (date_res - today).days
                 return 0 <= delta <= 3
-    except:
+    except Exception:
         pass
     return False
 
@@ -395,7 +355,7 @@ def charger_poids_indicateurs():
         with open(FICHIER_PERFORMANCE, "r", encoding="utf-8") as f:
             perf = json.load(f)
         return perf.get("poids_indicateurs", {})
-    except:
+    except Exception:
         return {}
 
 
@@ -498,7 +458,7 @@ def detecter_divergence_rsi(hist, rsi_series):
         if prix_max_idx < len(close) - 3:
             if close[-1] >= close[prix_max_idx] and rsi[-1] < rsi[prix_max_idx] - 3:
                 return "baissiere"
-    except:
+    except Exception:
         pass
     return None
 
@@ -517,7 +477,7 @@ def detecter_compression_bollinger(hist):
         mid   = boll.bollinger_mavg().iloc[-1]
         largeur_pct = (haut - bas) / mid * 100 if mid > 0 else 100
         return largeur_pct < 4.0
-    except:
+    except Exception:
         return False
 
 
@@ -538,7 +498,7 @@ def calculer_pente_ma200(hist):
         if pente_pct > 0.5:   return "haussiere"
         elif pente_pct < -0.5: return "baissiere"
         else:                  return "neutre"
-    except:
+    except Exception:
         return "neutre"
 
 
@@ -571,7 +531,7 @@ def calculer_momentum_multitimeframe(hist):
             bonus = -5
 
         return {"p1j": p1j, "p5j": p5j, "p20j": p20j, "p60j": p60j, "bonus_convergence": bonus}
-    except:
+    except Exception:
         return {"bonus_convergence": 0}
 
 
@@ -893,7 +853,7 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
                     cov  = rs.cov(rc)
                     var  = rc.var()
                     beta = round(cov / var, 2) if var != 0 else None
-            except:
+            except Exception:
                 pass
 
         # Patterns bougies
@@ -1015,7 +975,7 @@ def recuperer_indice_cac():
             hier     = round(hist["Close"].iloc[-2], 0)
             variation = round((cours - hier) / hier * 100, 2)
             return cours, variation, hist
-    except:
+    except Exception:
         pass
     return None, None, None
 
@@ -1031,7 +991,7 @@ def recuperer_contexte_macro():
         vix = yf.Ticker("^VIX").history(period="2d")
         if not vix.empty:
             ctx["vix"] = round(vix["Close"].iloc[-1], 1)
-    except:
+    except Exception:
         pass
     try:
         eurusd = yf.Ticker("EURUSD=X").history(period="2d")
@@ -1040,7 +1000,7 @@ def recuperer_contexte_macro():
             hier_eu  = eurusd["Close"].iloc[-2]
             ctx["eurusd"] = round(cours_eu, 4)
             ctx["eurusd_var"] = round((cours_eu - hier_eu) / hier_eu * 100, 2)
-    except:
+    except Exception:
         pass
     try:
         brent = yf.Ticker("BZ=F").history(period="2d")
@@ -1049,7 +1009,7 @@ def recuperer_contexte_macro():
             hier_br  = brent["Close"].iloc[-2]
             ctx["brent"] = round(cours_br, 1)
             ctx["brent_var"] = round((cours_br - hier_br) / hier_br * 100, 2)
-    except:
+    except Exception:
         pass
 
     malus = 0
@@ -1112,7 +1072,7 @@ def calculer_momentum_relatif_cac(donnees_dict, cac_var):
                 "rel_5j":   round(rel_5j, 2),
                 "bonus_momentum_rel": bonus,
             }
-        except:
+        except Exception:
             pass
     return result
 

@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""
+Configuration marché partagée — source de vérité unique.
+Évite la duplication du dict CAC40 dans chaque agent.
+"""
+
+CAC40 = {
+    "LVMH":               "MC.PA",
+    "TotalEnergies":      "TTE.PA",
+    "Hermès":             "RMS.PA",
+    "Airbus":             "AIR.PA",
+    "Schneider Electric": "SU.PA",
+    "L'Oréal":            "OR.PA",
+    "Sanofi":             "SAN.PA",
+    "BNP Paribas":        "BNP.PA",
+    "Air Liquide":        "AI.PA",
+    "Safran":             "SAF.PA",
+    "Danone":             "BN.PA",
+    "Vinci":              "DG.PA",
+    "Kering":             "KER.PA",
+    "Société Générale":   "GLE.PA",
+    "Stellantis":         "STLAM.MI",
+    "Saint-Gobain":       "SGO.PA",
+    "ArcelorMittal":      "MT",
+    "Pernod Ricard":      "RI.PA",
+    "Michelin":           "ML.PA",
+    "Capgemini":          "CAP.PA",
+    "Renault":            "RNO.PA",
+    "Legrand":            "LR.PA",
+    "Publicis":           "PUB.PA",
+    "Bouygues":           "EN.PA",
+    "Engie":              "ENGI.PA",
+    "Orange":             "ORA.PA",
+    "Vivendi":            "VIV.PA",
+    "Eurofins Scientific":"ERF.PA",
+    "Teleperformance":    "TEP.PA",
+    "Alstom":             "ALO.PA",
+    "Worldline":          "WLN.PA",
+    "Veolia":             "VIE.PA",
+    "STMicroelectronics": "STM",
+    "Dassault Systèmes":  "DSY.PA",
+    "Edenred":            "EDEN.PA",
+    "Accor":              "AC.PA",
+    "Eurazeo":            "RF.PA",
+    "Thales":             "HO.PA",
+    "Forvia":             "FRVIA.PA",
+}
