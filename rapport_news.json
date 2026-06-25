@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-24",
-  "heure": "18:20",
+  "date": "2026-06-25",
+  "heure": "02:45",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
         "GROUPE BNP PARIBAS : descriptif du programme de rachat d'actions Avril",
-        "Bourse : «les actions Crédit agricole moins chères que SG et BNP Paribas», de gros dividendes et du potentiel"
+        "H.I.G. Capital nomme Carlos Couret au poste de directeur général et responsable de l'équipe Capital-investissement Marché intermédiaire inférieur en Espagne"
       ]
     },
     "Air Liquide": {
