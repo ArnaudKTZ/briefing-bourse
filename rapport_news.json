@@ -1,15 +1,15 @@
 {
   "date": "2026-06-25",
-  "heure": "02:45",
+  "heure": "14:38",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
+      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
       "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète",
       "La Bourse de Paris en léger recul plombée par le luxe",
-      "La Bourse de Paris en hausse sur un marché tranquille",
-      "L’action Orange chute à son plus bas en 3 mois selon Barclays"
+      "La Bourse de Paris en hausse sur un marché tranquille"
     ]
   },
   "valeurs": {
@@ -41,7 +41,7 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.14,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
         "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
@@ -62,8 +62,8 @@
       "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
+        "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Programme de rachat d’actions propres",
         "Berenberg voit un potentiel de hausse de 13% pour L’Oréal"
       ]
     },
@@ -72,8 +72,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : Wayrilz de Sanofi a été approuvé au Japon pour traiter la thrombocytopénie immunitaire",
-        "Communiqué de presse : Cenrifki (tolebrutinib) de Sanofi approuvé dans l’UE comme premier médicament ciblant la progression du handicap dans la sclérose en plaques secondairement progressive sans rechutes"
+        "Communiqué de presse : La Fondation Sanofi ouvre un nouveau chapitre centré sur les générations futures",
+        "Communiqué de presse : Wayrilz de Sanofi a été approuvé au Japon pour traiter la thrombocytopénie immunitaire"
       ]
     },
     "BNP Paribas": {
@@ -176,7 +176,7 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
@@ -288,8 +288,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "WORLDLINE : Lancement du plan d’actionnariat salarié - Communiqué",
-        "WORLDLINE : Finalisation du regroupement d'actions - Communiqué"
+        "WORLDLINE : Worldline, le Crédit Agricole et Mastercard réalisent la première transaction de paiement agentique en France - Communiqué",
+        "WORLDLINE : Lancement du plan d’actionnariat salarié - Communiqué"
       ]
     },
     "Veolia": {
@@ -307,7 +307,7 @@
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia",
-        "Les Bourses européennes clôturent en baisse, mais atténuent le coup de chaud sur la tech"
+        "Les actions européennes des semi-conducteurs bondissent après les résultats record de Micron"
       ]
     },
     "Dassault Systèmes": {
@@ -329,8 +329,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.33,
-      "nb_news": 15,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
