@@ -10,6 +10,9 @@ Pas d'appel API Claude — 100% gratuit.
 """
 
 import datetime
+import zoneinfo
+
+TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 import json
 import os
 import yfinance as yf
@@ -17,47 +20,7 @@ import pandas as pd
 
 FICHIER_RAPPORT = "rapport_espion.json"
 
-CAC40 = {
-    "LVMH":               "MC.PA",
-    "TotalEnergies":      "TTE.PA",
-    "Hermès":             "RMS.PA",
-    "Airbus":             "AIR.PA",
-    "Schneider Electric": "SU.PA",
-    "L'Oréal":            "OR.PA",
-    "Sanofi":             "SAN.PA",
-    "BNP Paribas":        "BNP.PA",
-    "Air Liquide":        "AI.PA",
-    "Safran":             "SAF.PA",
-    "Danone":             "BN.PA",
-    "Vinci":              "DG.PA",
-    "Kering":             "KER.PA",
-    "Société Générale":   "GLE.PA",
-    "Stellantis":         "STLAM.MI",
-    "Saint-Gobain":       "SGO.PA",
-    "ArcelorMittal":      "MT",
-    "Pernod Ricard":      "RI.PA",
-    "Michelin":           "ML.PA",
-    "Capgemini":          "CAP.PA",
-    "Renault":            "RNO.PA",
-    "Legrand":            "LR.PA",
-    "Publicis":           "PUB.PA",
-    "Bouygues":           "EN.PA",
-    "Engie":              "ENGI.PA",
-    "Orange":             "ORA.PA",
-    "Vivendi":            "VIV.PA",
-    "Eurofins Scientific":"ERF.PA",
-    "Teleperformance":    "TEP.PA",
-    "Alstom":             "ALO.PA",
-    "Worldline":          "WLN.PA",
-    "Veolia":             "VIE.PA",
-    "STMicroelectronics": "STM",
-    "Dassault Systèmes":  "DSY.PA",
-    "Edenred":            "EDEN.PA",
-    "Accor":              "AC.PA",
-    "Eurazeo":            "RF.PA",
-    "Thales":             "HO.PA",
-    "Forvia":             "FRVIA.PA",
-}
+from marche_config import CAC40
 
 # ETF sectoriels iShares (cotés Xetra, accessibles via Yahoo Finance)
 ETF_SECTORIELS = {
@@ -230,8 +193,8 @@ def calculer_bonus_sectoriel(nom, etf_data):
 
 
 def main():
-    today = datetime.date.today().isoformat()
-    heure = datetime.datetime.now().strftime("%H:%M")
+    today = datetime.datetime.now(TZ_PARIS).date().isoformat()
+    heure = datetime.datetime.now(TZ_PARIS).strftime("%H:%M")
     print(f"Agent Espion — {today} {heure}")
 
     # 1. Rotations sectorielles via ETF
