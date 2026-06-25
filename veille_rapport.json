@@ -1,0 +1,90 @@
+{
+  "date": "2026-06-25",
+  "nb_articles": 40,
+  "top": [
+    {
+      "titre": "Continuous Hidden Markov Models for Equity Returns: Heavy-Tail Emission Families and Regime-Conditional Value-at-Risk",
+      "lien": "https://arxiv.org/abs/2606.23492v1",
+      "date": "2026-06-22",
+      "score": 12,
+      "hits": [
+        "regime",
+        "walk-forward",
+        "backtest"
+      ]
+    },
+    {
+      "titre": "Reinforcement Learning for Risk-Sensitive Investment Management: a Free Energy--Entropy Duality Approach",
+      "lien": "https://arxiv.org/abs/2606.20903v1",
+      "date": "2026-06-18",
+      "score": 10,
+      "hits": [
+        "asset allocation",
+        "portfolio allocation",
+        "reinforcement learning"
+      ]
+    },
+    {
+      "titre": "Leakage-Aware Benchmarking of LLM Forecasting: Real-Time Nowcasts as the Decision-Time Input for Macro Factor Ranking",
+      "lien": "https://arxiv.org/abs/2606.22719v1",
+      "date": "2026-06-21",
+      "score": 8,
+      "hits": [
+        "factor",
+        "llm"
+      ]
+    },
+    {
+      "titre": "Martingale Doppelgänger-Eval: An Identification Framework for Auditing Candlestick Understanding in Vision-Language Models",
+      "lien": "https://arxiv.org/abs/2606.17423v1",
+      "date": "2026-06-16",
+      "score": 7,
+      "hits": [
+        "regime",
+        "language model"
+      ]
+    },
+    {
+      "titre": "Empirical Confirmation of the Square-Root Law of Market Impact in a U.S. Large-Cap Equity",
+      "lien": "https://arxiv.org/abs/2606.24019v1",
+      "date": "2026-06-22",
+      "score": 6,
+      "hits": [
+        "factor",
+        "walk-forward"
+      ]
+    },
+    {
+      "titre": "Do Prediction Markets Match Option Prices? Bitcoin Threshold Evidence from Binance and Polymarket",
+      "lien": "https://arxiv.org/abs/2606.19517v1",
+      "date": "2026-06-17",
+      "score": 6,
+      "hits": [
+        "cross-sectional",
+        "transaction cost",
+        "robust"
+      ]
+    },
+    {
+      "titre": "Diagonal Frog: High-order positivity-preserving FD schemes for anisotropic Fokker-Planck equations",
+      "lien": "https://arxiv.org/abs/2606.23980v1",
+      "date": "2026-06-22",
+      "score": 5,
+      "hits": [
+        "factor",
+        "regime"
+      ]
+    },
+    {
+      "titre": "KineticSim: A Lightweight, High-Performance Execution Engine for Real-Time Market Simulators",
+      "lien": "https://arxiv.org/abs/2606.21784v1",
+      "date": "2026-06-19",
+      "score": 5,
+      "hits": [
+        "reinforcement learning",
+        "agent",
+        "ensemble"
+      ]
+    }
+  ]
+}

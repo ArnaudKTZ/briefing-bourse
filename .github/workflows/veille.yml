@@ -1,0 +1,37 @@
+name: Agent Veille (éclaireur recherche)
+
+on:
+  schedule:
+    - cron: '0 7 * * 6'  # Samedi 9h heure française (UTC+2) — digest hebdo
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Lancer l'agent Veille
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
+        run: python agent_veille.py
+
+      - name: Sauvegarder le rapport
+        run: |
+          git config user.name "Agent Veille"
+          git config user.email "actions@github.com"
+          git add veille_rapport.json || true
+          git diff --staged --quiet || git commit -m "Veille $(date +%Y-%m-%d)" || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
