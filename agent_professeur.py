@@ -160,7 +160,46 @@ def construire_evolution(evals, precedent):
     return evo
 
 
-def generer_html(now, evals, evo):
+def meta_garde_fou(historique):
+    """
+    Le Professeur s'auto-challenge : il confronte ses notes passées à ce qui
+    s'est réellement passé ensuite. Il ne se corrige PAS tout seul, il remonte
+    ses doutes à Arnaud. (Le juge reste indépendant ; il signale, il ne triche pas.)
+    Retourne (liste_doutes, message_si_inactif).
+    """
+    import statistics
+    if len(historique) < 3:
+        return [], (f"Pas encore assez d'historique ({len(historique)} semaine(s)) pour "
+                    "m'auto-évaluer. Garde-fou actif dès 3 semaines.")
+
+    series = {}
+    for snap in historique:
+        for e in snap.get("evals", []):
+            if e.get("valeur") is not None:
+                series.setdefault(e["agent"], []).append((e.get("note"), e["valeur"]))
+
+    doutes = []
+    for agent, serie in series.items():
+        if len(serie) < 3:
+            continue
+        notes = [n for n, _ in serie]
+        vals  = [v for _, v in serie]
+        delta = vals[-1] - vals[0]
+
+        if any(n in ("A", "B") for n in notes[:-1]) and delta < -3:
+            doutes.append(f"{agent} : noté favorablement par le passé, mais sa métrique a chuté "
+                          f"({vals[0]} → {vals[-1]}). Mon barème était peut-être trop optimiste.")
+        if any(n in ("D", "E") for n in notes[:-1]) and delta > 5:
+            doutes.append(f"{agent} : noté sévèrement par le passé, mais sa métrique progresse "
+                          f"({vals[0]} → {vals[-1]}). Je l'ai peut-être sous-noté.")
+        if statistics.pstdev(vals) > 5:
+            doutes.append(f"{agent} : métrique très instable (écart-type "
+                          f"{round(statistics.pstdev(vals),1)}). Ma confiance affichée est peut-être trompeuse.")
+
+    return doutes, None
+
+
+def generer_html(now, evals, evo, doutes, meta_msg):
     couleurs = {"A": "#1b5e20", "B": "#2e7d32", "C": "#e65100",
                 "D": "#b71c1c", "E": "#b71c1c", "—": "#999"}
     lignes = ""
@@ -182,6 +221,22 @@ def generer_html(now, evals, evo):
         </tr>
         <tr><td colspan='4' style='padding:0 10px 10px;font-size:12px;color:#555;'>{e['verdict']}</td></tr>"""
 
+    if meta_msg:
+        bloc_meta = (f"<div style='margin-top:16px;padding:12px;background:#f5f5f5;border-radius:6px;"
+                     f"font-size:13px;color:#666;'><strong>Garde-fou méta :</strong> {meta_msg}</div>")
+    elif doutes:
+        items = "".join(f"<li style='margin-bottom:6px;'>{d}</li>" for d in doutes)
+        bloc_meta = (f"<div style='margin-top:16px;padding:12px;background:#fff3e0;border-left:4px solid #e65100;"
+                     f"border-radius:6px;font-size:13px;color:#222;'>"
+                     f"<strong style='color:#e65100;'>Garde-fou méta — je doute de mes propres notes :</strong>"
+                     f"<ul style='margin:8px 0 0;padding-left:20px;'>{items}</ul>"
+                     f"<p style='margin:8px 0 0;font-size:12px;color:#666;'>À toi de trancher : faut-il revoir mes barèmes ? "
+                     f"(je ne me corrige pas seul)</p></div>")
+    else:
+        bloc_meta = ("<div style='margin-top:16px;padding:12px;background:#e8f5e9;border-radius:6px;"
+                     "font-size:13px;color:#2e7d32;'><strong>Garde-fou méta :</strong> mes notes passées sont "
+                     "cohérentes avec ce qui s'est passé ensuite. Rien à signaler.</div>")
+
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
 <div style='background:linear-gradient(135deg,#3c3489,#534ab7);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
   <h2 style='margin:0;font-size:18px;'>Réunion hebdomadaire — Agent Professeur</h2>
@@ -197,6 +252,7 @@ def generer_html(now, evals, evo):
     </tr></thead>
     <tbody>{lignes}</tbody>
   </table>
+  {bloc_meta}
   <div style='margin-top:16px;padding:12px;background:#ede7f6;border-radius:6px;font-size:13px;color:#3c3489;'>
     <strong>Règle d'or :</strong> aucune amélioration ne passe en production sans réussir la recette
     (backtest hors-échantillon). Le Professeur observe et propose, il ne change rien en aveugle.
@@ -239,16 +295,37 @@ if __name__ == "__main__":
     precedent = charger(FICHIER_RAPPORT)
     evo = construire_evolution(evals, precedent)
 
+    # Historique cumulé (snapshots compacts) pour le garde-fou méta
+    historique = (precedent or {}).get("historique", [])
+    historique.append({
+        "date": now.date().isoformat(),
+        "evals": [{"agent": e["agent"], "note": e["note"], "valeur": e.get("valeur_suivie")}
+                  for e in evals],
+    })
+    historique = historique[-12:]
+
+    doutes, meta_msg = meta_garde_fou(historique)
+    if meta_msg:
+        print(f"  Garde-fou méta : {meta_msg}")
+    elif doutes:
+        print(f"  Garde-fou méta : {len(doutes)} doute(s) sur mes propres notes")
+        for d in doutes:
+            print(f"    - {d}")
+    else:
+        print("  Garde-fou méta : notes cohérentes, rien à signaler")
+
     rapport = {
         "date": now.date().isoformat(),
         "evaluations": evals,
         "evolution": evo,
+        "doutes_meta": doutes,
+        "historique": historique,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi compte-rendu hebdo...")
-    html = generer_html(now, evals, evo)
+    html = generer_html(now, evals, evo, doutes, meta_msg)
     envoyer(f"Professeur — réunion hebdo des agents — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")
