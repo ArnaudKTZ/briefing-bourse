@@ -1413,14 +1413,30 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     return resume_pf, pf, donnees_dict
 
 
-def generer_html_portefeuille(pf, donnees_dict):
-    """Génère le bloc HTML du tableau portefeuille virtuel pour l'email."""
+def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
+    """Génère le bloc HTML du tableau portefeuille virtuel pour l'email.
+    perf_cac : performance du CAC 40 depuis le départ du portefeuille (comparaison)."""
     valeur_totale = list(pf["historique_valeur"].values())[-1] if pf["historique_valeur"] else 10000.0
     perf_pf = round((valeur_totale - 10000) / 10000 * 100, 2)
     signe_global = "+" if perf_pf >= 0 else ""
     gain_total = round(valeur_totale - 10000, 2)
     signe_gain = "+" if gain_total >= 0 else ""
     couleur_global = "#2e7d32" if perf_pf >= 0 else "#c62828"
+
+    # Comparaison au CAC 40 sur la même période (le chiffre brut ne veut rien dire sans référence)
+    bloc_vs_cac = ""
+    if perf_cac is not None:
+        ecart = round(perf_pf - perf_cac, 2)
+        bat = ecart >= 0
+        coul = "#2e7d32" if bat else "#c62828"
+        verdict = "surperforme" if bat else "sous-performe"
+        depuis = f" depuis le {date_debut[8:10]}/{date_debut[5:7]}" if date_debut else ""
+        bloc_vs_cac = f"""
+  <div style='margin-bottom:16px;padding:10px 14px;background:{'#e8f5e9' if bat else '#ffebee'};border-radius:8px;font-size:13px;'>
+    <strong style='color:{coul};'>Le portefeuille {verdict} le CAC 40{depuis}</strong> :
+    {signe_global}{perf_pf:.2f}% contre {'+' if perf_cac >= 0 else ''}{perf_cac:.2f}% pour le CAC 40
+    (<span style='color:{coul};font-weight:600;'>{'+' if ecart >= 0 else ''}{ecart:.2f} pts</span>)
+  </div>"""
 
     nb_positions = len(pf["positions"])
     capital_libre = round(pf["capital"], 2)
@@ -1482,6 +1498,7 @@ def generer_html_portefeuille(pf, donnees_dict):
     return f"""
 <div style='margin:20px 0;'>
   <h3 style='margin:0 0 12px;font-size:15px;color:#1a1a2e;'>Portefeuille virtuel</h3>
+  {bloc_vs_cac}
   <div style='display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;'>
     <div style='flex:1;min-width:120px;background:#f5f5f5;border-radius:8px;padding:12px 16px;'>
       <div style='font-size:11px;color:#666;margin-bottom:4px;'>Capital de départ</div>
@@ -1985,7 +2002,21 @@ if __name__ == "__main__":
         json.dump(briefing_pwa, f, ensure_ascii=False, indent=2)
 
     print("Envoi email...")
-    html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict)
+    # Performance du CAC 40 depuis le départ du portefeuille (comparaison)
+    perf_cac_pf = None
+    date_debut_pf = None
+    try:
+        dates_pf = sorted(pf_data.get("historique_valeur", {}).keys())
+        if dates_pf and hist_cac is not None and not hist_cac.empty:
+            date_debut_pf = dates_pf[0]
+            cac_close = hist_cac["Close"]
+            apres = cac_close[cac_close.index.strftime("%Y-%m-%d") >= date_debut_pf]
+            if len(apres) >= 1:
+                perf_cac_pf = round((cac_close.iloc[-1] / apres.iloc[0] - 1) * 100, 2)
+    except Exception as e:
+        print(f"  Comparaison CAC indisponible : {e}")
+
+    html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict, perf_cac_pf, date_debut_pf)
     html_dm = generer_html_dual_momentum()
     envoyer_email(briefing, perf["stats"], html_pf, html_dm)
 
