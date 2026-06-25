@@ -14,8 +14,11 @@ import os
 import smtplib
 import subprocess
 import urllib.request
+import zoneinfo
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+
+TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 
 ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
@@ -23,10 +26,11 @@ ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
 DESTINATAIRE  = os.environ.get("DESTINATAIRE_PRINCIPAL", "")
 
-FICHIER_RAPPORT_NEWS  = "rapport_news.json"
-FICHIER_INTRADAY      = "intraday_scores.json"
-FICHIER_PERFORMANCE   = "performance.json"
-FICHIER_WATCHDOG_LOG  = "watchdog_log.json"
+FICHIER_RAPPORT_NEWS    = "rapport_news.json"
+FICHIER_INTRADAY        = "intraday_scores.json"
+FICHIER_PERFORMANCE     = "performance.json"
+FICHIER_WATCHDOG_LOG    = "watchdog_log.json"
+FICHIER_DERNIER_BRIEFING = "dernier_briefing.json"
 
 
 def charger_json(fichier):
@@ -43,7 +47,7 @@ def sauvegarder_log(log):
 
 def verifier_agent_news():
     """Vérifie que rapport_news.json a été produit aujourd'hui."""
-    today = datetime.date.today().isoformat()
+    today = datetime.datetime.now(TZ_PARIS).date().isoformat()
     data  = charger_json(FICHIER_RAPPORT_NEWS)
     if not data:
         return False, "rapport_news.json introuvable"
@@ -56,26 +60,17 @@ def verifier_agent_news():
 
 def verifier_briefing():
     """
-    Vérifie que le briefing a tourné aujourd'hui en lisant performance.json.
-    Le briefing écrit une entrée dans recommandations avec la date du jour.
+    Vérifie que le briefing a tourné aujourd'hui en lisant dernier_briefing.json.
     """
-    today = datetime.date.today().isoformat()
-    data  = charger_json(FICHIER_PERFORMANCE)
+    today = datetime.datetime.now(TZ_PARIS).date().isoformat()
+    data  = charger_json(FICHIER_DERNIER_BRIEFING)
     if not data:
-        return False, "performance.json introuvable"
-
-    # Cherche une recommandation datée d'aujourd'hui
-    recos = data.get("recommandations", {})
-    recos_today = [k for k in recos if k.startswith(today)]
-    if recos_today:
-        return True, f"OK — {len(recos_today)} recommandations enregistrées"
-
-    # Fallback : vérifie la date du dernier run dans stats
-    derniere_date = data.get("derniere_execution", "")
-    if derniere_date == today:
-        return True, "OK — dernière exécution aujourd'hui"
-
-    return False, f"Aucune trace du briefing pour {today}"
+        return False, "dernier_briefing.json introuvable"
+    date_briefing = data.get("date", "")
+    if date_briefing == today:
+        heure = data.get("heure", "?")
+        return True, f"OK — briefing du jour envoyé à {heure}"
+    return False, f"Aucune trace du briefing pour {today} (dernier : {date_briefing})"
 
 
 def verifier_intraday_hier():
@@ -83,7 +78,7 @@ def verifier_intraday_hier():
     Vérifie que le scoring intraday a bien tourné hier
     (utile si le watchdog tourne le matin avant le premier intraday).
     """
-    hier  = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
+    hier  = (datetime.datetime.now(TZ_PARIS).date() - datetime.timedelta(days=1)).isoformat()
     data  = charger_json(FICHIER_INTRADAY)
     if not data:
         return None, "intraday_scores.json introuvable"
@@ -91,7 +86,7 @@ def verifier_intraday_hier():
         nb_heures = len(data[hier])
         return True, f"OK hier — {nb_heures} snapshot(s) enregistré(s)"
     # Vendredi = pas de données le week-end, on ignore
-    if datetime.date.today().weekday() == 0:
+    if datetime.datetime.now(TZ_PARIS).date().weekday() == 0:
         return None, "Lundi — pas de données intraday attendues hier"
     return False, f"Aucun scoring intraday pour hier ({hier})"
 
@@ -101,8 +96,9 @@ def envoyer_alerte_watchdog(problemes, statuts):
         print("  Pas de mot de passe ZOHO — alerte non envoyée")
         return
 
-    today = datetime.date.today().strftime("%d/%m/%Y")
-    heure = datetime.datetime.now().strftime("%H:%M")
+    now   = datetime.datetime.now(TZ_PARIS)
+    today = now.strftime("%d/%m/%Y")
+    heure = now.strftime("%H:%M")
 
     lignes_html = ""
     for agent, (ok, msg) in statuts.items():
@@ -167,9 +163,10 @@ def envoyer_alerte_watchdog(problemes, statuts):
 
 
 if __name__ == "__main__":
-    today = datetime.date.today().isoformat()
-    heure = datetime.datetime.now().strftime("%H:%M")
-    print(f"Watchdog — {today} {heure}")
+    now   = datetime.datetime.now(TZ_PARIS)
+    today = now.date().isoformat()
+    heure = now.strftime("%H:%M")
+    print(f"Watchdog — {today} {heure} (heure Paris)")
 
     statuts = {}
 
