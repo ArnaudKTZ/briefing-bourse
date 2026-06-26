@@ -1,12 +1,12 @@
 {
   "date": "2026-06-26",
-  "heure": "14:31",
+  "heure": "18:03",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "FTSE 100 : Les actions reculent après l’attaque d’Hormuz et la chute des valeurs technologiques",
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
-      "FTSE 100 : Les actions reculent après l’attaque dans le détroit d’Ormuz",
       "La Bourse de Paris termine en hausse",
       "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
       "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule"
@@ -68,9 +68,13 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 20,
+      "titres_cles": [
+        "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
+        "Communiqué de presse : La Fondation Sanofi ouvre un nouveau chapitre centré sur les générations futures"
+      ]
     },
     "BNP Paribas": {
       "sentiment": 0.35,
@@ -298,12 +302,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.3,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia",
-        "Les actions européennes des semi-conducteurs bondissent après les résultats record de Micron"
+        "Les actions européennes des semi-conducteurs bondissent après les résultats record de Micron",
+        "Les Bourses européennes clôturent en baisse, mais atténuent le coup de chaud sur la tech"
       ]
     },
     "Dassault Systèmes": {
