@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Architecture Agent Bourse — Entreprise d'agents</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:960px;margin:40px auto;padding:0 24px;color:#1a1a2e;line-height:1.6}
+  h1{font-size:28px;font-weight:700;border-bottom:3px solid #1a1a2e;padding-bottom:12px;margin-bottom:6px}
+  .meta{font-size:13px;color:#555;margin-bottom:40px}
+  h2{font-size:20px;font-weight:700;margin-top:48px;margin-bottom:16px;border-bottom:1px solid #ddd;padding-bottom:8px}
+  h3{font-size:15px;font-weight:700;margin-top:24px;margin-bottom:8px;color:#1a1a2e}
+  p{margin-bottom:12px}
+  ul{padding-left:20px;margin-bottom:12px}
+  li{margin-bottom:4px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+  .card{border:1px solid #ddd;border-radius:8px;padding:16px}
+  .card-title{font-weight:700;font-size:13px;margin-bottom:6px}
+  .card-freq{font-size:11px;font-weight:700;color:#1a73e8;margin-bottom:8px}
+  .card-body{font-size:12px;color:#444;line-height:1.5}
+  .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
+  .badge-new{background:#e8f5e9;color:#2e7d32}
+  .badge-v4{background:#e3f2fd;color:#1565c0}
+  .badge-coeur{background:#e1f5ee;color:#0f6e56}
+  .badge-gouv{background:#ede7f6;color:#3c3489}
+  .badge-reserve{background:#fff3e0;color:#e65100;border:1px dashed #e65100}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+  th{background:#f5f5f5;padding:10px 12px;text-align:left;font-weight:600;border:1px solid #ddd}
+  td{padding:9px 12px;border:1px solid #ddd;vertical-align:top}
+  tr:nth-child(even) td{background:#fafafa}
+  .phase{background:#f8f9fa;border-left:4px solid #1a1a2e;padding:16px 20px;margin:16px 0;border-radius:0 8px 8px 0}
+  .phase h3{margin-top:0;color:#1a1a2e}
+  .phase-1{border-left-color:#4caf7d}
+  .phase-2{border-left-color:#2196f3}
+  .phase-3{border-left-color:#ff9800}
+  .phase-4{border-left-color:#9c27b0}
+  .highlight{background:#fff9c4;padding:12px 16px;border-radius:6px;margin:16px 0;font-size:13px}
+  .alert{background:#fdecea;border-left:4px solid #c62828;padding:12px 16px;border-radius:0 6px 6px 0;margin:16px 0;font-size:13px}
+  .ok{background:#e8f5e9;border-left:4px solid #2e7d32;padding:12px 16px;border-radius:0 6px 6px 0;margin:16px 0;font-size:13px}
+  .flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0}
+  .flow-box{background:#1a1a2e;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:600}
+  .flow-arrow{color:#999;font-size:18px}
+  footer{margin-top:60px;padding-top:16px;border-top:1px solid #ddd;font-size:11px;color:#888}
+</style>
+</head>
+<body>
+
+<h1>Architecture Agent Bourse — Entreprise d'agents</h1>
+<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 25/06/2026<br>
+Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change le modèle de fond.</p>
+
+<h2>0. Le virage du 25/06 — pourquoi ce document change</h2>
+
+<p>Un audit honnête de la V4 a établi un fait dur, mesuré sur les données réelles : <strong>la V4 (day-trading sur 39 actions du CAC40) a une précision de 42,9%</strong>, soit sous le hasard (50%). Prédire la direction à 1 jour via analyse technique sur données gratuites est le terrain le plus efficient qui soit, où le particulier perd contre les fonds. Empiler des moteurs (l'ancienne roadmap V5) sur un signal sans edge, c'est bâtir plus haut sur du sable.</p>
+
+<div class="alert">
+  <strong>Décision :</strong> on ne jette pas la V4, on la <strong>déclasse en poche satellite</strong> (terrain de jeu plafonné). Le cœur du patrimoine passe sur une stratégie validée et éprouvée : le <strong>Dual Momentum</strong>. Et le système est repensé comme une <strong>entreprise d'agents</strong> avec une recette qualité au centre.
+</div>
+
+<div class="ok">
+  <strong>L'avantage compétitif visé :</strong> pas plus d'agents, pas un apprentissage plus rapide, mais la <strong>rigueur de validation</strong>. Sur 77 études d'IA-trading analysées, 2 seulement ont une séparation train/test correcte dans le temps, et aucune n'atteint un standard de reproductibilité. Être le « poisson pilote malin » qui ne met en production que ce qui passe la recette, c'est ça la différence.
+</div>
+
+<h2>1. Le modèle : une entreprise d'agents à deux poches</h2>
+
+<p>Le capital est coupé en deux poches étanches. Un dérapage de la poche de jeu ne peut jamais entamer le cœur.</p>
+
+<table>
+  <tr><th>Poche</th><th>Part</th><th>Gérée par</th><th>Rôle</th></tr>
+  <tr><td><strong>Cœur du patrimoine</strong></td><td>~85%</td><td>Agent Dual Momentum (mensuel)</td><td>Le vrai moteur, base solide, risque maîtrisé. On n'y touche pas.</td></tr>
+  <tr><td><strong>Satellite « bons plans »</strong></td><td>~15-20% max</td><td>Agent V4 (quotidien + intraday)</td><td>Terrain de jeu, chasse aux opportunités. Risque plafonné.</td></tr>
+</table>
+
+<p>Au-dessus, une gouvernance type entreprise (Arnaud = maître d'ouvrage, comme son métier chez Naval Group : sous-traitants + cahier des charges + recette qualité) :</p>
+
+<ul>
+  <li><strong>Les employés (les agents)</strong> font leur travail et peuvent proposer des améliorations.</li>
+  <li><strong>Le manager (Agent Professeur)</strong> fait le point chaque semaine, note chacun sur sa performance réelle.</li>
+  <li><strong>L'éclaireur (Agent Veille)</strong> surveille ce que font les caïds et rapporte les idées à tester.</li>
+  <li><strong>La recette (Harnais de mesure)</strong> est le juge : rien ne passe en production sans réussir le backtest hors-échantillon.</li>
+  <li><strong>Le patron (Arnaud)</strong> valide et décide.</li>
+</ul>
+
+<div class="highlight">
+  <strong>Règle d'or, gravée dans le système :</strong> aucune idée ne passe en production sans réussir la recette. Y compris les idées de la Veille, y compris les barèmes du Professeur. Le juge reste indépendant : le Professeur ne se réécrit pas lui-même.
+</div>
+
+<h2>2. Agents en production aujourd'hui</h2>
+
+<div class="cards">
+  <div class="card">
+    <div class="card-title">Agent Dual Momentum <span class="badge badge-coeur">CŒUR</span></div>
+    <div class="card-freq">1×/mois — le 1er, 8h</div>
+    <div class="card-body">Le conseiller patrimonial. Hybride 50/50 : 50% World en permanence + 50% qui tourne entre World et USA selon le momentum 12 mois (refuge cash si tout baisse). Email : « rien à faire » ou « bascule X→Y ». Portefeuille virtuel 10 000€ (depuis le 26/06) suivi chaque jour dans le briefing, comparé au World buy &amp; hold.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Harnais de mesure <span class="badge badge-gouv">RECETTE</span></div>
+    <div class="card-freq">À la demande</div>
+    <div class="card-body">Le juge. Backtest walk-forward, frais inclus, sans look-ahead : réglages choisis sur le passé, testés sur l'avenir jamais vu. Réutilisable par le Professeur pour noter les agents.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent Professeur <span class="badge badge-gouv">MANAGER</span></div>
+    <div class="card-freq">1×/semaine — Dimanche 18h</div>
+    <div class="card-body">Note chaque agent (A à E) avec niveau de confiance selon le nb de données, compare à la semaine d'avant, propose sans rien changer en aveugle. Garde-fou méta : signale ses propres doutes de notation.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent Veille <span class="badge badge-gouv">ÉCLAIREUR</span></div>
+    <div class="card-freq">1×/semaine — Samedi 9h</div>
+    <div class="card-body">Le poisson pilote. Digest arXiv q-fin filtré par pertinence (momentum, facteurs, régimes, rigueur). Propose des idées à tester, n'adopte rien. Gratuit, sans API.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Briefing V4 <span class="badge badge-v4">SATELLITE</span></div>
+    <div class="card-freq">1×/jour — 7h</div>
+    <div class="card-body">Le journal du marché (info + poche satellite). 20+ indicateurs → 1 appel Claude → email. Affiche en bandeau la position Dual Momentum du cœur. Portefeuille virtuel 10 000€ suivi et comparé au CAC 40 depuis le 19/06. Noté [E] par le Professeur : info, pas décision sérieuse.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Scoring intraday <span class="badge badge-v4">SATELLITE</span></div>
+    <div class="card-freq">4×/jour — 9h/11h30/14h/16h</div>
+    <div class="card-body">Recalcul + rotation ETF + alertes (score ≥85, gap+volume, momentum). Flaire les bons plans pour la poche satellite.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent News <span class="badge badge-v4">V4</span></div>
+    <div class="card-freq">3×/jour — 6h45/9h45/13h45</div>
+    <div class="card-body">Scrape RSS Yahoo Finance, sentiment −3 à +3 par valeur. Gratuit.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent Espion <span class="badge badge-v4">V4</span></div>
+    <div class="card-freq">1×/semaine — Lundi 6h15</div>
+    <div class="card-body">ETF sectoriels iShares + actionnariat institutionnel CAC40. Bonus −15 à +15.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent Watchdog <span class="badge badge-v4">V4</span></div>
+    <div class="card-freq">1×/jour — 7h30</div>
+    <div class="card-body">Surveille que les agents ont tourné (lit dernier_briefing.json). Alerte email si anomalie.</div>
+  </div>
+</div>
+
+<h2>3. La stratégie du cœur — Dual Momentum hybride</h2>
+
+<p>Idée simple : ce qui monte depuis un moment a tendance à continuer. Chaque mois on compare World et USA sur 12 mois, on garde le meilleur s'il monte (momentum absolu positif), sinon cash. Anti-whipsaw de +3% pour éviter les allers-retours stériles. Hybride : 50% du capital reste toujours sur le World (buy &amp; hold), 50% applique la rotation.</p>
+
+<h3>ETF PEA Boursobank retenus</h3>
+<table>
+  <tr><th>Rôle</th><th>ETF</th><th>Ticker</th></tr>
+  <tr><td>World (socle + rotation)</td><td>Amundi MSCI World Screened</td><td>CW8 / proxy calcul</td></tr>
+  <tr><td>USA (rotation)</td><td>Amundi MSCI USA Screened</td><td>ESE / proxy calcul</td></tr>
+  <tr><td>Refuge</td><td>Liquidités (cash)</td><td>—</td></tr>
+</table>
+<p>Le cerveau calcule le momentum sur des proxies à longue histoire ; Arnaud achète les ETF Screened équivalents de sa liste Boursobank.</p>
+
+<h3>Résultat de la recette (walk-forward, 204 mois jamais vus)</h3>
+<table>
+  <tr><th>Mesure</th><th>Hybride Dual Momentum</th><th>World buy &amp; hold</th></tr>
+  <tr><td>Rendement annuel</td><td>10,74%</td><td>12,53%</td></tr>
+  <tr><td>Pire chute (drawdown)</td><td>−20,4%</td><td>−25,3%</td></tr>
+  <tr><td>Volatilité</td><td>12,7%</td><td>14,3%</td></tr>
+  <tr><td>Sharpe</td><td>0,69</td><td>0,73</td></tr>
+</table>
+
+<div class="alert">
+  <strong>Vérité hors-échantillon :</strong> l'hybride <strong>ne bat pas</strong> le buy &amp; hold en rendement (le backtest in-sample qui « écrasait » le World était une illusion d'optimisation). Son vrai gain, prouvé sur données non vues : <strong>moins de risque</strong> (chute et volatilité réduites). C'est un <strong>airbag, pas un accélérateur</strong>. Les émergents ont été testés et <strong>rejetés par la recette</strong> (ils dégradaient tout en hors-échantillon).
+</div>
+
+<h2>4. Rythme hebdomadaire — qui reçoit quoi</h2>
+
+<table>
+  <tr><th>Email</th><th>Quand</th><th>Destinataires</th></tr>
+  <tr><td>Briefing V4 (journal + satellite)</td><td>quotidien 7h</td><td>3 (zoho + xtrem111 + ferrey83)</td></tr>
+  <tr><td>Alertes intraday</td><td>en séance</td><td>3</td></tr>
+  <tr><td>Dual Momentum (cœur)</td><td>1er du mois</td><td>3</td></tr>
+  <tr><td><strong>Veille (éclaireur)</strong></td><td>samedi 9h</td><td>2 (zoho + xtrem111)</td></tr>
+  <tr><td><strong>Professeur (bilan)</strong></td><td>dimanche 18h</td><td>2 (zoho + xtrem111)</td></tr>
+</table>
+
+<h2>5. Infrastructure</h2>
+<ul>
+  <li><strong>Exécution :</strong> GitHub Actions (cron) — un workflow par agent. cron-job.org en secours.</li>
+  <li><strong>Code :</strong> Python 3.11, yfinance, pandas/numpy. CAC40 centralisé dans <code>marche_config.py</code>. Heures en Europe/Paris.</li>
+  <li><strong>Coût :</strong> 1 seul appel Claude/jour (briefing). Tous les autres agents sont 100% gratuits.</li>
+  <li><strong>Diffusion :</strong> email Zoho SMTP + PWA iPhone.</li>
+  <li><strong>Dette technique soldée le 25/06 :</strong> timezone, bare except, duplication CAC40.</li>
+  <li><strong>Revue de code 25/06 (2 relecteurs indépendants) :</strong> 7 bugs réels corrigés, dont un qui flattait la stratégie dans la recette (le World B&amp;H honnête est passé de 12,02% à 12,53%).</li>
+  <li><strong>Contrôle de cohérence devise :</strong> le mécanisme se comporte pareil en EUR (CW8/ESE) qu'en USD. Validation USD conservée car seule à contenir un krach lent (2008).</li>
+  <li><strong>Expérience parallèle :</strong> portefeuille virtuel V4 à 10 000€ (depuis le 19/06), comparé au CAC 40 chaque jour dans le briefing — test empirique sans argent réel de la valeur des signaux V4.</li>
+</ul>
+
+<h2>6. Ce qui reste — idées en réserve (chacune devra passer la recette)</h2>
+
+<div class="phase phase-1">
+  <h3>Court terme</h3>
+  <ul>
+    <li>Réception du 1er email Dual Momentum (1er juillet) et premiers bilans Professeur/Veille</li>
+    <li>Garde-fou méta du Professeur : actif dès 3 semaines d'historique</li>
+  </ul>
+</div>
+
+<div class="phase phase-2">
+  <h3>Moyen terme</h3>
+  <ul>
+    <li>Agent Data Quality : distinguer « donnée manquante » de « vrai neutre », bloquer le signal si données pourries (le vrai fix profond des except)</li>
+    <li>Diversification des sources de données (sortir de la dépendance Yahoo unique)</li>
+    <li>Veille → Professeur → recette : boucle d'intégration automatique des idées validées</li>
+  </ul>
+</div>
+
+<div class="phase phase-3">
+  <h3>Réserve (anciens moteurs V5, seulement si la recette le justifie)</h3>
+  <ul>
+    <li>Feature Engine, Score Engine 4 sous-scores, Risk Engine — utiles uniquement si on prouve d'abord un edge à améliorer</li>
+    <li>Agent Macro+ (régime marché), Agent Insider (déclarations AMF)</li>
+    <li>Bon de commande PWA semi-automatique — prérequis : un edge réel validé hors-échantillon, pas la précision V4 actuelle</li>
+  </ul>
+</div>
+
+<h2>7. Critères de succès (révisés, honnêtes)</h2>
+<table>
+  <tr><th>Critère</th><th>Cible</th></tr>
+  <tr><td>Toute nouveauté validée hors-échantillon</td><td>100% (recette obligatoire)</td></tr>
+  <tr><td>Cœur : risque maîtrisé vs buy &amp; hold</td><td>Drawdown réduit, Sharpe ≥ marché</td></tr>
+  <tr><td>Discipline comportementale</td><td>Rester investi, ne pas paniquer en krach</td></tr>
+  <tr><td>Décision LLM</td><td>0 — narration uniquement</td></tr>
+  <tr><td>Honnêteté du reporting</td><td>Le Professeur dit la vérité, même [E]</td></tr>
+  <tr><td>Satellite plafonné</td><td>≤ 20% du capital</td></tr>
+</table>
+
+<div class="highlight">
+  <strong>L'ancre lucide :</strong> aucun agent ne triplera les revenus par le trading. Le système apporte une base solide, un risque maîtrisé, la capture des rares vraies bonnes idées validées, et zéro décision émotionnelle. Le triplement des revenus viendra de la carrière, de KTZ71 et de l'investissement discipliné sur la durée.
+</div>
+
+<footer>
+  Document mis à jour le 25/06/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
+  Cœur Dual Momentum (mensuel) + satellite V4 (quotidien) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
+</footer>
+
+</body>
+</html>
