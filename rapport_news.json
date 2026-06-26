@@ -1,15 +1,15 @@
 {
   "date": "2026-06-26",
-  "heure": "04:45",
+  "heure": "14:31",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
+      "FTSE 100 : Les actions reculent après l’attaque dans le détroit d’Ormuz",
       "La Bourse de Paris termine en hausse",
       "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
-      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule",
-      "CAC 40 : la Bourse chute, les craintes liées à l’IA éclipsent les espoirs sur l’Iran, SpaceX inquiète"
+      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes",
@@ -68,13 +68,9 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.05,
-      "nb_news": 20,
-      "titres_cles": [
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : La Fondation Sanofi ouvre un nouveau chapitre centré sur les générations futures",
-        "Communiqué de presse : Wayrilz de Sanofi a été approuvé au Japon pour traiter la thrombocytopénie immunitaire"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "BNP Paribas": {
       "sentiment": 0.35,
@@ -194,12 +190,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "1er trimestre 2026 : forte dynamique de croissance avec un chiffre d’affaires de 12,5 milliards d’euros, en hausse de 7,3 %",
         "Mise en œuvre du programme de rachat d’actions",
-        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
+        "NextRise 2026, le principal salon asiatique dédié aux start-ups, co-organisé par la KITA et la KDB, s'achève avec succès à Séoul"
       ]
     },
     "Legrand": {
@@ -321,16 +317,16 @@
     },
     "Edenred": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 3,
       "titres_cles": [
         "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
         "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Les actions d’Edenred en hausse suite à la réforme des titres-restaurant en France, le Brésil envisage un plafonnement des commissions"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.23,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
