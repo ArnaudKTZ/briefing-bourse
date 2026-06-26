@@ -223,7 +223,11 @@ def recuperer_fear_greed():
     Fear & Greed Index via alternative.me (gratuit, pas de clé API).
     0-24 = Extreme Fear, 25-44 = Fear, 45-55 = Neutral,
     56-75 = Greed, 76-100 = Extreme Greed.
-    Retourne un dict avec score, label et malus_global (-10 à +5).
+    Retourne un dict avec score, label et malus (toujours 0 depuis l'audit du 26/06).
+    Affiché comme info contextuelle, mais N'IMPACTE PLUS le scoring : l'audit sur 8 ans
+    (audit_malus_macro.py) a montré que ce F&G (indice crypto) n'a aucun pouvoir prédictif
+    sur le CAC et que la peur extrême précède des rendements légèrement supérieurs à la
+    moyenne — le malus défensif était injustifié, voire à contre-sens.
     """
     try:
         url = "https://api.alternative.me/fng/?limit=1"
@@ -232,12 +236,7 @@ def recuperer_fear_greed():
             data = json.loads(r.read())
         score = int(data["data"][0]["value"])
         label = data["data"][0]["value_classification"]
-        malus = 0
-        if score <= 15:   malus = -10   # panique totale
-        elif score <= 25: malus = -6    # peur extrême
-        elif score <= 40: malus = -3    # peur modérée
-        elif score >= 80: malus = -5    # euphorie = danger de retournement
-        elif score >= 65: malus = -2    # greed élevé = prudence
+        malus = 0   # retiré suite à l'audit : aucun edge prouvé
         return {"score": score, "label": label, "malus": malus}
     except Exception:
         return {"score": None, "label": "N/A", "malus": 0}
