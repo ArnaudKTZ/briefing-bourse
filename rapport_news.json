@@ -1,15 +1,15 @@
 {
   "date": "2026-06-26",
-  "heure": "18:03",
+  "heure": "20:08",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
-      "FTSE 100 : Les actions reculent après l’attaque d’Hormuz et la chute des valeurs technologiques",
+      "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
       "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
+      "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles",
       "La Bourse de Paris termine en hausse",
-      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
-      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule"
+      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»"
     ]
   },
   "valeurs": {
