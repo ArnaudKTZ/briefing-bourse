@@ -151,10 +151,8 @@ def recuperer_contexte_global():
             fg = json.loads(r.read())
         fg_score = int(fg["data"][0]["value"])
         fg_label = fg["data"][0]["value_classification"]
-        if fg_score <= 15:    malus -= 10; infos.append(f"F&G panique {fg_score}")
-        elif fg_score <= 25:  malus -= 6;  infos.append(f"F&G peur {fg_score}")
-        elif fg_score <= 40:  malus -= 3
-        elif fg_score >= 80:  malus -= 5;  infos.append(f"F&G euphorie {fg_score}")
+        # Malus F&G retiré le 26/06 suite à l'audit (aucun edge prouvé, indice crypto
+        # sans lien avec le CAC). F&G conservé comme info contextuelle uniquement.
     except Exception: pass
     try:
         cac = yf.Ticker("^FCHI").history(period="2d")
