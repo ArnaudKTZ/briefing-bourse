@@ -1,10 +1,13 @@
 {
-  "date": "2026-06-25",
+  "date": "2026-06-26",
   "allocation": "50% Amundi MSCI World Screened + 50% Amundi MSCI USA Screened",
   "poche_rotative": "USA",
   "momentums": {
-    "World": 24.3,
-    "USA": 25.1
+    "World": 22.9,
+    "USA": 23.4
   },
-  "derniere_action": "RIEN"
+  "derniere_action": "RIEN",
+  "pf_valeur": 10000.0,
+  "pf_perf": 0.0,
+  "pf_date_init": "2026-06-26"
 }
