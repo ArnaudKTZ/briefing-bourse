@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Agent Bourse V4 — Le meilleur agent trader IA
+Agent Bourse V5 — Le meilleur agent trader IA
 - Données temps réel Yahoo Finance
 - RSI, MACD, Stochastique, ATR, Bollinger, MA20/50/200
 - Patterns de bougies japonaises
@@ -1686,7 +1686,7 @@ Nous sommes le {jour} {today.strftime('%d/%m/%Y')}.
 
 ---
 
-**BRIEFING BOURSE V4 — {jour.capitalize()} {today.strftime('%d/%m/%Y')}**
+**BRIEFING BOURSE V5 — {jour.capitalize()} {today.strftime('%d/%m/%Y')}**
 
 **{indice_txt}**
 
@@ -1802,6 +1802,39 @@ def markdown_vers_html(texte):
     return "\n".join(html)
 
 
+def valoriser_portefeuille_dm():
+    """Valorise au prix du jour le portefeuille virtuel V5 (cœur). Renvoie une ligne HTML ou ''."""
+    fichier = "dual_momentum_portefeuille.json"
+    if not os.path.exists(fichier):
+        return ""
+    try:
+        with open(fichier, "r", encoding="utf-8") as f:
+            pf = json.load(f)
+        uw, uu, cash = pf.get("units_world", 0), pf.get("units_usa", 0), pf.get("cash", 0)
+        date_init = pf.get("date_init", "")
+        cw8 = float(yf.Ticker("CW8.PA").history(period="5d")["Close"].iloc[-1])
+        ese = float(yf.Ticker("ESE.PA").history(period="5d")["Close"].iloc[-1])
+        valeur = uw * cw8 + uu * ese + cash
+        perf = (valeur - 10000) / 10000 * 100
+        # Référence : World buy & hold depuis le départ
+        hist = yf.Ticker("CW8.PA").history(start=date_init)["Close"]
+        perf_world = (cw8 / float(hist.iloc[0]) - 1) * 100 if len(hist) else None
+        coul = "#2e7d32" if perf >= 0 else "#c62828"
+        ref = ""
+        if perf_world is not None:
+            ecart = perf - perf_world
+            cref = "#2e7d32" if ecart >= 0 else "#c62828"
+            ref = (f" · vs World buy &amp; hold {'+' if perf_world >= 0 else ''}{perf_world:.2f}% "
+                   f"(<span style='color:{cref};'>{'+' if ecart >= 0 else ''}{ecart:.2f} pts</span>)")
+        return (f"<p style='margin:6px 0 0;font-size:14px;color:#222;'>Portefeuille virtuel V5 : "
+                f"<strong>{valeur:.0f}€</strong> "
+                f"(<span style='color:{coul};font-weight:600;'>{'+' if perf >= 0 else ''}{perf:.2f}%</span> "
+                f"depuis le {date_init[8:10]}/{date_init[5:7]}){ref}</p>")
+    except Exception as e:
+        print(f"  WARN valorisation portefeuille V5 : {e}")
+        return ""
+
+
 def generer_html_dual_momentum():
     """Bandeau 'position sérieuse' alimenté par l'agent Dual Momentum (cœur du patrimoine)."""
     fichier = "dual_momentum_statut.json"
@@ -1818,10 +1851,11 @@ def generer_html_dual_momentum():
     moms = s.get("momentums", {})
     mom_txt = " | ".join(f"{k} {v:+.1f}%" for k, v in moms.items())
     maj = s.get("date", "")
+    ligne_pf = valoriser_portefeuille_dm()
     return f"""
 <div style='margin:0 0 16px;padding:14px 16px;background:#e8f5ee;border-left:4px solid #1d9e75;border-radius:6px;'>
   <p style='margin:0;font-size:13px;font-weight:bold;color:#0f6e56;'>Cœur du patrimoine (Dual Momentum) — rien à faire au quotidien</p>
-  <p style='margin:6px 0 0;font-size:14px;color:#222;'>Allocation actuelle : <strong>{alloc}</strong></p>
+  <p style='margin:6px 0 0;font-size:14px;color:#222;'>Allocation actuelle : <strong>{alloc}</strong></p>{ligne_pf}
   <p style='margin:4px 0 0;font-size:12px;color:#666;'>Momentum 12 mois : {mom_txt} · Revue mensuelle le 1er · MAJ {maj}</p>
 </div>"""
 
@@ -1829,7 +1863,7 @@ def generer_html_dual_momentum():
 def envoyer_email(briefing, perf_stats, html_portefeuille="", html_dual_momentum=""):
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
-    sujet     = f"Agent Bourse V4 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
+    sujet     = f"Agent Bourse V5 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = sujet
@@ -1842,7 +1876,7 @@ def envoyer_email(briefing, perf_stats, html_portefeuille="", html_dual_momentum
     html = f"""<html><body style='font-family:Arial,sans-serif;font-size:13px;
 color:#222;max-width:1000px;margin:auto;padding:20px;'>
 <div style='background:linear-gradient(135deg,#1a1a2e,#16213e);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
-  <h2 style='margin:0;font-size:18px;'>Agent Bourse V4 — {today.strftime('%d/%m/%Y')}</h2>
+  <h2 style='margin:0;font-size:18px;'>Agent Bourse V5 — {today.strftime('%d/%m/%Y')}</h2>
   <p style='margin:6px 0 0;font-size:12px;opacity:0.8;'>
     RSI + Stochastique + MACD + Bollinger + ATR + Bougies + Pivot Points + Beta + Auto-apprentissage
     | Precision : <strong>{precision}%</strong>

@@ -37,6 +37,8 @@ DESTINATAIRES = [d.strip() for d in _dest_env.split(",") if d.strip()] if _dest_
 
 FICHIER_ETAT   = "dual_momentum_etat.json"
 FICHIER_STATUT = "dual_momentum_statut.json"   # lu par le briefing V4 quotidien
+FICHIER_PF_DM  = "dual_momentum_portefeuille.json"  # portefeuille virtuel V5 (cœur)
+CAPITAL_DEPART = 10000.0
 
 LOOKBACK_MOIS = 12
 BUFFER_SWITCH = 0.03   # +3% requis pour changer la poche rotative
@@ -97,6 +99,48 @@ def decider_poche_rotative(momentums, position_actuelle):
             return position_actuelle
 
     return meilleur
+
+
+def gerer_portefeuille_dm(momentums, poche, now):
+    """
+    Portefeuille virtuel V5 (cœur) : 10 000€ au départ, suit l'allocation Dual Momentum.
+    Rééquilibré à chaque revue mensuelle. Le briefing le valorise ensuite chaque jour.
+    Stocke les parts d'ETF pour permettre la valorisation quotidienne.
+    """
+    world_px = momentums["World"][1]
+    usa_px   = momentums["USA"][1]
+    today    = now.date().isoformat()
+
+    if os.path.exists(FICHIER_PF_DM):
+        with open(FICHIER_PF_DM, "r", encoding="utf-8") as f:
+            pf = json.load(f)
+    else:
+        pf = {"date_init": today, "capital_depart": CAPITAL_DEPART,
+              "units_world": 0.0, "units_usa": 0.0, "cash": 0.0,
+              "historique_valeur": {}}
+
+    # Valeur courante (marquée au prix du jour) avant rééquilibrage
+    if pf["historique_valeur"]:
+        valeur = pf["units_world"] * world_px + pf["units_usa"] * usa_px + pf["cash"]
+    else:
+        valeur = pf["capital_depart"]
+
+    # Rééquilibrage vers l'allocation cible (le total ne change pas, frais négligés)
+    alloc = construire_allocation(poche)   # pourcentages
+    w_eur = valeur * alloc.get("World", 0) / 100
+    u_eur = valeur * alloc.get("USA", 0) / 100
+    c_eur = valeur * alloc.get("Cash", 0) / 100
+    pf["units_world"] = round(w_eur / world_px, 6)
+    pf["units_usa"]   = round(u_eur / usa_px, 6) if u_eur > 0 else 0.0
+    pf["cash"]        = round(c_eur, 2)
+    pf["historique_valeur"][today] = round(valeur, 2)
+    pf["dernier_cours"] = {"World": world_px, "USA": usa_px}
+
+    with open(FICHIER_PF_DM, "w", encoding="utf-8") as f:
+        json.dump(pf, f, ensure_ascii=False, indent=2)
+
+    perf = (valeur - CAPITAL_DEPART) / CAPITAL_DEPART * 100
+    return round(valeur, 2), round(perf, 2), pf["date_init"]
 
 
 def construire_allocation(poche_rotative):
@@ -219,13 +263,20 @@ if __name__ == "__main__":
     etat["historique"] = etat["historique"][-36:]
     sauvegarder_etat(etat)
 
-    # Statut court pour le briefing quotidien V4
+    # Portefeuille virtuel V5 (cœur)
+    pf_valeur, pf_perf, pf_date_init = gerer_portefeuille_dm(momentums, nouvelle_poche, now)
+    print(f"Portefeuille V5 : {pf_valeur}€ ({pf_perf:+.2f}% depuis {pf_date_init})")
+
+    # Statut court pour le briefing quotidien
     statut = {
         "date": now.date().isoformat(),
         "allocation": formater_alloc(alloc_apres),
         "poche_rotative": nouvelle_poche,
         "momentums": {k: round(v[0], 1) for k, v in momentums.items()},
         "derniere_action": action,
+        "pf_valeur": pf_valeur,
+        "pf_perf": pf_perf,
+        "pf_date_init": pf_date_init,
     }
     with open(FICHIER_STATUT, "w", encoding="utf-8") as f:
         json.dump(statut, f, ensure_ascii=False, indent=2)
