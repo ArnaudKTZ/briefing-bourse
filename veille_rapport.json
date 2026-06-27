@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-25",
+  "date": "2026-06-27",
   "nb_articles": 40,
   "top": [
     {
@@ -66,6 +66,17 @@
       ]
     },
     {
+      "titre": "Data-Driven Duration Management -- Term Structure Forecasting Using Machine Learning",
+      "lien": "https://arxiv.org/abs/2606.26815v1",
+      "date": "2026-06-25",
+      "score": 5,
+      "hits": [
+        "factor",
+        "robust",
+        "machine learning"
+      ]
+    },
+    {
       "titre": "Diagonal Frog: High-order positivity-preserving FD schemes for anisotropic Fokker-Planck equations",
       "lien": "https://arxiv.org/abs/2606.23980v1",
       "date": "2026-06-22",
@@ -73,17 +84,6 @@
       "hits": [
         "factor",
         "regime"
-      ]
-    },
-    {
-      "titre": "KineticSim: A Lightweight, High-Performance Execution Engine for Real-Time Market Simulators",
-      "lien": "https://arxiv.org/abs/2606.21784v1",
-      "date": "2026-06-19",
-      "score": 5,
-      "hits": [
-        "reinforcement learning",
-        "agent",
-        "ensemble"
       ]
     }
   ]
