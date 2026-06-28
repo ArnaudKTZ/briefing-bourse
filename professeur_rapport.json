@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-25",
+  "date": "2026-06-28",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -10,23 +10,24 @@
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "42.9% précision (126 signaux)",
+      "metrique": "45.7% précision (173 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 42.9% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 42.9
+      "verdict": "Précision 45.7% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 45.7,
+      "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "+0.1% (1 trades)",
+      "metrique": "+1.0% (1 trades)",
       "note": "—",
       "confiance": "faible",
-      "verdict": "PF +0.1% vs CAC -0.1% sur 5j : trop tôt.",
-      "valeur_suivie": 0.1
+      "verdict": "PF +1.0% vs CAC -0.4% sur 6j : trop tôt.",
+      "valeur_suivie": 1.0
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-06-25)",
+      "metrique": "actif (rapport du 2026-06-26)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
@@ -40,8 +41,8 @@
     }
   ],
   "evolution": {
-    "Briefing V4 (signaux)": 0.0,
-    "Portefeuille virtuel V4": 0.0
+    "Briefing V4 (signaux)": 2.8,
+    "Portefeuille virtuel V4": 0.9
   },
   "doutes_meta": [],
   "historique": [
@@ -72,6 +73,41 @@
           "agent": "Agent Espion",
           "note": "C",
           "valeur": null
+        }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 45.7,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "—",
+          "valeur": 1.0,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent Espion",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
         }
       ]
     }
