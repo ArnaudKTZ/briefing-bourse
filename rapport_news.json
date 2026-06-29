@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "heure": "18:46",
+  "heure": "19:47",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -95,7 +95,7 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Kingswood Capital Management conclut un accord définitif en vue d’acquérir Safran Passenger Innovations",
@@ -288,8 +288,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "À quoi ressemblerait l’euro numérique ?",
-        "WORLDLINE : Worldline, le Crédit Agricole et Mastercard réalisent la première transaction de paiement agentique en France - Communiqué"
+        "WORLDLINE : Communication du Conseil d’administration de Worldline",
+        "À quoi ressemblerait l’euro numérique ?"
       ]
     },
     "Veolia": {
