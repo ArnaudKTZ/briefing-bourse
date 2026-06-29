@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "heure": "04:45",
+  "heure": "18:46",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
@@ -104,7 +104,7 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.1,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
@@ -302,7 +302,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.2,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -321,11 +321,10 @@
     },
     "Edenred": {
       "sentiment": 0.0,
-      "nb_news": 3,
+      "nb_news": 2,
       "titres_cles": [
         "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
