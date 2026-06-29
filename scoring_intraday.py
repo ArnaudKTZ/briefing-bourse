@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Scoring intraday — collecte les scores 3x/jour sans appeler Claude.
+Scoring intraday — collecte les scores 3x/jour.
 Tourne à 9h, 12h et 16h via GitHub Actions.
 Sauvegarde dans intraday_scores.json pour enrichir le briefing du lendemain.
 """
@@ -18,6 +18,9 @@ from email.mime.multipart import MIMEMultipart
 import yfinance as yf
 import pandas as pd
 import numpy as np
+import anthropic
+
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
@@ -172,8 +175,74 @@ def recuperer_contexte_global():
 
 from marche_config import CAC40
 
+POIDS_DEFAUT = {
+    "rsi":        1.0,
+    "macd":       1.0,
+    "momentum":   1.0,
+    "volume":     1.0,
+    "bollinger":  1.0,
+}
 
-def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=None):
+
+def detecter_regime_macro(vix_val, cac_var, fg_score, signaux_etf):
+    """
+    Appelle Claude une seule fois par run pour classifier le régime de marché
+    et retourner des pondérations de facteurs adaptées.
+    Utilise uniquement les données disponibles au moment du signal (pas de leakage).
+    """
+    if not ANTHROPIC_API_KEY:
+        return POIDS_DEFAUT, "inconnu"
+
+    nb_entrees = sum(1 for s, _, _ in signaux_etf.values() if s == "ENTREE")
+    nb_sorties = sum(1 for s, _, _ in signaux_etf.values() if s == "SORTIE")
+
+    prompt = f"""Tu es un classificateur de régime de marché boursier. Analyse ces données macro et retourne UNIQUEMENT un JSON.
+
+Données du moment (pas de données futures) :
+- VIX : {vix_val if vix_val else 'indisponible'}
+- CAC 40 variation J-1 : {cac_var if cac_var is not None else 'indisponible'}%
+- Fear & Greed index : {fg_score if fg_score else 'indisponible'}/100
+- Rotations sectorielles ETF : {nb_entrees} secteurs en entrée, {nb_sorties} en sortie
+
+Classifie le régime parmi : "tendance_haussiere", "tendance_baissiere", "volatile", "lateral", "crise"
+
+Règles de pondération :
+- tendance_haussiere : momentum fort, RSI modéré, MACD fort
+- tendance_baissiere : momentum faible, RSI fort (survente), MACD faible
+- volatile : RSI fort (rebonds), momentum faible, bollinger fort, volume fort
+- lateral : RSI fort, bollinger fort, momentum faible, MACD faible
+- crise : RSI fort (survente extrême), volume fort, tout le reste réduit
+
+Retourne UNIQUEMENT ce JSON, sans texte autour :
+{{"regime": "<label>", "rsi": <0.5-2.0>, "macd": <0.5-2.0>, "momentum": <0.5-2.0>, "volume": <0.5-2.0>, "bollinger": <0.5-2.0>}}"""
+
+    try:
+        client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=150,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = response.content[0].text.strip()
+        data = json.loads(raw)
+        regime = data.get("regime", "inconnu")
+        poids = {
+            "rsi":       float(data.get("rsi", 1.0)),
+            "macd":      float(data.get("macd", 1.0)),
+            "momentum":  float(data.get("momentum", 1.0)),
+            "volume":    float(data.get("volume", 1.0)),
+            "bollinger": float(data.get("bollinger", 1.0)),
+        }
+        # Sécurité : on clamp les poids entre 0.3 et 2.0
+        poids = {k: max(0.3, min(2.0, v)) for k, v in poids.items()}
+        print(f"  Régime détecté : {regime} | poids : {poids}")
+        return poids, regime
+    except Exception as e:
+        print(f"  Régime macro : erreur ({e}), poids par défaut")
+        return POIDS_DEFAUT, "inconnu"
+
+
+def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=None, poids_macro=None):
     try:
         stock = yf.Ticker(ticker)
         hist  = stock.history(period="1y")
@@ -191,6 +260,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
 
         score = 50
         rsi_val = None
+        p = poids_macro if poids_macro else POIDS_DEFAUT
 
         if TA_DISPONIBLE:
             close = hist["Close"]
@@ -202,12 +272,13 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             rsi_val    = rsi_series.iloc[-1]
             if not pd.isna(rsi_val):
                 rsi_val = round(float(rsi_val), 1)
-                if rsi_val < 25:   score += 20
-                elif rsi_val < 35: score += 12
-                elif rsi_val < 45: score += 5
-                elif rsi_val > 75: score -= 20
-                elif rsi_val > 65: score -= 12
-                elif rsi_val > 55: score -= 5
+                w = p["rsi"]
+                if rsi_val < 25:   score += round(20 * w)
+                elif rsi_val < 35: score += round(12 * w)
+                elif rsi_val < 45: score += round(5 * w)
+                elif rsi_val > 75: score -= round(20 * w)
+                elif rsi_val > 65: score -= round(12 * w)
+                elif rsi_val > 55: score -= round(5 * w)
 
             # Divergence RSI/prix
             if len(hist) >= 20 and len(rsi_series) >= 20:
@@ -217,9 +288,9 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                     i_min = c20.argmin()
                     i_max = c20.argmax()
                     if i_min < len(c20) - 3 and c20[-1] <= c20[i_min] and r20[-1] > r20[i_min] + 3:
-                        score += 12  # divergence haussière
+                        score += round(12 * p["rsi"])
                     elif i_max < len(c20) - 3 and c20[-1] >= c20[i_max] and r20[-1] < r20[i_max] - 3:
-                        score -= 12  # divergence baissière
+                        score -= round(12 * p["rsi"])
                 except Exception: pass
 
             # MACD
@@ -228,15 +299,15 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             macd_sig  = macd_ind.macd_signal().iloc[-1]
             macd_hist = macd_ind.macd_diff()
             if not pd.isna(macd_line) and not pd.isna(macd_sig):
-                if macd_line > macd_sig: score += 10
-                else:                    score -= 10
+                if macd_line > macd_sig: score += round(10 * p["macd"])
+                else:                    score -= round(10 * p["macd"])
             if len(macd_hist) >= 2:
                 h1, h2 = macd_hist.iloc[-1], macd_hist.iloc[-2]
                 if not pd.isna(h1) and not pd.isna(h2):
-                    if h1 > h2 and h1 > 0:   score += 5
-                    elif h1 < h2 and h1 < 0:  score -= 5
+                    if h1 > h2 and h1 > 0:   score += round(5 * p["macd"])
+                    elif h1 < h2 and h1 < 0:  score -= round(5 * p["macd"])
 
-            # Moyennes mobiles
+            # Moyennes mobiles (poids fixe — signal structurel, pas de régime)
             ma20 = SMAIndicator(close, window=20).sma_indicator()
             ma50 = SMAIndicator(close, window=50).sma_indicator() if len(hist) >= 50 else None
             v20  = float(ma20.iloc[-1]) if not pd.isna(ma20.iloc[-1]) else None
@@ -245,7 +316,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                 if cours > v20 and cours > v50:   score += 10
                 elif cours < v20 and cours < v50:  score -= 10
 
-            # Pente MA200
+            # Pente MA200 (poids fixe)
             if len(hist) >= 220:
                 try:
                     ma200 = SMAIndicator(close, window=200).sma_indicator()
@@ -259,8 +330,8 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             bb_low  = bb.bollinger_lband().iloc[-1]
             bb_high = bb.bollinger_hband().iloc[-1]
             if not pd.isna(bb_low) and not pd.isna(bb_high):
-                if cours < float(bb_low):    score += 10
-                elif cours > float(bb_high): score -= 10
+                if cours < float(bb_low):    score += round(10 * p["bollinger"])
+                elif cours > float(bb_high): score -= round(10 * p["bollinger"])
 
         # Momentum multi-timeframe
         n = len(hist)
@@ -269,20 +340,20 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             if n > nb_j:
                 perfs.append(float(hist["Close"].iloc[-1]) / float(hist["Close"].iloc[-nb_j]) - 1)
         if perfs:
-            haussiers  = sum(1 for p in perfs if p > 0)
-            baissiers  = sum(1 for p in perfs if p < 0)
-            if haussiers == len(perfs): score += 10
-            elif haussiers >= 2:        score += 5
-            elif baissiers == len(perfs): score -= 10
-            elif baissiers >= 2:          score -= 5
+            haussiers  = sum(1 for p2 in perfs if p2 > 0)
+            baissiers  = sum(1 for p2 in perfs if p2 < 0)
+            if haussiers == len(perfs): score += round(10 * p["momentum"])
+            elif haussiers >= 2:        score += round(5 * p["momentum"])
+            elif baissiers == len(perfs): score -= round(10 * p["momentum"])
+            elif baissiers >= 2:          score -= round(5 * p["momentum"])
 
         # Volume anormal
         ratio_vol = round(volume / vol_moy, 1) if vol_moy > 0 else 1.0
         if ratio_vol > 2:
-            if variation > 0: score += 8
-            else:             score -= 8
+            if variation > 0: score += round(8 * p["volume"])
+            else:             score -= round(8 * p["volume"])
 
-        # Gap + momentum intraday
+        # Gap + momentum intraday (poids fixe — signal temps réel)
         if gap_pct > 0.5 and volume > vol_moy * 1.5:  score += 5
         if gap_pct < -0.5 and volume > vol_moy * 1.5: score -= 5
         momentum_intraday = round((cours - ouverture) / ouverture * 100, 2) if ouverture else 0
@@ -591,6 +662,9 @@ if __name__ == "__main__":
         print(f"  Marché calme, malus : {malus_global} pts")
     print(f"  CAC 40 : {cac_cours} ({cac_var:+.2f}%) | VIX : {vix_val} | F&G : {fg_score} {fg_label}")
 
+    print("Détection régime macro (Claude)...")
+    poids_macro, regime_macro = detecter_regime_macro(vix_val, cac_var, fg_score, signaux_etf)
+
     data = charger_intraday()
 
     # Garde seulement les 5 derniers jours
@@ -605,19 +679,21 @@ if __name__ == "__main__":
     ok = 0
     for nom, ticker in CAC40.items():
         print(f"  {nom}...")
-        result = scorer_action(nom, ticker, malus_global=malus_global, rapport_news=rapport_news, signaux_etf=signaux_etf)
+        result = scorer_action(nom, ticker, malus_global=malus_global, rapport_news=rapport_news, signaux_etf=signaux_etf, poids_macro=poids_macro)
         if result:
             snapshot[nom] = result
             ok += 1
 
     data[today][heure] = {
         "_meta": {
-            "cac_cours":       cac_cours,
-            "cac_var":         cac_var,
-            "vix":             vix_val,
+            "cac_cours":        cac_cours,
+            "cac_var":          cac_var,
+            "vix":              vix_val,
             "fear_greed_score": fg_score,
             "fear_greed_label": fg_label,
-            "malus_global":    malus_global,
+            "malus_global":     malus_global,
+            "regime_macro":     regime_macro,
+            "poids_macro":      poids_macro,
         },
         **snapshot,
     }
