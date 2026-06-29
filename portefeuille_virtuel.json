@@ -1,18 +1,6 @@
 {
-  "capital": 320.65999999999985,
+  "capital": 470.8599999999999,
   "positions": {
-    "Danone": {
-      "nb_actions": 30,
-      "prix_entree": 65.06,
-      "date_entree": "2026-06-19",
-      "cout_total": 1951.8000000000002
-    },
-    "Veolia": {
-      "nb_actions": 55,
-      "prix_entree": 36.08,
-      "date_entree": "2026-06-19",
-      "cout_total": 1984.3999999999999
-    },
     "Schneider Electric": {
       "nb_actions": 6,
       "prix_entree": 289.75,
@@ -39,6 +27,24 @@
       "source_entree": "Briefing",
       "cout_total": 1982.3999999999999,
       "frais_achat": 9.91
+    },
+    "LVMH": {
+      "nb_actions": 4,
+      "prix_entree": 495.75,
+      "date_entree": "2026-06-29",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "cout_total": 1983.0,
+      "frais_achat": 9.92
+    },
+    "TotalEnergies": {
+      "nb_actions": 29,
+      "prix_entree": 68.36,
+      "date_entree": "2026-06-29",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "cout_total": 1982.44,
+      "frais_achat": 9.91
     }
   },
   "historique_valeur": {
@@ -47,7 +53,8 @@
     "2026-06-23": 9945.63,
     "2026-06-24": 10024.9,
     "2026-06-25": 10118.05,
-    "2026-06-26": 10104.81
+    "2026-06-26": 10104.81,
+    "2026-06-29": 10010.08
   },
   "trades": [
     {
@@ -62,6 +69,32 @@
       "source_sortie": "Briefing",
       "pnl_pct": -3.04,
       "frais_total": 9.69
+    },
+    {
+      "nom": "Danone",
+      "entree": 65.06,
+      "sortie": 72.12,
+      "date_entree": "2026-06-19",
+      "heure_entree": "07:00",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-06-29",
+      "heure_sortie": "03:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 10.3,
+      "frais_total": 10.82
+    },
+    {
+      "nom": "Veolia",
+      "entree": 36.08,
+      "sortie": 36.23,
+      "date_entree": "2026-06-19",
+      "heure_entree": "07:00",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-06-29",
+      "heure_sortie": "03:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -0.09,
+      "frais_total": 9.96
     }
   ]
 }
