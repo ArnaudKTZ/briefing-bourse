@@ -1,15 +1,15 @@
 {
-  "date": "2026-06-26",
-  "heure": "20:08",
+  "date": "2026-06-29",
+  "heure": "04:45",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.25,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
-      "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
       "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles",
       "La Bourse de Paris termine en hausse",
-      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»"
+      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
+      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule"
     ]
   },
   "valeurs": {
@@ -95,7 +95,7 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Kingswood Capital Management conclut un accord définitif en vue d’acquérir Safran Passenger Innovations",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.0,
-      "nb_news": 20,
+      "sentiment": 0.05,
+      "nb_news": 21,
       "titres_cles": [
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
         "HSBC abaisse Kering à Conserver, estimant que le nouveau plan de redressement prendra du temps",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.15,
-      "nb_news": 20,
+      "sentiment": -0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\"",
@@ -288,13 +288,13 @@
       "nb_news": 20,
       "titres_cles": [
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "WORLDLINE : Worldline, le Crédit Agricole et Mastercard réalisent la première transaction de paiement agentique en France - Communiqué",
-        "WORLDLINE : Lancement du plan d’actionnariat salarié - Communiqué"
+        "À quoi ressemblerait l’euro numérique ?",
+        "WORLDLINE : Worldline, le Crédit Agricole et Mastercard réalisent la première transaction de paiement agentique en France - Communiqué"
       ]
     },
     "Veolia": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.24,
+      "nb_news": 21,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia Environnement: Un très bon premier trimestre avec une croissance solide et une belle progression de l’EBITDA, en ligne avec la guidance",
@@ -302,7 +302,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.15,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -329,12 +329,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.23,
-      "nb_news": 13,
+      "sentiment": 0.08,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "La Bourse de Paris en petite hausse, entre accord Etat-Unis/Iran et Fed plus ferme",
-        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1"
+        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1",
+        "Les actions d’hôtellerie et de croisières chutent en Europe et aux États-Unis dans un contexte de conflit iranien"
       ]
     },
     "Eurazeo": {
