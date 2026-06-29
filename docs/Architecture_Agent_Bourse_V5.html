@@ -46,7 +46,7 @@
 <body>
 
 <h1>Architecture Agent Bourse — Entreprise d'agents</h1>
-<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 25/06/2026<br>
+<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 29/06/2026<br>
 Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change le modèle de fond.</p>
 
 <h2>0. Le virage du 25/06 — pourquoi ce document change</h2>
@@ -71,7 +71,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td><strong>Satellite « bons plans »</strong></td><td>~15-20% max</td><td>Agent V4 (quotidien + intraday)</td><td>Terrain de jeu, chasse aux opportunités. Risque plafonné.</td></tr>
 </table>
 
-<p>Au-dessus, une gouvernance type entreprise (Arnaud = maître d'ouvrage, comme son métier chez Naval Group : sous-traitants + cahier des charges + recette qualité) :</p>
+<p>Au-dessus, une gouvernance type entreprise (Arnaud = maître d'ouvrage : sous-traitants, cahier des charges, recette qualité) :</p>
 
 <ul>
   <li><strong>Les employés (les agents)</strong> font leur travail et peuvent proposer des améliorations.</li>
@@ -116,7 +116,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <div class="card">
     <div class="card-title">Scoring intraday <span class="badge badge-v4">SATELLITE</span></div>
     <div class="card-freq">4×/jour — 9h/11h30/14h/16h</div>
-    <div class="card-body">Recalcul + rotation ETF + alertes (score ≥85, gap+volume, momentum). Flaire les bons plans pour la poche satellite.</div>
+    <div class="card-body">Recalcul + rotation ETF + alertes (score ≥85, gap+volume, momentum). <strong>V5 (29/06) :</strong> détection de régime macro (Claude Haiku, 1 appel/run) → pondération dynamique des facteurs (RSI, MACD, momentum, volume, Bollinger). Contribution de chaque facteur tracée dans le JSON pour diagnostic Professeur.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent News <span class="badge badge-v4">V4</span></div>
@@ -176,7 +176,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <ul>
   <li><strong>Exécution :</strong> GitHub Actions (cron) — un workflow par agent. cron-job.org en secours.</li>
   <li><strong>Code :</strong> Python 3.11, yfinance, pandas/numpy. CAC40 centralisé dans <code>marche_config.py</code>. Heures en Europe/Paris.</li>
-  <li><strong>Coût :</strong> 1 seul appel Claude/jour (briefing). Tous les autres agents sont 100% gratuits.</li>
+  <li><strong>Coût :</strong> ~5 appels Claude/jour — 1 (briefing matin) + 4 (scoring intraday, régime macro Haiku). Tous les autres agents sont 100% gratuits.</li>
   <li><strong>Diffusion :</strong> email Zoho SMTP + PWA iPhone.</li>
   <li><strong>Dette technique soldée le 25/06 :</strong> timezone, bare except, duplication CAC40.</li>
   <li><strong>Revue de code 25/06 (2 relecteurs indépendants) :</strong> 7 bugs réels corrigés, dont un qui flattait la stratégie dans la recette (le World B&amp;H honnête est passé de 12,02% à 12,53%).</li>
@@ -207,7 +207,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <h3>Réserve (anciens moteurs V5, seulement si la recette le justifie)</h3>
   <ul>
     <li>Feature Engine, Score Engine 4 sous-scores, Risk Engine — utiles uniquement si on prouve d'abord un edge à améliorer</li>
-    <li>Agent Macro+ (régime marché), Agent Insider (déclarations AMF)</li>
+    <li>Agent Macro+ complet (régimes avancés, HMM) — la détection de régime simple est déjà en prod dans le scoring V5. Agent Insider (déclarations AMF)</li>
     <li>Bon de commande PWA semi-automatique — prérequis : un edge réel validé hors-échantillon, pas la précision V4 actuelle</li>
   </ul>
 </div>
@@ -228,7 +228,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 </div>
 
 <footer>
-  Document mis à jour le 25/06/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
+  Document mis à jour le 29/06/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
   Cœur Dual Momentum (mensuel) + satellite V4 (quotidien) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
 </footer>
 
