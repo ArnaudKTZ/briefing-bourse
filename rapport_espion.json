@@ -1,72 +1,70 @@
 {
-  "date": "2026-06-23",
-  "heure": "09:21",
+  "date": "2026-06-29",
+  "heure": "04:15",
   "etf_sectoriels": {
     "detail": {
       "Banques": {
-        "perf_1s": 0.47,
-        "perf_1m": 6.66,
-        "flux_vol": 0.26,
+        "perf_1s": -2.3,
+        "perf_1m": 6.04,
+        "flux_vol": 0.13,
         "signal": "NEUTRE"
       },
       "Energie": {
-        "perf_1s": -2.0,
-        "perf_1m": -8.47,
-        "flux_vol": 0.74,
+        "perf_1s": -1.44,
+        "perf_1m": -9.02,
+        "flux_vol": 0.83,
         "signal": "NEUTRE"
       },
       "Tech": {
-        "perf_1s": -0.25,
-        "perf_1m": -2.2,
-        "flux_vol": 0.69,
-        "signal": "NEUTRE"
-      },
-      "Santé": {
-        "perf_1s": -4.57,
-        "perf_1m": -3.74,
-        "flux_vol": 1.34,
-        "signal": "SORTIE"
-      },
-      "Industrie": {
-        "perf_1s": -1.74,
-        "perf_1m": 4.53,
+        "perf_1s": 5.09,
+        "perf_1m": 4.03,
         "flux_vol": 1.17,
         "signal": "NEUTRE"
       },
+      "Santé": {
+        "perf_1s": -5.61,
+        "perf_1m": -8.99,
+        "flux_vol": 1.39,
+        "signal": "SORTIE"
+      },
+      "Industrie": {
+        "perf_1s": 1.22,
+        "perf_1m": 7.21,
+        "flux_vol": 0.26,
+        "signal": "NEUTRE"
+      },
       "Luxe/Conso": {
-        "perf_1s": -3.41,
-        "perf_1m": -7.11,
-        "flux_vol": 1.71,
+        "perf_1s": -2.1,
+        "perf_1m": -5.91,
+        "flux_vol": 1.33,
         "signal": "SORTIE"
       },
       "Utilities": {
-        "perf_1s": -2.09,
-        "perf_1m": 0.54,
-        "flux_vol": 1.15,
+        "perf_1s": 3.44,
+        "perf_1m": 5.62,
+        "flux_vol": 0.78,
         "signal": "NEUTRE"
       },
       "Matériaux": {
-        "perf_1s": 1.94,
-        "perf_1m": 5.4,
-        "flux_vol": 1.22,
-        "signal": "ENTREE"
+        "perf_1s": -4.42,
+        "perf_1m": 1.82,
+        "flux_vol": 0.87,
+        "signal": "NEUTRE"
       },
       "Telecom": {
-        "perf_1s": -1.25,
-        "perf_1m": -1.08,
-        "flux_vol": 0.19,
+        "perf_1s": 1.29,
+        "perf_1m": 1.82,
+        "flux_vol": 0.61,
         "signal": "NEUTRE"
       },
       "Immobilier": {
-        "perf_1s": -0.11,
-        "perf_1m": 2.88,
-        "flux_vol": 0.82,
+        "perf_1s": 0.96,
+        "perf_1m": 5.25,
+        "flux_vol": 0.71,
         "signal": "NEUTRE"
       }
     },
-    "en_force": [
-      "Matériaux"
-    ],
+    "en_force": [],
     "en_sortie": [
       "Santé",
       "Luxe/Conso"
@@ -85,12 +83,12 @@
         }
       ],
       "bonus_espion": 7,
-      "bonus_sectoriel": -6,
-      "bonus_total": 1
+      "bonus_sectoriel": -4,
+      "bonus_total": 3
     },
     "TotalEnergies": {
       "pct_insiders": 8.9,
-      "pct_institutions": 57.4,
+      "pct_institutions": 57.5,
       "nb_institutions": 0,
       "variation_instit": 0.936,
       "top_acheteurs": [
@@ -127,12 +125,12 @@
         }
       ],
       "bonus_espion": 10,
-      "bonus_sectoriel": -6,
-      "bonus_total": 4
+      "bonus_sectoriel": -4,
+      "bonus_total": 6
     },
     "Airbus": {
       "pct_insiders": 25.7,
-      "pct_institutions": 37.5,
+      "pct_institutions": 37.6,
       "nb_institutions": 0,
       "variation_instit": 0,
       "top_acheteurs": [],
@@ -161,7 +159,7 @@
     },
     "L'Oréal": {
       "pct_insiders": 57.3,
-      "pct_institutions": 16.7,
+      "pct_institutions": 16.6,
       "nb_institutions": 0,
       "variation_instit": 0.416,
       "top_acheteurs": [
@@ -179,12 +177,12 @@
         }
       ],
       "bonus_espion": 10,
-      "bonus_sectoriel": -6,
-      "bonus_total": 4
+      "bonus_sectoriel": -4,
+      "bonus_total": 6
     },
     "Sanofi": {
       "pct_insiders": 10.3,
-      "pct_institutions": 42.5,
+      "pct_institutions": 42.6,
       "nb_institutions": 0,
       "variation_instit": 0.009,
       "top_acheteurs": [
@@ -214,13 +212,13 @@
     },
     "Air Liquide": {
       "pct_insiders": 0.1,
-      "pct_institutions": 26.9,
+      "pct_institutions": 27.1,
       "nb_institutions": 0,
       "variation_instit": 0.016,
       "top_acheteurs": [],
       "bonus_espion": 2,
-      "bonus_sectoriel": 3,
-      "bonus_total": 5
+      "bonus_sectoriel": 0,
+      "bonus_total": 2
     },
     "Safran": {
       "pct_insiders": 16.7,
@@ -247,7 +245,7 @@
     },
     "Danone": {
       "pct_insiders": 1.7,
-      "pct_institutions": 57.8,
+      "pct_institutions": 58.0,
       "nb_institutions": 0,
       "variation_instit": 1.0,
       "top_acheteurs": [
@@ -257,8 +255,8 @@
         }
       ],
       "bonus_espion": 5,
-      "bonus_sectoriel": -6,
-      "bonus_total": -1
+      "bonus_sectoriel": -4,
+      "bonus_total": 1
     },
     "Vinci": {
       "pct_insiders": 12.0,
@@ -281,7 +279,7 @@
     },
     "Kering": {
       "pct_insiders": 42.5,
-      "pct_institutions": 25.8,
+      "pct_institutions": 25.9,
       "nb_institutions": 0,
       "variation_instit": -0.009,
       "top_acheteurs": [
@@ -291,12 +289,12 @@
         }
       ],
       "bonus_espion": 5,
-      "bonus_sectoriel": -6,
-      "bonus_total": -1
+      "bonus_sectoriel": -4,
+      "bonus_total": 1
     },
     "Société Générale": {
       "pct_insiders": 9.4,
-      "pct_institutions": 51.2,
+      "pct_institutions": 51.4,
       "nb_institutions": 0,
       "variation_instit": 0,
       "top_acheteurs": [],
@@ -306,7 +304,7 @@
     },
     "Stellantis": {
       "pct_insiders": 23.7,
-      "pct_institutions": 49.9,
+      "pct_institutions": 49.8,
       "nb_institutions": 0,
       "variation_instit": 0.964,
       "top_acheteurs": [
@@ -329,7 +327,7 @@
     },
     "Saint-Gobain": {
       "pct_insiders": 8.8,
-      "pct_institutions": 51.7,
+      "pct_institutions": 51.6,
       "nb_institutions": 0,
       "variation_instit": 0.167,
       "top_acheteurs": [
@@ -339,8 +337,8 @@
         }
       ],
       "bonus_espion": 8,
-      "bonus_sectoriel": 3,
-      "bonus_total": 11
+      "bonus_sectoriel": 0,
+      "bonus_total": 8
     },
     "ArcelorMittal": {
       "pct_insiders": 0,
@@ -362,18 +360,18 @@
         }
       ],
       "bonus_espion": 2,
-      "bonus_sectoriel": 3,
-      "bonus_total": 5
+      "bonus_sectoriel": 0,
+      "bonus_total": 2
     },
     "Pernod Ricard": {
-      "pct_insiders": 26.1,
-      "pct_institutions": 57.6,
+      "pct_insiders": 26.7,
+      "pct_institutions": 58.5,
       "nb_institutions": 0,
       "variation_instit": -0.029,
       "top_acheteurs": [],
       "bonus_espion": 3,
-      "bonus_sectoriel": -6,
-      "bonus_total": -3
+      "bonus_sectoriel": -4,
+      "bonus_total": -1
     },
     "Michelin": {
       "pct_insiders": 0,
@@ -392,7 +390,7 @@
     },
     "Capgemini": {
       "pct_insiders": 8.8,
-      "pct_institutions": 74.4,
+      "pct_institutions": 74.7,
       "nb_institutions": 0,
       "variation_instit": 0.355,
       "top_acheteurs": [
@@ -411,7 +409,7 @@
     },
     "Renault": {
       "pct_insiders": 35.7,
-      "pct_institutions": 33.3,
+      "pct_institutions": 33.4,
       "nb_institutions": 0,
       "variation_instit": -0.042,
       "top_acheteurs": [],
@@ -421,7 +419,7 @@
     },
     "Legrand": {
       "pct_insiders": 3.0,
-      "pct_institutions": 56.4,
+      "pct_institutions": 56.3,
       "nb_institutions": 0,
       "variation_instit": 0.131,
       "top_acheteurs": [
@@ -436,7 +434,7 @@
     },
     "Publicis": {
       "pct_insiders": 7.3,
-      "pct_institutions": 72.5,
+      "pct_institutions": 68.9,
       "nb_institutions": 0,
       "variation_instit": 0.277,
       "top_acheteurs": [
@@ -466,7 +464,7 @@
     },
     "Engie": {
       "pct_insiders": 26.5,
-      "pct_institutions": 42.4,
+      "pct_institutions": 42.5,
       "nb_institutions": 0,
       "variation_instit": 0.234,
       "top_acheteurs": [
@@ -515,7 +513,7 @@
     },
     "Eurofins Scientific": {
       "pct_insiders": 36.5,
-      "pct_institutions": 35.0,
+      "pct_institutions": 35.1,
       "nb_institutions": 0,
       "variation_instit": 0.307,
       "top_acheteurs": [
@@ -530,7 +528,7 @@
     },
     "Teleperformance": {
       "pct_insiders": 18.1,
-      "pct_institutions": 83.7,
+      "pct_institutions": 84.0,
       "nb_institutions": 0,
       "variation_instit": -0.996,
       "top_acheteurs": [],
@@ -540,7 +538,7 @@
     },
     "Alstom": {
       "pct_insiders": 2.0,
-      "pct_institutions": 70.6,
+      "pct_institutions": 70.2,
       "nb_institutions": 0,
       "variation_instit": 0.013,
       "top_acheteurs": [
@@ -555,7 +553,7 @@
     },
     "Worldline": {
       "pct_insiders": 10.0,
-      "pct_institutions": 61.0,
+      "pct_institutions": 61.1,
       "nb_institutions": 0,
       "variation_instit": -0.161,
       "top_acheteurs": [],
@@ -565,7 +563,7 @@
     },
     "Veolia": {
       "pct_insiders": 9.4,
-      "pct_institutions": 63.8,
+      "pct_institutions": 63.0,
       "nb_institutions": 0,
       "variation_instit": 0.06,
       "top_acheteurs": [
@@ -580,7 +578,7 @@
     },
     "STMicroelectronics": {
       "pct_insiders": 0,
-      "pct_institutions": 12.5,
+      "pct_institutions": 12.6,
       "nb_institutions": 0,
       "variation_instit": 0.814,
       "top_acheteurs": [
@@ -603,7 +601,7 @@
     },
     "Dassault Systèmes": {
       "pct_insiders": 49.1,
-      "pct_institutions": 30.4,
+      "pct_institutions": 30.5,
       "nb_institutions": 0,
       "variation_instit": 0.319,
       "top_acheteurs": [
@@ -618,7 +616,7 @@
     },
     "Edenred": {
       "pct_insiders": 0.1,
-      "pct_institutions": 71.9,
+      "pct_institutions": 71.1,
       "nb_institutions": 0,
       "variation_instit": -0.083,
       "top_acheteurs": [],
@@ -628,17 +626,17 @@
     },
     "Accor": {
       "pct_insiders": 1.3,
-      "pct_institutions": 72.1,
+      "pct_institutions": 72.4,
       "nb_institutions": 0,
       "variation_instit": -0.128,
       "top_acheteurs": [],
       "bonus_espion": -5,
-      "bonus_sectoriel": -6,
-      "bonus_total": -11
+      "bonus_sectoriel": -4,
+      "bonus_total": -9
     },
     "Eurazeo": {
       "pct_insiders": 43.7,
-      "pct_institutions": 11.9,
+      "pct_institutions": 11.6,
       "nb_institutions": 0,
       "variation_instit": -0.079,
       "top_acheteurs": [],
@@ -648,7 +646,7 @@
     },
     "Thales": {
       "pct_insiders": 56.2,
-      "pct_institutions": 23.6,
+      "pct_institutions": 23.7,
       "nb_institutions": 0,
       "variation_instit": 0.31,
       "top_acheteurs": [
@@ -663,7 +661,7 @@
     },
     "Forvia": {
       "pct_insiders": 19.0,
-      "pct_institutions": 38.9,
+      "pct_institutions": 39.6,
       "nb_institutions": 0,
       "variation_instit": 0.0,
       "top_acheteurs": [],
@@ -673,10 +671,6 @@
     }
   },
   "signaux_forts": [
-    [
-      "Saint-Gobain",
-      11
-    ],
     [
       "BNP Paribas",
       10
@@ -722,6 +716,10 @@
       8
     ],
     [
+      "Saint-Gobain",
+      8
+    ],
+    [
       "Capgemini",
       8
     ],
@@ -734,19 +732,19 @@
       8
     ],
     [
+      "Hermès",
+      6
+    ],
+    [
+      "L'Oréal",
+      6
+    ],
+    [
       "Airbus",
       5
     ],
     [
       "Schneider Electric",
-      5
-    ],
-    [
-      "Air Liquide",
-      5
-    ],
-    [
-      "ArcelorMittal",
       5
     ],
     [
@@ -767,23 +765,21 @@
     ],
     [
       "Accor",
-      -11
+      -9
     ]
   ],
   "resume": {
-    "secteurs_en_force": [
-      "Matériaux"
-    ],
+    "secteurs_en_force": [],
     "secteurs_en_sortie": [
       "Santé",
       "Luxe/Conso"
     ],
     "top_achats_instit": [
-      "Saint-Gobain",
       "BNP Paribas",
       "Safran",
       "Vinci",
-      "Stellantis"
+      "Stellantis",
+      "Bouygues"
     ],
     "top_ventes_instit": [
       "Edenred",
