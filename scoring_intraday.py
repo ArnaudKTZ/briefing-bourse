@@ -261,6 +261,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
         score = 50
         rsi_val = None
         p = poids_macro if poids_macro else POIDS_DEFAUT
+        f = {}  # contributions par facteur
 
         if TA_DISPONIBLE:
             close = hist["Close"]
@@ -270,17 +271,21 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             # RSI
             rsi_series = RSIIndicator(close, window=14).rsi()
             rsi_val    = rsi_series.iloc[-1]
+            d_rsi = 0
             if not pd.isna(rsi_val):
                 rsi_val = round(float(rsi_val), 1)
                 w = p["rsi"]
-                if rsi_val < 25:   score += round(20 * w)
-                elif rsi_val < 35: score += round(12 * w)
-                elif rsi_val < 45: score += round(5 * w)
-                elif rsi_val > 75: score -= round(20 * w)
-                elif rsi_val > 65: score -= round(12 * w)
-                elif rsi_val > 55: score -= round(5 * w)
+                if rsi_val < 25:   d_rsi = round(20 * w)
+                elif rsi_val < 35: d_rsi = round(12 * w)
+                elif rsi_val < 45: d_rsi = round(5 * w)
+                elif rsi_val > 75: d_rsi = -round(20 * w)
+                elif rsi_val > 65: d_rsi = -round(12 * w)
+                elif rsi_val > 55: d_rsi = -round(5 * w)
+            score += d_rsi
+            f["rsi"] = d_rsi
 
             # Divergence RSI/prix
+            d_div = 0
             if len(hist) >= 20 and len(rsi_series) >= 20:
                 try:
                     c20   = hist["Close"].tail(20).values
@@ -288,50 +293,63 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                     i_min = c20.argmin()
                     i_max = c20.argmax()
                     if i_min < len(c20) - 3 and c20[-1] <= c20[i_min] and r20[-1] > r20[i_min] + 3:
-                        score += round(12 * p["rsi"])
+                        d_div = round(12 * p["rsi"])
                     elif i_max < len(c20) - 3 and c20[-1] >= c20[i_max] and r20[-1] < r20[i_max] - 3:
-                        score -= round(12 * p["rsi"])
+                        d_div = -round(12 * p["rsi"])
                 except Exception: pass
+            score += d_div
+            f["divergence_rsi"] = d_div
 
             # MACD
             macd_ind  = MACD(close)
             macd_line = macd_ind.macd().iloc[-1]
             macd_sig  = macd_ind.macd_signal().iloc[-1]
             macd_hist = macd_ind.macd_diff()
+            d_macd = 0
             if not pd.isna(macd_line) and not pd.isna(macd_sig):
-                if macd_line > macd_sig: score += round(10 * p["macd"])
-                else:                    score -= round(10 * p["macd"])
+                d_macd += round(10 * p["macd"]) if macd_line > macd_sig else -round(10 * p["macd"])
             if len(macd_hist) >= 2:
                 h1, h2 = macd_hist.iloc[-1], macd_hist.iloc[-2]
                 if not pd.isna(h1) and not pd.isna(h2):
-                    if h1 > h2 and h1 > 0:   score += round(5 * p["macd"])
-                    elif h1 < h2 and h1 < 0:  score -= round(5 * p["macd"])
+                    if h1 > h2 and h1 > 0:   d_macd += round(5 * p["macd"])
+                    elif h1 < h2 and h1 < 0:  d_macd -= round(5 * p["macd"])
+            score += d_macd
+            f["macd"] = d_macd
 
-            # Moyennes mobiles (poids fixe — signal structurel, pas de régime)
+            # Moyennes mobiles (poids fixe)
             ma20 = SMAIndicator(close, window=20).sma_indicator()
             ma50 = SMAIndicator(close, window=50).sma_indicator() if len(hist) >= 50 else None
             v20  = float(ma20.iloc[-1]) if not pd.isna(ma20.iloc[-1]) else None
             v50  = float(ma50.iloc[-1]) if ma50 is not None and not pd.isna(ma50.iloc[-1]) else None
+            d_ma = 0
             if v20 and v50:
-                if cours > v20 and cours > v50:   score += 10
-                elif cours < v20 and cours < v50:  score -= 10
+                if cours > v20 and cours > v50:    d_ma = 10
+                elif cours < v20 and cours < v50:  d_ma = -10
+            score += d_ma
+            f["moyennes_mobiles"] = d_ma
 
             # Pente MA200 (poids fixe)
+            d_ma200 = 0
             if len(hist) >= 220:
                 try:
                     ma200 = SMAIndicator(close, window=200).sma_indicator()
                     pente = (float(ma200.iloc[-1]) - float(ma200.iloc[-20])) / float(ma200.iloc[-20]) * 100
-                    if pente > 0.5:    score += 6
-                    elif pente < -0.5: score -= 6
+                    if pente > 0.5:    d_ma200 = 6
+                    elif pente < -0.5: d_ma200 = -6
                 except Exception: pass
+            score += d_ma200
+            f["ma200"] = d_ma200
 
             # Bollinger
             bb      = BollingerBands(close)
             bb_low  = bb.bollinger_lband().iloc[-1]
             bb_high = bb.bollinger_hband().iloc[-1]
+            d_boll = 0
             if not pd.isna(bb_low) and not pd.isna(bb_high):
-                if cours < float(bb_low):    score += round(10 * p["bollinger"])
-                elif cours > float(bb_high): score -= round(10 * p["bollinger"])
+                if cours < float(bb_low):    d_boll = round(10 * p["bollinger"])
+                elif cours > float(bb_high): d_boll = -round(10 * p["bollinger"])
+            score += d_boll
+            f["bollinger"] = d_boll
 
         # Momentum multi-timeframe
         n = len(hist)
@@ -339,58 +357,74 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
         for nb_j in [5, 20, 60]:
             if n > nb_j:
                 perfs.append(float(hist["Close"].iloc[-1]) / float(hist["Close"].iloc[-nb_j]) - 1)
+        d_mom = 0
         if perfs:
-            haussiers  = sum(1 for p2 in perfs if p2 > 0)
-            baissiers  = sum(1 for p2 in perfs if p2 < 0)
-            if haussiers == len(perfs): score += round(10 * p["momentum"])
-            elif haussiers >= 2:        score += round(5 * p["momentum"])
-            elif baissiers == len(perfs): score -= round(10 * p["momentum"])
-            elif baissiers >= 2:          score -= round(5 * p["momentum"])
+            haussiers = sum(1 for p2 in perfs if p2 > 0)
+            baissiers = sum(1 for p2 in perfs if p2 < 0)
+            if haussiers == len(perfs):   d_mom = round(10 * p["momentum"])
+            elif haussiers >= 2:          d_mom = round(5 * p["momentum"])
+            elif baissiers == len(perfs): d_mom = -round(10 * p["momentum"])
+            elif baissiers >= 2:          d_mom = -round(5 * p["momentum"])
+        score += d_mom
+        f["momentum"] = d_mom
 
         # Volume anormal
         ratio_vol = round(volume / vol_moy, 1) if vol_moy > 0 else 1.0
+        d_vol = 0
         if ratio_vol > 2:
-            if variation > 0: score += round(8 * p["volume"])
-            else:             score -= round(8 * p["volume"])
+            d_vol = round(8 * p["volume"]) if variation > 0 else -round(8 * p["volume"])
+        score += d_vol
+        f["volume"] = d_vol
 
-        # Gap + momentum intraday (poids fixe — signal temps réel)
-        if gap_pct > 0.5 and volume > vol_moy * 1.5:  score += 5
-        if gap_pct < -0.5 and volume > vol_moy * 1.5: score -= 5
+        # Gap + momentum intraday (poids fixe)
+        d_gap = 0
+        if gap_pct > 0.5 and volume > vol_moy * 1.5:   d_gap += 5
+        if gap_pct < -0.5 and volume > vol_moy * 1.5:  d_gap -= 5
         momentum_intraday = round((cours - ouverture) / ouverture * 100, 2) if ouverture else 0
-        if momentum_intraday > 0.5:   score += 5
-        elif momentum_intraday < -0.5: score -= 5
+        d_intraday = 5 if momentum_intraday > 0.5 else (-5 if momentum_intraday < -0.5 else 0)
+        score += d_gap + d_intraday
+        f["gap"] = d_gap
+        f["momentum_intraday"] = d_intraday
 
         # Consensus analystes
+        d_analystes = 0
         try:
             info = stock.info
             rec  = info.get("recommendationMean")
             nb_a = info.get("numberOfAnalystOpinions", 0)
             cible = info.get("targetMeanPrice")
             if rec and nb_a and nb_a >= 3:
-                if rec <= 1.5:   score += 8
-                elif rec <= 2.2: score += 5
-                elif rec <= 2.8: score += 2
-                elif rec >= 4.0: score -= 8
-                elif rec >= 3.5: score -= 4
+                if rec <= 1.5:   d_analystes += 8
+                elif rec <= 2.2: d_analystes += 5
+                elif rec <= 2.8: d_analystes += 2
+                elif rec >= 4.0: d_analystes -= 8
+                elif rec >= 3.5: d_analystes -= 4
                 if cible and cours:
                     upside = (cible - cours) / cours * 100
-                    if upside > 25:    score += 5
-                    elif upside > 15:  score += 3
-                    elif upside < -10: score -= 4
+                    if upside > 25:    d_analystes += 5
+                    elif upside > 15:  d_analystes += 3
+                    elif upside < -10: d_analystes -= 4
         except Exception: pass
+        score += d_analystes
+        f["analystes"] = d_analystes
 
         # Rotation sectorielle intraday (ETF)
-        if signaux_etf:
-            score += bonus_etf_sectoriel(nom, signaux_etf)
+        d_etf = bonus_etf_sectoriel(nom, signaux_etf) if signaux_etf else 0
+        score += d_etf
+        f["etf_sectoriel"] = d_etf
 
-        # Sentiment news (rapport agent_news)
+        # Sentiment news
+        d_news = 0
         if rapport_news:
             nd = rapport_news.get("valeurs", {}).get(nom, {})
             sentiment = nd.get("sentiment", 0)
-            score += int(sentiment * 4)
+            d_news = int(sentiment * 4)
+        score += d_news
+        f["news"] = d_news
 
-        # Malus global (VIX + Fear&Greed + BCE/Fed)
+        # Malus global (VIX + BCE/Fed)
         score += malus_global
+        f["malus_macro"] = malus_global
 
         score = max(0, min(100, round(score)))
         if score >= 65:   signal = "ACHETER"
@@ -406,6 +440,7 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             "volume_ratio":      ratio_vol,
             "score":             score,
             "signal":            signal,
+            "facteurs":          f,
         }
 
     except Exception as e:
