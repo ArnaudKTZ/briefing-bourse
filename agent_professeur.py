@@ -36,6 +36,29 @@ DESTINATAIRES = ([d.strip() for d in _dest_env.split(",") if d.strip()]
                  or ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"])
 
 FICHIER_RAPPORT = "professeur_rapport.json"
+COSTS_LOG       = "costs_log.json"
+
+
+def charger_couts_semaine():
+    """Lit costs_log.json et retourne un résumé des 7 derniers jours."""
+    if not os.path.exists(COSTS_LOG):
+        return None
+    try:
+        with open(COSTS_LOG, "r", encoding="utf-8") as f:
+            log = json.load(f)
+    except Exception:
+        return None
+    cutoff = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    semaine = [e for e in log if e.get("date", "") >= cutoff]
+    if not semaine:
+        return None
+    total_usd = sum(e.get("usd", 0) for e in semaine)
+    par_agent = {}
+    for e in semaine:
+        a = e.get("agent", "?")
+        par_agent[a] = par_agent.get(a, 0) + e.get("usd", 0)
+    n_appels = len(semaine)
+    return {"total_usd": round(total_usd, 4), "par_agent": par_agent, "n_appels": n_appels}
 
 
 def charger(fichier):
@@ -208,7 +231,27 @@ def meta_garde_fou(historique):
     return doutes, None
 
 
-def generer_html(now, evals, evo, doutes, meta_msg):
+def generer_bloc_couts(couts):
+    if not couts:
+        return ("<div style='margin-top:16px;padding:12px;background:#f5f5f5;border-radius:6px;"
+                "font-size:13px;color:#999;'><strong>Coûts API :</strong> aucune donnée (costs_log.json absent ou vide).</div>")
+    lignes_agents = "".join(
+        f"<li>{agent} : <strong>${round(v, 4):.4f}</strong></li>"
+        for agent, v in sorted(couts["par_agent"].items(), key=lambda x: -x[1])
+    )
+    cout_mois_est = round(couts["total_usd"] / 7 * 30, 2)
+    return (
+        f"<div style='margin-top:16px;padding:12px;background:#e3f2fd;border-left:4px solid #1565c0;"
+        f"border-radius:6px;font-size:13px;color:#222;'>"
+        f"<strong style='color:#1565c0;'>Coûts API — 7 derniers jours</strong>"
+        f"<ul style='margin:8px 0 0;padding-left:20px;'>{lignes_agents}</ul>"
+        f"<p style='margin:6px 0 0;'><strong>Total semaine : ${couts['total_usd']:.4f}</strong> "
+        f"({couts['n_appels']} appels) — estimation mensuelle : <strong>${cout_mois_est:.2f}</strong></p>"
+        f"</div>"
+    )
+
+
+def generer_html(now, evals, evo, doutes, meta_msg, couts=None):
     couleurs = {"A": "#1b5e20", "B": "#2e7d32", "C": "#e65100",
                 "D": "#b71c1c", "E": "#b71c1c", "—": "#999"}
     lignes = ""
@@ -262,6 +305,7 @@ def generer_html(now, evals, evo, doutes, meta_msg):
     <tbody>{lignes}</tbody>
   </table>
   {bloc_meta}
+  {generer_bloc_couts(couts)}
   <div style='margin-top:16px;padding:12px;background:#ede7f6;border-radius:6px;font-size:13px;color:#3c3489;'>
     <strong>Règle d'or :</strong> aucune amélioration ne passe en production sans réussir la recette
     (backtest hors-échantillon). Le Professeur observe et propose, il ne change rien en aveugle.
@@ -335,7 +379,8 @@ if __name__ == "__main__":
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi compte-rendu hebdo...")
-    html = generer_html(now, evals, evo, doutes, meta_msg)
+    couts = charger_couts_semaine()
+    html = generer_html(now, evals, evo, doutes, meta_msg, couts)
     envoyer(f"Professeur — réunion hebdo des agents — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")
