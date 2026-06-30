@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "heure": "18:31",
+  "heure": "20:20",
   "marche": {
     "sentiment_global": -0.35,
     "nb_articles": 20,
@@ -68,9 +68,13 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 20,
+      "titres_cles": [
+        "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
+        "Communiqué de presse : Le Nexviazyme de Sanofi a atteint tous les critères d’évaluation principaux et secondaires dans une étude de phase III sur la forme infantile de la maladie de Pompe"
+      ]
     },
     "BNP Paribas": {
       "sentiment": 0.3,
@@ -145,8 +149,8 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
         "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
@@ -280,12 +284,12 @@
       ]
     },
     "Worldline": {
-      "sentiment": -0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "WORLDLINE : Communication du Conseil d’administration de Worldline",
-        "À quoi ressemblerait l’euro numérique ?"
+        "WORLDLINE : Worldline et le Crédit Agricole font évoluer leur partenariat - Communiqué"
       ]
     },
     "Veolia": {
