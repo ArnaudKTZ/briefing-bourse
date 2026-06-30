@@ -173,14 +173,19 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div class="header-actions">
         <button class="notif-btn" id="notif-btn" onclick="demanderNotifs()" title="Activer les notifications">🔔</button>
-        <button class="btn-sm" id="btn-briefing" onclick="toggleBriefing()">Briefing</button>
-        <button class="btn-sm" id="btn-scores" onclick="toggleScores()" style="display:none">Scores</button>
+        <button class="btn-sm" id="btn-briefing" onclick="showView('briefing')">Briefing</button>
+        <button class="btn-sm active" id="btn-scores" onclick="showView('scores')">Scores</button>
+        <button class="btn-sm" id="btn-progression" onclick="showView('progression')">Progression</button>
         <button class="btn-sm" onclick="charger()">Actualiser</button>
       </div>
     </div>
   </div>
   <div class="content" id="content">
     <div class="loader"><div class="spinner"></div>Chargement...</div>
+  </div>
+  <!-- ÉCRAN PROGRESSION -->
+  <div id="progression-screen" style="display:none;padding:12px">
+    <div id="progression-content"></div>
   </div>
   <!-- ÉCRAN BRIEFING -->
   <div id="briefing-screen" style="display:none;padding:12px">
@@ -198,6 +203,10 @@ const PIN_SET_KEY = 'ab_pin_set';
 // Cache global des données chargées
 let _cachePf = null;
 let _cacheScores = {};
+let _cacheDmSt   = null;
+let _cacheDmPf   = null;
+let _cachePerf   = null;
+let _cacheProf   = null;
 
 // ── PIN ──────────────────────────────────────────────────────────────────────
 let saisie = '';
@@ -328,12 +337,15 @@ async function charger() {
   document.getElementById('content').innerHTML = '<div class="loader"><div class="spinner"></div>Chargement...</div>';
 
   try {
-    const [rPerf, rId, rNews, rEspion, rPf] = await Promise.allSettled([
+    const [rPerf, rId, rNews, rEspion, rPf, rDmSt, rDmPf, rProf] = await Promise.allSettled([
       fetchJSON('performance.json'),
       fetchJSON('intraday_scores.json'),
       fetchJSON('rapport_news.json'),
       fetchJSON('rapport_espion.json'),
       fetchJSON('portefeuille_virtuel.json'),
+      fetchJSON('dual_momentum_statut.json'),
+      fetchJSON('dual_momentum_portefeuille.json'),
+      fetchJSON('professeur_rapport.json'),
     ]);
 
     const perf   = rPerf.status   === 'fulfilled' ? rPerf.value   : null;
@@ -341,7 +353,14 @@ async function charger() {
     const news   = rNews.status   === 'fulfilled' ? rNews.value   : null;
     const espion = rEspion.status === 'fulfilled' ? rEspion.value : null;
     const pf     = rPf.status     === 'fulfilled' ? rPf.value     : null;
-    if (pf) _cachePf = pf;
+    const dmSt   = rDmSt.status   === 'fulfilled' ? rDmSt.value   : null;
+    const dmPf   = rDmPf.status   === 'fulfilled' ? rDmPf.value   : null;
+    const prof = rProf.status === 'fulfilled' ? rProf.value : null;
+    if (pf)   _cachePf   = pf;
+    if (dmSt) _cacheDmSt = dmSt;
+    if (dmPf) _cacheDmPf = dmPf;
+    if (perf) _cachePerf = perf;
+    if (prof) _cacheProf = prof;
 
     // Extraire la dernière session intraday
     let scores = {};
@@ -425,6 +444,56 @@ async function charger() {
         });
         html += `</tbody></table></div>`;
       }
+      html += `</div>`;
+    }
+
+    // ── DUAL MOMENTUM (CŒUR) ──
+    if (dmSt && dmPf) {
+      const alloc      = dmSt.allocation || '—';
+      const moms       = dmSt.momentums  || {};
+      const maj        = dmSt.date       || '';
+      const uw         = dmPf.units_world || 0;
+      const uu         = dmPf.units_usa   || 0;
+      const pxAchat    = dmPf.dernier_cours || {};
+      const coursAct   = dmPf.cours_actuel  || {};
+      const valeurTot  = dmPf.valeur_actuelle ?? null;
+      const perfDm     = dmPf.perf_actuelle  ?? null;
+      const dateInit   = dmPf.date_init || '';
+
+      const cw8Act = coursAct.World || pxAchat.World || null;
+      const eseAct = coursAct.USA   || pxAchat.USA   || null;
+      const cw8Px  = pxAchat.World || null;
+      const esePx  = pxAchat.USA   || null;
+
+      const fmtDelta = (act, px) => {
+        if (!act || !px) return '';
+        const d = act - px;
+        const c = d >= 0 ? 'green' : 'red';
+        return ` <span class="${c}" style="font-size:11px;">(${d >= 0 ? '+' : ''}${d.toFixed(2)}€)</span>`;
+      };
+
+      const coulPerf = perfDm !== null ? (perfDm >= 0 ? 'green' : 'red') : '';
+      const momLignes = Object.entries(moms).map(([k, v]) =>
+        `<span style="margin-right:12px;">${k} <strong class="${v >= 0 ? 'green' : 'red'}">${v >= 0 ? '+' : ''}${v.toFixed(1)}%</strong></span>`
+      ).join('');
+
+      html += `<div class="section" style="border-left:3px solid #1d9e75;padding-left:8px;">`;
+      html += `<div class="stitle" style="color:#0f6e56;">Cœur du patrimoine — Dual Momentum</div>`;
+      html += `<div style="font-size:13px;color:#444;margin-bottom:8px;">${alloc}</div>`;
+      html += `<div class="card-wide"><table class="pf-table"><thead><tr>`;
+      html += `<th>ETF</th><th style="text-align:right">Parts</th><th style="text-align:right">Prix achat</th><th style="text-align:right">Cours actuel</th><th style="text-align:right">Valeur</th>`;
+      html += `</tr></thead><tbody>`;
+      if (uw > 0) {
+        const vw = cw8Act ? Math.round(uw * cw8Act) : null;
+        html += `<tr><td>World (CW8.PA)</td><td style="text-align:right">${uw.toFixed(4)}</td><td style="text-align:right;color:#888">${cw8Px ? cw8Px.toFixed(2) + '€' : '—'}</td><td style="text-align:right">${cw8Act ? cw8Act.toFixed(2) + '€' : '—'}${fmtDelta(cw8Act, cw8Px)}</td><td style="text-align:right">${vw !== null ? vw.toLocaleString('fr') + '€' : '—'}</td></tr>`;
+      }
+      if (uu > 0) {
+        const vu = eseAct ? Math.round(uu * eseAct) : null;
+        html += `<tr><td>USA (ESE.PA)</td><td style="text-align:right">${uu.toFixed(4)}</td><td style="text-align:right;color:#888">${esePx ? esePx.toFixed(2) + '€' : '—'}</td><td style="text-align:right">${eseAct ? eseAct.toFixed(2) + '€' : '—'}${fmtDelta(eseAct, esePx)}</td><td style="text-align:right">${vu !== null ? vu.toLocaleString('fr') + '€' : '—'}</td></tr>`;
+      }
+      html += `<tr style="font-weight:600;border-top:2px solid #1d9e75;"><td colspan="4">Total</td><td style="text-align:right" class="${coulPerf}">${valeurTot !== null ? Math.round(valeurTot).toLocaleString('fr') + '€' : '—'}${perfDm !== null ? ` (${perfDm >= 0 ? '+' : ''}${perfDm.toFixed(2)}%)` : ''}</td></tr>`;
+      html += `</tbody></table></div>`;
+      html += `<div style="font-size:12px;color:#888;margin-top:6px;">${momLignes} · Revue mensuelle le 1er · MAJ ${maj}</div>`;
       html += `</div>`;
     }
 
@@ -539,26 +608,27 @@ async function charger() {
 }
 
 // ── BRIEFING ─────────────────────────────────────────────────────────────────
-let modeBriefing = false;
+let modeActuel = 'scores';
 
-function toggleBriefing() {
-  modeBriefing = true;
-  document.getElementById('content').style.display = 'none';
-  document.getElementById('briefing-screen').style.display = 'block';
-  document.getElementById('btn-briefing').style.display = 'none';
-  document.getElementById('btn-scores').style.display = 'inline-block';
-  document.getElementById('page-titre').textContent = 'Briefing du matin';
-  afficherBriefing();
+function showView(vue) {
+  modeActuel = vue;
+  const views = {
+    scores:      {el: 'content',            titre: 'Agent Bourse V4'},
+    briefing:    {el: 'briefing-screen',    titre: 'Briefing du matin'},
+    progression: {el: 'progression-screen', titre: 'Progression du modèle'},
+  };
+  Object.keys(views).forEach(k => {
+    document.getElementById(views[k].el).style.display = k === vue ? 'block' : 'none';
+    const btn = document.getElementById('btn-' + k);
+    if (btn) btn.classList.toggle('active', k === vue);
+  });
+  document.getElementById('page-titre').textContent = views[vue].titre;
+  if (vue === 'briefing') afficherBriefing();
+  if (vue === 'progression') afficherProgression();
 }
 
-function toggleScores() {
-  modeBriefing = false;
-  document.getElementById('content').style.display = 'block';
-  document.getElementById('briefing-screen').style.display = 'none';
-  document.getElementById('btn-briefing').style.display = 'inline-block';
-  document.getElementById('btn-scores').style.display = 'none';
-  document.getElementById('page-titre').textContent = 'Agent Bourse V4';
-}
+function toggleBriefing() { showView('briefing'); }
+function toggleScores()   { showView('scores'); }
 
 function mdToHtml(md) {
   const lines = md.split('\n');
@@ -668,6 +738,112 @@ async function afficherBriefing() {
     loader.style.display = 'none';
     content.innerHTML = `<div class="err">Briefing non disponible.<br><small>Il sera accessible après le prochain run de 7h.</small></div>`;
   }
+}
+
+// ── PROGRESSION ──────────────────────────────────────────────────────────────
+
+function afficherProgression() {
+  const el = document.getElementById('progression-content');
+
+  const perf   = _cachePerf;
+  const pf     = _cachePf;
+  const dmPf   = _cacheDmPf;
+  const dmSt   = _cacheDmSt;
+  const prof   = _cacheProf;
+
+  const stats      = perf?.stats || {};
+  const precision  = stats.precision ?? null;
+  const nbSignaux  = stats.total ?? 0;
+  const dateDebut  = '19/06/2026';
+
+  const histoPf  = pf?.historique_valeur || {};
+  const datesPf  = Object.keys(histoPf).sort();
+  const valPf    = datesPf.length ? histoPf[datesPf[datesPf.length-1]] : 10000;
+  const perfPf   = ((valPf - 10000) / 10000 * 100);
+
+  const perfDm   = dmPf?.perf_actuelle ?? null;
+
+  const confiance = nbSignaux < 20 ? 'Faible (< 20 signaux)' : nbSignaux < 60 ? 'Moyenne' : 'Forte';
+  const confianceCoul = nbSignaux < 20 ? 'color:#e65100' : nbSignaux < 60 ? 'color:#e65100' : 'color:#2e7d32';
+
+  const precBar  = precision !== null ? Math.min(precision, 100) : 0;
+  const precCoul = precision === null ? '#888' : precision >= 65 ? '#2e7d32' : precision >= 50 ? '#e65100' : '#c62828';
+
+  const agents = prof?.evaluations || [
+    {agent:'Dual Momentum (cœur)', note:'B', verdict:'Validé — airbag fonctionnel'},
+    {agent:'Briefing V4 (signaux)', note:'E', verdict:'42% — sous le hasard'},
+    {agent:'Agent News', note:'C', verdict:'Impact non mesuré'},
+    {agent:'Agent Espion', note:'C', verdict:'Impact non mesuré'},
+  ];
+
+  const noteCoul = {A:'#1b5e20',B:'#2e7d32',C:'#e65100',D:'#b71c1c',E:'#b71c1c','—':'#999'};
+
+  const cp = v => v >= 0 ? 'color:#2e7d32' : 'color:#c62828';
+  const sp = v => (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+
+  el.innerHTML = `
+<div style="font-size:12px;color:#888;margin-bottom:12px;">Depuis le ${dateDebut} · Données du dernier briefing</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+  <div class="card-wide" style="padding:10px 12px;">
+    <div style="font-size:11px;color:#888;margin-bottom:4px;">Précision signaux</div>
+    <div style="font-size:22px;font-weight:600;${cp(precision !== null ? precision - 50 : 0)}">${precision !== null ? precision + '%' : '—'}</div>
+    <div style="font-size:11px;color:#888;">Cible ≥ 65%</div>
+  </div>
+  <div class="card-wide" style="padding:10px 12px;">
+    <div style="font-size:11px;color:#888;margin-bottom:4px;">Signaux jugés</div>
+    <div style="font-size:22px;font-weight:600;color:#444;">${nbSignaux}</div>
+    <div style="font-size:11px;${confianceCoul};">Confiance ${confiance}</div>
+  </div>
+  <div class="card-wide" style="padding:10px 12px;">
+    <div style="font-size:11px;color:#888;margin-bottom:4px;">PF V4 vs CAC</div>
+    <div style="font-size:22px;font-weight:600;${cp(perfPf)}">${sp(perfPf)}</div>
+    <div style="font-size:11px;color:#888;">depuis le 22/06</div>
+  </div>
+  <div class="card-wide" style="padding:10px 12px;">
+    <div style="font-size:11px;color:#888;margin-bottom:4px;">PF DM vs World</div>
+    <div style="font-size:22px;font-weight:600;${cp(perfDm ?? 0)}">${perfDm !== null ? sp(perfDm) : '—'}</div>
+    <div style="font-size:11px;color:#888;">depuis le 26/06</div>
+  </div>
+</div>
+
+<div class="card-wide" style="padding:10px 12px;margin-bottom:12px;">
+  <div style="font-size:12px;font-weight:600;margin-bottom:8px;">Précision des signaux</div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;">
+    <span><strong>${precision !== null ? precision + '%' : '—'}</strong> actuel</span>
+    <span style="color:#888;">cible 65%</span>
+  </div>
+  <div style="background:#eee;border-radius:4px;height:10px;overflow:hidden;position:relative;">
+    <div style="height:100%;width:${precBar}%;background:${precCoul};border-radius:4px;transition:width .4s;"></div>
+    <div style="position:absolute;left:65%;top:0;height:100%;width:1.5px;background:#1b5e20;opacity:.5;"></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-top:4px;">50% = niveau du hasard · En dessous = perte d'argent</div>
+</div>
+
+<div class="card-wide" style="padding:10px 12px;margin-bottom:12px;">
+  <div style="font-size:12px;font-weight:600;margin-bottom:8px;">État des agents</div>
+  ${agents.map(a => `
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #eee;">
+    <span style="font-size:13px;">${a.agent}</span>
+    <span>
+      <span style="background:${noteCoul[a.note]||'#999'};color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;">${a.note}</span>
+      <span style="font-size:11px;color:#888;margin-left:6px;">${a.verdict}</span>
+    </span>
+  </div>`).join('')}
+</div>
+
+<div class="card-wide" style="padding:10px 12px;">
+  <div style="font-size:12px;font-weight:600;margin-bottom:8px;">Prochaines étapes</div>
+  ${[
+    ['22 juillet','Bilan + auto-apprentissage agents'],
+    ['Fin juillet','120+ signaux — confiance forte possible'],
+    ['6-8 semaines','Professeur en confiance forte'],
+    ['Si ≥ 65%','Activation bon de commande'],
+  ].map(([date, label]) => `
+  <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:13px;">
+    <span style="color:#888;">${date}</span><span>${label}</span>
+  </div>`).join('')}
+</div>`;
 }
 
 // ── INIT ─────────────────────────────────────────────────────────────────────

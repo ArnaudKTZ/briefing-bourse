@@ -52,6 +52,36 @@ except ImportError:
 FICHIER_INTRADAY    = "intraday_scores.json"
 FICHIER_PERFORMANCE = "performance.json"
 FICHIER_RAPPORT_NEWS = "rapport_news.json"
+COSTS_LOG = "costs_log.json"
+
+_TARIFS_INTRADAY = {
+    "claude-haiku-4-5-20251001": {"input": 1.0, "output": 5.0},
+    "claude-opus-4-8":           {"input": 5.0, "output": 25.0},
+}
+
+def _loguer_cout_intraday(agent, model, input_tokens, output_tokens):
+    tarif = _TARIFS_INTRADAY.get(model, {"input": 1.0, "output": 5.0})
+    cout_usd = (input_tokens * tarif["input"] + output_tokens * tarif["output"]) / 1_000_000
+    entree = {
+        "date":   datetime.date.today().isoformat(),
+        "heure":  datetime.datetime.now(TZ_PARIS).strftime("%H:%M"),
+        "agent":  agent,
+        "model":  model,
+        "input":  input_tokens,
+        "output": output_tokens,
+        "usd":    round(cout_usd, 6),
+    }
+    log = []
+    if os.path.exists(COSTS_LOG):
+        try:
+            with open(COSTS_LOG, "r", encoding="utf-8") as f:
+                log = json.load(f)
+        except Exception:
+            log = []
+    log.append(entree)
+    log = log[-500:]
+    with open(COSTS_LOG, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
 
 DATES_BANQUES_CENTRALES = [
     "2026-01-30","2026-03-06","2026-04-17","2026-06-05",
@@ -224,6 +254,8 @@ Retourne UNIQUEMENT ce JSON, sans texte autour :
             messages=[{"role": "user", "content": prompt}],
         )
         raw = response.content[0].text.strip()
+        _loguer_cout_intraday("scoring_intraday", "claude-haiku-4-5-20251001",
+                              response.usage.input_tokens, response.usage.output_tokens)
         data = json.loads(raw)
         regime = data.get("regime", "inconnu")
         poids = {

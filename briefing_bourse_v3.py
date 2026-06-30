@@ -1465,6 +1465,7 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
         src_s    = badge_source(t.get("source_sortie", "Briefing"))
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;'>
           <td style='padding:7px 10px;font-weight:500;'>{t['nom']}</td>
+          <td style='padding:7px 10px;text-align:right;color:#999;'>—</td>
           <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(t['date_entree'])} {heure_e}</div><div style='margin-top:3px;'>{src_e}</div></td>
           <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(t['date_sortie'])} {heure_s}</div><div style='margin-top:3px;'>{src_s}</div></td>
           <td style='padding:7px 10px;text-align:right;'>{t['entree']:.2f} €</td>
@@ -1481,8 +1482,10 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
         frais_achat = pos.get("frais_achat", 0)
         heure_e = pos.get("heure_entree", "07:00")
         src_e   = badge_source(pos.get("source_entree", "Briefing"))
+        nb_act = pos.get("nb_actions", "—")
         lignes_trades += f"""<tr style='border-bottom:1px solid #eee;background:#f9f9f9;'>
           <td style='padding:7px 10px;font-weight:500;'>{nom}</td>
+          <td style='padding:7px 10px;text-align:right;font-weight:600;'>{nb_act}</td>
           <td style='padding:7px 10px;'><div style='color:#333;'>{fmt_date(pos['date_entree'])} {heure_e}</div><div style='margin-top:3px;'>{src_e}</div></td>
           <td style='padding:7px 10px;color:#999;font-style:italic;'>en cours</td>
           <td style='padding:7px 10px;text-align:right;'>{pos['prix_entree']:.2f} €</td>
@@ -1492,7 +1495,7 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
         </tr>"""
 
     if not lignes_trades:
-        lignes_trades = "<tr><td colspan='7' style='padding:12px;text-align:center;color:#999;'>Aucun trade pour l'instant</td></tr>"
+        lignes_trades = "<tr><td colspan='8' style='padding:12px;text-align:center;color:#999;'>Aucun trade pour l'instant</td></tr>"
 
     return f"""
 <div style='margin:20px 0;'>
@@ -1520,6 +1523,7 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
     <thead>
       <tr style='background:#1a1a2e;color:white;'>
         <th style='padding:8px 10px;text-align:left;font-weight:500;'>Action</th>
+        <th style='padding:8px 10px;text-align:right;font-weight:500;'>Qté</th>
         <th style='padding:8px 10px;text-align:left;font-weight:500;'>Date achat</th>
         <th style='padding:8px 10px;text-align:left;font-weight:500;'>Date vente</th>
         <th style='padding:8px 10px;text-align:right;font-weight:500;'>Prix achat</th>
@@ -1533,7 +1537,7 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
     </tbody>
     <tfoot>
       <tr style='background:#f0f0f0;border-top:2px solid #ddd;'>
-        <td colspan='6' style='padding:8px 10px;font-weight:600;'>Gain/Perte total (frais inclus)</td>
+        <td colspan='7' style='padding:8px 10px;font-weight:600;'>Gain/Perte total (frais inclus)</td>
         <td style='padding:8px 10px;text-align:right;font-weight:700;font-size:14px;color:{couleur_global};'>{signe_gain}{gain_total:.0f} € ({signe_global}{perf_pf:.2f} %)</td>
       </tr>
     </tfoot>
@@ -1811,12 +1815,12 @@ def valoriser_portefeuille_dm():
             pf = json.load(f)
         uw, uu, cash = pf.get("units_world", 0), pf.get("units_usa", 0), pf.get("cash", 0)
         date_init = pf.get("date_init", "")
-        cw8 = float(yf.Ticker("CW8.PA").history(period="5d")["Close"].iloc[-1])
-        ese = float(yf.Ticker("ESE.PA").history(period="5d")["Close"].iloc[-1])
+        cw8 = float(yf.Ticker("CW8.PA").history(period="5d")["Close"].dropna().iloc[-1])
+        ese = float(yf.Ticker("ESE.PA").history(period="5d")["Close"].dropna().iloc[-1])
         valeur = uw * cw8 + uu * ese + cash
         perf = (valeur - 10000) / 10000 * 100
         # Référence : World buy & hold depuis le départ
-        hist = yf.Ticker("CW8.PA").history(start=date_init)["Close"]
+        hist = yf.Ticker("CW8.PA").history(start=date_init)["Close"].dropna()
         perf_world = (cw8 / float(hist.iloc[0]) - 1) * 100 if len(hist) else None
         coul = "#2e7d32" if perf >= 0 else "#c62828"
         ref = ""
@@ -1825,10 +1829,62 @@ def valoriser_portefeuille_dm():
             cref = "#2e7d32" if ecart >= 0 else "#c62828"
             ref = (f" · vs World buy &amp; hold {'+' if perf_world >= 0 else ''}{perf_world:.2f}% "
                    f"(<span style='color:{cref};'>{'+' if ecart >= 0 else ''}{ecart:.2f} pts</span>)")
-        return (f"<p style='margin:6px 0 0;font-size:14px;color:#222;'>Portefeuille virtuel V5 : "
-                f"<strong>{valeur:.0f}€</strong> "
-                f"(<span style='color:{coul};font-weight:600;'>{'+' if perf >= 0 else ''}{perf:.2f}%</span> "
-                f"depuis le {date_init[8:10]}/{date_init[5:7]}){ref}</p>")
+        val_world = uw * cw8
+        val_usa   = uu * ese
+        px_world  = pf.get("dernier_cours", {}).get("World")
+        px_usa    = pf.get("dernier_cours", {}).get("USA")
+
+        def delta_cours(cours_actuel, prix_achat):
+            if prix_achat is None or prix_achat == 0:
+                return ""
+            d = cours_actuel - prix_achat
+            c = "#2e7d32" if d >= 0 else "#c62828"
+            return f"<span style='color:{c};font-size:11px;'>({'+' if d >= 0 else ''}{d:.2f}€)</span>"
+
+        tableau_pf = (
+            f"<table style='margin-top:8px;width:100%;border-collapse:collapse;font-size:13px;'>"
+            f"<thead><tr style='background:#f1f8f4;'>"
+            f"<th style='padding:5px 8px;text-align:left;color:#555;font-weight:600;'>ETF</th>"
+            f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Parts</th>"
+            f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Prix achat</th>"
+            f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Cours actuel</th>"
+            f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Valeur</th>"
+            f"</tr></thead><tbody>"
+            f"<tr style='border-top:1px solid #ddd;'>"
+            f"<td style='padding:5px 8px;'>World (CW8.PA)</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{uw:.4f}</td>"
+            f"<td style='padding:5px 8px;text-align:right;color:#888;'>{f'{px_world:.2f}€' if px_world else '—'}</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{cw8:.2f}€ {delta_cours(cw8, px_world)}</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{val_world:.0f}€</td>"
+            f"</tr>"
+            f"<tr style='border-top:1px solid #ddd;'>"
+            f"<td style='padding:5px 8px;'>USA (ESE.PA)</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{uu:.4f}</td>"
+            f"<td style='padding:5px 8px;text-align:right;color:#888;'>{f'{px_usa:.2f}€' if px_usa else '—'}</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{ese:.2f}€ {delta_cours(ese, px_usa)}</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>{val_usa:.0f}€</td>"
+            f"</tr>"
+            f"<tr style='border-top:2px solid #1d9e75;background:#f1f8f4;font-weight:600;'>"
+            f"<td style='padding:5px 8px;' colspan='4'>Total</td>"
+            f"<td style='padding:5px 8px;text-align:right;'>"
+            f"<span style='color:{coul};'>{'+' if perf >= 0 else ''}{perf:.2f}%</span>"
+            f" — <strong>{valeur:.0f}€</strong>"
+            f"</td></tr>"
+            f"</tbody></table>"
+        )
+        # Mise à jour du JSON pour la PWA
+        pf["cours_actuel"] = {"World": round(cw8, 4), "USA": round(ese, 4)}
+        pf["valeur_actuelle"] = round(valeur, 2)
+        pf["perf_actuelle"] = round(perf, 4)
+        pf["historique_valeur"][datetime.date.today().isoformat()] = round(valeur, 2)
+        with open(fichier, "w", encoding="utf-8") as f:
+            json.dump(pf, f, ensure_ascii=False, indent=2)
+
+        resume_pf = (
+            f"<p style='margin:6px 0 0;font-size:13px;color:#555;'>Portefeuille virtuel V5 "
+            f"depuis le {date_init[8:10]}/{date_init[5:7]}{ref}</p>"
+        )
+        return tableau_pf + resume_pf
     except Exception as e:
         print(f"  WARN valorisation portefeuille V5 : {e}")
         return ""
@@ -1848,14 +1904,42 @@ def generer_html_dual_momentum():
     if not alloc:
         return ""
     moms = s.get("momentums", {})
-    mom_txt = " | ".join(f"{k} {v:+.1f}%" for k, v in moms.items())
     maj = s.get("date", "")
     ligne_pf = valoriser_portefeuille_dm()
+
+    # Tableau explicatif : une ligne par poche active
+    NOMS_ETF = {"World": "Amundi MSCI World Screened (CW8)", "USA": "Amundi MSCI USA Screened (ESE)"}
+    ALLOC = {"World": 50, "USA": 50}  # allocation fixe 50/50 tant que les deux sont positifs
+    lignes_tableau = ""
+    for poche, mom in moms.items():
+        nom = NOMS_ETF.get(poche, poche)
+        alloc_pct = ALLOC.get(poche, "—")
+        coul_mom = "#2e7d32" if mom >= 0 else "#c62828"
+        lignes_tableau += (
+            f"<tr style='border-top:1px solid #c8e6c9;'>"
+            f"<td style='padding:5px 8px;'>{nom}</td>"
+            f"<td style='padding:5px 8px;text-align:center;font-weight:600;'>{alloc_pct}%</td>"
+            f"<td style='padding:5px 8px;text-align:right;color:{coul_mom};font-weight:600;'>{mom:+.1f}%</td>"
+            f"<td style='padding:5px 8px;font-size:12px;color:#666;'>Conserver</td>"
+            f"</tr>"
+        )
+
+    tableau = (
+        f"<table style='margin-top:10px;width:100%;border-collapse:collapse;font-size:13px;'>"
+        f"<thead><tr style='background:#c8e6c9;'>"
+        f"<th style='padding:5px 8px;text-align:left;color:#0f6e56;'>ETF</th>"
+        f"<th style='padding:5px 8px;text-align:center;color:#0f6e56;'>Alloc.</th>"
+        f"<th style='padding:5px 8px;text-align:right;color:#0f6e56;'>Momentum 12m</th>"
+        f"<th style='padding:5px 8px;text-align:left;color:#0f6e56;'>Action</th>"
+        f"</tr></thead><tbody>{lignes_tableau}</tbody></table>"
+    )
+
     return f"""
 <div style='margin:0 0 16px;padding:14px 16px;background:#e8f5ee;border-left:4px solid #1d9e75;border-radius:6px;'>
   <p style='margin:0;font-size:13px;font-weight:bold;color:#0f6e56;'>Cœur du patrimoine (Dual Momentum) — rien à faire au quotidien</p>
-  <p style='margin:6px 0 0;font-size:14px;color:#222;'>Allocation actuelle : <strong>{alloc}</strong></p>{ligne_pf}
-  <p style='margin:4px 0 0;font-size:12px;color:#666;'>Momentum 12 mois : {mom_txt} · Revue mensuelle le 1er · MAJ {maj}</p>
+  {tableau}
+  {ligne_pf}
+  <p style='margin:8px 0 0;font-size:12px;color:#888;'>Revue mensuelle le 1er · MAJ {maj}</p>
 </div>"""
 
 
@@ -1897,6 +1981,42 @@ color:#222;max-width:1000px;margin:auto;padding:20px;'>
         serveur.sendmail(ZOHO_EMAIL, DESTINATAIRES, msg.as_string())
 
     print(f"Email envoyé à : {', '.join(DESTINATAIRES)}")
+
+
+# ─── COST LOGGING ─────────────────────────────────────────────────────────────
+
+COSTS_LOG = "costs_log.json"
+TARIFS = {
+    "claude-opus-4-8":        {"input": 5.0,  "output": 25.0},
+    "claude-haiku-4-5-20251001": {"input": 1.0, "output": 5.0},
+    "claude-haiku-4-5":       {"input": 1.0,  "output": 5.0},
+}
+
+def _loguer_cout(agent, model, input_tokens, output_tokens):
+    """Ajoute une entrée dans costs_log.json (tokens + coût en USD)."""
+    tarif = TARIFS.get(model, {"input": 5.0, "output": 25.0})
+    cout_usd = (input_tokens * tarif["input"] + output_tokens * tarif["output"]) / 1_000_000
+    entree = {
+        "date":   datetime.date.today().isoformat(),
+        "heure":  datetime.datetime.now().strftime("%H:%M"),
+        "agent":  agent,
+        "model":  model,
+        "input":  input_tokens,
+        "output": output_tokens,
+        "usd":    round(cout_usd, 6),
+    }
+    log = []
+    if os.path.exists(COSTS_LOG):
+        try:
+            with open(COSTS_LOG, "r", encoding="utf-8") as f:
+                log = json.load(f)
+        except Exception:
+            log = []
+    log.append(entree)
+    log = log[-500:]  # garde les 500 dernières entrées
+    with open(COSTS_LOG, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+    print(f"  Coût API [{agent}] : {input_tokens} input / {output_tokens} output = ${cout_usd:.4f}")
 
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
@@ -2018,6 +2138,8 @@ if __name__ == "__main__":
         messages=[{"role": "user", "content": prompt}]
     )
     briefing = message.content[0].text
+    _loguer_cout("briefing", "claude-opus-4-8",
+                 message.usage.input_tokens, message.usage.output_tokens)
 
     print("Sauvegarde recommandations...")
     sauvegarder_recommandations(perf, donnees)
