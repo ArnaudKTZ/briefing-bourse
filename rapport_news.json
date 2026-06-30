@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "heure": "14:28",
+  "heure": "18:31",
   "marche": {
     "sentiment_global": -0.35,
     "nb_articles": 20,
@@ -68,13 +68,9 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.0,
-      "nb_news": 20,
-      "titres_cles": [
-        "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : Le Nexviazyme de Sanofi a atteint tous les critères d’évaluation principaux et secondaires dans une étude de phase III sur la forme infantile de la maladie de Pompe"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "BNP Paribas": {
       "sentiment": 0.3,
@@ -194,7 +190,7 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "1er trimestre 2026 : forte dynamique de croissance avec un chiffre d’affaires de 12,5 milliards d’euros, en hausse de 7,3 %",
