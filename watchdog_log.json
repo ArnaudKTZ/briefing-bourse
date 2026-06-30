@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-29",
-  "heure": "18:47",
+  "date": "2026-06-30",
+  "heure": "05:30",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -11,8 +11,8 @@
       "msg": "OK — briefing du jour envoyé à 05:02"
     },
     "Scoring intraday": {
-      "ok": null,
-      "msg": "Lundi — pas de données intraday attendues hier"
+      "ok": true,
+      "msg": "OK hier — 4 snapshot(s) enregistré(s)"
     }
   },
   "problemes": []
