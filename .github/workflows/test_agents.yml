@@ -1,0 +1,25 @@
+name: Test agents — santé du système
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances de test
+        run: pip install anthropic yfinance ta pandas numpy
+
+      - name: Lancer les tests
+        run: python test_agents.py --strict
