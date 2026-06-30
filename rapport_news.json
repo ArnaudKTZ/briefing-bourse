@@ -1,15 +1,15 @@
 {
   "date": "2026-06-30",
-  "heure": "04:45",
+  "heure": "14:28",
   "marche": {
-    "sentiment_global": -0.25,
+    "sentiment_global": -0.35,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
+      "La Bourse de Paris montre un appétit mesuré pour le risque",
       "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles",
       "La Bourse de Paris termine en hausse",
-      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»",
-      "FTSE 100 : Les actions progressent portées par les espoirs de cessez-le-feu, le pétrole recule"
+      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»"
     ]
   },
   "valeurs": {
@@ -73,7 +73,7 @@
       "titres_cles": [
         "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
         "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : La Fondation Sanofi ouvre un nouveau chapitre centré sur les générations futures"
+        "Communiqué de presse : Le Nexviazyme de Sanofi a atteint tous les critères d’évaluation principaux et secondaires dans une étude de phase III sur la forme infantile de la maladie de Pompe"
       ]
     },
     "BNP Paribas": {
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.05,
+      "sentiment": -0.05,
       "nb_news": 21,
       "titres_cles": [
+        "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
-        "HSBC abaisse Kering à Conserver, estimant que le nouveau plan de redressement prendra du temps",
-        "Barclays relève LVMH et Kering alors que le luxe se stabilise"
+        "HSBC abaisse Kering à Conserver, estimant que le nouveau plan de redressement prendra du temps"
       ]
     },
     "Société Générale": {
