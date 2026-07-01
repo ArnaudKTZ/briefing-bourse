@@ -1,21 +1,21 @@
 {
-  "date": "2026-06-30",
-  "heure": "20:20",
+  "date": "2026-07-01",
+  "heure": "04:45",
   "marche": {
-    "sentiment_global": -0.35,
+    "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
+      "La Bourse de Paris termine sur une note optimiste",
       "La Bourse de Paris montre un appétit mesuré pour le risque",
       "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles",
-      "La Bourse de Paris termine en hausse",
-      "CAC 40 : la Bourse grimpe et va «un temps oublier que les dépenses d'IA massives sont financées par la dette»"
+      "La Bourse de Paris termine en hausse"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.14,
-      "nb_news": 21,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS",
         "Barclays relève LVMH et Kering alors que le luxe se stabilise",
@@ -26,9 +26,9 @@
       "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été",
         "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes",
-        "VivaTech : Avec MethaneLive, TotalEnergies met la Data au service de la lutte contre les émissions de méthane",
-        "Pourquoi TotalEnergies échappe quasiment à l'impôt sur les bénéfices en France"
+        "VivaTech : Avec MethaneLive, TotalEnergies met la Data au service de la lutte contre les émissions de méthane"
       ]
     },
     "Hermès": {
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.1,
-      "nb_news": 21,
+      "nb_news": 20,
       "titres_cles": [
         "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
         "Après son avion à propulsion hybride-électrique, le Français Aura Aero dévoile son drone MALE multimission Enbata",
@@ -50,11 +50,11 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
-        "Les entreprises européennes déploient tous leurs efforts pour l'innovation et la conformité en matière d'IA, selon ISG",
+        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres",
         "La Bourse de Paris en hausse, portée par STMicroelectronics et l'IA"
       ]
     },
@@ -86,21 +86,21 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.78,
-      "nb_news": 9,
+      "sentiment": 0.83,
+      "nb_news": 6,
       "titres_cles": [
-        "Les entreprises européennes déploient tous leurs efforts pour l'innovation et la conformité en matière d'IA, selon ISG",
         "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
-        "Air Liquide confirme ses objectifs, boosté par des moteurs de croissance diversifiés"
+        "Air Liquide confirme ses objectifs, boosté par des moteurs de croissance diversifiés",
+        "Air Liquide conclut un accord de 2,85 milliards € pour DIG Airgas afin d’étendre sa présence en Asie"
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
-        "Kingswood Capital Management conclut un accord définitif en vue d’acquérir Safran Passenger Innovations",
         "Accord Iran-USA salué par la Bourse de Paris, Safran à la fête, TotalEnergies à la traîne",
-        "Présentation de RAVE Aerospace : un nouveau nom, fondé sur un héritage d’innovation en vol"
+        "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
+        "CAC 40 : nouveau record historique pour l’indice phare de la Bourse de Paris"
       ]
     },
     "Danone": {
@@ -149,8 +149,8 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.33,
+      "nb_news": 9,
       "titres_cles": [
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
         "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
@@ -158,17 +158,13 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.2,
-      "nb_news": 20,
-      "titres_cles": [
-        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
-        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Pernod Ricard": {
-      "sentiment": -0.14,
-      "nb_news": 21,
+      "sentiment": -0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\"",
@@ -203,12 +199,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.43,
-      "nb_news": 21,
+      "sentiment": 1.29,
+      "nb_news": 7,
       "titres_cles": [
-        "Legrand annonce la signature d’un contrat de rachat d’actions",
-        "LEGRAND : DESCRIPTIF DU PROGRAMME DE RACHAT D’ACTIONS PROPRES APPROUVE PAR L’ASSEMBLEE GENERALE MIXTE DES ACTIONNAIRES DU 27 MAI 2026",
-        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
+        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres"
       ]
     },
     "Publicis": {
@@ -248,30 +244,25 @@
       ]
     },
     "Vivendi": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.0,
+      "nb_news": 6,
       "titres_cles": [
-        "Vivendi : Descriptif du programme de rachat d’actions autorisé par l’Assemblée générale mixte des actionnaires du 28 avril 2025 et mis en œuvre sur délégation du Directoire du 23 mars 2026",
-        "VIVENDI PREND ACTE DE LA COMMUNICATION DE GRIEFS DE LA COMMISSION EUROPÉENNE ET EN CONTESTE LES ALLÉGATIONS",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
+        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
+        "Compagnie de l'Odet : Résultats de l’exercice 2025"
       ]
     },
     "Eurofins Scientific": {
-      "sentiment": -0.25,
-      "nb_news": 4,
-      "titres_cles": [
-        "Eurofins Biomnis lance une nouvelle méthode clinique LC‑MS/MS pour la détection de la toxine céréulide dans les échantillons de selles",
-        "EUROFINS : AVIS DE CONVOCATION DES ACTIONNAIRES A L’ASSEMBLEE GENERALE ORDINAIRE ANNUELLE ET A UNE ASSEMBLEE GENERALE EXTRAORDINAIRE DE EUROFINS SCIENTIFIC SE (LA « SOCIETE ») VALANT AVIS D’INFORMATION DES OBLIGATAIRES",
-        "Eurofins Viracor BioPharma étoffe ses capacités bioanalytiques"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.0,
+      "nb_news": 2,
       "titres_cles": [
-        "TP annonce les résultats finaux de son offre de rachat sur ses Obligations 2027 et ses Obligations 2028",
-        "TP annonce le succès de son opération de refinancement obligataire",
-        "TP : Bilan semestriel du contrat de liquidité"
+        "TP : Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "Société Générale : actions et droits de vote au 31 août 2025"
       ]
     },
     "Alstom": {
@@ -293,12 +284,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.0,
+      "nb_news": 11,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
-        "Veolia Environnement: Un très bon premier trimestre avec une croissance solide et une belle progression de l’EBITDA, en ligne avec la guidance",
-        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032"
+        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032",
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
@@ -320,16 +311,13 @@
       ]
     },
     "Edenred": {
-      "sentiment": 0.0,
-      "nb_news": 2,
-      "titres_cles": [
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Accor": {
-      "sentiment": 0.08,
-      "nb_news": 12,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1",
@@ -338,20 +326,18 @@
     },
     "Eurazeo": {
       "sentiment": 0.0,
-      "nb_news": 3,
+      "nb_news": 1,
       "titres_cles": [
-        "Fonoa acquiert la plateforme fiscale de PwC et lève 110 millions de dollars pour développer une solution fiscale alimentée par l'IA qui redéfinit le secteur",
-        "Eurazeo entame des discussions exclusives avec INSPIRED PET NUTRITION en vue de céder sa participation dans Ultra Premium Direct",
         "La maison-mère de Ferrara entre en discussions exclusives avec Eurazeo en vue d'acquérir le groupe CPK"
       ]
     },
     "Thales": {
-      "sentiment": -0.1,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
+        "Les actions de Thales en hausse alors que le groupe confirme ses prévisions annuelles et ses objectifs de croissance dans la défense",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?",
-        "Défense : Thales signe un mega contrat avec la Grèce, que contient-il ?"
+        "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?"
       ]
     },
     "Forvia": {
@@ -364,5 +350,13 @@
       ]
     }
   },
-  "signaux_forts": []
+  "signaux_forts": [
+    [
+      "Legrand",
+      1.29,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
+      ]
+    ]
+  ]
 }
