@@ -1964,6 +1964,34 @@ def generer_html_dual_momentum():
 </div>"""
 
 
+FICHIER_QUALITE_DONNEES = "data_quality_log.json"
+
+def logger_qualite_donnees(donnees):
+    """Journalise le nombre de valeurs sans données de marché exploitables par jour,
+    pour distinguer un incident isolé (Yahoo) d'un pattern récurrent à traiter
+    (voir roadmap V5 : diversification des sources de données)."""
+    erreurs = [d for d in donnees if "erreur" in d]
+    entree = {
+        "date":           datetime.date.today().isoformat(),
+        "heure":          datetime.datetime.now(TZ_PARIS).strftime("%H:%M"),
+        "total":          len(donnees),
+        "nb_erreurs":     len(erreurs),
+        "tickers_erreur": [{"nom": d["nom"], "raison": d.get("erreur", "")} for d in erreurs],
+    }
+    if os.path.exists(FICHIER_QUALITE_DONNEES):
+        with open(FICHIER_QUALITE_DONNEES, "r", encoding="utf-8") as f:
+            log = json.load(f)
+    else:
+        log = []
+    log.append(entree)
+    log = log[-90:]  # ~3 mois glissants, suffisant pour repérer un pattern
+    with open(FICHIER_QUALITE_DONNEES, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+    if erreurs:
+        print(f"  Qualité données journalisée : {len(erreurs)}/{len(donnees)} en erreur")
+    return entree
+
+
 def envoyer_email_alerte(raison):
     """Email court envoyé à la place du briefing normal quand les données de marché
     sont invalides (NaN) — évite d'envoyer des chiffres faux plutôt que de se taire."""
@@ -2154,6 +2182,7 @@ if __name__ == "__main__":
     ok      = [d for d in donnees if "erreur" not in d]
     erreurs = [d for d in donnees if "erreur" in d]
     print(f"OK : {len(ok)}/39 | Erreurs : {len(erreurs)}")
+    logger_qualite_donnees(donnees)
 
     print("Calcul momentum relatif vs CAC40...")
     donnees_dict = {d["nom"]: d for d in ok}
