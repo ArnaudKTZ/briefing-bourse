@@ -1,5 +1,5 @@
 {
-  "capital": 470.8599999999999,
+  "capital": 389.74999999999955,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -28,15 +28,6 @@
       "cout_total": 1982.3999999999999,
       "frais_achat": 9.91
     },
-    "LVMH": {
-      "nb_actions": 4,
-      "prix_entree": 495.75,
-      "date_entree": "2026-06-29",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1983.0,
-      "frais_achat": 9.92
-    },
     "TotalEnergies": {
       "nb_actions": 29,
       "prix_entree": 68.36,
@@ -44,6 +35,15 @@
       "heure_entree": "03:01",
       "source_entree": "Briefing",
       "cout_total": 1982.44,
+      "frais_achat": 9.91
+    },
+    "Airbus": {
+      "nb_actions": 10,
+      "prix_entree": 198.22,
+      "date_entree": "2026-07-01",
+      "heure_entree": "13:44",
+      "source_entree": "Briefing",
+      "cout_total": 1982.2,
       "frais_achat": 9.91
     }
   },
@@ -56,7 +56,7 @@
     "2026-06-26": 10104.81,
     "2026-06-29": 10010.08,
     "2026-06-30": 10010.27,
-    "2026-07-01": NaN
+    "2026-07-01": 9947.94
   },
   "trades": [
     {
@@ -97,6 +97,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -0.09,
       "frais_total": 9.96
+    },
+    {
+      "nom": "LVMH",
+      "entree": 495.75,
+      "sortie": 480.15,
+      "date_entree": "2026-06-29",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-01",
+      "heure_sortie": "13:44",
+      "source_sortie": "Briefing",
+      "pnl_pct": -3.63,
+      "frais_total": 19.52
     }
   ]
 }
