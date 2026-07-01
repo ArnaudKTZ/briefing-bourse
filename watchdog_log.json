@@ -1,10 +1,10 @@
 {
-  "date": "2026-06-30",
-  "heure": "14:31",
+  "date": "2026-07-01",
+  "heure": "05:30",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.35"
+      "msg": "OK — 20 articles, sentiment -0.30"
     },
     "Briefing 7h": {
       "ok": true,
@@ -12,7 +12,7 @@
     },
     "Scoring intraday": {
       "ok": true,
-      "msg": "OK hier — 4 snapshot(s) enregistré(s)"
+      "msg": "OK hier — 6 snapshot(s) enregistré(s)"
     }
   },
   "problemes": []
