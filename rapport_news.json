@@ -1,8 +1,8 @@
 {
   "date": "2026-07-01",
-  "heure": "18:41",
+  "heure": "20:30",
   "marche": {
-    "sentiment_global": -0.3,
+    "sentiment_global": -0.25,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
