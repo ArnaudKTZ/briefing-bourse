@@ -1,15 +1,15 @@
 {
   "date": "2026-07-01",
-  "heure": "04:45",
+  "heure": "15:42",
   "marche": {
     "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
+      "FTSE 100 : les actions prolongent leur baisse alors que les négociations avec l’Iran reprennent",
       "La Bourse de Paris termine sur une note optimiste",
       "La Bourse de Paris montre un appétit mesuré pour le risque",
-      "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles",
-      "La Bourse de Paris termine en hausse"
+      "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles"
     ]
   },
   "valeurs": {
@@ -50,11 +50,11 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.4,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
-        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres",
+        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
         "La Bourse de Paris en hausse, portée par STMicroelectronics et l'IA"
       ]
     },
@@ -73,11 +73,11 @@
       "titres_cles": [
         "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
         "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : Le Nexviazyme de Sanofi a atteint tous les critères d’évaluation principaux et secondaires dans une étude de phase III sur la forme infantile de la maladie de Pompe"
+        "Communiqué de presse : Mise en ligne du document «Q2 2026 aide-mémoire »"
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
@@ -86,12 +86,12 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.83,
-      "nb_news": 6,
+      "sentiment": 1.14,
+      "nb_news": 7,
       "titres_cles": [
+        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
-        "Air Liquide confirme ses objectifs, boosté par des moteurs de croissance diversifiés",
-        "Air Liquide conclut un accord de 2,85 milliards € pour DIG Airgas afin d’étendre sa présence en Asie"
+        "Air Liquide confirme ses objectifs, boosté par des moteurs de croissance diversifiés"
       ]
     },
     "Safran": {
@@ -131,7 +131,7 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
@@ -158,9 +158,13 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.2,
+      "nb_news": 20,
+      "titres_cles": [
+        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
+        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
+      ]
     },
     "Pernod Ricard": {
       "sentiment": -0.17,
@@ -285,11 +289,9 @@
     },
     "Veolia": {
       "sentiment": 0.0,
-      "nb_news": 11,
+      "nb_news": 1,
       "titres_cles": [
-        "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
-        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032",
-        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
+        "CAC 40, Carrefour, Kering, Veolia, Pernod-Ricard… les actions en Bourse au programme de Momentum"
       ]
     },
     "STMicroelectronics": {
@@ -311,9 +313,12 @@
       ]
     },
     "Edenred": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 2,
+      "titres_cles": [
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+      ]
     },
     "Accor": {
       "sentiment": 0.1,
@@ -356,6 +361,13 @@
       1.29,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
+      ]
+    ],
+    [
+      "Air Liquide",
+      1.14,
+      [
+        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
     ]
   ]
