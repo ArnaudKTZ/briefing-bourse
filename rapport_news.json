@@ -1,12 +1,12 @@
 {
   "date": "2026-07-01",
-  "heure": "15:42",
+  "heure": "18:41",
   "marche": {
     "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
-      "FTSE 100 : les actions prolongent leur baisse alors que les négociations avec l’Iran reprennent",
+      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent",
       "La Bourse de Paris termine sur une note optimiste",
       "La Bourse de Paris montre un appétit mesuré pour le risque",
       "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles"
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.1,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
-        "Chef Ziling Zhou, fondatrice de Silver Beach, première femme d'Asie Chevalier de la truffe Chef × Visionnaire culinaire, Chef espagnol trois fois étoilé David Muñoz : Un dialogue culinaire de Chengdu à Madrid s'achève avec succès",
-        "Michelin délivre au premier trimestre une performance solide, la baisse du chiffre d’affaires traduisant un effet de change négatif. Dans un contexte d’incertitudes majeures, le Groupe ajuste son pilotage et conserve sa guidance 2026."
+        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions",
+        "Chef Ziling Zhou, fondatrice de Silver Beach, première femme d'Asie Chevalier de la truffe Chef × Visionnaire culinaire, Chef espagnol trois fois étoilé David Muñoz : Un dialogue culinaire de Chengdu à Madrid s'achève avec succès"
       ]
     },
     "Capgemini": {
@@ -251,8 +251,8 @@
       "sentiment": 0.0,
       "nb_news": 6,
       "titres_cles": [
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
         "Compagnie de l'Odet : Résultats de l’exercice 2025"
       ]
     },
@@ -289,9 +289,11 @@
     },
     "Veolia": {
       "sentiment": 0.0,
-      "nb_news": 1,
+      "nb_news": 11,
       "titres_cles": [
-        "CAC 40, Carrefour, Kering, Veolia, Pernod-Ricard… les actions en Bourse au programme de Momentum"
+        "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
+        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032",
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
