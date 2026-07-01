@@ -750,6 +750,14 @@ def recuperer_donnees_action(nom, ticker, hist_cac=None):
         if hist.empty or len(hist) < 20:
             return {"nom": nom, "ticker": ticker, "erreur": "Pas de données"}
 
+        # Yahoo peut renvoyer une dernière bougie incomplète (Close = NaN) quand la
+        # bourse n'a pas encore ouvert ou que le flux n'est pas finalisé (fréquent sur
+        # les valeurs Euronext Paris tôt le matin). On l'ignore pour retomber sur le
+        # dernier cours réellement connu, plutôt que de propager des NaN en aval.
+        hist = hist[hist["Close"].notna()]
+        if hist.empty or len(hist) < 20:
+            return {"nom": nom, "ticker": ticker, "erreur": "Pas de données"}
+
         cours      = round(hist["Close"].iloc[-1], 2)
         cours_hier = round(hist["Close"].iloc[-2], 2)
         variation  = round((cours - cours_hier) / cours_hier * 100, 2)
@@ -969,6 +977,7 @@ def recuperer_indice_cac():
     try:
         ticker = yf.Ticker("^FCHI")
         hist   = ticker.history(period="1y")
+        hist   = hist[hist["Close"].notna()]
         if not hist.empty:
             cours    = round(hist["Close"].iloc[-1], 0)
             hier     = round(hist["Close"].iloc[-2], 0)
@@ -1384,6 +1393,18 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
         for nom, pos in pf["positions"].items()
     )
     valeur_totale = round(pf["capital"] + valeur_positions, 2)
+
+    # Garde-fou : si une donnée de marché manquante a fait fuiter un NaN jusqu'ici,
+    # on ne pollue pas l'historique avec une valeur fausse et on le signale à l'appelant.
+    donnees_invalides = math.isnan(valeur_totale)
+
+    if donnees_invalides:
+        with open(FICHIER_PORTEFEUILLE, "w") as f:
+            json.dump(pf, f, ensure_ascii=False, indent=2)
+        resume_pf = ("Portefeuille virtuel : données de marché indisponibles aujourd'hui, "
+                     "valeur non recalculée (dernière valeur connue conservée).\n")
+        return resume_pf, pf, donnees_dict, donnees_invalides
+
     pf["historique_valeur"][today] = valeur_totale
 
     # Perf vs CAC 40 (base 10000€ au départ)
@@ -1409,7 +1430,7 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     with open(FICHIER_PORTEFEUILLE, "w") as f:
         json.dump(pf, f, ensure_ascii=False, indent=2)
 
-    return resume_pf, pf, donnees_dict
+    return resume_pf, pf, donnees_dict, donnees_invalides
 
 
 def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
@@ -1943,6 +1964,36 @@ def generer_html_dual_momentum():
 </div>"""
 
 
+def envoyer_email_alerte(raison):
+    """Email court envoyé à la place du briefing normal quand les données de marché
+    sont invalides (NaN) — évite d'envoyer des chiffres faux plutôt que de se taire."""
+    today = datetime.date.today()
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = f"Agent Bourse V5 — Alerte données — {today.strftime('%d/%m/%Y')}"
+    msg["From"]    = ZOHO_EMAIL
+    msg["To"]      = ", ".join(DESTINATAIRES)
+
+    texte = (f"Le briefing du {today.strftime('%d/%m/%Y')} n'a pas pu être calculé correctement.\n\n"
+             f"Raison : {raison}\n\n"
+             "Aucune valeur n'a été mise à jour (portefeuille, performance) pour éviter "
+             "d'afficher des chiffres faux. La dernière valeur connue reste affichée dans la PWA.")
+    msg.attach(MIMEText(texte, "plain", "utf-8"))
+    html = f"""<html><body style='font-family:Arial,sans-serif;font-size:13px;color:#222;'>
+<p><strong>Le briefing du {today.strftime('%d/%m/%Y')} n'a pas pu être calculé correctement.</strong></p>
+<p>Raison : {raison}</p>
+<p>Aucune valeur n'a été mise à jour (portefeuille, performance) pour éviter d'afficher des
+chiffres faux. La dernière valeur connue reste affichée dans la PWA.</p>
+</body></html>"""
+    msg.attach(MIMEText(html, "html", "utf-8"))
+
+    with smtplib.SMTP(ZOHO_SMTP, ZOHO_PORT) as serveur:
+        serveur.starttls()
+        serveur.login(ZOHO_EMAIL, ZOHO_PASSWORD)
+        serveur.sendmail(ZOHO_EMAIL, DESTINATAIRES, msg.as_string())
+
+    print(f"Email d'alerte envoyé à : {', '.join(DESTINATAIRES)} — raison : {raison}")
+
+
 def envoyer_email(briefing, perf_stats, html_portefeuille="", html_dual_momentum=""):
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
@@ -2127,7 +2178,13 @@ if __name__ == "__main__":
     momentum     = calculer_momentum_sectoriel(donnees_dict)
 
     print("Gestion portefeuille virtuel...")
-    pf_resume, pf_data, pf_donnees_dict = gerer_portefeuille_virtuel(donnees, perf)
+    pf_resume, pf_data, pf_donnees_dict, pf_invalide = gerer_portefeuille_virtuel(donnees, perf)
+
+    if pf_invalide:
+        print("Données de marché invalides (NaN) : envoi d'une alerte à la place du briefing normal.")
+        n_erreurs = len([d for d in donnees if "erreur" in d])
+        envoyer_email_alerte(f"{n_erreurs}/{len(donnees)} valeurs sans données de marché exploitables aujourd'hui.")
+        raise SystemExit(0)
 
     print("Génération briefing par Claude...")
     prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi, macro=macro)
