@@ -606,6 +606,19 @@ def detecter_patterns(hist):
 
 # ─── SCORE DE CONFIANCE ───────────────────────────────────────────────────────
 
+# Poids News et Espion NEUTRALISÉS le 02/07/2026 après audit de contribution.
+# L'audit rétroactif (312 obs News, 117 Espion) a montré que le sentiment News
+# tel que pondéré n'a aucun edge positif (les valeurs "bonne nouvelle" sous-
+# performent légèrement l'univers, le signal penche même à l'envers) et que le
+# bonus Espion n'est pas mesurable (données institutionnelles Yahoo vides sur
+# les .PA). On arrête de polluer le score avec du non-prouvé.
+# À RETESTER vers le 02/08 avec un mois de données propres avant toute décision
+# définitive (supprimer, réduire, ou inverser le signe News). Réactivation =
+# remettre POIDS_NEWS à 4 et POIDS_ESPION à 1.
+POIDS_NEWS   = 0   # était 4 (score += sentiment_news * POIDS_NEWS)
+POIDS_ESPION = 0   # était 1 (score += bonus_espion * POIDS_ESPION)
+
+
 def calculer_score_confiance(d, persistance_intraday=None):
     """
     Score de 0 à 100 basé sur la convergence des indicateurs.
@@ -688,9 +701,9 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Bonus fondamentaux
     score += d.get("bonus_fondamentaux", 0)
 
-    # Bonus/malus sentiment news
+    # Bonus/malus sentiment news (POIDS_NEWS=0 depuis l'audit du 02/07, cf. plus haut)
     sentiment = d.get("sentiment_news", 0)
-    score += sentiment * 4
+    score += sentiment * POIDS_NEWS
 
     # Malus si résultats dans les 3 jours (risque élevé)
     if d.get("resultats_proches"):
@@ -712,8 +725,8 @@ def calculer_score_confiance(d, persistance_intraday=None):
     # Consensus analystes (cible prix + recommandation)
     score += d.get("bonus_analystes", 0)
 
-    # Bonus argent institutionnel (agent espion)
-    score += d.get("bonus_espion", 0)
+    # Bonus argent institutionnel (agent espion) — POIDS_ESPION=0 depuis l'audit du 02/07
+    score += d.get("bonus_espion", 0) * POIDS_ESPION
 
     # Fear & Greed (malus global injecté via d["malus_fear_greed"])
     score += d.get("malus_fear_greed", 0)
