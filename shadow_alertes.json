@@ -1,0 +1,462 @@
+[
+  {
+    "date": "2026-06-26",
+    "heure": "07:01",
+    "nom": "Vinci",
+    "cours": 131.35,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "07:01",
+    "nom": "Société Générale",
+    "cours": 78.18,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "07:01",
+    "nom": "Veolia",
+    "cours": 36.15,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "09:31",
+    "nom": "Bouygues",
+    "cours": 50.16,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "09:31",
+    "nom": "Bouygues",
+    "cours": 50.16,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "09:31",
+    "nom": "Engie",
+    "cours": 27.14,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "09:31",
+    "nom": "Danone",
+    "cours": 71.48,
+    "score": 52,
+    "signal": "VENTE",
+    "raison": "Bootstrap depuis intraday_scores (vente)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "09:31",
+    "nom": "Schneider Electric",
+    "cours": 276.05,
+    "score": 30,
+    "signal": "VENTE",
+    "raison": "Bootstrap depuis intraday_scores (vente)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "12:01",
+    "nom": "Engie",
+    "cours": 27.34,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "12:01",
+    "nom": "Vinci",
+    "cours": 131.35,
+    "score": 82,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "12:01",
+    "nom": "Kering",
+    "cours": 267.65,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "17:32",
+    "nom": "Accor",
+    "cours": 50.12,
+    "score": 82,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-26",
+    "heure": "19:05",
+    "nom": "Edenred",
+    "cours": 22.5,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "07:01",
+    "nom": "Engie",
+    "cours": 27.31,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "07:01",
+    "nom": "Veolia",
+    "cours": 36.23,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "07:01",
+    "nom": "Edenred",
+    "cours": 22.5,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "09:31",
+    "nom": "Safran",
+    "cours": 331.2,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "14:01",
+    "nom": "Pernod Ricard",
+    "cours": 66.14,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-29",
+    "heure": "14:01",
+    "nom": "Schneider Electric",
+    "cours": 275.05,
+    "score": 40,
+    "signal": "VENTE",
+    "raison": "Bootstrap depuis intraday_scores (vente)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Sanofi",
+    "cours": 75.57,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Vinci",
+    "cours": 127.55,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Société Générale",
+    "cours": 77.54,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Legrand",
+    "cours": 147.2,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Veolia",
+    "cours": 36.25,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "12:01",
+    "nom": "Edenred",
+    "cours": 22.7,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "14:01",
+    "nom": "Schneider Electric",
+    "cours": 286.4,
+    "score": 100,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "14:01",
+    "nom": "Safran",
+    "cours": 345.5,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "14:01",
+    "nom": "Engie",
+    "cours": 27.61,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-06-30",
+    "heure": "19:16",
+    "nom": "Air Liquide",
+    "cours": 173.28,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Air Liquide",
+    "cours": 173.28,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Safran",
+    "cours": 345.0,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Vinci",
+    "cours": 127.8,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Legrand",
+    "cours": 147.7,
+    "score": 100,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Engie",
+    "cours": 27.59,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "07:01",
+    "nom": "Veolia",
+    "cours": 36.44,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "12:01",
+    "nom": "Thales",
+    "cours": 231.1,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "12:01",
+    "nom": "Airbus",
+    "cours": 199.0,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (achat)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "12:01",
+    "nom": "LVMH",
+    "cours": 475.45,
+    "score": 28,
+    "signal": "VENTE",
+    "raison": "Bootstrap depuis intraday_scores (vente)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "14:01",
+    "nom": "Airbus",
+    "cours": 199.4,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "18:11",
+    "nom": "Vivendi",
+    "cours": 2.22,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-01",
+    "heure": "18:11",
+    "nom": "Dassault Systèmes",
+    "cours": 18.39,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "07:01",
+    "nom": "Safran",
+    "cours": 349.9,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "07:01",
+    "nom": "Vivendi",
+    "cours": 2.22,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "07:01",
+    "nom": "Dassault Systèmes",
+    "cours": 18.39,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "09:30",
+    "nom": "Michelin",
+    "cours": 34.39,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "09:30",
+    "nom": "Thales",
+    "cours": 231.7,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Bootstrap depuis intraday_scores (alerte)",
+    "envoyee": true
+  }
+]
