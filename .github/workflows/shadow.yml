@@ -1,18 +1,15 @@
-name: Scoring Intraday CAC40
+name: Agent Shadow hebdomadaire
 
 on:
   schedule:
-    - cron: '0 7 * * 1-5'   # 9h heure française (UTC+2 été)
-    - cron: '30 9 * * 1-5'  # 11h30 heure française
-    - cron: '0 12 * * 1-5'  # 14h heure française
-    - cron: '0 14 * * 1-5'  # 16h heure française
+    - cron: '35 16 * * 5'  # Vendredi 18h35 heure française (UTC+2 été) — après clôture
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  scorer:
+  rapport-shadow:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,21 +22,20 @@ jobs:
           python-version: '3.11'
 
       - name: Installer les dépendances
-        run: pip install anthropic yfinance ta pandas numpy
+        run: pip install yfinance pandas numpy
 
-      - name: Lancer le scoring intraday
+      - name: Lancer l'agent Shadow
         env:
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
           ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
-          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scoring_intraday.py
+          DESTINATAIRES_HEBDO: ${{ secrets.DESTINATAIRES_HEBDO }}
+        run: python agent_shadow.py
 
-      - name: Sauvegarder sur GitHub
+      - name: Sauvegarder le rapport sur GitHub
         run: |
           git config user.name "Agent Bourse"
           git config user.email "actions@github.com"
-          git add intraday_scores.json alertes_envoyees.json costs_log.json portefeuille_virtuel.json shadow_alertes.json || true
-          git diff --staged --quiet || git commit -m "Scoring intraday $(date +%Y-%m-%d\ %H:%M)" || true
+          git add shadow_rapport.json || true
+          git diff --staged --quiet || git commit -m "Rapport shadow $(date +%Y-%m-%d)" || true
           git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

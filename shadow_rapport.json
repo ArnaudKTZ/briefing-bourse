@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-02",
+  "n_alertes": 46,
+  "n_achats": 38,
+  "en_attente": 5,
+  "stats": {
+    "J+1": {
+      "n": 33,
+      "gagnants_pct": 21.2,
+      "moyenne_nette": -1.73,
+      "cac_moyen": -0.04,
+      "edge": -1.69
+    },
+    "J+3": {
+      "n": 13,
+      "gagnants_pct": 15.4,
+      "moyenne_nette": -2.66,
+      "cac_moyen": -0.25,
+      "edge": -2.41
+    },
+    "J+5": null
+  },
+  "verdict": "NUISIBLES",
+  "verdict_txt": "Les alertes font -2.41 pts SOUS le CAC net de frais sur 13 cas. Les suivre aurait détruit de la valeur."
+}

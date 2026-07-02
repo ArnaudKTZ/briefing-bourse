@@ -30,6 +30,7 @@ AGENTS = [
     "agent_espion.py",
     "agent_dual_momentum.py",
     "agent_veille.py",
+    "agent_shadow.py",
 ]
 
 # Packages tiers connus (stdlib exclus)
@@ -48,6 +49,7 @@ WORKFLOWS = {
     ".github/workflows/agent_espion.yml":      "agent_espion.py",
     ".github/workflows/dual_momentum.yml":     "agent_dual_momentum.py",
     ".github/workflows/veille.yml":            "agent_veille.py",
+    ".github/workflows/shadow.yml":            "agent_shadow.py",
 }
 
 # Secrets requis par agent (si l'agent envoie des emails ou appelle l'API)
@@ -60,6 +62,7 @@ SECRETS_REQUIS = {
     "agent_espion.py":         set(),
     "agent_dual_momentum.py":  {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
     "agent_veille.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
+    "agent_shadow.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
 }
 
 # JSON produits → fraîcheur max attendue en heures (None = pas vérifié)
@@ -71,6 +74,7 @@ JSON_FRAICHEUR = {
     "portefeuille_virtuel.json":      26,
     "dual_momentum_portefeuille.json": 26,
     "professeur_rapport.json":        None,
+    "shadow_rapport.json":            None,
 }
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────

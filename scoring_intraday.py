@@ -611,6 +611,38 @@ def calculer_frais(montant):
     return round(max(FRAIS_MINIMUM, montant * FRAIS_TAUX), 2)
 
 
+FICHIER_SHADOW = "shadow_alertes.json"
+
+def logger_alertes_shadow(alertes, today, heure, envoyees):
+    """Journal permanent de toutes les alertes détectées (envoyées ou non).
+    Jamais purgé, contrairement à alertes_envoyees.json (7 jours) et
+    intraday_scores.json (5 jours). L'agent Shadow l'évalue chaque semaine
+    pour mesurer ce que les alertes auraient rapporté, frais inclus."""
+    if not alertes:
+        return
+    log = []
+    if os.path.exists(FICHIER_SHADOW):
+        try:
+            with open(FICHIER_SHADOW, "r", encoding="utf-8") as f:
+                log = json.load(f)
+        except Exception:
+            log = []
+    for a in alertes:
+        log.append({
+            "date":     today,
+            "heure":    heure,
+            "nom":      a.get("nom"),
+            "cours":    a.get("cours"),
+            "score":    a.get("score"),
+            "signal":   a.get("signal"),
+            "raison":   a.get("raison", ""),
+            "envoyee":  envoyees,
+        })
+    with open(FICHIER_SHADOW, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+    print(f"  {len(alertes)} alerte(s) journalisée(s) dans {FICHIER_SHADOW}")
+
+
 def gerer_portefeuille_intraday(snapshot, heure):
     """Ouvre/ferme des positions en cours de journée selon les signaux intraday."""
     if not os.path.exists(FICHIER_PORTEFEUILLE):
@@ -816,6 +848,8 @@ if __name__ == "__main__":
             alertes_envoyees[cle] = heure
 
     sauvegarder_alertes_envoyees(alertes_envoyees)
+
+    logger_alertes_shadow(alertes, today, heure, envoyees=ALERTES_EMAIL_ACTIVES)
 
     if alertes and ALERTES_EMAIL_ACTIVES:
         print(f"  {len(alertes)} alerte(s) — envoi email...")
