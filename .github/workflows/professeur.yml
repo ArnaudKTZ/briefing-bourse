@@ -28,7 +28,6 @@ jobs:
         env:
           ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
           ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
-          DESTINATAIRES_HEBDO: ${{ secrets.DESTINATAIRES_HEBDO }}
         run: python agent_professeur.py
 
       - name: Sauvegarder le rapport
