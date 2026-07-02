@@ -30,6 +30,12 @@ ZOHO_PORT     = 587
 _dest_env = os.environ.get("DESTINATAIRES", "")
 DESTINATAIRES = [d.strip() for d in _dest_env.split(",") if d.strip()] if _dest_env else []
 
+# Décision Arnaud 02/07/2026 : alertes achat/vente suspendues ~1 mois (modèle
+# non validé, précision ACHETER < 50%). Le scoring, le portefeuille virtuel et
+# la mesure de performance continuent de tourner normalement — seul l'email
+# d'alerte est coupé. À revoir ensemble vers le 02/08/2026.
+ALERTES_EMAIL_ACTIVES = False
+
 SEUIL_ALERTE         = 85
 FICHIER_ALERTES_VUE  = "alertes_envoyees.json"
 FICHIER_PORTEFEUILLE = "portefeuille_virtuel.json"
@@ -811,9 +817,11 @@ if __name__ == "__main__":
 
     sauvegarder_alertes_envoyees(alertes_envoyees)
 
-    if alertes:
+    if alertes and ALERTES_EMAIL_ACTIVES:
         print(f"  {len(alertes)} alerte(s) — envoi email...")
         envoyer_alerte(alertes)
+    elif alertes:
+        print(f"  {len(alertes)} alerte(s) détectée(s) mais email suspendu (décision 02/07, revoir ~02/08).")
     else:
         print("  Aucune alerte.")
 

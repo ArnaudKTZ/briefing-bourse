@@ -1573,7 +1573,7 @@ def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
     <span style='font-size:11px;color:#999;'>Capital libre : {capital_libre:.0f} € | Frais Boursobank : 0,5% min 0,50 €</span>
     <span style='font-size:10px;background:#e3f0fb;color:#1565c0;padding:2px 7px;border-radius:3px;'>Briefing = signal 7h</span>
     <span style='font-size:10px;background:#fff8e1;color:#e65100;padding:2px 7px;border-radius:3px;'>Intraday = signal 9h/12h/16h</span>
-    <span style='font-size:10px;background:#fce4ec;color:#b71c1c;padding:2px 7px;border-radius:3px;'>Alerte = score 85+</span>
+    <span style='font-size:10px;background:#eeeeee;color:#757575;padding:2px 7px;border-radius:3px;'>Alertes email suspendues jusqu'au ~02/08 (modèle en observation)</span>
   </div>
 </div>"""
 
