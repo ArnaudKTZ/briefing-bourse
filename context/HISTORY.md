@@ -7,9 +7,35 @@
 
 ---
 
+## 2026-07-02
+
+### Audit complet Agent Bourse + réparation de 3 bugs critiques
+
+- Audit complet du projet demandé par Arnaud (agents, workflows, scoring, données, coûts) : verdict 6/10, architecture saine mais bugs critiques découverts
+- Bug critique 1 : les stats de précision étaient empoisonnées — le 01/07 les recos du 30/06 ont été jugées contre des prix NaN (NaN est truthy en Python, le garde "not prix" ne le filtrait pas), et la relance du briefing à 13h53 a compté la même journée en double
+- Réparation : stats recalculées depuis zéro sur l'historique propre — 305 → 211 échantillons, précision réelle 42.7% (ACHETER 40.8%, ÉVITER 46.4%). Garde _prix_valide() ajouté dans les deux boucles d'évaluation
+- Bug critique 2 : les trades intraday n'ont jamais existé — scoring_intraday.yml ne commitait pas portefeuille_virtuel.json, chaque décision intraday (stop-loss, take-profit, achats 80+) était perdue à chaque run. Même bug sur dual_momentum.yml (rééquilibrage mensuel du 01/07 perdu, point de valorisation 10136.94€ restauré) et briefing_bourse.yml (costs_log.json jamais commité, coûts Opus invisibles du rapport hebdo)
+- Bug majeur 3 : tous les workflows poussaient avec "|| true" sans se resynchroniser — un push rejeté = données silencieusement perdues. git pull --rebase ajouté avant chaque push dans les 8 workflows
+- Constat stratégique : précision ACHETER sous 50% + frais ~1% par aller-retour = le satellite détruit de la valeur en l'état. Points forts confirmés : Dual Momentum backtesté (le plus solide), agent Professeur avec garde-fou méta, séparation cœur/satellite
+- Décision en suspens (à trancher par Arnaud) : réduire ou non le budget par position du satellite (2000€) tant que la précision ACHETER reste sous 50%
+
+---
+
+## 2026-07-01
+
+### Fix NaN briefing + garde-fou anti-chiffres-faux + log qualité données
+
+- Briefing du matin rempli de "nan" : Yahoo Finance a renvoyé une dernière bougie incomplète (Close = NaN) sur la quasi-totalité des valeurs Euronext Paris (.PA) à 7h, seules les valeurs non-.PA (STMicro, ArcelorMittal, Stellantis) avaient un prix valide
+- Fix : filtrage des lignes Close NaN avant lecture du dernier cours dans recuperer_donnees_action et recuperer_indice_cac (retombe sur le dernier cours valide connu)
+- Garde-fou ajouté : si la valeur du portefeuille est NaN malgré tout, email d'alerte court à la place du briefing normal (pas de chiffres faux envoyés), historique non pollué, dernière valeur connue conservée
+- Journalisation qualité données : data_quality_log.json (log glissant ~3 mois) trace combien de valeurs sont sans données à chaque run — servira à décider si la diversification des sources (V5 phase 4, octobre) doit être avancée
+- Piste d'amélioration proposée et retenue : transformer les échecs silencieux en échecs visibles
+
+---
+
 ## 2026-06-24
 
-### Fiabilisation V4 + Roadmap V5 validée
+### Fiabilisation V4 + Roadmap V5 validée + idées futures
 
 - GitHub Actions cron défaillant ce matin : aucun workflow déclenché automatiquement
 - Solution : cron-job.org mis en place (gratuit, externe) — 8 jobs créés pour déclencher tous les workflows via API GitHub à heure fixe
@@ -18,6 +44,12 @@
 - Analyse du briefing du jour : précision 36.5%, Vinci 99/100, BNP 93/100, Danone 89/100
 - Analyse de la spec V5 rédigée par l'architecte logiciel d'Arnaud — validée et capitalisée
 - Roadmap V5 complète définie en 4 phases (juillet → octobre 2026)
+- Tableau portefeuille PWA amélioré : quantité, prix achat, cours actuel, valeur position, gain/perte
+- Idée future validée : "Bon de commande PWA" — notification push + ordre complet (valeur, quantité, prix limite, stop loss, take profit) pour chaque signal achat/vente, 1 clic pour valider sur Boursobank
+- Idée future validée : passage d'ordres semi-automatique intraday — alertes stop loss / take profit / signal retourné avec bon de commande push en cours de journée
+- Document architecture à refaire en V5 avec toutes les nouvelles fonctionnalités
+- Document Architecture_Agent_Bourse_V5.html créé avec : V4 en prod, 4 couches V5, nouveaux agents, bon de commande PWA, séquencement complet, roadmap 4 phases, critères de succès, 15 évolutions du cœur des agents existants
+- Principe établi : à chaque session Arnaud peut demander "challenge les agents" pour générer de nouvelles idées d'amélioration basées sur les données réelles
 - Phase 1 (22 juillet) : Data Quality + Feature Engine + Score Engine 4 sous-scores + auto-apprentissage
 - Phase 2 (août) : Risk Engine + Briefing V5 + Alerteur V5 + Watchdog V5
 - Phase 3 (septembre) : Backtest / Walk-forward / Calibration
