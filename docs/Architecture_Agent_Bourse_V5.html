@@ -135,12 +135,12 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <div class="card">
     <div class="card-title">Agent News <span class="badge badge-v4">V4</span></div>
     <div class="card-freq">3×/jour — 6h45/9h45/13h45</div>
-    <div class="card-body">Scrape RSS Yahoo Finance, sentiment −3 à +3 par valeur. Gratuit.</div>
+    <div class="card-body">Scrape RSS Yahoo Finance, sentiment −3 à +3 par valeur (compteur de mots-clés sur titres). <strong>Poids dans le score = 0 depuis le 02/07</strong> : l'audit de contribution n'a montré aucun edge positif (signal penchant à l'envers). Collecte maintenue, à retester ~02/08. Gratuit.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent Espion <span class="badge badge-v4">V4</span></div>
     <div class="card-freq">1×/semaine — Lundi 6h15</div>
-    <div class="card-body">ETF sectoriels iShares + actionnariat institutionnel CAC40. Bonus −15 à +15.</div>
+    <div class="card-body">ETF sectoriels iShares + actionnariat institutionnel CAC40. <strong>Bonus institutionnel neutralisé (poids 0) depuis le 02/07</strong> : données Yahoo vides sur les .PA (nb_institutions=0 partout), non mesurable. La rotation ETF utile est déjà calculée par le scoring intraday. Gratuit.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent Watchdog <span class="badge badge-v4">V4</span></div>
@@ -209,7 +209,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <h3>Court terme — deux rendez-vous datés</h3>
   <ul>
     <li><strong>22/07 — bilan des 30 jours :</strong> mesuré par l'Évaluateur (edge par horizon et par bucket, sur données propres depuis le 02/07). Première piste déjà visible : le bucket 85+ ne discrimine pas (il fait pire que 75-84 sur les premières données) — le seuil d'alerte à 85 est à requestionner.</li>
-    <li><strong>~02/08 — décision alertes :</strong> réactiver, prolonger la suspension ou ajuster, sur le verdict factuel du Shadow. Question liée : réduire le budget par position du satellite (2000€ → 500€ ?).</li>
+    <li><strong>~02/08 — trois décisions :</strong> (1) alertes — réactiver, prolonger ou ajuster sur le verdict Shadow ; (2) poids News/Espion — supprimer, réduire, réactiver ou tester le signe contrarien News, après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?).</li>
     <li>Garde-fou méta du Professeur : actif dès 3 semaines d'historique</li>
   </ul>
 </div>

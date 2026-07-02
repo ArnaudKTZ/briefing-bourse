@@ -24,6 +24,10 @@
 - Décision en suspens (à trancher par Arnaud le 02/08) : réactivation des alertes + réduire ou non le budget par position du satellite (2000€ → 500€ ?)
 - Idées reportées avec raisons : Agent Dividendes PEA (quick win, n'importe quand), Agent Patrimoine global (session dédiée avec données réelles), Crypto Dual Momentum (après bilan 22/07, via harnais)
 - Spec mise à jour : docs/Architecture_Agent_Bourse_V5.html reflète tout (agents Shadow/Évaluateur, suspension, fiabilité données, persistance CI, rendez-vous 22/07 et 02/08)
+- Destinataires des 4 rapports hebdo (Professeur, Veille, Shadow, Évaluateur) fixés en dur à zoho + xtrem111, secret DESTINATAIRES_HEBDO retiré des workflows
+- Audit de contribution News/Espion (demandé par Arnaud, question "agents trop légers ?") : mesure rétroactive depuis git (312 obs News, 117 Espion) des rendements forward vs univers CAC40. Constat : le sentiment News n'a aucun edge positif tel que pondéré (signal penchant à l'envers, bucket négatif surperforme), bonus Espion non mesurable (données institutionnelles Yahoo vides sur les .PA). Le vrai problème n'était pas la légèreté mais l'absence de mesure (Professeur les notait [C] depuis le début)
+- Décision : POIDS_NEWS et POIDS_ESPION mis à 0 (briefing + intraday), constantes réversibles. Collecte maintenue, seul le poids dans le score coupé. Retest ~02/08 intégré au rappel programmé
+- Idées reportées mises à jour : muscler News/Espion seulement si le retest montre un edge (ne jamais enrichir un agent non mesuré)
 
 ---
 
