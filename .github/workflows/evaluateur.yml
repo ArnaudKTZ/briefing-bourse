@@ -1,0 +1,41 @@
+name: Agent Evaluateur hebdomadaire
+
+on:
+  schedule:
+    - cron: '35 5 * * 6'  # Samedi 7h35 heure française (UTC+2 été) — avant le Professeur du dimanche
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rapport-evaluateur:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance pandas numpy
+
+      - name: Lancer l'agent Évaluateur
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES_HEBDO: ${{ secrets.DESTINATAIRES_HEBDO }}
+        run: python agent_evaluateur.py
+
+      - name: Sauvegarder le rapport sur GitHub
+        run: |
+          git config user.name "Agent Bourse"
+          git config user.email "actions@github.com"
+          git add evaluateur_rapport.json || true
+          git diff --staged --quiet || git commit -m "Rapport evaluateur $(date +%Y-%m-%d)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

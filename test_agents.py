@@ -31,6 +31,7 @@ AGENTS = [
     "agent_dual_momentum.py",
     "agent_veille.py",
     "agent_shadow.py",
+    "agent_evaluateur.py",
 ]
 
 # Packages tiers connus (stdlib exclus)
@@ -50,6 +51,7 @@ WORKFLOWS = {
     ".github/workflows/dual_momentum.yml":     "agent_dual_momentum.py",
     ".github/workflows/veille.yml":            "agent_veille.py",
     ".github/workflows/shadow.yml":            "agent_shadow.py",
+    ".github/workflows/evaluateur.yml":        "agent_evaluateur.py",
 }
 
 # Secrets requis par agent (si l'agent envoie des emails ou appelle l'API)
@@ -63,6 +65,7 @@ SECRETS_REQUIS = {
     "agent_dual_momentum.py":  {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
     "agent_veille.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
     "agent_shadow.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
+    "agent_evaluateur.py":     {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
 }
 
 # JSON produits → fraîcheur max attendue en heures (None = pas vérifié)
@@ -75,6 +78,7 @@ JSON_FRAICHEUR = {
     "dual_momentum_portefeuille.json": 26,
     "professeur_rapport.json":        None,
     "shadow_rapport.json":            None,
+    "evaluateur_rapport.json":        None,
 }
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────

@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-02",
+  "n_jours": 10,
+  "n_obs": 389,
+  "horizons": {
+    "J+1": {
+      "univers_moy": -0.34,
+      "acheter": {
+        "n": 141,
+        "moy": -0.32,
+        "edge": 0.02
+      },
+      "eviter": {
+        "n": 69,
+        "moy": -0.19,
+        "edge": -0.15
+      }
+    },
+    "J+3": {
+      "univers_moy": -0.71,
+      "acheter": {
+        "n": 96,
+        "moy": -0.49,
+        "edge": 0.22
+      },
+      "eviter": {
+        "n": 59,
+        "moy": -1.16,
+        "edge": 0.45
+      }
+    },
+    "J+5": {
+      "univers_moy": -0.92,
+      "acheter": {
+        "n": 60,
+        "moy": -0.22,
+        "edge": 0.7
+      },
+      "eviter": {
+        "n": 45,
+        "moy": -1.33,
+        "edge": 0.41
+      }
+    },
+    "J+10": null
+  },
+  "buckets_j5": {
+    "85+": {
+      "n": 21,
+      "moy": -1.46
+    },
+    "75-84": {
+      "n": 19,
+      "moy": 1.95
+    },
+    "65-74": {
+      "n": 20,
+      "moy": -0.98
+    }
+  },
+  "verdict": "Sur 60 ACHETER : les ACHETER battent l'univers de +0.70 pts à J+5 ; les ÉVITER sont utiles (+0.41 pts évités) ; le score ne discrimine PAS (85+ ne bat pas 65-74)."
+}
