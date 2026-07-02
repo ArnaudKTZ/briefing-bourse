@@ -37,4 +37,5 @@ jobs:
           git config user.email "actions@github.com"
           git add professeur_rapport.json || true
           git diff --staged --quiet || git commit -m "Professeur reunion $(date +%Y-%m-%d)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

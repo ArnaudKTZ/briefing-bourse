@@ -1125,6 +1125,12 @@ def charger_performance():
     return {"historique": {}, "stats": stats_defaut}
 
 
+def _prix_valide(x):
+    """Un prix exploitable : numérique et pas NaN. `not x` ne suffit pas car
+    NaN est truthy en Python — c'est ce qui a pollué les stats le 01/07/2026."""
+    return isinstance(x, (int, float)) and not isinstance(x, bool) and not math.isnan(x)
+
+
 def evaluer_performance_hier(perf, donnees_actuelles):
     if not perf["historique"]:
         return perf, "Première session. L'auto-évaluation commence dès demain."
@@ -1153,7 +1159,7 @@ def evaluer_performance_hier(perf, donnees_actuelles):
         score_hier = data.get("score")
         secteur   = data.get("secteur", "Autre")
 
-        if signal not in ["ACHETER", "ÉVITER"] or not prix_hier:
+        if signal not in ["ACHETER", "ÉVITER"] or not _prix_valide(prix_hier):
             continue
 
         d_auj = donnees_dict.get(nom)
@@ -1161,7 +1167,7 @@ def evaluer_performance_hier(perf, donnees_actuelles):
             continue
 
         prix_auj = d_auj.get("cours")
-        if not prix_auj:
+        if not _prix_valide(prix_auj):
             continue
 
         hausse   = prix_auj > prix_hier
@@ -1233,13 +1239,13 @@ def evaluer_performance_hier(perf, donnees_actuelles):
         signal    = data.get("signal")
         prix_hier = data.get("prix")
         secteur   = data.get("secteur", "Autre")
-        if signal not in ["ACHETER", "ÉVITER"] or not prix_hier:
+        if signal not in ["ACHETER", "ÉVITER"] or not _prix_valide(prix_hier):
             continue
         d_auj = donnees_dict.get(nom)
         if not d_auj:
             continue
         prix_auj = d_auj.get("cours")
-        if not prix_auj:
+        if not _prix_valide(prix_auj):
             continue
         hausse  = prix_auj > prix_hier
         correct = (signal == "ACHETER" and hausse) or (signal == "ÉVITER" and not hausse)

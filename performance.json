@@ -4117,45 +4117,45 @@
     }
   },
   "stats": {
-    "total": 305,
-    "corrects": 125,
-    "precision": 41.0,
-    "acheter_total": 202,
-    "acheter_corrects": 74,
-    "eviter_total": 103,
-    "eviter_corrects": 51,
+    "total": 211,
+    "corrects": 90,
+    "precision": 42.7,
+    "acheter_total": 142,
+    "acheter_corrects": 58,
+    "eviter_total": 69,
+    "eviter_corrects": 32,
     "par_secteur": {
       "Luxe": {
-        "total": 31,
-        "corrects": 8
+        "total": 22,
+        "corrects": 6
       },
       "Santé": {
-        "total": 28,
-        "corrects": 12
-      },
-      "Conso/Autre": {
-        "total": 52,
-        "corrects": 25
-      },
-      "Industrie/Défense": {
-        "total": 100,
-        "corrects": 42
-      },
-      "Télécom/Média": {
-        "total": 26,
+        "total": 21,
         "corrects": 9
       },
+      "Conso/Autre": {
+        "total": 39,
+        "corrects": 20
+      },
+      "Industrie/Défense": {
+        "total": 66,
+        "corrects": 29
+      },
+      "Télécom/Média": {
+        "total": 17,
+        "corrects": 6
+      },
       "Énergie": {
-        "total": 16,
-        "corrects": 3
+        "total": 11,
+        "corrects": 2
       },
       "Tech": {
-        "total": 22,
-        "corrects": 10
+        "total": 14,
+        "corrects": 6
       },
       "Banques/Finance": {
-        "total": 30,
-        "corrects": 16
+        "total": 21,
+        "corrects": 12
       }
     }
   },
