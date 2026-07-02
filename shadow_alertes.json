@@ -458,5 +458,15 @@
     "signal": "ACHETER",
     "raison": "Bootstrap depuis intraday_scores (alerte)",
     "envoyee": true
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "12:01",
+    "nom": "Edenred",
+    "cours": 22.72,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
