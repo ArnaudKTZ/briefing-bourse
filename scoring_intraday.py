@@ -37,6 +37,10 @@ DESTINATAIRES = [d.strip() for d in _dest_env.split(",") if d.strip()] if _dest_
 ALERTES_EMAIL_ACTIVES = False
 
 SEUIL_ALERTE         = 85
+# Poids News neutralisé le 02/07/2026 (même audit que le briefing : le sentiment
+# News n'a pas d'edge positif prouvé). Réactivation = remettre POIDS_NEWS à 4.
+# À retester vers le 02/08 avec un mois de données propres.
+POIDS_NEWS           = 0   # était 4
 FICHIER_ALERTES_VUE  = "alertes_envoyees.json"
 FICHIER_PORTEFEUILLE = "portefeuille_virtuel.json"
 FRAIS_TAUX           = 0.005
@@ -451,12 +455,12 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
         score += d_etf
         f["etf_sectoriel"] = d_etf
 
-        # Sentiment news
+        # Sentiment news (POIDS_NEWS=0 depuis l'audit du 02/07)
         d_news = 0
         if rapport_news:
             nd = rapport_news.get("valeurs", {}).get(nom, {})
             sentiment = nd.get("sentiment", 0)
-            d_news = int(sentiment * 4)
+            d_news = int(sentiment * POIDS_NEWS)
         score += d_news
         f["news"] = d_news
 
