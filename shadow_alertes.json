@@ -468,5 +468,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "15:21",
+    "nom": "LVMH",
+    "cours": 496.95,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.56%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "15:21",
+    "nom": "Airbus",
+    "cours": 202.5,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.58%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "15:21",
+    "nom": "Schneider Electric",
+    "cours": 277.8,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.13%",
+    "envoyee": false
   }
 ]
