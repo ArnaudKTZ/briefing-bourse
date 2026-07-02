@@ -498,5 +498,35 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.13%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "18:21",
+    "nom": "Sanofi",
+    "cours": 75.25,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "18:21",
+    "nom": "Engie",
+    "cours": 27.17,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-02",
+    "heure": "18:21",
+    "nom": "Veolia",
+    "cours": 36.49,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100 | Momentum intraday fort +2.01%",
+    "envoyee": false
   }
 ]
