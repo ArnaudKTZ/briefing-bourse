@@ -67,6 +67,7 @@ Une fois que je confirme, Claude met à jour le fichier en question et ajoute un
 ├── context/
 │   ├── CONTEXT.md               # Qui je suis, ce que je fais, mes objectifs
 │   ├── HISTORY.md               # Journal évolutif de mes sessions
+│   ├── ECHEANCES.md             # Tâches datées à venir, relues à chaque /prime
 │   └── import/                  # Documents externes à analyser
 ├── .claude/
 │   ├── commands/
@@ -96,9 +97,10 @@ Une fois que je confirme, Claude met à jour le fichier en question et ajoute un
 **Objectif :** Démarrer une nouvelle session avec contexte complet.
 
 À lancer au début de chaque session. Claude va :
-1. Lire CLAUDE.md, CONTEXT.md et HISTORY.md
+1. Lire CLAUDE.md, CONTEXT.md, HISTORY.md et ECHEANCES.md
 2. Résumer sa compréhension de qui je suis et où j'en suis
-3. Confirmer qu'il est prêt à m'aider
+3. **Me prévenir si une échéance de ECHEANCES.md est due ou dépassée** (filet anti-oubli)
+4. Confirmer qu'il est prêt à m'aider
 
 ### /update
 

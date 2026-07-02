@@ -26,9 +26,15 @@ On va mettre à jour ton contexte. Réponds simplement aux questions :
 ### Étape 2 : Analyser et proposer les modifications
 
 Pour chaque changement, identifie :
-- Quel(s) fichier(s) doivent être mis à jour : CLAUDE.md, CONTEXT.md, HISTORY.md
+- Quel(s) fichier(s) doivent être mis à jour : CLAUDE.md, CONTEXT.md, HISTORY.md, ECHEANCES.md
 - Quelle(s) section(s) précise(s) doivent être modifiées
 - Quelles modifications proposer
+
+**Important — capitaliser les tâches futures :** si la session a fait émerger une
+tâche, une évolution ou une décision à prendre à une date future (même approximative),
+tu DOIS l'ajouter à `context/ECHEANCES.md` au format `- [ ] AAAA-MM-JJ — description (projet)`.
+C'est ce fichier que `/prime` relit pour me prévenir des échéances. Ne pas l'y mettre
+= risque que je l'oublie. Coche `[x]` les échéances désormais réalisées.
 
 Présente un plan clair avant d'écrire :
 
