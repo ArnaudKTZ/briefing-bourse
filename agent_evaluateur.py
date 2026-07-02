@@ -39,9 +39,9 @@ ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
 ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
-_dest_env     = os.environ.get("DESTINATAIRES_HEBDO", "")
-DESTINATAIRES = ([d.strip() for d in _dest_env.split(",") if d.strip()]
-                 or ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"])
+# Rapports de mesure : destinataires fixes zoho + xtrem111 uniquement
+# (décision Arnaud 02/07, indépendant du secret DESTINATAIRES_HEBDO).
+DESTINATAIRES = ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"]
 
 FICHIER_PERFORMANCE = "performance.json"
 FICHIER_RAPPORT     = "evaluateur_rapport.json"
