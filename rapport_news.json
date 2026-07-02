@@ -1,15 +1,15 @@
 {
   "date": "2026-07-02",
-  "heure": "04:45",
+  "heure": "14:24",
   "marche": {
-    "sentiment_global": -0.25,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
+      "Sodexo bondit en Bourse après des ventes supérieures aux attentes au troisième trimestre",
+      "La Bourse de Paris en hausse avant l'emploi américain",
       "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent",
-      "La Bourse de Paris termine sur une note optimiste",
-      "La Bourse de Paris montre un appétit mesuré pour le risque",
-      "La Bourse de Paris termine la semaine en légère baisse, sauvée par ses valeurs traditionnelles"
+      "La Bourse de Paris termine sur une note optimiste"
     ]
   },
   "valeurs": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.1,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
+        "Airbus signe un accord technologique avec la plateforme gouvernementale ukrainienne Brave1",
         "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
-        "Après son avion à propulsion hybride-électrique, le Français Aura Aero dévoile son drone MALE multimission Enbata",
-        "Airbus : face au succès de l'A320, une nouvelle chaîne d'assemblage ouvre à Toulouse"
+        "Après son avion à propulsion hybride-électrique, le Français Aura Aero dévoile son drone MALE multimission Enbata"
       ]
     },
     "Schneider Electric": {
@@ -297,12 +297,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.15,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "Les actions européennes des semi-conducteurs bondissent après les résultats record de Micron",
-        "Les Bourses européennes clôturent en baisse, mais atténuent le coup de chaud sur la tech"
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
+        "Les actions européennes des semi-conducteurs bondissent après les résultats record de Micron"
       ]
     },
     "Dassault Systèmes": {
