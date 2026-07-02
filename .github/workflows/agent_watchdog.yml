@@ -34,4 +34,5 @@ jobs:
           git config user.email "actions@github.com"
           git add watchdog_log.json || true
           git diff --staged --quiet || git commit -m "Watchdog $(date +%Y-%m-%d\ %H:%M)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

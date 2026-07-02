@@ -36,6 +36,7 @@ jobs:
         run: |
           git config user.name "Agent Bourse"
           git config user.email "actions@github.com"
-          git add performance.json portefeuille_virtuel.json dernier_briefing.json data_quality_log.json || true
+          git add performance.json portefeuille_virtuel.json dernier_briefing.json data_quality_log.json costs_log.json || true
           git diff --staged --quiet || git commit -m "Performance update $(date +%Y-%m-%d)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

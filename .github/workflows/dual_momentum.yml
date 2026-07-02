@@ -35,6 +35,7 @@ jobs:
         run: |
           git config user.name "Agent Dual Momentum"
           git config user.email "actions@github.com"
-          git add dual_momentum_etat.json dual_momentum_statut.json || true
+          git add dual_momentum_etat.json dual_momentum_statut.json dual_momentum_portefeuille.json || true
           git diff --staged --quiet || git commit -m "Dual Momentum $(date +%Y-%m)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
