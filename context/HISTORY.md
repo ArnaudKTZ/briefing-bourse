@@ -17,7 +17,13 @@
 - Bug critique 2 : les trades intraday n'ont jamais existé — scoring_intraday.yml ne commitait pas portefeuille_virtuel.json, chaque décision intraday (stop-loss, take-profit, achats 80+) était perdue à chaque run. Même bug sur dual_momentum.yml (rééquilibrage mensuel du 01/07 perdu, point de valorisation 10136.94€ restauré) et briefing_bourse.yml (costs_log.json jamais commité, coûts Opus invisibles du rapport hebdo)
 - Bug majeur 3 : tous les workflows poussaient avec "|| true" sans se resynchroniser — un push rejeté = données silencieusement perdues. git pull --rebase ajouté avant chaque push dans les 8 workflows
 - Constat stratégique : précision ACHETER sous 50% + frais ~1% par aller-retour = le satellite détruit de la valeur en l'état. Points forts confirmés : Dual Momentum backtesté (le plus solide), agent Professeur avec garde-fou méta, séparation cœur/satellite
-- Décision en suspens (à trancher par Arnaud) : réduire ou non le budget par position du satellite (2000€) tant que la précision ACHETER reste sous 50%
+- Décision Arnaud : modèle V4 laissé en observation, mais alertes email achat/vente suspendues 1 mois (flag ALERTES_EMAIL_ACTIVES dans scoring_intraday.py), en reparler ~02/08 (rappel programmé). Pas de reprise automatique
+- Agent Shadow créé (vendredi 18h35) : contrefactuel des alertes suspendues — rejoue chaque alerte (2000€, frais inclus, sortie J+1/J+3/J+5) vs CAC. Journal permanent shadow_alertes.json alimenté par le scoring. Premier verdict sur les alertes réelles du 26/06-02/07 : NUISIBLES (-1.73% net à J+1, 21% gagnantes, -2.4 pts sous le CAC à J+3)
+- Agent Évaluateur créé (samedi 7h35) : mesure multi-horizons rétroactive — rendement ACHETER/ÉVITER à J+1/J+3/J+5/J+10 vs l'univers CAC40 le même jour (vrai benchmark) + buckets de score. Premier verdict : ACHETER +0.70 pts vs univers à J+5 et ÉVITER utiles, MAIS edge < frais et le score ne discrimine pas (bucket 85+ fait pire que 75-84)
+- Jobs cron-job.org créés pour Shadow et Evaluateur (Claude a pris la main sur Chrome, jobs testés 204, workflows GitHub vérifiés en succès). 10 jobs actifs au total
+- Décision en suspens (à trancher par Arnaud le 02/08) : réactivation des alertes + réduire ou non le budget par position du satellite (2000€ → 500€ ?)
+- Idées reportées avec raisons : Agent Dividendes PEA (quick win, n'importe quand), Agent Patrimoine global (session dédiée avec données réelles), Crypto Dual Momentum (après bilan 22/07, via harnais)
+- Spec mise à jour : docs/Architecture_Agent_Bourse_V5.html reflète tout (agents Shadow/Évaluateur, suspension, fiabilité données, persistance CI, rendez-vous 22/07 et 02/08)
 
 ---
 
