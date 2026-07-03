@@ -1,25 +1,31 @@
 {
-  "date": "2026-07-02",
-  "n_alertes": 50,
-  "n_achats": 42,
-  "en_attente": 9,
+  "date": "2026-07-03",
+  "n_alertes": 63,
+  "n_achats": 55,
+  "en_attente": 10,
   "stats": {
     "J+1": {
-      "n": 33,
-      "gagnants_pct": 27.3,
-      "moyenne_nette": -1.45,
-      "cac_moyen": 0.2,
-      "edge": -1.65
+      "n": 45,
+      "gagnants_pct": 35.6,
+      "moyenne_nette": -0.83,
+      "cac_moyen": 0.31,
+      "edge": -1.14
     },
     "J+3": {
-      "n": 13,
-      "gagnants_pct": 15.4,
-      "moyenne_nette": -2.55,
-      "cac_moyen": 0.05,
-      "edge": -2.6
+      "n": 23,
+      "gagnants_pct": 26.1,
+      "moyenne_nette": -1.2,
+      "cac_moyen": 0.62,
+      "edge": -1.82
     },
-    "J+5": null
+    "J+5": {
+      "n": 8,
+      "gagnants_pct": 50.0,
+      "moyenne_nette": -1.09,
+      "cac_moyen": 1.47,
+      "edge": -2.56
+    }
   },
-  "verdict": "NUISIBLES",
-  "verdict_txt": "Les alertes font -2.60 pts SOUS le CAC net de frais sur 13 cas. Les suivre aurait détruit de la valeur."
+  "verdict": "—",
+  "verdict_txt": "Seulement 8 alertes évaluables : trop peu pour conclure, on continue d'accumuler."
 }
