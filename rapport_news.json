@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "heure": "17:34",
+  "heure": "18:56",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
         "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse : Mise en ligne du document «Q2 2026 aide-mémoire »"
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
