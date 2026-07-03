@@ -1,8 +1,8 @@
 {
   "date": "2026-07-03",
-  "heure": "04:45",
+  "heure": "14:22",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
         "GROUPE BNP PARIBAS : descriptif du programme de rachat d'actions Avril",
-        "H.I.G. Capital nomme Carlos Couret au poste de directeur général et responsable de l'équipe Capital-investissement Marché intermédiaire inférieur en Espagne"
+        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur"
       ]
     },
     "Air Liquide": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.1,
+      "sentiment": -0.05,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "JLR vise une croissance à deux chiffres de son chiffre d’affaires à moyen terme",
-        "Stellantis rappelle plus d’un million de Jeep en raison d’un risque d’incendie"
+        "Stellantis dégradé par HSBC en raison de rappels en hausse",
+        "JLR vise une croissance à deux chiffres de son chiffre d’affaires à moyen terme"
       ]
     },
     "Saint-Gobain": {
@@ -297,7 +297,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
