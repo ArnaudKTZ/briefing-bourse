@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "heure": "14:22",
+  "heure": "17:34",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -122,7 +122,7 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.05,
+      "sentiment": 0.0,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
