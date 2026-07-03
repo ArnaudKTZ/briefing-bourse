@@ -196,5 +196,14 @@
     "input": 362,
     "output": 57,
     "usd": 0.000647
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "03:02",
+    "agent": "briefing",
+    "model": "claude-opus-4-8",
+    "input": 9588,
+    "output": 5254,
+    "usd": 0.17929
   }
 ]
