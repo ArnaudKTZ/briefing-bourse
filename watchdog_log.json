@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-02",
-  "heure": "14:31",
+  "date": "2026-07-03",
+  "heure": "05:30",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.10"
+      "msg": "OK — 20 articles, sentiment +0.00"
     },
     "Briefing 7h": {
       "ok": true,
