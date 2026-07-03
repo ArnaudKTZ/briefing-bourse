@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-02",
-  "heure": "19:21",
+  "date": "2026-07-03",
+  "heure": "04:45",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -104,7 +104,7 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
