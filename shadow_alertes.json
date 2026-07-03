@@ -528,5 +528,105 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 96/100 | Momentum intraday fort +2.01%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "LVMH",
+    "cours": 497.95,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.77%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Airbus",
+    "cours": 203.9,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.29%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Sanofi",
+    "cours": 75.25,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Safran",
+    "cours": 353.3,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Michelin",
+    "cours": 34.72,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +2.12%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Engie",
+    "cours": 27.17,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Veolia",
+    "cours": 36.49,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100 | Momentum intraday fort +2.01%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Dassault Systèmes",
+    "cours": 18.67,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.02%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Edenred",
+    "cours": 23.05,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100 | Momentum intraday fort +2.35%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-03",
+    "heure": "07:01",
+    "nom": "Thales",
+    "cours": 240.4,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100 | Momentum intraday fort +4.8%",
+    "envoyee": false
   }
 ]
