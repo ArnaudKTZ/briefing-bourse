@@ -1,62 +1,74 @@
 {
-  "date": "2026-07-02",
-  "n_jours": 10,
-  "n_obs": 389,
+  "date": "2026-07-04",
+  "n_jours": 11,
+  "n_obs": 428,
   "horizons": {
     "J+1": {
-      "univers_moy": -0.31,
+      "univers_moy": -0.05,
       "acheter": {
-        "n": 141,
-        "moy": -0.27,
-        "edge": 0.04
+        "n": 161,
+        "moy": 0.03,
+        "edge": 0.08
       },
       "eviter": {
-        "n": 69,
-        "moy": -0.15,
-        "edge": -0.16
+        "n": 74,
+        "moy": 0.15,
+        "edge": -0.2
       }
     },
     "J+3": {
-      "univers_moy": -0.66,
+      "univers_moy": -0.33,
       "acheter": {
-        "n": 96,
-        "moy": -0.42,
-        "edge": 0.24
+        "n": 118,
+        "moy": 0.09,
+        "edge": 0.42
       },
       "eviter": {
-        "n": 60,
-        "moy": -1.12,
-        "edge": 0.46
+        "n": 63,
+        "moy": -0.91,
+        "edge": 0.58
       }
     },
     "J+5": {
-      "univers_moy": -0.86,
+      "univers_moy": -0.5,
       "acheter": {
-        "n": 60,
-        "moy": -0.11,
-        "edge": 0.75
+        "n": 75,
+        "moy": 0.07,
+        "edge": 0.57
       },
       "eviter": {
-        "n": 45,
-        "moy": -1.3,
-        "edge": 0.44
+        "n": 54,
+        "moy": -0.75,
+        "edge": 0.25
       }
     },
-    "J+10": null
+    "J+10": {
+      "univers_moy": 0.72,
+      "acheter": {
+        "n": 7,
+        "moy": 0.51,
+        "edge": -0.21
+      },
+      "eviter": {
+        "n": 7,
+        "moy": 3.59,
+        "edge": -2.87
+      }
+    }
   },
   "buckets_j5": {
     "85+": {
-      "n": 21,
-      "moy": -1.24
+      "n": 26,
+      "moy": -0.73
     },
     "75-84": {
-      "n": 19,
-      "moy": 1.97
+      "n": 23,
+      "moy": 1.5
     },
     "65-74": {
-      "n": 20,
-      "moy": -0.89
+      "n": 26,
+      "moy": -0.41
     }
   },
-  "verdict": "Sur 60 ACHETER : les ACHETER battent l'univers de +0.75 pts à J+5 ; les ÉVITER sont utiles (+0.44 pts évités) ; le score ne discrimine PAS (85+ ne bat pas 65-74)."
+  "verdict": "Sur 75 ACHETER : les ACHETER battent l'univers de +0.57 pts à J+5 ; les ÉVITER sont utiles (+0.25 pts évités) ; le score ne discrimine PAS (85+ ne bat pas 65-74)."
 }
