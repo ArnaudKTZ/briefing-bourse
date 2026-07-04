@@ -1,7 +1,32 @@
 {
-  "date": "2026-06-27",
+  "date": "2026-07-04",
   "nb_articles": 40,
   "top": [
+    {
+      "titre": "Regime-Conditional Distributional Comparison of Trading Strategies: A GAMLSS/ZAGA Framework Applied to the S&P 500",
+      "lien": "https://arxiv.org/abs/2606.31251v1",
+      "date": "2026-06-30",
+      "score": 19,
+      "hits": [
+        "momentum",
+        "regime",
+        "walk-forward",
+        "out-of-sample",
+        "backtest"
+      ]
+    },
+    {
+      "titre": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following",
+      "lien": "https://arxiv.org/abs/2607.01550v1",
+      "date": "2026-07-02",
+      "score": 15,
+      "hits": [
+        "trend following",
+        "trend-following",
+        "cross-sectional",
+        "regime"
+      ]
+    },
     {
       "titre": "Continuous Hidden Markov Models for Equity Returns: Heavy-Tail Emission Families and Regime-Conditional Value-at-Risk",
       "lien": "https://arxiv.org/abs/2606.23492v1",
@@ -14,14 +39,37 @@
       ]
     },
     {
-      "titre": "Reinforcement Learning for Risk-Sensitive Investment Management: a Free Energy--Entropy Duality Approach",
-      "lien": "https://arxiv.org/abs/2606.20903v1",
-      "date": "2026-06-18",
-      "score": 10,
+      "titre": "End-to-End Parametric Portfolio Policies for Cross-Asset Futures Timing: When Do AI Models Beat Simple Rules?",
+      "lien": "https://arxiv.org/abs/2607.00475v1",
+      "date": "2026-07-01",
+      "score": 11,
       "hits": [
-        "asset allocation",
-        "portfolio allocation",
-        "reinforcement learning"
+        "momentum",
+        "risk parity",
+        "out-of-sample",
+        "transaction cost"
+      ]
+    },
+    {
+      "titre": "Heads, Not Backbones: Output Heads Dominate Architectures on Fat-Tailed Returns",
+      "lien": "https://arxiv.org/abs/2606.30037v1",
+      "date": "2026-06-29",
+      "score": 9,
+      "hits": [
+        "regime",
+        "walk-forward",
+        "tail risk"
+      ]
+    },
+    {
+      "titre": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+      "lien": "https://arxiv.org/abs/2606.29771v1",
+      "date": "2026-06-29",
+      "score": 8,
+      "hits": [
+        "backtest",
+        "llm",
+        "agent"
       ]
     },
     {
@@ -35,55 +83,13 @@
       ]
     },
     {
-      "titre": "Martingale Doppelgänger-Eval: An Identification Framework for Auditing Candlestick Understanding in Vision-Language Models",
-      "lien": "https://arxiv.org/abs/2606.17423v1",
-      "date": "2026-06-16",
+      "titre": "When large trades are not news: Liquidity tail risk and price discovery",
+      "lien": "https://arxiv.org/abs/2607.01198v1",
+      "date": "2026-07-01",
       "score": 7,
       "hits": [
         "regime",
-        "language model"
-      ]
-    },
-    {
-      "titre": "Empirical Confirmation of the Square-Root Law of Market Impact in a U.S. Large-Cap Equity",
-      "lien": "https://arxiv.org/abs/2606.24019v1",
-      "date": "2026-06-22",
-      "score": 6,
-      "hits": [
-        "factor",
-        "walk-forward"
-      ]
-    },
-    {
-      "titre": "Do Prediction Markets Match Option Prices? Bitcoin Threshold Evidence from Binance and Polymarket",
-      "lien": "https://arxiv.org/abs/2606.19517v1",
-      "date": "2026-06-17",
-      "score": 6,
-      "hits": [
-        "cross-sectional",
-        "transaction cost",
-        "robust"
-      ]
-    },
-    {
-      "titre": "Data-Driven Duration Management -- Term Structure Forecasting Using Machine Learning",
-      "lien": "https://arxiv.org/abs/2606.26815v1",
-      "date": "2026-06-25",
-      "score": 5,
-      "hits": [
-        "factor",
-        "robust",
-        "machine learning"
-      ]
-    },
-    {
-      "titre": "Diagonal Frog: High-order positivity-preserving FD schemes for anisotropic Fokker-Planck equations",
-      "lien": "https://arxiv.org/abs/2606.23980v1",
-      "date": "2026-06-22",
-      "score": 5,
-      "hits": [
-        "factor",
-        "regime"
+        "tail risk"
       ]
     }
   ]
