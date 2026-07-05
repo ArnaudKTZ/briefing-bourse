@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-07-05",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -10,39 +10,39 @@
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "45.7% précision (173 signaux)",
+      "metrique": "45.3% précision (236 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 45.7% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 45.7,
+      "verdict": "Précision 45.3% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 45.3,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "+1.0% (1 trades)",
+      "metrique": "+1.3% (7 trades)",
       "note": "—",
       "confiance": "faible",
-      "verdict": "PF +1.0% vs CAC -0.4% sur 6j : trop tôt.",
-      "valeur_suivie": 1.0
+      "verdict": "PF +1.3% vs CAC +1.0% sur 11j : trop tôt.",
+      "valeur_suivie": 1.3
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-06-26)",
+      "metrique": "actif (rapport du 2026-07-03)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     },
     {
       "agent": "Agent Espion",
-      "metrique": "actif (rapport du 2026-06-23)",
+      "metrique": "actif (rapport du 2026-07-02)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
   "evolution": {
-    "Briefing V4 (signaux)": 2.8,
-    "Portefeuille virtuel V4": 0.9
+    "Briefing V4 (signaux)": -0.4,
+    "Portefeuille virtuel V4": 0.3
   },
   "doutes_meta": [],
   "historique": [
@@ -95,6 +95,41 @@
           "agent": "Portefeuille virtuel V4",
           "note": "—",
           "valeur": 1.0,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent Espion",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 45.3,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "—",
+          "valeur": 1.3,
           "meta_borne": false
         },
         {
