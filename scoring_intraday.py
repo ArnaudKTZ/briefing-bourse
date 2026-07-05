@@ -183,9 +183,13 @@ def recuperer_contexte_global():
         vix = yf.Ticker("^VIX").history(period="2d")
         if not vix.empty:
             vix_val = round(float(vix["Close"].iloc[-1]), 1)
-            if vix_val > 35:    malus -= 20; infos.append(f"VIX EXTRÊME {vix_val}")
-            elif vix_val > 25:  malus -= 12; infos.append(f"VIX élevé {vix_val}")
-            elif vix_val > 20:  malus -= 5;  infos.append(f"VIX modéré {vix_val}")
+            # Malus VIX retiré le 05/07 suite à l'audit (audit_malus_vix.py, 6590 jours
+            # 2000-2026) : un VIX élevé précède des rendements CAC SUPÉRIEURS à J+5
+            # (+0.29% vs +0.08%), et le ratio rendement/volatilité reste meilleur en
+            # VIX > 25. Le malus pénalisait pile les fenêtres de rebond, comme le F&G.
+            # VIX conservé comme info contextuelle et pour la détection de régime.
+            if vix_val > 35:    infos.append(f"VIX EXTRÊME {vix_val} (info, sans malus)")
+            elif vix_val > 25:  infos.append(f"VIX élevé {vix_val} (info, sans malus)")
     except Exception: pass
     try:
         url = "https://api.alternative.me/fng/?limit=1"
