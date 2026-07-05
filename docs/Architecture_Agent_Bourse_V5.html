@@ -115,12 +115,12 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <div class="card">
     <div class="card-title">Briefing V4 <span class="badge badge-v4">SATELLITE</span></div>
     <div class="card-freq">1×/jour — 7h</div>
-    <div class="card-body">Le journal du marché (info + poche satellite). 20+ indicateurs → 1 appel Claude → email. Affiche en bandeau la position Dual Momentum du cœur. Portefeuille virtuel 10 000€ suivi et comparé au CAC 40 depuis le 19/06. Noté [E] par le Professeur : info, pas décision sérieuse.</div>
+    <div class="card-body">Le journal du marché (info + poche satellite). 20+ indicateurs → 1 appel Claude → email. Section Cœur Dual Momentum enrichie le 05/07 : gain/perte en € par position et historique mensuel vs World buy &amp; hold. Portefeuille virtuel 10 000€ suivi et comparé au CAC 40 depuis le 19/06. <strong>Malus VIX retiré le 05/07</strong> après audit (<code>audit_malus_vix.py</code>, 6 590 jours 2000-2026) : un VIX élevé précède des rendements CAC supérieurs à J+5, même corrigé du risque — le malus pénalisait pile les fenêtres de rebond, comme le F&amp;G retiré le 26/06. VIX gardé en info. Noté [E] par le Professeur : info, pas décision sérieuse.</div>
   </div>
   <div class="card">
     <div class="card-title">Scoring intraday <span class="badge badge-v4">SATELLITE</span></div>
     <div class="card-freq">4×/jour — 9h/11h30/14h/16h</div>
-    <div class="card-body">Recalcul + rotation ETF + détection d'alertes (score ≥85, gap+volume, momentum). Détection de régime macro (Claude Haiku, 1 appel/run) → pondération dynamique des facteurs. <strong>Alertes email SUSPENDUES depuis le 02/07</strong> (modèle non validé, décision ~02/08) : la détection continue et tout est journalisé dans <code>shadow_alertes.json</code> pour l'agent Shadow.</div>
+    <div class="card-body">Recalcul + rotation ETF + détection d'alertes (score ≥85, gap+volume, momentum). Détection de régime macro (Claude Haiku, 1 appel/run) → pondération dynamique des facteurs. <strong>Alertes email SUSPENDUES depuis le 02/07</strong> (modèle non validé, décision ~02/08) : la détection continue et tout est journalisé dans <code>shadow_alertes.json</code> pour l'agent Shadow. <strong>Malus VIX retiré le 05/07</strong> (même audit que le briefing), VIX gardé en info et pour le régime macro.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent Shadow <span class="badge badge-gouv">MESURE</span></div>
@@ -146,6 +146,11 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
     <div class="card-title">Agent Watchdog <span class="badge badge-v4">V4</span></div>
     <div class="card-freq">1×/jour — 7h30</div>
     <div class="card-body">Surveille que les agents ont tourné (lit dernier_briefing.json). Alerte email si anomalie.</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Agent Dividendes PEA <span class="badge badge-gouv">INFO</span></div>
+    <div class="card-freq">1×/semaine — Lundi 8h05</div>
+    <div class="card-body">Le calendrier factuel des détachements CAC 40 (créé le 05/07). Rendement 12 mois glissants (dividendes réellement versés / cours), détachements à venir sous ~5 semaines (date Yahoo confirmée sinon estimation par anniversaire, étiquetée), dernier détachement par valeur. 100% factuel, aucun signal de trading, aucun poids dans les scores. Gratuit, sans API.</div>
   </div>
 </div>
 
@@ -184,6 +189,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td>Dual Momentum (cœur)</td><td>1er du mois</td><td>3</td></tr>
   <tr><td><strong>Shadow (contrefactuel alertes)</strong></td><td>vendredi 18h35</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Évaluateur (edge multi-horizons)</strong></td><td>samedi 7h35</td><td>2 (zoho + xtrem111)</td></tr>
+  <tr><td><strong>Dividendes PEA (calendrier)</strong></td><td>lundi 8h05</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Veille (éclaireur)</strong></td><td>samedi 9h</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Professeur (bilan)</strong></td><td>dimanche 18h</td><td>2 (zoho + xtrem111)</td></tr>
 </table>
@@ -217,7 +223,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <div class="phase phase-2">
   <h3>Moyen terme</h3>
   <ul>
-    <li>Agent Dividendes PEA : calendrier des détachements CAC 40, rendements — 100% factuel, zéro modèle à valider (quick win)</li>
+    <li><del>Agent Dividendes PEA</del> — FAIT le 05/07 (voir la carte agent ci-dessus)</li>
     <li>Agent Patrimoine global : raisonner patrimoine entier (PEA réel, seuil fiscal 5 ans, DCA, épargne, projets) — nécessite une session dédiée avec les données réelles</li>
     <li>Crypto Dual Momentum (BTC/ETH/SOL, refuge stablecoin) : l'airbag momentum vaut le plus sur cette classe d'actifs — à valider via le harnais</li>
     <li>Agent Data Quality complet : distinguer « donnée manquante » de « vrai neutre », bloquer le signal si données pourries (premier étage posé le 02/07 avec data_quality_log)</li>

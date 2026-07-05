@@ -1036,15 +1036,14 @@ def recuperer_contexte_macro():
     malus = 0
     vix = ctx["vix"]
     if vix is not None:
+        # Malus VIX retiré le 05/07 suite à l'audit (audit_malus_vix.py, 6590 jours
+        # 2000-2026) : un VIX élevé précède des rendements CAC SUPÉRIEURS à J+5, même
+        # corrigé du risque. Le malus pénalisait pile les fenêtres de rebond, comme
+        # le F&G retiré le 26/06. VIX conservé comme info contextuelle uniquement.
         if vix > 35:
-            malus -= 20
-            ctx["alerte_macro"].append(f"VIX EXTRÊME ({vix}) — marché en panique")
+            ctx["alerte_macro"].append(f"VIX EXTRÊME ({vix}) — marché en panique (info, sans malus)")
         elif vix > 25:
-            malus -= 12
-            ctx["alerte_macro"].append(f"VIX élevé ({vix}) — stress de marché")
-        elif vix > 20:
-            malus -= 5
-            ctx["alerte_macro"].append(f"VIX modéré ({vix})")
+            ctx["alerte_macro"].append(f"VIX élevé ({vix}) — stress de marché (info, sans malus)")
 
     eurusd_var = ctx.get("eurusd_var")
     if eurusd_var is not None and abs(eurusd_var) > 0.8:
@@ -1855,10 +1854,11 @@ def valoriser_portefeuille_dm():
             pf = json.load(f)
         uw, uu, cash = pf.get("units_world", 0), pf.get("units_usa", 0), pf.get("cash", 0)
         date_init = pf.get("date_init", "")
+        capital   = pf.get("capital_depart", 10000)
         cw8 = float(yf.Ticker("CW8.PA").history(period="5d")["Close"].dropna().iloc[-1])
         ese = float(yf.Ticker("ESE.PA").history(period="5d")["Close"].dropna().iloc[-1])
         valeur = uw * cw8 + uu * ese + cash
-        perf = (valeur - 10000) / 10000 * 100
+        perf = (valeur - capital) / capital * 100
         # Référence : World buy & hold depuis le départ
         hist = yf.Ticker("CW8.PA").history(start=date_init)["Close"].dropna()
         perf_world = (cw8 / float(hist.iloc[0]) - 1) * 100 if len(hist) else None
@@ -1881,6 +1881,17 @@ def valoriser_portefeuille_dm():
             c = "#2e7d32" if d >= 0 else "#c62828"
             return f"<span style='color:{c};font-size:11px;'>({'+' if d >= 0 else ''}{d:.2f}€)</span>"
 
+        def cell_gain(cours_actuel, prix_achat, parts):
+            if prix_achat is None or prix_achat == 0 or not parts:
+                return "<td style='padding:5px 8px;text-align:right;color:#888;'>—</td>"
+            g = (cours_actuel - prix_achat) * parts
+            p = (cours_actuel / prix_achat - 1) * 100
+            c = "#2e7d32" if g >= 0 else "#c62828"
+            return (f"<td style='padding:5px 8px;text-align:right;color:{c};font-weight:600;'>"
+                    f"{'+' if g >= 0 else ''}{g:.0f}€ ({'+' if p >= 0 else ''}{p:.2f}%)</td>")
+
+        gain_total = valeur - capital
+
         tableau_pf = (
             f"<table style='margin-top:8px;width:100%;border-collapse:collapse;font-size:13px;'>"
             f"<thead><tr style='background:#f1f8f4;'>"
@@ -1889,6 +1900,7 @@ def valoriser_portefeuille_dm():
             f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Prix achat</th>"
             f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Cours actuel</th>"
             f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Valeur</th>"
+            f"<th style='padding:5px 8px;text-align:right;color:#555;font-weight:600;'>Gain/perte</th>"
             f"</tr></thead><tbody>"
             f"<tr style='border-top:1px solid #ddd;'>"
             f"<td style='padding:5px 8px;'>World (CW8.PA)</td>"
@@ -1896,6 +1908,7 @@ def valoriser_portefeuille_dm():
             f"<td style='padding:5px 8px;text-align:right;color:#888;'>{f'{px_world:.2f}€' if px_world else '—'}</td>"
             f"<td style='padding:5px 8px;text-align:right;'>{cw8:.2f}€ {delta_cours(cw8, px_world)}</td>"
             f"<td style='padding:5px 8px;text-align:right;'>{val_world:.0f}€</td>"
+            f"{cell_gain(cw8, px_world, uw)}"
             f"</tr>"
             f"<tr style='border-top:1px solid #ddd;'>"
             f"<td style='padding:5px 8px;'>USA (ESE.PA)</td>"
@@ -1903,12 +1916,13 @@ def valoriser_portefeuille_dm():
             f"<td style='padding:5px 8px;text-align:right;color:#888;'>{f'{px_usa:.2f}€' if px_usa else '—'}</td>"
             f"<td style='padding:5px 8px;text-align:right;'>{ese:.2f}€ {delta_cours(ese, px_usa)}</td>"
             f"<td style='padding:5px 8px;text-align:right;'>{val_usa:.0f}€</td>"
+            f"{cell_gain(ese, px_usa, uu)}"
             f"</tr>"
             f"<tr style='border-top:2px solid #1d9e75;background:#f1f8f4;font-weight:600;'>"
             f"<td style='padding:5px 8px;' colspan='4'>Total</td>"
-            f"<td style='padding:5px 8px;text-align:right;'>"
-            f"<span style='color:{coul};'>{'+' if perf >= 0 else ''}{perf:.2f}%</span>"
-            f" — <strong>{valeur:.0f}€</strong>"
+            f"<td style='padding:5px 8px;text-align:right;'><strong>{valeur:.0f}€</strong></td>"
+            f"<td style='padding:5px 8px;text-align:right;color:{coul};'>"
+            f"{'+' if gain_total >= 0 else ''}{gain_total:.0f}€ ({'+' if perf >= 0 else ''}{perf:.2f}%)"
             f"</td></tr>"
             f"</tbody></table>"
         )
@@ -1924,7 +1938,48 @@ def valoriser_portefeuille_dm():
             f"<p style='margin:6px 0 0;font-size:13px;color:#555;'>Portefeuille virtuel V5 "
             f"depuis le {date_init[8:10]}/{date_init[5:7]}{ref}</p>"
         )
-        return tableau_pf + resume_pf
+
+        # Historique mensuel : le point du départ, chaque 1er du mois (posé par le
+        # rééquilibrage Dual Momentum), et aujourd'hui, comparés au World buy & hold.
+        tableau_histo = ""
+        histo = pf.get("historique_valeur", {})
+        if len(hist) and histo:
+            cw8_init   = float(hist.iloc[0])
+            dates_cw8  = [d.strftime("%Y-%m-%d") for d in hist.index]
+            points = [(d, v) for d, v in sorted(histo.items())
+                      if d == date_init or d.endswith("-01")]
+            aujourdhui = datetime.date.today().isoformat()
+            if not points or points[-1][0] != aujourdhui:
+                points.append((aujourdhui, valeur))
+            lignes_histo = ""
+            for d, v in points:
+                idx = [i for i, dc in enumerate(dates_cw8) if dc <= d]
+                if not idx:
+                    continue
+                wbh   = capital * float(hist.iloc[idx[-1]]) / cw8_init
+                ecart = (v - wbh) / capital * 100
+                ce = "#2e7d32" if ecart >= 0 else "#c62828"
+                lignes_histo += (
+                    f"<tr style='border-top:1px solid #ddd;'>"
+                    f"<td style='padding:4px 8px;'>{d[8:10]}/{d[5:7]}</td>"
+                    f"<td style='padding:4px 8px;text-align:right;'>{v:.0f}€</td>"
+                    f"<td style='padding:4px 8px;text-align:right;color:#888;'>{wbh:.0f}€</td>"
+                    f"<td style='padding:4px 8px;text-align:right;color:{ce};font-weight:600;'>"
+                    f"{'+' if ecart >= 0 else ''}{ecart:.2f} pts</td></tr>"
+                )
+            if lignes_histo:
+                tableau_histo = (
+                    f"<table style='margin-top:8px;width:80%;border-collapse:collapse;font-size:12px;'>"
+                    f"<thead><tr style='background:#f1f8f4;'>"
+                    f"<th style='padding:4px 8px;text-align:left;color:#555;font-weight:600;'>Date</th>"
+                    f"<th style='padding:4px 8px;text-align:right;color:#555;font-weight:600;'>Cœur DM</th>"
+                    f"<th style='padding:4px 8px;text-align:right;color:#555;font-weight:600;'>World B&amp;H</th>"
+                    f"<th style='padding:4px 8px;text-align:right;color:#555;font-weight:600;'>Écart</th>"
+                    f"</tr></thead><tbody>{lignes_histo}</tbody></table>"
+                    f"<p style='margin:4px 0 0;font-size:11px;color:#999;'>Points mensuels (1er du mois) "
+                    f"et aujourd'hui. World B&amp;H = {capital:.0f}€ placés sur CW8 le {date_init[8:10]}/{date_init[5:7]} sans rien faire.</p>"
+                )
+        return tableau_pf + resume_pf + tableau_histo
     except Exception as e:
         print(f"  WARN valorisation portefeuille V5 : {e}")
         return ""

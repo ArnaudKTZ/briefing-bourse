@@ -16,12 +16,11 @@
 
 ## Sans date ferme (à sortir quand le moment est bon)
 
-- [ ] Audit du malus VIX dans le scoring (même méthode que l'audit Fear&Greed du 26/06 qui l'avait fait retirer). (Agent Bourse)
-- [ ] Agent Dividendes PEA : calendrier des détachements CAC 40, rendements. Quick win, 100% factuel. (Agent Bourse)
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
 - [ ] Crypto Dual Momentum (BTC/ETH/SOL) : à valider via le harnais avant prod. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
 
 ## Fait
 
+- [x] 2026-07-05 — Audit malus VIX : retiré (contre-productif sur 26 ans, comme le F&G). IC Spearman + régime MM200 ajoutés à l'Évaluateur. Agent Dividendes PEA créé. Tableau Cœur DM enrichi (gain/perte €, historique mensuel).
 - [x] 2026-07-02 — Audit complet Agent Bourse, 3 bugs critiques corrigés, agents Shadow + Évaluateur créés, poids News/Espion neutralisés.
