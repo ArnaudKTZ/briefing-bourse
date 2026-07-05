@@ -46,8 +46,16 @@
 <body>
 
 <h1>Architecture Agent Bourse — Entreprise d'agents</h1>
-<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 02/07/2026<br>
+<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 05/07/2026<br>
 Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change le modèle de fond.</p>
+
+<div class="ok">
+  <strong>Lecteur non initié ?</strong> Trois annexes en fin de document sont écrites pour vous :
+  <a href="#annexe-a">Annexe A</a> (comment ça marche et qui fait quoi, sans jargon),
+  <a href="#annexe-b">Annexe B</a> (chaque concept du système expliqué simplement),
+  <a href="#annexe-c">Annexe C</a> (glossaire des termes de bourse et d'informatique).
+  Les chapitres 0 à 7 restent la spécification technique.
+</div>
 
 <h2>0. Le virage du 25/06 — pourquoi ce document change</h2>
 
@@ -256,9 +264,152 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <strong>L'ancre lucide :</strong> aucun agent ne triplera les revenus par le trading. Le système apporte une base solide, un risque maîtrisé, la capture des rares vraies bonnes idées validées, et zéro décision émotionnelle. Le triplement des revenus viendra de la carrière, de KTZ71 et de l'investissement discipliné sur la durée.
 </div>
 
+<h2 id="annexe-a">Annexe A — Comment ça marche et qui fait quoi, sans jargon</h2>
+
+<p>Cette annexe ne contient rien de nouveau : elle réexplique les chapitres précédents pour un lecteur qui ne connaît ni la bourse ni l'informatique.</p>
+
+<h3>A.1 L'image d'ensemble</h3>
+<p>Imaginez une petite entreprise de douze employés numériques qui travaille pour un patron humain. Chaque employé est un « robot » : un petit programme qui se réveille à heure fixe, fait un travail précis, envoie un email, et se rendort. <strong>Aucun employé ne touche à l'argent.</strong> Ils lisent les cours de bourse, calculent, mesurent, et écrivent des rapports. Le patron (Arnaud) lit les rapports et décide. S'il veut acheter ou vendre, il le fait lui-même, à la main, sur son compte Boursobank. Le système conseille et surveille, il n'exécute jamais.</p>
+
+<h3>A.2 Comment un robot fonctionne, étape par étape</h3>
+<ul>
+  <li><strong>1. Le réveil sonne.</strong> Un service de réveil sur internet (cron-job.org) déclenche chaque robot à son heure : 7h pour le journal du matin, le 1er du mois pour le gérant du cœur, etc.</li>
+  <li><strong>2. Un ordinateur s'allume dans le cloud.</strong> Le réveil prévient GitHub, un site qui garde le code du système et prête des ordinateurs à la demande. Une machine démarre, charge le programme, et l'exécute.</li>
+  <li><strong>3. Le robot va chercher les cours.</strong> Il télécharge gratuitement les prix des actions depuis Yahoo Finance, le même service que n'importe qui peut consulter.</li>
+  <li><strong>4. Il calcule et prend des notes.</strong> Il fait ses calculs, puis écrit ses résultats dans des petits fichiers texte (ses « cahiers ») qui sont archivés sur GitHub. La fois suivante, il relit ses cahiers et reprend là où il en était. Rien ne se perd.</li>
+  <li><strong>5. Il envoie son email et la machine s'éteint.</strong> Coût total : quasiment rien. Seuls deux robots demandent de l'aide à une intelligence artificielle (Claude) pour <em>rédiger</em> leur rapport en bon français. L'IA raconte, elle ne décide jamais rien.</li>
+</ul>
+
+<h3>A.3 Qui fait quoi — le trombinoscope</h3>
+<table>
+  <tr><th>Agent</th><th>Son métier</th><th>Ce qu'il fait, en clair</th></tr>
+  <tr><td><strong>Dual Momentum</strong></td><td>Le gérant du cœur</td><td>Une fois par mois, il regarde ce qui a le mieux monté depuis un an (marché mondial ou marché américain), garde le plus fort, et met tout à l'abri en liquidités si tout baisse. Son email dit « rien à faire » ou « il faut basculer ». C'est lui qui guide l'essentiel du capital.</td></tr>
+  <tr><td><strong>Briefing</strong></td><td>Le journaliste du matin</td><td>Chaque matin à 7h, il envoie le journal : état du marché, note sur 100 pour chacune des 39 valeurs du CAC 40, position du cœur, portefeuilles d'entraînement. Il informe, il ne décide rien.</td></tr>
+  <tr><td><strong>Scoring intraday</strong></td><td>La vigie</td><td>Quatre fois par jour, il re-note les 39 valeurs et guette les mouvements brusques. Ses alertes « achetez / vendez » sont suspendues le temps de prouver qu'elles rapportent plus qu'elles ne coûtent.</td></tr>
+  <tr><td><strong>News</strong></td><td>Le lecteur de presse</td><td>Trois fois par jour, il lit les titres de la presse financière et note l'ambiance (bonne ou mauvaise nouvelle) pour chaque valeur. Mesuré sur ses résultats, son avis n'apportait rien : il ne compte plus dans les notes, mais il continue d'observer.</td></tr>
+  <tr><td><strong>Espion</strong></td><td>Le détective</td><td>Il essaie de voir où va l'argent des gros investisseurs. Ses sources se sont révélées vides pour les valeurs françaises : son avis est neutralisé aussi.</td></tr>
+  <tr><td><strong>Watchdog</strong></td><td>Le veilleur de nuit</td><td>Chaque matin, il vérifie que tous les autres ont bien fait leur travail et donne l'alerte si l'un d'eux n'a pas tourné.</td></tr>
+  <tr><td><strong>Shadow</strong></td><td>Le comptable du « et si »</td><td>Chaque vendredi, il calcule ce qui se serait passé si on avait suivi les alertes suspendues, frais de courtage compris. Verdict jusqu'ici : on aurait perdu de l'argent.</td></tr>
+  <tr><td><strong>Évaluateur</strong></td><td>Le contrôleur qualité</td><td>Chaque samedi, il vérifie si les conseils ACHETER et ÉVITER font vraiment mieux que la moyenne du marché quelques jours plus tard, et si les notes sur 100 veulent dire quelque chose.</td></tr>
+  <tr><td><strong>Professeur</strong></td><td>Le manager</td><td>Chaque dimanche, il note chaque agent de A à E sur ses résultats réels et propose des améliorations. Il ne modifie jamais rien lui-même : il propose, le patron décide.</td></tr>
+  <tr><td><strong>Veille</strong></td><td>L'éclaireur</td><td>Chaque samedi, il parcourt les publications des meilleurs chercheurs en finance et rapporte les idées qui pourraient nous servir. Aucune idée n'est adoptée sans passer l'examen (voir le Harnais).</td></tr>
+  <tr><td><strong>Dividendes</strong></td><td>Le calendrier des paies</td><td>Chaque lundi, il liste quels dividendes vont bientôt être versés et ce que chaque valeur a rapporté en dividendes sur un an. Information pure, aucun conseil.</td></tr>
+  <tr><td><strong>Harnais</strong></td><td>L'examen d'entrée</td><td>Pas un robot à heure fixe : c'est le banc d'essai qu'on lance à la demande. Toute nouvelle idée doit y prouver qu'elle marche sur des données qu'elle n'a jamais vues, frais compris, avant d'entrer en production.</td></tr>
+</table>
+
+<h3>A.4 Qui décide quoi</h3>
+<p>Trois niveaux, jamais court-circuités : <strong>les agents proposent</strong> (rapports, notes, idées), <strong>la recette juge</strong> (l'examen du Harnais élimine les fausses bonnes idées), <strong>le patron décide</strong> (Arnaud valide, achète, vend, ou ne fait rien). Rien n'est jamais acheté ou vendu automatiquement.</p>
+
+<h2 id="annexe-b">Annexe B — Les concepts du système expliqués simplement</h2>
+
+<h3>B.1 Les deux poches (cœur et satellite)</h3>
+<p>Le capital est coupé en deux, comme un budget de ménage. L'essentiel (~85%, le <strong>cœur</strong>) est confié à une stratégie lente et prouvée qu'on ne touche qu'une fois par mois. Une petite poche (~15-20% maximum, le <strong>satellite</strong>) sert de terrain de jeu pour chasser les opportunités et apprendre. Les deux poches sont étanches : même un désastre complet du terrain de jeu ne peut pas entamer le cœur.</p>
+
+<h3>B.2 Le momentum et le Dual Momentum</h3>
+<p>Le <strong>momentum</strong>, c'est l'observation, vérifiée sur plus d'un siècle de données, que ce qui monte depuis plusieurs mois a un peu plus de chances de continuer à monter que le reste. Le <strong>Dual Momentum</strong> l'applique deux fois : on compare deux marchés (mondial et américain) et on garde le plus fort (momentum <em>relatif</em>) ; puis on vérifie que ce gagnant monte vraiment dans l'absolu, sinon on se met à l'abri en liquidités (momentum <em>absolu</em>). Notre version est volontairement prudente : la moitié du capital reste en permanence sur le marché mondial, seule l'autre moitié tourne. Pourquoi un rythme mensuel ? Parce que la recherche récente montre que les stratégies rapides (quelques jours) ont perdu leur avantage depuis 2009, alors que les stratégies lentes survivent.</p>
+
+<h3>B.3 Le buy &amp; hold, l'adversaire à respecter</h3>
+<p>Acheter et ne plus jamais toucher : c'est la stratégie la plus bête du monde, et l'une des plus dures à battre. Toute stratégie doit se comparer à elle. Verdict honnête chez nous : notre cœur ne la bat <em>pas</em> en rendement, il fait mieux en <em>risque</em> (les chutes sont moins profondes). C'est un airbag, pas un accélérateur.</p>
+
+<h3>B.4 La « recette » : l'examen avec des questions jamais vues</h3>
+<p>Un <strong>backtest</strong>, c'est rejouer une stratégie sur le passé pour voir ce qu'elle aurait donné. Le piège : si on règle la stratégie sur ce passé puis qu'on la « teste » sur le même passé, c'est comme donner à un élève les questions ET les réponses avant l'examen. Réussir ne prouve rien. Notre recette (le <strong>walk-forward hors-échantillon</strong>) sépare strictement : on règle sur une période, on teste sur la période suivante que la stratégie n'a jamais vue, frais compris, et on recommence en avançant. C'est cet examen qui a dégonflé notre Dual Momentum (de « écrase le marché » à « ne le bat pas mais réduit le risque ») et fait rejeter l'ajout des marchés émergents. La quasi-totalité des études d'IA-trading publiées échouent à cette rigueur : c'est là qu'est notre avantage, pas dans plus d'intelligence.</p>
+
+<h3>B.5 Le look-ahead : la triche involontaire</h3>
+<p>Utiliser, dans un calcul, une information qu'on n'aurait pas pu connaître au moment de la décision (par exemple le cours de clôture du soir pour décider le matin même). Ça gonfle artificiellement tous les résultats et c'est l'erreur la plus répandue des backtests amateurs. Notre recette l'interdit par construction.</p>
+
+<h3>B.6 Le benchmark honnête : se comparer au marché, pas à zéro</h3>
+<p>Dire « mes conseils d'achat gagnent 55% du temps » ne veut rien dire si le marché monte 55% des jours : un singe qui dit toujours « achetez » aurait le même score. On compare donc chaque conseil à la moyenne de <em>toutes</em> les valeurs du CAC 40 le même jour (« l'univers »). Le vrai talent, c'est faire mieux que cette moyenne, pas mieux que zéro.</p>
+
+<h3>B.7 L'edge et les frais : le péage qui mange tout</h3>
+<p>L'<strong>edge</strong>, c'est le petit avantage mesurable au-dessus du marché. Chaque achat-revente coûte environ 1% de frais : un péage. Un conseil qui rapporte +0,7% de mieux que le marché mais coûte 1% de péage fait <em>perdre</em> de l'argent. C'est exactement la situation actuelle du satellite, mesurée noir sur blanc : un petit talent réel, insuffisant pour payer le péage.</p>
+
+<h3>B.8 Le score et les buckets : la note doit vouloir dire quelque chose</h3>
+<p>Chaque valeur reçoit chaque jour une note de 0 à 100, fabriquée à partir d'indicateurs techniques. Pour vérifier que la note a un sens, on regroupe les conseils par tranches de notes (les <strong>buckets</strong> : 65-74, 75-84, 85 et plus) et on vérifie que les meilleures notes donnent les meilleurs résultats. Aujourd'hui ce n'est pas le cas : les valeurs notées 85+ font <em>moins bien</em> que celles notées 75-84. Une note qui ne classe pas est une note décorative.</p>
+
+<h3>B.9 L'IC de Spearman : le test du professeur</h3>
+<p>Un bon professeur sait prédire le classement de ses élèves à l'examen. Chaque matin, notre système classe les 39 valeurs par note ; cinq jours de bourse plus tard, on compare ce classement au classement réel des performances. La ressemblance entre les deux classements s'appelle l'<strong>IC</strong> (Information Coefficient) : 0 = aucun talent de prédiction, 0,05 = talent exploitable par un professionnel. Notre score affiche 0,02 : autant dire rien. C'est LA mesure qui tranchera le sort du satellite le 02/08.</p>
+
+<h3>B.10 Les régimes de marché : la météo</h3>
+<p>On compare le CAC 40 à sa moyenne des 200 derniers jours. Au-dessus : temps calme (marché <em>haussier</em>). En dessous : tempête (marché <em>baissier</em>). Pourquoi c'est important : un conseil peut être inutile par beau temps et précieux par tempête, ou l'inverse. On mesure donc les résultats séparément dans chaque météo, au lieu d'une seule moyenne qui mélange tout.</p>
+
+<h3>B.11 Le contrefactuel : juger sans risquer un euro</h3>
+<p>« Et si on avait suivi les alertes ? » L'agent Shadow rejoue chaque alerte comme si on avait réellement mis 2 000€ dessus, frais compris, et compare au CAC 40. On obtient un verdict chiffré (utiles / neutres / nuisibles) sans avoir risqué d'argent réel. C'est ce qui permet de suspendre une fonctionnalité tout en continuant de la juger.</p>
+
+<h3>B.12 Les portefeuilles virtuels : l'argent d'entraînement</h3>
+<p>Deux portefeuilles fictifs de 10 000€, gérés exactement comme du vrai argent (un pour le cœur, un pour le satellite), valorisés chaque jour aux cours réels. Ils mesurent ce que le système <em>aurait fait</em> gagner ou perdre, avant d'y mettre un seul euro réel.</p>
+
+<h3>B.13 Le trio du risque : drawdown, volatilité, Sharpe</h3>
+<p>Le <strong>drawdown</strong> est la pire dégringolade entre un sommet et le creux qui suit : c'est ce qu'on ressent dans le ventre (« j'ai perdu un quart de mon argent »). La <strong>volatilité</strong> est l'amplitude des secousses au quotidien. Le <strong>ratio de Sharpe</strong> est le rendement obtenu par unité de secousse subie : gagner 10% tranquillement vaut mieux que gagner 10% en montagnes russes. Le cœur du système est optimisé pour ce trio, pas pour le rendement brut.</p>
+
+<h3>B.14 Le fil rouge : mesurer avant de croire</h3>
+<p>L'indice de peur crypto (Fear &amp; Greed), la jauge de nervosité américaine (VIX), le sentiment de presse (News), l'argent institutionnel (Espion) : quatre idées de bon sens, le genre de réglage que tout le monde ajoute « parce que c'est logique ». Mesurées une à une sur les données réelles, <strong>aucune n'apportait rien</strong>, et certaines nuisaient (le malus VIX pénalisait les achats pile dans les fenêtres de rebond). Toutes ont été neutralisées, en gardant la collecte pour pouvoir re-tester. La règle qui en découle : aucun réglage sans mesure, aucun agent enrichi sans preuve chiffrée de sa contribution.</p>
+
+<h2 id="annexe-c">Annexe C — Glossaire</h2>
+
+<h3>C.1 Termes de bourse et de mesure</h3>
+<table>
+  <tr><th>Terme</th><th>Définition simple</th></tr>
+  <tr><td>Action</td><td>Part de propriété d'une entreprise, qui s'achète et se revend en bourse.</td></tr>
+  <tr><td>Aller-retour</td><td>Un achat suivi d'une revente. Coûte environ 1% de frais au total chez Boursobank.</td></tr>
+  <tr><td>Bandes de Bollinger</td><td>Couloir statistique tracé autour du cours ; en sortir signale un mouvement inhabituel.</td></tr>
+  <tr><td>Benchmark</td><td>Le point de comparaison. On se mesure au marché, pas à zéro.</td></tr>
+  <tr><td>Bucket</td><td>Tranche de notes (ex. 85+) servant à vérifier que les bonnes notes tiennent leurs promesses.</td></tr>
+  <tr><td>Buy &amp; hold</td><td>Acheter et garder sans jamais vendre. Très simple, très dur à battre.</td></tr>
+  <tr><td>CAC 40</td><td>L'indice des 40 plus grandes entreprises cotées françaises.</td></tr>
+  <tr><td>Contrefactuel</td><td>Le scénario « et si on avait fait autrement », calculé pour juger sans risquer.</td></tr>
+  <tr><td>Coupe transversale</td><td>Photo d'un même jour sur toutes les valeurs à la fois (au lieu de suivre une valeur dans le temps).</td></tr>
+  <tr><td>Détachement</td><td>Jour où le dividende est retiré du cours : le cours baisse mécaniquement d'autant.</td></tr>
+  <tr><td>Dividende</td><td>Part du bénéfice qu'une entreprise verse à ses actionnaires.</td></tr>
+  <tr><td>Drawdown</td><td>La pire baisse subie entre un sommet et le creux qui suit.</td></tr>
+  <tr><td>Edge</td><td>Le petit avantage mesurable au-dessus du marché. Sans edge, les frais gagnent toujours.</td></tr>
+  <tr><td>ETF</td><td>Panier d'actions acheté en une seule fois (ex. : « le marché mondial » en un seul titre).</td></tr>
+  <tr><td>Fear &amp; Greed</td><td>Indice d'ambiance peur/avidité. Testé chez nous : aucun pouvoir prédictif, retiré du score.</td></tr>
+  <tr><td>Golden / death cross</td><td>Croisement de moyennes mobiles, signal classique de retournement haussier / baissier.</td></tr>
+  <tr><td>Hors-échantillon</td><td>Données jamais utilisées pour régler la stratégie : le seul terrain de test honnête.</td></tr>
+  <tr><td>IC (Information Coefficient)</td><td>Ressemblance entre le classement prédit et le classement réel. 0 = hasard, 0,05 = exploitable.</td></tr>
+  <tr><td>Indice</td><td>Thermomètre d'un marché (CAC 40, S&amp;P 500...).</td></tr>
+  <tr><td>Intraday</td><td>En cours de journée de bourse (par opposition à la clôture).</td></tr>
+  <tr><td>J+1, J+5</td><td>1 jour, 5 jours de bourse après le signal. Sert à mesurer l'effet d'un conseil dans le temps.</td></tr>
+  <tr><td>Look-ahead</td><td>Triche involontaire : utiliser une information pas encore connue au moment de la décision.</td></tr>
+  <tr><td>MACD</td><td>Indicateur qui compare deux moyennes du cours pour estimer l'élan (haussier ou baissier).</td></tr>
+  <tr><td>Momentum</td><td>Tendance de ce qui monte depuis des mois à continuer. Absolu : est-ce que ça monte ? Relatif : est-ce que ça monte plus que l'autre ?</td></tr>
+  <tr><td>Moyenne mobile (MM200)</td><td>Moyenne du cours sur les 200 derniers jours ; ligne de partage entre marché haussier et baissier.</td></tr>
+  <tr><td>PEA</td><td>Enveloppe fiscale française : les gains n'y sont pas taxés tant qu'on ne retire pas (régime doux après 5 ans).</td></tr>
+  <tr><td>Portefeuille virtuel</td><td>Argent fictif géré comme du vrai, pour mesurer sans risque.</td></tr>
+  <tr><td>Précision (hit rate)</td><td>% de conseils « réussis ». Trompeur seul : à toujours comparer au marché (voir Benchmark).</td></tr>
+  <tr><td>Proxy</td><td>Titre équivalent à longue histoire, utilisé pour les calculs quand l'ETF réel est trop récent.</td></tr>
+  <tr><td>Régime de marché</td><td>La météo du moment : haussier (calme) ou baissier (tempête).</td></tr>
+  <tr><td>RSI</td><td>Indicateur de 0 à 100 estimant si un titre est « suracheté » ou « survendu ».</td></tr>
+  <tr><td>Rotation sectorielle</td><td>L'argent qui passe d'un secteur à l'autre (banques vers énergie, etc.).</td></tr>
+  <tr><td>Score</td><td>Note de 0 à 100 attribuée chaque jour à chaque valeur par nos agents.</td></tr>
+  <tr><td>Sharpe (ratio de)</td><td>Rendement obtenu par unité de risque pris. Plus c'est haut, mieux c'est.</td></tr>
+  <tr><td>Stop-loss / take-profit</td><td>Sortie automatique en perte (limiter la casse) ou en gain (encaisser).</td></tr>
+  <tr><td>Ticker</td><td>Le code d'un titre en bourse (ex. CW8.PA).</td></tr>
+  <tr><td>VIX</td><td>Indice de nervosité du marché américain (la « jauge de peur »). Testé chez nous : malus retiré.</td></tr>
+  <tr><td>Volatilité</td><td>Amplitude des variations. Forte volatilité = grandes secousses.</td></tr>
+  <tr><td>Volume</td><td>Nombre de titres échangés ; un volume anormal signale un intérêt inhabituel.</td></tr>
+  <tr><td>Walk-forward</td><td>Backtest par tranches : on règle sur une période, on teste sur la suivante, et on avance.</td></tr>
+  <tr><td>Whipsaw</td><td>Aller-retour perdant causé par un signal qui change d'avis trop vite. L'anti-whipsaw (+3%) exige une marge avant de bouger.</td></tr>
+</table>
+
+<h3>C.2 Termes informatiques</h3>
+<table>
+  <tr><th>Terme</th><th>Définition simple</th></tr>
+  <tr><td>Agent / robot</td><td>Programme qui fait un travail précis à heure fixe, sans intervention humaine.</td></tr>
+  <tr><td>Claude / LLM</td><td>Intelligence artificielle qui rédige les textes des emails. Elle raconte, elle ne décide rien.</td></tr>
+  <tr><td>Commit</td><td>Enregistrement daté et archivé d'une modification (code ou données) sur GitHub. Rien ne se perd.</td></tr>
+  <tr><td>cron-job.org</td><td>Le service de réveil externe qui déclenche les robots à heure fixe.</td></tr>
+  <tr><td>GitHub / GitHub Actions</td><td>Le site qui héberge le code et prête des ordinateurs à la demande pour exécuter les robots.</td></tr>
+  <tr><td>JSON</td><td>Petit fichier texte structuré : les « cahiers » où les robots notent leurs résultats.</td></tr>
+  <tr><td>PWA</td><td>L'application installée sur l'iPhone (scores, briefing, portefeuille).</td></tr>
+  <tr><td>Python / yfinance</td><td>Le langage dans lequel les robots sont écrits, et l'outil qui télécharge les cours depuis Yahoo Finance.</td></tr>
+  <tr><td>Workflow</td><td>La fiche de mission d'un robot sur GitHub : quoi lancer, quand, quoi archiver.</td></tr>
+  <tr><td>Zoho SMTP</td><td>Le service qui envoie les emails.</td></tr>
+</table>
+
 <footer>
-  Document mis à jour le 02/07/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
-  Cœur Dual Momentum (mensuel) + satellite V4 (quotidien, alertes suspendues) + mesure Shadow &amp; Évaluateur (hebdo) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
+  Document mis à jour le 05/07/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
+  Cœur Dual Momentum (mensuel) + satellite V4 (quotidien, alertes suspendues) + mesure Shadow &amp; Évaluateur (hebdo) + Dividendes (hebdo) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
 </footer>
 
 </body>
