@@ -15,10 +15,20 @@ horodatées avec prix d'entrée à 7h) :
   - Idem pour les ÉVITER (on veut qu'ils fassent PIRE que l'univers)
   - Découpage par bucket de score (65-74 / 75-84 / 85+) : le score
     discrimine-t-il vraiment ?
+  - IC de Spearman à J+5 : corrélation de rang entre le score du jour et le
+    rendement forward, en coupe transversale quotidienne (~39 valeurs/jour),
+    puis moyenné. LA mesure de pouvoir de classement, plus robuste que les
+    buckets. Repères : ~0 aucun pouvoir, 0.03 faible, 0.05+ exploitable
+    (avant frais). Ajouté le 05/07 (veille : benchmark CLQT des agents LLM)
+  - Ventilation par régime de marché (CAC au-dessus / en dessous de sa MM200) :
+    un signal nul en moyenne peut être utile dans un seul régime. Ajouté le
+    05/07 (veille : évaluations conditionnelles au régime)
 
 Rétroactif : évalue tout l'historique disponible à chaque run, pas besoin
 d'attendre. Tourne 1x/semaine (samedi matin). Pas d'appel API payant.
-Sert de base au bilan du 22/07 et aux décisions du Professeur.
+Sert de base au bilan du 22/07 et aux décisions du 02/08 (alertes, poids
+News/Espion, budget satellite : IC significatif et edge net de frais, sinon
+budget symbolique ou zéro).
 """
 
 import datetime
@@ -29,6 +39,7 @@ import zoneinfo
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+import pandas as pd
 import yfinance as yf
 
 from marche_config import CAC40
@@ -111,6 +122,72 @@ def moyenne(vals):
     return round(sum(vals) / len(vals), 2) if vals else None
 
 
+def charger_regime_cac():
+    """Régime de marché par jour de bourse : CAC au-dessus (haussier) ou en
+    dessous (baissier) de sa moyenne mobile 200 jours."""
+    h = yf.Ticker("^FCHI").history(period="2y")["Close"].dropna()
+    mm200 = h.rolling(200).mean()
+    regimes = {}
+    for i in range(len(h)):
+        if mm200.iloc[i] == mm200.iloc[i]:  # MM200 calculable (200 jours de recul)
+            date = h.index[i].strftime("%Y-%m-%d")
+            regimes[date] = "haussier" if h.iloc[i] >= mm200.iloc[i] else "baissier"
+    return regimes
+
+
+def regime_pour(regimes, date_str):
+    """Régime du dernier jour de bourse connu à la date de la reco (à 7h la
+    clôture du jour n'existe pas encore : on prend la dernière disponible)."""
+    avant = [d for d in regimes if d <= date_str]
+    return regimes[max(avant)] if avant else None
+
+
+def ic_spearman(obs, h):
+    """IC (Information Coefficient) : Spearman entre score et rendement J+h,
+    par coupe transversale quotidienne (minimum 10 valeurs le même jour, tous
+    signaux confondus). Retourne le résumé + le détail par jour (pour la
+    ventilation par régime)."""
+    par_jour = {}
+    for o in obs:
+        r = o["rends"].get(h)
+        if r is not None:
+            par_jour.setdefault(o["date"], []).append((float(o["score"]), r))
+    ics = {}
+    for date, paires in sorted(par_jour.items()):
+        if len(paires) < 10:
+            continue
+        scores = pd.Series([p[0] for p in paires])
+        rends  = pd.Series([p[1] for p in paires])
+        if scores.nunique() < 2 or rends.nunique() < 2:
+            continue
+        # Spearman = Pearson sur les rangs (évite la dépendance scipy, absente du CI)
+        ics[date] = round(float(scores.rank().corr(rends.rank())), 4)
+    if not ics:
+        return None
+    vals = list(ics.values())
+    return {
+        "ic_moyen":     round(sum(vals) / len(vals), 4),
+        "n_jours":      len(vals),
+        "pct_positifs": round(100 * len([v for v in vals if v > 0]) / len(vals)),
+        "par_jour":     ics,
+    }
+
+
+def stats_regimes(obs, ics_par_jour, regime_par_date, h=5):
+    """Edge et IC conditionnels au régime de marché, à l'horizon h."""
+    res = {}
+    for regime in ["haussier", "baissier"]:
+        sous_obs = [o for o in obs if o.get("regime") == regime]
+        ics = [ic for d, ic in ics_par_jour.items() if regime_par_date.get(d) == regime]
+        res[regime] = {
+            "n_obs":       len(sous_obs),
+            "stats":       stats_horizon(sous_obs, h) if sous_obs else None,
+            "ic_moyen":    round(sum(ics) / len(ics), 4) if ics else None,
+            "n_jours_ic":  len(ics),
+        }
+    return res
+
+
 def stats_horizon(obs, h):
     """Edge des ACHETER et ÉVITER vs l'univers complet, à l'horizon h."""
     univers = [o["rends"][h] for o in obs]
@@ -143,7 +220,21 @@ def stats_buckets(obs, h):
     return res
 
 
-def verdict(stats_h, buckets_j5):
+def phrase_ic(ic):
+    """Lecture directe de l'IC moyen (seuils standards de l'industrie)."""
+    if not ic or ic["n_jours"] < 5:
+        return None
+    icm = ic["ic_moyen"]
+    if icm <= -0.03:
+        return f"IC de Spearman {icm:+.3f} : le score classe À L'ENVERS"
+    if abs(icm) < 0.03:
+        return f"IC de Spearman {icm:+.3f} : le score n'a aucun pouvoir de classement"
+    if icm < 0.05:
+        return f"IC de Spearman {icm:+.3f} : pouvoir de classement faible"
+    return f"IC de Spearman {icm:+.3f} : pouvoir de classement exploitable (avant frais)"
+
+
+def verdict(stats_h, buckets_j5, ic_j5):
     """Verdict factuel sur l'horizon le plus peuplé avec assez de recul (J+5, sinon J+3)."""
     for h in [5, 3, 1]:
         s = stats_h.get(h)
@@ -173,11 +264,18 @@ def verdict(stats_h, buckets_j5):
                     morceaux.append("le score discrimine (85+ bat 65-74)")
                 else:
                     morceaux.append("le score ne discrimine PAS (85+ ne bat pas 65-74)")
+            p_ic = phrase_ic(ic_j5)
+            if p_ic:
+                morceaux.append(p_ic)
             return f"Sur {s['acheter']['n']} ACHETER : " + " ; ".join(morceaux) + "."
+    p_ic = phrase_ic(ic_j5)
+    if p_ic:
+        return ("Pas encore 30 ACHETER avec recul suffisant pour l'edge, mais l'IC est déjà mesurable : "
+                + p_ic + ".")
     return "Pas encore assez d'observations avec recul suffisant (minimum 30 ACHETER à J+5). On accumule."
 
 
-def generer_html(now, obs, stats_h, buckets_j5, verdict_txt):
+def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, verdict_txt):
     n_jours = len({o["date"] for o in obs})
 
     lignes = ""
@@ -211,6 +309,39 @@ def generer_html(now, obs, stats_h, buckets_j5, verdict_txt):
           <td style='padding:8px 10px;text-align:right;color:{c};font-weight:600;'>{'—' if m is None else format(m, '+.2f') + '%'}</td>
         </tr>"""
 
+    if ic_j5:
+        icm = ic_j5["ic_moyen"]
+        c_ic = "#2e7d32" if icm >= 0.03 else "#c62828"
+        bloc_ic = f"""
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Pouvoir de classement du score (IC de Spearman à J+5)</h3>
+  <p style='margin:0;font-size:13px;'>IC moyen : <strong style='color:{c_ic};'>{icm:+.4f}</strong>
+    sur {ic_j5['n_jours']} coupes quotidiennes ({ic_j5['pct_positifs']}% de jours positifs).</p>
+  <p style='margin:6px 0 0;font-size:11px;color:#999;'>Corrélation de rang entre le score du matin et le rendement J+5,
+    calculée chaque jour sur l'ensemble des ~39 valeurs puis moyennée.
+    Repères : ~0 = aucun pouvoir de classement, +0.03 = faible, +0.05 = exploitable (avant frais).</p>"""
+    else:
+        bloc_ic = """
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Pouvoir de classement du score (IC de Spearman à J+5)</h3>
+  <p style='margin:0;font-size:13px;color:#999;'>Pas encore assez de coupes quotidiennes avec recul J+5.</p>"""
+
+    lignes_regimes = ""
+    for regime, label in [("haussier", "Haussier (CAC ≥ MM200)"), ("baissier", "Baissier (CAC < MM200)")]:
+        r = (regimes or {}).get(regime) or {}
+        s = r.get("stats") or {}
+        ea  = (s.get("acheter") or {}).get("edge")
+        ee  = (s.get("eviter") or {}).get("edge")
+        icm = r.get("ic_moyen")
+        ca   = "#2e7d32" if (ea or 0) > 0 else "#c62828"
+        ce   = "#2e7d32" if (ee or 0) > 0 else "#c62828"
+        c_ic = "#2e7d32" if (icm or 0) >= 0.03 else "#c62828"
+        lignes_regimes += f"""<tr style='border-bottom:1px solid #eee;'>
+          <td style='padding:8px 10px;font-weight:600;'>{label}</td>
+          <td style='padding:8px 10px;text-align:center;'>{r.get('n_obs', 0)}</td>
+          <td style='padding:8px 10px;text-align:right;color:{ca};font-weight:600;'>{'—' if ea is None else format(ea, '+.2f') + ' pts'}</td>
+          <td style='padding:8px 10px;text-align:right;color:{ce};font-weight:600;'>{'—' if ee is None else format(ee, '+.2f') + ' pts'}</td>
+          <td style='padding:8px 10px;text-align:right;color:{c_ic};font-weight:600;'>{'—' if icm is None else format(icm, '+.4f')}</td>
+        </tr>"""
+
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
 <div style='background:linear-gradient(135deg,#00695c,#00897b);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
   <h2 style='margin:0;font-size:18px;'>Agent Évaluateur — mesure multi-horizons</h2>
@@ -242,6 +373,20 @@ def generer_html(now, obs, stats_h, buckets_j5, verdict_txt):
     </tr></thead>
     <tbody>{lignes_buckets}</tbody>
   </table>
+  {bloc_ic}
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Par régime de marché (à J+5)</h3>
+  <table style='width:100%;border-collapse:collapse;font-size:13px;'>
+    <thead><tr style='background:#f5f5f5;'>
+      <th style='padding:8px 10px;text-align:left;'>Régime</th>
+      <th style='padding:8px 10px;'>N obs</th>
+      <th style='padding:8px 10px;text-align:right;'>Edge ACHETER</th>
+      <th style='padding:8px 10px;text-align:right;'>Utilité ÉVITER</th>
+      <th style='padding:8px 10px;text-align:right;'>IC moyen</th>
+    </tr></thead>
+    <tbody>{lignes_regimes}</tbody>
+  </table>
+  <p style='margin:6px 0 0;font-size:11px;color:#999;'>Un signal nul en moyenne peut être utile dans un seul régime (et inversement).
+    Régime mesuré sur la clôture CAC de la veille de la reco vs sa moyenne mobile 200 jours.</p>
   <p style='margin-top:16px;font-size:12px;color:#999;'>
     Rendements bruts (sans frais) : on mesure ici la qualité informationnelle du signal.
     Les frais (~1% l'aller-retour) sont à déduire pour tout usage réel : un edge sous +1% par trade ne couvre pas les frais.
@@ -278,9 +423,20 @@ if __name__ == "__main__":
     obs = rendements_forward(historique, closes)
     print(f"{len(obs)} observations valeur×jour")
 
+    print("Régime de marché (CAC vs MM200)...")
+    regimes_cac = charger_regime_cac()
+    regime_par_date = {d: regime_pour(regimes_cac, d) for d in {o["date"] for o in obs}}
+    for o in obs:
+        o["regime"] = regime_par_date.get(o["date"])
+
     stats_h    = {h: stats_horizon(obs, h) for h in HORIZONS}
     buckets_j5 = stats_buckets(obs, 5)
-    verdict_txt = verdict(stats_h, buckets_j5)
+    ic_j5      = ic_spearman(obs, 5)
+    ic_resume  = ({k: v for k, v in ic_j5.items() if k != "par_jour"}
+                  if ic_j5 else None)
+    regimes    = stats_regimes(obs, ic_j5["par_jour"] if ic_j5 else {}, regime_par_date)
+    verdict_txt = verdict(stats_h, buckets_j5, ic_resume)
+    print(f"IC J+5 : {ic_resume}")
     print(f"Verdict : {verdict_txt}")
 
     rapport = {
@@ -289,13 +445,15 @@ if __name__ == "__main__":
         "n_obs":      len(obs),
         "horizons":   {f"J+{h}": stats_h[h] for h in HORIZONS},
         "buckets_j5": buckets_j5,
+        "ic_j5":      ic_resume,
+        "regimes":    regimes,
         "verdict":    verdict_txt,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi rapport hebdo...")
-    html = generer_html(now, obs, stats_h, buckets_j5, verdict_txt)
+    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, verdict_txt)
     envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")

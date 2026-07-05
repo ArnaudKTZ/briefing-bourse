@@ -130,7 +130,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <div class="card">
     <div class="card-title">Agent Évaluateur <span class="badge badge-gouv">MESURE</span></div>
     <div class="card-freq">1×/semaine — Samedi 7h35</div>
-    <div class="card-body">La mesure multi-horizons (créé le 02/07). Rendement moyen des ACHETER/ÉVITER à J+1/J+3/J+5/J+10 comparé à l'univers CAC 40 le même jour (le vrai benchmark, pas 50%), plus le découpage par bucket de score (65-74 / 75-84 / 85+). Rétroactif sur 90 jours d'historique. Alimente le bilan du 22/07. Gratuit, sans API.</div>
+    <div class="card-body">La mesure multi-horizons (créé le 02/07). Rendement moyen des ACHETER/ÉVITER à J+1/J+3/J+5/J+10 comparé à l'univers CAC 40 le même jour (le vrai benchmark, pas 50%), plus le découpage par bucket de score (65-74 / 75-84 / 85+). <strong>Depuis le 05/07</strong> : IC de Spearman à J+5 (corrélation de rang score→rendement, coupe transversale quotidienne — LA mesure de pouvoir de classement, repères 0.03 faible / 0.05 exploitable) et ventilation par régime de marché (CAC vs MM200). Inspiré de la veille du 04/07 (benchmark CLQT des agents LLM, arXiv 2606.29771 ; évaluations conditionnelles au régime). Rétroactif sur 90 jours d'historique. Alimente le bilan du 22/07. Gratuit, sans API.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent News <span class="badge badge-v4">V4</span></div>
@@ -209,7 +209,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <h3>Court terme — deux rendez-vous datés</h3>
   <ul>
     <li><strong>22/07 — bilan des 30 jours :</strong> mesuré par l'Évaluateur (edge par horizon et par bucket, sur données propres depuis le 02/07). Première piste déjà visible : le bucket 85+ ne discrimine pas (il fait pire que 75-84 sur les premières données) — le seuil d'alerte à 85 est à requestionner.</li>
-    <li><strong>~02/08 — trois décisions :</strong> (1) alertes — réactiver, prolonger ou ajuster sur le verdict Shadow ; (2) poids News/Espion — supprimer, réduire, réactiver ou tester le signe contrarien News, après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?).</li>
+    <li><strong>~02/08 — trois décisions :</strong> (1) alertes — réactiver, prolonger ou ajuster sur le verdict Shadow ; (2) poids News/Espion — supprimer, réduire, réactiver ou tester le signe contrarien News, après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?). <strong>Grille de décision (posée le 05/07) :</strong> IC significatif et edge net de frais, sinon budget symbolique ou zéro. La littérature renforce l'exigence : le trend court terme sur instruments électroniques à petit tick est structurellement mort depuis ~2009 (Bouchaud et al., arXiv 2607.01550) — le fardeau de la preuve est du côté du satellite. Le cœur Dual Momentum mensuel (signaux lents) sort renforcé du même papier.</li>
     <li>Garde-fou méta du Professeur : actif dès 3 semaines d'historique</li>
   </ul>
 </div>
