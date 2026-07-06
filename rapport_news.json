@@ -1,15 +1,15 @@
 {
   "date": "2026-07-06",
-  "heure": "04:45",
+  "heure": "18:42",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris s'affiche en hausse prudente",
       "La Bourse de Paris termine en hausse après l'emploi américain",
       "Sodexo bondit en Bourse après des ventes supérieures aux attentes au troisième trimestre",
       "La Bourse de Paris en hausse avant l'emploi américain",
-      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent",
-      "La Bourse de Paris termine sur une note optimiste"
+      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
-        "GROUPE BNP PARIBAS : descriptif du programme de rachat d'actions Avril",
-        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur"
+        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur",
+        "H.I.G. Capital nomme Carlos Couret au poste de directeur général et responsable de l'équipe Capital-investissement Marché intermédiaire inférieur en Espagne"
       ]
     },
     "Air Liquide": {
@@ -117,8 +117,8 @@
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "VINCI finalise l’acquisition de Fletcher Construction  en Nouvelle-Zélande",
-        "VINCI se renforce au Canada à travers l’acquisition  de Modern Group of Companies"
+        "VINCI remporte plusieurs contrats pluriannuels de services routiers dans le Grand Londres",
+        "VINCI finalise l’acquisition de Fletcher Construction  en Nouvelle-Zélande"
       ]
     },
     "Kering": {
@@ -262,18 +262,19 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.0,
-      "nb_news": 2,
+      "sentiment": 0.33,
+      "nb_news": 3,
       "titres_cles": [
+        "TP : Bilan semestriel du contrat de liquidité",
         "TP : Information mensuelle relative au nombre total d’actions et de droits de vote",
         "Société Générale : actions et droits de vote au 31 août 2025"
       ]
     },
     "Alstom": {
-      "sentiment": 0.48,
+      "sentiment": 0.43,
       "nb_news": 21,
       "titres_cles": [
-        "Rachats étrangers : le ministre de l’Économie répond à la polémique après les dossiers Eutelsat et Biogaran",
+        "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
         "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte",
         "ALSTOM S.A : Exercice fiscal 2025/26 d’Alstom : Performance commerciale record, Exécution difficile. Plan d’action pour 2026/27"
       ]
@@ -306,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
       ]
     },
     "Edenred": {
@@ -339,11 +340,11 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.14,
+      "sentiment": 0.0,
       "nb_news": 21,
       "titres_cles": [
-        "Les actions de Thales en hausse alors que le groupe confirme ses prévisions annuelles et ses objectifs de croissance dans la défense",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
+        "Les actions Thales et Leonardo bondissent après un contrat OTAN",
         "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?"
       ]
     },
@@ -352,8 +353,8 @@
       "nb_news": 20,
       "titres_cles": [
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025",
-        "FORVIA signe un accord avec GDELS portant sur le transfert du site d'Augsbourg, préservant ainsi l'emploi et soutenant le développement industriel à long terme",
-        "FORVIA et SINOPEC s'associent pour accélérer la croissance de l'hydrogène en Chine"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026",
+        "FORVIA signe un accord avec GDELS portant sur le transfert du site d'Augsbourg, préservant ainsi l'emploi et soutenant le développement industriel à long terme"
       ]
     }
   },
