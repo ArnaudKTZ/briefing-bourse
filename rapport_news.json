@@ -1,21 +1,21 @@
 {
   "date": "2026-07-06",
-  "heure": "18:42",
+  "heure": "19:50",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en légère baisse, repasse en dessous des 8.500 points",
       "La Bourse de Paris s'affiche en hausse prudente",
       "La Bourse de Paris termine en hausse après l'emploi américain",
       "Sodexo bondit en Bourse après des ventes supérieures aux attentes au troisième trimestre",
-      "La Bourse de Paris en hausse avant l'emploi américain",
-      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent"
+      "La Bourse de Paris en hausse avant l'emploi américain"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS",
         "Barclays relève LVMH et Kering alors que le luxe se stabilise",
@@ -33,7 +33,7 @@
     },
     "Hermès": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande",
         "Hermès chute fortement, la croissance des ventes ralentit au T1",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.17,
-      "nb_news": 18,
+      "sentiment": -0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\"",
@@ -290,7 +290,7 @@
     },
     "Veolia": {
       "sentiment": 0.0,
-      "nb_news": 11,
+      "nb_news": 10,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032",
