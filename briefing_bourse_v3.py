@@ -2292,14 +2292,31 @@ if __name__ == "__main__":
     print("Génération briefing par Claude...")
     prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi, macro=macro)
     client  = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    message = client.messages.create(
-        model="claude-opus-4-8",
-        max_tokens=6000,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    briefing = message.content[0].text
-    _loguer_cout("briefing", "claude-opus-4-8",
-                 message.usage.input_tokens, message.usage.output_tokens)
+    try:
+        message = client.messages.create(
+            model="claude-opus-4-8",
+            max_tokens=6000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        briefing = message.content[0].text
+        _loguer_cout("briefing", "claude-opus-4-8",
+                     message.usage.input_tokens, message.usage.output_tokens)
+    except Exception as e:
+        # Échec API (crédit épuisé le 06/07, panne...) : Claude ne sert qu'à la
+        # RÉDACTION — les scores du jour sont déjà calculés. On sauvegarde les
+        # recos (sinon l'Évaluateur perd sa journée), on alerte, et on sort en
+        # code 0 pour que le workflow committe les données. Échec visible,
+        # données préservées.
+        print(f"ERREUR appel Claude : {e}")
+        print("Sauvegarde recommandations malgré tout (données Évaluateur préservées)...")
+        sauvegarder_recommandations(perf, donnees)
+        envoyer_email_alerte(
+            f"Appel API Claude impossible : {e}. "
+            f"Les scores du jour sont calculés et sauvegardés (rien de perdu pour la mesure), "
+            f"seul le briefing rédigé manque. Si le message parle de crédit, recharger sur "
+            f"console.anthropic.com (Plans & Billing) puis relancer le workflow."
+        )
+        raise SystemExit(0)
 
     print("Sauvegarde recommandations...")
     sauvegarder_recommandations(perf, donnees)
