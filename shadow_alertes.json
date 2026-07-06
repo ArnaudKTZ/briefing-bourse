@@ -628,5 +628,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100 | Momentum intraday fort +4.8%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-06",
+    "heure": "07:01",
+    "nom": "Engie",
+    "cours": 27.73,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-06",
+    "heure": "07:01",
+    "nom": "Veolia",
+    "cours": 37.51,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.1%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-06",
+    "heure": "07:01",
+    "nom": "Edenred",
+    "cours": 23.91,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +3.51%",
+    "envoyee": false
   }
 ]
