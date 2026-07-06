@@ -2141,6 +2141,7 @@ color:#222;max-width:1000px;margin:auto;padding:20px;'>
 COSTS_LOG = "costs_log.json"
 TARIFS = {
     "claude-opus-4-8":        {"input": 5.0,  "output": 25.0},
+    "claude-sonnet-4-6":      {"input": 3.0,  "output": 15.0},
     "claude-haiku-4-5-20251001": {"input": 1.0, "output": 5.0},
     "claude-haiku-4-5":       {"input": 1.0,  "output": 5.0},
 }
@@ -2292,14 +2293,18 @@ if __name__ == "__main__":
     print("Génération briefing par Claude...")
     prompt  = construire_prompt(donnees, cac_cours, cac_var, perf_resume, perf["stats"], momentum, pf_resume, est_lundi, macro=macro)
     client  = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    # Sonnet 4.6 depuis le 06/07 (décision Arnaud) : les scores et signaux sont
+    # calculés AVANT cet appel, le modèle ne fait que rédiger le journal.
+    # Tarif 3/15 USD par MTok contre 5/25 pour Opus, qualité équivalente sur
+    # une tâche de rédaction factuelle.
     try:
         message = client.messages.create(
-            model="claude-opus-4-8",
+            model="claude-sonnet-4-6",
             max_tokens=6000,
             messages=[{"role": "user", "content": prompt}]
         )
         briefing = message.content[0].text
-        _loguer_cout("briefing", "claude-opus-4-8",
+        _loguer_cout("briefing", "claude-sonnet-4-6",
                      message.usage.input_tokens, message.usage.output_tokens)
     except Exception as e:
         # Échec API (crédit épuisé le 06/07, panne...) : Claude ne sert qu'à la
