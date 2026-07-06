@@ -7,16 +7,16 @@
   "historique_valeur": {
     "2026-06-26": 10000.0,
     "2026-07-01": 10136.94,
-    "2026-07-06": 10195.59
+    "2026-07-06": 10232.01
   },
   "dernier_cours": {
     "World": 672.12,
     "USA": 32.66
   },
   "cours_actuel": {
-    "World": 685.83,
-    "USA": 33.2714
+    "World": 687.74,
+    "USA": 33.4165
   },
-  "valeur_actuelle": 10195.59,
-  "perf_actuelle": 1.9559
+  "valeur_actuelle": 10232.01,
+  "perf_actuelle": 2.3201
 }
