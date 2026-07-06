@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-03",
-  "heure": "18:56",
+  "date": "2026-07-06",
+  "heure": "04:45",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
-      "FTSE 100 : Les actions reculent après l’attaque en mer et la chute des valeurs tech",
       "La Bourse de Paris termine en hausse après l'emploi américain",
       "Sodexo bondit en Bourse après des ventes supérieures aux attentes au troisième trimestre",
       "La Bourse de Paris en hausse avant l'emploi américain",
-      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent"
+      "FTSE 100 : Les actions clôturent en baisse alors que les négociations avec l’Iran reprennent",
+      "La Bourse de Paris termine sur une note optimiste"
     ]
   },
   "valeurs": {
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Airbus signe un accord technologique avec la plateforme gouvernementale ukrainienne Brave1",
         "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
@@ -122,7 +122,7 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "Stellantis dégradé par HSBC en raison de rappels en hausse",
-        "JLR vise une croissance à deux chiffres de son chiffre d’affaires à moyen terme"
+        "La Bourse de Paris clôture en hausse et se rapproche des sommets",
+        "Stellantis dégradé par HSBC en raison de rappels en hausse"
       ]
     },
     "Saint-Gobain": {
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.16,
-      "nb_news": 19,
+      "sentiment": -0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\"",
@@ -230,16 +230,16 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
         "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives",
-        "Quelles actions profiteront de la transition énergétique en Europe liée à la guerre en Iran ?"
+        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
       ]
     },
     "Orange": {
-      "sentiment": 0.95,
+      "sentiment": 0.85,
       "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
@@ -270,8 +270,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.48,
+      "nb_news": 21,
       "titres_cles": [
         "Rachats étrangers : le ministre de l’Économie répond à la polémique après les dossiers Eutelsat et Biogaran",
         "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte",
@@ -339,8 +339,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Les actions de Thales en hausse alors que le groupe confirme ses prévisions annuelles et ses objectifs de croissance dans la défense",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
