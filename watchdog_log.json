@@ -1,19 +1,21 @@
 {
-  "date": "2026-07-03",
-  "heure": "14:29",
+  "date": "2026-07-06",
+  "heure": "05:30",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.05"
+      "msg": "OK — 20 articles, sentiment +0.05"
     },
     "Briefing 7h": {
-      "ok": true,
-      "msg": "OK — briefing du jour envoyé à 05:02"
+      "ok": false,
+      "msg": "Aucune trace du briefing pour 2026-07-06 (dernier : 2026-07-03)"
     },
     "Scoring intraday": {
-      "ok": true,
-      "msg": "OK hier — 8 snapshot(s) enregistré(s)"
+      "ok": null,
+      "msg": "Lundi — pas de données intraday attendues hier"
     }
   },
-  "problemes": []
+  "problemes": [
+    "Briefing 7h"
+  ]
 }
