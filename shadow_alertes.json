@@ -688,5 +688,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-06",
+    "heure": "12:01",
+    "nom": "Alstom",
+    "cours": 16.58,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.47%",
+    "envoyee": false
   }
 ]
