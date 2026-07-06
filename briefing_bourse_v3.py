@@ -2300,7 +2300,9 @@ if __name__ == "__main__":
     try:
         message = client.messages.create(
             model="claude-sonnet-4-6",
-            max_tokens=6000,
+            # 8000 depuis le 06/07 : le premier briefing Sonnet a tapé pile le
+            # plafond de 6000 (sortie tronquée), Sonnet rédige plus long qu'Opus.
+            max_tokens=8000,
             messages=[{"role": "user", "content": prompt}]
         )
         briefing = message.content[0].text
