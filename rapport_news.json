@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "heure": "18:43",
+  "heure": "21:15",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -340,7 +340,7 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.0,
+      "sentiment": -0.05,
       "nb_news": 21,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
