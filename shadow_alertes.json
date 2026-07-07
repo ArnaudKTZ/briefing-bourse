@@ -698,5 +698,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.47%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-07",
+    "heure": "09:31",
+    "nom": "Sanofi",
+    "cours": 75.36,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-07",
+    "heure": "09:31",
+    "nom": "Edenred",
+    "cours": 23.45,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
