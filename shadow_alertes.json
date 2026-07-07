@@ -718,5 +718,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-07",
+    "heure": "12:01",
+    "nom": "Engie",
+    "cours": 27.33,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-07",
+    "heure": "12:01",
+    "nom": "Veolia",
+    "cours": 37.31,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100",
+    "envoyee": false
   }
 ]
