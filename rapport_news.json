@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "heure": "15:25",
+  "heure": "18:43",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -46,7 +46,7 @@
       "titres_cles": [
         "Airbus décroche un nouveau contrat avec l'OTAN pour son A330 MRTT",
         "Le sommet de l'Otan vante des contrats d'armement, tente d'apaiser Trump",
-        "Le STOXX 600 recule depuis ses sommets avant les minutes de la Fed"
+        "Les actions européennes reculent avant les minutes de la Fed"
       ]
     },
     "Schneider Electric": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
-        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur",
-        "H.I.G. Capital nomme Carlos Couret au poste de directeur général et responsable de l'équipe Capital-investissement Marché intermédiaire inférieur en Espagne"
+        "FDJ UNITED : Bilan semestriel du contrat de liquidité",
+        "Bilan semestriel du contrat de liquidité EUTELSAT COMMUNICATIONS contracté avec la société BNP PARIBAS"
       ]
     },
     "Air Liquide": {
@@ -113,7 +113,7 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
