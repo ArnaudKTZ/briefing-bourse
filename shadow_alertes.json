@@ -738,5 +738,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 96/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-07",
+    "heure": "14:01",
+    "nom": "Pernod Ricard",
+    "cours": 65.72,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.95%",
+    "envoyee": false
   }
 ]
