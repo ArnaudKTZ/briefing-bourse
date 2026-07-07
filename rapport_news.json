@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-06",
-  "heure": "20:30",
+  "date": "2026-07-07",
+  "heure": "04:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "La Bourse de Paris clôture en hausse et se rapproche des sommets",
-        "Stellantis dégradé par HSBC en raison de rappels en hausse"
+        "Maserati: BYD ne discute pas d'un partenariat avec Stellantis, assure la dirigeante du groupe chinois",
+        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
       ]
     },
     "Saint-Gobain": {
