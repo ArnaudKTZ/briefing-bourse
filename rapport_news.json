@@ -1,15 +1,15 @@
 {
   "date": "2026-07-07",
-  "heure": "04:45",
+  "heure": "15:25",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en hausse malgré les interrogations sur la tech",
+      "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
       "La Bourse de Paris en légère baisse, repasse en dessous des 8.500 points",
       "La Bourse de Paris s'affiche en hausse prudente",
-      "La Bourse de Paris termine en hausse après l'emploi américain",
-      "Sodexo bondit en Bourse après des ventes supérieures aux attentes au troisième trimestre",
-      "La Bourse de Paris en hausse avant l'emploi américain"
+      "La Bourse de Paris termine en hausse après l'emploi américain"
     ]
   },
   "valeurs": {
@@ -44,27 +44,27 @@
       "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
-        "Airbus signe un accord technologique avec la plateforme gouvernementale ukrainienne Brave1",
-        "L’action Airbus progresse après la mise à niveau de Kepler à l’achat",
-        "Après son avion à propulsion hybride-électrique, le Français Aura Aero dévoile son drone MALE multimission Enbata"
+        "Airbus décroche un nouveau contrat avec l'OTAN pour son A330 MRTT",
+        "Le sommet de l'Otan vante des contrats d'armement, tente d'apaiser Trump",
+        "Le STOXX 600 recule depuis ses sommets avant les minutes de la Fed"
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.4,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
-        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres",
-        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $"
+        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
+        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Berenberg voit un potentiel de hausse de 13% pour L’Oréal"
+        "La Bourse de Paris en hausse malgré les interrogations sur la tech"
       ]
     },
     "Sanofi": {
@@ -122,7 +122,7 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
@@ -140,7 +140,7 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
@@ -149,8 +149,8 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.33,
-      "nb_news": 9,
+      "sentiment": 0.3,
+      "nb_news": 10,
       "titres_cles": [
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
         "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.18,
-      "nb_news": 17,
+      "sentiment": -0.11,
+      "nb_news": 19,
       "titres_cles": [
+        "La Bourse de Paris en hausse malgré les interrogations sur la tech",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\"",
-        "Les actions européennes reculent légèrement ; les résultats d’entreprises continuent d’affluer"
+        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
       ]
     },
     "Michelin": {
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.29,
-      "nb_news": 7,
+      "sentiment": 1.22,
+      "nb_news": 9,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -361,7 +361,7 @@
   "signaux_forts": [
     [
       "Legrand",
-      1.29,
+      1.22,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
