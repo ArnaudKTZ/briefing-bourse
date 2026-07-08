@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "heure": "13:30",
+  "heure": "15:17",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -230,13 +230,9 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.25,
-      "nb_news": 20,
-      "titres_cles": [
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives",
-        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Orange": {
       "sentiment": 0.85,
@@ -349,12 +345,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.35,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025",
-        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026",
-        "FORVIA signe un accord avec GDELS portant sur le transfert du site d'Augsbourg, préservant ainsi l'emploi et soutenant le développement industriel à long terme"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
       ]
     }
   },
