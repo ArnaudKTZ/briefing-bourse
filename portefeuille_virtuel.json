@@ -1,5 +1,5 @@
 {
-  "capital": 376.2799999999993,
+  "capital": 75.23999999999933,
   "positions": {
     "TotalEnergies": {
       "nb_actions": 29,
@@ -28,15 +28,6 @@
       "cout_total": 1939.3000000000002,
       "frais_achat": 9.7
     },
-    "Safran": {
-      "nb_actions": 5,
-      "prix_entree": 349.9,
-      "date_entree": "2026-07-02",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1749.5,
-      "frais_achat": 8.75
-    },
     "Danone": {
       "nb_actions": 27,
       "prix_entree": 72.2,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1949.4,
       "frais_achat": 9.75
+    },
+    "Sanofi": {
+      "nb_actions": 26,
+      "prix_entree": 74.77,
+      "date_entree": "2026-07-08",
+      "heure_entree": "11:32",
+      "source_entree": "Briefing",
+      "cout_total": 1944.02,
+      "frais_achat": 9.72
     }
   },
   "historique_valeur": {
@@ -61,7 +61,7 @@
     "2026-07-03": 10127.64,
     "2026-07-06": 10114.23,
     "2026-07-07": 10075.38,
-    "2026-07-08": 9963.61
+    "2026-07-08": 9924.96
   },
   "trades": [
     {
@@ -154,6 +154,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": 5.37,
       "frais_total": 20.41
+    },
+    {
+      "nom": "Safran",
+      "entree": 349.9,
+      "sortie": 332.2,
+      "date_entree": "2026-07-02",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-08",
+      "heure_sortie": "11:32",
+      "source_sortie": "Briefing",
+      "pnl_pct": -5.53,
+      "frais_total": 17.05
     }
   ]
 }
