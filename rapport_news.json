@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "heure": "15:17",
+  "heure": "19:04",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
+        "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
         "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande",
-        "Hermès chute fortement, la croissance des ventes ralentit au T1",
-        "Kering recule après la dégradation de Morgan Stanley, inquiétudes autour de Gucci"
+        "Hermès chute fortement, la croissance des ventes ralentit au T1"
       ]
     },
     "Airbus": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
-        "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
-        "FDJ UNITED : Bilan semestriel du contrat de liquidité",
-        "Bilan semestriel du contrat de liquidité EUTELSAT COMMUNICATIONS contracté avec la société BNP PARIBAS"
+        "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026"
       ]
     },
     "Air Liquide": {
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": -0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "1er trimestre 2026 : forte dynamique de croissance avec un chiffre d’affaires de 12,5 milliards d’euros, en hausse de 7,3 %",
         "Mise en œuvre du programme de rachat d’actions",
-        "NextRise 2026, le principal salon asiatique dédié aux start-ups, co-organisé par la KITA et la KDB, s'achève avec succès à Séoul"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -230,9 +230,13 @@
       ]
     },
     "Engie": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.25,
+      "nb_news": 20,
+      "titres_cles": [
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives",
+        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
+      ]
     },
     "Orange": {
       "sentiment": 0.85,
