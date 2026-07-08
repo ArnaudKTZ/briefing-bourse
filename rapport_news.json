@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-07",
-  "heure": "21:15",
+  "date": "2026-07-08",
+  "heure": "04:45",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.3,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "La Bourse de Paris en hausse malgré les interrogations sur la tech"
+        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
       ]
     },
     "Sanofi": {
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.1,
+      "sentiment": 0.33,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
-        "HSBC abaisse Kering à Conserver, estimant que le nouveau plan de redressement prendra du temps"
+        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
       ]
     },
     "Société Générale": {
@@ -249,11 +249,11 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
+        "Nouvelle décision de la Cour d'appel sur le rôle de Bolloré dans la scission de Vivendi",
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
-        "Compagnie de l'Odet : Résultats de l’exercice 2025"
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
       ]
     },
     "Eurofins Scientific": {
