@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "heure": "04:45",
+  "heure": "13:30",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "Les actions énergétiques européennes progressent avec la hausse du pétrole",
         "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été",
-        "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes",
-        "VivaTech : Avec MethaneLive, TotalEnergies met la Data au service de la lutte contre les émissions de méthane"
+        "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes"
       ]
     },
     "Hermès": {
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.45,
+      "sentiment": 0.5,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
+        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
       ]
     },
     "Sanofi": {
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "BNP PARIBAS PRESENTE LA STRATEGIE DE CROISSANCE DE SA BANQUE COMMERCIALE EN BELGIQUE (BCEB)  ET RELEVE SES OBJECTIFS DE RENTABILITE  A 22 % DE RONE EN 2028 ET 25 % EN 2030",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.33,
+      "sentiment": 0.38,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
-        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
+        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
       ]
     },
     "Société Générale": {
@@ -149,8 +149,8 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.3,
-      "nb_news": 10,
+      "sentiment": 0.33,
+      "nb_news": 9,
       "titres_cles": [
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
         "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
@@ -249,11 +249,11 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 7,
+      "nb_news": 8,
       "titres_cles": [
-        "Nouvelle décision de la Cour d'appel sur le rôle de Bolloré dans la scission de Vivendi",
-        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
+        "Victoire de Vincent Bolloré devant la cour d'appel sur la scission de Vivendi",
+        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
+        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social"
       ]
     },
     "Eurofins Scientific": {
