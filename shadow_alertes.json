@@ -788,5 +788,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-09",
+    "heure": "09:31",
+    "nom": "Veolia",
+    "cours": 36.81,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-09",
+    "heure": "09:31",
+    "nom": "Edenred",
+    "cours": 23.27,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
   }
 ]
