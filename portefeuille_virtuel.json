@@ -1,15 +1,6 @@
 {
-  "capital": 75.23999999999933,
+  "capital": 55.57999999999947,
   "positions": {
-    "TotalEnergies": {
-      "nb_actions": 29,
-      "prix_entree": 68.36,
-      "date_entree": "2026-06-29",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1982.44,
-      "frais_achat": 9.91
-    },
     "Airbus": {
       "nb_actions": 10,
       "prix_entree": 198.22,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1944.02,
       "frais_achat": 9.72
+    },
+    "TotalEnergies": {
+      "nb_actions": 29,
+      "prix_entree": 67.78,
+      "date_entree": "2026-07-09",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "cout_total": 1965.6200000000001,
+      "frais_achat": 9.83
     }
   },
   "historique_valeur": {
@@ -61,7 +61,8 @@
     "2026-07-03": 10127.64,
     "2026-07-06": 10114.23,
     "2026-07-07": 10075.38,
-    "2026-07-08": 9905.95
+    "2026-07-08": 9905.95,
+    "2026-07-09": 9988.96
   },
   "trades": [
     {
@@ -167,6 +168,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -5.53,
       "frais_total": 17.05
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 68.36,
+      "sortie": 67.78,
+      "date_entree": "2026-06-29",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-09",
+      "heure_sortie": "03:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -1.34,
+      "frais_total": 19.74
     }
   ]
 }
