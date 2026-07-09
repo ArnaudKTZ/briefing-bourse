@@ -1,15 +1,6 @@
 {
-  "capital": 55.57999999999947,
+  "capital": 10.219999999999345,
   "positions": {
-    "Airbus": {
-      "nb_actions": 10,
-      "prix_entree": 198.22,
-      "date_entree": "2026-07-01",
-      "heure_entree": "13:44",
-      "source_entree": "Briefing",
-      "cout_total": 1982.2,
-      "frais_achat": 9.91
-    },
     "Air Liquide": {
       "nb_actions": 11,
       "prix_entree": 176.3,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1965.6200000000001,
       "frais_achat": 9.83
+    },
+    "Société Générale": {
+      "nb_actions": 27,
+      "prix_entree": 73.41,
+      "date_entree": "2026-07-09",
+      "heure_entree": "14:19",
+      "source_entree": "Briefing",
+      "cout_total": 1982.07,
+      "frais_achat": 9.91
     }
   },
   "historique_valeur": {
@@ -62,7 +62,7 @@
     "2026-07-06": 10114.23,
     "2026-07-07": 10075.38,
     "2026-07-08": 9905.95,
-    "2026-07-09": 9850.84
+    "2026-07-09": 9825.9
   },
   "trades": [
     {
@@ -181,6 +181,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.34,
       "frais_total": 19.74
+    },
+    {
+      "nom": "Airbus",
+      "entree": 198.22,
+      "sortie": 195.64,
+      "date_entree": "2026-07-01",
+      "heure_entree": "13:44",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-09",
+      "heure_sortie": "14:19",
+      "source_sortie": "Briefing",
+      "pnl_pct": -1.79,
+      "frais_total": 19.69
     }
   ]
 }
