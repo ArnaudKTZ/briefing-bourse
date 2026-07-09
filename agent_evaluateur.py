@@ -23,6 +23,10 @@ horodatées avec prix d'entrée à 7h) :
   - Ventilation par régime de marché (CAC au-dessus / en dessous de sa MM200) :
     un signal nul en moyenne peut être utile dans un seul régime. Ajouté le
     05/07 (veille : évaluations conditionnelles au régime)
+  - Ventilation par contexte de choc (reco émise au lendemain d'une variation
+    CAC >= 2%) : la MM200 ne bascule pas sur un choc ponctuel, ce marqueur
+    isole la performance des signaux les jours de stress. Ajouté le 09/07
+    (choc Iran du 08/07 : première fenêtre de mesure en régime stressé)
 
 Rétroactif : évalue tout l'historique disponible à chaque run, pas besoin
 d'attendre. Tourne 1x/semaine (samedi matin). Pas d'appel API payant.
@@ -59,6 +63,8 @@ FICHIER_RAPPORT     = "evaluateur_rapport.json"
 
 HORIZONS = [1, 3, 5, 10]
 BUCKETS  = [(85, 100, "85+"), (75, 84, "75-84"), (65, 74, "65-74")]
+
+SEUIL_CHOC = 2.0  # variation quotidienne du CAC (en %, valeur absolue) qui marque un choc
 
 
 def prix_ok(x):
@@ -122,24 +128,29 @@ def moyenne(vals):
     return round(sum(vals) / len(vals), 2) if vals else None
 
 
-def charger_regime_cac():
-    """Régime de marché par jour de bourse : CAC au-dessus (haussier) ou en
-    dessous (baissier) de sa moyenne mobile 200 jours."""
+def charger_contexte_cac():
+    """Contexte de marché par jour de bourse, depuis les clôtures du CAC :
+    - régime : au-dessus (haussier) ou en dessous (baissier) de sa MM200
+    - choc : variation quotidienne >= SEUIL_CHOC % en valeur absolue"""
     h = yf.Ticker("^FCHI").history(period="2y")["Close"].dropna()
     mm200 = h.rolling(200).mean()
-    regimes = {}
+    variations = (h.pct_change() * 100).abs()
+    regimes, chocs = {}, {}
     for i in range(len(h)):
+        date = h.index[i].strftime("%Y-%m-%d")
         if mm200.iloc[i] == mm200.iloc[i]:  # MM200 calculable (200 jours de recul)
-            date = h.index[i].strftime("%Y-%m-%d")
             regimes[date] = "haussier" if h.iloc[i] >= mm200.iloc[i] else "baissier"
-    return regimes
+        if variations.iloc[i] == variations.iloc[i]:
+            chocs[date] = "post-choc" if variations.iloc[i] >= SEUIL_CHOC else "calme"
+    return regimes, chocs
 
 
-def regime_pour(regimes, date_str):
-    """Régime du dernier jour de bourse connu à la date de la reco (à 7h la
-    clôture du jour n'existe pas encore : on prend la dernière disponible)."""
-    avant = [d for d in regimes if d <= date_str]
-    return regimes[max(avant)] if avant else None
+def contexte_pour(par_date, date_str):
+    """Valeur du dernier jour de bourse STRICTEMENT avant la date de la reco :
+    à 7h la clôture du jour n'existe pas encore, prendre celle du jour même
+    serait un look-ahead."""
+    avant = [d for d in par_date if d < date_str]
+    return par_date[max(avant)] if avant else None
 
 
 def ic_spearman(obs, h):
@@ -173,13 +184,15 @@ def ic_spearman(obs, h):
     }
 
 
-def stats_regimes(obs, ics_par_jour, regime_par_date, h=5):
-    """Edge et IC conditionnels au régime de marché, à l'horizon h."""
+def stats_groupes(obs, ics_par_jour, groupe_par_date, cle, groupes, h=5):
+    """Edge et IC conditionnels à un découpage des jours de reco (régime de
+    marché, contexte de choc...), à l'horizon h. cle = champ de l'observation,
+    groupes = valeurs possibles."""
     res = {}
-    for regime in ["haussier", "baissier"]:
-        sous_obs = [o for o in obs if o.get("regime") == regime]
-        ics = [ic for d, ic in ics_par_jour.items() if regime_par_date.get(d) == regime]
-        res[regime] = {
+    for groupe in groupes:
+        sous_obs = [o for o in obs if o.get(cle) == groupe]
+        ics = [ic for d, ic in ics_par_jour.items() if groupe_par_date.get(d) == groupe]
+        res[groupe] = {
             "n_obs":       len(sous_obs),
             "stats":       stats_horizon(sous_obs, h) if sous_obs else None,
             "ic_moyen":    round(sum(ics) / len(ics), 4) if ics else None,
@@ -275,7 +288,29 @@ def verdict(stats_h, buckets_j5, ic_j5):
     return "Pas encore assez d'observations avec recul suffisant (minimum 30 ACHETER à J+5). On accumule."
 
 
-def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, verdict_txt):
+def lignes_tableau_groupes(res, labels):
+    """Lignes HTML d'un tableau edge/IC par groupe (régimes, chocs...)."""
+    lignes = ""
+    for groupe, label in labels:
+        r = (res or {}).get(groupe) or {}
+        s = r.get("stats") or {}
+        ea  = (s.get("acheter") or {}).get("edge")
+        ee  = (s.get("eviter") or {}).get("edge")
+        icm = r.get("ic_moyen")
+        ca   = "#2e7d32" if (ea or 0) > 0 else "#c62828"
+        ce   = "#2e7d32" if (ee or 0) > 0 else "#c62828"
+        c_ic = "#2e7d32" if (icm or 0) >= 0.03 else "#c62828"
+        lignes += f"""<tr style='border-bottom:1px solid #eee;'>
+          <td style='padding:8px 10px;font-weight:600;'>{label}</td>
+          <td style='padding:8px 10px;text-align:center;'>{r.get('n_obs', 0)}</td>
+          <td style='padding:8px 10px;text-align:right;color:{ca};font-weight:600;'>{'—' if ea is None else format(ea, '+.2f') + ' pts'}</td>
+          <td style='padding:8px 10px;text-align:right;color:{ce};font-weight:600;'>{'—' if ee is None else format(ee, '+.2f') + ' pts'}</td>
+          <td style='padding:8px 10px;text-align:right;color:{c_ic};font-weight:600;'>{'—' if icm is None else format(icm, '+.4f')}</td>
+        </tr>"""
+    return lignes
+
+
+def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_txt):
     n_jours = len({o["date"] for o in obs})
 
     lignes = ""
@@ -324,23 +359,10 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, verdict_txt):
   <h3 style='font-size:14px;margin:20px 0 8px;'>Pouvoir de classement du score (IC de Spearman à J+5)</h3>
   <p style='margin:0;font-size:13px;color:#999;'>Pas encore assez de coupes quotidiennes avec recul J+5.</p>"""
 
-    lignes_regimes = ""
-    for regime, label in [("haussier", "Haussier (CAC ≥ MM200)"), ("baissier", "Baissier (CAC < MM200)")]:
-        r = (regimes or {}).get(regime) or {}
-        s = r.get("stats") or {}
-        ea  = (s.get("acheter") or {}).get("edge")
-        ee  = (s.get("eviter") or {}).get("edge")
-        icm = r.get("ic_moyen")
-        ca   = "#2e7d32" if (ea or 0) > 0 else "#c62828"
-        ce   = "#2e7d32" if (ee or 0) > 0 else "#c62828"
-        c_ic = "#2e7d32" if (icm or 0) >= 0.03 else "#c62828"
-        lignes_regimes += f"""<tr style='border-bottom:1px solid #eee;'>
-          <td style='padding:8px 10px;font-weight:600;'>{label}</td>
-          <td style='padding:8px 10px;text-align:center;'>{r.get('n_obs', 0)}</td>
-          <td style='padding:8px 10px;text-align:right;color:{ca};font-weight:600;'>{'—' if ea is None else format(ea, '+.2f') + ' pts'}</td>
-          <td style='padding:8px 10px;text-align:right;color:{ce};font-weight:600;'>{'—' if ee is None else format(ee, '+.2f') + ' pts'}</td>
-          <td style='padding:8px 10px;text-align:right;color:{c_ic};font-weight:600;'>{'—' if icm is None else format(icm, '+.4f')}</td>
-        </tr>"""
+    lignes_regimes = lignes_tableau_groupes(regimes, [
+        ("haussier", "Haussier (CAC ≥ MM200)"), ("baissier", "Baissier (CAC < MM200)")])
+    lignes_chocs = lignes_tableau_groupes(chocs, [
+        ("post-choc", f"Lendemain de choc (|CAC| ≥ {SEUIL_CHOC:.0f}%)"), ("calme", "Jour calme")])
 
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
 <div style='background:linear-gradient(135deg,#00695c,#00897b);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
@@ -387,6 +409,19 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, verdict_txt):
   </table>
   <p style='margin:6px 0 0;font-size:11px;color:#999;'>Un signal nul en moyenne peut être utile dans un seul régime (et inversement).
     Régime mesuré sur la clôture CAC de la veille de la reco vs sa moyenne mobile 200 jours.</p>
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Par contexte de choc (à J+5)</h3>
+  <table style='width:100%;border-collapse:collapse;font-size:13px;'>
+    <thead><tr style='background:#f5f5f5;'>
+      <th style='padding:8px 10px;text-align:left;'>Contexte</th>
+      <th style='padding:8px 10px;'>N obs</th>
+      <th style='padding:8px 10px;text-align:right;'>Edge ACHETER</th>
+      <th style='padding:8px 10px;text-align:right;'>Utilité ÉVITER</th>
+      <th style='padding:8px 10px;text-align:right;'>IC moyen</th>
+    </tr></thead>
+    <tbody>{lignes_chocs}</tbody>
+  </table>
+  <p style='margin:6px 0 0;font-size:11px;color:#999;'>La MM200 ne bascule pas sur un choc ponctuel : ce découpage isole les signaux
+    émis au lendemain d'une variation du CAC de {SEUIL_CHOC:.0f}% ou plus (dans un sens ou l'autre).</p>
   <p style='margin-top:16px;font-size:12px;color:#999;'>
     Rendements bruts (sans frais) : on mesure ici la qualité informationnelle du signal.
     Les frais (~1% l'aller-retour) sont à déduire pour tout usage réel : un edge sous +1% par trade ne couvre pas les frais.
@@ -423,20 +458,26 @@ if __name__ == "__main__":
     obs = rendements_forward(historique, closes)
     print(f"{len(obs)} observations valeur×jour")
 
-    print("Régime de marché (CAC vs MM200)...")
-    regimes_cac = charger_regime_cac()
-    regime_par_date = {d: regime_pour(regimes_cac, d) for d in {o["date"] for o in obs}}
+    print("Contexte de marché (régime MM200 + chocs)...")
+    regimes_cac, chocs_cac = charger_contexte_cac()
+    dates_recos = {o["date"] for o in obs}
+    regime_par_date = {d: contexte_pour(regimes_cac, d) for d in dates_recos}
+    choc_par_date   = {d: contexte_pour(chocs_cac, d) for d in dates_recos}
     for o in obs:
         o["regime"] = regime_par_date.get(o["date"])
+        o["choc"]   = choc_par_date.get(o["date"])
 
     stats_h    = {h: stats_horizon(obs, h) for h in HORIZONS}
     buckets_j5 = stats_buckets(obs, 5)
     ic_j5      = ic_spearman(obs, 5)
     ic_resume  = ({k: v for k, v in ic_j5.items() if k != "par_jour"}
                   if ic_j5 else None)
-    regimes    = stats_regimes(obs, ic_j5["par_jour"] if ic_j5 else {}, regime_par_date)
+    ics_par_jour = ic_j5["par_jour"] if ic_j5 else {}
+    regimes = stats_groupes(obs, ics_par_jour, regime_par_date, "regime", ["haussier", "baissier"])
+    chocs   = stats_groupes(obs, ics_par_jour, choc_par_date, "choc", ["post-choc", "calme"])
     verdict_txt = verdict(stats_h, buckets_j5, ic_resume)
     print(f"IC J+5 : {ic_resume}")
+    print(f"Jours post-choc dans l'historique : {len([d for d, c in choc_par_date.items() if c == 'post-choc'])}")
     print(f"Verdict : {verdict_txt}")
 
     rapport = {
@@ -447,13 +488,14 @@ if __name__ == "__main__":
         "buckets_j5": buckets_j5,
         "ic_j5":      ic_resume,
         "regimes":    regimes,
+        "chocs":      chocs,
         "verdict":    verdict_txt,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi rapport hebdo...")
-    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, verdict_txt)
+    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt)
     envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")
