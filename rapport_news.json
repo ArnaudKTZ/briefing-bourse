@@ -1,8 +1,8 @@
 {
   "date": "2026-07-09",
-  "heure": "16:18",
+  "heure": "19:04",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en hausse, profite du recul du pétrole",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "VINCI remporte plusieurs contrats pluriannuels de services routiers dans le Grand Londres",
-        "VINCI finalise l’acquisition de Fletcher Construction  en Nouvelle-Zélande"
+        "VINCI remporte un contrat de déploiement et de gestion de bornes de recharge électrique pour poids lourds en Allemagne",
+        "VINCI remporte plusieurs contrats pluriannuels de services routiers dans le Grand Londres"
       ]
     },
     "Kering": {
@@ -230,7 +230,7 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
@@ -289,22 +289,18 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.0,
-      "nb_news": 10,
+      "sentiment": 0.09,
+      "nb_news": 11,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
-        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032",
-        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
+        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032"
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
-      "nb_news": 20,
-      "titres_cles": [
-        "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
-        "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Dassault Systèmes": {
       "sentiment": 0.4,
