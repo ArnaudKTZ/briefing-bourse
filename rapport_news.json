@@ -1,15 +1,15 @@
 {
   "date": "2026-07-09",
-  "heure": "19:04",
+  "heure": "20:21",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
+      "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !",
       "La Bourse de Paris en hausse, profite du recul du pétrole",
       "TFF Group chute après une baisse de 71% de son bénéfice",
       "La Bourse de Paris en hausse malgré les interrogations sur la tech",
-      "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-      "La Bourse de Paris en légère baisse, repasse en dessous des 8.500 points"
+      "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA"
     ]
   },
   "valeurs": {
@@ -298,9 +298,13 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.25,
+      "nb_news": 20,
+      "titres_cles": [
+        "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
+        "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia"
+      ]
     },
     "Dassault Systèmes": {
       "sentiment": 0.4,
