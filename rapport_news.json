@@ -1,15 +1,15 @@
 {
   "date": "2026-07-09",
-  "heure": "04:45",
+  "heure": "16:18",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en hausse, profite du recul du pétrole",
+      "TFF Group chute après une baisse de 71% de son bénéfice",
       "La Bourse de Paris en hausse malgré les interrogations sur la tech",
       "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-      "La Bourse de Paris en légère baisse, repasse en dessous des 8.500 points",
-      "La Bourse de Paris s'affiche en hausse prudente",
-      "La Bourse de Paris termine en hausse après l'emploi américain"
+      "La Bourse de Paris en légère baisse, repasse en dessous des 8.500 points"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Les actions énergétiques européennes progressent avec la hausse du pétrole",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.14,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
-        "Airbus décroche un nouveau contrat avec l'OTAN pour son A330 MRTT",
-        "Le sommet de l'Otan vante des contrats d'armement, tente d'apaiser Trump",
-        "Les actions européennes reculent avant les minutes de la Fed"
+        "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
+        "Airbus : livraisons en hausse en juin, +15% au premier semestre",
+        "Airbus décroche un nouveau contrat avec l'OTAN pour son A330 MRTT"
       ]
     },
     "Schneider Electric": {
@@ -144,8 +144,8 @@
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "Maserati: BYD ne discute pas d'un partenariat avec Stellantis, assure la dirigeante du groupe chinois",
-        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
+        "L’action Stellantis recule après la dégradation de JPMorgan",
+        "Maserati: BYD ne discute pas d'un partenariat avec Stellantis, assure la dirigeante du groupe chinois"
       ]
     },
     "Saint-Gobain": {
