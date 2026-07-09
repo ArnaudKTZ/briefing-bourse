@@ -1,8 +1,8 @@
 {
-  "date": "2026-07-08",
-  "heure": "19:04",
+  "date": "2026-07-09",
+  "heure": "04:45",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en hausse malgré les interrogations sur la tech",
