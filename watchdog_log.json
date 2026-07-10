@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-09",
-  "heure": "18:10",
+  "date": "2026-07-10",
+  "heure": "05:30",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -8,7 +8,7 @@
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 16:21"
+      "msg": "OK — briefing du jour envoyé à 05:03"
     },
     "Scoring intraday": {
       "ok": true,
