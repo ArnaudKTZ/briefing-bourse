@@ -1,8 +1,8 @@
 {
   "date": "2026-07-10",
-  "heure": "18:34",
+  "heure": "20:04",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»",
