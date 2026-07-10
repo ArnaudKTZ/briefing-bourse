@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "heure": "15:00",
+  "heure": "18:34",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
         "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Air Liquide": {
@@ -131,7 +131,7 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
@@ -158,9 +158,13 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.2,
+      "nb_news": 20,
+      "titres_cles": [
+        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
+        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
+      ]
     },
     "Pernod Ricard": {
       "sentiment": -0.11,
@@ -172,19 +176,31 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.21,
+      "nb_news": 19,
+      "titres_cles": [
+        "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
+        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions",
+        "Chef Ziling Zhou, fondatrice de Silver Beach, première femme d'Asie Chevalier de la truffe Chef × Visionnaire culinaire, Chef espagnol trois fois étoilé David Muñoz : Un dialogue culinaire de Chengdu à Madrid s'achève avec succès"
+      ]
     },
     "Capgemini": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 20,
+      "titres_cles": [
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini chute de 4% sur fond de risques liés à l’IA",
+        "Le moment de vérité de l’IA pour l’Assurance dommages : les pionniers affichent une croissance de revenus supérieure de 21 %, tandis que le reste du secteur peine à suivre"
+      ]
     },
     "Renault": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.45,
+      "nb_news": 20,
+      "titres_cles": [
+        "1er trimestre 2026 : forte dynamique de croissance avec un chiffre d’affaires de 12,5 milliards d’euros, en hausse de 7,3 %",
+        "Mise en œuvre du programme de rachat d’actions",
+        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel"
+      ]
     },
     "Legrand": {
       "sentiment": 1.22,
@@ -196,24 +212,40 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.15,
+      "nb_news": 20,
+      "titres_cles": [
+        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros",
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
+      ]
     },
     "Bouygues": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.35,
+      "nb_news": 20,
+      "titres_cles": [
+        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "L’action Orange chute à son plus bas en 3 mois selon Barclays"
+      ]
     },
     "Engie": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.2,
+      "nb_news": 20,
+      "titres_cles": [
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives",
+        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
+      ]
     },
     "Orange": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.85,
+      "nb_news": 20,
+      "titres_cles": [
+        "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes",
+        "Communiqué: Orange a l’intention d’émettre une nouvelle souche d'obligations hybrides et de lancer une offre de rachat sur certaines de ses obligations hybrides existantes"
+      ]
     },
     "Vivendi": {
       "sentiment": 0.0,
@@ -239,10 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.0,
-      "nb_news": 1,
+      "sentiment": 0.38,
+      "nb_news": 21,
       "titres_cles": [
-        "CAC 40, Airbus, Dassault Aviation, Thales, Alstom… les actions en Bourse au programme de Momentum"
+        "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
+        "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte",
+        "ALSTOM S.A : Exercice fiscal 2025/26 d’Alstom : Performance commerciale record, Exécution difficile. Plan d’action pour 2026/27"
       ]
     },
     "Worldline": {
@@ -255,19 +289,31 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.09,
+      "nb_news": 11,
+      "titres_cles": [
+        "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
+        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032"
+      ]
     },
     "STMicroelectronics": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.25,
+      "nb_news": 20,
+      "titres_cles": [
+        "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
+        "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia"
+      ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.4,
+      "nb_news": 20,
+      "titres_cles": [
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA",
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+      ]
     },
     "Edenred": {
       "sentiment": 0.0,
@@ -278,9 +324,13 @@
       ]
     },
     "Accor": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.1,
+      "nb_news": 10,
+      "titres_cles": [
+        "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
+        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1",
+        "Les actions d’hôtellerie et de croisières chutent en Europe et aux États-Unis dans un contexte de conflit iranien"
+      ]
     },
     "Eurazeo": {
       "sentiment": 0.0,
@@ -291,15 +341,21 @@
     },
     "Thales": {
       "sentiment": 0.0,
-      "nb_news": 1,
+      "nb_news": 21,
       "titres_cles": [
-        "CAC 40, Airbus, Dassault Aviation, Thales, Alstom… les actions en Bourse au programme de Momentum"
+        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
+        "Les actions Thales et Leonardo bondissent après un contrat OTAN",
+        "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?"
       ]
     },
     "Forvia": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.45,
+      "nb_news": 20,
+      "titres_cles": [
+        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025",
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
+      ]
     }
   },
   "signaux_forts": [
