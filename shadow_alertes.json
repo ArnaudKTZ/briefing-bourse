@@ -828,5 +828,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100 | Momentum intraday fort +2.41%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-10",
+    "heure": "09:31",
+    "nom": "Sanofi",
+    "cours": 76.77,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-10",
+    "heure": "09:31",
+    "nom": "Eurofins Scientific",
+    "cours": 69.58,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-10",
+    "heure": "09:31",
+    "nom": "Edenred",
+    "cours": 23.75,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
   }
 ]
