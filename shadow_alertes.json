@@ -918,5 +918,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.36%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "18:16",
+    "nom": "Eurofins Scientific",
+    "cours": 69.5,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "18:16",
+    "nom": "Eurazeo",
+    "cours": 42.44,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.26%",
+    "envoyee": false
   }
 ]
