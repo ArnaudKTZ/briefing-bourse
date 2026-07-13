@@ -160,6 +160,37 @@ def evaluer_dual_momentum():
                        "ne bat pas le buy&hold World en rendement. Rôle = airbag, pas moteur."}
 
 
+def evaluer_crypto_dm():
+    """Poche crypto (rotation BTC/ETH, lookback 12 fixe, validée par la recette
+    le 09/07, lancée le 13/07). Mesure : stratégie vs buy & hold BTC depuis le
+    départ, en USD. Confiance faible tant que l'historique live est court."""
+    pf = charger("crypto_dm_portefeuille.json")
+    if not pf:
+        return {"agent": "Crypto DM (BTC/ETH)", "metrique": "—",
+                "note": "—", "confiance": "faible",
+                "verdict": "Pas encore exécuté (1er run le 1er du mois)."}
+    depart  = pf.get("capital_depart_usd") or 1
+    perf    = (pf.get("valeur_actuelle", depart) / depart - 1) * 100
+    perf_bh = (pf.get("btc_bh_valeur", depart) / depart - 1) * 100
+    ecart   = perf - perf_bh
+    n_mois  = len(pf.get("historique_valeur", {}))
+    conf    = "faible" if n_mois < 6 else "moyenne"
+    if n_mois < 3:
+        note    = "C"
+        verdict = (f"Trop tôt pour juger ({n_mois} point(s) mensuel(s)). "
+                   f"Stratégie {perf:+.1f}% vs B&H BTC {perf_bh:+.1f}%. "
+                   "L'attendu validé par la recette est l'airbag (drawdown réduit), pas le rendement.")
+    elif ecart >= 0:
+        note    = "B"
+        verdict = f"Stratégie {perf:+.1f}% vs B&H BTC {perf_bh:+.1f}% ({ecart:+.1f} pts) : l'airbag fait son travail."
+    else:
+        note    = "C" if ecart > -10 else "D"
+        verdict = (f"Stratégie {perf:+.1f}% vs B&H BTC {perf_bh:+.1f}% ({ecart:+.1f} pts). "
+                   "Rappel anti-leakage : live très sous le backtest = suspicion de contamination.")
+    return {"agent": "Crypto DM (BTC/ETH)", "metrique": f"{perf:+.1f}% vs B&H BTC {perf_bh:+.1f}%",
+            "note": note, "confiance": conf, "verdict": verdict, "valeur_suivie": round(ecart, 1)}
+
+
 def evaluer_agent_collecte(nom_fichier, libelle, cle_resume):
     """News / Espion : on vérifie qu'ils tournent et produisent. Impact non encore mesuré."""
     data = charger(nom_fichier)
@@ -335,6 +366,7 @@ if __name__ == "__main__":
 
     evals = [
         evaluer_dual_momentum(),
+        evaluer_crypto_dm(),
         evaluer_briefing_v4(),
         evaluer_portefeuille(),
         evaluer_agent_collecte("rapport_news.json",   "Agent News",   "Collecte le sentiment presse."),

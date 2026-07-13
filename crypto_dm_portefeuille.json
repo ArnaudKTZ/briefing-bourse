@@ -1,0 +1,19 @@
+{
+  "date_init": "2026-07-13",
+  "capital_depart_usd": 1000.0,
+  "position": "Stable",
+  "units": 0.0,
+  "cash_usd": 995.0,
+  "frais_cumules_usd": 5.0,
+  "n_rotations": 1,
+  "btc_bh_units": 0.01562604,
+  "historique_valeur": {
+    "2026-07-13": 995.0
+  },
+  "dernier_spot": {
+    "BTC": 63995.74,
+    "ETH": 1810.44
+  },
+  "valeur_actuelle": 995.0,
+  "btc_bh_valeur": 1000.0
+}
