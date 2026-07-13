@@ -868,5 +868,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "07:01",
+    "nom": "Sanofi",
+    "cours": 76.23,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "07:01",
+    "nom": "ArcelorMittal",
+    "cours": 66.08,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "07:01",
+    "nom": "Edenred",
+    "cours": 23.57,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
