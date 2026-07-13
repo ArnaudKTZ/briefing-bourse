@@ -27,6 +27,10 @@ horodatées avec prix d'entrée à 7h) :
     CAC >= 2%) : la MM200 ne bascule pas sur un choc ponctuel, ce marqueur
     isole la performance des signaux les jours de stress. Ajouté le 09/07
     (choc Iran du 08/07 : première fenêtre de mesure en régime stressé)
+  - Edge NET de frais des ACHETER : edge brut moins le péage d'un aller-retour
+    (1% : 0.5% par côté Boursobank, aligné sur Shadow et le scoring). C'est le
+    chiffre qui compte pour un usage réel ; le verdict s'exprime en net. Les
+    ÉVITER restent bruts : ne pas acheter ne coûte rien. Ajouté le 13/07
 
 Rétroactif : évalue tout l'historique disponible à chaque run, pas besoin
 d'attendre. Tourne 1x/semaine (samedi matin). Pas d'appel API payant.
@@ -65,6 +69,11 @@ HORIZONS = [1, 3, 5, 10]
 BUCKETS  = [(85, 100, "85+"), (75, 84, "75-84"), (65, 74, "65-74")]
 
 SEUIL_CHOC = 2.0  # variation quotidienne du CAC (en %, valeur absolue) qui marque un choc
+
+# Péage d'un aller-retour : 0.5% par côté (Boursobank), mêmes taux que
+# FRAIS_TAUX dans agent_shadow.py et scoring_intraday.py. Appliqué aux
+# ACHETER uniquement (suivre un ÉVITER = ne pas acheter = gratuit).
+FRAIS_ALLER_RETOUR = 1.0  # en points de %
 
 
 def prix_ok(x):
@@ -215,7 +224,8 @@ def stats_horizon(obs, h):
     return {
         "univers_moy":  m_uni,
         "acheter":      {"n": n_ach, "moy": m_ach,
-                         "edge": round(m_ach - m_uni, 2) if m_ach is not None else None},
+                         "edge": round(m_ach - m_uni, 2) if m_ach is not None else None,
+                         "edge_net": round(m_ach - m_uni - FRAIS_ALLER_RETOUR, 2) if m_ach is not None else None},
         # Pour ÉVITER, un edge POSITIF = les valeurs évitées font pire que l'univers = signal utile
         "eviter":       {"n": n_evi, "moy": m_evi,
                          "edge": round(m_uni - m_evi, 2) if m_evi is not None else None},
@@ -253,15 +263,18 @@ def verdict(stats_h, buckets_j5, ic_j5):
         s = stats_h.get(h)
         if s and s["acheter"]["n"] >= 30:
             edge_a = s["acheter"]["edge"]
+            edge_a_net = s["acheter"]["edge_net"]
             edge_e = s["eviter"]["edge"]
             morceaux = []
             if edge_a is not None:
-                if edge_a > 0.2:
-                    morceaux.append(f"les ACHETER battent l'univers de {edge_a:+.2f} pts à J+{h}")
+                if edge_a_net > 0:
+                    morceaux.append(f"les ACHETER battent l'univers MÊME après frais ({edge_a:+.2f} pts bruts, {edge_a_net:+.2f} pts nets à J+{h})")
+                elif edge_a > 0.2:
+                    morceaux.append(f"les ACHETER battent l'univers de {edge_a:+.2f} pts bruts à J+{h}, mais {edge_a_net:+.2f} pts NETS : les frais mangent l'avantage")
                 elif edge_a < -0.2:
-                    morceaux.append(f"les ACHETER font {edge_a:+.2f} pts SOUS l'univers à J+{h} : le signal détruit de la valeur")
+                    morceaux.append(f"les ACHETER font {edge_a:+.2f} pts bruts SOUS l'univers à J+{h} ({edge_a_net:+.2f} pts nets) : le signal détruit de la valeur")
                 else:
-                    morceaux.append(f"les ACHETER ne se distinguent pas de l'univers ({edge_a:+.2f} pts à J+{h})")
+                    morceaux.append(f"les ACHETER ne se distinguent pas de l'univers ({edge_a:+.2f} pts bruts à J+{h}), soit {edge_a_net:+.2f} pts NETS de frais : perdant en réel")
             if edge_e is not None:
                 if edge_e > 0.2:
                     morceaux.append(f"les ÉVITER sont utiles ({edge_e:+.2f} pts évités)")
@@ -319,16 +332,18 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
         if not s:
             lignes += f"""<tr style='border-bottom:1px solid #eee;'>
               <td style='padding:8px 10px;font-weight:600;'>J+{h}</td>
-              <td colspan='5' style='padding:8px 10px;color:#999;'>pas encore de données</td></tr>"""
+              <td colspan='6' style='padding:8px 10px;color:#999;'>pas encore de données</td></tr>"""
             continue
-        ea, ee = s["acheter"]["edge"], s["eviter"]["edge"]
-        ca = "#2e7d32" if (ea or 0) > 0 else "#c62828"
-        ce = "#2e7d32" if (ee or 0) > 0 else "#c62828"
+        ea, ean, ee = s["acheter"]["edge"], s["acheter"]["edge_net"], s["eviter"]["edge"]
+        ca  = "#2e7d32" if (ea or 0) > 0 else "#c62828"
+        can = "#2e7d32" if (ean or 0) > 0 else "#c62828"
+        ce  = "#2e7d32" if (ee or 0) > 0 else "#c62828"
         lignes += f"""<tr style='border-bottom:1px solid #eee;'>
           <td style='padding:8px 10px;font-weight:600;'>J+{h}</td>
           <td style='padding:8px 10px;text-align:right;'>{s['univers_moy']:+.2f}%</td>
           <td style='padding:8px 10px;text-align:right;'>{'' if s['acheter']['moy'] is None else format(s['acheter']['moy'], '+.2f') + '%'} <span style='color:#999;font-size:11px;'>(n={s['acheter']['n']})</span></td>
           <td style='padding:8px 10px;text-align:right;color:{ca};font-weight:700;'>{'' if ea is None else format(ea, '+.2f') + ' pts'}</td>
+          <td style='padding:8px 10px;text-align:right;color:{can};font-weight:700;background:#fafafa;'>{'' if ean is None else format(ean, '+.2f') + ' pts'}</td>
           <td style='padding:8px 10px;text-align:right;'>{'' if s['eviter']['moy'] is None else format(s['eviter']['moy'], '+.2f') + '%'} <span style='color:#999;font-size:11px;'>(n={s['eviter']['n']})</span></td>
           <td style='padding:8px 10px;text-align:right;color:{ce};font-weight:700;'>{'' if ee is None else format(ee, '+.2f') + ' pts'}</td>
         </tr>"""
@@ -379,13 +394,15 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
       <th style='padding:8px 10px;text-align:left;'>Sortie</th>
       <th style='padding:8px 10px;text-align:right;'>Univers</th>
       <th style='padding:8px 10px;text-align:right;'>ACHETER</th>
-      <th style='padding:8px 10px;text-align:right;'>Edge</th>
+      <th style='padding:8px 10px;text-align:right;'>Edge brut</th>
+      <th style='padding:8px 10px;text-align:right;'>Edge NET**</th>
       <th style='padding:8px 10px;text-align:right;'>ÉVITER</th>
       <th style='padding:8px 10px;text-align:right;'>Utilité*</th>
     </tr></thead>
     <tbody>{lignes}</tbody>
   </table>
-  <p style='margin:6px 0 0;font-size:11px;color:#999;'>* Utilité ÉVITER = univers moins ÉVITER : positif quand les valeurs évitées font effectivement pire que le marché.</p>
+  <p style='margin:6px 0 0;font-size:11px;color:#999;'>* Utilité ÉVITER = univers moins ÉVITER : positif quand les valeurs évitées font effectivement pire que le marché (brut : ne pas acheter ne coûte rien).<br>
+    ** Edge NET = edge brut moins le péage de {FRAIS_ALLER_RETOUR:.0f}% d'un aller-retour (0,5% par côté, Boursobank). C'est le chiffre qui compte pour un usage réel.</p>
   <h3 style='font-size:14px;margin:20px 0 8px;'>Le score discrimine-t-il ? (ACHETER à J+5, par bucket)</h3>
   <table style='width:60%;border-collapse:collapse;font-size:13px;'>
     <thead><tr style='background:#f5f5f5;'>
@@ -423,8 +440,9 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
   <p style='margin:6px 0 0;font-size:11px;color:#999;'>La MM200 ne bascule pas sur un choc ponctuel : ce découpage isole les signaux
     émis au lendemain d'une variation du CAC de {SEUIL_CHOC:.0f}% ou plus (dans un sens ou l'autre).</p>
   <p style='margin-top:16px;font-size:12px;color:#999;'>
-    Rendements bruts (sans frais) : on mesure ici la qualité informationnelle du signal.
-    Les frais (~1% l'aller-retour) sont à déduire pour tout usage réel : un edge sous +1% par trade ne couvre pas les frais.
+    Le tableau principal affiche l'edge brut (la qualité informationnelle du signal) ET l'edge net de frais
+    (ce qui reste après le péage de {FRAIS_ALLER_RETOUR:.0f}% l'aller-retour) : c'est le net qui décide.
+    Les ventilations par bucket, régime et choc restent en brut.
     Évaluation rétroactive sur tout l'historique disponible (90 jours glissants).
   </p>
 </div>
