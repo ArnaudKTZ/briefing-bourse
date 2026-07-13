@@ -1,15 +1,15 @@
 {
   "date": "2026-07-13",
-  "heure": "18:43",
+  "heure": "20:18",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en légère hausse en contexte incertain",
       "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»",
       "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !",
       "La Bourse de Paris en hausse, profite du recul du pétrole",
-      "TFF Group chute après une baisse de 71% de son bénéfice",
-      "La Bourse de Paris en hausse malgré les interrogations sur la tech"
+      "TFF Group chute après une baisse de 71% de son bénéfice"
     ]
   },
   "valeurs": {
