@@ -898,5 +898,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "12:01",
+    "nom": "Publicis",
+    "cours": 87.6,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-13",
+    "heure": "12:01",
+    "nom": "Teleperformance",
+    "cours": 53.74,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.36%",
+    "envoyee": false
   }
 ]
