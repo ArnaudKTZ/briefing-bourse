@@ -20,6 +20,10 @@
 
 ## Sans date ferme (à sortir quand le moment est bon)
 
+- [ ] Décision poche crypto réelle vs signal Crypto DM (posée le 13/07, réponse en attente) : (a) aligner BTC/ETH sur le signal refuge + trancher SOL, (b) signal appliqué aux seuls futurs apports, (c) ne rien toucher, l'agent observe. (Agent Bourse)
+- [ ] Session promotion Naval Group à programmer un soir : objectif n°1, jamais travaillé ici. Arnaud doit amener le contexte (hiérarchie, échéances d'entretiens, ce qui a été dit). (Promotion)
+- [ ] Sprint KTZ71 en attente : 3 infos mentions légales (adresse, hébergeur, statut juridique) puis rédaction RGPD + gabarit fiche annonce. (KTZ71)
+
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
 - [ ] ~2027-06-16 — **Renouveler le token GitHub (PAT) des jobs cron-job.org** : il expire le 23/06/2027 (vu dans la réponse GitHub lors des tests du 13/07). À l'expiration, les 12 jobs tomberont en 401 d'un coup. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
