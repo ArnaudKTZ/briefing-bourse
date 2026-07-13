@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-10",
-  "heure": "20:04",
+  "date": "2026-07-13",
+  "heure": "04:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.14,
-      "nb_news": 7,
+      "sentiment": 0.89,
+      "nb_news": 9,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
@@ -333,11 +333,9 @@
       ]
     },
     "Eurazeo": {
-      "sentiment": 0.0,
-      "nb_news": 1,
-      "titres_cles": [
-        "La maison-mère de Ferrara entre en discussions exclusives avec Eurazeo en vue d'acquérir le groupe CPK"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Thales": {
       "sentiment": 0.0,
@@ -364,13 +362,6 @@
       1.22,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
-      ]
-    ],
-    [
-      "Air Liquide",
-      1.14,
-      [
-        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
     ]
   ]
