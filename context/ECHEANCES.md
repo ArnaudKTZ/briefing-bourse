@@ -11,7 +11,11 @@
 
 ## À venir
 
-- [ ] 2026-07-22 — **Bilan Agent Bourse 30 jours** : analyser la précision par secteur/indicateur sur données propres (depuis le 02/07), via le rapport de l'Évaluateur. Démarrer si pertinent la Phase 1 V5 (Data Quality, Feature Engine, Score Engine 4 sous-scores). (Agent Bourse)
+- [ ] 2026-07-22 — **Bilan Agent Bourse 30 jours** : analyser la précision par secteur/indicateur sur données propres (depuis le 02/07), via le rapport de l'Évaluateur. Démarrer si pertinent la Phase 1 V5 (Data Quality, Feature Engine, Score Engine 4 sous-scores). **Critères de décision figés à froid le 13/07** (pour ne pas négocier avec soi-même le jour J), sur les données propres depuis le 02/07 à J+5 :
+  - Si IC ≤ 0 OU edge net ACHETER ≤ 0 → satellite maintenu 100% virtuel, aucun passage en réel, l'effort bascule sur la Phase 1 V5 (refonte du score) plutôt que sur du tuning V4
+  - Si IC ≥ +0.03 ET edge net > 0 → satellite candidat à un budget réel réduit, décision budget au 02/08
+  - Entre les deux → observation prolongée d'un mois (re-bilan 22/08), zéro réel
+  - État au 13/07, pour mémoire : IC -0.050 (25% jours positifs), edge net -0.96 pt → trajectoire = cas 1. (Agent Bourse)
 - [ ] 2026-08-02 — **Trois décisions Agent Bourse** (rappel push déjà programmé) : (1) réactiver ou non les alertes email achat/vente suspendues, sur le verdict Shadow ; (2) sort des poids News/Espion neutralisés (supprimer / réduire / réactiver / tester signe contrarien News), après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?). (Agent Bourse)
 
 ## Sans date ferme (à sortir quand le moment est bon)

@@ -7,6 +7,20 @@
 
 ---
 
+## 2026-07-13
+
+### Bilan Agent Bourse + edge net de frais + critères du 22/07 figés
+
+- Bilan complet demandé par Arnaud, chiffres au 13/07 : cœur DM +2,3% (10 232 €, poche USA maintenue grâce au buffer 3%), satellite -1,0% (9 899 €, 2 trades gagnants sur 12 clos, 202 € de frais cumulés soit 2% du capital)
+- Convergence des trois juges contre le satellite : Shadow (alertes NUISIBLES, -1,71 pt sous CAC net à J+5), Évaluateur (IC -0,050 avec 25% de jours positifs, le score classe à l'envers, bucket 85+ pire que 75-84), Professeur (Briefing V4 noté E, précision 43,5% en baisse)
+- Infra saine : data quality 0 erreur depuis le 06/07, watchdog OK, coûts API 1,55 $ au total. Repo local resynchronisé (était 38 commits derrière)
+- Piste rituelle implémentée : **edge NET de frais dans l'Évaluateur** (péage 1% aller-retour déduit, aligné Shadow/scoring). Colonne "Edge NET" dans l'email, champ edge_net dans le JSON, verdict exprimé en net. Vérifié en local : edge brut +0,04 pt à J+5 = -0,96 pt net, "perdant en réel". ÉVITER laissés en brut (ne pas acheter ne coûte rien)
+- **Critères du bilan 22/07 figés à froid** (ECHEANCES.md + spec) : IC ≤ 0 OU edge net ≤ 0 → satellite 100% virtuel et effort sur Phase 1 V5 ; IC ≥ +0,03 ET edge net > 0 → candidat budget réel réduit ; entre les deux → re-bilan 22/08. Trajectoire au 13/07 = gel virtuel + Phase 1 V5
+- Spec mise à jour : annexe B.7 (analogie salaire brut/net), carte Évaluateur, rendez-vous 22/07 avec la grille figée
+- Toujours en attente de décision Arnaud : Crypto DM (BTC/ETH validés lookback 12 fixe, SOL rejeté) et les trois décisions du 02/08
+
+---
+
 ## 2026-07-02
 
 ### Audit complet Agent Bourse + réparation de 3 bugs critiques
