@@ -21,10 +21,12 @@
 ## Sans date ferme (à sortir quand le moment est bon)
 
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
-- [ ] Crypto Dual Momentum (BTC/ETH/SOL) : à valider via le harnais avant prod. (Agent Bourse)
+- [ ] Jobs cron-job.org à créer (le cron GitHub seul est peu fiable) : Dividendes (lundi 8h05) et Crypto DM (1er du mois 8h15). Via Chrome comme les autres jobs. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
 
 ## Fait
+
+- [x] 2026-07-13 — Crypto Dual Momentum (BTC/ETH, lookback 12 fixe, refuge stablecoin, SOL rejeté) : décision Arnaud, agent en production (agent_crypto_dm.py, 1er du mois 8h15). Premier signal : refuge stablecoin (BTC -45%, ETH -37% sur 12 mois).
 
 - [x] 2026-07-05 — Audit malus VIX : retiré (contre-productif sur 26 ans, comme le F&G). IC Spearman + régime MM200 ajoutés à l'Évaluateur. Agent Dividendes PEA créé. Tableau Cœur DM enrichi (gain/perte €, historique mensuel).
 - [x] 2026-07-02 — Audit complet Agent Bourse, 3 bugs critiques corrigés, agents Shadow + Évaluateur créés, poids News/Espion neutralisés.

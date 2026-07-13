@@ -1,0 +1,41 @@
+name: Agent Crypto Dual Momentum (rotation mensuelle BTC/ETH)
+
+on:
+  schedule:
+    - cron: '15 6 1 * *'  # 8h15 heure française (UTC+2 en été), le 1er de chaque mois, après le DM actions
+  workflow_dispatch:        # lancement manuel depuis GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  crypto-dm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance pandas numpy
+
+      - name: Lancer l'agent Crypto Dual Momentum
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+          DESTINATAIRES: ${{ secrets.DESTINATAIRES }}
+        run: python agent_crypto_dm.py
+
+      - name: Sauvegarder l'état sur GitHub
+        run: |
+          git config user.name "Agent Crypto DM"
+          git config user.email "actions@github.com"
+          git add crypto_dm_etat.json crypto_dm_portefeuille.json || true
+          git diff --staged --quiet || git commit -m "Crypto DM $(date +%Y-%m)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

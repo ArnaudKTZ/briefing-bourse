@@ -17,7 +17,8 @@
 - Piste rituelle implémentée : **edge NET de frais dans l'Évaluateur** (péage 1% aller-retour déduit, aligné Shadow/scoring). Colonne "Edge NET" dans l'email, champ edge_net dans le JSON, verdict exprimé en net. Vérifié en local : edge brut +0,04 pt à J+5 = -0,96 pt net, "perdant en réel". ÉVITER laissés en brut (ne pas acheter ne coûte rien)
 - **Critères du bilan 22/07 figés à froid** (ECHEANCES.md + spec) : IC ≤ 0 OU edge net ≤ 0 → satellite 100% virtuel et effort sur Phase 1 V5 ; IC ≥ +0,03 ET edge net > 0 → candidat budget réel réduit ; entre les deux → re-bilan 22/08. Trajectoire au 13/07 = gel virtuel + Phase 1 V5
 - Spec mise à jour : annexe B.7 (analogie salaire brut/net), carte Évaluateur, rendez-vous 22/07 avec la grille figée
-- Toujours en attente de décision Arnaud : Crypto DM (BTC/ETH validés lookback 12 fixe, SOL rejeté) et les trois décisions du 02/08
+- **Crypto Dual Momentum lancé en production** (décision Arnaud) : agent_crypto_dm.py + workflow crypto_dm.yml (1er du mois 8h15, après le DM actions). Réglages strictement fidèles au backtest validé : rotation pure BTC/ETH, lookback 12 FIXE, refuge stablecoin, frais 0,5%/rotation, décision sur clôtures de fin de mois (pas de look-ahead), SOL exclu. Portefeuille virtuel 1 000 $ vs B&H BTC. Noté par le Professeur chaque dimanche (evaluer_crypto_dm). Premier signal réel : BTC -45% et ETH -37% sur 12 mois → refuge stablecoin d'entrée, l'airbag s'active dès le lancement (bear market crypto en cours). Note fiscale dans l'email de rotation : passer par un stablecoin plutôt que par des euros évite de cristalliser la flat tax (crypto→crypto non imposable, art. 150 VH bis). Spec mise à jour (carte agent, trombinoscope A.3, B.1 troisième poche, roadmap). Job cron-job.org à créer (comme Dividendes)
+- Toujours en attente de décision Arnaud : les trois décisions du 02/08 (alertes, poids News/Espion, budget satellite)
 
 ---
 

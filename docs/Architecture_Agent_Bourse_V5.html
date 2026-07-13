@@ -106,6 +106,11 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
     <div class="card-body">Le conseiller patrimonial. Hybride 50/50 : 50% World en permanence + 50% qui tourne entre World et USA selon le momentum 12 mois (refuge cash si tout baisse). Email : « rien à faire » ou « bascule X→Y ». Portefeuille virtuel 10 000€ (depuis le 26/06) suivi chaque jour dans le briefing, comparé au World buy &amp; hold.</div>
   </div>
   <div class="card">
+    <div class="card-title">Agent Crypto Dual Momentum <span class="badge badge-coeur">CRYPTO</span></div>
+    <div class="card-freq">1×/mois — le 1er, 8h15</div>
+    <div class="card-body">La rotation crypto (créé le 13/07, backtest passé par la recette le 09/07). Poche 100% rotative, TOTALEMENT séparée du PEA : chaque mois, 100% sur le meilleur momentum 12 mois de BTC/ETH, refuge stablecoin si tout baisse — l'airbag, la raison d'être de la stratégie sur crypto (les bear markets y détruisent -70/-80%). Lookback 12 FIXE : le walk-forward optimisé a échoué à la recette, ne jamais raccourcir sans re-backtest. SOL rejeté (drawdown -90%). Décision sur les clôtures de fin de mois uniquement (pas de look-ahead). Portefeuille virtuel 1 000 $ vs buy &amp; hold BTC, frais 0,5%/rotation. Noté par le Professeur chaque dimanche. Premier signal (13/07) : BTC -45% et ETH -37% sur 12 mois → refuge stablecoin d'entrée. Gratuit, sans API.</div>
+  </div>
+  <div class="card">
     <div class="card-title">Harnais de mesure <span class="badge badge-gouv">RECETTE</span></div>
     <div class="card-freq">À la demande</div>
     <div class="card-body">Le juge. Backtest walk-forward, frais inclus, sans look-ahead : réglages choisis sur le passé, testés sur l'avenir jamais vu. Réutilisable par le Professeur pour noter les agents.</div>
@@ -195,6 +200,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td>Briefing V4 (journal + satellite)</td><td>quotidien 7h</td><td>3 (zoho + xtrem111 + ferrey83)</td></tr>
   <tr><td>Alertes intraday</td><td><strong>suspendues du 02/07 au ~02/08</strong> (décision sur verdict Shadow)</td><td>—</td></tr>
   <tr><td>Dual Momentum (cœur)</td><td>1er du mois</td><td>3</td></tr>
+  <tr><td><strong>Crypto DM (rotation BTC/ETH)</strong></td><td>1er du mois, 8h15</td><td>3</td></tr>
   <tr><td><strong>Shadow (contrefactuel alertes)</strong></td><td>vendredi 18h35</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Évaluateur (edge multi-horizons)</strong></td><td>samedi 7h35</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Dividendes PEA (calendrier)</strong></td><td>lundi 8h05</td><td>2 (zoho + xtrem111)</td></tr>
@@ -233,7 +239,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <ul>
     <li><del>Agent Dividendes PEA</del> — FAIT le 05/07 (voir la carte agent ci-dessus)</li>
     <li>Agent Patrimoine global : raisonner patrimoine entier (PEA réel, seuil fiscal 5 ans, DCA, épargne, projets) — nécessite une session dédiée avec les données réelles</li>
-    <li>Crypto Dual Momentum : <strong>backtest passé par la recette le 09/07</strong> (crypto_dm_backtest.py). Le walk-forward optimisé échoue (les réglages courts choisis en apprentissage se font hacher en test) ; le réglage fixe de 12 mois (le même que le cœur actions) passe : rotation BTC/ETH = rendement 46%/an contre 32% pour garder le Bitcoin sans rien faire, pire chute -51% contre -73%. Ajouter Solana détruit tout (pire chute -90%) : rejeté, comme les émergents côté actions. Limites : historique court, fiscalité hors PEA non modélisée. <strong>Décision d'adoption en attente (Arnaud)</strong> — poche séparée du PEA le cas échéant</li>
+    <li>Crypto Dual Momentum : <strong>ADOPTÉ — décision Arnaud du 13/07, agent en production</strong> (agent_crypto_dm.py, voir la carte au chapitre 2). Rappel du chemin : backtest passé par la recette le 09/07 (crypto_dm_backtest.py), le walk-forward optimisé échoue (les réglages courts choisis en apprentissage se font hacher en test), le réglage fixe de 12 mois passe (rotation BTC/ETH = rendement 46%/an contre 32% pour garder le Bitcoin sans rien faire, pire chute -51% contre -73%), Solana rejeté (pire chute -90%). Poche séparée du PEA, refuge stablecoin (un échange crypto→crypto ne déclenche pas la flat tax, contrairement à un passage en euros)</li>
     <li>Agent Data Quality complet : distinguer « donnée manquante » de « vrai neutre », bloquer le signal si données pourries (premier étage posé le 02/07 avec data_quality_log)</li>
     <li>Diversification des sources de données (sortir de la dépendance Yahoo unique) — data_quality_log fournira les faits pour arbitrer</li>
     <li>Veille → Professeur → recette : boucle d'intégration automatique des idées validées</li>
@@ -284,6 +290,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <table>
   <tr><th>Agent</th><th>Son métier</th><th>Ce qu'il fait, en clair</th></tr>
   <tr><td><strong>Dual Momentum</strong></td><td>Le gérant du cœur</td><td>Une fois par mois, il regarde ce qui a le mieux monté depuis un an (marché mondial ou marché américain), garde le plus fort, et met tout à l'abri en liquidités si tout baisse. Son email dit « rien à faire » ou « il faut basculer ». C'est lui qui guide l'essentiel du capital.</td></tr>
+  <tr><td><strong>Crypto DM</strong></td><td>Le gérant de la poche crypto</td><td>Même principe que le gérant du cœur, appliqué au Bitcoin et à l'Ethereum, dans une poche complètement à part (rien à voir avec le PEA). Sa vraie mission n'est pas de gagner plus : c'est le parachute. Quand tout baisse depuis un an, il se réfugie dans une crypto stable qui ne bouge pas, pour éviter les chutes de -70% dont la crypto a le secret. Dès son premier jour (13/07), il a d'ailleurs dit : tout baisse, restez à l'abri.</td></tr>
   <tr><td><strong>Briefing</strong></td><td>Le journaliste du matin</td><td>Chaque matin à 7h, il envoie le journal : état du marché, note sur 100 pour chacune des 39 valeurs du CAC 40, position du cœur, portefeuilles d'entraînement. Il informe, il ne décide rien.</td></tr>
   <tr><td><strong>Scoring intraday</strong></td><td>La vigie</td><td>Quatre fois par jour, il re-note les 39 valeurs et guette les mouvements brusques. Ses alertes « achetez / vendez » sont suspendues le temps de prouver qu'elles rapportent plus qu'elles ne coûtent.</td></tr>
   <tr><td><strong>News</strong></td><td>Le lecteur de presse</td><td>Trois fois par jour, il lit les titres de la presse financière et note l'ambiance (bonne ou mauvaise nouvelle) pour chaque valeur. Mesuré sur ses résultats, son avis n'apportait rien : il ne compte plus dans les notes, mais il continue d'observer.</td></tr>
@@ -304,6 +311,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 
 <h3>B.1 Les deux poches (cœur et satellite)</h3>
 <p>Le capital est coupé en deux, comme un budget de ménage. L'essentiel (~85%, le <strong>cœur</strong>) est confié à une stratégie lente et prouvée qu'on ne touche qu'une fois par mois. Une petite poche (~15-20% maximum, le <strong>satellite</strong>) sert de terrain de jeu pour chasser les opportunités et apprendre. Les deux poches sont étanches : même un désastre complet du terrain de jeu ne peut pas entamer le cœur.</p>
+<p>Depuis le 13/07 s'ajoute une <strong>troisième poche, crypto</strong>, encore plus étanche que les deux autres : elle ne vit même pas au même endroit (un compte d'échange crypto, pas le PEA de la banque). Elle applique la même recette lente que le cœur, au Bitcoin et à l'Ethereum, avec un rôle assumé de parachute plutôt que de moteur.</p>
 
 <h3>B.2 Le momentum et le Dual Momentum</h3>
 <p>Le <strong>momentum</strong>, c'est l'observation, vérifiée sur plus d'un siècle de données, que ce qui monte depuis plusieurs mois a un peu plus de chances de continuer à monter que le reste. Le <strong>Dual Momentum</strong> l'applique deux fois : on compare deux marchés (mondial et américain) et on garde le plus fort (momentum <em>relatif</em>) ; puis on vérifie que ce gagnant monte vraiment dans l'absolu, sinon on se met à l'abri en liquidités (momentum <em>absolu</em>). Notre version est volontairement prudente : la moitié du capital reste en permanence sur le marché mondial, seule l'autre moitié tourne. Pourquoi un rythme mensuel ? Parce que la recherche récente montre que les stratégies rapides (quelques jours) ont perdu leur avantage depuis 2009, alors que les stratégies lentes survivent.</p>
