@@ -21,11 +21,12 @@
 ## Sans date ferme (à sortir quand le moment est bon)
 
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
-- [ ] Jobs cron-job.org à créer (le cron GitHub seul est peu fiable) : Dividendes (lundi 8h05) et Crypto DM (1er du mois 8h15). Via Chrome comme les autres jobs. (Agent Bourse)
+- [ ] ~2027-06-16 — **Renouveler le token GitHub (PAT) des jobs cron-job.org** : il expire le 23/06/2027 (vu dans la réponse GitHub lors des tests du 13/07). À l'expiration, les 12 jobs tomberont en 401 d'un coup. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
 
 ## Fait
 
+- [x] 2026-07-13 — Jobs cron-job.org Dividendes (lundi 8h05) et Crypto DM (1er du mois 8h15) créés par clonage (token jamais manipulé), testés 204, revérifiés après rechargement. 12 jobs actifs.
 - [x] 2026-07-13 — Crypto Dual Momentum (BTC/ETH, lookback 12 fixe, refuge stablecoin, SOL rejeté) : décision Arnaud, agent en production (agent_crypto_dm.py, 1er du mois 8h15). Premier signal : refuge stablecoin (BTC -45%, ETH -37% sur 12 mois).
 
 - [x] 2026-07-05 — Audit malus VIX : retiré (contre-productif sur 26 ans, comme le F&G). IC Spearman + régime MM200 ajoutés à l'Évaluateur. Agent Dividendes PEA créé. Tableau Cœur DM enrichi (gain/perte €, historique mensuel).
