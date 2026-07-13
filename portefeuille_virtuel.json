@@ -1,24 +1,6 @@
 {
-  "capital": 10.219999999999345,
+  "capital": 1940.62,
   "positions": {
-    "Air Liquide": {
-      "nb_actions": 11,
-      "prix_entree": 176.3,
-      "date_entree": "2026-07-02",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1939.3000000000002,
-      "frais_achat": 9.7
-    },
-    "Danone": {
-      "nb_actions": 27,
-      "prix_entree": 72.2,
-      "date_entree": "2026-07-02",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1949.4,
-      "frais_achat": 9.75
-    },
     "Sanofi": {
       "nb_actions": 26,
       "prix_entree": 74.77,
@@ -45,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1982.07,
       "frais_achat": 9.91
+    },
+    "BNP Paribas": {
+      "nb_actions": 19,
+      "prix_entree": 100.7,
+      "date_entree": "2026-07-13",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "cout_total": 1913.3,
+      "frais_achat": 9.57
     }
   },
   "historique_valeur": {
@@ -63,7 +54,8 @@
     "2026-07-07": 10075.38,
     "2026-07-08": 9905.95,
     "2026-07-09": 9829.05,
-    "2026-07-10": 9852.88
+    "2026-07-10": 9852.88,
+    "2026-07-13": 9823.94
   },
   "trades": [
     {
@@ -195,6 +187,32 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.79,
       "frais_total": 19.69
+    },
+    {
+      "nom": "Air Liquide",
+      "entree": 176.3,
+      "sortie": 174.3,
+      "date_entree": "2026-07-02",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-13",
+      "heure_sortie": "03:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -1.63,
+      "frais_total": 19.29
+    },
+    {
+      "nom": "Danone",
+      "entree": 72.2,
+      "sortie": 72.42,
+      "date_entree": "2026-07-02",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-13",
+      "heure_sortie": "03:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -0.2,
+      "frais_total": 19.53
     }
   ]
 }
