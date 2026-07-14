@@ -938,5 +938,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.26%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-14",
+    "heure": "07:01",
+    "nom": "ArcelorMittal",
+    "cours": 65.92,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-14",
+    "heure": "07:01",
+    "nom": "BNP Paribas",
+    "cours": NaN,
+    "score": 35,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : nan%",
+    "envoyee": false
   }
 ]

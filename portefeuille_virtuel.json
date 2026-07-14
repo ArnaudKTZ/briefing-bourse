@@ -1,5 +1,5 @@
 {
-  "capital": 1940.62,
+  "capital": NaN,
   "positions": {
     "Sanofi": {
       "nb_actions": 26,
@@ -27,15 +27,6 @@
       "source_entree": "Briefing",
       "cout_total": 1982.07,
       "frais_achat": 9.91
-    },
-    "BNP Paribas": {
-      "nb_actions": 19,
-      "prix_entree": 100.7,
-      "date_entree": "2026-07-13",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1913.3,
-      "frais_achat": 9.57
     }
   },
   "historique_valeur": {
@@ -56,7 +47,7 @@
     "2026-07-09": 9829.05,
     "2026-07-10": 9852.88,
     "2026-07-13": 9920.16,
-    "2026-07-14": 9823.94
+    "2026-07-14": NaN
   },
   "trades": [
     {
@@ -214,6 +205,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": -0.2,
       "frais_total": 19.53
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 100.7,
+      "sortie": NaN,
+      "date_entree": "2026-07-13",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-14",
+      "heure_sortie": "07:01",
+      "source_sortie": "Intraday",
+      "pnl_pct": NaN,
+      "frais_total": 10.07,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }
