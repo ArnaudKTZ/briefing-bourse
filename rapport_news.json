@@ -1,21 +1,21 @@
 {
   "date": "2026-07-14",
-  "heure": "04:45",
+  "heure": "12:57",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en recul pour le 14 juillet",
       "La Bourse de Paris termine en légère hausse en contexte incertain",
       "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»",
       "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !",
-      "La Bourse de Paris en hausse, profite du recul du pétrole",
-      "TFF Group chute après une baisse de 71% de son bénéfice"
+      "La Bourse de Paris en hausse, profite du recul du pétrole"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.19,
-      "nb_news": 21,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Bilan semestriel du contrat de liquidité contracté avec ODDO BHF SCA",
         "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS",
@@ -33,7 +33,7 @@
     },
     "Hermès": {
       "sentiment": 0.1,
-      "nb_news": 21,
+      "nb_news": 20,
       "titres_cles": [
         "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
         "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.38,
-      "nb_news": 21,
+      "sentiment": 0.4,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
-        "STMicroelectronics : la star du CAC 40 profite en Bourse du boom de l’IA et des accords avec Amazon et Nvidia"
+        "FocalPoint et STMicroelectronics concluent un accord commercial visant à renforcer la fiabilité des systèmes GNSS pour les applications automobiles"
       ]
     },
     "Dassault Systèmes": {
