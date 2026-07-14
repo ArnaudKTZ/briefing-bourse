@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "heure": "14:03",
+  "heure": "18:05",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -41,7 +41,7 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
