@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "heure": "12:57",
+  "heure": "14:03",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -176,7 +176,7 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.21,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
