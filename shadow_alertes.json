@@ -968,5 +968,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-14",
+    "heure": "12:01",
+    "nom": "Publicis",
+    "cours": 86.92,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
