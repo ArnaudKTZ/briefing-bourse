@@ -7,6 +7,18 @@
 
 ---
 
+## 2026-07-15
+
+### Agent Stratège créé + dossier méthodes des grands traders + fix NaN scoring
+
+- Demande d'Arnaud : étudier les méthodes des grands traders millionnaires et créer un agent "Loup de Wall Street" qui manage les autres et le conseille. Cadrage honnête accepté : pas un super-prédicteur (97% des day traders persistants perdent, étude brésilienne ; <1% d'edge fiable à Taïwan), mais un Stratège qui audite la flotte contre les méthodes documentées des maîtres
+- **Recherche profonde sourcée** (context/import/methodes_grands_traders.md) : Simons/Medallion (66%/an brut avec 50,75% de réussite seulement), Tudor Jones (MM200, losers average losers, 5:1), Soros/Druckenmiller (sizing par conviction), Turtles (règles publiques complètes : 2%/trade, unités de volatilité), O'Neil/Minervini, Schwager, Livermore (mort ruiné), contre-poids académique (Brésil/Taïwan/Barber-Odean) et validation AQR du trend lent (positif chaque décennie depuis 1880). **20 principes codifiés testables (P1-P20)**
+- **Audit de la flotte intégré** : forts sur 7 principes (mesure, discipline, poches étanches), trou béant = AUCUN moteur de risque (P1/P2/P5/P9/P11/P12 absents : taille fixe 2000€, pas de stop à l'entrée, pas de limite sectorielle, pas de frein drawdown). Constat : les grands parlent de gestion, jamais de prédiction ; notre V4 a fait l'inverse. Priorité n°1 qui en sort : le Risk Engine (Phase 2 V5 jamais construite)
+- **Agent Stratège en prod** (agent_stratege.py, workflow stratege.yml, le 4 du mois 18h, job cron-job.org créé) : collecte les faits chiffrés de toute la flotte en Python (drawdowns, concentration, edge net, IC, coûts), les confronte aux 20 principes, produit une page de conseil + UNE proposition avec protocole de test. 1 appel Sonnet 4.6/mois. Gouvernance : conseille seulement, jamais de signal marché, le Professeur reste juge, la recette garde le veto, Arnaud décide. Spec mise à jour (carte, trombinoscope "le coach qui a étudié tous les champions", B.15/B.16)
+- **Incident réparé au passage** : le scoring du 14/07 a écrit une valeur NaN dans l'historique du satellite (bougie Yahoo incomplète, même famille que l'incident du 01/07 mais dans le chemin scoring). Fix : filtrage des Close NaN dans scorer_action + garde-fou à l'écriture de la valeur portefeuille (jamais de NaN persisté). Point du 14/07 retiré de l'historique (valeur réelle inconnue). Le Stratège est lui-même blindé contre les NaN
+
+---
+
 ## 2026-07-13
 
 ### Bilan Agent Bourse + edge net de frais + critères du 22/07 figés

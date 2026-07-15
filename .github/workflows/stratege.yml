@@ -1,0 +1,41 @@
+name: Agent Stratège (conseil mensuel)
+
+on:
+  schedule:
+    - cron: '0 16 4 * *'  # 18h heure française (UTC+2 en été), le 4 du mois (après les revues DM/Crypto du 1er)
+  workflow_dispatch:        # lancement manuel depuis GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  stratege:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install anthropic
+
+      - name: Lancer l'agent Stratège
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+        run: python agent_stratege.py
+
+      - name: Sauvegarder l'état sur GitHub
+        run: |
+          git config user.name "Agent Stratege"
+          git config user.email "actions@github.com"
+          git add stratege_rapport.json costs_log.json || true
+          git diff --staged --quiet || git commit -m "Rapport stratege $(date +%Y-%m)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
