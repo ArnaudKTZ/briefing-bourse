@@ -1018,5 +1018,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "18:52",
+    "nom": "Capgemini",
+    "cours": 92.92,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.38%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "18:52",
+    "nom": "Publicis",
+    "cours": 88.66,
+    "score": 100,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 100/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "18:52",
+    "nom": "Teleperformance",
+    "cours": 55.2,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.92%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "18:52",
+    "nom": "Veolia",
+    "cours": 37.52,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "18:52",
+    "nom": "Edenred",
+    "cours": 25.86,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.01%",
+    "envoyee": false
   }
 ]
