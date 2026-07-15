@@ -1,0 +1,118 @@
+{
+  "date": "2026-07-15",
+  "faits": {
+    "date_reunion": "2026-07-15",
+    "coeur_dm": {
+      "allocation": "50% Amundi MSCI World Screened + 50% Amundi MSCI USA Screened",
+      "valeur": 10232.23,
+      "perf_pct": 2.3223,
+      "drawdown_max": -1.38
+    },
+    "crypto_dm": {
+      "position": "Stable",
+      "valeur_usd": 995.0,
+      "bh_btc_usd": 1000.0,
+      "n_rotations": 1,
+      "drawdown_max": 0.0
+    },
+    "satellite_v4": {
+      "valeur": 9920.16,
+      "drawdown_max": -2.95,
+      "positions_ouvertes": [
+        {
+          "nom": "Sanofi",
+          "cout_eur": 1944.02,
+          "date": "2026-07-08"
+        },
+        {
+          "nom": "TotalEnergies",
+          "cout_eur": 1965.6200000000001,
+          "date": "2026-07-09"
+        },
+        {
+          "nom": "Société Générale",
+          "cout_eur": 1982.07,
+          "date": "2026-07-09"
+        }
+      ],
+      "n_trades_clos": 13,
+      "pct_gagnants": 15,
+      "gain_moyen_pct": 7.84,
+      "perte_moyenne_pct": -2.12,
+      "frais_cumules_eur": 212.04,
+      "taille_position": "2000 EUR fixes, quelle que soit la volatilite (constat code)"
+    },
+    "evaluateur": {
+      "date": "2026-07-13",
+      "n_obs": 662,
+      "edge_brut_j5": 0.04,
+      "edge_net_j5": -0.96,
+      "ic_j5": -0.0495,
+      "verdict": "Sur 199 ACHETER : les ACHETER ne se distinguent pas de l'univers (+0.04 pts bruts à J+5), soit -0.96 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.34 pts) ; le score ne discrimine PAS (85+ ne bat pas 65-74) ; IC de Spearman -0.050 : le score classe À L'ENVERS."
+    },
+    "shadow": {
+      "date": "2026-07-10",
+      "verdict": "NUISIBLES",
+      "edge_j5": -1.71
+    },
+    "professeur": [
+      {
+        "agent": "Dual Momentum (cœur)",
+        "note": "B",
+        "verdict": "Validé hors-échantillon : réduit le risque (chute -20% vs -25%), ne bat pas le buy&hold World en rendement. Rôle = airbag, pas moteur."
+      },
+      {
+        "agent": "Briefing V4 (signaux)",
+        "note": "E",
+        "verdict": "Précision 43.5% : sous le hasard. À cantonner en poche satellite."
+      },
+      {
+        "agent": "Portefeuille virtuel V4",
+        "note": "C",
+        "verdict": "PF -1.5% fait jeu égal avec le CAC (-1.0%)."
+      },
+      {
+        "agent": "Agent News",
+        "note": "C",
+        "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
+      },
+      {
+        "agent": "Agent Espion",
+        "note": "C",
+        "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
+      }
+    ],
+    "data_quality_7_derniers": [
+      {
+        "date": "2026-07-10",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-10",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-13",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-13",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-14",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-14",
+        "nb_erreurs": 0
+      },
+      {
+        "date": "2026-07-15",
+        "nb_erreurs": 0
+      }
+    ],
+    "cout_api_30j_usd": 1.801
+  },
+  "conseil": "<h3>Lecture du mois</h3>\n<p>\nLe cœur Dual Momentum progresse proprement : +2.32% avec un drawdown maximum contenu à -1.38%, le cœur remplit exactement son rôle d'airbag documenté par le Professeur (note B). La poche Crypto reste en stable, légèrement sous le buy-and-hold BTC (-5 USD à 995 USD), sans drawdown et avec une seule rotation : pas de gaspillage, pas d'alpha non plus. Le satellite V4 est le point de tension majeur du mois : sur 13 trades clos, seulement 15% sont gagnants, le gain moyen est de +7.84% mais la perte moyenne de -2.12%, ce qui produit une espérance mathématique structurellement négative avec un taux de réussite aussi bas. L'Evaluateur confirme le diagnostic de façon cinglante : edge net à J+5 de -0.96 point, IC de Spearman à -0.050, le score V4 classe les titres à l'envers. Le Shadow enfonce le clou : -1.71% à J+5, verdict \"NUISIBLES\". Le système mesure avec une rigueur exemplaire, les données de qualité sont parfaites sur 7 jours, les coûts API restent dérisoires à 1.80 USD sur 30 jours. Le problème n'est pas la mesure, le problème est que le satellite consomme du capital réel sur un signal dont la preuve d'edge est absente.\n</p>\n\n<h3>Conformité aux principes des maîtres</h3>\n<ul>\n<li><strong>P15 - Edge mesuré NET de frais avant de risquer (statut : OK au dernier audit, régression constatée) :</strong> le statut OK ne tient plus pour le satellite V4. L'edge net J+5 est à -0.96 point, l'IC est négatif, les frais cumulés atteignent 212.04 EUR. Le principe était satisfait tant que V4 restait en observation pure ; il est violé dès lors que des positions réelles sont ouvertes sur ce signal. <strong>Régression à signaler.</strong></li>\n<li><strong>P1 - Risque max 1-2% du capital par position (statut : ABSENT) :</strong> la taille de position est fixée à 2 000 EUR fixes, sans tenir compte de la volatilité. Sur une valeur satellite de 9 920.16 EUR, chaque position représente environ 20% du portefeuille satellite. Le principe reste ABSENT et le constat code le confirme explicitement.</li>\n<li><strong>P2 - Taille inversement proportionnelle à la volatilité (statut : ABSENT) :</strong> même constat que P1, le code atteste lui-même de l'absence de sizing dynamique (\"2 000 EUR fixes, quelle que soit la volatilité\"). ABSENT confirmé.</li>\n<li><strong>P5 - Asymétrie gain/risque exigée à l'entrée, ratio >= 2 (statut : ABSENT) :</strong> avec 15% de trades gagnants, le ratio gain moyen / perte moyenne serait de 7.84 / 2.12 = 3.7, ce qui est théoriquement favorable. Mais ce ratio ne vaut rien si le signal d'entrée classe à l'envers : le problème n'est pas le money management de la sortie, c'est que les entrées sélectionnent statistiquement les mauvais titres. P5 reste ABSENT et ne peut être implémenté utilement sur un signal négatif.</li>\n<li><strong>P12 - Frein après drawdown : réduire la voilure quand on perd (statut : ABSENT) :</strong> le satellite affiche un drawdown de -2.95% et continue d'ouvrir des positions (Sanofi le 08/07, TotalEnergies et Société Générale le 09/07). Aucun mécanisme de réduction automatique n'est en place. ABSENT confirmé.</li>\n<li><strong>P20 - Mesurer, pas raconter (statut : OK) :</strong> ce principe est le point le plus solide du mois. Qualité données parfaite sur 7 jours consécutifs, Evaluateur sur 662 observations, Shadow actif, Professeur avec verdicts chiffrés. Statut OK pleinement mérité.</li>\n</ul>\n\n<h3>La proposition du mois</h3>\n<p>\n<strong>Mettre le satellite V4 en mode observation pure et geler tout nouveau trade réel jusqu'à preuve d'edge positif net de frais.</strong> Pourquoi maintenant ? Trois signaux convergents arrivent simultanément ce mois-ci : l'Evaluateur sur 662 observations produit un IC négatif (-0.050), le Shadow enregistre -1.71% à J+5 sur trades réels, et le Professeur note le signal E (sous le hasard à 43.5% de précision). Ces trois sources indépendantes concordent, la taille de l'échantillon est désormais suffisante pour que ce ne soit plus du bruit. Continuer à ouvrir des positions réelles sur ce signal n'est pas une prise de risque calculée, c'est une violation documentée de P15. Le protocole de test est le suivant : (1) stopper immédiatement tout nouveau trade d'entrée dans le satellite V4, laisser les trois positions actuelles (Sanofi, TotalEnergies, Société Générale) se clore selon les règles de sortie existantes sans intervention discrétionnaire ; (2) poursuivre le journal des signaux V4 en papier-trading avec le même horodatage et les mêmes règles d'entrée, en enregistrant chaque signal dans le harnais backtest existant ; (3) définir un critère de réactivation : IC de Spearman >= +0.05 <em>et</em> edge net J+5 >= +0.50 point <em>sur un minimum de 100 nouveaux signaux post-gel</em>, validés en walk-forward sur une fenêtre glissante de 60 jours ; (4) si ces seuils ne sont pas atteints après 200 signaux supplémentaires, ouvrir la question de la refonte complète du scoring V4 en réunion dédiée. Ce gel ne coûte rien, il stoppe une saignée mesurée à 212.04 EUR de frais sur des trades dont l'espérance nette est négative.\n</p>\n\n<h3>Ce que dirait un maître</h3>\n<p>\nEd Seykota dirait que tu as fait la chose la plus difficile du trading : tu as construit un outil qui te dit la vérité sur toi-même, et cette vérité est que le signal V4 perd de l'argent de façon répétable et mesurable. La question n'est pas de savoir si le signal s'améliorera, elle est de savoir pourquoi tu continues à payer pour le découvrir avec du capital réel alors que tu as un simulateur. Richard Dennis ajouterait que les Turtles n'ont jamais tradé un système dont l'edge n'était pas prouvé hors-échantillon avant la première position : l'observation n'est pas une perte de temps, c'est le prix d'entrée pour avoir le droit de risquer de l'argent réel.\n</p>"
+}

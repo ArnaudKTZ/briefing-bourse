@@ -808,5 +808,14 @@
     "input": 362,
     "output": 57,
     "usd": 0.000647
+  },
+  {
+    "date": "2026-07-15",
+    "heure": "09:55",
+    "agent": "stratege",
+    "model": "claude-sonnet-4-6",
+    "input": 3112,
+    "output": 1912,
+    "usd": 0.038016
   }
 ]
