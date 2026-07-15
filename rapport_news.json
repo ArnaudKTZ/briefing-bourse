@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-14",
-  "heure": "18:05",
+  "date": "2026-07-15",
+  "heure": "04:45",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse",
       "La Bourse de Paris en recul pour le 14 juillet",
       "La Bourse de Paris termine en légère hausse en contexte incertain",
       "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»",
-      "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !",
-      "La Bourse de Paris en hausse, profite du recul du pétrole"
+      "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !"
     ]
   },
   "valeurs": {
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Publicis Groupe - Bilan semestriel du contrat de liquidité",
