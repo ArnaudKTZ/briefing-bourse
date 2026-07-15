@@ -113,7 +113,13 @@ def drawdown_max(historique_valeur):
 
 def collecter_faits(now):
     """Tous les chiffres que le Stratège a le droit de citer. Rien d'autre."""
-    faits = {"date_reunion": now.date().isoformat()}
+    faits = {
+        "date_reunion": now.date().isoformat(),
+        # Précision indispensable (le conseil du 15/07 avait cru à de l'argent
+        # réel) : TOUS les portefeuilles du système sont VIRTUELS. Aucun euro
+        # réel n'est engagé par les agents ; Arnaud passe ses ordres lui-même.
+        "nature_portefeuilles": "TOUS VIRTUELS (paper trading). Aucun argent réel engagé par les agents.",
+    }
 
     dm_st = charger("dual_momentum_statut.json") or {}
     dm_pf = charger("dual_momentum_portefeuille.json") or {}
