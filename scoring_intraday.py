@@ -293,6 +293,13 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
         stock = yf.Ticker(ticker)
         hist  = stock.history(period="1y")
 
+        # Yahoo renvoie parfois une dernière bougie incomplète (Close=NaN) :
+        # on retombe sur le dernier cours valide, comme le briefing (fix 01/07).
+        # Sans ce filtre, un NaN se propage jusqu'à la valeur du portefeuille
+        # (incident du 14/07 : historique_valeur pollué).
+        if not hist.empty:
+            hist = hist[hist["Close"].notna()]
+
         if hist.empty or len(hist) < 20:
             return None
 
@@ -730,13 +737,22 @@ def gerer_portefeuille_intraday(snapshot, heure):
                 }
                 ouverts.append({"nom": nom, "cours": cours, "score": d["score"]})
 
-    # Mise à jour valeur totale
+    # Mise à jour valeur totale. Un cours NaN (bougie Yahoo incomplète) ne doit
+    # jamais polluer l'historique : on retombe sur le prix d'entrée pour la
+    # position concernée, et on n'écrit jamais un total invalide (fix 15/07).
+    def _cours_valide(nom, pos):
+        c = snapshot.get(nom, {}).get("cours", pos["prix_entree"])
+        return c if (isinstance(c, (int, float)) and c == c) else pos["prix_entree"]
+
     valeur_positions = sum(
-        pos["nb_actions"] * snapshot.get(nom, {}).get("cours", pos["prix_entree"])
+        pos["nb_actions"] * _cours_valide(nom, pos)
         for nom, pos in pf["positions"].items()
     )
     valeur_totale = round(pf["capital"] + valeur_positions, 2)
-    pf["historique_valeur"][today] = valeur_totale
+    if valeur_totale == valeur_totale:  # jamais de NaN persisté
+        pf["historique_valeur"][today] = valeur_totale
+    else:
+        print(f"  ALERTE : valeur portefeuille invalide (NaN), point du {today} non écrit")
 
     with open(FICHIER_PORTEFEUILLE, "w") as f:
         json.dump(pf, f, ensure_ascii=False, indent=2)

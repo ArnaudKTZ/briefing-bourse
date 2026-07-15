@@ -1,6 +1,6 @@
 # Les méthodes des grands traders — dossier de recherche
 
-> Phase A du projet Agent Stratège ("Loup de Wall Street"), demandé par Arnaud le 13/07/2026.
+> Phase A du projet Agent Stratège ("Loup de Wall Street"), demandé par Arnaud le 15/07/2026.
 > Recherche web vérifiée + littérature de référence. Inclut la Phase B : audit de notre
 > flotte d'agents contre ces principes.
 >

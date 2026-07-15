@@ -111,6 +111,11 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
     <div class="card-body">La rotation crypto (créé le 13/07, backtest passé par la recette le 09/07). Poche 100% rotative, TOTALEMENT séparée du PEA : chaque mois, 100% sur le meilleur momentum 12 mois de BTC/ETH, refuge stablecoin si tout baisse — l'airbag, la raison d'être de la stratégie sur crypto (les bear markets y détruisent -70/-80%). Lookback 12 FIXE : le walk-forward optimisé a échoué à la recette, ne jamais raccourcir sans re-backtest. SOL rejeté (drawdown -90%). Décision sur les clôtures de fin de mois uniquement (pas de look-ahead). Portefeuille virtuel 1 000 $ vs buy &amp; hold BTC, frais 0,5%/rotation. Noté par le Professeur chaque dimanche. Premier signal (13/07) : BTC -45% et ETH -37% sur 12 mois → refuge stablecoin d'entrée. Gratuit, sans API.</div>
   </div>
   <div class="card">
+    <div class="card-title">Agent Stratège <span class="badge badge-gouv">CONSEILLER</span></div>
+    <div class="card-freq">1×/mois — le 4, 18h</div>
+    <div class="card-body">L'adjoint d'Arnaud (créé le 15/07, après la recherche sur les méthodes des grands traders). Chaque mois : collecte en Python les faits chiffrés de toute la flotte (drawdowns, concentration, edge net, IC, coûts), les confronte aux <strong>20 principes codifiés des maîtres</strong> (Schwager, Tudor Jones, Turtles, Soros/Druckenmiller, Simons, AQR — dossier sourcé dans context/import/methodes_grands_traders.md), et produit une page de conseil + UNE proposition d'évolution avec son protocole de test. Il ne prédit jamais les marchés, ne donne aucun signal d'achat/vente, ne modifie rien : le Professeur juge les résultats, le Stratège conseille l'architecture, la recette garde le veto, Arnaud décide. 1 appel Sonnet/mois (~1 centime).</div>
+  </div>
+  <div class="card">
     <div class="card-title">Harnais de mesure <span class="badge badge-gouv">RECETTE</span></div>
     <div class="card-freq">À la demande</div>
     <div class="card-body">Le juge. Backtest walk-forward, frais inclus, sans look-ahead : réglages choisis sur le passé, testés sur l'avenir jamais vu. Réutilisable par le Professeur pour noter les agents.</div>
@@ -206,6 +211,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td><strong>Dividendes PEA (calendrier)</strong></td><td>lundi 8h05</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Veille (éclaireur)</strong></td><td>samedi 9h</td><td>2 (zoho + xtrem111)</td></tr>
   <tr><td><strong>Professeur (bilan)</strong></td><td>dimanche 18h</td><td>2 (zoho + xtrem111)</td></tr>
+  <tr><td><strong>Stratège (conseil mensuel)</strong></td><td>le 4 du mois, 18h</td><td>2 (zoho + xtrem111)</td></tr>
 </table>
 
 <h2>5. Infrastructure</h2>
@@ -301,6 +307,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td><strong>Professeur</strong></td><td>Le manager</td><td>Chaque dimanche, il note chaque agent de A à E sur ses résultats réels et propose des améliorations. Il ne modifie jamais rien lui-même : il propose, le patron décide.</td></tr>
   <tr><td><strong>Veille</strong></td><td>L'éclaireur</td><td>Chaque samedi, il parcourt les publications des meilleurs chercheurs en finance et rapporte les idées qui pourraient nous servir. Aucune idée n'est adoptée sans passer l'examen (voir le Harnais).</td></tr>
   <tr><td><strong>Dividendes</strong></td><td>Le calendrier des paies</td><td>Chaque lundi, il liste quels dividendes vont bientôt être versés et ce que chaque valeur a rapporté en dividendes sur un an. Information pure, aucun conseil.</td></tr>
+  <tr><td><strong>Stratège</strong></td><td>L'adjoint, conseil des maîtres</td><td>Une fois par mois, il compare le système entier aux méthodes documentées des plus grands traders de l'histoire (gestion du risque, taille des positions, discipline) et souffle à Arnaud UNE amélioration à la fois, avec la façon de la tester. Il conseille, il ne touche à rien : comme un coach sportif qui a étudié tous les champions mais ne rentre jamais sur le terrain.</td></tr>
   <tr><td><strong>Harnais</strong></td><td>L'examen d'entrée</td><td>Pas un robot à heure fixe : c'est le banc d'essai qu'on lance à la demande. Toute nouvelle idée doit y prouver qu'elle marche sur des données qu'elle n'a jamais vues, frais compris, avant d'entrer en production.</td></tr>
 </table>
 
@@ -352,6 +359,13 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 
 <h3>B.14 Le fil rouge : mesurer avant de croire</h3>
 <p>L'indice de peur crypto (Fear &amp; Greed), la jauge de nervosité américaine (VIX), le sentiment de presse (News), l'argent institutionnel (Espion) : quatre idées de bon sens, le genre de réglage que tout le monde ajoute « parce que c'est logique ». Mesurées une à une sur les données réelles, <strong>aucune n'apportait rien</strong>, et certaines nuisaient (le malus VIX pénalisait les achats pile dans les fenêtres de rebond). Toutes ont été neutralisées, en gardant la collecte pour pouvoir re-tester. La règle qui en découle : aucun réglage sans mesure, aucun agent enrichi sans preuve chiffrée de sa contribution.</p>
+
+<h3>B.15 Le Stratège : le coach qui a étudié tous les champions</h3>
+<p>En étudiant les plus grands traders documentés de l'histoire (les interviews de Schwager, les règles écrites des Turtles, Tudor Jones, Soros, Simons), une évidence ressort : <strong>ils ne parlent presque jamais de prédiction, toujours de gestion</strong>. Combien risquer par position (1 à 2% du capital, pas plus), quelle taille selon la nervosité du marché, où est la sortie avant même d'entrer, quand réduire la voilure. Ces règles ont été codifiées en 20 principes vérifiables (le dossier complet est dans context/import). Le Stratège est le coach qui connaît ce manuel par cœur : chaque mois il regarde jouer notre équipe d'agents, pointe l'écart le plus coûteux avec le manuel, et propose UN exercice pour le combler. Comme tout bon coach, il ne rentre jamais sur le terrain : il ne prédit rien, n'achète rien, ne modifie rien. Et son exercice ne devient titulaire qu'après avoir passé l'examen d'entrée (la recette). Premier écart identifié dès sa création : notre système n'a aucun moteur de risque (taille fixe de 2 000€ quelle que soit la volatilité), alors que c'est le chapitre 1 du manuel de tous les maîtres.</p>
+
+<h3>B.16 Pourquoi pas juste « copier les millionnaires » ?</h3>
+<p>Parce que les études sont sans appel : 97% des day traders persistants perdent de l'argent (étude brésilienne sur tous les débutants 2013-2015), et moins de 1% ont un avantage fiable une fois les frais payés (Taïwan, 15 ans de données). Les millionnaires visibles sont les survivants d'une loterie dont on ne montre jamais les perdants. Ce qui se copie, ce n'est pas leur richesse, c'est leur discipline. Et le seul style validé par un siècle de données académiques (AQR, 1880-2016, 67 marchés) est le suivi de tendance LENT : exactement notre cœur Dual Momentum.</p>
+
 
 <h2 id="annexe-c">Annexe C — Glossaire</h2>
 
