@@ -1,25 +1,25 @@
 {
   "date": "2026-07-15",
-  "heure": "04:45",
+  "heure": "13:06",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en recul, malgré la bonne santé du luxe",
       "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse",
       "La Bourse de Paris en recul pour le 14 juillet",
       "La Bourse de Paris termine en légère hausse en contexte incertain",
-      "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»",
-      "Orange : nouveaux moteurs pour les télécoms, du potentiel en Bourse ? Le rendement des dividendes bondit !"
+      "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.2,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
         "Bilan semestriel du contrat de liquidité contracté avec ODDO BHF SCA",
-        "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS",
-        "Barclays relève LVMH et Kering alors que le luxe se stabilise"
+        "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS"
       ]
     },
     "TotalEnergies": {
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
         "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
-        "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande",
-        "Hermès chute fortement, la croissance des ventes ralentit au T1"
+        "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande"
       ]
     },
     "Airbus": {
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.15,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
-        "Accord Iran-USA salué par la Bourse de Paris, Safran à la fête, TotalEnergies à la traîne",
         "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
-        "CAC 40 : nouveau record historique pour l’indice phare de la Bourse de Paris"
+        "CAC 40 : nouveau record historique pour l’indice phare de la Bourse de Paris",
+        "Les actions européennes de défense bondissent avant le sommet de l’OTAN"
       ]
     },
     "Danone": {
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.4,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe"
       ]
     },
     "Société Générale": {
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.22,
-      "nb_news": 9,
+      "sentiment": 1.25,
+      "nb_news": 8,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -333,9 +333,11 @@
       ]
     },
     "Eurazeo": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 1,
+      "titres_cles": [
+        "Forsee Power entre en négociation exclusive avec FCAP en vue d’un investissement destiné à accélérer son développement"
+      ]
     },
     "Thales": {
       "sentiment": 0.0,
@@ -359,7 +361,7 @@
   "signaux_forts": [
     [
       "Legrand",
-      1.22,
+      1.25,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
