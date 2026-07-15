@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "heure": "14:23",
+  "heure": "18:49",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -14,7 +14,7 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "La Bourse de Paris en recul, malgré la bonne santé du luxe",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.3,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
-        "Kering - Descriptif du programme de rachat d'actions - 28 mai 2026",
-        "La Bourse de Paris en recul, malgré la bonne santé du luxe"
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
+        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
       ]
     },
     "Société Générale": {
