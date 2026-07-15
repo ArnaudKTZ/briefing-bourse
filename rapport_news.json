@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "heure": "13:06",
+  "heure": "14:23",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "L’action Orange chute à son plus bas en 3 mois selon Barclays"
+        "Rachat de SFR: la Commission européenne renvoie l'examen du dossier vers l'Autorité de la concurrence française"
       ]
     },
     "Engie": {
@@ -317,8 +317,9 @@
     },
     "Edenred": {
       "sentiment": 0.0,
-      "nb_news": 2,
+      "nb_news": 3,
       "titres_cles": [
+        "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
         "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
         "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
