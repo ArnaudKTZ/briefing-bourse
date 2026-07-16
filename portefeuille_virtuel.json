@@ -1,5 +1,5 @@
 {
-  "capital": NaN,
+  "capital": 3848.51,
   "positions": {
     "Sanofi": {
       "nb_actions": 26,
@@ -208,16 +208,17 @@
     {
       "nom": "BNP Paribas",
       "entree": 100.7,
-      "sortie": NaN,
+      "sortie": 100.92,
       "date_entree": "2026-07-13",
       "heure_entree": "03:01",
       "source_entree": "Briefing",
       "date_sortie": "2026-07-14",
       "heure_sortie": "07:01",
       "source_sortie": "Intraday",
-      "pnl_pct": NaN,
-      "frais_total": 10.07,
-      "raison_sortie": "ÉVITER intraday"
+      "pnl_pct": -0.28,
+      "frais_total": 19.16,
+      "raison_sortie": "ÉVITER intraday",
+      "note_reparation": "Sortie NaN du 14/07 (bougie Yahoo incomplète) réparée le 16/07 avec la clôture valide du 13/07"
     }
   ]
 }

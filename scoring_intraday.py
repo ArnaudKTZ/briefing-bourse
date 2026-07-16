@@ -678,6 +678,11 @@ def gerer_portefeuille_intraday(snapshot, heure):
             continue
         signal       = d["signal"]
         cours_actuel = d["cours"]
+        # Jamais fermer sur un cours invalide : la fermeture BNP du 14/07 à un
+        # cours NaN a contaminé le capital (NaN propagé jusqu'au blocage du
+        # briefing les 15-16/07). Le dropna en amont l'empêche déjà ; ceinture.
+        if not (isinstance(cours_actuel, (int, float)) and cours_actuel == cours_actuel):
+            continue
         pnl_pct      = (cours_actuel - pos["prix_entree"]) / pos["prix_entree"] * 100
 
         if signal == "ÉVITER" or pnl_pct <= SEUIL_STOP_LOSS or pnl_pct >= SEUIL_TAKE_PROFIT:
