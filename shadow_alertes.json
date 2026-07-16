@@ -1108,5 +1108,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "16:01",
+    "nom": "Sanofi",
+    "cours": 76.31,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "16:01",
+    "nom": "ArcelorMittal",
+    "cours": 66.11,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "16:01",
+    "nom": "Teleperformance",
+    "cours": 53.92,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.12%",
+    "envoyee": false
   }
 ]
