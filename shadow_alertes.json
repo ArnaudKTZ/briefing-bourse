@@ -1098,5 +1098,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "14:10",
+    "nom": "Pernod Ricard",
+    "cours": 64.76,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
