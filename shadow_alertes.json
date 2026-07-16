@@ -1068,5 +1068,35 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.01%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "14:01",
+    "nom": "Publicis",
+    "cours": 92.12,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "14:01",
+    "nom": "Edenred",
+    "cours": 26.16,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.79%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "14:01",
+    "nom": "Eurazeo",
+    "cours": 43.52,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
