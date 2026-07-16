@@ -7,6 +7,18 @@
 
 ---
 
+## 2026-07-16
+
+### Incident briefing muet 15-16/07 : NaN profond réparé, briefing rétabli
+
+- Alerte Watchdog reçue par Arnaud : pas de briefing le 16/07 (dernier : 14/07). Diagnostic : la fermeture de la position BNP Paribas le 14/07 à 7h01 (signal ÉVITER) s'est faite sur un cours NaN (bougie Yahoo incomplète) → pnl NaN → **capital contaminé en NaN**. Le garde-fou anti-chiffres-faux du briefing (01/07) a alors correctement bloqué les briefings des 15 et 16/07 (alertes envoyées à la place). La réparation du 15/07 n'avait nettoyé que l'historique de valeur, pas le capital ni le trade
+- Réparation honnête : sortie BNP reconstituée à la dernière clôture valide avant la sortie (100,92 € le 13/07, exactement ce que le code corrigé aurait utilisé), pnl -0,28%, capital recalculé depuis l'état git d'avant fermeture (1940,62 + produit net = 3848,51 €). Note de réparation tracée dans le trade. Plus aucun NaN dans le fichier (scan récursif)
+- Ceinture-bretelles ajoutée dans scoring_intraday.py : jamais fermer une position sur un cours invalide (en plus du dropna du 15/07)
+- Briefing du 16/07 relancé manuellement : envoyé avec succès, pipeline complet. Le portefeuille a repris son fonctionnement normal (2 ouvertures virtuelles avec le capital libéré : Hermès + BNP, 5/5 positions, valeur 9 890,93 €)
+- Améliorations retenues de l'incident : le message d'alerte du briefing disait "0/39 valeurs sans données" (raison erronée, c'était le portefeuille qui était invalide) — à préciser un jour ; le briefing du 15/07 est définitivement perdu (pas de recos ce jour-là dans performance.json)
+
+---
+
 ## 2026-07-15
 
 ### Agent Stratège créé + dossier méthodes des grands traders + fix NaN scoring
