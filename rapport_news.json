@@ -1,15 +1,15 @@
 {
   "date": "2026-07-16",
-  "heure": "06:45",
+  "heure": "13:19",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA",
+      "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable",
       "La Bourse de Paris en recul, malgré la bonne santé du luxe",
       "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse",
-      "La Bourse de Paris en recul pour le 14 juillet",
-      "La Bourse de Paris termine en légère hausse en contexte incertain",
-      "CAC 40 : la Bourse hésite, «l'environnement avec l’Iran reste fragile» et sera «le risque majeur du week-end»"
+      "La Bourse de Paris en recul pour le 14 juillet"
     ]
   },
   "valeurs": {
@@ -26,9 +26,9 @@
       "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
+        "TotalEnergies repasse sous 70 € après un avertissement sur le T2",
         "Les actions énergétiques européennes progressent avec la hausse du pétrole",
-        "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été",
-        "TotalEnergies sommé par la justice de prendre en compte ses émissions indirectes"
+        "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été"
       ]
     },
     "Hermès": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive",
-        "VINCI remporte un contrat de déploiement et de gestion de bornes de recharge électrique pour poids lourds en Allemagne"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -176,7 +176,7 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.16,
+      "sentiment": 0.21,
       "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.15,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
-        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
+        "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
       ]
     },
     "Bouygues": {
