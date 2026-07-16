@@ -15,7 +15,7 @@
 - Réparation honnête : sortie BNP reconstituée à la dernière clôture valide avant la sortie (100,92 € le 13/07, exactement ce que le code corrigé aurait utilisé), pnl -0,28%, capital recalculé depuis l'état git d'avant fermeture (1940,62 + produit net = 3848,51 €). Note de réparation tracée dans le trade. Plus aucun NaN dans le fichier (scan récursif)
 - Ceinture-bretelles ajoutée dans scoring_intraday.py : jamais fermer une position sur un cours invalide (en plus du dropna du 15/07)
 - Briefing du 16/07 relancé manuellement : envoyé avec succès, pipeline complet. Le portefeuille a repris son fonctionnement normal (2 ouvertures virtuelles avec le capital libéré : Hermès + BNP, 5/5 positions, valeur 9 890,93 €)
-- Améliorations retenues de l'incident : le message d'alerte du briefing disait "0/39 valeurs sans données" (raison erronée, c'était le portefeuille qui était invalide) — à préciser un jour ; le briefing du 15/07 est définitivement perdu (pas de recos ce jour-là dans performance.json)
+- **Message d'alerte rendu précis dans la foulée** (demande Arnaud) : le garde-fou du briefing produit maintenant un diagnostic nominatif — capital NaN (avec l'action : réparer le fichier, relancer ne suffit pas) vs cours NaN d'une position nommée (avec l'action : se résorbe au run suivant). Testé en isolation dans le scratchpad avec un portefeuille corrompu : les deux causes sont détectées et nommées, l'historique reste intact. Le briefing du 15/07 reste définitivement perdu (pas de recos ce jour-là dans performance.json)
 
 ---
 
