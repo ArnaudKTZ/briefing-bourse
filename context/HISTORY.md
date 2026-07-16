@@ -9,6 +9,14 @@
 
 ## 2026-07-16
 
+### Recette S&P 500 Equal Weight (idée Charles Gave) : rejetée, on reste simple
+
+- Question d'Arnaud : Gave recommande d'adjoindre du S&P 500 équipondéré au MSCI World (concentration mega-tech : 70% US, top 10 ~25% de l'indice). Analyse : constat structurel recevable, mais passage obligé par le harnais (comme émergents et SOL)
+- Backtest sp500_ew_backtest.py (proxy RSP depuis 2003, walk-forward 204 mois hors-échantillon, critères posés AVANT les chiffres : Sharpe ≥ baseline +0.03 sans dégrader le drawdown de plus de 2 pts). 4 variantes : socle coupé 25W+25EW, EW dans la rotation, les deux
+- **Aucune ne passe** : B (socle coupé) fait +0.02 de Sharpe (sous le seuil) avec un drawdown pire de 1.4 pt = match nul ; C et D (EW dans la rotation) dégradent tout, même leçon que les émergents (le momentum EW se fait hacher)
+- Nuance honnête notée dans le script : en buy & hold pur sur la fenêtre, l'EW bat le World (13.6%/an vs 12.3%, Sharpe 0.74 vs 0.72) — le constat de Gave n'est pas absurde en soi, il n'améliore juste pas NOTRE système ; et RSP ne couvre pas l'éclatement dot-com 2000-2002 où l'EW a le plus brillé (le test sous-estime peut-être l'EW en krach). Retestable si un jour le cœur devient davantage buy & hold
+- Décision : cœur inchangé. Réponse chiffrée disponible pour quiconque cite Gave
+
 ### Incident briefing muet 15-16/07 : NaN profond réparé, briefing rétabli
 
 - Alerte Watchdog reçue par Arnaud : pas de briefing le 16/07 (dernier : 14/07). Diagnostic : la fermeture de la position BNP Paribas le 14/07 à 7h01 (signal ÉVITER) s'est faite sur un cours NaN (bougie Yahoo incomplète) → pnl NaN → **capital contaminé en NaN**. Le garde-fou anti-chiffres-faux du briefing (01/07) a alors correctement bloqué les briefings des 15 et 16/07 (alertes envoyées à la place). La réparation du 15/07 n'avait nettoyé que l'historique de valeur, pas le capital ni le trade
