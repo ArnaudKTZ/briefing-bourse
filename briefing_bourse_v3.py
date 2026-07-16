@@ -1412,16 +1412,30 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     )
     valeur_totale = round(pf["capital"] + valeur_positions, 2)
 
-    # Garde-fou : si une donnée de marché manquante a fait fuiter un NaN jusqu'ici,
-    # on ne pollue pas l'historique avec une valeur fausse et on le signale à l'appelant.
-    donnees_invalides = math.isnan(valeur_totale)
+    # Garde-fou : si un NaN a fuité jusqu'ici, on ne pollue pas l'historique et on
+    # remonte un DIAGNOSTIC PRÉCIS à l'appelant (incident 15-16/07 : l'alerte disait
+    # "0/39 valeurs sans données" alors que c'était le capital qui était NaN).
+    # Valeur de retour : None si tout va bien, sinon la chaîne de diagnostic.
+    diagnostic = None
+    if math.isnan(valeur_totale):
+        causes = []
+        if math.isnan(pf["capital"]):
+            causes.append(f"le CAPITAL du portefeuille est NaN dans {FICHIER_PORTEFEUILLE} "
+                          "(donnée persistée corrompue : relancer le workflow ne suffira PAS, "
+                          "il faut réparer le fichier — voir l'incident du 14-16/07 dans HISTORY.md)")
+        for nom_pos, pos in pf["positions"].items():
+            c = donnees_dict.get(nom_pos, {}).get("cours", pos["prix_entree"])
+            if isinstance(c, float) and math.isnan(c):
+                causes.append(f"cours du jour NaN pour la position {nom_pos} "
+                              "(bougie Yahoo incomplète : se résorbe en général au run suivant)")
+        diagnostic = " ; ".join(causes) if causes else "valeur totale NaN de cause non identifiée"
 
-    if donnees_invalides:
+    if diagnostic:
         with open(FICHIER_PORTEFEUILLE, "w") as f:
             json.dump(pf, f, ensure_ascii=False, indent=2)
         resume_pf = ("Portefeuille virtuel : données de marché indisponibles aujourd'hui, "
                      "valeur non recalculée (dernière valeur connue conservée).\n")
-        return resume_pf, pf, donnees_dict, donnees_invalides
+        return resume_pf, pf, donnees_dict, diagnostic
 
     pf["historique_valeur"][today] = valeur_totale
 
@@ -1448,7 +1462,7 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     with open(FICHIER_PORTEFEUILLE, "w") as f:
         json.dump(pf, f, ensure_ascii=False, indent=2)
 
-    return resume_pf, pf, donnees_dict, donnees_invalides
+    return resume_pf, pf, donnees_dict, None
 
 
 def generer_html_portefeuille(pf, donnees_dict, perf_cac=None, date_debut=None):
@@ -2285,9 +2299,13 @@ if __name__ == "__main__":
     pf_resume, pf_data, pf_donnees_dict, pf_invalide = gerer_portefeuille_virtuel(donnees, perf)
 
     if pf_invalide:
-        print("Données de marché invalides (NaN) : envoi d'une alerte à la place du briefing normal.")
+        # pf_invalide contient le diagnostic précis construit par le garde-fou
+        print(f"Valeur du portefeuille incalculable : {pf_invalide}")
         n_erreurs = len([d for d in donnees if "erreur" in d])
-        envoyer_email_alerte(f"{n_erreurs}/{len(donnees)} valeurs sans données de marché exploitables aujourd'hui.")
+        envoyer_email_alerte(
+            f"Valeur du portefeuille virtuel incalculable. Diagnostic : {pf_invalide}. "
+            f"Contexte données de marché : {n_erreurs}/{len(donnees)} valeurs en erreur aujourd'hui."
+        )
         raise SystemExit(0)
 
     print("Génération briefing par Claude...")
