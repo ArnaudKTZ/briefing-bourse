@@ -1,0 +1,476 @@
+{
+  "date": "2026-07-16",
+  "periode_oos": "2009-06-30 → 2026-05-31",
+  "criteres_adoption_a_priori": "Sharpe OOS >= baseline +0.03 ET drawdown pas dégradé de plus de 2 pts",
+  "configs": {
+    "A. Baseline (socle World, rot W/USA)": {
+      "cagr": 0.1062,
+      "max_dd": -0.2036,
+      "vol": 0.1266,
+      "sharpe": 0.68,
+      "n_mois": 204
+    },
+    "B. Socle 25W+25EW, rot W/USA": {
+      "cagr": 0.1099,
+      "max_dd": -0.2179,
+      "vol": 0.1291,
+      "sharpe": 0.7,
+      "n_mois": 204
+    },
+    "C. Socle World, rot W/USA/EW": {
+      "cagr": 0.1019,
+      "max_dd": -0.209,
+      "vol": 0.1256,
+      "sharpe": 0.65,
+      "n_mois": 204
+    },
+    "D. Socle 25W+25EW, rot W/USA/EW": {
+      "cagr": 0.1052,
+      "max_dd": -0.2232,
+      "vol": 0.1282,
+      "sharpe": 0.66,
+      "n_mois": 204
+    }
+  },
+  "references_buy_hold": {
+    "B&H World": {
+      "cagr": 0.1225,
+      "max_dd": -0.2526,
+      "vol": 0.143,
+      "sharpe": 0.72,
+      "n_mois": 204
+    },
+    "B&H EW": {
+      "cagr": 0.1364,
+      "max_dd": -0.2668,
+      "vol": 0.1573,
+      "sharpe": 0.74,
+      "n_mois": 204
+    },
+    "B&H 50 World/50 EW": {
+      "cagr": 0.1298,
+      "max_dd": -0.2384,
+      "vol": 0.1482,
+      "sharpe": 0.74,
+      "n_mois": 204
+    }
+  },
+  "folds": {
+    "A. Baseline (socle World, rot W/USA)": [
+      {
+        "test": "2009-06-30 → 2010-05-31",
+        "lookback": 9,
+        "buffer": 0.0,
+        "perf_test": 12.4
+      },
+      {
+        "test": "2010-06-30 → 2011-05-31",
+        "lookback": 6,
+        "buffer": 0.0,
+        "perf_test": 14.3
+      },
+      {
+        "test": "2011-06-30 → 2012-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": -4.8
+      },
+      {
+        "test": "2012-06-30 → 2013-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 23.5
+      },
+      {
+        "test": "2013-06-30 → 2014-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 19.3
+      },
+      {
+        "test": "2014-06-30 → 2015-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 9.2
+      },
+      {
+        "test": "2015-06-30 → 2016-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": -8.3
+      },
+      {
+        "test": "2016-06-30 → 2017-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 17.9
+      },
+      {
+        "test": "2017-06-30 → 2018-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 13.3
+      },
+      {
+        "test": "2018-06-30 → 2019-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": -6.6
+      },
+      {
+        "test": "2019-06-30 → 2020-05-31",
+        "lookback": 9,
+        "buffer": 0.05,
+        "perf_test": -2.5
+      },
+      {
+        "test": "2020-06-30 → 2021-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 40.4
+      },
+      {
+        "test": "2021-06-30 → 2022-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": -3.0
+      },
+      {
+        "test": "2022-06-30 → 2023-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 0.9
+      },
+      {
+        "test": "2023-06-30 → 2024-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 24.4
+      },
+      {
+        "test": "2024-06-30 → 2025-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 13.2
+      },
+      {
+        "test": "2025-06-30 → 2026-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 31.0
+      }
+    ],
+    "B. Socle 25W+25EW, rot W/USA": [
+      {
+        "test": "2009-06-30 → 2010-05-31",
+        "lookback": 9,
+        "buffer": 0.0,
+        "perf_test": 16.1
+      },
+      {
+        "test": "2010-06-30 → 2011-05-31",
+        "lookback": 6,
+        "buffer": 0.0,
+        "perf_test": 14.7
+      },
+      {
+        "test": "2011-06-30 → 2012-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": -4.0
+      },
+      {
+        "test": "2012-06-30 → 2013-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 24.9
+      },
+      {
+        "test": "2013-06-30 → 2014-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 20.2
+      },
+      {
+        "test": "2014-06-30 → 2015-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 10.3
+      },
+      {
+        "test": "2015-06-30 → 2016-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": -7.3
+      },
+      {
+        "test": "2016-06-30 → 2017-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 17.1
+      },
+      {
+        "test": "2017-06-30 → 2018-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 13.3
+      },
+      {
+        "test": "2018-06-30 → 2019-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": -6.2
+      },
+      {
+        "test": "2019-06-30 → 2020-05-31",
+        "lookback": 9,
+        "buffer": 0.05,
+        "perf_test": -3.3
+      },
+      {
+        "test": "2020-06-30 → 2021-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 43.3
+      },
+      {
+        "test": "2021-06-30 → 2022-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": -1.6
+      },
+      {
+        "test": "2022-06-30 → 2023-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": -0.7
+      },
+      {
+        "test": "2023-06-30 → 2024-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 23.7
+      },
+      {
+        "test": "2024-06-30 → 2025-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 12.0
+      },
+      {
+        "test": "2025-06-30 → 2026-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": 28.5
+      }
+    ],
+    "C. Socle World, rot W/USA/EW": [
+      {
+        "test": "2009-06-30 → 2010-05-31",
+        "lookback": 9,
+        "buffer": 0.03,
+        "perf_test": 18.4
+      },
+      {
+        "test": "2010-06-30 → 2011-05-31",
+        "lookback": 6,
+        "buffer": 0.02,
+        "perf_test": 16.6
+      },
+      {
+        "test": "2011-06-30 → 2012-05-31",
+        "lookback": 9,
+        "buffer": 0.02,
+        "perf_test": -15.8
+      },
+      {
+        "test": "2012-06-30 → 2013-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 23.7
+      },
+      {
+        "test": "2013-06-30 → 2014-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 20.2
+      },
+      {
+        "test": "2014-06-30 → 2015-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 8.9
+      },
+      {
+        "test": "2015-06-30 → 2016-05-31",
+        "lookback": 12,
+        "buffer": 0.02,
+        "perf_test": -8.7
+      },
+      {
+        "test": "2016-06-30 → 2017-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 17.9
+      },
+      {
+        "test": "2017-06-30 → 2018-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 13.3
+      },
+      {
+        "test": "2018-06-30 → 2019-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": -6.9
+      },
+      {
+        "test": "2019-06-30 → 2020-05-31",
+        "lookback": 9,
+        "buffer": 0.0,
+        "perf_test": -2.9
+      },
+      {
+        "test": "2020-06-30 → 2021-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 41.8
+      },
+      {
+        "test": "2021-06-30 → 2022-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": -5.0
+      },
+      {
+        "test": "2022-06-30 → 2023-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 0.9
+      },
+      {
+        "test": "2023-06-30 → 2024-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 24.2
+      },
+      {
+        "test": "2024-06-30 → 2025-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 13.2
+      },
+      {
+        "test": "2025-06-30 → 2026-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 31.0
+      }
+    ],
+    "D. Socle 25W+25EW, rot W/USA/EW": [
+      {
+        "test": "2009-06-30 → 2010-05-31",
+        "lookback": 9,
+        "buffer": 0.03,
+        "perf_test": 22.2
+      },
+      {
+        "test": "2010-06-30 → 2011-05-31",
+        "lookback": 6,
+        "buffer": 0.02,
+        "perf_test": 17.0
+      },
+      {
+        "test": "2011-06-30 → 2012-05-31",
+        "lookback": 9,
+        "buffer": 0.02,
+        "perf_test": -15.1
+      },
+      {
+        "test": "2012-06-30 → 2013-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 25.1
+      },
+      {
+        "test": "2013-06-30 → 2014-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 21.1
+      },
+      {
+        "test": "2014-06-30 → 2015-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 10.1
+      },
+      {
+        "test": "2015-06-30 → 2016-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": -5.8
+      },
+      {
+        "test": "2016-06-30 → 2017-05-31",
+        "lookback": 6,
+        "buffer": 0.02,
+        "perf_test": 16.0
+      },
+      {
+        "test": "2017-06-30 → 2018-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": 12.2
+      },
+      {
+        "test": "2018-06-30 → 2019-05-31",
+        "lookback": 6,
+        "buffer": 0.05,
+        "perf_test": -7.0
+      },
+      {
+        "test": "2019-06-30 → 2020-05-31",
+        "lookback": 9,
+        "buffer": 0.0,
+        "perf_test": -3.7
+      },
+      {
+        "test": "2020-06-30 → 2021-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 44.8
+      },
+      {
+        "test": "2021-06-30 → 2022-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": -3.6
+      },
+      {
+        "test": "2022-06-30 → 2023-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": -0.7
+      },
+      {
+        "test": "2023-06-30 → 2024-05-31",
+        "lookback": 12,
+        "buffer": 0.0,
+        "perf_test": 23.6
+      },
+      {
+        "test": "2024-06-30 → 2025-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 12.0
+      },
+      {
+        "test": "2025-06-30 → 2026-05-31",
+        "lookback": 12,
+        "buffer": 0.03,
+        "perf_test": 28.5
+      }
+    ]
+  }
+}
