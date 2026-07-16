@@ -1,5 +1,5 @@
 {
-  "capital": 3848.51,
+  "capital": 241.99,
   "positions": {
     "Sanofi": {
       "nb_actions": 26,
@@ -27,6 +27,24 @@
       "source_entree": "Briefing",
       "cout_total": 1982.07,
       "frais_achat": 9.91
+    },
+    "Hermès": {
+      "nb_actions": 1,
+      "prix_entree": 1644.5,
+      "date_entree": "2026-07-16",
+      "heure_entree": "06:05",
+      "source_entree": "Briefing",
+      "cout_total": 1644.5,
+      "frais_achat": 8.22
+    },
+    "BNP Paribas": {
+      "nb_actions": 19,
+      "prix_entree": 102.32,
+      "date_entree": "2026-07-16",
+      "heure_entree": "06:05",
+      "source_entree": "Briefing",
+      "cout_total": 1944.08,
+      "frais_achat": 9.72
     }
   },
   "historique_valeur": {
@@ -46,7 +64,8 @@
     "2026-07-08": 9905.95,
     "2026-07-09": 9829.05,
     "2026-07-10": 9852.88,
-    "2026-07-13": 9920.16
+    "2026-07-13": 9920.16,
+    "2026-07-16": 9890.93
   },
   "trades": [
     {
