@@ -1138,5 +1138,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.12%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-16",
+    "heure": "18:50",
+    "nom": "Veolia",
+    "cours": 37.22,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
