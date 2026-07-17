@@ -1148,5 +1148,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "11:31",
+    "nom": "Publicis",
+    "cours": 89.86,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "11:31",
+    "nom": "Veolia",
+    "cours": 37.37,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "11:31",
+    "nom": "Eurazeo",
+    "cours": 43.86,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
   }
 ]
