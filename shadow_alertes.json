@@ -1188,5 +1188,45 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.03%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "16:01",
+    "nom": "LVMH",
+    "cours": 495.1,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "16:01",
+    "nom": "TotalEnergies",
+    "cours": 70.66,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "16:01",
+    "nom": "ArcelorMittal",
+    "cours": 65.18,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "16:01",
+    "nom": "Eurofins Scientific",
+    "cours": 70.76,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
