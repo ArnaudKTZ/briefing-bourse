@@ -1,15 +1,15 @@
 {
   "date": "2026-07-17",
-  "heure": "06:45",
+  "heure": "12:59",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux",
       "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA",
       "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable",
       "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-      "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse",
-      "La Bourse de Paris en recul pour le 14 juillet"
+      "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse"
     ]
   },
   "valeurs": {
@@ -80,9 +80,9 @@
       "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
+        "Adecco atteint un sommet de 4 mois après la hausse de BNP Paribas",
         "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Hermès International : bilan du contrat de liquidité au 30 juin 2026"
       ]
     },
     "Air Liquide": {
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "L’action Stellantis recule après la dégradation de JPMorgan",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions",
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
-        "1er trimestre 2026 : forte dynamique de croissance avec un chiffre d’affaires de 12,5 milliards d’euros, en hausse de 7,3 %",
         "Mise en œuvre du programme de rachat d’actions",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel"
+        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
-        "FocalPoint et STMicroelectronics concluent un accord commercial visant à renforcer la fiabilité des systèmes GNSS pour les applications automobiles"
+        "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux"
       ]
     },
     "Dassault Systèmes": {
