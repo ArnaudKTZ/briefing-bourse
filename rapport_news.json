@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "heure": "13:59",
+  "heure": "18:04",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026",
         "Adecco atteint un sommet de 4 mois après la hausse de BNP Paribas",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Hermès International : bilan du contrat de liquidité au 30 juin 2026"
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
       ]
     },
     "Air Liquide": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive",
+        "VINCI remporte un contrat de déploiement et de gestion de bornes de recharge électrique pour poids lourds en Allemagne"
       ]
     },
     "Kering": {
