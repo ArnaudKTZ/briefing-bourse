@@ -1228,5 +1228,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "18:36",
+    "nom": "Sanofi",
+    "cours": 77.34,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
