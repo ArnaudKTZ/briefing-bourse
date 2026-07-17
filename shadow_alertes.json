@@ -1178,5 +1178,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 92/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-17",
+    "heure": "13:54",
+    "nom": "Orange",
+    "cours": 16.55,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.03%",
+    "envoyee": false
   }
 ]
