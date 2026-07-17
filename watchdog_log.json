@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-16",
-  "heure": "13:22",
+  "date": "2026-07-17",
+  "heure": "07:30",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -8,11 +8,11 @@
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 08:07"
+      "msg": "OK — briefing du jour envoyé à 07:03"
     },
     "Scoring intraday": {
       "ok": true,
-      "msg": "OK hier — 2 snapshot(s) enregistré(s)"
+      "msg": "OK hier — 7 snapshot(s) enregistré(s)"
     }
   },
   "problemes": []
