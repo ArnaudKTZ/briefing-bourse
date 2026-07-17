@@ -1,19 +1,19 @@
 {
   "date": "2026-07-17",
-  "n_alertes": 123,
-  "n_achats": 114,
-  "en_attente": 8,
+  "n_alertes": 124,
+  "n_achats": 115,
+  "en_attente": 9,
   "stats": {
     "J+1": {
       "n": 106,
       "gagnants_pct": 32.1,
-      "moyenne_nette": -0.91,
+      "moyenne_nette": -0.92,
       "cac_moyen": -0.04,
-      "edge": -0.87
+      "edge": -0.88
     },
     "J+3": {
       "n": 93,
-      "gagnants_pct": 32.3,
+      "gagnants_pct": 31.2,
       "moyenne_nette": -0.76,
       "cac_moyen": -0.18,
       "edge": -0.58
