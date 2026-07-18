@@ -1,5 +1,94 @@
 {
-  "date": "2026-07-11",
-  "nb_articles": 0,
-  "top": []
+  "date": "2026-07-18",
+  "nb_articles": 40,
+  "top": [
+    {
+      "titre": "Relief-Gated Relative Rotation for QQQ-DIA Allocation: Globally Screened Relative States, Fixed Position Mapping, Incremental Interaction Admission, and Walk-Forward Validation",
+      "lien": "https://arxiv.org/abs/2607.06117v1",
+      "date": "2026-07-07",
+      "score": 16,
+      "hits": [
+        "rotation",
+        "walk-forward",
+        "out-of-sample"
+      ]
+    },
+    {
+      "titre": "When Does Order Flow Matter? State-Dependent L2 Liquidity-State Transitions in Crypto Futures",
+      "lien": "https://arxiv.org/abs/2607.09230v1",
+      "date": "2026-07-10",
+      "score": 10,
+      "hits": [
+        "regime",
+        "out-of-sample",
+        "robust",
+        "llm"
+      ]
+    },
+    {
+      "titre": "SciPhy Reinforcement Learning for Portfolio Optimization",
+      "lien": "https://arxiv.org/abs/2607.15195v1",
+      "date": "2026-07-16",
+      "score": 9,
+      "hits": [
+        "out-of-sample",
+        "robust",
+        "reinforcement learning"
+      ]
+    },
+    {
+      "titre": "Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions",
+      "lien": "https://arxiv.org/abs/2607.09461v1",
+      "date": "2026-07-10",
+      "score": 9,
+      "hits": [
+        "out-of-sample",
+        "robust",
+        "llm",
+        "deep learning"
+      ]
+    },
+    {
+      "titre": "Augmenting Fundamental Analysis with Large Language Models: A RAG-Based System for Generating Investor Briefs",
+      "lien": "https://arxiv.org/abs/2607.09121v1",
+      "date": "2026-07-10",
+      "score": 9,
+      "hits": [
+        "regime",
+        "llm",
+        "language model"
+      ]
+    },
+    {
+      "titre": "A novel robust mixed integer linear programming model for index tracking problem under no rebalancing: heuristic optimization approach",
+      "lien": "https://arxiv.org/abs/2607.09556v1",
+      "date": "2026-07-10",
+      "score": 8,
+      "hits": [
+        "out-of-sample",
+        "transaction cost",
+        "robust"
+      ]
+    },
+    {
+      "titre": "Estimating the Stochastic Discount Factor from Option Prices and Predicting the Equity Premium",
+      "lien": "https://arxiv.org/abs/2607.08500v1",
+      "date": "2026-07-09",
+      "score": 8,
+      "hits": [
+        "factor",
+        "out-of-sample"
+      ]
+    },
+    {
+      "titre": "Is Deep Hedging Reinforcement Learning?",
+      "lien": "https://arxiv.org/abs/2607.13353v1",
+      "date": "2026-07-15",
+      "score": 6,
+      "hits": [
+        "reinforcement learning",
+        "llm"
+      ]
+    }
+  ]
 }
