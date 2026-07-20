@@ -1,20 +1,20 @@
 {
-  "date": "2026-07-17",
-  "heure": "18:04",
+  "date": "2026-07-20",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
       "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux",
       "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA",
       "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable",
-      "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-      "La Bourse de Paris termine finalement à l'équilibre, le Slip Français en hausse"
+      "La Bourse de Paris en recul, malgré la bonne santé du luxe"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
         "La Bourse de Paris en recul, malgré la bonne santé du luxe",
@@ -41,17 +41,17 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
         "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
-        "Airbus : livraisons en hausse en juin, +15% au premier semestre",
-        "Airbus décroche un nouveau contrat avec l'OTAN pour son A330 MRTT"
+        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie",
+        "Airbus : livraisons en hausse en juin, +15% au premier semestre"
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
         "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.89,
-      "nb_news": 9,
+      "sentiment": 1.0,
+      "nb_news": 8,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
@@ -100,7 +100,7 @@
       "titres_cles": [
         "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
         "CAC 40 : nouveau record historique pour l’indice phare de la Bourse de Paris",
-        "Les actions européennes de défense bondissent avant le sommet de l’OTAN"
+        "CFM International obtient la certification pour améliorer la durabilité de ses réacteurs"
       ]
     },
     "Danone": {
@@ -108,17 +108,17 @@
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
-        "Le désengagement de marques nationales empêche la progression du Nutri-Score, selon un rapport",
-        "Le PDG de Danone affirme que la guerre en Iran pourrait entraîner une hausse des prix alimentaires"
+        "Le PDG de Danone affirme que la guerre en Iran pourrait entraîner une hausse des prix alimentaires",
+        "DANONE : Notification de mise à disposition par Danone de ses comptes consolidés et du rapport des Commissaires aux comptes 2025"
       ]
     },
     "Vinci": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive",
-        "VINCI remporte un contrat de déploiement et de gestion de bornes de recharge électrique pour poids lourds en Allemagne"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.25,
-      "nb_news": 8,
+      "sentiment": 1.11,
+      "nb_news": 9,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -249,7 +249,7 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 8,
+      "nb_news": 7,
       "titres_cles": [
         "Victoire de Vincent Bolloré devant la cour d'appel sur la scission de Vivendi",
         "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
@@ -341,12 +341,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Les actions Thales et Leonardo bondissent après un contrat OTAN",
-        "Thales réussit ses tirs d’essais avec son lanceur de missiles X-Fire, quels sont ses atouts ?"
+        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie",
+        "Les actions Thales et Leonardo bondissent après un contrat OTAN"
       ]
     },
     "Forvia": {
@@ -362,9 +362,16 @@
   "signaux_forts": [
     [
       "Legrand",
-      1.25,
+      1.11,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
+      ]
+    ],
+    [
+      "Air Liquide",
+      1.0,
+      [
+        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
     ]
   ]
