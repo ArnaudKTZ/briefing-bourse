@@ -27,6 +27,7 @@
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
 - [ ] ~2027-06-16 — **Renouveler le token GitHub (PAT) des jobs cron-job.org** : il expire le 23/06/2027 (vu dans la réponse GitHub lors des tests du 13/07). À l'expiration, les 12 jobs tomberont en 401 d'un coup. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
+- [ ] Idée en réserve Phase 1 V5 : sous-score "qualité" à critères durs chiffrés (ROE, marge, dette — calcul Python, pas LLM, inspiré du /quality-screen d'ai-berkshire). Préalable : auditer la disponibilité/fraîcheur des fondamentaux Yahoo sur les .PA (ce qui a tué l'Espion). Passage par la recette obligatoire. (Agent Bourse)
 
 ## Fait
 
