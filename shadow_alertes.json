@@ -1298,5 +1298,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 92/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "14:01",
+    "nom": "Sanofi",
+    "cours": 77.36,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "14:01",
+    "nom": "Eurofins Scientific",
+    "cours": 71.06,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "14:01",
+    "nom": "Veolia",
+    "cours": 37.55,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100",
+    "envoyee": false
   }
 ]
