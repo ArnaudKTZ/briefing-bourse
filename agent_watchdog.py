@@ -91,6 +91,49 @@ def verifier_intraday_hier():
     return False, f"Aucun scoring intraday pour hier ({hier})"
 
 
+# Agents hebdo et mensuels (ajout du 18/07 : la panne du cron Dividendes était
+# passée inaperçue une semaine, découverte par hasard le 13/07). Hebdo : alerte
+# si le dernier rapport a plus de max_age_jours. Mensuel : alerte si aucun run
+# ce mois-ci une fois le jour attendu passé (+ tolérance en jours).
+SURVEILLANCE_PERIODIQUE = [
+    ("Dividendes (lundi 8h05)",   "dividendes_rapport.json",   {"max_age_jours": 8}),
+    ("Shadow (vendredi 18h35)",   "shadow_rapport.json",       {"max_age_jours": 8}),
+    ("Évaluateur (samedi 7h35)",  "evaluateur_rapport.json",   {"max_age_jours": 8}),
+    ("Veille (samedi 9h)",        "veille_rapport.json",       {"max_age_jours": 8}),
+    ("Professeur (dimanche 18h)", "professeur_rapport.json",   {"max_age_jours": 8}),
+    ("Dual Momentum (1er, 8h)",   "dual_momentum_statut.json", {"jour_du_mois": 1, "tolerance": 2}),
+    ("Crypto DM (1er, 8h15)",     "crypto_dm_etat.json",       {"jour_du_mois": 1, "tolerance": 2}),
+    ("Stratège (le 4, 18h)",      "stratege_rapport.json",     {"jour_du_mois": 4, "tolerance": 2}),
+]
+
+
+def verifier_periodique(fichier, cadence):
+    """Statut (ok, msg) d'un agent hebdo/mensuel d'après la date de son rapport.
+    ok=None = pas encore exigible (affiché sans alerte)."""
+    data = charger_json(fichier)
+    if not data:
+        return False, f"{fichier} introuvable"
+    date_str = data.get("date", "")
+    try:
+        d = datetime.date.fromisoformat(date_str)
+    except (ValueError, TypeError):
+        return False, f"date illisible dans {fichier} : '{date_str}'"
+    today = datetime.datetime.now(TZ_PARIS).date()
+    age = (today - d).days
+
+    if "max_age_jours" in cadence:
+        if age <= cadence["max_age_jours"]:
+            return True, f"OK — dernier rapport le {date_str} (il y a {age} j)"
+        return False, f"dernier rapport le {date_str} (il y a {age} j, cadence hebdo dépassée)"
+
+    jour_attendu = cadence["jour_du_mois"]
+    if today.day < jour_attendu + cadence.get("tolerance", 2):
+        return None, f"pas encore exigible ce mois-ci (dernier : {date_str})"
+    if (d.year, d.month) == (today.year, today.month):
+        return True, f"OK — run mensuel du {date_str}"
+    return False, f"aucun run ce mois-ci (attendu le {jour_attendu}, dernier : {date_str})"
+
+
 def envoyer_alerte_watchdog(problemes, statuts):
     if not ZOHO_PASSWORD:
         print("  Pas de mot de passe ZOHO — alerte non envoyée")
@@ -184,6 +227,12 @@ if __name__ == "__main__":
     ok, msg = verifier_intraday_hier()
     statuts["Scoring intraday"] = (ok, msg)
     print(f"  {'OK' if ok else ('IGNORÉ' if ok is None else 'ECHEC')} : {msg}")
+
+    print("Vérification agents hebdo/mensuels...")
+    for libelle, fichier, cadence in SURVEILLANCE_PERIODIQUE:
+        ok, msg = verifier_periodique(fichier, cadence)
+        statuts[libelle] = (ok, msg)
+        print(f"  {'OK' if ok else ('IGNORÉ' if ok is None else 'ECHEC')} [{libelle}] : {msg}")
 
     # Problèmes = agents qui ont échoué (ok=False, pas None)
     problemes = [agent for agent, (ok, _) in statuts.items() if ok is False]

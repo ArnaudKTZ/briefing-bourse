@@ -11,7 +11,7 @@
 
 ## À venir
 
-- [ ] 2026-07-22 — **Bilan Agent Bourse 30 jours** : analyser la précision par secteur/indicateur sur données propres (depuis le 02/07), via le rapport de l'Évaluateur. Démarrer si pertinent la Phase 1 V5 (Data Quality, Feature Engine, Score Engine 4 sous-scores). **Critères de décision figés à froid le 13/07** (pour ne pas négocier avec soi-même le jour J), sur les données propres depuis le 02/07 à J+5 :
+- [ ] 2026-07-22 — **Bilan Agent Bourse 30 jours** : lancer manuellement evaluateur.yml le matin (gh workflow run) pour avoir le rapport du jour avec l'encadré "fenêtre propre", puis trancher sur ses chiffres. Analyser la précision par secteur/indicateur sur données propres (depuis le 02/07). Démarrer si pertinent la Phase 1 V5 (Data Quality, Feature Engine, Score Engine 4 sous-scores). **Critères de décision figés à froid le 13/07** (pour ne pas négocier avec soi-même le jour J), sur les données propres depuis le 02/07 à J+5 :
   - Si IC ≤ 0 OU edge net ACHETER ≤ 0 → satellite maintenu 100% virtuel, aucun passage en réel, l'effort bascule sur la Phase 1 V5 (refonte du score) plutôt que sur du tuning V4
   - Si IC ≥ +0.03 ET edge net > 0 → satellite candidat à un budget réel réduit, décision budget au 02/08
   - Entre les deux → observation prolongée d'un mois (re-bilan 22/08), zéro réel
