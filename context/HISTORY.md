@@ -7,6 +7,18 @@
 
 ---
 
+## 2026-07-20
+
+### Fenêtre propre dans l'Évaluateur + Watchdog étendu à toute la flotte
+
+- **Trou dans la raquette comblé avant le bilan** : les critères figés du 22/07 se jugent "sur données propres depuis le 02/07", mais l'Évaluateur calculait tout sur 90 jours glissants (période polluée incluse). Ajout d'un encadré "fenêtre propre" : edge net J+5 et IC calculés uniquement sur les recos depuis le 02/07, avec application automatique de la grille figée (cas 1/2/3). Dans le JSON, l'email et la console
+- **Premiers chiffres propres (468 obs, run du 20/07)** : edge net J+5 = -1.54 pt, IC = +0.012 (sous le seuil +0.03) → CAS 1 : gel virtuel + Phase 1 V5. Sauf retournement d'ici mercredi, la décision du 22/07 est écrite
+- **Watchdog étendu aux 8 agents hebdo/mensuels** (Dividendes, Shadow, Évaluateur, Veille, Professeur, DM, Crypto DM, Stratège) avec cadence attendue par agent : hebdo = alerte si rapport > 8 jours, mensuel = alerte si aucun run du mois passé le jour attendu +2. Plus aucune panne silencieuse possible (la panne Dividendes de début juillet était restée invisible une semaine). Testé : 11 agents surveillés, tous OK
+- Constat au passage : premier lundi avec le briefing à 7h03 (recalage cron du 15/07 validé en réel)
+- Rappel posé dans ECHEANCES : mercredi 22/07 matin, lancer evaluateur.yml manuellement pour trancher sur le rapport du jour
+
+---
+
 ## 2026-07-18
 
 ### Triage veille du 18/07 (rien à tester) + abstracts dans le digest

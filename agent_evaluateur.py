@@ -75,6 +75,12 @@ SEUIL_CHOC = 2.0  # variation quotidienne du CAC (en %, valeur absolue) qui marq
 # ACHETER uniquement (suivre un ÉVITER = ne pas acheter = gratuit).
 FRAIS_ALLER_RETOUR = 1.0  # en points de %
 
+# Fenêtre "données propres" : avant le 02/07, les trades intraday n'étaient
+# jamais persistés et les stats étaient empoisonnées (audit du 02/07). Les
+# critères FIGÉS du bilan du 22/07 (ECHEANCES.md, posés le 13/07) se jugent
+# exclusivement sur les recos émises à partir de cette date.
+DATE_DONNEES_PROPRES = "2026-07-02"
+
 
 def prix_ok(x):
     return isinstance(x, (int, float)) and not isinstance(x, bool) and x == x
@@ -301,6 +307,44 @@ def verdict(stats_h, buckets_j5, ic_j5):
     return "Pas encore assez d'observations avec recul suffisant (minimum 30 ACHETER à J+5). On accumule."
 
 
+def bilan_fenetre_propre(obs):
+    """Les DEUX chiffres des critères figés du 22/07, calculés uniquement sur
+    les recos émises depuis DATE_DONNEES_PROPRES : edge NET des ACHETER à J+5
+    et IC de Spearman à J+5. Applique la grille de décision figée à froid."""
+    sous = [o for o in obs if o["date"] >= DATE_DONNEES_PROPRES]
+    s5 = stats_horizon(sous, 5) if sous else None
+    ic = ic_spearman(sous, 5)
+    ic_resume = {k: v for k, v in ic.items() if k != "par_jour"} if ic else None
+
+    edge_net = (s5.get("acheter") or {}).get("edge_net") if s5 else None
+    icm      = ic_resume["ic_moyen"] if ic_resume else None
+
+    if edge_net is None or icm is None:
+        cas, verdict = None, "Pas encore assez de recul J+5 sur la fenêtre propre : on accumule."
+    elif icm <= 0 or edge_net <= 0:
+        cas = 1
+        verdict = ("CAS 1 de la grille figée (IC <= 0 OU edge net <= 0) : satellite maintenu "
+                   "100% virtuel, aucun passage en réel, effort sur la Phase 1 V5.")
+    elif icm >= 0.03:
+        cas = 2
+        verdict = ("CAS 2 (IC >= +0.03 ET edge net > 0) : satellite candidat à un budget "
+                   "réel réduit, décision budget au 02/08.")
+    else:
+        cas = 3
+        verdict = "CAS 3 (entre les deux) : observation prolongée d'un mois, re-bilan le 22/08."
+
+    return {
+        "depuis":      DATE_DONNEES_PROPRES,
+        "n_obs":       len(sous),
+        "n_jours":     len({o["date"] for o in sous}),
+        "j5":          s5,
+        "ic_j5":       ic_resume,
+        "edge_net_j5": edge_net,
+        "cas_grille":  cas,
+        "verdict":     verdict,
+    }
+
+
 def lignes_tableau_groupes(res, labels):
     """Lignes HTML d'un tableau edge/IC par groupe (régimes, chocs...)."""
     lignes = ""
@@ -323,7 +367,30 @@ def lignes_tableau_groupes(res, labels):
     return lignes
 
 
-def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_txt):
+def bloc_html_fenetre_propre(propre):
+    """Encadré mis en avant : les chiffres exacts sur lesquels le bilan du 22/07
+    se décide, avec le cas de la grille figée."""
+    edge_net, ic = propre["edge_net_j5"], propre["ic_j5"]
+    c_edge = "#2e7d32" if (edge_net or 0) > 0 else "#c62828"
+    icm = ic["ic_moyen"] if ic else None
+    c_ic = "#2e7d32" if (icm or 0) >= 0.03 else "#c62828"
+    val_edge = "—" if edge_net is None else f"{edge_net:+.2f} pts"
+    val_ic   = "—" if icm is None else f"{icm:+.4f}"
+    return f"""
+  <div style='margin-top:18px;border:2px solid #1a237e;border-radius:8px;padding:14px 16px;background:#f5f6fb;'>
+    <p style='margin:0;font-size:14px;font-weight:700;color:#1a237e;'>Fenêtre propre depuis le {propre['depuis']} — les chiffres du bilan du 22/07</p>
+    <p style='margin:8px 0 0;font-size:14px;'>
+      Edge NET ACHETER à J+5 : <strong style='color:{c_edge};'>{val_edge}</strong>
+      &nbsp;·&nbsp; IC de Spearman J+5 : <strong style='color:{c_ic};'>{val_ic}</strong>
+      &nbsp;·&nbsp; {propre['n_obs']} obs sur {propre['n_jours']} jours
+    </p>
+    <p style='margin:8px 0 0;font-size:13px;'><strong>{propre['verdict']}</strong></p>
+    <p style='margin:6px 0 0;font-size:11px;color:#777;'>Critères figés à froid le 13/07 (ECHEANCES.md), avant de connaître ces chiffres.
+      Avant le {propre['depuis']}, les données intraday n'étaient pas persistées : elles sont exclues de ce cadre.</p>
+  </div>"""
+
+
+def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_txt, propre=None):
     n_jours = len({o["date"] for o in obs})
 
     lignes = ""
@@ -386,8 +453,9 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
 </div>
 <div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
   <div style='background:#e0f2f1;border-left:4px solid #00695c;padding:14px 16px;border-radius:6px;'>
-    <p style='margin:0;font-size:14px;'><strong>Verdict :</strong> {verdict_txt}</p>
+    <p style='margin:0;font-size:14px;'><strong>Verdict (90 jours glissants) :</strong> {verdict_txt}</p>
   </div>
+  {bloc_html_fenetre_propre(propre) if propre else ""}
   <h3 style='font-size:14px;margin:20px 0 8px;'>Rendement moyen après le signal (prix d'entrée 7h → clôture J+N)</h3>
   <table style='width:100%;border-collapse:collapse;font-size:13px;'>
     <thead><tr style='background:#f5f5f5;'>
@@ -494,7 +562,10 @@ if __name__ == "__main__":
     regimes = stats_groupes(obs, ics_par_jour, regime_par_date, "regime", ["haussier", "baissier"])
     chocs   = stats_groupes(obs, ics_par_jour, choc_par_date, "choc", ["post-choc", "calme"])
     verdict_txt = verdict(stats_h, buckets_j5, ic_resume)
+    propre = bilan_fenetre_propre(obs)
     print(f"IC J+5 : {ic_resume}")
+    print(f"Fenêtre propre depuis {propre['depuis']} : edge net J+5 = {propre['edge_net_j5']}, "
+          f"IC = {(propre['ic_j5'] or {}).get('ic_moyen')}, {propre['n_obs']} obs -> {propre['verdict']}")
     print(f"Jours post-choc dans l'historique : {len([d for d, c in choc_par_date.items() if c == 'post-choc'])}")
     print(f"Verdict : {verdict_txt}")
 
@@ -508,12 +579,13 @@ if __name__ == "__main__":
         "regimes":    regimes,
         "chocs":      chocs,
         "verdict":    verdict_txt,
+        "fenetre_propre": propre,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi rapport hebdo...")
-    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt)
+    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt, propre)
     envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")
