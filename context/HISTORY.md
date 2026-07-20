@@ -7,6 +7,15 @@
 
 ---
 
+## 2026-07-18
+
+### Triage veille du 18/07 (rien à tester) + abstracts dans le digest
+
+- Digest de l'Éclaireur trié avec Arnaud : les 8 papiers écartés, avec raisons. Le seul proche du cœur (rotation QQQ-DIA "relief-gated", arXiv 2607.06117) cumule 12 termes d'interaction sur 2 ETF (odeur de sur-ajustement) et repose sur la confirmation macro, déjà rejetée deux fois sur nos données (audits F&G 26/06 et VIX 05/07). Les 7 autres : microstructure L2, RL portefeuille, théorie, hors périmètre
+- Constat utile : 6 papiers sur 8 portaient la même étiquette générique, le filtre par mots-clés ne permet pas de juger sur pièce. Amélioration rituelle implémentée : agent_veille.py affiche désormais les 2 premières phrases de l'abstract arXiv dans chaque carte du digest (l'abstract était déjà récupéré mais jamais affiché) + champ "extrait" dans veille_rapport.json. Testé sur le flux réel. Premier digest enrichi : samedi 25/07
+
+---
+
 ## 2026-07-16
 
 ### Recette S&P 500 Equal Weight (idée Charles Gave) : rejetée, on reste simple

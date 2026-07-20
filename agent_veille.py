@@ -97,6 +97,21 @@ def scorer_pertinence(article):
     return score, hits
 
 
+def extrait_resume(resume, n_phrases=2, max_chars=420):
+    """Les premières phrases de l'abstract arXiv (déjà récupéré, jamais affiché
+    avant le 18/07 : le digest ne montrait qu'une étiquette générique par
+    mots-clés, ce qui obligeait à trier à la main). Découpage simple sur '. '."""
+    if not resume:
+        return ""
+    phrases = [p.strip() for p in resume.split(". ") if p.strip()]
+    texte = ". ".join(phrases[:n_phrases])
+    if texte and not texte.endswith("."):
+        texte += "."
+    if len(texte) > max_chars:
+        texte = texte[:max_chars].rsplit(" ", 1)[0] + "…"
+    return texte
+
+
 def pourquoi(hits):
     """Phrase courte expliquant l'intérêt selon les mots-clés trouvés."""
     rigueur = {"walk-forward", "out-of-sample", "overfit", "data snooping", "transaction cost"}
@@ -129,9 +144,13 @@ def generer_html(now, top):
         h = set(a["hits"])
         titre_safe = html.escape(a["titre"])
         lien_safe  = html.escape(a["lien"], quote=True)
+        extrait_safe = html.escape(extrait_resume(a.get("resume", "")))
+        bloc_extrait = (f"<p style='margin:6px 0 0;font-size:13px;color:#444;line-height:1.45;'>{extrait_safe}</p>"
+                        if extrait_safe else "")
         cartes += f"""<div style='border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:12px;'>
           <a href='{lien_safe}' style='font-size:15px;font-weight:600;color:#185fa5;text-decoration:none;'>{titre_safe}</a>
-          <p style='margin:6px 0 0;font-size:13px;color:#0f6e56;'>{pourquoi(h)}</p>
+          {bloc_extrait}
+          <p style='margin:6px 0 0;font-size:12px;color:#0f6e56;'>{pourquoi(h)}</p>
           <p style='margin:4px 0 0;font-size:12px;color:#999;'>{a['date']} · mots-clés : {', '.join(a['hits'][:5])}</p>
         </div>"""
 
@@ -173,7 +192,8 @@ if __name__ == "__main__":
         "date": now.date().isoformat(),
         "nb_articles": len(articles),
         "top": [{"titre": a["titre"], "lien": a["lien"], "date": a["date"],
-                 "score": a["score"], "hits": a["hits"]} for a in top],
+                 "score": a["score"], "hits": a["hits"],
+                 "extrait": extrait_resume(a.get("resume", ""))} for a in top],
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
