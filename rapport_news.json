@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "heure": "17:24",
+  "heure": "19:04",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
+        "Bilan semestriel du contrat de liquidité IPSOS - Juin 2026",
         "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026",
-        "Adecco atteint un sommet de 4 mois après la hausse de BNP Paribas",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
+        "Adecco atteint un sommet de 4 mois après la hausse de BNP Paribas"
       ]
     },
     "Air Liquide": {
@@ -113,7 +113,7 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
