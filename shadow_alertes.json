@@ -1238,5 +1238,65 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "Hermès",
+    "cours": 1680.0,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "Kering",
+    "cours": 254.15,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "ArcelorMittal",
+    "cours": 66.45,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100 | Momentum intraday fort +3.18%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "Pernod Ricard",
+    "cours": 65.02,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "Publicis",
+    "cours": 89.02,
+    "score": 97,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 97/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "11:30",
+    "nom": "Eurazeo",
+    "cours": 44.08,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
   }
 ]
