@@ -1,70 +1,72 @@
 {
   "date": "2026-07-20",
-  "heure": "06:15",
+  "heure": "14:26",
   "etf_sectoriels": {
     "detail": {
       "Banques": {
-        "perf_1s": -0.14,
-        "perf_1m": 2.09,
-        "flux_vol": 0.86,
+        "perf_1s": -0.58,
+        "perf_1m": 0.91,
+        "flux_vol": 0.92,
         "signal": "NEUTRE"
       },
       "Energie": {
-        "perf_1s": -3.29,
-        "perf_1m": -6.51,
-        "flux_vol": 0.57,
+        "perf_1s": -2.25,
+        "perf_1m": -5.57,
+        "flux_vol": 0.54,
         "signal": "NEUTRE"
       },
       "Tech": {
-        "perf_1s": -0.01,
-        "perf_1m": 3.01,
-        "flux_vol": 0.79,
+        "perf_1s": 1.62,
+        "perf_1m": 3.96,
+        "flux_vol": 0.66,
         "signal": "NEUTRE"
       },
       "Santé": {
-        "perf_1s": -1.32,
-        "perf_1m": -11.75,
-        "flux_vol": 0.58,
+        "perf_1s": -3.84,
+        "perf_1m": -8.12,
+        "flux_vol": 0.65,
         "signal": "NEUTRE"
       },
       "Industrie": {
-        "perf_1s": 0.34,
-        "perf_1m": 0.54,
-        "flux_vol": 2.19,
-        "signal": "NEUTRE"
+        "perf_1s": 1.15,
+        "perf_1m": 1.44,
+        "flux_vol": 2.23,
+        "signal": "ENTREE"
       },
       "Luxe/Conso": {
-        "perf_1s": 1.21,
-        "perf_1m": -1.54,
-        "flux_vol": 0.78,
+        "perf_1s": 1.83,
+        "perf_1m": -0.1,
+        "flux_vol": 0.81,
         "signal": "NEUTRE"
       },
       "Utilities": {
-        "perf_1s": 2.52,
-        "perf_1m": 3.33,
-        "flux_vol": 0.26,
+        "perf_1s": 3.13,
+        "perf_1m": 4.61,
+        "flux_vol": 0.47,
         "signal": "NEUTRE"
       },
       "Matériaux": {
-        "perf_1s": -2.84,
-        "perf_1m": -7.88,
-        "flux_vol": 1.37,
+        "perf_1s": -2.19,
+        "perf_1m": -7.61,
+        "flux_vol": 1.47,
         "signal": "SORTIE"
       },
       "Telecom": {
-        "perf_1s": 0.28,
-        "perf_1m": 2.68,
-        "flux_vol": 1.92,
+        "perf_1s": -0.9,
+        "perf_1m": 2.94,
+        "flux_vol": 1.8,
         "signal": "NEUTRE"
       },
       "Immobilier": {
-        "perf_1s": -0.49,
-        "perf_1m": 1.61,
-        "flux_vol": 1.99,
+        "perf_1s": -0.22,
+        "perf_1m": 1.03,
+        "flux_vol": 1.54,
         "signal": "NEUTRE"
       }
     },
-    "en_force": [],
+    "en_force": [
+      "Industrie"
+    ],
     "en_sortie": [
       "Matériaux"
     ]
@@ -119,14 +121,10 @@
       "bonus_total": 10
     },
     "Airbus": {
-      "pct_insiders": 25.7,
-      "pct_institutions": 37.5,
-      "nb_institutions": 0,
-      "variation_instit": 0,
-      "top_acheteurs": [],
-      "bonus_espion": 5,
-      "bonus_sectoriel": 0,
-      "bonus_total": 5
+      "bonus_espion": 0,
+      "erreur": "Failed to perform, curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "bonus_sectoriel": 2,
+      "bonus_total": 2
     },
     "Schneider Electric": {
       "pct_insiders": 3.5,
@@ -140,8 +138,8 @@
         }
       ],
       "bonus_espion": 5,
-      "bonus_sectoriel": 0,
-      "bonus_total": 5
+      "bonus_sectoriel": 2,
+      "bonus_total": 7
     },
     "L'Oréal": {
       "pct_insiders": 57.3,
@@ -184,23 +182,10 @@
       "bonus_total": 3
     },
     "Air Liquide": {
-      "pct_insiders": 0.1,
-      "pct_institutions": 30.2,
-      "nb_institutions": 0,
-      "variation_instit": 2.296,
-      "top_acheteurs": [
-        {
-          "fonds": "Generali Investments Cee, Investicni Spolecnost, A.s.",
-          "change": 468.7
-        },
-        {
-          "fonds": "Gamma Investing LLC",
-          "change": 447.2
-        }
-      ],
-      "bonus_espion": 5,
-      "bonus_sectoriel": -5,
-      "bonus_total": 0
+      "bonus_espion": 0,
+      "erreur": "Failed to perform, curl: (28) Operation timed out after 30001 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "bonus_sectoriel": -4,
+      "bonus_total": -4
     },
     "Safran": {
       "pct_insiders": 16.7,
@@ -214,8 +199,8 @@
         }
       ],
       "bonus_espion": 10,
-      "bonus_sectoriel": 0,
-      "bonus_total": 10
+      "bonus_sectoriel": 2,
+      "bonus_total": 12
     },
     "Danone": {
       "pct_insiders": 1.7,
@@ -239,8 +224,8 @@
         }
       ],
       "bonus_espion": 0,
-      "bonus_sectoriel": 0,
-      "bonus_total": 0
+      "bonus_sectoriel": 2,
+      "bonus_total": 2
     },
     "Kering": {
       "pct_insiders": 42.5,
@@ -253,14 +238,10 @@
       "bonus_total": 0
     },
     "Société Générale": {
-      "pct_insiders": 9.4,
-      "pct_institutions": 51.2,
-      "nb_institutions": 0,
-      "variation_instit": 0,
-      "top_acheteurs": [],
-      "bonus_espion": 3,
+      "bonus_espion": 0,
+      "erreur": "Failed to perform, curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
       "bonus_sectoriel": 0,
-      "bonus_total": 3
+      "bonus_total": 0
     },
     "Stellantis": {
       "pct_insiders": 23.7,
@@ -282,8 +263,8 @@
         }
       ],
       "bonus_espion": 10,
-      "bonus_sectoriel": 0,
-      "bonus_total": 10
+      "bonus_sectoriel": 2,
+      "bonus_total": 12
     },
     "Saint-Gobain": {
       "pct_insiders": 8.8,
@@ -297,8 +278,8 @@
         }
       ],
       "bonus_espion": 8,
-      "bonus_sectoriel": -5,
-      "bonus_total": 3
+      "bonus_sectoriel": -4,
+      "bonus_total": 4
     },
     "ArcelorMittal": {
       "pct_insiders": 0,
@@ -320,8 +301,8 @@
         }
       ],
       "bonus_espion": 2,
-      "bonus_sectoriel": -5,
-      "bonus_total": -3
+      "bonus_sectoriel": -4,
+      "bonus_total": -2
     },
     "Pernod Ricard": {
       "pct_insiders": 26.7,
@@ -345,8 +326,8 @@
         }
       ],
       "bonus_espion": -5,
-      "bonus_sectoriel": 0,
-      "bonus_total": -5
+      "bonus_sectoriel": 2,
+      "bonus_total": -3
     },
     "Capgemini": {
       "pct_insiders": 8.8,
@@ -364,14 +345,10 @@
       "bonus_total": 5
     },
     "Renault": {
-      "pct_insiders": 36.1,
-      "pct_institutions": 33.2,
-      "nb_institutions": 0,
-      "variation_instit": -0.042,
-      "top_acheteurs": [],
-      "bonus_espion": 3,
-      "bonus_sectoriel": 0,
-      "bonus_total": 3
+      "bonus_espion": 0,
+      "erreur": "Failed to perform, curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "bonus_sectoriel": 2,
+      "bonus_total": 2
     },
     "Legrand": {
       "pct_insiders": 3.0,
@@ -385,23 +362,27 @@
         }
       ],
       "bonus_espion": 5,
-      "bonus_sectoriel": 0,
-      "bonus_total": 5
+      "bonus_sectoriel": 2,
+      "bonus_total": 7
     },
     "Publicis": {
       "pct_insiders": 7.3,
       "pct_institutions": 64.4,
       "nb_institutions": 0,
-      "variation_instit": 0.277,
+      "variation_instit": -0.043,
       "top_acheteurs": [
         {
-          "fonds": "Pacer Advisors, Inc.",
-          "change": 27.7
+          "fonds": "EuroPacific Growth Fund-EUPAC Fund",
+          "change": 24.7
+        },
+        {
+          "fonds": "HARRIS ASSOCIATES INVESTMENT TRUST-Oakmark International Fund",
+          "change": 14.6
         }
       ],
-      "bonus_espion": 8,
+      "bonus_espion": 1,
       "bonus_sectoriel": 0,
-      "bonus_total": 8
+      "bonus_total": 1
     },
     "Bouygues": {
       "pct_insiders": 43.2,
@@ -500,18 +481,14 @@
         }
       ],
       "bonus_espion": 5,
-      "bonus_sectoriel": 0,
-      "bonus_total": 5
+      "bonus_sectoriel": 2,
+      "bonus_total": 7
     },
     "Worldline": {
-      "pct_insiders": 10.0,
-      "pct_institutions": 62.3,
-      "nb_institutions": 0,
-      "variation_instit": -0.161,
-      "top_acheteurs": [],
-      "bonus_espion": -2,
+      "bonus_espion": 0,
+      "erreur": "Failed to perform, curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
       "bonus_sectoriel": 0,
-      "bonus_total": -2
+      "bonus_total": 0
     },
     "Veolia": {
       "pct_insiders": 9.4,
@@ -612,8 +589,8 @@
         }
       ],
       "bonus_espion": 10,
-      "bonus_sectoriel": 0,
-      "bonus_total": 10
+      "bonus_sectoriel": 2,
+      "bonus_total": 12
     },
     "Forvia": {
       "pct_insiders": 19.0,
@@ -622,25 +599,29 @@
       "variation_instit": 0.0,
       "top_acheteurs": [],
       "bonus_espion": 5,
-      "bonus_sectoriel": 0,
-      "bonus_total": 5
+      "bonus_sectoriel": 2,
+      "bonus_total": 7
     }
   },
   "signaux_forts": [
+    [
+      "Safran",
+      12
+    ],
+    [
+      "Stellantis",
+      12
+    ],
+    [
+      "Thales",
+      12
+    ],
     [
       "Hermès",
       10
     ],
     [
       "L'Oréal",
-      10
-    ],
-    [
-      "Safran",
-      10
-    ],
-    [
-      "Stellantis",
       10
     ],
     [
@@ -668,48 +649,32 @@
       10
     ],
     [
-      "Thales",
-      10
-    ],
-    [
       "TotalEnergies",
       8
     ],
     [
-      "Publicis",
-      8
-    ],
-    [
-      "Airbus",
-      5
-    ],
-    [
       "Schneider Electric",
-      5
+      7
+    ],
+    [
+      "Legrand",
+      7
+    ],
+    [
+      "Alstom",
+      7
+    ],
+    [
+      "Forvia",
+      7
     ],
     [
       "Capgemini",
       5
     ],
     [
-      "Legrand",
-      5
-    ],
-    [
-      "Alstom",
-      5
-    ],
-    [
       "STMicroelectronics",
       5
-    ],
-    [
-      "Forvia",
-      5
-    ],
-    [
-      "Michelin",
-      -5
     ],
     [
       "Edenred",
@@ -721,19 +686,20 @@
     ]
   ],
   "resume": {
-    "secteurs_en_force": [],
+    "secteurs_en_force": [
+      "Industrie"
+    ],
     "secteurs_en_sortie": [
       "Matériaux"
     ],
     "top_achats_instit": [
-      "Hermès",
-      "L'Oréal",
       "Safran",
       "Stellantis",
-      "Bouygues"
+      "Thales",
+      "Hermès",
+      "L'Oréal"
     ],
     "top_ventes_instit": [
-      "Michelin",
       "Edenred",
       "Accor"
     ]
