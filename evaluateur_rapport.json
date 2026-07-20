@@ -35,9 +35,9 @@
       "univers_moy": -0.03,
       "acheter": {
         "n": 272,
-        "moy": -0.12,
-        "edge": -0.09,
-        "edge_net": -1.09
+        "moy": -0.11,
+        "edge": -0.08,
+        "edge_net": -1.08
       },
       "eviter": {
         "n": 128,
@@ -63,11 +63,11 @@
   "buckets_j5": {
     "85+": {
       "n": 105,
-      "moy": 0.15
+      "moy": 0.16
     },
     "75-84": {
       "n": 79,
-      "moy": 0.02
+      "moy": 0.03
     },
     "65-74": {
       "n": 88,
@@ -75,7 +75,7 @@
     }
   },
   "ic_j5": {
-    "ic_moyen": 0.0048,
+    "ic_moyen": 0.0059,
     "n_jours": 17,
     "pct_positifs": 41
   },
@@ -86,9 +86,9 @@
         "univers_moy": -0.03,
         "acheter": {
           "n": 272,
-          "moy": -0.12,
-          "edge": -0.09,
-          "edge_net": -1.09
+          "moy": -0.11,
+          "edge": -0.08,
+          "edge_net": -1.08
         },
         "eviter": {
           "n": 128,
@@ -96,7 +96,7 @@
           "edge": -0.59
         }
       },
-      "ic_moyen": 0.0048,
+      "ic_moyen": 0.0059,
       "n_jours_ic": 17
     },
     "baissier": {
@@ -142,11 +142,11 @@
           "edge": -0.37
         }
       },
-      "ic_moyen": 0.0132,
+      "ic_moyen": 0.0144,
       "n_jours_ic": 16
     }
   },
-  "verdict": "Sur 272 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.09 pts bruts à J+5), soit -1.09 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.59 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.005 : le score n'a aucun pouvoir de classement.",
+  "verdict": "Sur 272 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.08 pts bruts à J+5), soit -1.08 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.59 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.006 : le score n'a aucun pouvoir de classement.",
   "fenetre_propre": {
     "depuis": "2026-07-02",
     "n_obs": 468,
@@ -166,7 +166,7 @@
       }
     },
     "ic_j5": {
-      "ic_moyen": 0.0121,
+      "ic_moyen": 0.0145,
       "n_jours": 8,
       "pct_positifs": 50
     },
