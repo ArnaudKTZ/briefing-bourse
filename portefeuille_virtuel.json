@@ -1,33 +1,6 @@
 {
-  "capital": 241.99,
+  "capital": 362.52,
   "positions": {
-    "Sanofi": {
-      "nb_actions": 26,
-      "prix_entree": 74.77,
-      "date_entree": "2026-07-08",
-      "heure_entree": "11:32",
-      "source_entree": "Briefing",
-      "cout_total": 1944.02,
-      "frais_achat": 9.72
-    },
-    "TotalEnergies": {
-      "nb_actions": 29,
-      "prix_entree": 67.78,
-      "date_entree": "2026-07-09",
-      "heure_entree": "03:01",
-      "source_entree": "Briefing",
-      "cout_total": 1965.6200000000001,
-      "frais_achat": 9.83
-    },
-    "Société Générale": {
-      "nb_actions": 27,
-      "prix_entree": 73.41,
-      "date_entree": "2026-07-09",
-      "heure_entree": "14:19",
-      "source_entree": "Briefing",
-      "cout_total": 1982.07,
-      "frais_achat": 9.91
-    },
     "Hermès": {
       "nb_actions": 1,
       "prix_entree": 1644.5,
@@ -45,6 +18,33 @@
       "source_entree": "Briefing",
       "cout_total": 1944.08,
       "frais_achat": 9.72
+    },
+    "LVMH": {
+      "nb_actions": 4,
+      "prix_entree": 495.1,
+      "date_entree": "2026-07-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1980.4,
+      "frais_achat": 9.9
+    },
+    "TotalEnergies": {
+      "nb_actions": 28,
+      "prix_entree": 70.51,
+      "date_entree": "2026-07-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1974.2800000000002,
+      "frais_achat": 9.87
+    },
+    "Sanofi": {
+      "nb_actions": 25,
+      "prix_entree": 77.34,
+      "date_entree": "2026-07-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1933.5,
+      "frais_achat": 9.67
     }
   },
   "historique_valeur": {
@@ -66,7 +66,8 @@
     "2026-07-10": 9852.88,
     "2026-07-13": 9920.16,
     "2026-07-16": 9965.76,
-    "2026-07-17": 9928.33
+    "2026-07-17": 9928.33,
+    "2026-07-20": 9868.56
   },
   "trades": [
     {
@@ -239,6 +240,45 @@
       "frais_total": 19.16,
       "raison_sortie": "ÉVITER intraday",
       "note_reparation": "Sortie NaN du 14/07 (bougie Yahoo incomplète) réparée le 16/07 avec la clôture valide du 13/07"
+    },
+    {
+      "nom": "Sanofi",
+      "entree": 74.77,
+      "sortie": 77.34,
+      "date_entree": "2026-07-08",
+      "heure_entree": "11:32",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-20",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 2.92,
+      "frais_total": 19.77
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 67.78,
+      "sortie": 70.51,
+      "date_entree": "2026-07-09",
+      "heure_entree": "03:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-20",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 3.51,
+      "frais_total": 20.05
+    },
+    {
+      "nom": "Société Générale",
+      "entree": 73.41,
+      "sortie": 74.55,
+      "date_entree": "2026-07-09",
+      "heure_entree": "14:19",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-20",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 1.05,
+      "frais_total": 19.97
     }
   ]
 }
