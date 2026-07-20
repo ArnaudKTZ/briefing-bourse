@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "heure": "14:32",
+  "heure": "17:24",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "2 recommandations d’achat, 1 neutre : Mizuho lance la couverture de trois géants pétroliers",
         "TotalEnergies repasse sous 70 € après un avertissement sur le T2",
-        "Les actions énergétiques européennes progressent avec la hausse du pétrole",
-        "Pouvoir d'achat : TotalEnergies maintient le plafonnement de ses prix à 1,99 euro dans les zones rurales pendant l’été"
+        "Les actions énergétiques européennes progressent avec la hausse du pétrole"
       ]
     },
     "Hermès": {
@@ -149,9 +149,13 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.33,
+      "nb_news": 9,
+      "titres_cles": [
+        "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
+        "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
+        "Saint-Gobain fixe ses objectifs 2026-2030 dans le cadre de sa stratégie \"Lead and Grow\""
+      ]
     },
     "ArcelorMittal": {
       "sentiment": 0.2,
