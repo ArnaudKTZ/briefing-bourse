@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "heure": "06:45",
+  "heure": "14:32",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.0,
-      "nb_news": 8,
+      "sentiment": 1.14,
+      "nb_news": 7,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
@@ -149,13 +149,9 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.33,
-      "nb_news": 9,
-      "titres_cles": [
-        "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
-        "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
-        "Saint-Gobain fixe ses objectifs 2026-2030 dans le cadre de sa stratégie \"Lead and Grow\""
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "ArcelorMittal": {
       "sentiment": 0.2,
@@ -361,17 +357,17 @@
   },
   "signaux_forts": [
     [
+      "Air Liquide",
+      1.14,
+      [
+        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
       "Legrand",
       1.11,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
-      ]
-    ],
-    [
-      "Air Liquide",
-      1.0,
-      [
-        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
     ]
   ]
