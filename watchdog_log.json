@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "heure": "07:30",
+  "heure": "15:16",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -8,11 +8,43 @@
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 07:03"
+      "msg": "OK — briefing du jour envoyé à 14:38"
     },
     "Scoring intraday": {
       "ok": null,
       "msg": "Lundi — pas de données intraday attendues hier"
+    },
+    "Dividendes (lundi 8h05)": {
+      "ok": true,
+      "msg": "OK — dernier rapport le 2026-07-20 (il y a 0 j)"
+    },
+    "Shadow (vendredi 18h35)": {
+      "ok": true,
+      "msg": "OK — dernier rapport le 2026-07-17 (il y a 3 j)"
+    },
+    "Évaluateur (samedi 7h35)": {
+      "ok": true,
+      "msg": "OK — dernier rapport le 2026-07-20 (il y a 0 j)"
+    },
+    "Veille (samedi 9h)": {
+      "ok": true,
+      "msg": "OK — dernier rapport le 2026-07-18 (il y a 2 j)"
+    },
+    "Professeur (dimanche 18h)": {
+      "ok": true,
+      "msg": "OK — dernier rapport le 2026-07-19 (il y a 1 j)"
+    },
+    "Dual Momentum (1er, 8h)": {
+      "ok": true,
+      "msg": "OK — run mensuel du 2026-07-01"
+    },
+    "Crypto DM (1er, 8h15)": {
+      "ok": true,
+      "msg": "OK — run mensuel du 2026-07-13"
+    },
+    "Stratège (le 4, 18h)": {
+      "ok": true,
+      "msg": "OK — run mensuel du 2026-07-15"
     }
   },
   "problemes": []
