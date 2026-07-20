@@ -1328,5 +1328,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 96/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-20",
+    "heure": "18:03",
+    "nom": "Edenred",
+    "cours": 26.93,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.01%",
+    "envoyee": false
   }
 ]
