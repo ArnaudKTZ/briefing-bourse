@@ -1,5 +1,5 @@
 {
-  "capital": 362.52,
+  "capital": 302.26999999999975,
   "positions": {
     "Hermès": {
       "nb_actions": 1,
@@ -19,15 +19,6 @@
       "cout_total": 1944.08,
       "frais_achat": 9.72
     },
-    "LVMH": {
-      "nb_actions": 4,
-      "prix_entree": 495.1,
-      "date_entree": "2026-07-20",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1980.4,
-      "frais_achat": 9.9
-    },
     "TotalEnergies": {
       "nb_actions": 28,
       "prix_entree": 70.51,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1933.5,
       "frais_achat": 9.67
+    },
+    "ArcelorMittal": {
+      "nb_actions": 30,
+      "prix_entree": 65.85,
+      "date_entree": "2026-07-21",
+      "heure_entree": "07:32",
+      "source_entree": "Briefing",
+      "cout_total": 1975.4999999999998,
+      "frais_achat": 9.88
     }
   },
   "historique_valeur": {
@@ -68,7 +68,7 @@
     "2026-07-16": 9965.76,
     "2026-07-17": 9928.33,
     "2026-07-20": 9863.29,
-    "2026-07-21": 9868.56
+    "2026-07-21": 9856.84
   },
   "trades": [
     {
@@ -280,6 +280,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": 1.05,
       "frais_total": 19.97
+    },
+    {
+      "nom": "LVMH",
+      "entree": 495.1,
+      "sortie": 483.7,
+      "date_entree": "2026-07-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-21",
+      "heure_sortie": "07:32",
+      "source_sortie": "Briefing",
+      "pnl_pct": -2.79,
+      "frais_total": 19.57
     }
   ]
 }
