@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "heure": "12:07",
+  "heure": "15:03",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.29,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
-        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie",
-        "Airbus : livraisons en hausse en juin, +15% au premier semestre"
+        "Boeing demande aux États-Unis d’enquêter sur un prêt de l’UE à Airbus",
+        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie"
       ]
     },
     "Schneider Electric": {
