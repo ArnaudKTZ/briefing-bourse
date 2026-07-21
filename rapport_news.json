@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-20",
-  "heure": "19:04",
+  "date": "2026-07-21",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
       "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
       "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux",
       "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA",
-      "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable",
-      "La Bourse de Paris en recul, malgré la bonne santé du luxe"
+      "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable"
     ]
   },
   "valeurs": {
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.05,
+      "nb_news": 21,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
-        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions",
-        "Chef Ziling Zhou, fondatrice de Silver Beach, première femme d'Asie Chevalier de la truffe Chef × Visionnaire culinaire, Chef espagnol trois fois étoilé David Muñoz : Un dialogue culinaire de Chengdu à Madrid s'achève avec succès"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
+        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
       ]
     },
     "Capgemini": {
