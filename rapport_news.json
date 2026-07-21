@@ -1,15 +1,15 @@
 {
   "date": "2026-07-21",
-  "heure": "09:20",
+  "heure": "12:07",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
       "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
       "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
       "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux",
-      "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA",
-      "CAC 40 : la Bourse hésite, la question est de savoir si la hausse des actions des semi-conducteurs est durable"
+      "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA"
     ]
   },
   "valeurs": {
