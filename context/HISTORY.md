@@ -9,6 +9,14 @@
 
 ## 2026-07-22
 
+### Phase 1 V5 lancée le jour même : Risk Engine construit et passé à la recette
+
+- Sur décision d'Arnaud ("on attaque, pas de pause"), le Risk Engine (priorité n°1 du dossier des maîtres, confirmée par le bilan) est construit dans la foulée. `risk_engine.py` = module fonction pure appliquant les 6 principes manquants : P1 risque max 1%/position, P2 taille par volatilité (ATR), P5 asymétrie TP/stop ≥ 2, P9 concentration top-3 convictions/jour, P11 max 2 positions/secteur, P12 frein après drawdown. Params figés a priori (littérature Turtles/Minervini/PTJ), zéro optimisation.
+- **Passé à la recette immédiatement** (`risk_engine_backtest.py`, fenêtre propre depuis le 02/07, rendements J+5 nets, régime lu la veille). Résultat, baseline « tout ACHETER ≥80, 2000€ fixe » vs Risk Engine : nb trades 81 → 27, edge net/trade **-0,88 pt → +1,69 pt**, gagnants 38% → 56%, P&L virtuel -1354€ → +746€, dispersion du P&L € réduite (98 → 86€, effet du sizing volatilité).
+- **Vérification anti-chance faite** : distribution saine, pas portée par 2 outliers. Médiane +0,39 pt (positive), moyenne trimmée (sans 2 extrêmes/côté) +1,44 pt sur 23 trades, P&L sans les 2 meilleurs trades toujours +307€. Le mécanisme est cohérent avec le bilan : le score ayant enfin un pouvoir de classement (IC +0,077), concentrer sur le top-3 extrait un edge brut assez fort pour couvrir le péage.
+- **Lucidité maintenue** : 27 trades / 14 jours = échantillon minuscule ; ce test ré-exprime en partie le constat de l'IC (top scores surperforment), ce n'est pas une confirmation indépendante ; P7 (régime) et P12 (frein DD) n'ont jamais pu se déclencher (aucun marché baissier ni drawdown -10% sur la fenêtre) — l'airbag est construit mais non testé en réel. Donc : ENCOURAGEANT, pas prouvé. Ne justifie PAS d'argent réel.
+- Prochaine brique logique : intégrer le Risk Engine au portefeuille VIRTUEL du scoring pour qu'il accumule un vrai track record forward, et re-passer la recette chaque mois quand les données grandissent. Aucune modif du live pour l'instant (règle d'or : le module attend d'avoir prouvé sur données forward, pas seulement rétroactives).
+
 ### BILAN DES 30 JOURS — décision CAS 1 : gel du satellite, cap sur la Phase 1 V5
 
 - Le rendez-vous fixé depuis le 24/06. Évaluateur relancé le matin, décision prise sur ses chiffres du jour et sur les critères figés à froid le 13/07 (aucune renégociation).

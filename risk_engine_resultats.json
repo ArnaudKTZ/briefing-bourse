@@ -1,0 +1,33 @@
+{
+  "date_test": "2026-07-22",
+  "fenetre_depuis": "2026-07-02",
+  "params": {
+    "risk_pct": 0.01,
+    "stop_atr_mult": 2.0,
+    "min_rr": 2.0,
+    "top_k": 3,
+    "max_par_secteur": 2,
+    "dd_seuil": -0.1,
+    "dd_facteur": 0.5,
+    "poids_max": 0.25,
+    "score_min": 80
+  },
+  "baseline_A": {
+    "n_trades": 81,
+    "edge_net_moyen": -0.875,
+    "pct_gagnants": 38,
+    "pnl_total_eur": -1354.21,
+    "pnl_eur_ecart_type": 98.28,
+    "capital_engage_moyen": 1953
+  },
+  "risk_engine_B": {
+    "n_trades": 27,
+    "edge_net_moyen": 1.686,
+    "pct_gagnants": 56,
+    "pnl_total_eur": 746.1,
+    "pnl_eur_ecart_type": 86.43,
+    "capital_engage_moyen": 1902
+  },
+  "jours_bloques_regime": 0,
+  "note": "P7 (régime) et P12 (frein DD) non exercés faute de marché baissier et de drawdown suffisant sur la fenêtre propre — à re-mesurer en tempête."
+}
