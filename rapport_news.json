@@ -1,15 +1,15 @@
 {
   "date": "2026-07-22",
-  "heure": "09:22",
+  "heure": "12:06",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»",
+      "La Bourse de Paris en petite hausse, les taux d'emprunts flambent",
       "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
       "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
-      "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux",
-      "La Bourse de Paris prudente face au risque géopolitique et au décrochage des valeurs liées à l'IA"
+      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient"
     ]
   },
   "valeurs": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.33,
+      "sentiment": 0.43,
       "nb_news": 21,
       "titres_cles": [
+        "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
-        "Boeing demande aux États-Unis d’enquêter sur un prêt de l’UE à Airbus"
+        "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2"
       ]
     },
     "Schneider Electric": {
@@ -99,8 +99,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
-        "Airbus accélère vers son futur monocouloir et prépare un avion à hydrogène",
-        "CFM International obtient la certification pour améliorer la durabilité de ses réacteurs"
+        "Essayez cette méthode complète d’investissement assisté par IA en 3 étapes",
+        "Airbus accélère vers son futur monocouloir et prépare un avion à hydrogène"
       ]
     },
     "Danone": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.09,
-      "nb_news": 11,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1",
-        "Les actions d’hôtellerie et de croisières chutent en Europe et aux États-Unis dans un contexte de conflit iranien"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
+        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1"
       ]
     },
     "Eurazeo": {
