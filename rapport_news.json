@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "heure": "12:06",
+  "heure": "15:08",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -108,8 +108,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
-        "Le PDG de Danone affirme que la guerre en Iran pourrait entraîner une hausse des prix alimentaires",
-        "DANONE : Notification de mise à disposition par Danone de ses comptes consolidés et du rapport des Commissaires aux comptes 2025"
+        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat",
+        "Le PDG de Danone affirme que la guerre en Iran pourrait entraîner une hausse des prix alimentaires"
       ]
     },
     "Vinci": {
