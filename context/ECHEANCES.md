@@ -13,6 +13,8 @@
 
 - [ ] 2026-08-02 — **Trois décisions Agent Bourse** (rappel push déjà programmé) : (1) réactiver ou non les alertes email achat/vente suspendues, sur le verdict Shadow ; (2) sort des poids News/Espion neutralisés (supprimer / réduire / réactiver / tester signe contrarien News), après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?). (Agent Bourse)
 
+- [ ] 2026-08-22 — **Recette forward du Risk Engine** : comparer les courbes réelles des deux portefeuilles virtuels (baseline vs risk_engine_portefeuille.json) sur ~1 mois de données forward, pas seulement le backtest rétroactif. Si le Risk Engine confirme son avantage (edge net, drawdown), ouvrir la question d'un premier budget réel réduit. (Agent Bourse)
+
 ## Sans date ferme (à sortir quand le moment est bon)
 
 - [ ] Décision poche crypto réelle vs signal Crypto DM (posée le 13/07, réponse en attente) : (a) aligner BTC/ETH sur le signal refuge + trancher SOL, (b) signal appliqué aux seuls futurs apports, (c) ne rien toucher, l'agent observe. (Agent Bourse)
