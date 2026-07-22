@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-21",
-  "heure": "15:03",
+  "date": "2026-07-22",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.24,
+      "sentiment": 0.33,
       "nb_news": 21,
       "titres_cles": [
+        "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
         "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2",
-        "Boeing demande aux États-Unis d’enquêter sur un prêt de l’UE à Airbus",
-        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie"
+        "Boeing demande aux États-Unis d’enquêter sur un prêt de l’UE à Airbus"
       ]
     },
     "Schneider Electric": {
@@ -95,11 +95,11 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
-        "CAC 40 : nouveau record historique pour l’indice phare de la Bourse de Paris",
+        "Airbus accélère vers son futur monocouloir et prépare un avion à hydrogène",
         "CFM International obtient la certification pour améliorer la durabilité de ses réacteurs"
       ]
     },
