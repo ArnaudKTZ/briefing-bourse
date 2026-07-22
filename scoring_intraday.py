@@ -217,7 +217,8 @@ def recuperer_contexte_global():
             break
     return malus, infos, vix_val, fg_score, fg_label, cac_cours, cac_var
 
-from marche_config import CAC40
+from marche_config import CAC40, SECTEUR_PAR_VALEUR
+from risk_engine import ParamsRisque, selectionner
 
 POIDS_DEFAUT = {
     "rsi":        1.0,
@@ -310,6 +311,20 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
         volume     = int(hist["Volume"].iloc[-1])
         vol_moy    = int(hist["Volume"].iloc[-20:].mean())
         gap_pct    = round((ouverture - cours_hier) / cours_hier * 100, 2)
+
+        # ATR% (volatilité) pour le Risk Engine : taille de position par
+        # volatilité (P2) et stop à l'entrée (P3). Calculé ici car l'historique
+        # est déjà chargé. None si non calculable (le Risk Engine ignore alors).
+        atr_pct = None
+        try:
+            h14, l14, c14 = hist["High"], hist["Low"], hist["Close"]
+            prev = c14.shift(1)
+            tr = pd.concat([(h14 - l14), (h14 - prev).abs(), (l14 - prev).abs()], axis=1).max(axis=1)
+            atr_val = tr.rolling(14).mean().iloc[-1]
+            if atr_val == atr_val and cours > 0:
+                atr_pct = round(float(atr_val) / cours, 4)
+        except Exception:
+            pass
 
         score = 50
         rsi_val = None
@@ -493,6 +508,8 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             "volume_ratio":      ratio_vol,
             "score":             score,
             "signal":            signal,
+            "secteur":           SECTEUR_PAR_VALEUR.get(nom, "?"),
+            "atr_pct":           atr_pct,
             "facteurs":          f,
         }
 
@@ -765,6 +782,132 @@ def gerer_portefeuille_intraday(snapshot, heure):
     return fermes, ouverts
 
 
+# ─── PORTEFEUILLE RISK ENGINE (parallèle, forward, Phase 1 V5) ─────────────────
+# Second portefeuille virtuel, géré par le Risk Engine (risk_engine.py). Tourne
+# EN PARALLÈLE de la baseline ci-dessus, sur les mêmes signaux : la baseline est
+# le groupe témoin, celui-ci le groupe test. On construit ainsi un vrai A/B
+# FORWARD (bien plus rigoureux que le backtest du 22/07). Décision Arnaud 22/07.
+# Argent 100% virtuel. Garde-fous NaN intégrés dès le départ.
+
+FICHIER_PF_RISK = "risk_engine_portefeuille.json"
+PARAMS_RISK     = ParamsRisque()
+
+
+def _valide_cours(x):
+    return isinstance(x, (int, float)) and not isinstance(x, bool) and x == x
+
+
+def regime_cac_actuel():
+    """Régime de marché : 'haussier' si le CAC est au-dessus de sa MM200,
+    'baissier' sinon, None si indisponible. Filtre P7 du Risk Engine."""
+    try:
+        h = yf.Ticker("^FCHI").history(period="14mo")["Close"].dropna()
+        if len(h) < 200:
+            return None
+        mm200 = h.rolling(200).mean().iloc[-1]
+        dernier = float(h.iloc[-1])
+        if mm200 != mm200:
+            return None
+        return "haussier" if dernier >= mm200 else "baissier"
+    except Exception:
+        return None
+
+
+def gerer_portefeuille_risk_engine(snapshot, heure, regime, now):
+    """Portefeuille virtuel géré par le Risk Engine. Ouvre via selectionner()
+    (concentration top-K, sizing volatilité, plafond secteur, filtre régime,
+    frein drawdown), stocke le stop/take-profit à l'entrée (P3), et sort sur
+    ces bornes ATR ou sur signal ÉVITER. Écrit risk_engine_portefeuille.json."""
+    today = now.date().isoformat()
+
+    if os.path.exists(FICHIER_PF_RISK):
+        with open(FICHIER_PF_RISK, "r") as f:
+            pf = json.load(f)
+    else:
+        pf = {"capital": 10000.0, "positions": {}, "historique_valeur": {},
+              "trades": [], "regime_dernier": regime}
+
+    fermes, ouverts = [], []
+
+    # 1. Sorties : stop/TP propres à chaque position (décidés à l'entrée) ou ÉVITER
+    for nom in list(pf["positions"].keys()):
+        pos = pf["positions"][nom]
+        d = snapshot.get(nom)
+        if not d:
+            continue
+        cours = d.get("cours")
+        if not _valide_cours(cours):
+            continue
+        pnl_pct = (cours - pos["prix_entree"]) / pos["prix_entree"] * 100
+        stop = -pos["stop_pct"] * 100
+        tp   = pos["tp_pct"] * 100
+        raison = None
+        if d.get("signal") == "ÉVITER":
+            raison = "ÉVITER intraday"
+        elif pnl_pct <= stop:
+            raison = f"Stop {pnl_pct:.1f}% (ATR)"
+        elif pnl_pct >= tp:
+            raison = f"Take-profit {pnl_pct:.1f}% (ATR)"
+        if raison:
+            valeur_sortie = pos["nb_actions"] * cours
+            frais_vente   = calculer_frais(valeur_sortie)
+            net_sortie    = valeur_sortie - frais_vente
+            pnl_net       = round((net_sortie - pos["cout_total"]) / pos["cout_total"] * 100, 2)
+            pf["capital"] += net_sortie
+            pf["trades"].append({
+                "nom": nom, "entree": pos["prix_entree"], "sortie": cours,
+                "date_entree": pos["date_entree"], "date_sortie": today,
+                "heure_sortie": heure, "pnl_pct": pnl_net,
+                "frais_total": round(pos.get("frais_achat", 0) + frais_vente, 2),
+                "raison_sortie": raison,
+            })
+            del pf["positions"][nom]
+            fermes.append({"nom": nom, "pnl": pnl_net, "raison": raison})
+
+    # 2. Contexte pour le Risk Engine : équité courante + drawdown (frein P12)
+    valeur_pos = sum(p["nb_actions"] * (snapshot.get(n, {}).get("cours") if _valide_cours(snapshot.get(n, {}).get("cours")) else p["prix_entree"])
+                     for n, p in pf["positions"].items())
+    equity = round(pf["capital"] + valeur_pos, 2)
+    hv = pf["historique_valeur"]
+    pic = max([v for v in hv.values() if _valide_cours(v)] + [equity]) if hv else equity
+    drawdown = (equity - pic) / pic if pic > 0 else 0.0
+    contexte = {"regime": regime, "drawdown": drawdown}
+
+    # 3. Candidats enrichis (secteur + ATR% viennent du snapshot) et décisions
+    candidats = [{"nom": n, "score": d.get("score", 0), "prix": d.get("cours"),
+                  "secteur": d.get("secteur", "?"), "signal": d.get("signal"),
+                  "atr_pct": d.get("atr_pct")}
+                 for n, d in snapshot.items() if _valide_cours(d.get("cours"))]
+    positions_ouvertes = {n: {"secteur": p.get("secteur", "?")} for n, p in pf["positions"].items()}
+
+    for dec in selectionner(candidats, positions_ouvertes, equity, contexte, PARAMS_RISK):
+        cout = dec["nb"] * dec["prix"]
+        frais_achat = calculer_frais(cout)
+        if pf["capital"] < cout + frais_achat:
+            continue
+        pf["capital"] -= (cout + frais_achat)
+        pf["positions"][dec["nom"]] = {
+            "nb_actions": dec["nb"], "prix_entree": dec["prix"],
+            "date_entree": today, "heure_entree": heure, "secteur": dec["secteur"],
+            "cout_total": round(cout, 2), "frais_achat": frais_achat,
+            "stop_pct": dec["stop_pct"], "tp_pct": dec["tp_pct"], "score_entree": dec["score"],
+        }
+        ouverts.append({"nom": dec["nom"], "score": dec["score"], "montant": round(cout, 2)})
+
+    # 4. Valorisation (jamais de NaN persisté)
+    valeur_pos = sum(p["nb_actions"] * (snapshot.get(n, {}).get("cours") if _valide_cours(snapshot.get(n, {}).get("cours")) else p["prix_entree"])
+                     for n, p in pf["positions"].items())
+    valeur_totale = round(pf["capital"] + valeur_pos, 2)
+    if _valide_cours(valeur_totale):
+        pf["historique_valeur"][today] = valeur_totale
+    pf["regime_dernier"] = regime
+
+    with open(FICHIER_PF_RISK, "w") as f:
+        json.dump(pf, f, ensure_ascii=False, indent=2)
+
+    return fermes, ouverts
+
+
 if __name__ == "__main__":
     now   = datetime.datetime.now(TZ_PARIS)
     today = datetime.datetime.now(TZ_PARIS).date().isoformat()
@@ -842,12 +985,17 @@ if __name__ == "__main__":
     alertes, alertes_envoyees = detecter_alertes(snapshot, alertes_envoyees, today, heure)
     sauvegarder_alertes_envoyees(alertes_envoyees)
 
-    print("Gestion portefeuille intraday...")
+    print("Gestion portefeuille intraday (baseline)...")
     fermes, ouverts = gerer_portefeuille_intraday(snapshot, heure)
     if fermes:
         print(f"  Positions fermées : {[f['nom'] for f in fermes]}")
     if ouverts:
         print(f"  Positions ouvertes : {[o['nom'] for o in ouverts]}")
+
+    print("Gestion portefeuille Risk Engine (parallèle, forward)...")
+    regime = regime_cac_actuel()
+    re_fermes, re_ouverts = gerer_portefeuille_risk_engine(snapshot, heure, regime, datetime.datetime.now(TZ_PARIS))
+    print(f"  Régime {regime} | fermées : {[f['nom'] for f in re_fermes]} | ouvertes : {[o['nom'] for o in re_ouverts]}")
 
     # Fusionne les mouvements de portefeuille dans les alertes si pertinent
     for o in ouverts:

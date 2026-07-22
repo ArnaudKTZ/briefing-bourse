@@ -45,3 +45,22 @@ CAC40 = {
     "Thales":             "HO.PA",
     "Forvia":             "FRVIA.PA",
 }
+
+
+# Secteur par valeur (source de vérité unique, repris du dict SECTEURS du
+# briefing). Utilisé par le Risk Engine pour la limite d'exposition sectorielle
+# (principe P11 : pas 3 banques corrélées en même temps).
+SECTEUR_PAR_VALEUR = {}
+for _secteur, _valeurs in {
+    "Luxe":              ["LVMH", "Hermès", "Kering", "L'Oréal", "Pernod Ricard"],
+    "Énergie":           ["TotalEnergies", "Engie"],
+    "Industrie/Défense": ["Airbus", "Schneider Electric", "Safran", "Vinci", "Saint-Gobain",
+                          "Legrand", "ArcelorMittal", "Alstom", "Forvia", "Bouygues", "Thales"],
+    "Banques/Finance":   ["BNP Paribas", "Société Générale", "Eurazeo"],
+    "Santé":             ["Sanofi", "Air Liquide", "Eurofins Scientific"],
+    "Tech":              ["Capgemini", "Dassault Systèmes", "STMicroelectronics", "Worldline"],
+    "Télécom/Média":     ["Orange", "Vivendi", "Publicis", "Teleperformance"],
+    "Conso/Autre":       ["Danone", "Michelin", "Renault", "Stellantis", "Accor", "Edenred", "Veolia"],
+}.items():
+    for _v in _valeurs:
+        SECTEUR_PAR_VALEUR[_v] = _secteur
