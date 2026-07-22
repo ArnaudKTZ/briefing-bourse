@@ -11,11 +11,6 @@
 
 ## À venir
 
-- [ ] 2026-07-22 — **Bilan Agent Bourse 30 jours** : lancer manuellement evaluateur.yml le matin (gh workflow run) pour avoir le rapport du jour avec l'encadré "fenêtre propre", puis trancher sur ses chiffres. Analyser la précision par secteur/indicateur sur données propres (depuis le 02/07). Démarrer si pertinent la Phase 1 V5 (Data Quality, Feature Engine, Score Engine 4 sous-scores). **Critères de décision figés à froid le 13/07** (pour ne pas négocier avec soi-même le jour J), sur les données propres depuis le 02/07 à J+5 :
-  - Si IC ≤ 0 OU edge net ACHETER ≤ 0 → satellite maintenu 100% virtuel, aucun passage en réel, l'effort bascule sur la Phase 1 V5 (refonte du score) plutôt que sur du tuning V4
-  - Si IC ≥ +0.03 ET edge net > 0 → satellite candidat à un budget réel réduit, décision budget au 02/08
-  - Entre les deux → observation prolongée d'un mois (re-bilan 22/08), zéro réel
-  - État au 13/07, pour mémoire : IC -0.050 (25% jours positifs), edge net -0.96 pt → trajectoire = cas 1. (Agent Bourse)
 - [ ] 2026-08-02 — **Trois décisions Agent Bourse** (rappel push déjà programmé) : (1) réactiver ou non les alertes email achat/vente suspendues, sur le verdict Shadow ; (2) sort des poids News/Espion neutralisés (supprimer / réduire / réactiver / tester signe contrarien News), après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?). (Agent Bourse)
 
 ## Sans date ferme (à sortir quand le moment est bon)
@@ -31,6 +26,7 @@
 
 ## Fait
 
+- [x] 2026-07-22 — **Bilan des 30 jours : CAS 1 tranché sur les critères figés à froid.** Fenêtre propre (546 obs, 14 j depuis le 02/07) : edge NET J+5 = **-1,2 pt** (perdant net de frais), IC J+5 = +0,077. Grille = CAS 1 car edge net ≤ 0 → **satellite gelé 100% virtuel, aucun passage en réel, effort bascule sur la Phase 1 V5**. Twist honnête : l'IC a grimpé de -0,05 (13/07) à +0,077 (exploitable AVANT frais), le score s'est mis à discriminer (buckets 85+/75-84 battent 65-74). Le signal a donc un vrai pouvoir de classement désormais, mais les frais (~1%) mangent tout l'edge. Ça ne change pas la décision (net ≤ 0), ça reformule la mission Phase 1 V5 : le problème n'est plus "le score est nul" mais "l'edge est réel et trop petit pour payer le péage". Prudence : 14 j = IC volatil, le seul fait ROBUSTE est l'edge net constamment négatif.
 - [x] 2026-07-13 — Jobs cron-job.org Dividendes (lundi 8h05) et Crypto DM (1er du mois 8h15) créés par clonage (token jamais manipulé), testés 204, revérifiés après rechargement. 12 jobs actifs.
 - [x] 2026-07-13 — Crypto Dual Momentum (BTC/ETH, lookback 12 fixe, refuge stablecoin, SOL rejeté) : décision Arnaud, agent en production (agent_crypto_dm.py, 1er du mois 8h15). Premier signal : refuge stablecoin (BTC -45%, ETH -37% sur 12 mois).
 
