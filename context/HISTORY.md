@@ -9,6 +9,13 @@
 
 ## 2026-07-22
 
+### Risk Engine branché en forward : second portefeuille virtuel parallèle (A/B)
+
+- Après le déjeuner, on branche le Risk Engine sur le virtuel. Choix de conception clé : NE PAS remplacer le portefeuille baseline (code fragile, garde-fous NaN durement acquis, et surtout notre groupe témoin), mais faire tourner le Risk Engine comme un SECOND portefeuille parallèle (risk_engine_portefeuille.json) sur les mêmes signaux. On obtient un vrai A/B FORWARD (baseline vs Risk Engine), bien plus rigoureux que le backtest, et zéro risque de casser le code sensible.
+- Ajouts au scoring : ATR% et secteur dans la sortie de scorer_action ; SECTEUR_PAR_VALEUR centralisé dans marche_config (39/39 valeurs) ; helper regime_cac_actuel() (CAC vs MM200) ; fonction gerer_portefeuille_risk_engine() avec garde-fous NaN intégrés dès l'écriture. Ouvre via selectionner() du module, stocke stop/TP ATR à l'entrée (P3), sort sur ces bornes ou ÉVITER.
+- Testé en isolation (plafond secteur, top-3, filtre régime baissier, sorties stop/TP, scan NaN) puis validé en CI de bout en bout : run réussi, régime haussier détecté, première position ouverte (Engie, score 81, stop -3,6% / TP +7,1%, ~2489€). Le workflow committe le nouveau JSON (petite collision avec le run planifié de 14h au 1er essai, relancé proprement dans la fenêtre creuse).
+- À partir de maintenant, les deux portefeuilles tournent côte à côte 4x/jour. Dans ~1 mois : re-passer la recette en comparant les courbes réelles forward, plus seulement le rétroactif. Toujours 100% virtuel, aucun euro réel.
+
 ### Phase 1 V5 lancée le jour même : Risk Engine construit et passé à la recette
 
 - Sur décision d'Arnaud ("on attaque, pas de pause"), le Risk Engine (priorité n°1 du dossier des maîtres, confirmée par le bilan) est construit dans la foulée. `risk_engine.py` = module fonction pure appliquant les 6 principes manquants : P1 risque max 1%/position, P2 taille par volatilité (ATR), P5 asymétrie TP/stop ≥ 2, P9 concentration top-3 convictions/jour, P11 max 2 positions/secteur, P12 frein après drawdown. Params figés a priori (littérature Turtles/Minervini/PTJ), zéro optimisation.
