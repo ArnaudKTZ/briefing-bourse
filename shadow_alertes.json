@@ -1338,5 +1338,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.01%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-22",
+    "heure": "13:26",
+    "nom": "Pernod Ricard",
+    "cours": 63.9,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.11%",
+    "envoyee": false
   }
 ]
