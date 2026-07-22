@@ -1,0 +1,22 @@
+{
+  "capital": 7498.15,
+  "positions": {
+    "Engie": {
+      "nb_actions": 90,
+      "prix_entree": 27.66,
+      "date_entree": "2026-07-22",
+      "heure_entree": "14:04",
+      "secteur": "Énergie",
+      "cout_total": 2489.4,
+      "frais_achat": 12.45,
+      "stop_pct": 0.0356,
+      "tp_pct": 0.0712,
+      "score_entree": 81
+    }
+  },
+  "historique_valeur": {
+    "2026-07-22": 9987.55
+  },
+  "trades": [],
+  "regime_dernier": "haussier"
+}
