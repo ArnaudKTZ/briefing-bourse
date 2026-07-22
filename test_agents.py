@@ -81,6 +81,7 @@ JSON_FRAICHEUR = {
     "rapport_news.json":              26,
     "dual_momentum_statut.json":      None,
     "portefeuille_virtuel.json":      26,
+    "risk_engine_portefeuille.json":  None,
     "dual_momentum_portefeuille.json": 26,
     "crypto_dm_portefeuille.json":    None,
     "stratege_rapport.json":          None,

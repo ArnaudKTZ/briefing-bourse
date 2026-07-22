@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "Agent Bourse"
           git config user.email "actions@github.com"
-          git add intraday_scores.json alertes_envoyees.json costs_log.json portefeuille_virtuel.json shadow_alertes.json || true
+          git add intraday_scores.json alertes_envoyees.json costs_log.json portefeuille_virtuel.json risk_engine_portefeuille.json shadow_alertes.json || true
           git diff --staged --quiet || git commit -m "Scoring intraday $(date +%Y-%m-%d\ %H:%M)" || true
           git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
