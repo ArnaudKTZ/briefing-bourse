@@ -7,6 +7,21 @@
 
 ---
 
+## 2026-07-22
+
+### BILAN DES 30 JOURS — décision CAS 1 : gel du satellite, cap sur la Phase 1 V5
+
+- Le rendez-vous fixé depuis le 24/06. Évaluateur relancé le matin, décision prise sur ses chiffres du jour et sur les critères figés à froid le 13/07 (aucune renégociation).
+- **Chiffres de la fenêtre propre (546 obs, 14 jours depuis le 02/07)** : edge NET ACHETER à J+5 = **-1,2 pt** ; IC de Spearman J+5 = **+0,077** (56% de jours positifs).
+- **Décision = CAS 1** (IC ≤ 0 OU edge net ≤ 0) car l'edge net est négatif : **satellite maintenu 100% virtuel, aucun passage en réel, l'effort bascule sur la Phase 1 V5.** Convergence des juges maintenue : Shadow NUISIBLES (-1,06 pt à J+5), Professeur note E le Briefing V4 (45,2% sur 640 signaux).
+- **Le twist honnête, à ne pas enterrer** : l'IC est passé de -0,05 (13/07) à +0,014 (20/07) à +0,077 (22/07), soit au-dessus du seuil "exploitable avant frais" (+0,05). Les buckets discriminent enfin (85+ : +0,19% et 75-84 : +0,20% battent 65-74 : -0,64%). Le score a donc acquis un vrai pouvoir de classement, ce qui était FAUX il y a deux semaines. Mais l'edge brut (~+0,06 à +0,14 pt) reste très loin de couvrir le péage de ~1%. Traduction : le problème n'est plus "le signal ne vaut rien", c'est "le signal a un petit edge réel que les frais dévorent".
+- **Ce que ça reformule pour la Phase 1 V5** : pas repartir de zéro sur le score (il a du signal), mais attaquer le problème frais/fréquence — soit extraire plus d'edge par trade, soit réduire drastiquement la rotation (moins de trades, plus gros, sur les plus fortes convictions), ce qui est exactement le rôle du Risk Engine (priorité n°1 sortie de la recherche sur les grands traders). Le sizing par volatilité + conviction devient le chantier central.
+- **Prudence méthodo notée** : 14 jours / 546 obs, l'IC est volatil (il a swingué de négatif à +0,077 en deux semaines). Le seul fait ROBUSTE sur toutes les fenêtres et tous les horizons reste l'edge net constamment négatif (-0,86 à -1,54 selon la mesure). La décision s'ancre sur ce fait stable, pas sur l'embellie de l'IC.
+- Régime : tout l'historique reste en marché haussier (0 obs baissier), on n'a donc toujours pas mesuré le système en tempête. À garder en tête.
+- Prochaine étape à décider par Arnaud : périmètre et lancement de la Phase 1 V5 (Risk Engine en tête). Les trois décisions du 02/08 restent au calendrier.
+
+---
+
 ## 2026-07-20
 
 ### Fenêtre propre dans l'Évaluateur + Watchdog étendu à toute la flotte
