@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-22",
-  "heure": "15:08",
+  "date": "2026-07-23",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»",
-      "La Bourse de Paris en petite hausse, les taux d'emprunts flambent",
       "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
       "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient"
+      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
+      "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux"
     ]
   },
   "valeurs": {
@@ -24,7 +24,7 @@
     },
     "TotalEnergies": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "2 recommandations d’achat, 1 neutre : Mizuho lance la couverture de trois géants pétroliers",
         "TotalEnergies repasse sous 70 € après un avertissement sur le T2",
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.43,
-      "nb_news": 21,
+      "sentiment": 0.41,
+      "nb_news": 22,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.52,
+      "nb_news": 21,
       "titres_cles": [
         "Bilan semestriel du contrat de liquidité IPSOS - Juin 2026",
         "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.11,
-      "nb_news": 19,
+      "sentiment": -0.1,
+      "nb_news": 20,
       "titres_cles": [
         "La Bourse de Paris en hausse malgré les interrogations sur la tech",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.11,
-      "nb_news": 9,
+      "sentiment": 1.1,
+      "nb_news": 10,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Rachat de SFR: la Commission européenne renvoie l'examen du dossier vers l'Autorité de la concurrence française"
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
@@ -271,7 +271,7 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.4,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -369,7 +369,7 @@
     ],
     [
       "Legrand",
-      1.11,
+      1.1,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
