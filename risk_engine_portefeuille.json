@@ -1,5 +1,5 @@
 {
-  "capital": 7498.15,
+  "capital": 6028.0599999999995,
   "positions": {
     "Engie": {
       "nb_actions": 90,
@@ -12,10 +12,23 @@
       "stop_pct": 0.0356,
       "tp_pct": 0.0712,
       "score_entree": 81
+    },
+    "ArcelorMittal": {
+      "nb_actions": 22,
+      "prix_entree": 66.49,
+      "date_entree": "2026-07-23",
+      "heure_entree": "11:28",
+      "secteur": "Industrie/Défense",
+      "cout_total": 1462.78,
+      "frais_achat": 7.31,
+      "stop_pct": 0.0682,
+      "tp_pct": 0.1364,
+      "score_entree": 81
     }
   },
   "historique_valeur": {
-    "2026-07-22": 9982.15
+    "2026-07-22": 9982.15,
+    "2026-07-23": 9987.44
   },
   "trades": [],
   "regime_dernier": "haussier"
