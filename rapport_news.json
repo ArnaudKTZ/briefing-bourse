@@ -1,6 +1,6 @@
 {
   "date": "2026-07-23",
-  "heure": "06:45",
+  "heure": "09:19",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.05,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
-        "2 recommandations d’achat, 1 neutre : Mizuho lance la couverture de trois géants pétroliers",
-        "TotalEnergies repasse sous 70 € après un avertissement sur le T2",
-        "Les actions énergétiques européennes progressent avec la hausse du pétrole"
+        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
+        "TotalEnergies : Calendrier indicatif du dividende au titre de l’exercice 2027",
+        "2 recommandations d’achat, 1 neutre : Mizuho lance la couverture de trois géants pétroliers"
       ]
     },
     "Hermès": {
@@ -41,7 +41,7 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.41,
+      "sentiment": 0.36,
       "nb_news": 22,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving"
       ]
     },
     "Edenred": {
