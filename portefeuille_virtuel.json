@@ -1,15 +1,6 @@
 {
-  "capital": 302.26999999999975,
+  "capital": 1974.8699999999997,
   "positions": {
-    "Hermès": {
-      "nb_actions": 1,
-      "prix_entree": 1644.5,
-      "date_entree": "2026-07-16",
-      "heure_entree": "06:05",
-      "source_entree": "Briefing",
-      "cout_total": 1644.5,
-      "frais_achat": 8.22
-    },
     "BNP Paribas": {
       "nb_actions": 19,
       "prix_entree": 102.32,
@@ -69,7 +60,8 @@
     "2026-07-17": 9928.33,
     "2026-07-20": 9863.29,
     "2026-07-21": 9910.25,
-    "2026-07-22": 10004.25
+    "2026-07-22": 10004.25,
+    "2026-07-23": 9925.04
   },
   "trades": [
     {
@@ -294,6 +286,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -2.79,
       "frais_total": 19.57
+    },
+    {
+      "nom": "Hermès",
+      "entree": 1644.5,
+      "sortie": 1681.0,
+      "date_entree": "2026-07-16",
+      "heure_entree": "06:05",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-23",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 1.71,
+      "frais_total": 16.62
     }
   ]
 }
