@@ -1358,5 +1358,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.14%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-23",
+    "heure": "11:28",
+    "nom": "TotalEnergies",
+    "cours": 76.25,
+    "score": 59,
+    "signal": "VENTE",
+    "raison": "Position fermée — Take-profit 8.1% | P&L : +7.60%",
+    "envoyee": false
   }
 ]
