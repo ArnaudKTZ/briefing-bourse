@@ -1,6 +1,6 @@
 {
   "date": "2026-07-23",
-  "heure": "09:19",
+  "heure": "12:04",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies : Calendrier indicatif du dividende au titre de l’exercice 2027",
-        "2 recommandations d’achat, 1 neutre : Mizuho lance la couverture de trois géants pétroliers"
+        "TotalEnergies double son bénéfice net au 2e trimestre avec les prix élevés liés à la guerre au Moyen-Orient",
+        "TotalEnergies : Calendrier indicatif du dividende au titre de l’exercice 2027"
       ]
     },
     "Hermès": {
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.29,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
-        "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux"
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
       ]
     },
     "Dassault Systèmes": {
