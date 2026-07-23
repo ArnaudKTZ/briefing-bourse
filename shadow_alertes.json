@@ -1368,5 +1368,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — Take-profit 8.1% | P&L : +7.60%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-23",
+    "heure": "13:26",
+    "nom": "Thales",
+    "cours": 237.6,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.63%",
+    "envoyee": false
   }
 ]
