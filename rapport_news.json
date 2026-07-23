@@ -1,6 +1,6 @@
 {
   "date": "2026-07-23",
-  "heure": "12:04",
+  "heure": "15:11",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -27,7 +27,7 @@
       "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies double son bénéfice net au 2e trimestre avec les prix élevés liés à la guerre au Moyen-Orient",
+        "TotalEnergies double son bénéfice, porté par les prix élevés liés à la guerre au Moyen-Orient",
         "TotalEnergies : Calendrier indicatif du dividende au titre de l’exercice 2027"
       ]
     },
@@ -41,7 +41,7 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.36,
+      "sentiment": 0.32,
       "nb_news": 22,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
