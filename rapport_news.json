@@ -1,8 +1,8 @@
 {
   "date": "2026-07-24",
-  "heure": "09:18",
+  "heure": "11:59",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats",
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.24,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
