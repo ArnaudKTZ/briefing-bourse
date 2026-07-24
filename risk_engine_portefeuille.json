@@ -1,5 +1,5 @@
 {
-  "capital": 2068.5099999999993,
+  "capital": 449.0699999999995,
   "positions": {
     "Engie": {
       "nb_actions": 90,
@@ -48,12 +48,24 @@
       "stop_pct": 0.0502,
       "tp_pct": 0.1004,
       "score_entree": 85
+    },
+    "Edenred": {
+      "nb_actions": 62,
+      "prix_entree": 25.99,
+      "date_entree": "2026-07-24",
+      "heure_entree": "15:27",
+      "secteur": "Conso/Autre",
+      "cout_total": 1611.38,
+      "frais_achat": 8.06,
+      "stop_pct": 0.0618,
+      "tp_pct": 0.1236,
+      "score_entree": 81
     }
   },
   "historique_valeur": {
     "2026-07-22": 9982.15,
     "2026-07-23": 9972.88,
-    "2026-07-24": 9965.65
+    "2026-07-24": 9952.29
   },
   "trades": [],
   "regime_dernier": "haussier"
