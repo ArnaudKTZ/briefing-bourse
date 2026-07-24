@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-23",
-  "heure": "15:11",
+  "date": "2026-07-24",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats",
       "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»",
       "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
       "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient",
-      "CAC 40 : la Bourse rouge vif, «cocktail toxique» sur la guerre avec l’Iran et la peur d’une hausse des taux"
+      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient"
     ]
   },
   "valeurs": {
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.19,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -307,7 +307,7 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
