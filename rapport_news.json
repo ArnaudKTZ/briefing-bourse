@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "heure": "06:45",
+  "heure": "09:18",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.29,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.52,
-      "nb_news": 21,
+      "sentiment": 0.5,
+      "nb_news": 22,
       "titres_cles": [
         "Bilan semestriel du contrat de liquidité IPSOS - Juin 2026",
         "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026",
