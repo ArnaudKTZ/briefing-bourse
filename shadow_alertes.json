@@ -1478,5 +1478,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -3.72%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-24",
+    "heure": "16:01",
+    "nom": "Publicis",
+    "cours": 87.88,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.02%",
+    "envoyee": false
   }
 ]
