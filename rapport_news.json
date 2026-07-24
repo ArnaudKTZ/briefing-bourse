@@ -1,15 +1,15 @@
 {
   "date": "2026-07-24",
-  "heure": "11:59",
+  "heure": "15:05",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
       "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats",
       "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»",
       "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
-      "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-      "La Bourse de Paris termine en baisse, entre ventes des semi-conducteurs et Moyen-Orient"
+      "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
     ]
   },
   "valeurs": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.0,
+      "sentiment": -0.05,
       "nb_news": 20,
       "titres_cles": [
         "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
         "Capgemini chute de 4% sur fond de risques liés à l’IA",
-        "Le moment de vérité de l’IA pour l’Assurance dommages : les pionniers affichent une croissance de revenus supérieure de 21 %, tandis que le reste du secteur peine à suivre"
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.29,
+      "sentiment": 0.38,
       "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
-        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving"
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
       ]
     },
     "Edenred": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
