@@ -1,5 +1,5 @@
 {
-  "capital": 196.72999999999934,
+  "capital": 214.5499999999995,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 19,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 1944.08,
       "frais_achat": 9.72
-    },
-    "Sanofi": {
-      "nb_actions": 25,
-      "prix_entree": 77.34,
-      "date_entree": "2026-07-20",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1933.5,
-      "frais_achat": 9.67
     },
     "ArcelorMittal": {
       "nb_actions": 30,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1951.5,
       "frais_achat": 9.76
+    },
+    "Airbus": {
+      "nb_actions": 9,
+      "prix_entree": 203.85,
+      "date_entree": "2026-07-24",
+      "heure_entree": "11:24",
+      "source_entree": "Intraday",
+      "cout_total": 1834.6499999999999,
+      "frais_achat": 9.17
     }
   },
   "historique_valeur": {
@@ -71,7 +71,7 @@
     "2026-07-21": 9910.25,
     "2026-07-22": 10004.25,
     "2026-07-23": 9956.93,
-    "2026-07-24": 9946.53
+    "2026-07-24": 9920.75
   },
   "trades": [
     {
@@ -323,6 +323,20 @@
       "pnl_pct": 7.6,
       "frais_total": 20.55,
       "raison_sortie": "Take-profit 8.1%"
+    },
+    {
+      "nom": "Sanofi",
+      "entree": 77.34,
+      "sortie": 74.84,
+      "date_entree": "2026-07-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-24",
+      "heure_sortie": "11:24",
+      "source_sortie": "Intraday",
+      "pnl_pct": -3.72,
+      "frais_total": 19.03,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }

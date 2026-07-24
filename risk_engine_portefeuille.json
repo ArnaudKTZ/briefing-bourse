@@ -1,5 +1,5 @@
 {
-  "capital": 6028.0599999999995,
+  "capital": 2068.5099999999993,
   "positions": {
     "Engie": {
       "nb_actions": 90,
@@ -24,11 +24,36 @@
       "stop_pct": 0.0682,
       "tp_pct": 0.1364,
       "score_entree": 81
+    },
+    "BNP Paribas": {
+      "nb_actions": 20,
+      "prix_entree": 105.26,
+      "date_entree": "2026-07-24",
+      "heure_entree": "11:24",
+      "secteur": "Banques/Finance",
+      "cout_total": 2105.2,
+      "frais_achat": 10.53,
+      "stop_pct": 0.0452,
+      "tp_pct": 0.0904,
+      "score_entree": 91
+    },
+    "Airbus": {
+      "nb_actions": 9,
+      "prix_entree": 203.85,
+      "date_entree": "2026-07-24",
+      "heure_entree": "11:24",
+      "secteur": "Industrie/Défense",
+      "cout_total": 1834.65,
+      "frais_achat": 9.17,
+      "stop_pct": 0.0502,
+      "tp_pct": 0.1004,
+      "score_entree": 85
     }
   },
   "historique_valeur": {
     "2026-07-22": 9982.15,
-    "2026-07-23": 9972.88
+    "2026-07-23": 9972.88,
+    "2026-07-24": 9969.5
   },
   "trades": [],
   "regime_dernier": "haussier"
