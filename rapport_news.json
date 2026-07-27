@@ -1,8 +1,8 @@
 {
   "date": "2026-07-27",
-  "heure": "10:15",
+  "heure": "12:55",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -345,8 +345,8 @@
       "nb_news": 21,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie",
-        "Les actions Thales et Leonardo bondissent après un contrat OTAN"
+        "Thales en hausse après la mise à niveau de Deutsche Bank sur la défense",
+        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie"
       ]
     },
     "Forvia": {
