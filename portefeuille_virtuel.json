@@ -1,15 +1,6 @@
 {
-  "capital": 214.5499999999995,
+  "capital": 300.8799999999994,
   "positions": {
-    "BNP Paribas": {
-      "nb_actions": 19,
-      "prix_entree": 102.32,
-      "date_entree": "2026-07-16",
-      "heure_entree": "06:05",
-      "source_entree": "Briefing",
-      "cout_total": 1944.08,
-      "frais_achat": 9.72
-    },
     "ArcelorMittal": {
       "nb_actions": 30,
       "prix_entree": 65.85,
@@ -45,6 +36,15 @@
       "source_entree": "Intraday",
       "cout_total": 1834.6499999999999,
       "frais_achat": 9.17
+    },
+    "BNP Paribas": {
+      "nb_actions": 18,
+      "prix_entree": 105.92,
+      "date_entree": "2026-07-27",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1906.56,
+      "frais_achat": 9.53
     }
   },
   "historique_valeur": {
@@ -71,7 +71,8 @@
     "2026-07-21": 9910.25,
     "2026-07-22": 10004.25,
     "2026-07-23": 9956.93,
-    "2026-07-24": 9975.48
+    "2026-07-24": 9975.48,
+    "2026-07-27": 9970.94
   },
   "trades": [
     {
@@ -337,6 +338,19 @@
       "pnl_pct": -3.72,
       "frais_total": 19.03,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 102.32,
+      "sortie": 105.92,
+      "date_entree": "2026-07-16",
+      "heure_entree": "06:05",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-27",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 3.0,
+      "frais_total": 19.78
     }
   ]
 }
