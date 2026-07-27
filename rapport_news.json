@@ -1,6 +1,6 @@
 {
   "date": "2026-07-27",
-  "heure": "06:45",
+  "heure": "10:15",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.29,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "Bourse : Total «crée beaucoup de valeur et prépare ses futurs moteurs de croissance» ! Une action à acheter ?",
-        "TotalEnergies double son bénéfice, porté par les prix élevés liés à la guerre au Moyen-Orient"
+        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
+        "Bourse : Total «crée beaucoup de valeur et prépare ses futurs moteurs de croissance» ! Une action à acheter ?"
       ]
     },
     "Hermès": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.25,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
-        "Les actions Accor chutent alors que le conflit au Moyen-Orient pèse sur le chiffre d’affaires du T1"
+        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€",
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
