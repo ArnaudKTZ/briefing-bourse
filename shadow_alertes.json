@@ -1498,5 +1498,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-27",
+    "heure": "14:42",
+    "nom": "Capgemini",
+    "cours": 94.7,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.62%",
+    "envoyee": false
   }
 ]
