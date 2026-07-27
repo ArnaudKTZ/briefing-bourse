@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-24",
-  "heure": "15:05",
+  "date": "2026-07-27",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies double son bénéfice, porté par les prix élevés liés à la guerre au Moyen-Orient",
-        "TotalEnergies : Calendrier indicatif du dividende au titre de l’exercice 2027"
+        "Bourse : Total «crée beaucoup de valeur et prépare ses futurs moteurs de croissance» ! Une action à acheter ?",
+        "TotalEnergies double son bénéfice, porté par les prix élevés liés à la guerre au Moyen-Orient"
       ]
     },
     "Hermès": {
@@ -59,7 +59,7 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.5,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
         "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "L'UE ouvre une enquête contre Sanofi, soupçonné d'entrave à la concurrence",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
+        "Communiqué de presse: Sanofi annonce sa décision de ne pas soumettre l’amlitélimab dans la dermatite atopique à des évaluations réglementaires mondiales"
       ]
     },
     "BNP Paribas": {
@@ -95,16 +95,16 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.0,
+      "nb_news": 21,
       "titres_cles": [
-        "Les marchés européens en hausse sur les espoirs commerciaux; l’inflation américaine en point de mire",
+        "CAC 40, Thales, Safran, Crédit agricole, L’Oréal… les actions en Bourse au programme de Momentum",
         "Essayez cette méthode complète d’investissement assisté par IA en 3 étapes",
         "Airbus accélère vers son futur monocouloir et prépare un avion à hydrogène"
       ]
     },
     "Danone": {
-      "sentiment": 0.15,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.05,
-      "nb_news": 21,
+      "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "L’action Stellantis recule après la dégradation de JPMorgan",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.1,
-      "nb_news": 20,
+      "sentiment": -0.11,
+      "nb_news": 19,
       "titres_cles": [
         "La Bourse de Paris en hausse malgré les interrogations sur la tech",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.05,
-      "nb_news": 21,
+      "nb_news": 20,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.29,
-      "nb_news": 21,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Mise en œuvre du programme de rachat d’actions",
         "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.38,
+      "sentiment": 0.33,
       "nb_news": 21,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -341,8 +341,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.0,
+      "nb_news": 21,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
         "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie",
