@@ -1518,5 +1518,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.85%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-28",
+    "heure": "15:55",
+    "nom": "Publicis",
+    "cours": 93.2,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.78%",
+    "envoyee": false
   }
 ]
