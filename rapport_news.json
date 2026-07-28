@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "heure": "06:45",
+  "heure": "09:25",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.8,
+      "sentiment": 0.9,
       "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes",
-        "Communiqué: Orange a l’intention d’émettre une nouvelle souche d'obligations hybrides et de lancer une offre de rachat sur certaines de ses obligations hybrides existantes"
+        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
       ]
     },
     "Vivendi": {
@@ -271,7 +271,7 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.35,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
