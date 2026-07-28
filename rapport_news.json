@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "heure": "12:14",
+  "heure": "15:17",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.33,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Goldman Sachs relève son objectif de cours sur Airbus et anticipe de solides résultats au T2"
+        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
       ]
     },
     "Schneider Electric": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.5,
+      "sentiment": 0.45,
       "nb_news": 22,
       "titres_cles": [
+        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
         "Bilan semestriel du contrat de liquidité IPSOS - Juin 2026",
-        "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026",
-        "Adecco atteint un sommet de 4 mois après la hausse de BNP Paribas"
+        "SOITEC - BILAN SEMESTRIEL DE MISE EN ŒUVRE DU CONTRAT DE LIQUIDITE AU 30 JUIN 2026"
       ]
     },
     "Air Liquide": {
@@ -100,7 +100,7 @@
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions",
-        "CAC 40, Thales, Safran, Crédit agricole, L’Oréal… les actions en Bourse au programme de Momentum"
+        "Avion de combat: Safran privilégiera le projet français après l'échec du programme européen Scaf"
       ]
     },
     "Danone": {
