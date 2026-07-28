@@ -1,25 +1,25 @@
 {
   "date": "2026-07-28",
-  "heure": "09:25",
+  "heure": "12:14",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse hésite, les investisseurs prennent leurs profits sur les actions IA et des semi-conducteurs",
+      "La Bourse de Paris résiste, entre baisse des prix du brut et résultats d'entreprises",
       "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
       "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats",
-      "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»",
-      "La Bourse de Paris à plat, entre tensions géopolitiques et rebond de la tech",
-      "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
+      "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
-        "LVMH annonce un résultat en hausse grâce à la demande américaine",
-        "LVMH : Accélération de la croissance au 2ème trimestre ; résultats semestriels solides"
+        "LVMH annonce un résultat en hausse grâce à la demande américaine"
       ]
     },
     "TotalEnergies": {
@@ -35,14 +35,14 @@
       "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-        "Hermès International : bilan du contrat de liquidité au 30 juin 2026",
-        "Les valeurs du luxe européen reculent sur fond de tensions au Moyen-Orient et d’inquiétudes sur la demande"
+        "Hermès International : bilan du contrat de liquidité au 30 juin 2026"
       ]
     },
     "Airbus": {
-      "sentiment": 0.32,
-      "nb_news": 22,
+      "sentiment": 0.33,
+      "nb_news": 21,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
@@ -50,8 +50,8 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.29,
-      "nb_news": 21,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.45,
+      "sentiment": 0.5,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Sanofi": {
@@ -86,21 +86,21 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.14,
-      "nb_news": 7,
+      "sentiment": 1.25,
+      "nb_news": 8,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
-        "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\"",
-        "Air Liquide confirme ses objectifs, boosté par des moteurs de croissance diversifiés"
+        "Air Liquide : des investissements record qui préparent la croissance future",
+        "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\""
       ]
     },
     "Safran": {
-      "sentiment": 0.0,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
-        "CAC 40, Thales, Safran, Crédit agricole, L’Oréal… les actions en Bourse au programme de Momentum",
-        "Essayez cette méthode complète d’investissement assisté par IA en 3 étapes",
-        "Airbus accélère vers son futur monocouloir et prépare un avion à hydrogène"
+        "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
+        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions",
+        "CAC 40, Thales, Safran, Crédit agricole, L’Oréal… les actions en Bourse au programme de Momentum"
       ]
     },
     "Danone": {
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Kering chutent de 5% après l’avertissement de Barclays",
-        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe"
       ]
     },
     "Société Générale": {
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.1,
-      "nb_news": 10,
+      "sentiment": 1.22,
+      "nb_news": 9,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -341,7 +341,7 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 21,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
@@ -362,14 +362,14 @@
   "signaux_forts": [
     [
       "Air Liquide",
-      1.14,
+      1.25,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
     ],
     [
       "Legrand",
-      1.1,
+      1.22,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
