@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-27",
-  "heure": "15:56",
+  "date": "2026-07-28",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.1,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
-        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-        "Bilan semestriel du contrat de liquidité contracté avec ODDO BHF SCA",
-        "VIVATECH 2026 FÊTE SES 10 ANS AVEC UNE ÉDITION RECORD FRANCHISSANT LE CAP DES 200 000 VISITEURS"
+        "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
+        "LVMH annonce un résultat en hausse grâce à la demande américaine",
+        "LVMH : Accélération de la croissance au 2ème trimestre ; résultats semestriels solides"
       ]
     },
     "TotalEnergies": {
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 20,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
+        "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
       ]
     },
     "Capgemini": {
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.3,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
-        "Mise en œuvre du programme de rachat d’actions",
         "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "NextRise 2026, le principal salon asiatique dédié aux start-ups, co-organisé par la KITA et la KDB, s'achève avec succès à Séoul"
       ]
     },
     "Legrand": {
@@ -239,7 +239,7 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.85,
+      "sentiment": 0.8,
       "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
