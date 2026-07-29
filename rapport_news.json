@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "heure": "06:45",
+  "heure": "09:30",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -32,7 +32,7 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -108,8 +108,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
-        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat",
-        "Le PDG de Danone affirme que la guerre en Iran pourrait entraîner une hausse des prix alimentaires"
+        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé",
+        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat"
       ]
     },
     "Vinci": {
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.22,
-      "nb_news": 9,
+      "sentiment": 1.0,
+      "nb_news": 11,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -369,7 +369,7 @@
     ],
     [
       "Legrand",
-      1.22,
+      1.0,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
