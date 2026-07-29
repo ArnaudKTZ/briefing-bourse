@@ -1,8 +1,8 @@
 {
   "date": "2026-07-29",
-  "heure": "12:17",
+  "heure": "15:21",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris orientée à la baisse",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.4,
-      "nb_news": 20,
+      "sentiment": 0.33,
+      "nb_news": 21,
       "titres_cles": [
         "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
