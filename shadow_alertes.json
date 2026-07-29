@@ -1528,5 +1528,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.78%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-29",
+    "heure": "17:49",
+    "nom": "Kering",
+    "cours": 289.9,
+    "score": 60,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +9.78% avec volume x2.4",
+    "envoyee": false
   }
 ]
