@@ -937,7 +937,8 @@ if __name__ == "__main__":
         print(f"  Alertes : {' | '.join(infos_macro)} → malus {malus_global} pts")
     else:
         print(f"  Marché calme, malus : {malus_global} pts")
-    print(f"  CAC 40 : {cac_cours} ({cac_var:+.2f}%) | VIX : {vix_val} | F&G : {fg_score} {fg_label}")
+    cac_var_str = f"{cac_var:+.2f}%" if cac_var is not None else "indisponible"
+    print(f"  CAC 40 : {cac_cours} ({cac_var_str}) | VIX : {vix_val} | F&G : {fg_score} {fg_label}")
 
     print("Détection régime macro (Claude)...")
     poids_macro, regime_macro = detecter_regime_macro(vix_val, cac_var, fg_score, signaux_etf)

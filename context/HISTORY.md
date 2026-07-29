@@ -7,6 +7,31 @@
 
 ---
 
+## 2026-07-29
+
+### Repo local désynchronisé (74 commits de retard) : le briefing du matin donnait des chiffres périmés
+
+- Le pipeline GitHub Actions tourne parfaitement (scoring, watchdog, tout vert en continu) mais le clone local sur cette machine n'avait pas été pull depuis le 22/07. Conséquence concrète : le briefing bourse du matin a été généré en lisant les JSON locaux périmés (précision 44,4%/782 signaux, portefeuille à 9 990€ du 22/07) et présenté comme à jour.
+- Après `git pull` (74 commits récupérés), chiffres réels du jour : portefeuille virtuel 10 029,45€ (+0,29% depuis le 19/06, en hausse 3 jours de suite), précision agent stable à 43,7% (434/993 signaux).
+- Point de vigilance retenu : toujours vérifier/pull le repo local avant de lire les fichiers de données bourse pour un briefing, sinon risque de chiffres faux sans aucune erreur visible.
+- **Fix apporté** : le script du briefing programmé (`briefing-bourse-matin`) fait désormais un `git pull origin main` en première étape, avant toute lecture des JSON. En cas d'échec du pull, il doit le signaler en tête du briefing plutôt que d'afficher des chiffres potentiellement faux en silence.
+
+### Triage veille du 25/07 : 6 papiers écartés, 2 retenus sans urgence
+
+- Digest de l'Éclaireur (8 papiers arXiv q-fin) trié avec Arnaud, même exercice que le 18/07.
+- **Écartés** : AlphaZeroBeta, SciPhyRL, CEFOL (Deep RL / dynamic programming institutionnels, hors de portée en solo) ; MILP index tracking (hors sujet, tracking passif) ; Observable Matrix Dynamics (lourd à implémenter pour un gain incertain) ; AI Trading LLMs (résumé sans chiffre exploitable, à rejuger seulement si lu en entier).
+- **Retenus, sans date ferme (ajoutés à ECHEANCES.md)** : *Retail Trader's Ruin* (arXiv 2607.20093) — teste si les familles de signaux type RSI/MACD/Bollinger survivent aux coûts après correction statistique, en écho direct au constat du bilan du 22/07 (edge net négatif) ; à lire avant d'investir plus de temps sur le Risk Engine. *The Science and Practice of Trend-Following Systems* (arXiv 2607.19497) — pourrait affiner le signal momentum du cœur Dual Momentum, non prioritaire.
+- Rappel de la règle affichée par l'agent Veille : aucune idée ne va en production sans passer la recette (backtest hors-échantillon).
+
+### Audit ciblé de la chaîne d'automatisation : bug trouvé et corrigé (scoring intraday)
+
+- Suite à l'incident de désync repo, check ciblé sur la robustesse des 12 workflows GitHub Actions (pas la stratégie, la plomberie). Résultat : 11 agents propres sur les 100 derniers runs (aucun échec), les cadences mensuelles (Dual Momentum, Crypto DM, Stratège) n'ont simplement pas encore eu de vraie occasion de se déclencher par cron (prochaines échéances 01/08 et 04/08).
+- **Bug trouvé sur Scoring Intraday** : le déclenchement cron-job.org (`workflow_dispatch`) plante de façon répétée depuis le 24/07 (6 échecs sur 5 jours, les 4 du 27/07 en échec total) avec `TypeError: unsupported format string passed to NoneType.__format__`. Cause : `cac_var` (variation CAC 40) peut légitimement valoir `None` quand Yahoo ne renvoie qu'un jour d'historique (cas déjà géré ailleurs dans le code), mais le print de debug ligne 940 n'avait pas le garde-fou et faisait planter tout le script (exit 1), perdant le cycle de scoring complet (news, rotations ETF, régime, score des 39 valeurs).
+- Resté invisible jusqu'ici car le cron natif GitHub redéclenche le même job un peu plus tard en redondance et réussit généralement (donnée Yahoo disponible entre-temps) — de la chance, pas une protection : les deux triggers auraient pu tomber au mauvais moment le même jour et perdre un cycle silencieusement.
+- **Fix appliqué** (`scoring_intraday.py:940`) : garde-fou `cac_var_str = f"{cac_var:+.2f}%" if cac_var is not None else "indisponible"` avant le print, même pattern que celui déjà utilisé ligne 248. Vérifié par compilation Python, commit poussé.
+
+---
+
 ## 2026-07-22
 
 ### Risk Engine branché en forward : second portefeuille virtuel parallèle (A/B)
