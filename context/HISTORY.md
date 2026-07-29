@@ -30,6 +30,14 @@
 - Resté invisible jusqu'ici car le cron natif GitHub redéclenche le même job un peu plus tard en redondance et réussit généralement (donnée Yahoo disponible entre-temps) — de la chance, pas une protection : les deux triggers auraient pu tomber au mauvais moment le même jour et perdre un cycle silencieusement.
 - **Fix appliqué** (`scoring_intraday.py:940`) : garde-fou `cac_var_str = f"{cac_var:+.2f}%" if cac_var is not None else "indisponible"` avant le print, même pattern que celui déjà utilisé ligne 248. Vérifié par compilation Python, commit poussé.
 
+### Lecture "Retail Trader's Ruin" : confirmation académique indépendante du pivot du 22/07
+
+- Papier lu en entier (PDF récupéré via arXiv). Teste 5 familles de signaux retail + 1 benchmark momentum professionnel avec un protocole strict à 3 portes prédéclarées (edge statistique après correction de multiplicité, viabilité économique après coûts, survie en capital fini sous levier).
+- **La famille "Oscillateur" testée est RSI(14, 30/70) + MACD(12,26,9) + Bollinger(20, 2σ) — exactement les paramètres utilisés dans `scoring_intraday.py`.** Sur 10 331 jours NASDAQ-100 : REFUTED sur les deux portes qui comptent, Sharpe-gap 95% CI [-0,608, -0,175] (significativement négatif) et CAGR-gap net de coûts 95% CI [-0,149, -0,044] (significativement négatif). Pas une absence d'edge, une sous-performance prouvée.
+- **Réplication UE (6 pays dont la France, golden-cross/RSI/MACD sur ETF pays)** : 4/18 cellules significatives, toutes négatives, zéro rejet positif après correction Benjamini-Yekutieli. Le marché français est dans l'échantillon de réplication, même conclusion.
+- **Nuance retenue** : le trend/golden-death cross est classé INCONCLUSIVE (pas assez de puissance statistique pour trancher), pas REFUTED. Le cœur Dual Momentum (trend-following) n'est donc pas visé par ce résultat, contrairement au trio RSI/MACD/Bollinger du satellite. Même le benchmark momentum professionnel du papier (diversifié, pondéré liquidité) reste INCONCLUSIVE faute de puissance sur cet échantillon — nuance à ne pas sur-interpréter comme une preuve que le momentum marche.
+- **Portée pour la décision du 02/08** : ce papier confirme, par une voie académique indépendante (donnée US + UE, hors de notre propre historique), exactement ce que le bilan du 22/07 avait trouvé empiriquement sur nos propres données (edge net négatif). Renforce l'argument de ne pas réactiver les alertes achat/vente basées sur ce scoring. Limites du papier assumées : pas de relecture par les pairs, pas de vrai holdout out-of-sample (bootstrap in-sample), à prendre comme un indice fort plutôt qu'une preuve définitive.
+
 ---
 
 ## 2026-07-22
