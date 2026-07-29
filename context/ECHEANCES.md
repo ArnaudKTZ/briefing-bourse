@@ -17,7 +17,6 @@
 
 ## Sans date ferme (à sortir quand le moment est bon)
 
-- [ ] Lire "Retail Trader's Ruin" (arXiv 2607.20093) : teste si les signaux type RSI/MACD/Bollinger survivent aux coûts après correction statistique. Écho direct au bilan du 22/07 (edge net J+5 négatif). À lire avant d'investir plus de temps sur le Risk Engine. (Agent Bourse)
 - [ ] Lire "The Science and Practice of Trend-Following Systems" (arXiv 2607.19497) : pourrait affiner le signal momentum du cœur Dual Momentum. Non prioritaire. (Agent Bourse)
 - [ ] Décision poche crypto réelle vs signal Crypto DM (posée le 13/07, réponse en attente) : (a) aligner BTC/ETH sur le signal refuge + trancher SOL, (b) signal appliqué aux seuls futurs apports, (c) ne rien toucher, l'agent observe. (Agent Bourse)
 - [ ] Session promotion Naval Group à programmer un soir : objectif n°1, jamais travaillé ici. Arnaud doit amener le contexte (hiérarchie, échéances d'entretiens, ce qui a été dit). (Promotion)
@@ -30,6 +29,7 @@
 
 ## Fait
 
+- [x] 2026-07-29 — **Lu "Retail Trader's Ruin" (arXiv 2607.20093).** RSI(14,30/70)/MACD(12,26,9)/Bollinger(20,2σ) — exactement les paramètres du scoring — testés sur 10 331 jours NASDAQ-100 : **REFUTED** statistiquement (Sharpe-gap 95% CI [-0,608,-0,175]) et économiquement (CAGR-gap 95% CI [-0,149,-0,044]), significativement négatif, pas juste absent d'edge. Réplication EU (6 pays dont France) confirme : aucun effet positif après correction. Nuance clé : le trend/golden-death cross est INCONCLUSIVE, pas REFUTED — le cœur Dual Momentum n'est pas visé. Confirme, par une voie académique indépendante, le pivot du 22/07 (satellite gelé, effort sur Risk Engine/DM). Renforce l'argument pour ne pas réactiver les alertes achat/vente à la décision du 02/08.
 - [x] 2026-07-22 — **Bilan des 30 jours : CAS 1 tranché sur les critères figés à froid.** Fenêtre propre (546 obs, 14 j depuis le 02/07) : edge NET J+5 = **-1,2 pt** (perdant net de frais), IC J+5 = +0,077. Grille = CAS 1 car edge net ≤ 0 → **satellite gelé 100% virtuel, aucun passage en réel, effort bascule sur la Phase 1 V5**. Twist honnête : l'IC a grimpé de -0,05 (13/07) à +0,077 (exploitable AVANT frais), le score s'est mis à discriminer (buckets 85+/75-84 battent 65-74). Le signal a donc un vrai pouvoir de classement désormais, mais les frais (~1%) mangent tout l'edge. Ça ne change pas la décision (net ≤ 0), ça reformule la mission Phase 1 V5 : le problème n'est plus "le score est nul" mais "l'edge est réel et trop petit pour payer le péage". Prudence : 14 j = IC volatil, le seul fait ROBUSTE est l'edge net constamment négatif.
 - [x] 2026-07-13 — Jobs cron-job.org Dividendes (lundi 8h05) et Crypto DM (1er du mois 8h15) créés par clonage (token jamais manipulé), testés 204, revérifiés après rechargement. 12 jobs actifs.
 - [x] 2026-07-13 — Crypto Dual Momentum (BTC/ETH, lookback 12 fixe, refuge stablecoin, SOL rejeté) : décision Arnaud, agent en production (agent_crypto_dm.py, 1er du mois 8h15). Premier signal : refuge stablecoin (BTC -45%, ETH -37% sur 12 mois).
