@@ -1,15 +1,15 @@
 {
   "date": "2026-07-29",
-  "heure": "09:30",
+  "heure": "12:17",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris orientée à la baisse",
       "CAC 40 : la Bourse hésite, les investisseurs prennent leurs profits sur les actions IA et des semi-conducteurs",
       "La Bourse de Paris résiste, entre baisse des prix du brut et résultats d'entreprises",
       "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-      "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats",
-      "CAC 40 : la Bourse bondit, mais le taux à 10 ans frôle 4%, «gare à une prime de risque propre à la France !»"
+      "La Bourse de Paris termine dans le rouge, entre risque géopolitique et résultats"
     ]
   },
   "valeurs": {
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.0,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
+        "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "La Bourse de Paris en recul, malgré la bonne santé du luxe",
-        "Hermès International : bilan du contrat de liquidité au 30 juin 2026"
+        "La Bourse de Paris en recul, malgré la bonne santé du luxe"
       ]
     },
     "Airbus": {
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.25,
-      "nb_news": 8,
+      "sentiment": 1.14,
+      "nb_news": 7,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -108,8 +108,8 @@
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
-        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé",
-        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat"
+        "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
+        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé"
       ]
     },
     "Vinci": {
@@ -122,10 +122,10 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
-        "Les actions Kering chutent de 5% après l’avertissement de Barclays",
+        "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
       ]
@@ -362,7 +362,7 @@
   "signaux_forts": [
     [
       "Air Liquide",
-      1.25,
+      1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
