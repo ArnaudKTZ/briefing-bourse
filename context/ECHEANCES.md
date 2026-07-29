@@ -17,6 +17,8 @@
 
 ## Sans date ferme (à sortir quand le moment est bon)
 
+- [ ] Lire "Retail Trader's Ruin" (arXiv 2607.20093) : teste si les signaux type RSI/MACD/Bollinger survivent aux coûts après correction statistique. Écho direct au bilan du 22/07 (edge net J+5 négatif). À lire avant d'investir plus de temps sur le Risk Engine. (Agent Bourse)
+- [ ] Lire "The Science and Practice of Trend-Following Systems" (arXiv 2607.19497) : pourrait affiner le signal momentum du cœur Dual Momentum. Non prioritaire. (Agent Bourse)
 - [ ] Décision poche crypto réelle vs signal Crypto DM (posée le 13/07, réponse en attente) : (a) aligner BTC/ETH sur le signal refuge + trancher SOL, (b) signal appliqué aux seuls futurs apports, (c) ne rien toucher, l'agent observe. (Agent Bourse)
 - [ ] Session promotion Naval Group à programmer un soir : objectif n°1, jamais travaillé ici. Arnaud doit amener le contexte (hiérarchie, échéances d'entretiens, ce qui a été dit). (Promotion)
 - [ ] Sprint KTZ71 en attente : 3 infos mentions légales (adresse, hébergeur, statut juridique) puis rédaction RGPD + gabarit fiche annonce. (KTZ71)
