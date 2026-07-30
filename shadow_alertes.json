@@ -1658,5 +1658,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +5.31%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "13:30",
+    "nom": "Schneider Electric",
+    "cours": 278.6,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100 | Momentum intraday fort +3.09%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "13:30",
+    "nom": "Saint-Gobain",
+    "cours": 76.88,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
