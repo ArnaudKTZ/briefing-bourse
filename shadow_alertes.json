@@ -1538,5 +1538,75 @@
     "signal": "SURVEILLER",
     "raison": "Gap haussier +9.78% avec volume x2.4",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Hermès",
+    "cours": 1695.5,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 101.7,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +5.72%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 93.84,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100 | Momentum intraday fort +3.48%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Orange",
+    "cours": 17.17,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 60.0,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.46%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Edenred",
+    "cours": 28.18,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.45%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "09:01",
+    "nom": "Forvia",
+    "cours": 9.08,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.14%",
+    "envoyee": false
   }
 ]

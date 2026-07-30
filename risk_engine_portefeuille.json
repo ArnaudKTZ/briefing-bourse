@@ -1,5 +1,5 @@
 {
-  "capital": 2866.919999999999,
+  "capital": 1162.9399999999991,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -48,6 +48,18 @@
       "stop_pct": 0.0618,
       "tp_pct": 0.1236,
       "score_entree": 81
+    },
+    "Hermès": {
+      "nb_actions": 1,
+      "prix_entree": 1695.5,
+      "date_entree": "2026-07-30",
+      "heure_entree": "09:01",
+      "secteur": "Luxe",
+      "cout_total": 1695.5,
+      "frais_achat": 8.48,
+      "stop_pct": 0.0484,
+      "tp_pct": 0.0968,
+      "score_entree": 87
     }
   },
   "historique_valeur": {
@@ -56,7 +68,8 @@
     "2026-07-24": 9997.73,
     "2026-07-27": 10022.26,
     "2026-07-28": 10174.16,
-    "2026-07-29": 10098.79
+    "2026-07-29": 10098.79,
+    "2026-07-30": 10123.0
   },
   "trades": [
     {
