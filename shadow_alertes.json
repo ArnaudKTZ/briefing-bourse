@@ -1688,5 +1688,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "17:52",
+    "nom": "Vinci",
+    "cours": 123.85,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
