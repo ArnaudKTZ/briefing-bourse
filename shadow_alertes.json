@@ -1608,5 +1608,55 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.14%",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "11:30",
+    "nom": "L'Oréal",
+    "cours": 399.35,
+    "score": 73,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.73%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "11:30",
+    "nom": "BNP Paribas",
+    "cours": 107.16,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "11:30",
+    "nom": "Safran",
+    "cours": 339.3,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "11:30",
+    "nom": "Société Générale",
+    "cours": 78.63,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100 | Momentum intraday fort +2.12%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-30",
+    "heure": "11:30",
+    "nom": "Bouygues",
+    "cours": 49.35,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +5.31%",
+    "envoyee": false
   }
 ]
