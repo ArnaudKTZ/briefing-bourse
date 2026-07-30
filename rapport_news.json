@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "heure": "06:45",
+  "heure": "09:19",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.1,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
+        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins",
-        "Communiqué de presse: Sanofi annonce sa décision de ne pas soumettre l’amlitélimab dans la dermatite atopique à des évaluations réglementaires mondiales"
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": -0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
         "Capgemini chute de 4% sur fond de risques liés à l’IA",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "Capgemini relève ses perspectives pour 2026"
       ]
     },
     "Renault": {
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.3,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
+        "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
-        "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte",
-        "ALSTOM S.A : Exercice fiscal 2025/26 d’Alstom : Performance commerciale record, Exécution difficile. Plan d’action pour 2026/27"
+        "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte"
       ]
     },
     "Worldline": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.09,
-      "nb_news": 11,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
-        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Veolia Environnement lance une émission d’obligations convertibles non dilutives remboursables uniquement en numéraire d’un montant de 400 millions d’euros à échéance 2032"
+        "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT"
       ]
     },
     "STMicroelectronics": {
