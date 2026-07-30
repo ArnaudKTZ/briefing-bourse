@@ -1,5 +1,5 @@
 {
-  "capital": 1162.9399999999991,
+  "capital": 882.6799999999994,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -49,17 +49,17 @@
       "tp_pct": 0.1236,
       "score_entree": 81
     },
-    "Hermès": {
-      "nb_actions": 1,
-      "prix_entree": 1695.5,
+    "Société Générale": {
+      "nb_actions": 23,
+      "prix_entree": 78.63,
       "date_entree": "2026-07-30",
-      "heure_entree": "09:01",
-      "secteur": "Luxe",
-      "cout_total": 1695.5,
-      "frais_achat": 8.48,
-      "stop_pct": 0.0484,
-      "tp_pct": 0.0968,
-      "score_entree": 87
+      "heure_entree": "11:30",
+      "secteur": "Banques/Finance",
+      "cout_total": 1808.49,
+      "frais_achat": 9.04,
+      "stop_pct": 0.0528,
+      "tp_pct": 0.1056,
+      "score_entree": 96
     }
   },
   "historique_valeur": {
@@ -69,7 +69,7 @@
     "2026-07-27": 10022.26,
     "2026-07-28": 10174.16,
     "2026-07-29": 10098.79,
-    "2026-07-30": 10123.0
+    "2026-07-30": 9916.49
   },
   "trades": [
     {
@@ -81,6 +81,17 @@
       "heure_sortie": "18:20",
       "pnl_pct": -2.87,
       "frais_total": 24.6,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Hermès",
+      "entree": 1695.5,
+      "sortie": 1545.0,
+      "date_entree": "2026-07-30",
+      "date_sortie": "2026-07-30",
+      "heure_sortie": "11:30",
+      "pnl_pct": -9.33,
+      "frais_total": 16.21,
       "raison_sortie": "ÉVITER intraday"
     }
   ],
