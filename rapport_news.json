@@ -1,8 +1,8 @@
 {
   "date": "2026-07-30",
-  "heure": "09:19",
+  "heure": "12:03",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
       ]
     },
     "BNP Paribas": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
@@ -136,7 +136,7 @@
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
         "Achèvement du programme de rachat d'actions Société Générale pour un montant total de 1 462 millions d'euros",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale affiche un deuxième trimestre record"
       ]
     },
     "Stellantis": {
@@ -144,8 +144,8 @@
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "L’action Stellantis recule après la dégradation de JPMorgan",
-        "Maserati: BYD ne discute pas d'un partenariat avec Stellantis, assure la dirigeante du groupe chinois"
+        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
       ]
     },
     "Saint-Gobain": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.45,
+      "sentiment": 0.6,
       "nb_news": 20,
       "titres_cles": [
+        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
       ]
     },
     "Engie": {
@@ -341,12 +341,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Thales en hausse après la mise à niveau de Deutsche Bank sur la défense",
-        "Airbus et Thales décrochent un contrat d'un milliard d'euros avec la Roumanie"
+        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie",
+        "Thales en hausse après la mise à niveau de Deutsche Bank sur la défense"
       ]
     },
     "Forvia": {
