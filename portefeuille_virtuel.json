@@ -1,15 +1,6 @@
 {
-  "capital": 300.8799999999994,
+  "capital": 443.58999999999946,
   "positions": {
-    "ArcelorMittal": {
-      "nb_actions": 30,
-      "prix_entree": 65.85,
-      "date_entree": "2026-07-21",
-      "heure_entree": "07:32",
-      "source_entree": "Briefing",
-      "cout_total": 1975.4999999999998,
-      "frais_achat": 9.88
-    },
     "TotalEnergies": {
       "nb_actions": 26,
       "prix_entree": 74.29,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1906.56,
       "frais_achat": 9.53
+    },
+    "L'Oréal": {
+      "nb_actions": 5,
+      "prix_entree": 383.5,
+      "date_entree": "2026-07-31",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1917.5,
+      "frais_achat": 9.59
     }
   },
   "historique_valeur": {
@@ -75,7 +75,8 @@
     "2026-07-27": 9986.25,
     "2026-07-28": 10028.46,
     "2026-07-29": 9962.96,
-    "2026-07-30": 10149.32
+    "2026-07-30": 10149.32,
+    "2026-07-31": 10064.33
   },
   "trades": [
     {
@@ -354,6 +355,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": 3.0,
       "frais_total": 19.78
+    },
+    {
+      "nom": "ArcelorMittal",
+      "entree": 65.85,
+      "sortie": 69.34,
+      "date_entree": "2026-07-21",
+      "heure_entree": "07:32",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-07-31",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 4.77,
+      "frais_total": 20.28
     }
   ]
 }
