@@ -1878,5 +1878,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "14:01",
+    "nom": "Renault",
+    "cours": 27.98,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
