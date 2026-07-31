@@ -1,5 +1,5 @@
 {
-  "capital": 882.6799999999994,
+  "capital": 2.059999999999377,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -60,6 +60,18 @@
       "stop_pct": 0.0528,
       "tp_pct": 0.1056,
       "score_entree": 96
+    },
+    "Worldline": {
+      "nb_actions": 72,
+      "prix_entree": 12.17,
+      "date_entree": "2026-07-31",
+      "heure_entree": "16:00",
+      "secteur": "Tech",
+      "cout_total": 876.24,
+      "frais_achat": 4.38,
+      "stop_pct": 0.1138,
+      "tp_pct": 0.2276,
+      "score_entree": 82
     }
   },
   "historique_valeur": {
@@ -70,7 +82,7 @@
     "2026-07-28": 10174.16,
     "2026-07-29": 10098.79,
     "2026-07-30": 10023.06,
-    "2026-07-31": 10084.66
+    "2026-07-31": 10078.06
   },
   "trades": [
     {
