@@ -1,21 +1,21 @@
 {
   "date": "2026-07-31",
-  "heure": "09:34",
+  "heure": "12:16",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !",
+      "La Bourse de Paris en hausse, entre résultats et enthousiasme pour l'IA",
       "La Bourse de Paris orientée à la baisse",
-      "CAC 40 : la Bourse hésite, les investisseurs prennent leurs profits sur les actions IA et des semi-conducteurs",
-      "La Bourse de Paris résiste, entre baisse des prix du brut et résultats d'entreprises",
-      "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+      "CAC 40 : la Bourse hésite, les investisseurs prennent leurs profits sur les actions IA et des semi-conducteurs"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.24,
+      "nb_news": 21,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
-      "nb_news": 22,
+      "sentiment": 0.52,
+      "nb_news": 21,
       "titres_cles": [
-        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
-        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur"
+        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
+        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026",
+        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013"
       ]
     },
     "Air Liquide": {
@@ -113,11 +113,11 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
-        "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
         "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.0,
-      "nb_news": 10,
+      "sentiment": 0.33,
+      "nb_news": 3,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
-        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand: Publication du premier semestre 2026",
+        "Notification de mise à disposition des comptes consolidés du premier semestre de Legrand au 30 juin 2026"
       ]
     },
     "Publicis": {
@@ -221,21 +221,21 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.6,
+      "nb_news": 15,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
-      "sentiment": 0.2,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
+        "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives",
-        "La Bourse de Paris clôture en hausse et se rapproche des sommets"
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -365,13 +365,6 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.0,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
