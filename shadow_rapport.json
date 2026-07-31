@@ -1,31 +1,31 @@
 {
-  "date": "2026-07-24",
-  "n_alertes": 150,
-  "n_achats": 138,
-  "en_attente": 8,
+  "date": "2026-07-31",
+  "n_alertes": 189,
+  "n_achats": 176,
+  "en_attente": 19,
   "stats": {
     "J+1": {
-      "n": 130,
-      "gagnants_pct": 28.5,
-      "moyenne_nette": -1.09,
-      "cac_moyen": -0.01,
-      "edge": -1.08
+      "n": 157,
+      "gagnants_pct": 34.4,
+      "moyenne_nette": -0.81,
+      "cac_moyen": 0.03,
+      "edge": -0.84
     },
     "J+3": {
-      "n": 125,
-      "gagnants_pct": 27.2,
-      "moyenne_nette": -1.21,
-      "cac_moyen": -0.12,
-      "edge": -1.09
+      "n": 141,
+      "gagnants_pct": 32.6,
+      "moyenne_nette": -0.74,
+      "cac_moyen": -0.03,
+      "edge": -0.71
     },
     "J+5": {
-      "n": 115,
-      "gagnants_pct": 28.7,
-      "moyenne_nette": -1.31,
-      "cac_moyen": -0.34,
-      "edge": -0.97
+      "n": 138,
+      "gagnants_pct": 33.3,
+      "moyenne_nette": -0.86,
+      "cac_moyen": -0.09,
+      "edge": -0.77
     }
   },
   "verdict": "NUISIBLES",
-  "verdict_txt": "Les alertes font -0.97 pts SOUS le CAC net de frais sur 115 cas. Les suivre aurait détruit de la valeur."
+  "verdict_txt": "Les alertes font -0.77 pts SOUS le CAC net de frais sur 138 cas. Les suivre aurait détruit de la valeur."
 }
