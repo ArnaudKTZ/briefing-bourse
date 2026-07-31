@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "heure": "06:45",
+  "heure": "09:34",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.24,
+      "nb_news": 21,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
@@ -80,9 +80,9 @@
       "sentiment": 0.45,
       "nb_news": 22,
       "titres_cles": [
-        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026",
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Bilan semestriel du contrat de liquidité IPSOS - Juin 2026"
+        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
+        "BNP Paribas relève Novonesis après une sous-performance de 20% dans le Secteur"
       ]
     },
     "Air Liquide": {
@@ -113,11 +113,11 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
+        "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
         "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
@@ -131,21 +131,21 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Achèvement du programme de rachat d'actions Société Générale pour un montant total de 1 462 millions d'euros",
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
       ]
     },
     "Stellantis": {
-      "sentiment": 0.1,
-      "nb_news": 10,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
+        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
-        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025",
-        "L’action Stellantis recule après la dégradation de JPMorgan"
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
       ]
     },
     "Saint-Gobain": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.72,
-      "nb_news": 18,
+      "sentiment": 0.9,
+      "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
-        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
+        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
       ]
     },
     "Vivendi": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.2,
+      "nb_news": 5,
       "titres_cles": [
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du  20 juillet au 24 juillet 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du  13 au 17 juillet 2026",
-        "TOUAX finalise le refinancement de sa dette Corporate et renforce son engagement dans les transports durables"
+        "TP : Bilan semestriel du contrat de liquidité",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026",
+        "TP: Résultats du premier semestre 2026"
       ]
     },
     "Alstom": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -350,12 +350,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.45,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025",
-        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
+        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
       ]
     }
   },
