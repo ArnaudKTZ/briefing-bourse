@@ -7,9 +7,9 @@
     "J+1": {
       "n": 157,
       "gagnants_pct": 34.4,
-      "moyenne_nette": -0.81,
+      "moyenne_nette": -0.8,
       "cac_moyen": 0.03,
-      "edge": -0.84
+      "edge": -0.83
     },
     "J+3": {
       "n": 141,
@@ -21,11 +21,11 @@
     "J+5": {
       "n": 138,
       "gagnants_pct": 33.3,
-      "moyenne_nette": -0.86,
+      "moyenne_nette": -0.85,
       "cac_moyen": -0.09,
-      "edge": -0.77
+      "edge": -0.76
     }
   },
   "verdict": "NUISIBLES",
-  "verdict_txt": "Les alertes font -0.77 pts SOUS le CAC net de frais sur 138 cas. Les suivre aurait détruit de la valeur."
+  "verdict_txt": "Les alertes font -0.76 pts SOUS le CAC net de frais sur 138 cas. Les suivre aurait détruit de la valeur."
 }
