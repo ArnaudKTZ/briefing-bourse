@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "heure": "12:16",
+  "heure": "15:17",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.33,
-      "nb_news": 3,
+      "sentiment": 1.0,
+      "nb_news": 10,
       "titres_cles": [
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand: Publication du premier semestre 2026",
-        "Notification de mise à disposition des comptes consolidés du premier semestre de Legrand au 30 juin 2026"
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
+        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres"
       ]
     },
     "Publicis": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.6,
-      "nb_news": 15,
+      "sentiment": 0.55,
+      "nb_news": 20,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
       ]
     },
     "Engie": {
@@ -365,6 +365,13 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.0,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
