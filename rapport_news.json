@@ -1,8 +1,8 @@
 {
-  "date": "2026-07-30",
-  "heure": "15:11",
+  "date": "2026-07-31",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.24,
+      "nb_news": 21,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
@@ -104,7 +104,7 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
-        "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One",
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -131,21 +131,21 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Achèvement du programme de rachat d'actions Société Générale pour un montant total de 1 462 millions d'euros",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
+        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
       ]
     },
     "Stellantis": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
-        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
-        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025",
+        "L’action Stellantis recule après la dégradation de JPMorgan"
       ]
     },
     "Saint-Gobain": {
@@ -168,7 +168,7 @@
     },
     "Pernod Ricard": {
       "sentiment": -0.05,
-      "nb_news": 20,
+      "nb_news": 19,
       "titres_cles": [
         "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "La Bourse de Paris en hausse malgré les interrogations sur la tech",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -204,7 +204,7 @@
     },
     "Legrand": {
       "sentiment": 1.0,
-      "nb_news": 11,
+      "nb_news": 10,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
@@ -212,7 +212,7 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
@@ -221,7 +221,7 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.6,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
@@ -239,17 +239,17 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.9,
-      "nb_news": 20,
+      "sentiment": 0.72,
+      "nb_news": 18,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
-        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
+        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
+        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
       ]
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 7,
+      "nb_news": 6,
       "titres_cles": [
         "Victoire de Vincent Bolloré devant la cour d'appel sur la scission de Vivendi",
         "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.33,
-      "nb_news": 3,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
-        "TP : Bilan semestriel du contrat de liquidité",
-        "TP : Information mensuelle relative au nombre total d’actions et de droits de vote",
-        "Société Générale : actions et droits de vote au 31 août 2025"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du  20 juillet au 24 juillet 2026",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du  13 au 17 juillet 2026",
+        "TOUAX finalise le refinancement de sa dette Corporate et renforce son engagement dans les transports durables"
       ]
     },
     "Alstom": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
-        "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
-        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT"
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
