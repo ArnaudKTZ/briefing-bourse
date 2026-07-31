@@ -1788,5 +1788,85 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 95/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Schneider Electric",
+    "cours": 291.85,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "L'Oréal",
+    "cours": 386.1,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Safran",
+    "cours": 345.0,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Saint-Gobain",
+    "cours": 81.82,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.1%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Publicis",
+    "cours": 92.98,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Bouygues",
+    "cours": 48.81,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Engie",
+    "cours": 27.34,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.78%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "11:30",
+    "nom": "Worldline",
+    "cours": 11.88,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +8.79%",
+    "envoyee": false
   }
 ]
