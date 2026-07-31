@@ -1698,5 +1698,95 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 75.83,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Kering",
+    "cours": 292.85,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +9.78% avec volume x3.8 | Momentum intraday fort +6.49%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Société Générale",
+    "cours": 76.72,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Stellantis",
+    "cours": 5.29,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.72%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "ArcelorMittal",
+    "cours": 69.34,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +2.3%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 107.1,
+    "score": 73,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.34%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Orange",
+    "cours": 17.4,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Edenred",
+    "cours": 28.79,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.2%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-07-31",
+    "heure": "09:01",
+    "nom": "Eurazeo",
+    "cours": 46.2,
+    "score": 95,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 95/100",
+    "envoyee": false
   }
 ]
