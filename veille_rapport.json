@@ -1,37 +1,20 @@
 {
-  "date": "2026-07-25",
+  "date": "2026-08-01",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "AlphaZeroBeta: Deep Reinforcement Learning for Market-Neutral Portfolios",
-      "lien": "https://arxiv.org/abs/2607.18001v1",
-      "date": "2026-07-20",
-      "score": 19,
+      "titre": "Are Three Matrices All You Need To Beat the Market? Observable Matrix Dynamics for Portfolio Optimization",
+      "lien": "https://arxiv.org/abs/2607.27461v1",
+      "date": "2026-07-29",
+      "score": 13,
       "hits": [
-        "factor",
-        "regime",
-        "walk-forward",
-        "backtest",
-        "transaction cost",
-        "reinforcement learning",
-        "drawdown"
-      ],
-      "extrait": "Market-neutral portfolios aim to generate consistent returns while offsetting systematic market risk. Traditional approaches based on factor models or convex optimization often underperform during market regime shifts or when structural assumptions break down."
-    },
-    {
-      "titre": "AI Trading: Evaluating Large Language Models for Technical Market Analysis",
-      "lien": "https://arxiv.org/abs/2607.15414v1",
-      "date": "2026-07-16",
-      "score": 14,
-      "hits": [
-        "regime",
-        "backtest",
+        "momentum",
+        "cross-sectional",
+        "out-of-sample",
         "robust",
-        "llm",
-        "language model",
         "drawdown"
       ],
-      "extrait": "Large Language Models (LLMs) have emerged as powerful tools for processing the heterogeneous information environments of modern financial markets. This paper presents a systematic, comparative evaluation of five prominent LLMs: GPT-4 Turbo, Claude 3 Opus, Gemini 1.5 Pro, Llama 3 70B, and the domain-specialized FinGPT, with respect to their capacity for technical market analysis."
+      "extrait": "We present a simple framework for dynamic portfolio management that uses nothing but daily prices, trading volumes, and market capitalizations. Its state is three fixed-size matrices built from the price history: the distance matrix of the return correlations and the transition matrices of two Markov chains that rank the S\\&P 500 names monthly by trailing return and by trailing volatility."
     },
     {
       "titre": "The Science and Practice of Trend-Following Systems",
@@ -46,41 +29,52 @@
       "extrait": "We present a unified approach to designing trend-following (TF) systems and classify them into European, American, and Time Series Momentum categories. For European TF systems, we derive an exact relationship between profit-and-loss, autocorrelation, and drift in volatility-normalized returns."
     },
     {
-      "titre": "SciPhy Reinforcement Learning for Portfolio Optimization",
-      "lien": "https://arxiv.org/abs/2607.15195v1",
-      "date": "2026-07-16",
-      "score": 9,
+      "titre": "FinSMART: Financial Sentiment Analysis for Algorithmic Trading through Market-Aligned Reinforcement Learning",
+      "lien": "https://arxiv.org/abs/2607.28127v1",
+      "date": "2026-07-30",
+      "score": 10,
       "hits": [
-        "out-of-sample",
-        "robust",
-        "reinforcement learning"
-      ],
-      "extrait": "This paper introduces a dynamic portfolio optimization framework for large institutional investors using Scientific Physics-Informed Reinforcement Learning (SciPhyRL). Formulated in continuous time over an extended state space that includes explicit cumulative costs, the approach leverages offline historical data to learn optimal, distribution-aware strategies."
-    },
-    {
-      "titre": "Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions",
-      "lien": "https://arxiv.org/abs/2607.09461v1",
-      "date": "2026-07-10",
-      "score": 9,
-      "hits": [
-        "out-of-sample",
-        "robust",
+        "factor",
+        "reinforcement learning",
         "llm",
-        "deep learning"
+        "language model"
       ],
-      "extrait": "This paper proposes the certainty-equivalent first-order learning (CEFOL) algorithm, a deep learning algorithm for solving discrete-time dynamic programming problems with recursive utility. Dynamic programming with recursive utility is challenging because nonlinear certainty equivalent appears in the Bellman equation and the first-order optimality conditions but is difficult to evaluate."
+      "extrait": "Recent advances in Generative AI have substantially improved financial sentiment analysis through post-trained financial large language models (LLMs). However, existing approaches remain confined to a market-agnostic, supervised learning paradigm that relies on limited, static and human-annotated datasets, and thus are incapable of adapting to evolving market conditions."
     },
     {
-      "titre": "A novel robust mixed integer linear programming model for index tracking problem under no rebalancing: heuristic optimization approach",
-      "lien": "https://arxiv.org/abs/2607.09556v1",
-      "date": "2026-07-10",
+      "titre": "Herding, Momentum, and Reversal in China's A-Share Market: An Agent-Based Network Model with Information Diffusion",
+      "lien": "https://arxiv.org/abs/2607.27063v1",
+      "date": "2026-07-29",
+      "score": 9,
+      "hits": [
+        "momentum",
+        "robust",
+        "agent"
+      ],
+      "extrait": "This study develops an agent-based financial market model to explain stock-price momentum and reversal through the joint effects of local herding and delayed information diffusion. Investors form heterogeneous Gaussian beliefs about the next-period price, choose among buying, selling, and remaining inactive, and revise their action probabilities in response to neighboring investors."
+    },
+    {
+      "titre": "OpenMarket: A Synchronized Polymarket-Binance Dataset for High-Frequency Prediction-Market Research",
+      "lien": "https://arxiv.org/abs/2607.26245v1",
+      "date": "2026-07-28",
       "score": 8,
       "hits": [
-        "out-of-sample",
-        "transaction cost",
-        "robust"
+        "walk-forward",
+        "out-of-sample"
       ],
-      "extrait": "Passive management has increasingly won popularity over the past few years because of its advantages, such as lower management fees and transaction costs. Index tracking endeavors to reproduce the performance of an index with smaller sets of assets."
+      "extrait": "OpenMarket began as an attempt to trade Polymarket's BTC 15-minute binary markets against Binance BTC/USDT order flow. The attempt did not produce a tradable edge: out-of-sample, a walk-forward logistic model over 43 microstructure features does not beat, and slightly underperforms, the probability already implied by Polymarket's own order book, and simulated trading nets -0.116 normalized payoff units per attempted…"
+    },
+    {
+      "titre": "Neural Network-Driven Volatility Drag Mitigation under Aggressive Leverage",
+      "lien": "https://arxiv.org/abs/2607.23068v1",
+      "date": "2026-07-25",
+      "score": 7,
+      "hits": [
+        "out-of-sample",
+        "robust",
+        "drawdown"
+      ],
+      "extrait": "This paper introduces a compact reformulation of a modular end-to-end neural network for global minimum-variance portfolio optimization that decouples model complexity from both look-back window length and universe size. A five-parameter hyperbolic weighted moving average combined with a saturating exponential replaces the original 2,400-parameter lag-transformation layer, and a bidirectional gated-recurrent-unit…"
     },
     {
       "titre": "Observable Matrix Dynamics of Stocks",
@@ -95,15 +89,15 @@
       "extrait": "The Observable Matrix Dynamics (OMD) approach monitors the time development of complex non-linear systems through the trajectory of a fixed-size distance matrix and its spectrum. We apply it to the S\\&P 500 cross section over three crisis decades, the 2001 dot-com bust, the 2007--2008 financial crisis, and the 2020 Covid crash, with three fixed-size observables on a fixed universe."
     },
     {
-      "titre": "Retail Trader's Ruin: An Anatomy of Popular Signal Failure",
-      "lien": "https://arxiv.org/abs/2607.20093v1",
-      "date": "2026-07-22",
+      "titre": "Can Large Language Models Execute Parent Orders?",
+      "lien": "https://arxiv.org/abs/2607.28410v1",
+      "date": "2026-07-30",
       "score": 6,
       "hits": [
-        "momentum",
-        "cross-sectional"
+        "llm",
+        "language model"
       ],
-      "extrait": "We test whether five widely promoted retail signal families - trend, oscillator, candlestick, volume, and calendar rules - deliver a positive, economically meaningful, net-of-cost, and survivable edge. Practical viability is the conjunction of three predeclared gates: statistical edge after multiplicity correction, economic viability after trading costs, and finite-bankroll survival under leverage."
+      "extrait": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings."
     }
   ]
 }
