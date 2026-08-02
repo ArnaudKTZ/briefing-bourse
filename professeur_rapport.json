@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-26",
+  "date": "2026-08-02",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -10,48 +10,48 @@
     },
     {
       "agent": "Crypto DM (BTC/ETH)",
-      "metrique": "-0.5% vs B&H BTC +0.0%",
+      "metrique": "-0.5% vs B&H BTC -1.6%",
       "note": "C",
       "confiance": "faible",
-      "verdict": "Trop tôt pour juger (1 point(s) mensuel(s)). Stratégie -0.5% vs B&H BTC +0.0%. L'attendu validé par la recette est l'airbag (drawdown réduit), pas le rendement.",
-      "valeur_suivie": -0.5
+      "verdict": "Trop tôt pour juger (2 point(s) mensuel(s)). Stratégie -0.5% vs B&H BTC -1.6%. L'attendu validé par la recette est l'airbag (drawdown réduit), pas le rendement.",
+      "valeur_suivie": 1.1
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "43.3% précision (880 signaux)",
+      "metrique": "44.0% précision (1106 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 43.3% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 43.3,
+      "verdict": "Précision 44.0% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 44.0,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "-0.2% (20 trades)",
+      "metrique": "+1.9% (22 trades)",
       "note": "C",
       "confiance": "moyenne",
-      "verdict": "PF -0.2% fait jeu égal avec le CAC (-0.6%).",
-      "valeur_suivie": -0.2
+      "verdict": "PF +1.9% fait jeu égal avec le CAC (+1.1%).",
+      "valeur_suivie": 1.9
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-07-24)",
+      "metrique": "actif (rapport du 2026-07-31)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     },
     {
       "agent": "Agent Espion",
-      "metrique": "actif (rapport du 2026-07-20)",
+      "metrique": "actif (rapport du 2026-07-27)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
   "evolution": {
-    "Crypto DM (BTC/ETH)": 0.0,
-    "Briefing V4 (signaux)": -1.9,
-    "Portefeuille virtuel V4": 0.5
+    "Crypto DM (BTC/ETH)": 1.6,
+    "Briefing V4 (signaux)": 0.7,
+    "Portefeuille virtuel V4": 2.1
   },
   "doutes_meta": [],
   "historique": [
@@ -256,6 +256,47 @@
           "agent": "Portefeuille virtuel V4",
           "note": "C",
           "valeur": -0.2,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent Espion",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Crypto DM (BTC/ETH)",
+          "note": "C",
+          "valeur": 1.1,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 44.0,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "C",
+          "valeur": 1.9,
           "meta_borne": false
         },
         {
