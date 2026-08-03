@@ -2088,5 +2088,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-03",
+    "heure": "16:30",
+    "nom": "Thales",
+    "cours": 254.7,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.49%",
+    "envoyee": false
   }
 ]
