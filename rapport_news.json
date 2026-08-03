@@ -1,15 +1,15 @@
 {
   "date": "2026-08-03",
-  "heure": "10:02",
+  "heure": "12:57",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays",
+      "CAC 40 : la Bourse monte, dopée par le net recul du pétrole et le regain d'espoir sur l’Iran",
       "La Bourse de Paris dans le vert grâce au recul du pétrole",
-      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !",
-      "La Bourse de Paris en hausse, entre résultats et enthousiasme pour l'IA",
-      "La Bourse de Paris orientée à la baisse"
+      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.2,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
+        "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
-        "Bourse : Total «crée beaucoup de valeur et prépare ses futurs moteurs de croissance» ! Une action à acheter ?"
+        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
       ]
     },
     "Hermès": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
@@ -194,21 +194,21 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.4,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
-        "Mise en œuvre du programme de rachat d’actions",
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
+        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
         "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
-      "sentiment": 1.0,
-      "nb_news": 10,
+      "sentiment": 1.09,
+      "nb_news": 11,
       "titres_cles": [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power",
-        "Citi relève ses objectifs pour Legrand et Schneider grâce à l’IA et aux datacentres"
+        "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
+        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
       ]
     },
     "Orange": {
@@ -341,12 +341,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.14,
+      "nb_news": 22,
       "titres_cles": [
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie",
-        "Thales en hausse après la mise à niveau de Deutsche Bank sur la défense"
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays",
+        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
       ]
     },
     "Forvia": {
@@ -369,7 +369,7 @@
     ],
     [
       "Legrand",
-      1.0,
+      1.09,
       [
         "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
