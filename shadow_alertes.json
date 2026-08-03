@@ -2068,5 +2068,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +5.57%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-03",
+    "heure": "12:48",
+    "nom": "Kering",
+    "cours": 290.95,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.56%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-03",
+    "heure": "12:48",
+    "nom": "Bouygues",
+    "cours": 49.17,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
