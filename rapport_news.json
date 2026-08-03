@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "heure": "12:57",
+  "heure": "16:00",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.5,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
-        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
-        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
+        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
+        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
       ]
     },
     "Air Liquide": {
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -140,7 +140,7 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.24,
+      "nb_news": 21,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
