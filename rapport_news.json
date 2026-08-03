@@ -1,15 +1,15 @@
 {
   "date": "2026-08-03",
-  "heure": "06:45",
+  "heure": "10:02",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "La Bourse de Paris dans le vert grâce au recul du pétrole",
       "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !",
       "La Bourse de Paris en hausse, entre résultats et enthousiasme pour l'IA",
-      "La Bourse de Paris orientée à la baisse",
-      "CAC 40 : la Bourse hésite, les investisseurs prennent leurs profits sur les actions IA et des semi-conducteurs"
+      "La Bourse de Paris orientée à la baisse"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
         "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Sanofi": {
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.48,
-      "nb_news": 21,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
         "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -194,11 +194,11 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.2,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
+        "Mise en œuvre du programme de rachat d’actions",
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
         "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
