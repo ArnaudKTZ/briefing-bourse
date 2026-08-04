@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-03",
-  "heure": "16:00",
+  "date": "2026-08-04",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut",
       "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays",
       "CAC 40 : la Bourse monte, dopée par le net recul du pétrole et le regain d'espoir sur l’Iran",
-      "La Bourse de Paris dans le vert grâce au recul du pétrole",
-      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !"
+      "La Bourse de Paris dans le vert grâce au recul du pétrole"
     ]
   },
   "valeurs": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Schneider Electric": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.55,
+      "sentiment": 0.5,
       "nb_news": 20,
       "titres_cles": [
-        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
+        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
+        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
       ]
     },
     "Air Liquide": {
@@ -95,17 +95,17 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.14,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions",
-        "Avion de combat: Safran privilégiera le projet français après l'échec du programme européen Scaf"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
-        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet",
-        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%"
+        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025",
+        "L’action Stellantis recule après la dégradation de JPMorgan"
       ]
     },
     "Saint-Gobain": {
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.16,
+      "sentiment": 0.11,
       "nb_news": 19,
       "titres_cles": [
         "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
-        "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
+        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
+        "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle."
       ]
     },
     "Capgemini": {
@@ -266,8 +266,8 @@
       "nb_news": 5,
       "titres_cles": [
         "TP : Bilan semestriel du contrat de liquidité",
-        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026",
-        "TP: Résultats du premier semestre 2026"
+        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
       ]
     },
     "Alstom": {
