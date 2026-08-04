@@ -2198,5 +2198,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "16:01",
+    "nom": "L'Oréal",
+    "cours": 386.5,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
   }
 ]
