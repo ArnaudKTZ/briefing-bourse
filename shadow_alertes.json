@@ -2178,5 +2178,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "11:30",
+    "nom": "Airbus",
+    "cours": 210.3,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
