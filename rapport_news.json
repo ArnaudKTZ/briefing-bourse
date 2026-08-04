@@ -1,6 +1,6 @@
 {
   "date": "2026-08-04",
-  "heure": "12:18",
+  "heure": "15:20",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.1,
-      "nb_news": 10,
+      "sentiment": 0.0,
+      "nb_news": 20,
       "titres_cles": [
-        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
-        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025",
-        "L’action Stellantis recule après la dégradation de JPMorgan"
+        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
+        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet",
+        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%"
       ]
     },
     "Saint-Gobain": {
@@ -251,9 +251,9 @@
       "sentiment": 0.0,
       "nb_news": 6,
       "titres_cles": [
+        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
         "Victoire de Vincent Bolloré devant la cour d'appel sur la scission de Vivendi",
-        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
-        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social"
+        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS"
       ]
     },
     "Eurofins Scientific": {
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
