@@ -2208,5 +2208,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 90/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "18:12",
+    "nom": "Legrand",
+    "cours": 138.15,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.14%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "18:12",
+    "nom": "Teleperformance",
+    "cours": 67.04,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.11%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "18:12",
+    "nom": "Dassault Systèmes",
+    "cours": 21.31,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.25%",
+    "envoyee": false
   }
 ]
