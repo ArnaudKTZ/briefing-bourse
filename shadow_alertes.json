@@ -2188,5 +2188,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-04",
+    "heure": "13:40",
+    "nom": "Bouygues",
+    "cours": 49.41,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
