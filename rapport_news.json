@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-04",
-  "heure": "15:20",
+  "date": "2026-08-05",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "Les Bourses mondiales engrangent des records, optimisme géopolitique et résultats en moteurs",
+      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
       "CAC 40 : record pour la Bourse, mais l’Iran et les résultats de SpaceX sont attendus au tournant",
-      "Nouveau record pour la Bourse de Paris, les prix du pétrole offrent un répit",
-      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut",
-      "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
+      "Nouveau record pour la Bourse de Paris, les prix du pétrole offrent un répit"
     ]
   },
   "valeurs": {
@@ -68,21 +68,21 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.5,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
-        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
-        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
+        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
+        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
       ]
     },
     "Air Liquide": {
@@ -113,30 +113,30 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
       "sentiment": 0.27,
       "nb_news": 22,
       "titres_cles": [
-        "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
+        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
+        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
       ]
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 20,
+      "nb_news": 16,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
+        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
       ]
     },
     "Stellantis": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.05,
-      "nb_news": 19,
+      "sentiment": 0.29,
+      "nb_news": 7,
       "titres_cles": [
-        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "La Bourse de Paris en hausse malgré les interrogations sur la tech",
-        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action"
+        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
+        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech"
       ]
     },
     "Michelin": {
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
-        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
+        "Microsoft et Publicis Groupe renforcent leur partenariat pour façonner l’avenir du marketing agentique au service des sociétés du monde entier"
       ]
     },
     "Bouygues": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.31,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
+        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
       ]
     },
     "Edenred": {
@@ -335,8 +335,9 @@
     },
     "Eurazeo": {
       "sentiment": 0.0,
-      "nb_news": 1,
+      "nb_news": 2,
       "titres_cles": [
+        "HappyRobot lève 150 millions de dollars en série C pour développer une superintelligence d'entreprise",
         "Forsee Power entre en négociation exclusive avec FCAP en vue d’un investissement destiné à accélérer son développement"
       ]
     },
@@ -350,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.53,
+      "nb_news": 19,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
