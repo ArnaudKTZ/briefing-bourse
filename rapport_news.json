@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "heure": "06:45",
+  "heure": "09:25",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -32,7 +32,7 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.14,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
@@ -68,21 +68,21 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
+        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.55,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
-        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
+        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
+        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
       ]
     },
     "Air Liquide": {
@@ -113,30 +113,30 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
       "sentiment": 0.27,
       "nb_news": 22,
       "titres_cles": [
+        "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
-        "Gucci et L'Oréal concluent un accord de licence beauté de 50 ans"
+        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
       ]
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 16,
+      "nb_news": 20,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
       ]
     },
     "Stellantis": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": -0.05,
+      "nb_news": 19,
       "titres_cles": [
+        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "La Bourse de Paris en hausse malgré les interrogations sur la tech",
-        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech"
+        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action"
       ]
     },
     "Michelin": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
-        "Capgemini relève ses perspectives pour 2026",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "Capgemini relève ses perspectives pour 2026"
       ]
     },
     "Renault": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
+        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
       ]
     },
     "Orange": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
       ]
     },
     "Edenred": {
