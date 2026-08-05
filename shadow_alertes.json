@@ -2238,5 +2238,125 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.25%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 76.43,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100 | Momentum intraday fort +2.21%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Schneider Electric",
+    "cours": 290.1,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 389.75,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Safran",
+    "cours": 351.3,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 107.2,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.18%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Renault",
+    "cours": 28.45,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.86%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 93.86,
+    "score": 97,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 97/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Bouygues",
+    "cours": 49.28,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Alstom",
+    "cours": 16.55,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.16%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Worldline",
+    "cours": 13.46,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +24.37% avec volume x2.4 | Momentum intraday fort +8.55%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Eurazeo",
+    "cours": 49.6,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.2%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "09:01",
+    "nom": "Thales",
+    "cours": 253.8,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.13%",
+    "envoyee": false
   }
 ]
