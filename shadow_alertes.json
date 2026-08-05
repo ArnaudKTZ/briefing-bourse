@@ -2368,5 +2368,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "15:58",
+    "nom": "ArcelorMittal",
+    "cours": 75.05,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
