@@ -2378,5 +2378,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-05",
+    "heure": "18:01",
+    "nom": "Société Générale",
+    "cours": 83.8,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
