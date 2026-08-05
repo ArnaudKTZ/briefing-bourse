@@ -1,15 +1,15 @@
 {
   "date": "2026-08-05",
-  "heure": "09:25",
+  "heure": "12:15",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "La Bourse de Paris vole de record en record, profitant de la baisse des prix du brut",
       "Les Bourses mondiales engrangent des records, optimisme géopolitique et résultats en moteurs",
-      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
-      "CAC 40 : record pour la Bourse, mais l’Iran et les résultats de SpaceX sont attendus au tournant",
-      "Nouveau record pour la Bourse de Paris, les prix du pétrole offrent un répit"
+      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini relève ses perspectives pour 2026",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
+        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Microsoft et Publicis Groupe renforcent leur partenariat pour façonner l’avenir du marketing agentique au service des sociétés du monde entier"
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
       ]
     },
     "Bouygues": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.19,
+      "nb_news": 21,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.25,
-      "nb_news": 12,
+      "sentiment": 0.38,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
+        "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
+        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
       ]
     },
     "Eurazeo": {
