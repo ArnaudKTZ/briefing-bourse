@@ -1,5 +1,5 @@
 {
-  "capital": 2.059999999999377,
+  "capital": 595.7799999999995,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -37,18 +37,6 @@
       "tp_pct": 0.1004,
       "score_entree": 85
     },
-    "Edenred": {
-      "nb_actions": 62,
-      "prix_entree": 25.99,
-      "date_entree": "2026-07-24",
-      "heure_entree": "15:27",
-      "secteur": "Conso/Autre",
-      "cout_total": 1611.38,
-      "frais_achat": 8.06,
-      "stop_pct": 0.0618,
-      "tp_pct": 0.1236,
-      "score_entree": 81
-    },
     "Société Générale": {
       "nb_actions": 23,
       "prix_entree": 78.63,
@@ -72,6 +60,18 @@
       "stop_pct": 0.1138,
       "tp_pct": 0.2276,
       "score_entree": 82
+    },
+    "Capgemini": {
+      "nb_actions": 11,
+      "prix_entree": 109.35,
+      "date_entree": "2026-08-05",
+      "heure_entree": "14:01",
+      "secteur": "Tech",
+      "cout_total": 1202.85,
+      "frais_achat": 6.01,
+      "stop_pct": 0.0826,
+      "tp_pct": 0.1652,
+      "score_entree": 82
     }
   },
   "historique_valeur": {
@@ -85,7 +85,7 @@
     "2026-07-31": 10069.13,
     "2026-08-03": 10312.89,
     "2026-08-04": 10463.12,
-    "2026-08-05": 10488.61
+    "2026-08-05": 10491.84
   },
   "trades": [
     {
@@ -109,6 +109,17 @@
       "pnl_pct": -9.33,
       "frais_total": 16.21,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Edenred",
+      "entree": 25.99,
+      "sortie": 29.22,
+      "date_entree": "2026-07-24",
+      "date_sortie": "2026-08-05",
+      "heure_sortie": "14:01",
+      "pnl_pct": 11.87,
+      "frais_total": 17.12,
+      "raison_sortie": "Take-profit 12.4% (ATR)"
     }
   ],
   "regime_dernier": "haussier"
