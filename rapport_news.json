@@ -1,15 +1,15 @@
 {
   "date": "2026-08-06",
-  "heure": "12:17",
+  "heure": "15:15",
   "marche": {
-    "sentiment_global": 0.4,
+    "sentiment_global": 0.45,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "CAC 40 : la Bourse en hausse, «avec un pied sur l'accélérateur et l'autre déjà posé sur le frein !»",
       "Paris vole vers des Everests boursiers en attendant un accord pour Ormuz",
-      "Nouveau double record pour la Bourse de Paris qui termine à l'équilibre",
-      "Les Bourses mondiales engrangent des records, optimisme géopolitique et résultats en moteurs"
+      "Nouveau double record pour la Bourse de Paris qui termine à l'équilibre"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.45,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
+        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
       ]
     },
     "Schneider Electric": {
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.45,
+      "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
+        "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
-        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée"
       ]
     },
     "Sanofi": {
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.27,
-      "nb_news": 22,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
         "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
@@ -158,12 +158,12 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": -0.33,
-      "nb_news": 3,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
-        "Ces 3 valeurs sidérurgiques européennes s’envolent après la révision de JPMorgan",
-        "BNP Paribas redistribue les cartes sur les valeurs sidérurgiques européennes"
+        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
+        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
       ]
     },
     "Pernod Ricard": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.31,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
+        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
       ]
     },
     "Edenred": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.46,
-      "nb_news": 13,
+      "sentiment": 0.43,
+      "nb_news": 14,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
+        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
       ]
     },
     "Eurazeo": {
