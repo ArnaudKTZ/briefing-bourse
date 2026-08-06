@@ -2086,5 +2086,14 @@
     "input": 362,
     "output": 57,
     "usd": 0.000647
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "07:40",
+    "agent": "briefing",
+    "model": "claude-sonnet-4-6",
+    "input": 7893,
+    "output": 7634,
+    "usd": 0.138189
   }
 ]
