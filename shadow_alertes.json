@@ -2388,5 +2388,65 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Airbus",
+    "cours": 214.1,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 138.15,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.14%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 94.28,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Bouygues",
+    "cours": 49.35,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Dassault Systèmes",
+    "cours": 21.31,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.25%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "09:01",
+    "nom": "Edenred",
+    "cours": 28.6,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
