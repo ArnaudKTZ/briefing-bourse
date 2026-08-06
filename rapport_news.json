@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "heure": "06:45",
+  "heure": "09:25",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.35,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Sogeclair: signe un protocole d'accord avec AKKODIS en vue de la cession de ses activités d'ingénierie dédiées à Airbus"
+        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
     },
     "Schneider Electric": {
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
       ]
     },
     "Edenred": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.38,
-      "nb_news": 13,
+      "sentiment": 0.42,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
+        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
       ]
     },
     "Forvia": {
