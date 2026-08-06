@@ -1,15 +1,15 @@
 {
   "date": "2026-08-06",
-  "heure": "09:25",
+  "heure": "12:17",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.4,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
       "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
+      "Paris vole vers des Everests boursiers en attendant un accord pour Ormuz",
       "Nouveau double record pour la Bourse de Paris qui termine à l'équilibre",
-      "Les Bourses mondiales engrangent des records, optimisme géopolitique et résultats en moteurs",
-      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture"
+      "Les Bourses mondiales engrangent des records, optimisme géopolitique et résultats en moteurs"
     ]
   },
   "valeurs": {
@@ -59,7 +59,7 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.5,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -158,26 +158,26 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": -0.33,
+      "nb_news": 3,
       "titres_cles": [
-        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
-        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
+        "Ces 3 valeurs sidérurgiques européennes s’envolent après la révision de JPMorgan",
+        "BNP Paribas redistribue les cartes sur les valeurs sidérurgiques européennes"
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.05,
-      "nb_news": 19,
+      "sentiment": -0.11,
+      "nb_news": 18,
       "titres_cles": [
         "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
-        "La Bourse de Paris en hausse malgré les interrogations sur la tech",
-        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action"
+        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
+        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
       ]
     },
     "Michelin": {
       "sentiment": 0.0,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.2,
+      "nb_news": 5,
       "titres_cles": [
-        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du  20 juillet au 24 juillet 2026"
+        "TP : Bilan semestriel du contrat de liquidité",
+        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
       ]
     },
     "Alstom": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.42,
-      "nb_news": 12,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
@@ -342,21 +342,21 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.26,
-      "nb_news": 19,
+      "sentiment": 0.33,
+      "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
       ]
     },
     "Forvia": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
       ]
     }
   },
