@@ -2478,5 +2478,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 99/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "15:56",
+    "nom": "Schneider Electric",
+    "cours": 301.0,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "15:56",
+    "nom": "Worldline",
+    "cours": 13.55,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.89%",
+    "envoyee": false
   }
 ]
