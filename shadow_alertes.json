@@ -2448,5 +2448,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "11:42",
+    "nom": "L'Oréal",
+    "cours": 393.0,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "11:42",
+    "nom": "Société Générale",
+    "cours": 84.65,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-06",
+    "heure": "11:42",
+    "nom": "Accor",
+    "cours": 47.94,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100",
+    "envoyee": false
   }
 ]
