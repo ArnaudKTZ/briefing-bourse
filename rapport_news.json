@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-06",
-  "heure": "15:15",
+  "date": "2026-08-07",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.45,
+    "sentiment_global": 0.6,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-      "La Bourse de Paris finit en baisse, entre résultats, Moyen-Orient et tech en recul",
-      "CAC 40 : la Bourse en hausse, «avec un pied sur l'accélérateur et l'autre déjà posé sur le frein !»",
-      "Paris vole vers des Everests boursiers en attendant un accord pour Ormuz",
-      "Nouveau double record pour la Bourse de Paris qui termine à l'équilibre"
+      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
+      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut",
+      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !",
+      "La Bourse de Paris en hausse, entre résultats et enthousiasme pour l'IA"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.35,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
+        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
     },
     "Schneider Electric": {
@@ -59,7 +59,7 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.55,
+      "sentiment": 0.5,
       "nb_news": 20,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.29,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
+        "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "La Bourse de Paris orientée à la baisse",
-        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
+        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre"
       ]
     },
     "Société Générale": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.09,
-      "nb_news": 11,
+      "sentiment": 0.6,
+      "nb_news": 5,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand : Nombre total d’actions et de droits de vote"
       ]
     },
     "Publicis": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.2,
-      "nb_news": 5,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
-        "TP : Bilan semestriel du contrat de liquidité",
-        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
-        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
+        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026",
+        "Sogeclair: signe un protocole d'accord avec AKKODIS en vue de la cession de ses activités d'ingénierie dédiées à Airbus"
       ]
     },
     "Alstom": {
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
       ]
     },
     "Edenred": {
@@ -351,12 +351,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.64,
-      "nb_news": 11,
+      "sentiment": 0.53,
+      "nb_news": 19,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
       ]
     }
   },
@@ -366,13 +366,6 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.09,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
