@@ -2588,5 +2588,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-07",
+    "heure": "16:53",
+    "nom": "Dassault Systèmes",
+    "cours": 22.39,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.52%",
+    "envoyee": false
   }
 ]
