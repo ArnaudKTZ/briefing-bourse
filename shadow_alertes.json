@@ -2568,5 +2568,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.11%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-07",
+    "heure": "11:30",
+    "nom": "Schneider Electric",
+    "cours": 303.0,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-07",
+    "heure": "11:30",
+    "nom": "Eurofins Scientific",
+    "cours": 70.26,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
