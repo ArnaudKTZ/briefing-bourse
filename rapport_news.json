@@ -1,6 +1,6 @@
 {
   "date": "2026-08-07",
-  "heure": "07:59",
+  "heure": "10:38",
   "marche": {
     "sentiment_global": 0.6,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
+        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
       ]
     },
     "Schneider Electric": {
@@ -68,21 +68,21 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.53,
+      "nb_news": 19,
       "titres_cles": [
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
-        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
-        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
+        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
+        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
       ]
     },
     "Air Liquide": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.17,
-      "nb_news": 6,
+      "sentiment": -0.11,
+      "nb_news": 18,
       "titres_cles": [
+        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
-        "CAC 40 : portée par les grandes valeurs françaises, la Bourse de Paris résiste aux interrogations sur la tech"
+        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
       ]
     },
     "Michelin": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.09,
-      "nb_news": 11,
+      "sentiment": 0.6,
+      "nb_news": 5,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand : Nombre total d’actions et de droits de vote"
       ]
     },
     "Publicis": {
@@ -221,21 +221,21 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.52,
-      "nb_news": 21,
+      "sentiment": 0.53,
+      "nb_news": 17,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
-      "sentiment": 0.19,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
+        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
       ]
     },
     "Orange": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.2,
+      "nb_news": 5,
       "titres_cles": [
-        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026",
-        "Sogeclair: signe un protocole d'accord avec AKKODIS en vue de la cession de ses activités d'ingénierie dédiées à Airbus"
+        "TP : Bilan semestriel du contrat de liquidité",
+        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
       ]
     },
     "Alstom": {
@@ -366,13 +366,6 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.09,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
