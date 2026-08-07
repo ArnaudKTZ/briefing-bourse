@@ -2498,5 +2498,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.89%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-07",
+    "heure": "09:00",
+    "nom": "Publicis",
+    "cours": 97.16,
+    "score": 82,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.32%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-07",
+    "heure": "09:00",
+    "nom": "Edenred",
+    "cours": 29.29,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100 | Momentum intraday fort +2.41%",
+    "envoyee": false
   }
 ]
