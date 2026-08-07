@@ -1,21 +1,21 @@
 {
   "date": "2026-08-07",
-  "heure": "06:45",
+  "heure": "07:59",
   "marche": {
     "sentiment_global": 0.6,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
-      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut",
-      "CAC 40 : la Bourse bondit, «spectaculaire hausse» des actions liées à l'IA !",
-      "La Bourse de Paris en hausse, entre résultats et enthousiasme pour l'IA"
+      "La Bourse de Paris reste perchée sur ses niveaux records",
+      "CAC 40 : la Bourse en hausse, «avec un pied sur l'accélérateur et l'autre déjà posé sur le frein !»",
+      "Paris vole vers des Everests boursiers en attendant un accord pour Ormuz",
+      "Nouveau double record pour la Bourse de Paris qui termine à l'équilibre"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -33,7 +33,7 @@
     },
     "Hermès": {
       "sentiment": 0.1,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.14,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
-        "Les actions Kering chutent de 5% après l’avertissement de Barclays",
         "La Bourse de Paris orientée à la baisse",
-        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre"
+        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
+        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
       ]
     },
     "Société Générale": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
+      "sentiment": -0.1,
       "nb_news": 20,
       "titres_cles": [
         "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
-        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet",
-        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%"
+        "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
+        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet"
       ]
     },
     "Saint-Gobain": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.11,
-      "nb_news": 18,
+      "sentiment": 0.17,
+      "nb_news": 6,
       "titres_cles": [
-        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
+        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
+        "CAC 40 : portée par les grandes valeurs françaises, la Bourse de Paris résiste aux interrogations sur la tech"
       ]
     },
     "Michelin": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.6,
-      "nb_news": 5,
+      "sentiment": 1.09,
+      "nb_news": 11,
       "titres_cles": [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand : Nombre total d’actions et de droits de vote"
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
@@ -366,6 +366,13 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.09,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
