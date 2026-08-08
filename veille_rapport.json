@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-01",
+  "date": "2026-08-08",
   "nb_articles": 40,
   "top": [
     {
@@ -17,16 +17,40 @@
       "extrait": "We present a simple framework for dynamic portfolio management that uses nothing but daily prices, trading volumes, and market capitalizations. Its state is three fixed-size matrices built from the price history: the distance matrix of the return correlations and the transition matrices of two Markov chains that rank the S\\&P 500 names monthly by trailing return and by trailing volatility."
     },
     {
-      "titre": "The Science and Practice of Trend-Following Systems",
-      "lien": "https://arxiv.org/abs/2607.19497v1",
-      "date": "2026-07-21",
+      "titre": "Cross-Sectional Heterogeneity in LSTM Networks for Financial Time Series",
+      "lien": "https://arxiv.org/abs/2608.05755v1",
+      "date": "2026-08-06",
       "score": 12,
       "hits": [
         "momentum",
-        "trend-following",
-        "time series momentum"
+        "factor",
+        "cross-sectional",
+        "deep learning"
       ],
-      "extrait": "We present a unified approach to designing trend-following (TF) systems and classify them into European, American, and Time Series Momentum categories. For European TF systems, we derive an exact relationship between profit-and-loss, autocorrelation, and drift in volatility-normalized returns."
+      "extrait": "Predicting financial asset returns remains one of the most difficult challenges in empirical finance, driven by the low signal-to-noise ratio and the semi-strong form of market efficiency. While deep learning models, especially LSTM networks, have shown promise in capturing temporal dependencies, standard architectures often struggle to account for the cross-sectional heterogeneity of asset returns."
+    },
+    {
+      "titre": "Velocity- and Regime-Aware Detection of Intraday Options Market Manipulation, with Explainable Attribution",
+      "lien": "https://arxiv.org/abs/2608.05373v1",
+      "date": "2026-08-05",
+      "score": 10,
+      "hits": [
+        "regime",
+        "out-of-sample"
+      ],
+      "extrait": "Intraday market manipulation is hard to detect because its footprint is brief, buried in millions of quotes, and statistically similar to ordinary volatility. Detectors reach high recall only by flagging so many other days that measured precision collapses, producing alerts no regulator can act on."
+    },
+    {
+      "titre": "Portfolio Allocation under Heterogeneous Scales and Multifractality",
+      "lien": "https://arxiv.org/abs/2608.04987v1",
+      "date": "2026-08-05",
+      "score": 10,
+      "hits": [
+        "portfolio allocation",
+        "drawdown",
+        "tail risk"
+      ],
+      "extrait": "Cross-correlations between financial signals are neither scale-free nor amplitude-independent: they vary with the time scale over which they are measured and with the magnitude of the fluctuations that dominate the average. We exploit this structure to construct a portfolio allocation model in which the risk functional is the signed fluctuation function of multifractal cross-correlation analysis (MFCCA), indexed by…"
     },
     {
       "titre": "FinSMART: Financial Sentiment Analysis for Algorithmic Trading through Market-Aligned Reinforcement Learning",
@@ -42,51 +66,16 @@
       "extrait": "Recent advances in Generative AI have substantially improved financial sentiment analysis through post-trained financial large language models (LLMs). However, existing approaches remain confined to a market-agnostic, supervised learning paradigm that relies on limited, static and human-annotated datasets, and thus are incapable of adapting to evolving market conditions."
     },
     {
-      "titre": "Herding, Momentum, and Reversal in China's A-Share Market: An Agent-Based Network Model with Information Diffusion",
-      "lien": "https://arxiv.org/abs/2607.27063v1",
-      "date": "2026-07-29",
-      "score": 9,
-      "hits": [
-        "momentum",
-        "robust",
-        "agent"
-      ],
-      "extrait": "This study develops an agent-based financial market model to explain stock-price momentum and reversal through the joint effects of local herding and delayed information diffusion. Investors form heterogeneous Gaussian beliefs about the next-period price, choose among buying, selling, and remaining inactive, and revise their action probabilities in response to neighboring investors."
-    },
-    {
-      "titre": "OpenMarket: A Synchronized Polymarket-Binance Dataset for High-Frequency Prediction-Market Research",
-      "lien": "https://arxiv.org/abs/2607.26245v1",
-      "date": "2026-07-28",
-      "score": 8,
-      "hits": [
-        "walk-forward",
-        "out-of-sample"
-      ],
-      "extrait": "OpenMarket began as an attempt to trade Polymarket's BTC 15-minute binary markets against Binance BTC/USDT order flow. The attempt did not produce a tradable edge: out-of-sample, a walk-forward logistic model over 43 microstructure features does not beat, and slightly underperforms, the probability already implied by Polymarket's own order book, and simulated trading nets -0.116 normalized payoff units per attempted…"
-    },
-    {
-      "titre": "Neural Network-Driven Volatility Drag Mitigation under Aggressive Leverage",
-      "lien": "https://arxiv.org/abs/2607.23068v1",
-      "date": "2026-07-25",
-      "score": 7,
-      "hits": [
-        "out-of-sample",
-        "robust",
-        "drawdown"
-      ],
-      "extrait": "This paper introduces a compact reformulation of a modular end-to-end neural network for global minimum-variance portfolio optimization that decouples model complexity from both look-back window length and universe size. A five-parameter hyperbolic weighted moving average combined with a saturating exponential replaces the original 2,400-parameter lag-transformation layer, and a bidirectional gated-recurrent-unit…"
-    },
-    {
-      "titre": "Observable Matrix Dynamics of Stocks",
-      "lien": "https://arxiv.org/abs/2607.19005v2",
-      "date": "2026-07-21",
+      "titre": "Robust Control under Stationary Ambiguity",
+      "lien": "https://arxiv.org/abs/2608.04832v1",
+      "date": "2026-08-05",
       "score": 7,
       "hits": [
         "factor",
         "regime",
-        "rotation"
+        "robust"
       ],
-      "extrait": "The Observable Matrix Dynamics (OMD) approach monitors the time development of complex non-linear systems through the trajectory of a fixed-size distance matrix and its spectrum. We apply it to the S\\&P 500 cross section over three crisis decades, the 2001 dot-com bust, the 2007--2008 financial crisis, and the 2020 Covid crash, with three fixed-size observables on a fixed universe."
+      "extrait": "Control policies optimized in simulation can perform poorly in the real system when the parameters $x$ of the simulator are estimated from limited data but the resulting parameter uncertainty is not represented inside the simulation. A common way to incorporate such ambiguity is to simulate each trajectory of the system under a randomly drawn value for $x$."
     },
     {
       "titre": "Can Large Language Models Execute Parent Orders?",
@@ -98,6 +87,18 @@
         "language model"
       ],
       "extrait": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings."
+    },
+    {
+      "titre": "AI Governance for Institutional Readiness in Finance",
+      "lien": "https://arxiv.org/abs/2608.02311v1",
+      "date": "2026-08-03",
+      "score": 5,
+      "hits": [
+        "llm",
+        "agent",
+        "drawdown"
+      ],
+      "extrait": "Agentic AI is gaining acceptance in asset management, but governance has not kept pace: 88% of surveyed finance professionals report no operational governance framework for agentic AI despite universal awareness of its deployment, and only 24 of 75 large U.S. money managers disclosing AI use in Form ADV filings report a formal governance policy."
     }
   ]
 }
