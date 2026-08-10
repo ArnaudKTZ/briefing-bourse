@@ -2668,5 +2668,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "16:58",
+    "nom": "Safran",
+    "cours": 362.2,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100 | Momentum intraday fort +2.32%",
+    "envoyee": false
   }
 ]
