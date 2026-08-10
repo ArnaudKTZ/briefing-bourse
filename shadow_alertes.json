@@ -2618,5 +2618,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "12:44",
+    "nom": "Airbus",
+    "cours": 214.15,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "12:44",
+    "nom": "Accor",
+    "cours": 47.2,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
   }
 ]
