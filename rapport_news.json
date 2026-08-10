@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "heure": "08:01",
+  "heure": "11:01",
   "marche": {
     "sentiment_global": 0.65,
     "nb_articles": 20,
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
+        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
     },
     "Schneider Electric": {
@@ -95,17 +95,17 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
+        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.23,
+      "nb_news": 13,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 10,
+      "sentiment": -0.1,
+      "nb_news": 20,
       "titres_cles": [
+        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
-        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
+        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet"
       ]
     },
     "Saint-Gobain": {
@@ -230,26 +230,26 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
+        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
       ]
     },
     "Orange": {
-      "sentiment": 0.68,
-      "nb_news": 19,
+      "sentiment": 0.85,
+      "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
-        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
+        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
       ]
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 5,
       "titres_cles": [
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
         "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -298,21 +298,21 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
+        "La Bourse de Paris termine en hausse et poursuit sa course aux records",
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
       ]
     },
     "Edenred": {
