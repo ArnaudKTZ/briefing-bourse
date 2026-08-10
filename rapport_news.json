@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-07",
-  "heure": "14:26",
+  "date": "2026-08-10",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.65,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en hausse et poursuit sa course aux records",
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-      "La Bourse de Paris toujours en hausse au-dessus des 8.700 points",
-      "La Bourse de Paris reste perchée sur ses niveaux records",
-      "CAC 40 : la Bourse en hausse, «avec un pied sur l'accélérateur et l'autre déjà posé sur le frein !»",
-      "Paris vole vers des Everests boursiers en attendant un accord pour Ormuz"
+      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
+      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut",
+      "CAC 40 : la Bourse en hausse, «avec un pied sur l'accélérateur et l'autre déjà posé sur le frein !»"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
+        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
       ]
     },
     "Schneider Electric": {
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.59,
-      "nb_news": 17,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
+        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -132,11 +132,11 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 16,
+      "nb_news": 20,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
       ]
     },
     "Stellantis": {
@@ -149,12 +149,12 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.57,
-      "nb_news": 7,
+      "sentiment": 0.75,
+      "nb_news": 8,
       "titres_cles": [
+        "Saint-Gobain profite de «hausses de prix réussies» ! En Bourse, les actions sont-elles à acheter ?",
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
-        "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture",
-        "Saint-Gobain fixe ses objectifs 2026-2030 dans le cadre de sa stratégie \"Lead and Grow\""
+        "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture"
       ]
     },
     "ArcelorMittal": {
@@ -167,57 +167,57 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.17,
-      "nb_news": 6,
+      "sentiment": -0.11,
+      "nb_news": 19,
       "titres_cles": [
+        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
-        "CAC 40 : portée par les grandes valeurs françaises, la Bourse de Paris résiste aux interrogations sur la tech"
+        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
       ]
     },
     "Michelin": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.0,
+      "nb_news": 20,
       "titres_cles": [
-        "Michelin : les «pneus de l’extrême», un marché stratégique en forte croissance",
+        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
         "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.1,
-      "nb_news": 21,
-      "titres_cles": [
-        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
-        "Capgemini relève ses perspectives pour 2026",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
-      ]
-    },
-    "Renault": {
       "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
+        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "Capgemini relève ses perspectives pour 2026"
+      ]
+    },
+    "Renault": {
+      "sentiment": 0.29,
+      "nb_news": 21,
+      "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
       ]
     },
     "Legrand": {
-      "sentiment": 0.6,
-      "nb_news": 5,
+      "sentiment": 1.09,
+      "nb_news": 11,
       "titres_cles": [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand : Nombre total d’actions et de droits de vote"
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
+        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Microsoft et Publicis Groupe renforcent leur partenariat pour façonner l’avenir du marketing agentique au service des sociétés du monde entier"
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
       ]
     },
     "Bouygues": {
@@ -230,7 +230,7 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.19,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.85,
-      "nb_news": 20,
+      "sentiment": 0.68,
+      "nb_news": 19,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
-        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
+        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
+        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
       ]
     },
     "Vivendi": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.2,
-      "nb_news": 5,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
-        "TP : Bilan semestriel du contrat de liquidité",
-        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
-        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
+        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026",
+        "Sogeclair: signe un protocole d'accord avec AKKODIS en vue de la cession de ses activités d'ingénierie dédiées à Airbus"
       ]
     },
     "Alstom": {
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -289,17 +289,17 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": 0.33,
+      "nb_news": 6,
       "titres_cles": [
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
         "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
+        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.4,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.32,
+      "nb_news": 22,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
@@ -351,12 +351,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.64,
-      "nb_news": 11,
+      "sentiment": 0.53,
+      "nb_news": 19,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
       ]
     }
   },
@@ -366,6 +366,13 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.09,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
