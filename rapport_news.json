@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "heure": "06:45",
+  "heure": "08:01",
   "marche": {
     "sentiment_global": 0.65,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
       ]
     },
     "Danone": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.1,
-      "nb_news": 20,
+      "sentiment": 0.0,
+      "nb_news": 10,
       "titres_cles": [
-        "L’action Stellantis chute de 5% : le plan à 60 milliards € déçoit",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet"
+        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
       ]
     },
     "Saint-Gobain": {
@@ -176,30 +176,30 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.0,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
-        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
+        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini relève ses perspectives pour 2026",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
-      "sentiment": 0.29,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
+        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -249,7 +249,7 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 4,
       "titres_cles": [
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
         "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.2,
+      "nb_news": 5,
       "titres_cles": [
-        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026",
-        "Sogeclair: signe un protocole d'accord avec AKKODIS en vue de la cession de ses activités d'ingénierie dédiées à Airbus"
+        "TP : Bilan semestriel du contrat de liquidité",
+        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
       ]
     },
     "Alstom": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.33,
-      "nb_news": 6,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
         "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.31,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "3DS : Bilan semestriel du contrat de liquidité conclu avec Oddo BHF SCA"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
+        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
       ]
     },
     "Edenred": {
