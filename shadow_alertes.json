@@ -2598,5 +2598,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.52%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "09:00",
+    "nom": "Schneider Electric",
+    "cours": 303.7,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
   }
 ]
