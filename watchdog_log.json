@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "heure": "07:30",
+  "heure": "08:49",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -8,7 +8,7 @@
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 07:03"
+      "msg": "OK — briefing du jour envoyé à 08:11"
     },
     "Scoring intraday": {
       "ok": null,
@@ -16,7 +16,7 @@
     },
     "Dividendes (lundi 8h05)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-03 (il y a 7 j)"
+      "msg": "OK — dernier rapport le 2026-08-10 (il y a 0 j)"
     },
     "Shadow (vendredi 18h35)": {
       "ok": true,
