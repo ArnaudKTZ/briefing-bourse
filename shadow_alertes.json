@@ -2608,5 +2608,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 92/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "10:43",
+    "nom": "Hermès",
+    "cours": 1646.0,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
