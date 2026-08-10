@@ -2638,5 +2638,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 94/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "14:01",
+    "nom": "L'Oréal",
+    "cours": 387.65,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-10",
+    "heure": "14:01",
+    "nom": "Eurofins Scientific",
+    "cours": 69.94,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
