@@ -370,7 +370,6 @@ if __name__ == "__main__":
         evaluer_briefing_v4(),
         evaluer_portefeuille(),
         evaluer_agent_collecte("rapport_news.json",   "Agent News",   "Collecte le sentiment presse."),
-        evaluer_agent_collecte("rapport_espion.json", "Agent Espion", "Suit l'argent institutionnel."),
     ]
 
     for e in evals:
