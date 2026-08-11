@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-10",
-  "heure": "14:28",
+  "date": "2026-08-11",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.7,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
+      "La Bourse de Paris reste perchée sur ses niveaux records",
       "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
-      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture",
-      "La Bourse de Paris bat son record absolu, poussé par la détente des prix du brut"
+      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.37,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "Moyen-Orient: BP voit ses bénéfices s'envoler dans le sillage des autres majors"
+        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
       ]
     },
     "Hermès": {
@@ -41,26 +41,26 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
+        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
-        "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
+        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA",
+        "CAC 40, Schneider Electric, Total, Safran, Vinci… les actions en Bourse au programme de Momentum"
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.62,
-      "nb_news": 16,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
+        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
@@ -132,11 +132,11 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 20,
+      "nb_news": 16,
       "titres_cles": [
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
+        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
+        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
       ]
     },
     "Stellantis": {
@@ -185,30 +185,30 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini relève ses perspectives pour 2026",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
-      "sentiment": 0.19,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
       ]
     },
     "Legrand": {
-      "sentiment": 1.09,
-      "nb_news": 11,
+      "sentiment": 0.6,
+      "nb_news": 5,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand : Nombre total d’actions et de droits de vote"
       ]
     },
     "Publicis": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
@@ -249,7 +249,7 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 4,
       "titres_cles": [
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
         "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
@@ -289,30 +289,30 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.33,
-      "nb_news": 6,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
         "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "La Bourse de Paris termine en hausse et poursuit sa course aux records",
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro"
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
+      "sentiment": 0.38,
       "nb_news": 16,
       "titres_cles": [
+        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : résultats en ligne avec les objectifs au premier trimestre 2026 et perspectives confirmées pour l’ensemble de l’année"
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
       ]
     },
     "Edenred": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.43,
-      "nb_news": 14,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 22,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
       ]
     },
     "Forvia": {
@@ -366,13 +366,6 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.09,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
