@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "heure": "07:41",
+  "heure": "10:37",
   "marche": {
     "sentiment_global": 0.7,
     "nb_articles": 20,
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
-        "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
+        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Société Générale": {
@@ -221,21 +221,21 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.56,
+      "nb_news": 16,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 7,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
-        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
+        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
       ]
     },
     "Orange": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": 0.33,
+      "nb_news": 6,
       "titres_cles": [
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
         "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
+        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
       ]
     },
     "STMicroelectronics": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.38,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
       ]
     },
     "Edenred": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.43,
-      "nb_news": 14,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
