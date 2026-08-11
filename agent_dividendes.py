@@ -34,9 +34,9 @@ TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 
 ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
-# Rapports d'info : destinataires fixes zoho + xtrem111 uniquement
+# Rapports d'info : destinataires fixes zoho uniquement
 # (même règle que Shadow/Évaluateur, décision Arnaud 02/07).
-DESTINATAIRES = ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"]
+DESTINATAIRES = ["Arnaud.kuntz@zoho.eu"]
 
 FICHIER_RAPPORT = "dividendes_rapport.json"
 

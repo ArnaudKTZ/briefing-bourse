@@ -49,7 +49,7 @@ ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
 ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
 # Rapport de gouvernance : destinataires fixes (décision Arnaud 02/07).
-DESTINATAIRES = ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"]
+DESTINATAIRES = ["Arnaud.kuntz@zoho.eu"]
 
 MODEL = "claude-sonnet-4-6"   # même modèle que le briefing (décision coûts 06/07)
 FICHIER_RAPPORT = "stratege_rapport.json"

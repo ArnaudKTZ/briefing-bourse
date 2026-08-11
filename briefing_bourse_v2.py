@@ -30,7 +30,6 @@ ZOHO_SMTP         = "smtp.zoho.eu"
 ZOHO_PORT         = 587
 
 DESTINATAIRES = [
-    "xtrem111team@gmail.com",
     "ferrey83400@gmail.com",
 ]
 

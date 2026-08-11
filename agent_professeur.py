@@ -30,9 +30,9 @@ ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
 ZOHO_PASSWORD = os.environ.get("ZOHO_PASSWORD", "")
 ZOHO_SMTP     = "smtp.zoho.eu"
 ZOHO_PORT     = 587
-# Bilans hebdo : destinataires fixes zoho + xtrem111 uniquement
+# Bilans hebdo : destinataires fixes zoho uniquement
 # (décision Arnaud 02/07, indépendant du secret DESTINATAIRES_HEBDO).
-DESTINATAIRES = ["Arnaud.kuntz@zoho.eu", "xtrem111team@gmail.com"]
+DESTINATAIRES = ["Arnaud.kuntz@zoho.eu"]
 
 FICHIER_RAPPORT = "professeur_rapport.json"
 COSTS_LOG       = "costs_log.json"
