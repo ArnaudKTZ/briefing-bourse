@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-11",
+  "n_coupes": 37,
+  "debut": "2026-06-19",
+  "fin": "2026-08-11",
+  "autocorr_lag1": {
+    "moyenne": 0.692,
+    "min": 0.28,
+    "max": 0.894,
+    "n": 36,
+    "pct_sous_0_5": 8.3
+  },
+  "autocorr_lag5": {
+    "moyenne": 0.385,
+    "min": 0.087,
+    "max": 0.712,
+    "n": 32,
+    "pct_sous_0_5": 78.1
+  },
+  "top3": {
+    "jaccard_moyen": 0.214,
+    "survie_moyenne_sur_3": 1.0,
+    "n_transitions": 7
+  },
+  "verdict": "stabilité MOYENNE : le top-3 a un sens mais tourne pas mal, surveiller la rotation/frais côté Risk Engine."
+}
