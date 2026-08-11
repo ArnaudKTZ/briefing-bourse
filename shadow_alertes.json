@@ -2708,5 +2708,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-11",
+    "heure": "16:01",
+    "nom": "Legrand",
+    "cours": 141.0,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100 | Momentum intraday fort +2.03%",
+    "envoyee": false
   }
 ]
