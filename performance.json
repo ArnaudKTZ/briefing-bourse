@@ -15368,7 +15368,7 @@
       },
       "Schneider Electric": {
         "signal": "ACHETER",
-        "score": 95,
+        "score": 89,
         "prix": 303.7,
         "secteur": "Industrie/Défense",
         "rsi": 69.4,
@@ -15423,7 +15423,7 @@
       },
       "Safran": {
         "signal": "ACHETER",
-        "score": 73,
+        "score": 67,
         "prix": 357.4,
         "secteur": "Industrie/Défense",
         "rsi": 65.4,
@@ -15489,7 +15489,7 @@
       },
       "Saint-Gobain": {
         "signal": "ACHETER",
-        "score": 76,
+        "score": 70,
         "prix": 85.44,
         "secteur": "Industrie/Défense",
         "rsi": 68.7,
@@ -15500,7 +15500,7 @@
       },
       "ArcelorMittal": {
         "signal": "ACHETER",
-        "score": 74,
+        "score": 68,
         "prix": 73.9,
         "secteur": "Industrie/Défense",
         "rsi": 66.0,
@@ -15731,7 +15731,7 @@
       },
       "Thales": {
         "signal": "SURVEILLER",
-        "score": 48,
+        "score": 42,
         "prix": 264.8,
         "secteur": "Industrie/Défense",
         "rsi": 73.3,
@@ -15754,32 +15754,32 @@
     }
   },
   "stats": {
-    "total": 1469,
-    "corrects": 638,
-    "precision": 43.4,
-    "acheter_total": 1013,
-    "acheter_corrects": 452,
+    "total": 1496,
+    "corrects": 639,
+    "precision": 42.7,
+    "acheter_total": 1040,
+    "acheter_corrects": 453,
     "eviter_total": 456,
     "eviter_corrects": 186,
     "par_secteur": {
       "Luxe": {
-        "total": 187,
+        "total": 190,
         "corrects": 63
       },
       "Santé": {
-        "total": 126,
+        "total": 129,
         "corrects": 54
       },
       "Conso/Autre": {
-        "total": 238,
+        "total": 242,
         "corrects": 100
       },
       "Industrie/Défense": {
-        "total": 394,
-        "corrects": 165
+        "total": 403,
+        "corrects": 166
       },
       "Télécom/Média": {
-        "total": 164,
+        "total": 166,
         "corrects": 82
       },
       "Énergie": {
@@ -15787,11 +15787,11 @@
         "corrects": 44
       },
       "Tech": {
-        "total": 131,
+        "total": 134,
         "corrects": 55
       },
       "Banques/Finance": {
-        "total": 143,
+        "total": 146,
         "corrects": 75
       }
     }
