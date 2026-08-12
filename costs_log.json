@@ -2437,5 +2437,14 @@
     "input": 7766,
     "output": 6331,
     "usd": 0.118263
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "agent": "scoring_intraday",
+    "model": "claude-haiku-4-5-20251001",
+    "input": 362,
+    "output": 57,
+    "usd": 0.000647
   }
 ]
