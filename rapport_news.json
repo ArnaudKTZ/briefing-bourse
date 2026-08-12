@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "heure": "06:45",
+  "heure": "08:04",
   "marche": {
     "sentiment_global": 0.7,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
       ]
     },
     "Hermès": {
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.09,
-      "nb_news": 11,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
+        "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique",
-        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA"
+        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
       ]
     },
     "L'Oréal": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.1,
-      "nb_news": 21,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
       ]
     },
     "Danone": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.05,
-      "nb_news": 20,
+      "sentiment": -0.09,
+      "nb_news": 11,
       "titres_cles": [
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "France: l'électrique dépasse un tiers des ventes de voitures neuves en juillet"
+        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
       ]
     },
     "Saint-Gobain": {
@@ -158,30 +158,30 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": -0.33,
+      "nb_news": 3,
       "titres_cles": [
-        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
-        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
+        "Ces 3 valeurs sidérurgiques européennes s’envolent après la révision de JPMorgan",
+        "BNP Paribas redistribue les cartes sur les valeurs sidérurgiques européennes"
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.11,
-      "nb_news": 19,
+      "sentiment": 0.14,
+      "nb_news": 7,
       "titres_cles": [
-        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
+        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
+        "CAC 40 : portée par les grandes valeurs françaises, la Bourse de Paris résiste aux interrogations sur la tech"
       ]
     },
     "Michelin": {
-      "sentiment": 0.06,
-      "nb_news": 16,
+      "sentiment": 0.0,
+      "nb_news": 20,
       "titres_cles": [
+        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
       ]
     },
     "Capgemini": {
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.29,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
+        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.38,
+      "nb_news": 8,
       "titres_cles": [
-        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
+        "Publicis Groupe : Résultats du premier semestre 2026"
       ]
     },
     "Bouygues": {
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -298,21 +298,21 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "La Bourse de Paris termine en hausse et poursuit sa course aux records",
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro"
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.38,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Edenred": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.45,
+      "nb_news": 22,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
       ]
     },
     "Forvia": {
