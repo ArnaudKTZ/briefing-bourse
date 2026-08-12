@@ -2728,5 +2728,65 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.22%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "TotalEnergies",
+    "cours": 75.54,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "Hermès",
+    "cours": 1644.5,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "Airbus",
+    "cours": 214.65,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "L'Oréal",
+    "cours": 388.5,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "Safran",
+    "cours": 363.2,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100 | Momentum intraday fort +2.6%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "09:00",
+    "nom": "Eurofins Scientific",
+    "cours": 70.04,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
