@@ -2838,5 +2838,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — Take-profit 8.0% | P&L : +7.47%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "14:58",
+    "nom": "Legrand",
+    "cours": 143.65,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
