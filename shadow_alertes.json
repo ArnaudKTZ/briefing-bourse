@@ -2798,5 +2798,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "11:30",
+    "nom": "Vinci",
+    "cours": 124.65,
+    "score": 80,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 80/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "11:30",
+    "nom": "L'Oréal",
+    "cours": 381.65,
+    "score": 30,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -1.60%",
+    "envoyee": false
   }
 ]
