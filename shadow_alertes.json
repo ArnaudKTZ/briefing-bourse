@@ -2818,5 +2818,25 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -1.60%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "14:01",
+    "nom": "Safran",
+    "cours": 365.5,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 84/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-12",
+    "heure": "14:01",
+    "nom": "Safran",
+    "cours": 365.5,
+    "score": 84,
+    "signal": "VENTE",
+    "raison": "Position fermée — Take-profit 8.0% | P&L : +7.47%",
+    "envoyee": false
   }
 ]

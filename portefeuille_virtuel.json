@@ -1,5 +1,5 @@
 {
-  "capital": 807.7199999999987,
+  "capital": 789.4399999999985,
   "positions": {
     "TotalEnergies": {
       "nb_actions": 26,
@@ -19,15 +19,6 @@
       "cout_total": 1737.6000000000001,
       "frais_achat": 8.69
     },
-    "Safran": {
-      "nb_actions": 5,
-      "prix_entree": 338.4,
-      "date_entree": "2026-08-03",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1692.0,
-      "frais_achat": 8.46
-    },
     "Airbus": {
       "nb_actions": 9,
       "prix_entree": 208.0,
@@ -45,6 +36,15 @@
       "source_entree": "Intraday",
       "cout_total": 1994.4,
       "frais_achat": 9.97
+    },
+    "Safran": {
+      "nb_actions": 5,
+      "prix_entree": 365.5,
+      "date_entree": "2026-08-12",
+      "heure_entree": "14:01",
+      "source_entree": "Intraday",
+      "cout_total": 1827.5,
+      "frais_achat": 9.14
     }
   },
   "historique_valeur": {
@@ -84,7 +84,7 @@
     "2026-08-07": 10338.01,
     "2026-08-10": 10370.12,
     "2026-08-11": 10408.26,
-    "2026-08-12": 10381.79
+    "2026-08-12": 10358.4
   },
   "trades": [
     {
@@ -455,6 +455,20 @@
       "pnl_pct": -1.6,
       "frais_total": 19.19,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Safran",
+      "entree": 338.4,
+      "sortie": 365.5,
+      "date_entree": "2026-08-03",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-12",
+      "heure_sortie": "14:01",
+      "source_sortie": "Intraday",
+      "pnl_pct": 7.47,
+      "frais_total": 17.6,
+      "raison_sortie": "Take-profit 8.0%"
     }
   ]
 }
