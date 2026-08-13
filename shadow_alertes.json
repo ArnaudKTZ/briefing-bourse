@@ -2898,5 +2898,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +4.9%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "14:59",
+    "nom": "Accor",
+    "cours": 46.91,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
