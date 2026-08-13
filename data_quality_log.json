@@ -425,5 +425,12 @@
     "total": 39,
     "nb_erreurs": 0,
     "tickers_erreur": []
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "08:15",
+    "total": 39,
+    "nb_erreurs": 0,
+    "tickers_erreur": []
   }
 ]
