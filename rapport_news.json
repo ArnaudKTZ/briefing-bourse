@@ -1,8 +1,8 @@
 {
   "date": "2026-08-13",
-  "heure": "10:54",
+  "heure": "14:30",
   "marche": {
-    "sentiment_global": 0.4,
+    "sentiment_global": 0.35,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
@@ -23,17 +23,17 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
       ]
     },
     "Hermès": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.4,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
-        "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
+        "Airbus va participer à l'enquête sur l'incident de vol d'un A320 d'Air India",
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
       ]
     },
     "Schneider Electric": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
+        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
       ]
     },
     "BNP Paribas": {
@@ -95,17 +95,17 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
+        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
-      "sentiment": 0.23,
-      "nb_news": 13,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -113,30 +113,30 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
-        "La Bourse de Paris orientée à la baisse",
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan"
+        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Société Générale": {
-      "sentiment": 0.0,
-      "nb_news": 16,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
+        "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel"
       ]
     },
     "Stellantis": {
@@ -158,12 +158,12 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": -0.33,
+      "nb_news": 3,
       "titres_cles": [
-        "Morgan Stanley désigne SSAB comme « premier choix », relève l’objectif sur la force des plaques américaines",
-        "La hausse des marges européennes annonce-t-elle un rebond durable de l’acier ?",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
+        "Ces 3 valeurs sidérurgiques européennes s’envolent après la révision de JPMorgan",
+        "BNP Paribas redistribue les cartes sur les valeurs sidérurgiques européennes"
       ]
     },
     "Pernod Ricard": {
@@ -176,30 +176,30 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.06,
-      "nb_news": 17,
+      "sentiment": 0.0,
+      "nb_news": 20,
       "titres_cles": [
+        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
-        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
-        "Capgemini relève ses perspectives pour 2026",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "Capgemini relève ses perspectives pour 2026"
       ]
     },
     "Renault": {
-      "sentiment": 0.18,
+      "sentiment": 0.23,
       "nb_news": 22,
       "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "Renault Group émet avec succès des obligations pour 750 millions d'euros"
       ]
     },
     "Legrand": {
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.38,
-      "nb_news": 8,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
+        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Publicis Groupe : Résultats du premier semestre 2026"
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
       ]
     },
     "Bouygues": {
@@ -262,17 +262,17 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.2,
-      "nb_news": 5,
+      "sentiment": 0.29,
+      "nb_news": 17,
       "titres_cles": [
-        "TP : Bilan semestriel du contrat de liquidité",
-        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
-        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 3 août au 7 août 2026",
+        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026"
       ]
     },
     "Alstom": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.33,
-      "nb_news": 6,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
         "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
+        "Les actions européennes reculent face aux inquiétudes sur les valorisations technologiques"
       ]
     },
     "STMicroelectronics": {
@@ -342,21 +342,21 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.43,
-      "nb_news": 21,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
-        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
+        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
       ]
     },
     "Forvia": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
       ]
     }
   },
