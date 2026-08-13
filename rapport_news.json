@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-12",
-  "heure": "14:29",
+  "date": "2026-08-13",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.55,
+    "sentiment_global": 0.5,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
       "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-      "La Bourse de Paris reste perchée sur ses niveaux records",
-      "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
-      "Bourse de Paris : double record pour le CAC 40, en séance et en clôture"
+      "La Bourse de Paris termine en baisse, le luxe sous pression",
+      "La Bourse de Paris mise sur la prudence et termine en légère baisse",
+      "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
     ]
   },
   "valeurs": {
@@ -41,26 +41,26 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.25,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
-        "Airbus va participer à l'enquête sur l'incident de vol d'un A320 d'Air India",
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
+        "L’action Airbus bondit grâce à ses nouvelles perspectives et un rachat d’actions",
+        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue"
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.09,
-      "nb_news": 11,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
+        "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique",
-        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA"
+        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.5,
-      "nb_news": 20,
+      "sentiment": 0.62,
+      "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
-        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
+        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON",
+        "Axa : performance «remarquable» au premier semestre 2026, bénéfice net de plus de 4 milliards",
+        "Bilan semestriel du contrat de liquidité de Pluxee N.V. au 30 juin 2026"
       ]
     },
     "Air Liquide": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -131,17 +131,17 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.0,
-      "nb_news": 16,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
+        "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel"
       ]
     },
     "Stellantis": {
-      "sentiment": -0.09,
-      "nb_news": 11,
+      "sentiment": -0.08,
+      "nb_news": 13,
       "titres_cles": [
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
         "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%",
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.11,
-      "nb_news": 19,
+      "sentiment": 0.14,
+      "nb_news": 7,
       "titres_cles": [
-        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
+        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
+        "CAC 40 : portée par les grandes valeurs françaises, la Bourse de Paris résiste aux interrogations sur la tech"
       ]
     },
     "Michelin": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.29,
-      "nb_news": 21,
+      "sentiment": 0.23,
+      "nb_news": 22,
       "titres_cles": [
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
         "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.6,
-      "nb_news": 5,
+      "sentiment": 1.09,
+      "nb_news": 11,
       "titres_cles": [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand : Nombre total d’actions et de droits de vote"
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.56,
-      "nb_news": 16,
+      "sentiment": 0.55,
+      "nb_news": 20,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
       ]
     },
     "Engie": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.29,
+      "nb_news": 7,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.38,
-      "nb_news": 16,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Edenred": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.43,
+      "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
       ]
     },
     "Forvia": {
@@ -366,6 +366,13 @@
       1.14,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.09,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
