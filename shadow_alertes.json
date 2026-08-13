@@ -2848,5 +2848,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "09:00",
+    "nom": "TotalEnergies",
+    "cours": 76.59,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "09:00",
+    "nom": "Schneider Electric",
+    "cours": 305.75,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "09:00",
+    "nom": "Legrand",
+    "cours": 140.7,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-13",
+    "heure": "09:00",
+    "nom": "Eurofins Scientific",
+    "cours": 69.9,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
