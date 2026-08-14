@@ -2968,5 +2968,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 94/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "14:01",
+    "nom": "Worldline",
+    "cours": 12.84,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.15%",
+    "envoyee": false
   }
 ]
