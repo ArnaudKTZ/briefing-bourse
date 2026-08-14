@@ -6,26 +6,26 @@
   "stats": {
     "J+1": {
       "n": 275,
-      "gagnants_pct": 34.9,
-      "moyenne_nette": -0.57,
+      "gagnants_pct": 35.6,
+      "moyenne_nette": -0.46,
       "cac_moyen": 0.16,
-      "edge": -0.73
+      "edge": -0.62
     },
     "J+3": {
       "n": 260,
-      "gagnants_pct": 40.0,
-      "moyenne_nette": -0.27,
+      "gagnants_pct": 40.4,
+      "moyenne_nette": -0.25,
       "cac_moyen": 0.35,
-      "edge": -0.62
+      "edge": -0.6
     },
     "J+5": {
       "n": 247,
       "gagnants_pct": 42.1,
-      "moyenne_nette": -0.22,
+      "moyenne_nette": -0.17,
       "cac_moyen": 0.42,
-      "edge": -0.64
+      "edge": -0.59
     }
   },
   "verdict": "NUISIBLES",
-  "verdict_txt": "Les alertes font -0.64 pts SOUS le CAC net de frais sur 247 cas. Les suivre aurait détruit de la valeur."
+  "verdict_txt": "Les alertes font -0.59 pts SOUS le CAC net de frais sur 247 cas. Les suivre aurait détruit de la valeur."
 }
