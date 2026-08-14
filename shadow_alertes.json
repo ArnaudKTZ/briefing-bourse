@@ -2978,5 +2978,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.15%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "14:56",
+    "nom": "Teleperformance",
+    "cours": 71.62,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.17%",
+    "envoyee": false
   }
 ]
