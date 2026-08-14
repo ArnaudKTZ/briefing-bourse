@@ -1,13 +1,13 @@
 {
   "date": "2026-08-14",
-  "heure": "06:45",
+  "heure": "08:04",
   "marche": {
-    "sentiment_global": 0.45,
+    "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
-      "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
-      "La Bourse de Paris sur la voie du repli après les records",
+      "La Bourse de Paris reste perchée sur ses niveaux records",
+      "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
       "La Bourse de Paris termine en baisse, le luxe sous pression",
       "La Bourse de Paris mise sur la prudence et termine en légère baisse"
     ]
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.47,
-      "nb_news": 19,
+      "sentiment": 0.4,
+      "nb_news": 20,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.14,
-      "nb_news": 21,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
-        "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
+        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique",
+        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA"
       ]
     },
     "L'Oréal": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
+        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
       ]
     },
     "BNP Paribas": {
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.1,
-      "nb_news": 20,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
-        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
+        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
+        "Pernod Ricard : déclaration des droits de vote - mai 2026"
       ]
     },
     "Michelin": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.08,
-      "nb_news": 12,
+      "sentiment": 0.67,
+      "nb_news": 6,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
       ]
     },
     "Publicis": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
@@ -249,11 +249,11 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 5,
       "titres_cles": [
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
+        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS"
       ]
     },
     "Eurofins Scientific": {
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.44,
-      "nb_news": 9,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
@@ -298,21 +298,21 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
+        "La Bourse de Paris termine en hausse et poursuit sa course aux records",
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.5,
-      "nb_news": 20,
+      "sentiment": 0.44,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Sopra Steria : Finalisation d’acquisition de Digital Product Simulation, expert en simulation numérique et solutions PLM"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
       ]
     },
     "Edenred": {
@@ -325,11 +325,11 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.43,
-      "nb_news": 14,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "CAC 40 : record en Bourse, «le moteur vient des espoirs d'un accord sur le détroit d’Ormuz»",
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
         "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
       ]
     },
@@ -351,12 +351,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
       ]
     }
   },
@@ -366,13 +366,6 @@
       1.12,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.08,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
