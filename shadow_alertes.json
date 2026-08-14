@@ -2908,5 +2908,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "09:00",
+    "nom": "Airbus",
+    "cours": 213.65,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "09:00",
+    "nom": "Schneider Electric",
+    "cours": 311.0,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
