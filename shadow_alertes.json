@@ -2928,5 +2928,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "10:19",
+    "nom": "Safran",
+    "cours": 360.1,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "10:19",
+    "nom": "Publicis",
+    "cours": 101.3,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "10:19",
+    "nom": "Eurofins Scientific",
+    "cours": 70.12,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
