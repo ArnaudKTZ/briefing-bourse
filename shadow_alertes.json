@@ -2958,5 +2958,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "12:34",
+    "nom": "Accor",
+    "cours": 46.88,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
   }
 ]
