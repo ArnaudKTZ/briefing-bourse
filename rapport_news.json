@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "heure": "08:04",
+  "heure": "10:47",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.4,
-      "nb_news": 20,
+      "sentiment": 0.47,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
-        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
       ]
     },
     "BNP Paribas": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": -0.1,
+      "nb_news": 20,
       "titres_cles": [
+        "Communiqué établissant le bilan semestriel du contrat de liquidité de la société Pernod Ricard",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
-        "Pernod Ricard : déclaration des droits de vote - mai 2026"
+        "Pernod Ricard chute de 3% après la dégradation de Deutsche Bank à \"vendre\""
       ]
     },
     "Michelin": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini relève ses perspectives pour 2026",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.67,
-      "nb_news": 6,
+      "sentiment": 1.08,
+      "nb_news": 12,
       "titres_cles": [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.55,
-      "nb_news": 20,
+      "sentiment": 0.56,
+      "nb_news": 16,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Bouygues Telecom franchit une étape structurante pour son développement futur en signant, aux côtés de Free-Groupe iliad et Orange, un protocole d’accord avec Altice France en vue de l’acquisition de SFR",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR"
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.85,
-      "nb_news": 20,
+      "sentiment": 0.68,
+      "nb_news": 19,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
-        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
+        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
+        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
       ]
     },
     "Vivendi": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.29,
-      "nb_news": 17,
+      "sentiment": 0.2,
+      "nb_news": 5,
       "titres_cles": [
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 3 août au 7 août 2026",
-        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 27 juillet au 31 juillet 2026"
+        "TP : Bilan semestriel du contrat de liquidité",
+        "TP: Information mensuelle relative au nombre total d’actions et de droits de vote",
+        "TP : Mise à disposition du Rapport financier semestriel au 30 juin 2026"
       ]
     },
     "Alstom": {
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.44,
+      "nb_news": 9,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
@@ -366,6 +366,13 @@
       1.12,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.08,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
