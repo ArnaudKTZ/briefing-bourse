@@ -2988,5 +2988,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.17%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-14",
+    "heure": "16:00",
+    "nom": "ArcelorMittal",
+    "cours": 74.34,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
   }
 ]
