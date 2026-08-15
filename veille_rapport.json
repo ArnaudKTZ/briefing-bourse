@@ -1,24 +1,35 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-15",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "Are Three Matrices All You Need To Beat the Market? Observable Matrix Dynamics for Portfolio Optimization",
-      "lien": "https://arxiv.org/abs/2607.27461v1",
-      "date": "2026-07-29",
-      "score": 13,
+      "titre": "Regime-Gated Residual Mixture-of-Experts for Cross-Sectional Volatility Forecasting",
+      "lien": "https://arxiv.org/abs/2608.12251v1",
+      "date": "2026-08-12",
+      "score": 16,
       "hits": [
-        "momentum",
         "cross-sectional",
-        "out-of-sample",
-        "robust",
-        "drawdown"
+        "regime",
+        "walk-forward"
       ],
-      "extrait": "We present a simple framework for dynamic portfolio management that uses nothing but daily prices, trading volumes, and market capitalizations. Its state is three fixed-size matrices built from the price history: the distance matrix of the return correlations and the transition matrices of two Markov chains that rank the S\\&P 500 names monthly by trailing return and by trailing volatility."
+      "extrait": "Financial volatility is regime dependent, yet incorporating regime information into neural networks can also destabilize training. This paper asks where such information should enter a neural cross-sectional volatility forecasting model."
+    },
+    {
+      "titre": "Beyond Co-Movement: Locality by Exposures Enables a Joint Factor-Graph Framework for Portfolio Diversification",
+      "lien": "https://arxiv.org/abs/2608.06618v1",
+      "date": "2026-08-06",
+      "score": 12,
+      "hits": [
+        "factor",
+        "regime",
+        "asset allocation",
+        "transaction cost"
+      ],
+      "extrait": "Current portfolio construction methods are either agnostic to the effects of idiosyncratic shocks (standard factor models) or to the latent data structure driving systematic returns (recent graph-based approaches). This presents an opportunity to combine the complementary market aspects captured by the factor and graph domains, allowing asset allocations to operate directly on the underlying market structure, rather…"
     },
     {
       "titre": "Cross-Sectional Heterogeneity in LSTM Networks for Financial Time Series",
-      "lien": "https://arxiv.org/abs/2608.05755v1",
+      "lien": "https://arxiv.org/abs/2608.05755v2",
       "date": "2026-08-06",
       "score": 12,
       "hits": [
@@ -28,6 +39,19 @@
         "deep learning"
       ],
       "extrait": "Predicting financial asset returns remains one of the most difficult challenges in empirical finance, driven by the low signal-to-noise ratio and the semi-strong form of market efficiency. While deep learning models, especially LSTM networks, have shown promise in capturing temporal dependencies, standard architectures often struggle to account for the cross-sectional heterogeneity of asset returns."
+    },
+    {
+      "titre": "Large Language Model-Driven Small-Capitalization Trading: Integrating Financial News Sentiment, Macroeconomic Indicators, and Technical Signals",
+      "lien": "https://arxiv.org/abs/2608.12283v1",
+      "date": "2026-08-12",
+      "score": 11,
+      "hits": [
+        "regime",
+        "risk parity",
+        "transaction cost",
+        "language model"
+      ],
+      "extrait": "Large language models can extract richer signals from financial news than fixed sentiment lexicons, and recent work has explored feeding such signals into portfolio construction. We study an uncertainty-aware construction that feeds model-predicted risk -- decomposed into aleatoric and epistemic components -- directly into the covariance matrix of portfolio allocators, rather than treating portfolio risk as fixed or…"
     },
     {
       "titre": "Velocity- and Regime-Aware Detection of Intraday Options Market Manipulation, with Explainable Attribution",
@@ -53,52 +77,27 @@
       "extrait": "Cross-correlations between financial signals are neither scale-free nor amplitude-independent: they vary with the time scale over which they are measured and with the magnitude of the fluctuations that dominate the average. We exploit this structure to construct a portfolio allocation model in which the risk functional is the signed fluctuation function of multifractal cross-correlation analysis (MFCCA), indexed by…"
     },
     {
-      "titre": "FinSMART: Financial Sentiment Analysis for Algorithmic Trading through Market-Aligned Reinforcement Learning",
-      "lien": "https://arxiv.org/abs/2607.28127v1",
-      "date": "2026-07-30",
-      "score": 10,
+      "titre": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting",
+      "lien": "https://arxiv.org/abs/2608.12259v1",
+      "date": "2026-08-12",
+      "score": 8,
       "hits": [
-        "factor",
-        "reinforcement learning",
-        "llm",
-        "language model"
-      ],
-      "extrait": "Recent advances in Generative AI have substantially improved financial sentiment analysis through post-trained financial large language models (LLMs). However, existing approaches remain confined to a market-agnostic, supervised learning paradigm that relies on limited, static and human-annotated datasets, and thus are incapable of adapting to evolving market conditions."
-    },
-    {
-      "titre": "Robust Control under Stationary Ambiguity",
-      "lien": "https://arxiv.org/abs/2608.04832v1",
-      "date": "2026-08-05",
-      "score": 7,
-      "hits": [
-        "factor",
-        "regime",
+        "cross-sectional",
+        "walk-forward",
         "robust"
       ],
-      "extrait": "Control policies optimized in simulation can perform poorly in the real system when the parameters $x$ of the simulator are estimated from limited data but the resulting parameter uncertainty is not represented inside the simulation. A common way to incorporate such ambiguity is to simulate each trajectory of the system under a randomly drawn value for $x$."
+      "extrait": "Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables such deployment without retraining."
     },
     {
-      "titre": "Can Large Language Models Execute Parent Orders?",
-      "lien": "https://arxiv.org/abs/2607.28410v1",
-      "date": "2026-07-30",
-      "score": 6,
+      "titre": "Beyond the Skew-Stickiness Ratio: Transport Geometry of Spot-Driven Variance Surface Dynamics",
+      "lien": "https://arxiv.org/abs/2608.12493v1",
+      "date": "2026-08-12",
+      "score": 7,
       "hits": [
-        "llm",
-        "language model"
+        "regime",
+        "out-of-sample"
       ],
-      "extrait": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings."
-    },
-    {
-      "titre": "AI Governance for Institutional Readiness in Finance",
-      "lien": "https://arxiv.org/abs/2608.02311v1",
-      "date": "2026-08-03",
-      "score": 5,
-      "hits": [
-        "llm",
-        "agent",
-        "drawdown"
-      ],
-      "extrait": "Agentic AI is gaining acceptance in asset management, but governance has not kept pace: 88% of surveyed finance professionals report no operational governance framework for agentic AI despite universal awareness of its deployment, and only 24 of 75 large U.S. money managers disclosing AI use in Form ADV filings report a formal governance policy."
+      "extrait": "We develop a geometric theory of arbitrage-free implied variance surface dynamics. Smile dynamics are formulated as transport flows on the admissible class of static-arbitrage-free surfaces: spot movements generate transport vector fields, and the transport velocity field v(k) unifies all classical stickiness regimes."
     }
   ]
 }
