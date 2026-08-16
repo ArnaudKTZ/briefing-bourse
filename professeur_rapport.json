@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-09",
+  "date": "2026-08-16",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -18,40 +18,33 @@
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "43.5% précision (1390 signaux)",
+      "metrique": "42.6% précision (1632 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 43.5% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 43.5,
+      "verdict": "Précision 42.6% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 42.6,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "+3.4% (26 trades)",
+      "metrique": "+1.8% (32 trades)",
       "note": "C",
       "confiance": "moyenne",
-      "verdict": "PF +3.4% fait jeu égal avec le CAC (+3.5%).",
-      "valeur_suivie": 3.4
+      "verdict": "PF +1.8% fait jeu égal avec le CAC (+2.6%).",
+      "valeur_suivie": 1.8
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-08-07)",
+      "metrique": "actif (rapport du 2026-08-14)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
-    },
-    {
-      "agent": "Agent Espion",
-      "metrique": "actif (rapport du 2026-08-03)",
-      "note": "C",
-      "confiance": "faible",
-      "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
   "evolution": {
     "Crypto DM (BTC/ETH)": 0.0,
-    "Briefing V4 (signaux)": -0.5,
-    "Portefeuille virtuel V4": 1.5
+    "Briefing V4 (signaux)": -0.9,
+    "Portefeuille virtuel V4": -1.6
   },
   "doutes_meta": [],
   "historique": [
@@ -348,6 +341,41 @@
         },
         {
           "agent": "Agent Espion",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Crypto DM (BTC/ETH)",
+          "note": "C",
+          "valeur": 1.1,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 42.6,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "C",
+          "valeur": 1.8,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
           "note": "C",
           "valeur": null,
           "meta_borne": false
