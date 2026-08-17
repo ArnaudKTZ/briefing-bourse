@@ -1,8 +1,8 @@
 {
   "date": "2026-08-17",
-  "heure": "07:21",
+  "heure": "10:24",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.14,
-      "nb_news": 21,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
-        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
-        "Capgemini relève ses perspectives pour 2026",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
+        "Capgemini relève ses perspectives pour 2026"
       ]
     },
     "Renault": {
@@ -203,12 +203,12 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.67,
-      "nb_news": 6,
+      "sentiment": 1.08,
+      "nb_news": 12,
       "titres_cles": [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
+        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
       ]
     },
     "Publicis": {
@@ -239,21 +239,21 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.68,
-      "nb_news": 19,
+      "sentiment": 0.85,
+      "nb_news": 20,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
-        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
+        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
+        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
       ]
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
-        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS"
+        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS",
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
       ]
     },
     "Eurofins Scientific": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.15,
-      "nb_news": 20,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.44,
+      "nb_news": 9,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.5,
-      "nb_news": 20,
+      "sentiment": 0.44,
+      "nb_news": 16,
       "titres_cles": [
-        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Sopra Steria : Finalisation d’acquisition de Digital Product Simulation, expert en simulation numérique et solutions PLM"
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
       ]
     },
     "Edenred": {
@@ -342,21 +342,21 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.43,
+      "sentiment": 0.29,
       "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
-        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
+        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
       ]
     },
     "Forvia": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 28 MAI 2025"
+        "FORVIA : Bilan semestriel du contrat de liquidité de FORVIA au 30 juin 2026"
       ]
     }
   },
@@ -366,6 +366,13 @@
       1.12,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
+      ]
+    ],
+    [
+      "Legrand",
+      1.08,
+      [
+        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
