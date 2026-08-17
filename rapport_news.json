@@ -1,21 +1,21 @@
 {
   "date": "2026-08-17",
-  "heure": "10:24",
+  "heure": "13:56",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
-      "La Bourse de Paris reste perchée sur ses niveaux records",
-      "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
+      "La Bourse de Paris sur la voie du repli après les records",
       "La Bourse de Paris termine en baisse, le luxe sous pression",
-      "La Bourse de Paris mise sur la prudence et termine en légère baisse"
+      "La Bourse de Paris mise sur la prudence et termine en légère baisse",
+      "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
+        "Schneider Electric bondit de 3% après avoir dévoilé ses plans de croissance et de rachat d’actions pour 2030",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique",
-        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA"
+        "Schneider Electric décroche 2,3 milliards de dollars de contrats pour les data centers IA américains"
       ]
     },
     "L'Oréal": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
+        "Communiqué de presse : T2 2026 : croissance à deux chiffres du chiffre d’affaires et forte progression du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
       ]
     },
     "BNP Paribas": {
@@ -95,17 +95,17 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.1,
+      "nb_news": 21,
       "titres_cles": [
+        "Barclays abaisse MTU, moins bien placé que Safran et Melrose",
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -113,21 +113,21 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
       ]
     },
     "Kering": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "Les actions Kering chutent de 5% après l’avertissement de Barclays",
+        "La Bourse de Paris orientée à la baisse",
+        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre"
       ]
     },
     "Société Générale": {
@@ -203,21 +203,21 @@
       ]
     },
     "Legrand": {
-      "sentiment": 1.08,
-      "nb_news": 12,
+      "sentiment": 0.67,
+      "nb_news": 6,
       "titres_cles": [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters",
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand atteint un niveau record après un accord de 1,1 milliard $ pour acquérir Avtron Power"
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
       ]
     },
     "Publicis": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.5,
+      "nb_news": 8,
       "titres_cles": [
-        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
+        "Infobip et Digitas Middle East annoncent l'extension de leur partenariat stratégique afin de renforcer l'engagement client basé sur l'IA pour les marques internationales"
       ]
     },
     "Bouygues": {
@@ -230,21 +230,21 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "JPMorgan devient plus optimiste sur les services publics européens, relève une valeur",
+        "Engie chute après la dégradation de JPMorgan qui alerte sur les perspectives"
       ]
     },
     "Orange": {
-      "sentiment": 0.85,
-      "nb_news": 20,
+      "sentiment": 0.68,
+      "nb_news": 19,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Orange : Orange réalise au 1er semestre une croissance record du chiffre d'affaires à +3,5% et de l'EBITDAaL à +5,0%",
-        "Orange: Orange annonce les résultats de son offre de rachat sur des obligations hybrides existantes"
+        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
+        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
       ]
     },
     "Vivendi": {
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.44,
-      "nb_news": 9,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.44,
-      "nb_news": 16,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "Sopra Steria : Finalisation d’acquisition de Digital Product Simulation, expert en simulation numérique et solutions PLM"
       ]
     },
     "Edenred": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.27,
-      "nb_news": 11,
+      "sentiment": 0.25,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€",
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
@@ -366,13 +366,6 @@
       1.12,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ],
-    [
-      "Legrand",
-      1.08,
-      [
-        "Jefferies relève la note de Legrand à l’achat en raison de la croissance des datacenters"
       ]
     ]
   ]
