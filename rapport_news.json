@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "heure": "06:45",
+  "heure": "07:21",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.14,
+      "nb_news": 21,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.1,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
-        "Airbus va participer à l'enquête sur l'incident de vol d'un A320 d'Air India",
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
-        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
+        "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
+        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue",
+        "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils"
       ]
     },
     "Schneider Electric": {
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.71,
-      "nb_news": 14,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies accélère son développement dans les services aux infrastructures digitales en lançant une offre publique d'achat sur All for One"
+        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
       ]
     },
     "Kering": {
@@ -176,30 +176,30 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.0,
-      "nb_news": 20,
+      "sentiment": 0.06,
+      "nb_news": 16,
       "titres_cles": [
-        "Le chef Jean Imbert, soupçonné de violences conjugales, \"entendu\" par les enquêteurs",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
+        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Les actions des services informatiques chutent après qu’Accenture a revu ses prévisions à la baisse, Capgemini perd 8%",
+        "Capgemini relève ses perspectives pour 2026",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Renault": {
-      "sentiment": 0.18,
+      "sentiment": 0.32,
       "nb_news": 22,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault Group obtient gain de cause  dans la procédure en Angleterre et au Pays de Galles relative aux émissions de ses véhicules Diesel"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
+        "Barclays abaisse la note de Publicis après les résultats du T4, l’action chute",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Infobip et Digitas Middle East annoncent l'extension de leur partenariat stratégique afin de renforcer l'engagement client basé sur l'IA pour les marques internationales"
+        "Mise en œuvre d’un programme de rachat d’actions de 175 millions d’euros"
       ]
     },
     "Bouygues": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
         "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.44,
-      "nb_news": 16,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
+        "Dassault Systèmes : résultats solides au 2ème trimestre et confirmation des objectifs annuels - Lancement de solutions d’IA native et expansion dans les Sciences de la vie avec l'acquisition d’ArisGlobal",
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "Sopra Steria : Finalisation d’acquisition de Digital Product Simulation, expert en simulation numérique et solutions PLM"
       ]
     },
     "Edenred": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.29,
+      "sentiment": 0.43,
       "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
+        "Thales atteint un plus haut de trois mois après la hausse de recommandation de Barclays"
       ]
     },
     "Forvia": {
