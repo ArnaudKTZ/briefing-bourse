@@ -1,14 +1,4 @@
 {
-  "2026-08-07_Publicis": "09:00",
-  "2026-08-07_Edenred": "09:00",
-  "2026-08-07_Airbus": "10:17",
-  "2026-08-07_L'Oréal": "10:17",
-  "2026-08-07_Safran": "10:17",
-  "2026-08-07_Pernod Ricard": "10:17",
-  "2026-08-07_Capgemini": "10:17",
-  "2026-08-07_Schneider Electric": "11:30",
-  "2026-08-07_Eurofins Scientific": "11:30",
-  "2026-08-07_Dassault Systèmes": "16:53",
   "2026-08-10_Schneider Electric": "09:00",
   "2026-08-10_Hermès": "10:43",
   "2026-08-10_Airbus": "12:44",
@@ -49,5 +39,8 @@
   "2026-08-14_Worldline": "14:01",
   "2026-08-14_Teleperformance": "14:56",
   "2026-08-14_ArcelorMittal": "16:00",
-  "2026-08-14_TotalEnergies": "16:52"
+  "2026-08-14_TotalEnergies": "16:52",
+  "2026-08-17_Safran": "09:00",
+  "2026-08-17_ArcelorMittal": "09:00",
+  "2026-08-17_Eurofins Scientific": "09:00"
 }
