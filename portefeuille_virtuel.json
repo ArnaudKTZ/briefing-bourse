@@ -1,15 +1,6 @@
 {
-  "capital": 662.7799999999988,
+  "capital": 605.1699999999987,
   "positions": {
-    "Airbus": {
-      "nb_actions": 9,
-      "prix_entree": 208.0,
-      "date_entree": "2026-08-06",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1872.0,
-      "frais_achat": 9.36
-    },
     "Vinci": {
       "nb_actions": 16,
       "prix_entree": 124.65,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1866.0,
       "frais_achat": 9.33
+    },
+    "Société Générale": {
+      "nb_actions": 24,
+      "prix_entree": 82.36,
+      "date_entree": "2026-08-17",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1976.6399999999999,
+      "frais_achat": 9.88
     }
   },
   "historique_valeur": {
@@ -86,7 +86,8 @@
     "2026-08-11": 10408.26,
     "2026-08-12": 10314.12,
     "2026-08-13": 10149.99,
-    "2026-08-14": 10184.08
+    "2026-08-14": 10184.08,
+    "2026-08-17": 10126.59
   },
   "trades": [
     {
@@ -510,6 +511,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -2.95,
       "frais_total": 16.24
+    },
+    {
+      "nom": "Airbus",
+      "entree": 208.0,
+      "sortie": 215.4,
+      "date_entree": "2026-08-06",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-17",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 3.04,
+      "frais_total": 19.05
     }
   ]
 }
