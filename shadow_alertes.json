@@ -3128,5 +3128,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.22%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-18",
+    "heure": "16:33",
+    "nom": "Sanofi",
+    "cours": 77.89,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 87/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-18",
+    "heure": "16:33",
+    "nom": "Saint-Gobain",
+    "cours": 79.74,
+    "score": 37,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -5.0% | P&L : -5.48%",
+    "envoyee": false
   }
 ]
