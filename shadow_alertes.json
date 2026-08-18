@@ -3108,5 +3108,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 94/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-18",
+    "heure": "16:00",
+    "nom": "Sanofi",
+    "cours": 78.13,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-18",
+    "heure": "16:00",
+    "nom": "Capgemini",
+    "cours": 108.4,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.22%",
+    "envoyee": false
   }
 ]
