@@ -1,8 +1,8 @@
 {
   "date": "2026-08-18",
-  "heure": "07:13",
+  "heure": "10:07",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.47,
-      "nb_news": 19,
+      "sentiment": 0.5,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
