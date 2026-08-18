@@ -17522,8 +17522,8 @@
         "death_cross": false
       },
       "Schneider Electric": {
-        "signal": "ACHETER",
-        "score": 73,
+        "signal": "SURVEILLER",
+        "score": 63,
         "prix": 306.4,
         "secteur": "Industrie/Défense",
         "rsi": 66.7,
@@ -17886,7 +17886,7 @@
       },
       "Thales": {
         "signal": "SURVEILLER",
-        "score": 55,
+        "score": 45,
         "prix": 270.4,
         "secteur": "Industrie/Défense",
         "rsi": 72.8,
@@ -17909,44 +17909,44 @@
     }
   },
   "stats": {
-    "total": 1710,
-    "corrects": 734,
-    "precision": 42.9,
-    "acheter_total": 1225,
+    "total": 1742,
+    "corrects": 745,
+    "precision": 42.8,
+    "acheter_total": 1246,
     "acheter_corrects": 523,
-    "eviter_total": 485,
-    "eviter_corrects": 211,
+    "eviter_total": 496,
+    "eviter_corrects": 222,
     "par_secteur": {
       "Luxe": {
-        "total": 216,
-        "corrects": 79
+        "total": 220,
+        "corrects": 83
       },
       "Santé": {
-        "total": 141,
-        "corrects": 59
+        "total": 143,
+        "corrects": 60
       },
       "Conso/Autre": {
-        "total": 273,
-        "corrects": 114
+        "total": 278,
+        "corrects": 116
       },
       "Industrie/Défense": {
-        "total": 474,
-        "corrects": 193
+        "total": 485,
+        "corrects": 196
       },
       "Télécom/Média": {
-        "total": 181,
+        "total": 184,
         "corrects": 88
       },
       "Énergie": {
-        "total": 98,
-        "corrects": 53
+        "total": 100,
+        "corrects": 54
       },
       "Tech": {
-        "total": 156,
+        "total": 160,
         "corrects": 63
       },
       "Banques/Finance": {
-        "total": 171,
+        "total": 172,
         "corrects": 85
       }
     }
