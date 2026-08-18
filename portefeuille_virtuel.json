@@ -1,5 +1,5 @@
 {
-  "capital": 588.8299999999986,
+  "capital": 456.68999999999846,
   "positions": {
     "Safran": {
       "nb_actions": 5,
@@ -37,14 +37,14 @@
       "cout_total": 1976.6399999999999,
       "frais_achat": 9.88
     },
-    "Saint-Gobain": {
-      "nb_actions": 23,
-      "prix_entree": 83.94,
-      "date_entree": "2026-08-17",
-      "heure_entree": "05:34",
-      "source_entree": "Briefing",
-      "cout_total": 1930.62,
-      "frais_achat": 9.65
+    "Sanofi": {
+      "nb_actions": 25,
+      "prix_entree": 77.89,
+      "date_entree": "2026-08-18",
+      "heure_entree": "16:33",
+      "source_entree": "Intraday",
+      "cout_total": 1947.25,
+      "frais_achat": 9.74
     }
   },
   "historique_valeur": {
@@ -88,7 +88,7 @@
     "2026-08-13": 10149.99,
     "2026-08-14": 10184.08,
     "2026-08-17": 10084.67,
-    "2026-08-18": 9942.13
+    "2026-08-18": 9902.04
   },
   "trades": [
     {
@@ -538,6 +538,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": -3.53,
       "frais_total": 19.64
+    },
+    {
+      "nom": "Saint-Gobain",
+      "entree": 83.94,
+      "sortie": 79.74,
+      "date_entree": "2026-08-17",
+      "heure_entree": "05:34",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-18",
+      "heure_sortie": "16:33",
+      "source_sortie": "Intraday",
+      "pnl_pct": -5.48,
+      "frais_total": 18.82,
+      "raison_sortie": "Stop-loss -5.0%"
     }
   ]
 }
