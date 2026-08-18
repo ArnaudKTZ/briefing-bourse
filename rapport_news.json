@@ -1,8 +1,8 @@
 {
   "date": "2026-08-18",
-  "heure": "10:07",
+  "heure": "13:57",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse et poursuit sa course aux records",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.31,
+      "nb_news": 13,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.33,
+      "nb_news": 15,
       "titres_cles": [
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
@@ -221,13 +221,9 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.5,
-      "nb_news": 14,
-      "titres_cles": [
-        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Engie": {
       "sentiment": 0.29,
