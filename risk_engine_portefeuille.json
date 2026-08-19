@@ -1,5 +1,5 @@
 {
-  "capital": 595.7799999999995,
+  "capital": 1757.5899999999997,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -60,18 +60,6 @@
       "stop_pct": 0.1138,
       "tp_pct": 0.2276,
       "score_entree": 82
-    },
-    "Capgemini": {
-      "nb_actions": 11,
-      "prix_entree": 109.35,
-      "date_entree": "2026-08-05",
-      "heure_entree": "14:01",
-      "secteur": "Tech",
-      "cout_total": 1202.85,
-      "frais_achat": 6.01,
-      "stop_pct": 0.0826,
-      "tp_pct": 0.1652,
-      "score_entree": 82
     }
   },
   "historique_valeur": {
@@ -94,7 +82,8 @@
     "2026-08-13": 10382.42,
     "2026-08-14": 10413.4,
     "2026-08-17": 10338.07,
-    "2026-08-18": 10186.08
+    "2026-08-18": 10186.08,
+    "2026-08-19": 10260.98
   },
   "trades": [
     {
@@ -129,6 +118,17 @@
       "pnl_pct": 11.87,
       "frais_total": 17.12,
       "raison_sortie": "Take-profit 12.4% (ATR)"
+    },
+    {
+      "nom": "Capgemini",
+      "entree": 109.35,
+      "sortie": 106.15,
+      "date_entree": "2026-08-05",
+      "date_sortie": "2026-08-19",
+      "heure_sortie": "09:00",
+      "pnl_pct": -3.41,
+      "frais_total": 11.85,
+      "raison_sortie": "ÉVITER intraday"
     }
   ],
   "regime_dernier": "haussier"
