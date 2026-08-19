@@ -1,5 +1,5 @@
 {
-  "capital": 1416.2199999999996,
+  "capital": 700.4499999999994,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -37,18 +37,6 @@
       "tp_pct": 0.1004,
       "score_entree": 85
     },
-    "Société Générale": {
-      "nb_actions": 23,
-      "prix_entree": 78.63,
-      "date_entree": "2026-07-30",
-      "heure_entree": "11:30",
-      "secteur": "Banques/Finance",
-      "cout_total": 1808.49,
-      "frais_achat": 9.04,
-      "stop_pct": 0.0528,
-      "tp_pct": 0.1056,
-      "score_entree": 96
-    },
     "Teleperformance": {
       "nb_actions": 17,
       "prix_entree": 69.46,
@@ -60,6 +48,18 @@
       "stop_pct": 0.0814,
       "tp_pct": 0.1628,
       "score_entree": 88
+    },
+    "Eurofins Scientific": {
+      "nb_actions": 35,
+      "prix_entree": 70.66,
+      "date_entree": "2026-08-19",
+      "heure_entree": "16:33",
+      "secteur": "Santé",
+      "cout_total": 2473.1,
+      "frais_achat": 12.37,
+      "stop_pct": 0.032,
+      "tp_pct": 0.064,
+      "score_entree": 93
     }
   },
   "historique_valeur": {
@@ -83,7 +83,7 @@
     "2026-08-14": 10413.4,
     "2026-08-17": 10338.07,
     "2026-08-18": 10186.08,
-    "2026-08-19": 10039.13
+    "2026-08-19": 10012.28
   },
   "trades": [
     {
@@ -139,6 +139,17 @@
       "heure_sortie": "11:31",
       "pnl_pct": -3.53,
       "frais_total": 8.63,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Société Générale",
+      "entree": 78.63,
+      "sortie": 77.33,
+      "date_entree": "2026-07-30",
+      "date_sortie": "2026-08-19",
+      "heure_sortie": "16:33",
+      "pnl_pct": -2.14,
+      "frais_total": 17.93,
       "raison_sortie": "ÉVITER intraday"
     }
   ],
