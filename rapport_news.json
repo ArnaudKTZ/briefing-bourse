@@ -1,21 +1,21 @@
 {
-  "date": "2026-08-18",
-  "heure": "13:57",
+  "date": "2026-08-19",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
-      "La Bourse de Paris termine en hausse et poursuit sa course aux records",
       "La Bourse de Paris reste perchée sur ses niveaux records",
       "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
       "La Bourse de Paris termine en baisse",
-      "La Bourse de Paris termine en baisse, le luxe sous pression"
+      "La Bourse de Paris termine en baisse, le luxe sous pression",
+      "La Bourse de Paris mise sur la prudence et termine en légère baisse"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.31,
-      "nb_news": 13,
+      "sentiment": 0.36,
+      "nb_news": 11,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": 0.11,
+      "nb_news": 9,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.06,
-      "nb_news": 16,
+      "nb_news": 17,
       "titres_cles": [
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
         "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
@@ -221,9 +221,13 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.5,
+      "nb_news": 14,
+      "titres_cles": [
+        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+      ]
     },
     "Engie": {
       "sentiment": 0.29,
@@ -294,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.38,
+      "nb_news": 8,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
