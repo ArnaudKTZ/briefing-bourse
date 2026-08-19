@@ -1,15 +1,15 @@
 {
   "date": "2026-08-19",
-  "heure": "10:15",
+  "heure": "13:57",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris reste perchée sur ses niveaux records",
-      "CAC 40 : la Bourse marque le pas après les records de la semaine passée, le pétrole sous surveillance",
       "La Bourse de Paris termine en baisse",
       "La Bourse de Paris termine en baisse, le luxe sous pression",
-      "La Bourse de Paris mise sur la prudence et termine en légère baisse"
+      "La Bourse de Paris mise sur la prudence et termine en légère baisse",
+      "La Bourse de Paris sur la voie du repli après les records"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.5,
+      "sentiment": 0.44,
       "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.06,
+      "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.11,
-      "nb_news": 9,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
         "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.32,
-      "nb_news": 22,
+      "sentiment": 0.29,
+      "nb_news": 21,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.38,
-      "nb_news": 8,
+      "sentiment": 0.33,
+      "nb_news": 9,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.29,
-      "nb_news": 21,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
