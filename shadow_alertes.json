@@ -3208,5 +3208,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "16:00",
+    "nom": "Schneider Electric",
+    "cours": 294.85,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 92/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "16:00",
+    "nom": "Renault",
+    "cours": 29.0,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 84/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "16:00",
+    "nom": "Schneider Electric",
+    "cours": 294.85,
+    "score": 92,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -5.2% | P&L : -5.67%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "16:00",
+    "nom": "Société Générale",
+    "cours": 77.79,
+    "score": 41,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -5.5% | P&L : -6.02%",
+    "envoyee": false
   }
 ]
