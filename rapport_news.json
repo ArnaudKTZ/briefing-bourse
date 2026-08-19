@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "heure": "07:13",
+  "heure": "10:15",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.33,
-      "nb_news": 15,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
@@ -149,12 +149,12 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.75,
-      "nb_news": 8,
+      "sentiment": 0.78,
+      "nb_news": 9,
       "titres_cles": [
         "Saint-Gobain profite de «hausses de prix réussies» ! En Bourse, les actions sont-elles à acheter ?",
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
-        "UBS dégrade Saint-Gobain et relève Rockwool face au ralentissement du marché américain de la toiture"
+        "Les Bourses européennes autour de l'équilibre face à la hausse des taux"
       ]
     },
     "ArcelorMittal": {
