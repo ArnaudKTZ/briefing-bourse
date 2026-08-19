@@ -3148,5 +3148,45 @@
     "signal": "VENTE",
     "raison": "Position fermée — Stop-loss -5.0% | P&L : -5.48%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "09:42",
+    "nom": "TotalEnergies",
+    "cours": 77.88,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "09:42",
+    "nom": "Schneider Electric",
+    "cours": 295.6,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "09:42",
+    "nom": "Safran",
+    "cours": 357.7,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-19",
+    "heure": "09:42",
+    "nom": "Renault",
+    "cours": 28.83,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
