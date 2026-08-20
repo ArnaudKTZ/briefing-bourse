@@ -18395,13 +18395,13 @@
         "death_cross": false
       },
       "L'Oréal": {
-        "signal": "ÉVITER",
-        "score": 34,
+        "signal": "SURVEILLER",
+        "score": 39,
         "prix": 375.4,
         "secteur": "Luxe",
-        "rsi": 44.2,
+        "rsi": 44.3,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (24.0%)",
+        "boll_zone": "dans les bandes (25.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18410,9 +18410,9 @@
         "score": 100,
         "prix": 77.67,
         "secteur": "Santé",
-        "rsi": 57.9,
+        "rsi": 57.3,
         "macd": "haussier",
-        "boll_zone": "dans les bandes (75.0%)",
+        "boll_zone": "dans les bandes (74.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18429,14 +18429,14 @@
       },
       "Air Liquide": {
         "signal": "SURVEILLER",
-        "score": 64,
+        "score": 44,
         "prix": 167.04,
         "secteur": "Santé",
-        "rsi": 35.7,
+        "rsi": 35.3,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (7.0%)",
+        "boll_zone": "dans les bandes (8.0%)",
         "golden_cross": false,
-        "death_cross": false
+        "death_cross": true
       },
       "Safran": {
         "signal": "ÉVITER",
@@ -18465,9 +18465,9 @@
         "score": 28,
         "prix": 119.4,
         "secteur": "Industrie/Défense",
-        "rsi": 40.3,
+        "rsi": 40.0,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (29.0%)",
+        "boll_zone": "dans les bandes (31.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18476,9 +18476,9 @@
         "score": 6,
         "prix": 255.7,
         "secteur": "Luxe",
-        "rsi": 42.5,
+        "rsi": 41.9,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (32.0%)",
+        "boll_zone": "dans les bandes (29.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18487,9 +18487,9 @@
         "score": 47,
         "prix": 80.05,
         "secteur": "Banques/Finance",
-        "rsi": 49.9,
+        "rsi": 49.3,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (43.0%)",
+        "boll_zone": "dans les bandes (41.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18498,9 +18498,9 @@
         "score": 27,
         "prix": 4.38,
         "secteur": "Conso/Autre",
-        "rsi": 28.8,
+        "rsi": 28.1,
         "macd": "baissier",
-        "boll_zone": "SOUS bande inf (survendu, -3.0%)",
+        "boll_zone": "SOUS bande inf (survendu, -4.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18520,7 +18520,7 @@
         "score": 60,
         "prix": 74.59,
         "secteur": "Industrie/Défense",
-        "rsi": 62.8,
+        "rsi": 62.6,
         "macd": "baissier",
         "boll_zone": "dans les bandes (74.0%)",
         "golden_cross": false,
@@ -18539,12 +18539,12 @@
       },
       "Michelin": {
         "signal": "ÉVITER",
-        "score": 26,
+        "score": 31,
         "prix": 34.02,
         "secteur": "Conso/Autre",
-        "rsi": 45.1,
+        "rsi": 44.7,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (3.0%)",
+        "boll_zone": "dans les bandes (2.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18564,7 +18564,7 @@
         "score": 70,
         "prix": 28.59,
         "secteur": "Conso/Autre",
-        "rsi": 60.6,
+        "rsi": 59.8,
         "macd": "haussier",
         "boll_zone": "dans les bandes (71.0%)",
         "golden_cross": false,
@@ -18608,7 +18608,7 @@
         "score": 59,
         "prix": 25.65,
         "secteur": "Énergie",
-        "rsi": 38.1,
+        "rsi": 38.2,
         "macd": "baissier",
         "boll_zone": "dans les bandes (16.0%)",
         "golden_cross": false,
@@ -18670,24 +18670,24 @@
         "death_cross": false
       },
       "Worldline": {
-        "signal": "ÉVITER",
-        "score": 18,
+        "signal": "SURVEILLER",
+        "score": 38,
         "prix": 12.04,
         "secteur": "Tech",
-        "rsi": 53.7,
-        "macd": "baissier",
-        "boll_zone": "dans les bandes (57.0%)",
+        "rsi": 54.0,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (59.0%)",
         "golden_cross": false,
         "death_cross": false
       },
       "Veolia": {
         "signal": "SURVEILLER",
-        "score": 61,
+        "score": 54,
         "prix": 33.84,
         "secteur": "Conso/Autre",
-        "rsi": 34.7,
+        "rsi": 35.2,
         "macd": "baissier",
-        "boll_zone": "dans les bandes (17.0%)",
+        "boll_zone": "dans les bandes (16.0%)",
         "golden_cross": false,
         "death_cross": false
       },
@@ -18704,10 +18704,10 @@
       },
       "Dassault Systèmes": {
         "signal": "SURVEILLER",
-        "score": 53,
+        "score": 63,
         "prix": 21.9,
         "secteur": "Tech",
-        "rsi": 62.5,
+        "rsi": 62.8,
         "macd": "baissier",
         "boll_zone": "dans les bandes (72.0%)",
         "golden_cross": false,
@@ -18751,7 +18751,7 @@
         "score": 35,
         "prix": 266.0,
         "secteur": "Industrie/Défense",
-        "rsi": 66.2,
+        "rsi": 65.8,
         "macd": "haussier",
         "boll_zone": "dans les bandes (69.0%)",
         "golden_cross": false,
@@ -18771,40 +18771,40 @@
     }
   },
   "stats": {
-    "total": 1811,
-    "corrects": 778,
-    "precision": 43.0,
-    "acheter_total": 1287,
-    "acheter_corrects": 533,
-    "eviter_total": 524,
-    "eviter_corrects": 245,
+    "total": 1828,
+    "corrects": 787,
+    "precision": 43.1,
+    "acheter_total": 1294,
+    "acheter_corrects": 537,
+    "eviter_total": 534,
+    "eviter_corrects": 250,
     "par_secteur": {
       "Luxe": {
-        "total": 234,
-        "corrects": 92
+        "total": 238,
+        "corrects": 93
       },
       "Santé": {
-        "total": 147,
-        "corrects": 61
+        "total": 149,
+        "corrects": 62
       },
       "Conso/Autre": {
-        "total": 290,
-        "corrects": 121
+        "total": 292,
+        "corrects": 122
       },
       "Industrie/Défense": {
-        "total": 502,
-        "corrects": 207
+        "total": 507,
+        "corrects": 210
       },
       "Télécom/Média": {
-        "total": 192,
-        "corrects": 92
+        "total": 194,
+        "corrects": 94
       },
       "Énergie": {
-        "total": 103,
-        "corrects": 57
+        "total": 104,
+        "corrects": 58
       },
       "Tech": {
-        "total": 167,
+        "total": 168,
         "corrects": 63
       },
       "Banques/Finance": {
