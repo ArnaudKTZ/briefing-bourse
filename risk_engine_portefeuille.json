@@ -1,5 +1,5 @@
 {
-  "capital": 700.4499999999994,
+  "capital": 127.36999999999898,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -25,18 +25,6 @@
       "tp_pct": 0.0904,
       "score_entree": 91
     },
-    "Airbus": {
-      "nb_actions": 9,
-      "prix_entree": 203.85,
-      "date_entree": "2026-07-24",
-      "heure_entree": "11:24",
-      "secteur": "Industrie/Défense",
-      "cout_total": 1834.65,
-      "frais_achat": 9.17,
-      "stop_pct": 0.0502,
-      "tp_pct": 0.1004,
-      "score_entree": 85
-    },
     "Teleperformance": {
       "nb_actions": 17,
       "prix_entree": 69.46,
@@ -60,6 +48,18 @@
       "stop_pct": 0.032,
       "tp_pct": 0.064,
       "score_entree": 93
+    },
+    "TotalEnergies": {
+      "nb_actions": 31,
+      "prix_entree": 77.85,
+      "date_entree": "2026-08-20",
+      "heure_entree": "09:46",
+      "secteur": "Énergie",
+      "cout_total": 2413.35,
+      "frais_achat": 12.07,
+      "stop_pct": 0.0402,
+      "tp_pct": 0.0804,
+      "score_entree": 89
     }
   },
   "historique_valeur": {
@@ -84,7 +84,7 @@
     "2026-08-17": 10338.07,
     "2026-08-18": 10186.08,
     "2026-08-19": 10012.28,
-    "2026-08-20": 10024.99
+    "2026-08-20": 9991.4
   },
   "trades": [
     {
@@ -151,6 +151,17 @@
       "heure_sortie": "16:33",
       "pnl_pct": -2.14,
       "frais_total": 17.93,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Airbus",
+      "entree": 203.85,
+      "sortie": 206.85,
+      "date_entree": "2026-07-24",
+      "date_sortie": "2026-08-20",
+      "heure_sortie": "09:46",
+      "pnl_pct": 0.96,
+      "frais_total": 18.48,
       "raison_sortie": "ÉVITER intraday"
     }
   ],
