@@ -1,15 +1,6 @@
 {
-  "capital": 314.7599999999991,
+  "capital": 66.83999999999924,
   "positions": {
-    "Safran": {
-      "nb_actions": 5,
-      "prix_entree": 365.5,
-      "date_entree": "2026-08-12",
-      "heure_entree": "14:01",
-      "source_entree": "Intraday",
-      "cout_total": 1827.5,
-      "frais_achat": 9.14
-    },
     "TotalEnergies": {
       "nb_actions": 26,
       "prix_entree": 76.59,
@@ -45,6 +36,15 @@
       "source_entree": "Intraday",
       "cout_total": 1972.0,
       "frais_achat": 9.86
+    },
+    "Teleperformance": {
+      "nb_actions": 29,
+      "prix_entree": 68.78,
+      "date_entree": "2026-08-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1994.6200000000001,
+      "frais_achat": 9.97
     }
   },
   "historique_valeur": {
@@ -89,7 +89,8 @@
     "2026-08-14": 10184.08,
     "2026-08-17": 10084.67,
     "2026-08-18": 9902.04,
-    "2026-08-19": 9810.44
+    "2026-08-19": 9810.44,
+    "2026-08-20": 9717.33
   },
   "trades": [
     {
@@ -581,6 +582,19 @@
       "pnl_pct": -6.02,
       "frais_total": 19.21,
       "raison_sortie": "Stop-loss -5.5%"
+    },
+    {
+      "nom": "Safran",
+      "entree": 365.5,
+      "sortie": 353.1,
+      "date_entree": "2026-08-12",
+      "heure_entree": "14:01",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-08-20",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -3.88,
+      "frais_total": 17.97
     }
   ]
 }
