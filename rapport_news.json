@@ -1,15 +1,15 @@
 {
   "date": "2026-08-20",
-  "heure": "10:17",
+  "heure": "13:58",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
-      "La Bourse de Paris reste perchée sur ses niveaux records",
+      "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
       "La Bourse de Paris termine en baisse",
       "La Bourse de Paris termine en baisse, le luxe sous pression",
-      "La Bourse de Paris mise sur la prudence et termine en légère baisse",
-      "La Bourse de Paris sur la voie du repli après les records"
+      "La Bourse de Paris sur la voie du repli après les records",
+      "CAC 40 : la Bourse de Paris plombée par le Moyen-Orient et la hausse des prix du pétrole"
     ]
   },
   "valeurs": {
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.06,
+      "sentiment": 0.11,
       "nb_news": 18,
       "titres_cles": [
+        "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
-        "Michelin finalise l’acquisition de Tex Tech Industries et renforce son activité Polymer Composite Solutions"
+        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
       ]
     },
     "Capgemini": {
