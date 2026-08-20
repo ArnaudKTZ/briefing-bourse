@@ -3258,5 +3258,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-20",
+    "heure": "09:00",
+    "nom": "TotalEnergies",
+    "cours": 76.9,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-20",
+    "heure": "09:00",
+    "nom": "Sanofi",
+    "cours": 77.67,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
