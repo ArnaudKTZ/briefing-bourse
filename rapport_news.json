@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "heure": "07:15",
+  "heure": "10:17",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.06,
-      "nb_news": 17,
+      "sentiment": 0.0,
+      "nb_news": 16,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.06,
-      "nb_news": 17,
+      "nb_news": 18,
       "titres_cles": [
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
         "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich",
