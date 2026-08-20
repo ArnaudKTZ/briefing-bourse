@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "heure": "06:45",
+  "heure": "07:15",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -221,9 +221,13 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.5,
+      "nb_news": 14,
+      "titres_cles": [
+        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+      ]
     },
     "Engie": {
       "sentiment": 0.29,
