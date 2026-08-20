@@ -1,16 +1,4 @@
 {
-  "2026-08-12_TotalEnergies": "09:00",
-  "2026-08-12_Hermès": "09:00",
-  "2026-08-12_Airbus": "09:00",
-  "2026-08-12_L'Oréal": "09:00",
-  "2026-08-12_Safran": "09:00",
-  "2026-08-12_Eurofins Scientific": "09:00",
-  "2026-08-12_Schneider Electric": "10:22",
-  "2026-08-12_Vinci_achat": "11:30",
-  "2026-08-12_L'Oréal_vente": "11:30",
-  "2026-08-12_Safran_achat": "14:01",
-  "2026-08-12_Safran_vente": "14:01",
-  "2026-08-12_Legrand": "14:58",
   "2026-08-13_TotalEnergies": "09:00",
   "2026-08-13_Schneider Electric": "09:00",
   "2026-08-13_Legrand": "09:00",
@@ -51,5 +39,7 @@
   "2026-08-19_Renault_achat": "16:00",
   "2026-08-19_Schneider Electric_vente": "16:00",
   "2026-08-19_Société Générale_vente": "16:00",
-  "2026-08-19_Eurofins Scientific": "16:33"
+  "2026-08-19_Eurofins Scientific": "16:33",
+  "2026-08-20_TotalEnergies": "09:00",
+  "2026-08-20_Sanofi": "09:00"
 }
