@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-20",
-  "heure": "13:58",
+  "date": "2026-08-21",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en recul",
       "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
       "La Bourse de Paris termine en baisse",
       "La Bourse de Paris termine en baisse, le luxe sous pression",
-      "La Bourse de Paris sur la voie du repli après les records",
-      "CAC 40 : la Bourse de Paris plombée par le Moyen-Orient et la hausse des prix du pétrole"
+      "La Bourse de Paris sur la voie du repli après les records"
     ]
   },
   "valeurs": {
@@ -41,21 +41,21 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.3,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
-        "Les actions Airbus bondissent de 6% après un rachat de 5 mds€ et un objectif d’EBIT 2029",
         "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue",
-        "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils"
+        "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
+        "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long"
       ]
     },
     "Schneider Electric": {
       "sentiment": 0.07,
-      "nb_news": 14,
+      "nb_news": 15,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique",
-        "Schneider Electric rachète Cognite pour 3,1 milliards de dollars afin d’accélérer dans l’IA"
+        "Bourse : Airbus, Schneider Electric, Air liquide, Safran, Total… Les actions de la souveraineté ont du potentiel",
+        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique"
       ]
     },
     "L'Oréal": {
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.12,
-      "nb_news": 8,
+      "sentiment": 1.0,
+      "nb_news": 9,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
@@ -363,7 +363,7 @@
   "signaux_forts": [
     [
       "Air Liquide",
-      1.12,
+      1.0,
       [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
       ]
