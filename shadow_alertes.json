@@ -3288,5 +3288,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-21",
+    "heure": "09:01",
+    "nom": "Sanofi",
+    "cours": 78.56,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-21",
+    "heure": "09:01",
+    "nom": "Renault",
+    "cours": 29.19,
+    "score": 82,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.1%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-21",
+    "heure": "09:01",
+    "nom": "Eurofins Scientific",
+    "cours": 70.66,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-21",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 70.68,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100 | Momentum intraday fort +2.61%",
+    "envoyee": false
   }
 ]
