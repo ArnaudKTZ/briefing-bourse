@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-15",
+  "date": "2026-08-22",
   "nb_articles": 40,
   "top": [
     {
@@ -15,32 +15,6 @@
       "extrait": "Financial volatility is regime dependent, yet incorporating regime information into neural networks can also destabilize training. This paper asks where such information should enter a neural cross-sectional volatility forecasting model."
     },
     {
-      "titre": "Beyond Co-Movement: Locality by Exposures Enables a Joint Factor-Graph Framework for Portfolio Diversification",
-      "lien": "https://arxiv.org/abs/2608.06618v1",
-      "date": "2026-08-06",
-      "score": 12,
-      "hits": [
-        "factor",
-        "regime",
-        "asset allocation",
-        "transaction cost"
-      ],
-      "extrait": "Current portfolio construction methods are either agnostic to the effects of idiosyncratic shocks (standard factor models) or to the latent data structure driving systematic returns (recent graph-based approaches). This presents an opportunity to combine the complementary market aspects captured by the factor and graph domains, allowing asset allocations to operate directly on the underlying market structure, rather…"
-    },
-    {
-      "titre": "Cross-Sectional Heterogeneity in LSTM Networks for Financial Time Series",
-      "lien": "https://arxiv.org/abs/2608.05755v2",
-      "date": "2026-08-06",
-      "score": 12,
-      "hits": [
-        "momentum",
-        "factor",
-        "cross-sectional",
-        "deep learning"
-      ],
-      "extrait": "Predicting financial asset returns remains one of the most difficult challenges in empirical finance, driven by the low signal-to-noise ratio and the semi-strong form of market efficiency. While deep learning models, especially LSTM networks, have shown promise in capturing temporal dependencies, standard architectures often struggle to account for the cross-sectional heterogeneity of asset returns."
-    },
-    {
       "titre": "Large Language Model-Driven Small-Capitalization Trading: Integrating Financial News Sentiment, Macroeconomic Indicators, and Technical Signals",
       "lien": "https://arxiv.org/abs/2608.12283v1",
       "date": "2026-08-12",
@@ -54,27 +28,17 @@
       "extrait": "Large language models can extract richer signals from financial news than fixed sentiment lexicons, and recent work has explored feeding such signals into portfolio construction. We study an uncertainty-aware construction that feeds model-predicted risk -- decomposed into aleatoric and epistemic components -- directly into the covariance matrix of portfolio allocators, rather than treating portfolio risk as fixed or…"
     },
     {
-      "titre": "Velocity- and Regime-Aware Detection of Intraday Options Market Manipulation, with Explainable Attribution",
-      "lien": "https://arxiv.org/abs/2608.05373v1",
-      "date": "2026-08-05",
+      "titre": "Self-Supervised Auxiliary Task Discovery for Stable Reinforcement Learning in Stock Trading",
+      "lien": "https://arxiv.org/abs/2608.15841v1",
+      "date": "2026-08-16",
       "score": 10,
       "hits": [
+        "factor",
         "regime",
-        "out-of-sample"
+        "robust",
+        "reinforcement learning"
       ],
-      "extrait": "Intraday market manipulation is hard to detect because its footprint is brief, buried in millions of quotes, and statistically similar to ordinary volatility. Detectors reach high recall only by flagging so many other days that measured precision collapses, producing alerts no regulator can act on."
-    },
-    {
-      "titre": "Portfolio Allocation under Heterogeneous Scales and Multifractality",
-      "lien": "https://arxiv.org/abs/2608.04987v1",
-      "date": "2026-08-05",
-      "score": 10,
-      "hits": [
-        "portfolio allocation",
-        "drawdown",
-        "tail risk"
-      ],
-      "extrait": "Cross-correlations between financial signals are neither scale-free nor amplitude-independent: they vary with the time scale over which they are measured and with the magnitude of the fluctuations that dominate the average. We exploit this structure to construct a portfolio allocation model in which the risk functional is the signed fluctuation function of multifractal cross-correlation analysis (MFCCA), indexed by…"
+      "extrait": "Reinforcement learning has gained increasing attention as a data-driven approach for stock trading. However, learning a policy that is both profitable and stable remains challenging due to non-stationary market behaviour and noisy reward signals."
     },
     {
       "titre": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting",
@@ -89,6 +53,29 @@
       "extrait": "Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables such deployment without retraining."
     },
     {
+      "titre": "The Market's Conditioning Representation: Equilibrium, Crowding, and Convention Multiplicity",
+      "lien": "https://arxiv.org/abs/2608.18299v1",
+      "date": "2026-08-18",
+      "score": 7,
+      "hits": [
+        "regime",
+        "out-of-sample"
+      ],
+      "extrait": "Asset-pricing models typically condition on a fixed information set. This paper endogenises the market's conditioning architecture by allowing portfolios to choose representations whose induced exposures affect prices."
+    },
+    {
+      "titre": "Photonic Quantum Computing vs. Classical Solvers in Constrained Factor Portfolio Optimization",
+      "lien": "https://arxiv.org/abs/2608.14134v1",
+      "date": "2026-08-14",
+      "score": 7,
+      "hits": [
+        "factor",
+        "reinforcement learning",
+        "agent"
+      ],
+      "extrait": "The authors present a rigorous empirical evaluation of three distinct optimization paradigms for institutional factor portfolio construction: an entropy-based photonic quantum annealer (Dirac-3, Quantum Computing Inc.), a commercial mixed-integer programming solver (Gurobi), and a model-free deep reinforcement learning agent (SAC). Evaluating these pipelines on the Jensen-Kelly-Pedersen 13-factor equity library…"
+    },
+    {
       "titre": "Beyond the Skew-Stickiness Ratio: Transport Geometry of Spot-Driven Variance Surface Dynamics",
       "lien": "https://arxiv.org/abs/2608.12493v1",
       "date": "2026-08-12",
@@ -98,6 +85,17 @@
         "out-of-sample"
       ],
       "extrait": "We develop a geometric theory of arbitrage-free implied variance surface dynamics. Smile dynamics are formulated as transport flows on the admissible class of static-arbitrage-free surfaces: spot movements generate transport vector fields, and the transport velocity field v(k) unifies all classical stickiness regimes."
+    },
+    {
+      "titre": "Entropic Value-at-Risk portfolio optimization for tempered stable Lévy processes",
+      "lien": "https://arxiv.org/abs/2608.18022v1",
+      "date": "2026-08-18",
+      "score": 6,
+      "hits": [
+        "factor",
+        "out-of-sample"
+      ],
+      "extrait": "We develop parametric Entropic Value-at-Risk (EVaR) portfolio optimization for tempered stable Lévy returns. We derive portfolio cumulant-generating functions and weight-dependent admissible moment-generating-function domains under two multivariate constructions: a multivariate normal tempered stable approach and an independent component factorization."
     }
   ]
 }
