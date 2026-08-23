@@ -46,7 +46,7 @@
 <body>
 
 <h1>Architecture Agent Bourse — Entreprise d'agents</h1>
-<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 05/07/2026<br>
+<p class="meta">Document technique — Arnaud Kuntz · PEA Boursobank · Mis à jour le 23/08/2026<br>
 Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change le modèle de fond.</p>
 
 <div class="ok">
@@ -71,6 +71,10 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 
 <div class="highlight">
   <strong>Mise à jour du 02/07 — le tournant mesure.</strong> Un audit complet a trouvé et corrigé 3 bugs critiques : stats de précision empoisonnées par des prix NaN (Yahoo renvoyait des bougies incomplètes sur les valeurs .PA, non filtrées), portefeuilles jamais persistés par le CI (les trades intraday, stop-loss et take-profit étaient perdus à chaque run — <strong>les données intraday réelles ne commencent que le 02/07</strong>), et pertes silencieuses sur push git concurrent. Stats recalculées depuis zéro : <strong>baseline propre 42,7% sur 211 signaux</strong> (ACHETER 40,8%, ÉVITER 46,4%). Décision : <strong>alertes email achat/vente suspendues 1 mois</strong> (modèle non validé), et deux agents de mesure créés — Shadow (contrefactuel des alertes) et Évaluateur (edge multi-horizons). Décision de réactivation le ~02/08 sur les faits.
+</div>
+
+<div class="alert">
+  <strong>Mise à jour du 23/08 — le pivot stratégique.</strong> Trois mois de mesures et une dernière recette le tranchent : <strong>à cette échelle (petit capital, ~1% de frais par aller-retour), le trading actif ne bat pas le simple fait de détenir un bon placement.</strong> La recette du 22/08 (Risk Engine en réel forward) montrait bien un avantage de +2,15 points, mais ses deux freins de crise (filtre de régime P7, frein de drawdown P12) ne s'étaient jamais déclenchés. Un stress-test sur de vrais krachs (2020, 2022) a alors prouvé que l'airbag fonctionne vraiment (la chute COVID passe de -38,7% à -8,6%, voir B.17). En revanche, l'évolution testée — remplacer le score par du momentum et le greffer sur le Risk Engine — <strong>échoue à la recette</strong> : sur 2020-2026, toute couche de gestion active fait moins bien que détenir l'indice (voir B.18). <strong>Décision : on ferme le chapitre « battre le marché par le trading actif ».</strong> Le Risk Engine est conservé dans son seul rôle prouvé, l'airbag de krach. Le satellite redevient un labo d'apprentissage, pas une machine à gains. L'argent réel éventuel ira au cœur passif (ETF), jamais au joueur. Les chapitres ci-dessous décrivent le système tel qu'il a été construit ; ce cadre les surplombe désormais.
 </div>
 
 <h2>1. Le modèle : une entreprise d'agents à deux poches</h2>
@@ -156,9 +160,9 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
     <div class="card-body">Scrape RSS Yahoo Finance, sentiment −3 à +3 par valeur (compteur de mots-clés sur titres). <strong>Poids dans le score = 0 depuis le 02/07</strong> : l'audit de contribution n'a montré aucun edge positif (signal penchant à l'envers). Collecte maintenue, à retester ~02/08. Gratuit.</div>
   </div>
   <div class="card">
-    <div class="card-title">Agent Espion <span class="badge badge-v4">V4</span></div>
-    <div class="card-freq">1×/semaine — Lundi 6h15</div>
-    <div class="card-body">ETF sectoriels iShares + actionnariat institutionnel CAC40. <strong>Bonus institutionnel neutralisé (poids 0) depuis le 02/07</strong> : données Yahoo vides sur les .PA (nb_institutions=0 partout), non mesurable. La rotation ETF utile est déjà calculée par le scoring intraday. Gratuit.</div>
+    <div class="card-title">Agent Espion <span class="badge badge-reserve">SUPPRIMÉ</span></div>
+    <div class="card-freq">Retiré le 11/08</div>
+    <div class="card-body"><strong>Agent supprimé le 11/08</strong> (code, workflow, rapport, job cron retiré le 23/08). Son bonus institutionnel était déjà neutralisé depuis le 02/07 : données Yahoo vides sur les .PA (nb_institutions=0 partout), edge non mesurable par construction. La seule partie utile (rotation ETF sectoriels) est déjà calculée par le scoring intraday, rien de perdu.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent Watchdog <span class="badge badge-v4">V4</span></div>
@@ -235,7 +239,8 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <h3>Court terme — deux rendez-vous datés</h3>
   <ul>
     <li><strong>22/07 — bilan des 30 jours : TRANCHÉ (CAS 1).</strong> Sur la fenêtre propre (546 obs depuis le 02/07) : edge NET ACHETER à J+5 = <strong>-1,2 pt</strong>, IC de Spearman = +0,077. La grille figée à froid le 13/07 donne le CAS 1 (edge net ≤ 0) : <strong>satellite maintenu 100% virtuel, aucun passage en réel, l'effort bascule sur la Phase 1 V5.</strong> Le twist : l'IC est passé de -0,05 à +0,077 (au-dessus du seuil « exploitable avant frais ») et les buckets discriminent enfin (85+ et 75-84 battent 65-74). Le score a désormais un vrai pouvoir de classement, mais l'edge brut (~+0,1 pt) est trop petit pour couvrir le péage de ~1%. La mission de la Phase 1 V5 se reformule : non pas reconstruire le score (il a du signal), mais résoudre le problème frais/fréquence — moins de trades, plus gros, sur les plus fortes convictions, avec sizing par volatilité. C'est le rôle du Risk Engine, promu priorité n°1. Prudence : 14 jours, IC volatil ; le fait robuste reste l'edge net négatif.</li>
-    <li><strong>~02/08 — trois décisions :</strong> (1) alertes — réactiver, prolonger ou ajuster sur le verdict Shadow ; (2) poids News/Espion — supprimer, réduire, réactiver ou tester le signe contrarien News, après retest sur un mois propre ; (3) budget par position du satellite (2000€ → 500€ ?). <strong>Grille de décision (posée le 05/07) :</strong> IC significatif et edge net de frais, sinon budget symbolique ou zéro. La littérature renforce l'exigence : le trend court terme sur instruments électroniques à petit tick est structurellement mort depuis ~2009 (Bouchaud et al., arXiv 2607.01550) — le fardeau de la preuve est du côté du satellite. Le cœur Dual Momentum mensuel (signaux lents) sort renforcé du même papier.</li>
+    <li><strong>02/08 — trois décisions : TRANCHÉES le 11/08.</strong> (1) Alertes : <strong>maintenues suspendues</strong> (Shadow NUISIBLES, Évaluateur edge net négatif, et le papier « Retail Trader's Ruin » qui réfute RSI/MACD/Bollinger). (2) News/Espion : <strong>Agent Espion supprimé</strong> (edge non mesurable sur les .PA), poids News maintenu à 0. (3) Budget satellite : statu quo 2000€ jusqu'à la recette du 22/08 (ne pas casser le groupe témoin de l'A/B).</li>
+    <li><strong>22/08 — recette forward du Risk Engine : FAITE, puis pivot du 23/08.</strong> Le Risk Engine bat la baseline de +2,15 pts sur la fenêtre forward, mais ses airbags P7/P12 ne s'étaient jamais déclenchés ; un stress-test sur les krachs 2020/2022 a prouvé qu'ils fonctionnent (voir B.17). L'évolution momentum+qualité a été construite et testée, puis <strong>rejetée comme moteur</strong> (voir B.18). Décision : pivot vers le passif, Risk Engine = airbag seulement (voir l'encadré du 23/08 en tête de document). <strong>Aucun euro réel.</strong></li>
     <li>Garde-fou méta du Professeur : actif dès 3 semaines d'historique</li>
   </ul>
 </div>
@@ -243,7 +248,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <div class="phase phase-2">
   <h3>Moyen terme</h3>
   <ul>
-    <li><strong>Risk Engine — CONSTRUIT le 22/07, en recette</strong> (risk_engine.py). Le moteur de gestion du risque qui manquait, priorité n°1 sortie du dossier des grands traders et confirmée par le bilan (le score a un edge que les frais dévorent → prendre moins de trades, mieux ciblés et dimensionnés). Applique 6 principes : risque max 1%/position, taille par volatilité (ATR), asymétrie ≥ 2:1, concentration sur le top-3 des convictions, plafond 2 positions/secteur, frein après drawdown. <strong>Première recette (fenêtre propre depuis le 02/07)</strong> vs baseline « tout acheter, taille fixe » : trades divisés par 3 (81→27), edge net par trade passé de -0,88 à +1,69 pt, gagnants 38%→56%, dispersion du risque réduite. Résultat ENCOURAGEANT mais non prouvé (27 trades, un seul régime, pas de tempête pour tester l'airbag). <strong>Branché en forward le 22/07</strong> : il gère désormais un SECOND portefeuille virtuel (risk_engine_portefeuille.json), en parallèle de la baseline qui reste le groupe témoin. Vrai A/B forward, 4x/jour, 100% virtuel. Verdict dans ~1 mois sur les courbes réelles. Aucun euro réel tant que le forward n'a pas confirmé le rétroactif.</li>
+    <li><strong>Risk Engine — CONSTRUIT le 22/07, verdict rendu le 23/08 : airbag de krach uniquement.</strong> (risk_engine.py). Le moteur de gestion du risque, 6 principes : risque max 1%/position, taille par volatilité (ATR), asymétrie ≥ 2:1, concentration top-3, plafond 2 positions/secteur, frein après drawdown. Chemin complet : backtest de juillet encourageant (edge net/trade -0,88 → +1,69 pt) ; <strong>forward A/B</strong> (second portefeuille virtuel parallèle à la baseline témoin, 4x/jour) = match nul au 11/08 puis <strong>+2,15 pts au 22/08</strong> grâce à la correction de mi-août ; mais airbags P7/P12 jamais déclenchés sur la période. <strong>Stress-test krach (stress_test_krach.py)</strong> : sur 2020/2022, l'airbag est décisif en krach rapide (chute -38,7% → -8,6%), protecteur en bear lent. <strong>Tentative de le promouvoir en MOTEUR permanent (momentum, selection_backtest.py) : échec</strong> — sur 2020-2026 il fait +0,06% contre +40% pour l'indice (trop de trades, frais qui dévorent tout). Conclusion figée : excellent airbag, mauvais moteur. Reste branché en forward dans son rôle d'airbag, 100% virtuel, aucun euro réel.</li>
     <li><del>Agent Dividendes PEA</del> — FAIT le 05/07 (voir la carte agent ci-dessus)</li>
     <li>Agent Patrimoine global : raisonner patrimoine entier (PEA réel, seuil fiscal 5 ans, DCA, épargne, projets) — nécessite une session dédiée avec les données réelles</li>
     <li>Crypto Dual Momentum : <strong>ADOPTÉ — décision Arnaud du 13/07, agent en production</strong> (agent_crypto_dm.py, voir la carte au chapitre 2). Rappel du chemin : backtest passé par la recette le 09/07 (crypto_dm_backtest.py), le walk-forward optimisé échoue (les réglages courts choisis en apprentissage se font hacher en test), le réglage fixe de 12 mois passe (rotation BTC/ETH = rendement 46%/an contre 32% pour garder le Bitcoin sans rien faire, pire chute -51% contre -73%), Solana rejeté (pire chute -90%). Poche séparée du PEA, refuge stablecoin (un échange crypto→crypto ne déclenche pas la flat tax, contrairement à un passage en euros)</li>
@@ -368,6 +373,12 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <p>Parce que les études sont sans appel : 97% des day traders persistants perdent de l'argent (étude brésilienne sur tous les débutants 2013-2015), et moins de 1% ont un avantage fiable une fois les frais payés (Taïwan, 15 ans de données). Les millionnaires visibles sont les survivants d'une loterie dont on ne montre jamais les perdants. Ce qui se copie, ce n'est pas leur richesse, c'est leur discipline. Et le seul style validé par un siècle de données académiques (AQR, 1880-2016, 67 marchés) est le suivi de tendance LENT : exactement notre cœur Dual Momentum.</p>
 
 
+<h3>B.17 Le stress-test de krach : prouver l'airbag sans attendre la tempête</h3>
+<p>Le Risk Engine est censé protéger en cas de krach. Mais depuis sa mise en route, le marché n'avait jamais vraiment plongé, donc son airbag n'avait jamais servi pour de vrai. Plutôt que d'attendre des années le prochain krach, on l'a rejoué sur deux vrais krachs du passé : le COVID (2020) et la chute des marchés de 2022. Verdict en deux temps : sur un <strong>krach rapide</strong> comme le COVID, l'airbag est spectaculaire, il met à l'abri près du sommet et la chute passe de -39% à -9%. Sur une <strong>baisse lente et longue</strong> comme 2022, il protège moins (il se fait attraper dans la glissade) mais réduit quand même la douleur de moitié. Conclusion : la protection anti-krach existe et fonctionne, surtout quand ça chute vite. C'est le seul rôle qu'on garde au Risk Engine.</p>
+
+<h3>B.18 Pourquoi le trading actif perd — le pivot du 23/08</h3>
+<p>On a fini par tester l'idée qui semblait la plus prometteuse : remplacer les notes techniques par du pur <strong>momentum</strong> (acheter ce qui monte depuis un an) et confier la gestion au Risk Engine. Résultat sur six ans et demi : décevant. Le momentum seul bat le marché sur le papier, mais dès qu'on ajoute la moindre couche de gestion active (rotation, filtres, protections), <strong>les frais et les faux signaux mangent tout</strong>, et on finit sous le simple fait d'avoir acheté l'indice sans jamais y toucher. C'est la même leçon que le système répète depuis le début, cette fois prouvée sur le moteur lui-même : à notre échelle, bouger coûte plus que ça ne rapporte. D'où la décision d'arrêter de chercher à battre le marché en tradant, de garder le Risk Engine seulement comme airbag, et de réserver tout argent réel au placement calme et passif. Un résultat négatif solide vaut mieux qu'une illusion rentable sur le papier.</p>
+
 <h2 id="annexe-c">Annexe C — Glossaire</h2>
 
 <h3>C.1 Termes de bourse et de mesure</h3>
@@ -407,6 +418,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <tr><td>Rotation sectorielle</td><td>L'argent qui passe d'un secteur à l'autre (banques vers énergie, etc.).</td></tr>
   <tr><td>Score</td><td>Note de 0 à 100 attribuée chaque jour à chaque valeur par nos agents.</td></tr>
   <tr><td>Sharpe (ratio de)</td><td>Rendement obtenu par unité de risque pris. Plus c'est haut, mieux c'est.</td></tr>
+  <tr><td>Stress-test</td><td>Rejouer une stratégie sur de vrais épisodes de crise passés (krach 2020, bear 2022) pour vérifier que ses protections tiennent, sans attendre la prochaine tempête réelle.</td></tr>
   <tr><td>Stop-loss / take-profit</td><td>Sortie automatique en perte (limiter la casse) ou en gain (encaisser).</td></tr>
   <tr><td>Ticker</td><td>Le code d'un titre en bourse (ex. CW8.PA).</td></tr>
   <tr><td>VIX</td><td>Indice de nervosité du marché américain (la « jauge de peur »). Testé chez nous : malus retiré.</td></tr>
@@ -432,8 +444,8 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 </table>
 
 <footer>
-  Document mis à jour le 05/07/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
-  Cœur Dual Momentum (mensuel) + satellite V4 (quotidien, alertes suspendues) + mesure Shadow &amp; Évaluateur (hebdo) + Dividendes (hebdo) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
+  Document mis à jour le 23/08/2026 · Entreprise d'agents bourse · GitHub Actions · Python 3.11 · yfinance · Claude API · Zoho SMTP<br>
+  Pivot du 23/08 : trading actif abandonné comme source de gains, Risk Engine = airbag de krach seulement, argent réel éventuel → cœur passif ETF. Cœur Dual Momentum (mensuel) + satellite = labo d'apprentissage + mesure Shadow &amp; Évaluateur (hebdo) + Dividendes (hebdo) + Professeur (hebdo) + Veille (hebdo) + Harnais (recette). Règle d'or : rien en prod sans réussir la recette.
 </footer>
 
 </body>
