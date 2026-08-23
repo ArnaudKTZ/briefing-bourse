@@ -7,6 +7,46 @@
 
 ---
 
+## 2026-08-23
+
+### Audit complet + recette 22/08 + stress-test krach + évolution momentum testée et REJETÉE comme moteur
+
+- **Repo resynchronisé** (145 commits de retard, clone local au 11/08). Règle du 29/07 appliquée : `git pull` avant toute lecture des JSON, sinon chiffres périmés sans erreur visible. Données à jour au 22/08.
+
+- **État des poches au 22/08** : cœur Dual Momentum +2,77% (airbag OK, note B). Crypto DM toujours en refuge stablecoin (995$ vs 984$ B&H BTC, bear crypto, trop jeune). Satellite baseline -1,35%. Flotte saine (watchdog tout vert, 0 erreur data, coût API cumulé 8,39$). Satellite scoring toujours perdant net : Évaluateur edge net J+5 -1,2 pt (CAS 1), Shadow NUISIBLES -0,66 pt, Professeur note E (42,6%).
+
+- **RECETTE FORWARD DU 22/08 (Risk Engine) FAITE.** Fenêtre commune 22/07→21/08 : baseline -1,39% vs Risk Engine +0,76% = **spread +2,15 pts** en faveur du Risk Engine (vs match nul -0,04 pt au 11/08). Tout l'écart vient de la correction de mi-août. Vérification poussée : (1) l'A/B est légitime (même snapshot de signaux pour les deux). (2) Les airbags P7 (régime) et P12 (drawdown) n'ont JAMAIS joué (CAC resté au-dessus de sa MM200, drawdown max -5,7% < seuil -10%). (3) Correction d'une affirmation initiale : le coussin ne vient PAS d'un matelas de cash (les deux portefeuilles étaient investis à ~94% pendant la baisse), mais de sorties plus petites (-2 à -3,5% vs stop-loss -5,5/-6% côté baseline) sur 7 trades clos et un seul épisode. **Verdict : prolonger le forward, aucun euro réel** (un seul épisode ordinaire, pas un krach ; attribution fragile sur 7 trades).
+
+- **STRESS-TEST DES AIRBAGS SUR VRAIS KRACHS** (`stress_test_krach.py`, nouveau) : simulateur de portefeuille jour par jour sur 2020 (COVID) et 2022 (bear taux), signal proxy momentum identique aux deux bras pour isoler l'effet des airbags. **COVID (krach rapide) : spectaculaire** — P7 sort en cash près du haut, drawdown -8,6% vs -38,7% pour le baseline, perte -3,8% vs -17%. **2022 (grind lent) : mitigé** — drawdown halvé (-14,9% vs -25%) mais même perte finale (-14,7%), le filtre régime s'est fait attraper dans la glissade lente. P12 quasi inutile (P7 sort avant). Conclusion : l'airbag anti-krach existe et fonctionne, décisif en krach franc, protecteur en bear mou. C'est la preuve qui manquait.
+
+- **ÉVOLUTION DU CONCEPT (Pistes 1/2/3) : construite et testée honnêtement, RÉSULTAT NÉGATIF assumé.** Proposition : remplacer le "voyant" (score oscillateur réfuté) par une sélection momentum + porte qualité, greffée sur le Risk Engine. Construits : `selection_qm.py` (momentum cross-sectionnel 12-1 + porte qualité ROE/marge/dette, banques exemptées de dette) et `selection_backtest.py` (recette cycle complet 2020-2026). **Audit data (préalable qui a tué l'Espion) = FEU VERT** : les fondamentaux Yahoo (ROE, marges, dette) sont bien peuplés sur les .PA, contrairement aux données institutionnelles/insider. La porte qualité est faisable, se prouvera en forward (pas backtestable sans look-ahead).
+- **Recette cycle complet (momentum seul, qualité non backtestable) : ma proposition échoue.** Sur 2020-2026 : ancienne logique momentum taille fixe **+75,5%** (DD -39%), CAC buy&hold **+40,4%** (DD -39%), **Momentum+Risk Engine +0,06%** (DD -29%), Momentum rotation mensuelle +14,3% (DD -36%). Toute couche de gestion active fait MOINS BIEN que détenir l'indice : les frais et faux signaux coûtent plus que la protection apportée (le Risk Engine trade 431 fois, ~40% du capital en frais ; en 2025 il perd -5,7% quand le momentum simple gagne +28,7%). Le filtre régime a même AGGRAVÉ 2022 (-20% vs -9,5% pour l'indice, whipsaw classique).
+- **Leçons capitalisées** : (1) le momentum a du signal (bat l'indice) mais le +75,5% est gonflé par le biais du survivant (CAC40 d'aujourd'hui sur 2020). (2) Le Risk Engine est un excellent AIRBAG DE KRACH (prouvé 2020) mais un MOTEUR PERMANENT catastrophique. (3) Fait récurrent, maintenant confirmé sur le moteur du satellite : à cette échelle (petit capital, frais ~1% l'aller-retour), l'ACTIVITÉ perd contre le buy&hold. Cohérent avec Évaluateur/Shadow/Professeur + "Retail Trader's Ruin".
+
+- **PIVOT STRATÉGIQUE DÉCIDÉ** (Claude a tranché, Arnaud perdu et déléguant) : **fermer le chapitre "battre le marché par le trading actif".** Le Risk Engine reste dans son seul rôle prouvé (airbag krach, il continue en forward). Le satellite devient un labo d'apprentissage, pas une machine à gains. Si un jour de l'argent réel entre, il va vers le cœur passif à bas frais (ETF), pas vers le joueur. La flotte d'agents + briefing = cockpit de suivi/apprentissage peu coûteux (8$ au total), gardé tel quel. Prochaine idée éventuelle, évidence-based, sans urgence : élargir le cœur Dual Momentum à quelques ETF sectoriels (le seul mécanisme qui marche), via le harnais.
+
+---
+
+## 2026-08-11
+
+### Nettoyage email (boîte xtrem111 saturée)
+
+- Demande d'Arnaud : couper l'envoi vers xtrem111team@gmail.com, boîte saturée. Deux mécanismes coexistent dans le repo briefing-bourse : listes de destinataires en dur (6 agents hebdo/mensuels) et variable d'environnement DESTINATAIRES lue depuis un secret GitHub (4 agents actifs à fort volume : briefing v3, scoring intraday, dual momentum, crypto).
+- **Fait côté code (poussé)** : xtrem111 retiré des 6 agents en dur (Dividendes, Professeur, Shadow, Évaluateur, Veille, Stratège), qui n'envoient plus qu'à Arnaud.kuntz@zoho.eu. Ligne xtrem111 aussi retirée des briefings v1/v2 (code mort, le workflow lance v3).
+- **Reste à Arnaud** : les emails à fort volume (briefing quotidien, scoring 4x/jour, dual momentum, crypto) tirent leurs destinataires du secret GitHub DESTINATAIRES, non éditable par Claude. À corriger dans Settings > Secrets and variables > Actions.
+
+### Les trois décisions du 02/08 tranchées (9 jours après le rappel), chiffres frais à l'appui
+
+- Bilan mené sur les rapports du 07 au 09/08 (repo re-synchronisé). État des 3 poches : cœur Dual Momentum +2,57% (drawdown -2,61%, fait son job) ; Crypto DM 995$ vs 984$ en B&H BTC (+1,1 pt, 2 mois, trop jeune) ; satellite V4 le dossier qui brûle.
+- **Fait central assumé** : le satellite affiche +3,65% en valeur absolue mais c'est du beta de marché, pas du talent. Fenêtre propre (26 j, 1014 obs) : ACHETER à -1,55 pt NET SOUS l'univers à J+5, IC J+5 +0,052 (classement faible et instable, buckets recroisés : 85+ à 0,69 repasse sous 75-84 à 0,86). Shadow (07/08) NUISIBLES -0,64 pt. CAS 1 confirmé.
+- **Risk Engine en forward ne tient pas (encore) la promesse du backtest** : sur la fenêtre commune 22/07 → 11/08, Risk Engine +3,57% (3 trades) vs baseline +3,61% (27 trades) = -0,04 pt, match nul, alors que le backtest de juillet promettait +1,69 vs -0,88 pt/trade. Deux lectures honnêtes : 3 semaines trop courtes + régime 100% haussier (freins P7/P12 jamais déclenchés), ou edge backtest en partie du hasard sur 27 trades. La recette forward du 22/08 tranchera. Zéro euro réel d'ici là.
+- **Décision 1 (alertes)** : maintenues suspendues. Trois mesures indépendantes (Shadow, Évaluateur) + littérature (Retail Trader's Ruin réfute RSI/MACD/Bollinger) convergent sur "perdant net". Flag ALERTES_EMAIL_ACTIVES déjà False, aucune modif.
+- **Décision 2 (News/Espion)** : Agent Espion SUPPRIMÉ (edge non mesurable par construction, données institutionnelles Yahoo vides sur les .PA). Retirés : agent_espion.py, .github/workflows/agent_espion.yml, rapport_espion.json, et les références dans test_agents.py (AGENTS/WORKFLOWS/SECRETS_REQUIS) et agent_professeur.py. Le code espion de briefing_bourse_v3.py est laissé inerte (garde os.path.exists + POIDS_ESPION=0, aucun impact sur le score). Watchdog non impacté (il ne surveillait pas l'Espion). Suite test_agents.py au vert, 0 erreur. News maintenu à 0. Reste à Arnaud : supprimer le job cron-job.org "Espion lundi 6h15".
+- **Décision 3 (budget satellite)** : statu quo à 2000€ fixe jusqu'à la recette du 22/08. Le baseline est le groupe témoin de l'A/B forward, le changer à 11 jours de la recette casserait la comparaison. La vraie réponse au sur-dimensionnement (2000€ = 19,5% du capital, facteur 10 au-dessus des Turtles) est le sizing par volatilité déjà testé côté Risk Engine, pas un autre chiffre fixe choisi à la main.
+- **Piste d'amélioration du mois (rituel)** : vérifier la stabilité du classement du score (corrélation des rangs semaine à semaine) avant le 22/08. Si le score ne range pas de façon stable, la concentration top-3 du Risk Engine n'a pas de fondation fiable. Ajoutée à ECHEANCES, à coder sur feu vert d'Arnaud.
+
+---
+
 ## 2026-07-29
 
 ### Repo local désynchronisé (74 commits de retard) : le briefing du matin donnait des chiffres périmés
