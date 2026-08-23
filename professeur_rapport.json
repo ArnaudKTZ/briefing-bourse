@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-23",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -18,24 +18,24 @@
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "42.6% précision (1632 signaux)",
+      "metrique": "43.1% précision (1872 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 42.6% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 42.6,
+      "verdict": "Précision 43.1% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 43.1,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "+1.8% (32 trades)",
-      "note": "C",
+      "metrique": "-1.3% (38 trades)",
+      "note": "—",
       "confiance": "moyenne",
-      "verdict": "PF +1.8% fait jeu égal avec le CAC (+2.6%).",
-      "valeur_suivie": 1.8
+      "verdict": "PF -1.3%, benchmark indisponible cette semaine.",
+      "valeur_suivie": -1.3
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-08-14)",
+      "metrique": "actif (rapport du 2026-08-21)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
@@ -43,8 +43,8 @@
   ],
   "evolution": {
     "Crypto DM (BTC/ETH)": 0.0,
-    "Briefing V4 (signaux)": -0.9,
-    "Portefeuille virtuel V4": -1.6
+    "Briefing V4 (signaux)": 0.5,
+    "Portefeuille virtuel V4": -3.1
   },
   "doutes_meta": [],
   "historique": [
@@ -372,6 +372,41 @@
           "agent": "Portefeuille virtuel V4",
           "note": "C",
           "valeur": 1.8,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Crypto DM (BTC/ETH)",
+          "note": "C",
+          "valeur": 1.1,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 43.1,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "—",
+          "valeur": -1.3,
           "meta_borne": false
         },
         {
