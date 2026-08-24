@@ -1,38 +1,38 @@
 {
-  "date": "2026-08-21",
-  "heure": "07:55",
+  "date": "2026-08-24",
+  "heure": "07:30",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.10"
+      "msg": "OK — 20 articles, sentiment -0.05"
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 07:33"
+      "msg": "OK — briefing du jour envoyé à 07:03"
     },
     "Scoring intraday": {
-      "ok": true,
-      "msg": "OK hier — 8 snapshot(s) enregistré(s)"
+      "ok": null,
+      "msg": "Lundi — pas de données intraday attendues hier"
     },
     "Dividendes (lundi 8h05)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-17 (il y a 4 j)"
+      "msg": "OK — dernier rapport le 2026-08-17 (il y a 7 j)"
     },
     "Shadow (vendredi 18h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-14 (il y a 7 j)"
+      "msg": "OK — dernier rapport le 2026-08-21 (il y a 3 j)"
     },
     "Évaluateur (samedi 7h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-15 (il y a 6 j)"
+      "msg": "OK — dernier rapport le 2026-08-22 (il y a 2 j)"
     },
     "Veille (samedi 9h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-15 (il y a 6 j)"
+      "msg": "OK — dernier rapport le 2026-08-22 (il y a 2 j)"
     },
     "Professeur (dimanche 18h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-16 (il y a 5 j)"
+      "msg": "OK — dernier rapport le 2026-08-23 (il y a 1 j)"
     },
     "Dual Momentum (1er, 8h)": {
       "ok": true,
