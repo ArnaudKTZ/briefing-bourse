@@ -1,6 +1,6 @@
 {
   "date": "2026-08-24",
-  "heure": "10:25",
+  "heure": "13:58",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.36,
-      "nb_news": 11,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": -0.08,
-      "nb_news": 13,
+      "nb_news": 12,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
@@ -158,12 +158,12 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": -0.25,
-      "nb_news": 4,
+      "sentiment": 0.0,
+      "nb_news": 5,
       "titres_cles": [
+        "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
         "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
-        "Un entrepôt Wildberries brûle près de Moscou lors de frappes russes en Ukraine",
-        "Ces 3 valeurs sidérurgiques européennes s’envolent après la révision de JPMorgan"
+        "Un entrepôt Wildberries brûle près de Moscou lors de frappes russes en Ukraine"
       ]
     },
     "Pernod Ricard": {
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
