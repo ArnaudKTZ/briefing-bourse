@@ -3348,5 +3348,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-24",
+    "heure": "09:59",
+    "nom": "TotalEnergies",
+    "cours": 76.93,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-24",
+    "heure": "09:59",
+    "nom": "L'Oréal",
+    "cours": 390.3,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-24",
+    "heure": "09:59",
+    "nom": "L'Oréal",
+    "cours": 390.3,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 90/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-24",
+    "heure": "09:59",
+    "nom": "Renault",
+    "cours": 28.01,
+    "score": 26,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -3.90%",
+    "envoyee": false
   }
 ]
