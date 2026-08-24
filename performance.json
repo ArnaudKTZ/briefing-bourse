@@ -19533,7 +19533,7 @@
       },
       "Worldline": {
         "signal": "SURVEILLER",
-        "score": 43,
+        "score": 46,
         "prix": 12.28,
         "secteur": "Tech",
         "rsi": 55.2,
@@ -19633,41 +19633,41 @@
     }
   },
   "stats": {
-    "total": 1892,
-    "corrects": 822,
-    "precision": 43.4,
-    "acheter_total": 1317,
-    "acheter_corrects": 553,
-    "eviter_total": 575,
-    "eviter_corrects": 269,
+    "total": 1912,
+    "corrects": 837,
+    "precision": 43.8,
+    "acheter_total": 1328,
+    "acheter_corrects": 561,
+    "eviter_total": 584,
+    "eviter_corrects": 276,
     "par_secteur": {
       "Luxe": {
-        "total": 247,
-        "corrects": 96
+        "total": 250,
+        "corrects": 99
       },
       "Santé": {
-        "total": 153,
-        "corrects": 66
+        "total": 155,
+        "corrects": 68
       },
       "Conso/Autre": {
-        "total": 305,
-        "corrects": 128
+        "total": 308,
+        "corrects": 130
       },
       "Industrie/Défense": {
-        "total": 528,
-        "corrects": 219
+        "total": 533,
+        "corrects": 222
       },
       "Télécom/Média": {
-        "total": 204,
-        "corrects": 101
+        "total": 208,
+        "corrects": 104
       },
       "Énergie": {
-        "total": 107,
+        "total": 108,
         "corrects": 60
       },
       "Tech": {
-        "total": 170,
-        "corrects": 65
+        "total": 172,
+        "corrects": 67
       },
       "Banques/Finance": {
         "total": 178,
