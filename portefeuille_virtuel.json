@@ -1,15 +1,6 @@
 {
-  "capital": 66.83999999999924,
+  "capital": 124.52999999999906,
   "positions": {
-    "TotalEnergies": {
-      "nb_actions": 26,
-      "prix_entree": 76.59,
-      "date_entree": "2026-08-13",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1991.3400000000001,
-      "frais_achat": 9.96
-    },
     "Sanofi": {
       "nb_actions": 25,
       "prix_entree": 77.89,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1994.6200000000001,
       "frais_achat": 9.97
+    },
+    "TotalEnergies": {
+      "nb_actions": 25,
+      "prix_entree": 77.44,
+      "date_entree": "2026-08-24",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1936.0,
+      "frais_achat": 9.68
     }
   },
   "historique_valeur": {
@@ -91,7 +91,8 @@
     "2026-08-18": 9902.04,
     "2026-08-19": 9810.44,
     "2026-08-20": 9782.66,
-    "2026-08-21": 9865.29
+    "2026-08-21": 9865.29,
+    "2026-08-24": 9842.13
   },
   "trades": [
     {
@@ -596,6 +597,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -3.88,
       "frais_total": 17.97
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 76.59,
+      "sortie": 77.44,
+      "date_entree": "2026-08-13",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-24",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 0.6,
+      "frais_total": 20.03
     }
   ]
 }
