@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-21",
-  "heure": "13:58",
+  "date": "2026-08-24",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris met fin à huit séances de baisse consécutives",
       "La Bourse de Paris termine en recul",
       "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
       "La Bourse de Paris termine en baisse",
-      "La Bourse de Paris termine en baisse, le luxe sous pression",
       "La Bourse de Paris sur la voie du repli après les records"
     ]
   },
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.44,
-      "nb_news": 18,
+      "sentiment": 0.41,
+      "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
@@ -77,17 +77,17 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.47,
+      "sentiment": 0.42,
       "nb_news": 19,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
         "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
-        "GROUPE BNP PARIBAS : ARVAL A FINALISÉ L’ACQUISITION D’ATHLON"
+        "Getlink SE : Bilan semestriel du contrat de liquidité"
       ]
     },
     "Air Liquide": {
       "sentiment": 1.0,
-      "nb_news": 9,
+      "nb_news": 8,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.23,
+      "nb_news": 13,
       "titres_cles": [
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.07,
-      "nb_news": 14,
+      "sentiment": -0.08,
+      "nb_news": 13,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.06,
+      "nb_news": 16,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.44,
-      "nb_news": 16,
+      "sentiment": 0.47,
+      "nb_news": 15,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
