@@ -1,14 +1,4 @@
 {
-  "2026-08-14_Airbus": "09:00",
-  "2026-08-14_Schneider Electric": "09:00",
-  "2026-08-14_Safran": "10:19",
-  "2026-08-14_Publicis": "10:19",
-  "2026-08-14_Eurofins Scientific": "10:19",
-  "2026-08-14_Accor": "12:34",
-  "2026-08-14_Worldline": "14:01",
-  "2026-08-14_Teleperformance": "14:56",
-  "2026-08-14_ArcelorMittal": "16:00",
-  "2026-08-14_TotalEnergies": "16:52",
   "2026-08-17_Safran": "09:00",
   "2026-08-17_ArcelorMittal": "09:00",
   "2026-08-17_Eurofins Scientific": "09:00",
@@ -41,5 +31,6 @@
   "2026-08-21_Renault": "09:01",
   "2026-08-21_Eurofins Scientific": "09:01",
   "2026-08-21_Teleperformance": "09:01",
-  "2026-08-21_TotalEnergies": "11:30"
+  "2026-08-21_TotalEnergies": "11:30",
+  "2026-08-24_Sanofi": "09:00"
 }
