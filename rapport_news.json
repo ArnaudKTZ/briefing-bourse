@@ -1,6 +1,6 @@
 {
   "date": "2026-08-25",
-  "heure": "10:21",
+  "heure": "13:59",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.07,
-      "nb_news": 15,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
