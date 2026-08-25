@@ -19744,7 +19744,7 @@
       },
       "Danone": {
         "signal": "SURVEILLER",
-        "score": 59,
+        "score": 56,
         "prix": 66.32,
         "secteur": "Conso/Autre",
         "rsi": 40.6,
@@ -19787,8 +19787,8 @@
         "death_cross": false
       },
       "Stellantis": {
-        "signal": "SURVEILLER",
-        "score": 38,
+        "signal": "ÉVITER",
+        "score": 35,
         "prix": 4.65,
         "secteur": "Conso/Autre",
         "rsi": 43.8,
@@ -19832,7 +19832,7 @@
       },
       "Michelin": {
         "signal": "ACHETER",
-        "score": 82,
+        "score": 79,
         "prix": 34.61,
         "secteur": "Conso/Autre",
         "rsi": 52.9,
@@ -19854,7 +19854,7 @@
       },
       "Renault": {
         "signal": "ACHETER",
-        "score": 71,
+        "score": 74,
         "prix": 28.63,
         "secteur": "Conso/Autre",
         "rsi": 57.6,
@@ -19975,7 +19975,7 @@
       },
       "Veolia": {
         "signal": "SURVEILLER",
-        "score": 62,
+        "score": 59,
         "prix": 34.09,
         "secteur": "Conso/Autre",
         "rsi": 39.2,
@@ -20008,7 +20008,7 @@
       },
       "Edenred": {
         "signal": "SURVEILLER",
-        "score": 64,
+        "score": 61,
         "prix": 29.24,
         "secteur": "Conso/Autre",
         "rsi": 64.8,
@@ -20019,7 +20019,7 @@
       },
       "Accor": {
         "signal": "ÉVITER",
-        "score": 29,
+        "score": 26,
         "prix": 45.53,
         "secteur": "Conso/Autre",
         "rsi": 41.3,
@@ -20064,40 +20064,40 @@
     }
   },
   "stats": {
-    "total": 1934,
-    "corrects": 844,
-    "precision": 43.6,
-    "acheter_total": 1344,
-    "acheter_corrects": 562,
-    "eviter_total": 590,
-    "eviter_corrects": 282,
+    "total": 1956,
+    "corrects": 851,
+    "precision": 43.5,
+    "acheter_total": 1360,
+    "acheter_corrects": 563,
+    "eviter_total": 596,
+    "eviter_corrects": 288,
     "par_secteur": {
       "Luxe": {
-        "total": 253,
-        "corrects": 101
+        "total": 256,
+        "corrects": 103
       },
       "Santé": {
-        "total": 158,
+        "total": 161,
         "corrects": 68
       },
       "Conso/Autre": {
-        "total": 313,
-        "corrects": 131
+        "total": 318,
+        "corrects": 132
       },
       "Industrie/Défense": {
-        "total": 537,
-        "corrects": 225
+        "total": 541,
+        "corrects": 228
       },
       "Télécom/Média": {
-        "total": 211,
-        "corrects": 105
+        "total": 214,
+        "corrects": 106
       },
       "Énergie": {
-        "total": 109,
+        "total": 110,
         "corrects": 60
       },
       "Tech": {
-        "total": 175,
+        "total": 178,
         "corrects": 67
       },
       "Banques/Finance": {
