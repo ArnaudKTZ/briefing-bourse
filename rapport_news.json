@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-24",
-  "heure": "13:58",
+  "date": "2026-08-25",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris met fin à huit séances de baisse consécutives",
       "La Bourse de Paris termine en recul",
       "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
       "La Bourse de Paris termine en baisse",
-      "La Bourse de Paris sur la voie du repli après les records"
+      "La Bourse de Paris en légère hausse, mais prudente"
     ]
   },
   "valeurs": {
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.23,
-      "nb_news": 13,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.2,
+      "nb_news": 15,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.5,
+      "sentiment": 0.62,
       "nb_news": 16,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 17 au 21 août 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 10 au 14 août 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 3 août au 7 août 2026",
-        "Bonduelle voit ses ventes baisser en 2025-2026, marquées par une chute de la consommation aux Etats-Unis"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 3 août au 7 août 2026"
       ]
     },
     "Alstom": {
