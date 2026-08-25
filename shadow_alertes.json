@@ -3408,5 +3408,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-25",
+    "heure": "11:30",
+    "nom": "TotalEnergies",
+    "cours": 76.18,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
