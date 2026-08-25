@@ -1,6 +1,6 @@
 {
   "date": "2026-08-25",
-  "heure": "07:16",
+  "heure": "10:21",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.06,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
