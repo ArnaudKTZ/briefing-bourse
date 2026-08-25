@@ -1,9 +1,4 @@
 {
-  "2026-08-17_Safran": "09:00",
-  "2026-08-17_ArcelorMittal": "09:00",
-  "2026-08-17_Eurofins Scientific": "09:00",
-  "2026-08-17_Accor": "09:55",
-  "2026-08-17_Schneider Electric": "14:01",
   "2026-08-18_Safran": "09:00",
   "2026-08-18_ArcelorMittal": "09:00",
   "2026-08-18_Eurofins Scientific": "09:00",
@@ -36,5 +31,6 @@
   "2026-08-24_TotalEnergies": "09:59",
   "2026-08-24_L'Oréal": "09:59",
   "2026-08-24_L'Oréal_achat": "09:59",
-  "2026-08-24_Renault_vente": "09:59"
+  "2026-08-24_Renault_vente": "09:59",
+  "2026-08-25_Sanofi": "09:00"
 }

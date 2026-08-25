@@ -3388,5 +3388,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -3.90%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-25",
+    "heure": "09:00",
+    "nom": "Sanofi",
+    "cours": 78.94,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
