@@ -20098,7 +20098,7 @@
       },
       "Airbus": {
         "signal": "SURVEILLER",
-        "score": 47,
+        "score": 44,
         "prix": 202.7,
         "secteur": "Industrie/Défense",
         "rsi": 43.7,
@@ -20109,7 +20109,7 @@
       },
       "Schneider Electric": {
         "signal": "ACHETER",
-        "score": 69,
+        "score": 66,
         "prix": 291.8,
         "secteur": "Industrie/Défense",
         "rsi": 50.5,
@@ -20164,7 +20164,7 @@
       },
       "Safran": {
         "signal": "SURVEILLER",
-        "score": 49,
+        "score": 46,
         "prix": 339.9,
         "secteur": "Industrie/Défense",
         "rsi": 43.7,
@@ -20186,7 +20186,7 @@
       },
       "Vinci": {
         "signal": "ÉVITER",
-        "score": 33,
+        "score": 30,
         "prix": 118.65,
         "secteur": "Industrie/Défense",
         "rsi": 39.1,
@@ -20230,7 +20230,7 @@
       },
       "Saint-Gobain": {
         "signal": "SURVEILLER",
-        "score": 56,
+        "score": 53,
         "prix": 80.24,
         "secteur": "Industrie/Défense",
         "rsi": 48.5,
@@ -20241,7 +20241,7 @@
       },
       "ArcelorMittal": {
         "signal": "SURVEILLER",
-        "score": 59,
+        "score": 56,
         "prix": 73.62,
         "secteur": "Industrie/Défense",
         "rsi": 57.7,
@@ -20296,7 +20296,7 @@
       },
       "Legrand": {
         "signal": "SURVEILLER",
-        "score": 39,
+        "score": 36,
         "prix": 133.2,
         "secteur": "Industrie/Défense",
         "rsi": 39.3,
@@ -20318,7 +20318,7 @@
       },
       "Bouygues": {
         "signal": "ÉVITER",
-        "score": 9,
+        "score": 6,
         "prix": 45.87,
         "secteur": "Industrie/Défense",
         "rsi": 35.0,
@@ -20384,7 +20384,7 @@
       },
       "Alstom": {
         "signal": "SURVEILLER",
-        "score": 63,
+        "score": 60,
         "prix": 16.04,
         "secteur": "Industrie/Défense",
         "rsi": 48.3,
@@ -20472,7 +20472,7 @@
       },
       "Thales": {
         "signal": "SURVEILLER",
-        "score": 48,
+        "score": 45,
         "prix": 251.0,
         "secteur": "Industrie/Défense",
         "rsi": 47.2,
@@ -20483,7 +20483,7 @@
       },
       "Forvia": {
         "signal": "ÉVITER",
-        "score": 12,
+        "score": 9,
         "prix": 8.87,
         "secteur": "Industrie/Défense",
         "rsi": 45.0,
@@ -20495,45 +20495,45 @@
     }
   },
   "stats": {
-    "total": 1979,
-    "corrects": 866,
-    "precision": 43.8,
-    "acheter_total": 1376,
-    "acheter_corrects": 573,
-    "eviter_total": 603,
-    "eviter_corrects": 293,
+    "total": 2002,
+    "corrects": 881,
+    "precision": 44.0,
+    "acheter_total": 1392,
+    "acheter_corrects": 583,
+    "eviter_total": 610,
+    "eviter_corrects": 298,
     "par_secteur": {
       "Luxe": {
-        "total": 258,
-        "corrects": 104
+        "total": 260,
+        "corrects": 105
       },
       "Santé": {
-        "total": 164,
-        "corrects": 70
+        "total": 167,
+        "corrects": 72
       },
       "Conso/Autre": {
-        "total": 322,
-        "corrects": 134
+        "total": 326,
+        "corrects": 136
       },
       "Industrie/Défense": {
-        "total": 546,
-        "corrects": 232
+        "total": 551,
+        "corrects": 236
       },
       "Télécom/Média": {
-        "total": 216,
-        "corrects": 108
+        "total": 218,
+        "corrects": 110
       },
       "Énergie": {
-        "total": 111,
+        "total": 112,
         "corrects": 60
       },
       "Tech": {
-        "total": 181,
-        "corrects": 70
+        "total": 184,
+        "corrects": 73
       },
       "Banques/Finance": {
-        "total": 181,
-        "corrects": 88
+        "total": 184,
+        "corrects": 89
       }
     }
   },
