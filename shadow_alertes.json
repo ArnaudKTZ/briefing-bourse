@@ -3488,5 +3488,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.99%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "16:00",
+    "nom": "Safran",
+    "cours": 353.8,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.25%",
+    "envoyee": false
   }
 ]

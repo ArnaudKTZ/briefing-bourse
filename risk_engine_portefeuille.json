@@ -1,18 +1,6 @@
 {
-  "capital": 68.00999999999885,
+  "capital": 1725.5199999999988,
   "positions": {
-    "ArcelorMittal": {
-      "nb_actions": 22,
-      "prix_entree": 66.49,
-      "date_entree": "2026-07-23",
-      "heure_entree": "11:28",
-      "secteur": "Industrie/Défense",
-      "cout_total": 1462.78,
-      "frais_achat": 7.31,
-      "stop_pct": 0.0682,
-      "tp_pct": 0.1364,
-      "score_entree": 81
-    },
     "BNP Paribas": {
       "nb_actions": 20,
       "prix_entree": 105.26,
@@ -88,7 +76,7 @@
     "2026-08-21": 10058.46,
     "2026-08-24": 10020.69,
     "2026-08-25": 9977.94,
-    "2026-08-26": 9941.05
+    "2026-08-26": 9948.16
   },
   "trades": [
     {
@@ -178,6 +166,17 @@
       "pnl_pct": -4.58,
       "frais_total": 23.64,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "ArcelorMittal",
+      "entree": 66.49,
+      "sortie": 75.72,
+      "date_entree": "2026-07-23",
+      "date_sortie": "2026-08-26",
+      "heure_sortie": "16:00",
+      "pnl_pct": 13.31,
+      "frais_total": 15.64,
+      "raison_sortie": "Take-profit 13.9% (ATR)"
     }
   ],
   "regime_dernier": "haussier"
