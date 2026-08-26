@@ -1,15 +1,15 @@
 {
-  "date": "2026-08-25",
-  "heure": "13:59",
+  "date": "2026-08-26",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en baisse, à contre-courant du reste du monde",
       "La Bourse de Paris met fin à huit séances de baisse consécutives",
       "La Bourse de Paris termine en recul",
       "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
-      "La Bourse de Paris termine en baisse",
-      "La Bourse de Paris en légère hausse, mais prudente"
+      "La Bourse de Paris termine en baisse"
     ]
   },
   "valeurs": {
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.06,
+      "nb_news": 16,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Bourse : Airbus, Schneider Electric, Air liquide, Safran, Total… Les actions de la souveraineté ont du potentiel",
-        "Schneider Electric Canada renforce son leadership commercial Aidez vos clients à s'orienter dans le nouveau paysage énergétique"
+        "Schneider Electric lance Schneider Charge, un chargeur de véhicule électrique résidentiel de niveau 2 avec gestion dynamique de la charge",
+        "Bourse : Airbus, Schneider Electric, Air liquide, Safran, Total… Les actions de la souveraineté ont du potentiel"
       ]
     },
     "L'Oréal": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.38,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?",
-        "«Le marché se rééquilibre», la patronne de Engie Catherine MacGregor rassure sur les stocks de gaz en France"
+        "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
+        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?"
       ]
     },
     "Orange": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.44,
-      "nb_news": 9,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
-        "Veolia finalise l'acquisition de Clean Earth, doublant ainsi son activité de déchets dangereux aux États-Unis et ouvre un nouveau chapitre de croissance",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
-        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT"
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
+        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
       ]
     },
     "STMicroelectronics": {
