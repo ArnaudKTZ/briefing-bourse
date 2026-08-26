@@ -1,5 +1,5 @@
 {
-  "capital": 127.36999999999898,
+  "capital": 68.00999999999885,
   "positions": {
     "ArcelorMittal": {
       "nb_actions": 22,
@@ -49,17 +49,17 @@
       "tp_pct": 0.064,
       "score_entree": 93
     },
-    "TotalEnergies": {
-      "nb_actions": 31,
-      "prix_entree": 77.85,
-      "date_entree": "2026-08-20",
-      "heure_entree": "09:46",
-      "secteur": "Énergie",
-      "cout_total": 2413.35,
-      "frais_achat": 12.07,
-      "stop_pct": 0.0402,
-      "tp_pct": 0.0804,
-      "score_entree": 89
+    "L'Oréal": {
+      "nb_actions": 6,
+      "prix_entree": 391.75,
+      "date_entree": "2026-08-26",
+      "heure_entree": "09:51",
+      "secteur": "Luxe",
+      "cout_total": 2350.5,
+      "frais_achat": 11.75,
+      "stop_pct": 0.0344,
+      "tp_pct": 0.0688,
+      "score_entree": 91
     }
   },
   "historique_valeur": {
@@ -88,7 +88,7 @@
     "2026-08-21": 10058.46,
     "2026-08-24": 10020.69,
     "2026-08-25": 9977.94,
-    "2026-08-26": 10025.13
+    "2026-08-26": 9924.95
   },
   "trades": [
     {
@@ -166,6 +166,17 @@
       "heure_sortie": "09:46",
       "pnl_pct": 0.96,
       "frais_total": 18.48,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 77.85,
+      "sortie": 74.66,
+      "date_entree": "2026-08-20",
+      "date_sortie": "2026-08-26",
+      "heure_sortie": "09:51",
+      "pnl_pct": -4.58,
+      "frais_total": 23.64,
       "raison_sortie": "ÉVITER intraday"
     }
   ],

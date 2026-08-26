@@ -3438,5 +3438,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 94/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "09:51",
+    "nom": "Michelin",
+    "cours": 34.76,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "09:51",
+    "nom": "Accor",
+    "cours": 47.1,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "09:51",
+    "nom": "TotalEnergies",
+    "cours": 74.66,
+    "score": 34,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -4.07%",
+    "envoyee": false
   }
 ]
