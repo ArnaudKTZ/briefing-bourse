@@ -1,21 +1,21 @@
 {
   "date": "2026-08-26",
-  "heure": "10:23",
+  "heure": "14:00",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine",
+      "La Bourse de Paris profite du reflux des prix du brut",
       "La Bourse de Paris en baisse, à contre-courant du reste du monde",
       "La Bourse de Paris met fin à huit séances de baisse consécutives",
-      "La Bourse de Paris termine en recul",
-      "La Bourse de Paris se stabilise, tiraillée entre l'annonce de la baisse des taux d'emprunts et les prix de l'énergie élevés",
-      "La Bourse de Paris termine en baisse"
+      "La Bourse de Paris termine en recul"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.33,
-      "nb_news": 12,
+      "sentiment": 0.27,
+      "nb_news": 11,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 12,
+      "nb_news": 11,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.08,
-      "nb_news": 13,
+      "nb_news": 12,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.62,
-      "nb_news": 16,
+      "sentiment": 0.71,
+      "nb_news": 17,
       "titres_cles": [
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 17 au 21 août 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 10 au 14 août 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 3 août au 7 août 2026"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 10 au 14 août 2026"
       ]
     },
     "Alstom": {
