@@ -3468,5 +3468,25 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -4.07%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "12:06",
+    "nom": "Alstom",
+    "cours": 16.59,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.41%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-26",
+    "heure": "12:06",
+    "nom": "Worldline",
+    "cours": 13.02,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.99%",
+    "envoyee": false
   }
 ]
