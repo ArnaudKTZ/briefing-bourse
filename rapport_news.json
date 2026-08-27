@@ -1,34 +1,34 @@
 {
   "date": "2026-08-27",
-  "heure": "06:45",
+  "heure": "17:31",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en recul malgré Nvidia",
       "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine",
       "La Bourse de Paris profite du reflux des prix du brut",
       "La Bourse de Paris en baisse, à contre-courant du reste du monde",
-      "La Bourse de Paris met fin à huit séances de baisse consécutives",
-      "La Bourse de Paris termine en recul"
+      "La Bourse de Paris met fin à huit séances de baisse consécutives"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.2,
-      "nb_news": 10,
+      "sentiment": 0.11,
+      "nb_news": 9,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "LVMH annonce un résultat en hausse grâce à la demande américaine",
-        "LVMH : Déclaration des transactions sur actions propres"
+        "LVMH : Déclaration des transactions sur actions propres",
+        "Michael Saylor explique comment investir comme un milliardaire et pourquoi Bitcoin fonctionne"
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.41,
+      "sentiment": 0.24,
       "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025"
+        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
       ]
     },
     "Hermès": {
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue",
         "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.19,
+      "nb_news": 16,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Safran relève ses prévisions et se prépare à \"tous les scénarios\" pour les futurs avions"
+        "Bourse : Safran - Exail Technologies, «un mariage discret qui peut changer la donne», selon le Loup de Zurich"
       ]
     },
     "Danone": {
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard nomme une nouvelle Vice-Présidente Exécutive Finance & Tech",
-        "Pernod Ricard : déclaration des droits de vote - mai 2026"
+        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois",
+        "Pernod Ricard: UNE ANNÉE DE TRANSITION MENÉE AVEC AGILITÉ, DISCIPLINE ET CONVICTION STRATÉGIQUE"
       ]
     },
     "Michelin": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un deuxième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9% par rapport à 2025",
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
-        "Capgemini relève ses perspectives pour 2026"
+        "Capgemini relève ses perspectives pour 2026",
+        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
       ]
     },
     "Renault": {
