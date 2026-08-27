@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-26",
-  "heure": "14:00",
+  "date": "2026-08-27",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.27,
-      "nb_news": 11,
+      "sentiment": 0.2,
+      "nb_news": 10,
       "titres_cles": [
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "Le géant du luxe LVMH dépasse les attentes au 1er semestre en dépit d'un contexte \"encore perturbé\"",
-        "LVMH annonce un résultat en hausse grâce à la demande américaine"
+        "LVMH annonce un résultat en hausse grâce à la demande américaine",
+        "LVMH : Déclaration des transactions sur actions propres"
       ]
     },
     "TotalEnergies": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.33,
+      "nb_news": 9,
       "titres_cles": [
+        "Veolia émet avec succès 1,15 Md € sur le marché obligataire",
         "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
-        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT",
-        "Veolia Environnement : Information relative au nombre total de droits de vote et d’actions composant le capital social"
+        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT"
       ]
     },
     "STMicroelectronics": {
