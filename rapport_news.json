@@ -1,15 +1,15 @@
 {
   "date": "2026-08-27",
-  "heure": "17:31",
+  "heure": "20:24",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en recul malgré Nvidia",
+      "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
       "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine",
       "La Bourse de Paris profite du reflux des prix du brut",
-      "La Bourse de Paris en baisse, à contre-courant du reste du monde",
-      "La Bourse de Paris met fin à huit séances de baisse consécutives"
+      "La Bourse de Paris en baisse, à contre-courant du reste du monde"
     ]
   },
   "valeurs": {
@@ -51,7 +51,7 @@
     },
     "Schneider Electric": {
       "sentiment": 0.06,
-      "nb_news": 16,
+      "nb_news": 17,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
         "Schneider Electric lance Schneider Charge, un chargeur de véhicule électrique résidentiel de niveau 2 avec gestion dynamique de la charge",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.08,
+      "nb_news": 12,
       "titres_cles": [
-        "Kering, en pleine transformation, renoue avec la croissance au deuxième trimestre",
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
+        "La Bourse de Paris orientée à la baisse"
       ]
     },
     "Société Générale": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.1,
-      "nb_news": 10,
+      "sentiment": 0.0,
+      "nb_news": 11,
       "titres_cles": [
+        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois",
-        "Pernod Ricard: UNE ANNÉE DE TRANSITION MENÉE AVEC AGILITÉ, DISCIPLINE ET CONVICTION STRATÉGIQUE"
+        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois"
       ]
     },
     "Michelin": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.13,
-      "nb_news": 15,
+      "sentiment": 0.14,
+      "nb_news": 14,
       "titres_cles": [
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
         "Capgemini relève ses perspectives pour 2026",
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.71,
-      "nb_news": 17,
+      "sentiment": 0.61,
+      "nb_news": 18,
       "titres_cles": [
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 17 au 21 août 2026",
