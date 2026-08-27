@@ -3518,5 +3518,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "01:38",
+    "nom": "Michelin",
+    "cours": 35.14,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "01:38",
+    "nom": "Alstom",
+    "cours": 16.91,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.38%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "01:38",
+    "nom": "Worldline",
+    "cours": 13.4,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +7.03%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "01:38",
+    "nom": "Accor",
+    "cours": 47.47,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
