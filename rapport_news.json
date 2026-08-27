@@ -1,6 +1,6 @@
 {
   "date": "2026-08-27",
-  "heure": "20:24",
+  "heure": "23:18",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.14,
-      "nb_news": 14,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
         "Capgemini relève ses perspectives pour 2026",
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.5,
-      "nb_news": 14,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
