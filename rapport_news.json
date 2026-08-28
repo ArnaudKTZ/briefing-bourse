@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-27",
-  "heure": "23:18",
+  "date": "2026-08-28",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -23,13 +23,9 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
-      "nb_news": 17,
-      "titres_cles": [
-        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
-        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Hermès": {
       "sentiment": 0.25,
@@ -68,13 +64,9 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.24,
-      "nb_news": 17,
-      "titres_cles": [
-        "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
-        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "BNP Paribas": {
       "sentiment": 0.42,
