@@ -3588,5 +3588,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "16:00",
+    "nom": "Air Liquide",
+    "cours": 169.9,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
   }
 ]
