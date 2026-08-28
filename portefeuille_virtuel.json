@@ -1,5 +1,5 @@
 {
-  "capital": 512.9299999999996,
+  "capital": 87.24999999999977,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -37,14 +37,14 @@
       "cout_total": 1902.96,
       "frais_achat": 9.51
     },
-    "Hermès": {
-      "nb_actions": 1,
-      "prix_entree": 1598.0,
-      "date_entree": "2026-08-28",
-      "heure_entree": "17:10",
-      "source_entree": "Briefing",
-      "cout_total": 1598.0,
-      "frais_achat": 7.99
+    "Eurofins Scientific": {
+      "nb_actions": 27,
+      "prix_entree": 73.0,
+      "date_entree": "2026-08-29",
+      "heure_entree": "01:26",
+      "source_entree": "Intraday",
+      "cout_total": 1971.0,
+      "frais_achat": 9.86
     }
   },
   "historique_valeur": {
@@ -96,7 +96,8 @@
     "2026-08-25": 9705.97,
     "2026-08-26": 9675.11,
     "2026-08-27": 9630.65,
-    "2026-08-28": 9537.46
+    "2026-08-28": 9537.46,
+    "2026-08-29": 9410.28
   },
   "trades": [
     {
@@ -668,6 +669,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": 1.79,
       "frais_total": 20.17
+    },
+    {
+      "nom": "Hermès",
+      "entree": 1598.0,
+      "sortie": 1563.0,
+      "date_entree": "2026-08-28",
+      "heure_entree": "17:10",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-29",
+      "heure_sortie": "01:26",
+      "source_sortie": "Intraday",
+      "pnl_pct": -2.68,
+      "frais_total": 15.81,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }

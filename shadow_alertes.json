@@ -3598,5 +3598,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 92/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-29",
+    "heure": "01:26",
+    "nom": "Eurofins Scientific",
+    "cours": 73.0,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 83/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-29",
+    "heure": "01:26",
+    "nom": "Hermès",
+    "cours": 1563.0,
+    "score": 32,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -2.68%",
+    "envoyee": false
   }
 ]
