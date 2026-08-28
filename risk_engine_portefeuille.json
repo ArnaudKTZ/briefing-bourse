@@ -1,5 +1,5 @@
 {
-  "capital": 98.41999999999894,
+  "capital": 1653.599999999999,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 20,
@@ -48,18 +48,6 @@
       "stop_pct": 0.0344,
       "tp_pct": 0.0688,
       "score_entree": 91
-    },
-    "Hermès": {
-      "nb_actions": 1,
-      "prix_entree": 1619.0,
-      "date_entree": "2026-08-28",
-      "heure_entree": "11:30",
-      "secteur": "Luxe",
-      "cout_total": 1619.0,
-      "frais_achat": 8.1,
-      "stop_pct": 0.0438,
-      "tp_pct": 0.0876,
-      "score_entree": 87
     }
   },
   "historique_valeur": {
@@ -90,7 +78,8 @@
     "2026-08-25": 9977.94,
     "2026-08-26": 9942.6,
     "2026-08-27": 9818.32,
-    "2026-08-28": 9807.34
+    "2026-08-28": 9807.34,
+    "2026-08-29": 9746.4
   },
   "trades": [
     {
@@ -191,6 +180,17 @@
       "pnl_pct": 13.31,
       "frais_total": 15.64,
       "raison_sortie": "Take-profit 13.9% (ATR)"
+    },
+    {
+      "nom": "Hermès",
+      "entree": 1619.0,
+      "sortie": 1563.0,
+      "date_entree": "2026-08-28",
+      "date_sortie": "2026-08-29",
+      "heure_sortie": "01:26",
+      "pnl_pct": -3.94,
+      "frais_total": 15.92,
+      "raison_sortie": "ÉVITER intraday"
     }
   ],
   "regime_dernier": "haussier"
