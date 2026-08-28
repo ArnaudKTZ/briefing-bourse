@@ -3578,5 +3578,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 90/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "14:01",
+    "nom": "Edenred",
+    "cours": 30.61,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
