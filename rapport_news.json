@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "heure": "18:55",
+  "heure": "21:35",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
-        "Airbus retrouve de l'élan, la crise des moteurs Pratt & Whitney s'atténue",
         "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
-        "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long"
+        "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long",
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Schneider Electric": {
