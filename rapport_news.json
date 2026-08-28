@@ -1,15 +1,15 @@
 {
   "date": "2026-08-28",
-  "heure": "06:45",
+  "heure": "18:55",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
+      "CAC 40 : la Bourse de Paris en hausse avant le rendez-vous très attendu de Jackson Hole",
       "La Bourse de Paris en recul malgré Nvidia",
       "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-      "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine",
-      "La Bourse de Paris profite du reflux des prix du brut",
-      "La Bourse de Paris en baisse, à contre-courant du reste du monde"
+      "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine"
     ]
   },
   "valeurs": {
@@ -23,9 +23,13 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.24,
+      "nb_news": 17,
+      "titres_cles": [
+        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
+        "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
+        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
+      ]
     },
     "Hermès": {
       "sentiment": 0.25,
@@ -50,8 +54,8 @@
       "nb_news": 17,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Schneider Electric lance Schneider Charge, un chargeur de véhicule électrique résidentiel de niveau 2 avec gestion dynamique de la charge",
-        "Bourse : Airbus, Schneider Electric, Air liquide, Safran, Total… Les actions de la souveraineté ont du potentiel"
+        "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley",
+        "Schneider Electric lance Schneider Charge, un chargeur de véhicule électrique résidentiel de niveau 2 avec gestion dynamique de la charge"
       ]
     },
     "L'Oréal": {
@@ -64,16 +68,20 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.24,
+      "nb_news": 17,
+      "titres_cles": [
+        "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
+        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI",
+        "Le ministère de la santé et Sanofi s'associent pour faire progresser l'innovation en matière de vaccins"
+      ]
     },
     "BNP Paribas": {
       "sentiment": 0.42,
       "nb_news": 19,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Groupe Casino : Bilan du contrat de liquidité au 30 juin 2026",
+        "Eramet : Bilan semestriel du contrat de liquidité au 30 juin 2026",
         "Getlink SE : Bilan semestriel du contrat de liquidité"
       ]
     },
@@ -114,17 +122,17 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.08,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "La Bourse de Paris orientée à la baisse"
+        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)"
       ]
     },
     "Société Générale": {
-      "sentiment": 0.2,
-      "nb_news": 15,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
@@ -168,16 +176,16 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.08,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
-        "Michelin : en Bourse, «c’est le pneu qui roule du CAC 40» ! Quels risques ? L’oeil du Loup de Zurich"
+        "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.15,
+      "sentiment": 0.08,
       "nb_news": 13,
       "titres_cles": [
         "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
@@ -343,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.7,
-      "nb_news": 10,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
