@@ -1,14 +1,14 @@
 {
   "date": "2026-08-28",
-  "heure": "07:30",
+  "heure": "19:32",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.15"
+      "msg": "OK — 20 articles, sentiment +0.00"
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 07:03"
+      "msg": "OK — briefing du jour envoyé à 19:12"
     },
     "Scoring intraday": {
       "ok": true,
@@ -20,7 +20,7 @@
     },
     "Shadow (vendredi 18h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-21 (il y a 7 j)"
+      "msg": "OK — dernier rapport le 2026-08-28 (il y a 0 j)"
     },
     "Évaluateur (samedi 7h35)": {
       "ok": true,
