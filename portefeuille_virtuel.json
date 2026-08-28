@@ -1,5 +1,5 @@
 {
-  "capital": 88.67999999999961,
+  "capital": 512.9299999999996,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -9,15 +9,6 @@
       "source_entree": "Intraday",
       "cout_total": 1769.1000000000001,
       "frais_achat": 8.85
-    },
-    "Teleperformance": {
-      "nb_actions": 29,
-      "prix_entree": 68.78,
-      "date_entree": "2026-08-20",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1994.6200000000001,
-      "frais_achat": 9.97
     },
     "L'Oréal": {
       "nb_actions": 5,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 1902.96,
       "frais_achat": 9.51
+    },
+    "Hermès": {
+      "nb_actions": 1,
+      "prix_entree": 1598.0,
+      "date_entree": "2026-08-28",
+      "heure_entree": "17:10",
+      "source_entree": "Briefing",
+      "cout_total": 1598.0,
+      "frais_achat": 7.99
     }
   },
   "historique_valeur": {
@@ -96,7 +96,7 @@
     "2026-08-25": 9705.97,
     "2026-08-26": 9675.11,
     "2026-08-27": 9630.65,
-    "2026-08-28": 9566.27
+    "2026-08-28": 9537.46
   },
   "trades": [
     {
@@ -655,6 +655,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": 0.01,
       "frais_total": 19.53
+    },
+    {
+      "nom": "Teleperformance",
+      "entree": 68.78,
+      "sortie": 70.36,
+      "date_entree": "2026-08-20",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-28",
+      "heure_sortie": "17:10",
+      "source_sortie": "Briefing",
+      "pnl_pct": 1.79,
+      "frais_total": 20.17
     }
   ]
 }
