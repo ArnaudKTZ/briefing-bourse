@@ -3558,5 +3558,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "11:30",
+    "nom": "Hermès",
+    "cours": 1619.0,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100 | Momentum intraday fort +2.63%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-28",
+    "heure": "11:30",
+    "nom": "Legrand",
+    "cours": 140.55,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
   }
 ]
