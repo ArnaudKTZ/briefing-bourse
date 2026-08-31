@@ -3618,5 +3618,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -2.68%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "09:01",
+    "nom": "Accor",
+    "cours": 46.65,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
