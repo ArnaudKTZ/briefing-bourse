@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "heure": "13:09",
+  "heure": "17:27",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -167,13 +167,9 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.0,
-      "nb_news": 11,
-      "titres_cles": [
-        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Michelin": {
       "sentiment": 0.18,
@@ -262,8 +258,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.68,
-      "nb_news": 19,
+      "sentiment": 0.61,
+      "nb_news": 18,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
@@ -307,9 +303,13 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.47,
+      "nb_news": 15,
+      "titres_cles": [
+        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+      ]
     },
     "Edenred": {
       "sentiment": 0.0,
