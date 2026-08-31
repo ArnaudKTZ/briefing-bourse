@@ -1,15 +1,6 @@
 {
-  "capital": 87.24999999999977,
+  "capital": 1863.62,
   "positions": {
-    "Schneider Electric": {
-      "nb_actions": 6,
-      "prix_entree": 294.85,
-      "date_entree": "2026-08-19",
-      "heure_entree": "16:00",
-      "source_entree": "Intraday",
-      "cout_total": 1769.1000000000001,
-      "frais_achat": 8.85
-    },
     "L'Oréal": {
       "nb_actions": 5,
       "prix_entree": 390.3,
@@ -97,7 +88,8 @@
     "2026-08-26": 9675.11,
     "2026-08-27": 9630.65,
     "2026-08-28": 9537.46,
-    "2026-08-29": 9410.28
+    "2026-08-29": 9410.28,
+    "2026-08-31": 9401.35
   },
   "trades": [
     {
@@ -683,6 +675,19 @@
       "pnl_pct": -2.68,
       "frais_total": 15.81,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Schneider Electric",
+      "entree": 294.85,
+      "sortie": 297.55,
+      "date_entree": "2026-08-19",
+      "heure_entree": "16:00",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-08-31",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 0.41,
+      "frais_total": 17.78
     }
   ]
 }
