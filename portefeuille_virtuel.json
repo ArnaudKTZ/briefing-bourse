@@ -1,5 +1,5 @@
 {
-  "capital": 1863.62,
+  "capital": 1780.0499999999997,
   "positions": {
     "L'Oréal": {
       "nb_actions": 5,
@@ -9,15 +9,6 @@
       "source_entree": "Intraday",
       "cout_total": 1951.5,
       "frais_achat": 9.76
-    },
-    "Airbus": {
-      "nb_actions": 9,
-      "prix_entree": 205.85,
-      "date_entree": "2026-08-28",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1852.6499999999999,
-      "frais_achat": 9.26
     },
     "BNP Paribas": {
       "nb_actions": 18,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1971.0,
       "frais_achat": 9.86
+    },
+    "Air Liquide": {
+      "nb_actions": 11,
+      "prix_entree": 170.58,
+      "date_entree": "2026-08-31",
+      "heure_entree": "11:30",
+      "source_entree": "Intraday",
+      "cout_total": 1876.38,
+      "frais_achat": 9.38
     }
   },
   "historique_valeur": {
@@ -89,7 +89,7 @@
     "2026-08-27": 9630.65,
     "2026-08-28": 9537.46,
     "2026-08-29": 9410.28,
-    "2026-08-31": 9401.35
+    "2026-08-31": 9405.17
   },
   "trades": [
     {
@@ -688,6 +688,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": 0.41,
       "frais_total": 17.78
+    },
+    {
+      "nom": "Airbus",
+      "entree": 205.85,
+      "sortie": 201.25,
+      "date_entree": "2026-08-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-08-31",
+      "heure_sortie": "11:30",
+      "source_sortie": "Intraday",
+      "pnl_pct": -2.72,
+      "frais_total": 18.32,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }
