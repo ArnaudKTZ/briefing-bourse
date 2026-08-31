@@ -3628,5 +3628,65 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "L'Oréal",
+    "cours": 388.6,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "Air Liquide",
+    "cours": 170.58,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "Michelin",
+    "cours": 35.15,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "Edenred",
+    "cours": 30.51,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "Air Liquide",
+    "cours": 170.58,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 92/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "11:30",
+    "nom": "Airbus",
+    "cours": 201.25,
+    "score": 26,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -2.72%",
+    "envoyee": false
   }
 ]
