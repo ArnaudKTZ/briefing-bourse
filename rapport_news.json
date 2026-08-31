@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-28",
-  "heure": "23:30",
+  "date": "2026-08-31",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
-        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
+        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure"
       ]
     },
     "Hermès": {
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.42,
+      "sentiment": 0.37,
       "nb_news": 19,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
@@ -131,21 +131,21 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale, ovationnée en Bourse, affiche un deuxième trimestre record"
+        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 11,
+      "sentiment": -0.1,
+      "nb_news": 10,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "Stellantis confirme son retour dans le vert au deuxième trimestre, ventes en hausse de 13%"
+        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
       ]
     },
     "Saint-Gobain": {
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "Les ventes de Renault soutenues par les partenariats et l'électrique au 1er semestre",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
+        "NextRise 2026, le principal salon asiatique dédié aux start-ups, co-organisé par la KITA et la KDB, s'achève avec succès à Séoul"
       ]
     },
     "Legrand": {
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.08,
+      "nb_news": 12,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
