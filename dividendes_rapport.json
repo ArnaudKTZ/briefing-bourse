@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-31",
   "n": 35,
   "a_venir": [
     {
@@ -16,18 +16,24 @@
     },
     {
       "nom": "TotalEnergies",
-      "date": "2026-09-25",
-      "montant": 0.79,
-      "source": "estimé (anniversaire 2024)"
+      "date": "2026-09-30",
+      "montant": null,
+      "source": "confirmé (Yahoo)"
+    },
+    {
+      "nom": "Société Générale",
+      "date": "2026-10-05",
+      "montant": null,
+      "source": "confirmé (Yahoo)"
     }
   ],
   "valeurs": [
     {
       "nom": "Renault",
       "ticker": "RNO.PA",
-      "cours": 28.63,
+      "cours": 28.4,
       "div_12m": 2.2,
-      "rendement_12m": 7.68,
+      "rendement_12m": 7.75,
       "dernier_date": "2026-05-08",
       "dernier_montant": 2.2,
       "prochain": null
@@ -35,9 +41,9 @@
     {
       "nom": "Pernod Ricard",
       "ticker": "RI.PA",
-      "cours": 68.42,
+      "cours": 64.5,
       "div_12m": 4.7,
-      "rendement_12m": 6.87,
+      "rendement_12m": 7.29,
       "dernier_date": "2026-07-22",
       "dernier_montant": 2.35,
       "prochain": null
@@ -45,9 +51,9 @@
     {
       "nom": "Teleperformance",
       "ticker": "TEP.PA",
-      "cours": 71.74,
+      "cours": 71.5,
       "div_12m": 4.5,
-      "rendement_12m": 6.27,
+      "rendement_12m": 6.29,
       "dernier_date": "2026-05-26",
       "dernier_montant": 4.5,
       "prochain": null
@@ -55,9 +61,9 @@
     {
       "nom": "Eurazeo",
       "ticker": "RF.PA",
-      "cours": 49.84,
+      "cours": 50.85,
       "div_12m": 2.92,
-      "rendement_12m": 5.86,
+      "rendement_12m": 5.74,
       "dernier_date": "2026-05-18",
       "dernier_montant": 2.92,
       "prochain": null
@@ -65,9 +71,9 @@
     {
       "nom": "Engie",
       "ticker": "ENGI.PA",
-      "cours": 25.29,
+      "cours": 24.1,
       "div_12m": 1.35,
-      "rendement_12m": 5.34,
+      "rendement_12m": 5.6,
       "dernier_date": "2026-04-30",
       "dernier_montant": 1.35,
       "prochain": null
@@ -75,9 +81,9 @@
     {
       "nom": "Sanofi",
       "ticker": "SAN.PA",
-      "cours": 78.94,
+      "cours": 77.28,
       "div_12m": 4.12,
-      "rendement_12m": 5.22,
+      "rendement_12m": 5.33,
       "dernier_date": "2026-05-05",
       "dernier_montant": 4.12,
       "prochain": null
@@ -85,9 +91,9 @@
     {
       "nom": "BNP Paribas",
       "ticker": "BNP.PA",
-      "cours": 107.5,
+      "cours": 100.66,
       "div_12m": 5.16,
-      "rendement_12m": 4.8,
+      "rendement_12m": 5.13,
       "dernier_date": "2026-05-18",
       "dernier_montant": 2.57,
       "prochain": {
@@ -99,9 +105,9 @@
     {
       "nom": "Orange",
       "ticker": "ORA.PA",
-      "cours": 15.97,
+      "cours": 15.1,
       "div_12m": 0.75,
-      "rendement_12m": 4.7,
+      "rendement_12m": 4.97,
       "dernier_date": "2026-06-11",
       "dernier_montant": 0.45,
       "prochain": null
@@ -109,29 +115,19 @@
     {
       "nom": "Bouygues",
       "ticker": "EN.PA",
-      "cours": 46.19,
+      "cours": 43.99,
       "div_12m": 2.1,
-      "rendement_12m": 4.55,
+      "rendement_12m": 4.77,
       "dernier_date": "2026-04-28",
       "dernier_montant": 2.1,
       "prochain": null
     },
     {
-      "nom": "Edenred",
-      "ticker": "EDEN.PA",
-      "cours": 29.24,
-      "div_12m": 1.33,
-      "rendement_12m": 4.55,
-      "dernier_date": "2026-06-10",
-      "dernier_montant": 1.33,
-      "prochain": null
-    },
-    {
       "nom": "Veolia",
       "ticker": "VIE.PA",
-      "cours": 34.09,
+      "cours": 32.58,
       "div_12m": 1.5,
-      "rendement_12m": 4.4,
+      "rendement_12m": 4.6,
       "dernier_date": "2026-05-11",
       "dernier_montant": 1.5,
       "prochain": null
@@ -139,23 +135,33 @@
     {
       "nom": "TotalEnergies",
       "ticker": "TTE.PA",
-      "cours": 77.44,
+      "cours": 74.17,
       "div_12m": 3.4,
-      "rendement_12m": 4.39,
+      "rendement_12m": 4.58,
       "dernier_date": "2026-06-30",
       "dernier_montant": 0.85,
       "prochain": {
-        "date": "2026-09-25",
-        "montant": 0.79,
-        "source": "estimé (anniversaire 2024)"
+        "date": "2026-09-30",
+        "montant": null,
+        "source": "confirmé (Yahoo)"
       }
+    },
+    {
+      "nom": "Edenred",
+      "ticker": "EDEN.PA",
+      "cours": 30.53,
+      "div_12m": 1.33,
+      "rendement_12m": 4.36,
+      "dernier_date": "2026-06-10",
+      "dernier_montant": 1.33,
+      "prochain": null
     },
     {
       "nom": "Vinci",
       "ticker": "DG.PA",
-      "cours": 119.3,
+      "cours": 114.85,
       "div_12m": 5.0,
-      "rendement_12m": 4.19,
+      "rendement_12m": 4.35,
       "dernier_date": "2026-04-21",
       "dernier_montant": 3.95,
       "prochain": null
@@ -163,9 +169,9 @@
     {
       "nom": "Michelin",
       "ticker": "ML.PA",
-      "cours": 34.61,
+      "cours": 34.34,
       "div_12m": 1.38,
-      "rendement_12m": 3.99,
+      "rendement_12m": 4.02,
       "dernier_date": "2026-05-26",
       "dernier_montant": 1.38,
       "prochain": null
@@ -173,9 +179,9 @@
     {
       "nom": "Publicis",
       "ticker": "PUB.PA",
-      "cours": 102.35,
+      "cours": 101.3,
       "div_12m": 3.75,
-      "rendement_12m": 3.66,
+      "rendement_12m": 3.7,
       "dernier_date": "2026-07-01",
       "dernier_montant": 3.75,
       "prochain": null
@@ -183,9 +189,9 @@
     {
       "nom": "Danone",
       "ticker": "BN.PA",
-      "cours": 66.32,
+      "cours": 64.7,
       "div_12m": 2.25,
-      "rendement_12m": 3.39,
+      "rendement_12m": 3.48,
       "dernier_date": "2026-05-04",
       "dernier_montant": 2.25,
       "prochain": null
@@ -193,29 +199,19 @@
     {
       "nom": "Capgemini",
       "ticker": "CAP.PA",
-      "cours": 111.15,
+      "cours": 109.5,
       "div_12m": 3.4,
-      "rendement_12m": 3.06,
+      "rendement_12m": 3.11,
       "dernier_date": "2026-06-02",
       "dernier_montant": 3.4,
       "prochain": null
     },
     {
-      "nom": "Accor",
-      "ticker": "AC.PA",
-      "cours": 45.53,
-      "div_12m": 1.35,
-      "rendement_12m": 2.97,
-      "dernier_date": "2026-06-01",
-      "dernier_montant": 1.35,
-      "prochain": null
-    },
-    {
       "nom": "LVMH",
       "ticker": "MC.PA",
-      "cours": 452.5,
+      "cours": 447.4,
       "div_12m": 13.0,
-      "rendement_12m": 2.87,
+      "rendement_12m": 2.91,
       "dernier_date": "2026-04-28",
       "dernier_montant": 7.5,
       "prochain": null
@@ -223,19 +219,29 @@
     {
       "nom": "Saint-Gobain",
       "ticker": "SGO.PA",
-      "cours": 81.2,
+      "cours": 79.46,
       "div_12m": 2.3,
-      "rendement_12m": 2.83,
+      "rendement_12m": 2.89,
       "dernier_date": "2026-06-08",
       "dernier_montant": 2.3,
       "prochain": null
     },
     {
+      "nom": "Accor",
+      "ticker": "AC.PA",
+      "cours": 46.65,
+      "div_12m": 1.35,
+      "rendement_12m": 2.89,
+      "dernier_date": "2026-06-01",
+      "dernier_montant": 1.35,
+      "prochain": null
+    },
+    {
       "nom": "Vivendi",
       "ticker": "VIV.PA",
-      "cours": 1.66,
+      "cours": 1.63,
       "div_12m": 0.04,
-      "rendement_12m": 2.41,
+      "rendement_12m": 2.45,
       "dernier_date": "2026-04-22",
       "dernier_montant": 0.04,
       "prochain": null
@@ -243,17 +249,21 @@
     {
       "nom": "Société Générale",
       "ticker": "GLE.PA",
-      "cours": 76.12,
+      "cours": 71.03,
       "div_12m": 1.61,
-      "rendement_12m": 2.12,
+      "rendement_12m": 2.27,
       "dernier_date": "2026-06-01",
       "dernier_montant": 1.0,
-      "prochain": null
+      "prochain": {
+        "date": "2026-10-05",
+        "montant": null,
+        "source": "confirmé (Yahoo)"
+      }
     },
     {
       "nom": "Air Liquide",
       "ticker": "AI.PA",
-      "cours": 167.12,
+      "cours": 166.78,
       "div_12m": 3.36,
       "rendement_12m": 2.01,
       "dernier_date": "2026-05-18",
@@ -263,9 +273,9 @@
     {
       "nom": "L'Oréal",
       "ticker": "OR.PA",
-      "cours": 386.6,
+      "cours": 384.85,
       "div_12m": 7.2,
-      "rendement_12m": 1.86,
+      "rendement_12m": 1.87,
       "dernier_date": "2026-04-29",
       "dernier_montant": 7.2,
       "prochain": null
@@ -273,29 +283,19 @@
     {
       "nom": "Legrand",
       "ticker": "LR.PA",
-      "cours": 134.65,
+      "cours": 136.4,
       "div_12m": 2.38,
-      "rendement_12m": 1.77,
+      "rendement_12m": 1.74,
       "dernier_date": "2026-05-29",
       "dernier_montant": 2.38,
       "prochain": null
     },
     {
-      "nom": "Airbus",
-      "ticker": "AIR.PA",
-      "cours": 203.7,
-      "div_12m": 3.2,
-      "rendement_12m": 1.57,
-      "dernier_date": "2026-04-21",
-      "dernier_montant": 3.2,
-      "prochain": null
-    },
-    {
       "nom": "Kering",
       "ticker": "KER.PA",
-      "cours": 254.3,
+      "cours": 250.55,
       "div_12m": 4.0,
-      "rendement_12m": 1.57,
+      "rendement_12m": 1.6,
       "dernier_date": "2026-06-02",
       "dernier_montant": 2.75,
       "prochain": null
@@ -303,19 +303,29 @@
     {
       "nom": "Thales",
       "ticker": "HO.PA",
-      "cours": 253.1,
+      "cours": 246.7,
       "div_12m": 3.9,
-      "rendement_12m": 1.54,
+      "rendement_12m": 1.58,
       "dernier_date": "2026-05-18",
       "dernier_montant": 2.95,
       "prochain": null
     },
     {
+      "nom": "Airbus",
+      "ticker": "AIR.PA",
+      "cours": 203.4,
+      "div_12m": 3.2,
+      "rendement_12m": 1.57,
+      "dernier_date": "2026-04-21",
+      "dernier_montant": 3.2,
+      "prochain": null
+    },
+    {
       "nom": "Schneider Electric",
       "ticker": "SU.PA",
-      "cours": 296.8,
+      "cours": 297.55,
       "div_12m": 4.2,
-      "rendement_12m": 1.42,
+      "rendement_12m": 1.41,
       "dernier_date": "2026-05-11",
       "dernier_montant": 4.2,
       "prochain": null
@@ -323,9 +333,9 @@
     {
       "nom": "Dassault Systèmes",
       "ticker": "DSY.PA",
-      "cours": 22.43,
+      "cours": 23.07,
       "div_12m": 0.27,
-      "rendement_12m": 1.2,
+      "rendement_12m": 1.17,
       "dernier_date": "2026-05-27",
       "dernier_montant": 0.27,
       "prochain": null
@@ -333,27 +343,17 @@
     {
       "nom": "Hermès",
       "ticker": "RMS.PA",
-      "cours": 1573.0,
+      "cours": 1563.0,
       "div_12m": 18.0,
-      "rendement_12m": 1.14,
+      "rendement_12m": 1.15,
       "dernier_date": "2026-04-21",
       "dernier_montant": 13.0,
       "prochain": null
     },
     {
-      "nom": "ArcelorMittal",
-      "ticker": "MT",
-      "cours": 72.2,
-      "div_12m": 0.73,
-      "rendement_12m": 1.01,
-      "dernier_date": "2026-08-07",
-      "dernier_montant": 0.15,
-      "prochain": null
-    },
-    {
       "nom": "Eurofins Scientific",
       "ticker": "ERF.PA",
-      "cours": 72.84,
+      "cours": 73.0,
       "div_12m": 0.72,
       "rendement_12m": 0.99,
       "dernier_date": "2026-04-28",
@@ -363,19 +363,29 @@
     {
       "nom": "Safran",
       "ticker": "SAF.PA",
-      "cours": 343.6,
+      "cours": 343.2,
       "div_12m": 3.35,
-      "rendement_12m": 0.97,
+      "rendement_12m": 0.98,
       "dernier_date": "2026-05-26",
       "dernier_montant": 3.35,
       "prochain": null
     },
     {
+      "nom": "ArcelorMittal",
+      "ticker": "MT",
+      "cours": 74.39,
+      "div_12m": 0.73,
+      "rendement_12m": 0.98,
+      "dernier_date": "2026-08-07",
+      "dernier_montant": 0.15,
+      "prochain": null
+    },
+    {
       "nom": "STMicroelectronics",
       "ticker": "STM",
-      "cours": 50.56,
+      "cours": 49.38,
       "div_12m": 0.36,
-      "rendement_12m": 0.71,
+      "rendement_12m": 0.73,
       "dernier_date": "2026-06-23",
       "dernier_montant": 0.09,
       "prochain": {
