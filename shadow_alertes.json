@@ -3688,5 +3688,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -2.72%",
     "envoyee": false
+  },
+  {
+    "date": "2026-08-31",
+    "heure": "14:00",
+    "nom": "Legrand",
+    "cours": 139.25,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
