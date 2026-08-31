@@ -1,15 +1,15 @@
 {
   "date": "2026-08-31",
-  "heure": "17:27",
+  "heure": "20:07",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
+      "La Bourse de Paris plie sous le poids de la hausse des prix de l'énergie",
       "CAC 40 : la Bourse de Paris en hausse avant le rendez-vous très attendu de Jackson Hole",
       "La Bourse de Paris en recul malgré Nvidia",
-      "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-      "CAC 40 : la Bourse de Paris en légère hausse, en attendant les résultats de Nvidia et l'inflation américaine"
+      "Les actions européennes chutent, tirées par le CAC 40 et l’énergie"
     ]
   },
   "valeurs": {
@@ -167,9 +167,13 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 11,
+      "titres_cles": [
+        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
+        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
+        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois"
+      ]
     },
     "Michelin": {
       "sentiment": 0.18,
