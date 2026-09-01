@@ -1,6 +1,6 @@
 {
   "date": "2026-09-01",
-  "heure": "14:44",
+  "heure": "17:31",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": -0.1,
-      "nb_news": 10,
+      "sentiment": 0.0,
+      "nb_news": 8,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "Stellantis redresse la barre après les pertes colossales de l'exercice 2025"
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
       ]
     },
     "Saint-Gobain": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.2,
+      "nb_news": 10,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
