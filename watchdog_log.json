@@ -1,50 +1,50 @@
 {
-  "date": "2026-08-31",
-  "heure": "13:42",
+  "date": "2026-09-01",
+  "heure": "12:17",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment +0.10"
+      "msg": "OK — 20 articles, sentiment +0.20"
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 13:24"
+      "msg": "OK — briefing du jour envoyé à 11:48"
     },
     "Scoring intraday": {
-      "ok": null,
-      "msg": "Lundi — pas de données intraday attendues hier"
+      "ok": true,
+      "msg": "OK hier — 8 snapshot(s) enregistré(s)"
     },
     "Dividendes (lundi 8h05)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-31 (il y a 0 j)"
+      "msg": "OK — dernier rapport le 2026-08-31 (il y a 1 j)"
     },
     "Shadow (vendredi 18h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-29 (il y a 2 j)"
+      "msg": "OK — dernier rapport le 2026-08-29 (il y a 3 j)"
     },
     "Évaluateur (samedi 7h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-29 (il y a 2 j)"
+      "msg": "OK — dernier rapport le 2026-08-29 (il y a 3 j)"
     },
     "Veille (samedi 9h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-29 (il y a 2 j)"
+      "msg": "OK — dernier rapport le 2026-08-29 (il y a 3 j)"
     },
     "Professeur (dimanche 18h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-08-30 (il y a 1 j)"
+      "msg": "OK — dernier rapport le 2026-08-30 (il y a 2 j)"
     },
     "Dual Momentum (1er, 8h)": {
-      "ok": true,
-      "msg": "OK — run mensuel du 2026-08-01"
+      "ok": null,
+      "msg": "pas encore exigible ce mois-ci (dernier : 2026-08-01)"
     },
     "Crypto DM (1er, 8h15)": {
-      "ok": true,
-      "msg": "OK — run mensuel du 2026-08-01"
+      "ok": null,
+      "msg": "pas encore exigible ce mois-ci (dernier : 2026-09-01)"
     },
     "Stratège (le 4, 18h)": {
-      "ok": true,
-      "msg": "OK — run mensuel du 2026-08-04"
+      "ok": null,
+      "msg": "pas encore exigible ce mois-ci (dernier : 2026-08-04)"
     }
   },
   "problemes": []
