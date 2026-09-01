@@ -1,5 +1,5 @@
 {
-  "capital": 1653.599999999999,
+  "capital": 1663.8899999999994,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 20,
@@ -37,17 +37,17 @@
       "tp_pct": 0.064,
       "score_entree": 93
     },
-    "L'Oréal": {
-      "nb_actions": 6,
-      "prix_entree": 391.75,
-      "date_entree": "2026-08-26",
-      "heure_entree": "09:51",
-      "secteur": "Luxe",
-      "cout_total": 2350.5,
-      "frais_achat": 11.75,
-      "stop_pct": 0.0344,
-      "tp_pct": 0.0688,
-      "score_entree": 91
+    "Air Liquide": {
+      "nb_actions": 13,
+      "prix_entree": 174.04,
+      "date_entree": "2026-09-01",
+      "heure_entree": "11:31",
+      "secteur": "Santé",
+      "cout_total": 2262.52,
+      "frais_achat": 11.31,
+      "stop_pct": 0.0284,
+      "tp_pct": 0.0568,
+      "score_entree": 94
     }
   },
   "historique_valeur": {
@@ -81,7 +81,7 @@
     "2026-08-28": 9807.34,
     "2026-08-29": 9746.4,
     "2026-08-31": 9741.2,
-    "2026-09-01": 9764.52
+    "2026-09-01": 9718.68
   },
   "trades": [
     {
@@ -192,6 +192,17 @@
       "heure_sortie": "01:26",
       "pnl_pct": -3.94,
       "frais_total": 15.92,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "L'Oréal",
+      "entree": 391.75,
+      "sortie": 382.6,
+      "date_entree": "2026-08-26",
+      "date_sortie": "2026-09-01",
+      "heure_sortie": "11:31",
+      "pnl_pct": -2.82,
+      "frais_total": 23.23,
       "raison_sortie": "ÉVITER intraday"
     }
   ],

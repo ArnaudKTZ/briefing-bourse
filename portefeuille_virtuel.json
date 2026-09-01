@@ -1,15 +1,6 @@
 {
-  "capital": 1780.0499999999997,
+  "capital": 1684.8199999999997,
   "positions": {
-    "L'Oréal": {
-      "nb_actions": 5,
-      "prix_entree": 390.3,
-      "date_entree": "2026-08-24",
-      "heure_entree": "09:59",
-      "source_entree": "Intraday",
-      "cout_total": 1951.5,
-      "frais_achat": 9.76
-    },
     "BNP Paribas": {
       "nb_actions": 18,
       "prix_entree": 105.72,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1876.38,
       "frais_achat": 9.38
+    },
+    "Michelin": {
+      "nb_actions": 57,
+      "prix_entree": 34.89,
+      "date_entree": "2026-09-01",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "cout_total": 1988.73,
+      "frais_achat": 9.94
     }
   },
   "historique_valeur": {
@@ -90,7 +90,7 @@
     "2026-08-28": 9537.46,
     "2026-08-29": 9410.28,
     "2026-08-31": 9377.11,
-    "2026-09-01": 9390.15
+    "2026-09-01": 9376.45
   },
   "trades": [
     {
@@ -702,6 +702,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -2.72,
       "frais_total": 18.32,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "L'Oréal",
+      "entree": 390.3,
+      "sortie": 382.6,
+      "date_entree": "2026-08-24",
+      "heure_entree": "09:59",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-09-01",
+      "heure_sortie": "11:31",
+      "source_sortie": "Intraday",
+      "pnl_pct": -2.46,
+      "frais_total": 19.32,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
