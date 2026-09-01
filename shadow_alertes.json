@@ -3698,5 +3698,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-01",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 388.5,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-01",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 169.8,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-01",
+    "heure": "09:01",
+    "nom": "Michelin",
+    "cours": 34.78,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-01",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 139.65,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-01",
+    "heure": "09:01",
+    "nom": "Accor",
+    "cours": 46.73,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
