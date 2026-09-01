@@ -1,5 +1,5 @@
 {
-  "capital": 3703.6399999999994,
+  "capital": 1288.3499999999995,
   "positions": {
     "Teleperformance": {
       "nb_actions": 17,
@@ -36,6 +36,18 @@
       "stop_pct": 0.0284,
       "tp_pct": 0.0568,
       "score_entree": 94
+    },
+    "Michelin": {
+      "nb_actions": 69,
+      "prix_entree": 34.83,
+      "date_entree": "2026-09-01",
+      "heure_entree": "16:15",
+      "secteur": "Conso/Autre",
+      "cout_total": 2403.27,
+      "frais_achat": 12.02,
+      "stop_pct": 0.0322,
+      "tp_pct": 0.0644,
+      "score_entree": 81
     }
   },
   "historique_valeur": {
@@ -69,7 +81,7 @@
     "2026-08-28": 9807.34,
     "2026-08-29": 9746.4,
     "2026-08-31": 9741.2,
-    "2026-09-01": 9697.74
+    "2026-09-01": 9663.48
   },
   "trades": [
     {
