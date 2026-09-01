@@ -1,8 +1,8 @@
 {
   "date": "2026-09-01",
-  "heure": "11:36",
+  "heure": "14:44",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 1.0,
-      "nb_news": 9,
+      "sentiment": 0.69,
+      "nb_news": 13,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -360,13 +360,5 @@
       ]
     }
   },
-  "signaux_forts": [
-    [
-      "Air Liquide",
-      1.0,
-      [
-        "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat"
-      ]
-    ]
-  ]
+  "signaux_forts": []
 }
