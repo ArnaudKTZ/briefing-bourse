@@ -1,18 +1,6 @@
 {
-  "capital": 1663.8899999999994,
+  "capital": 3703.6399999999994,
   "positions": {
-    "BNP Paribas": {
-      "nb_actions": 20,
-      "prix_entree": 105.26,
-      "date_entree": "2026-07-24",
-      "heure_entree": "11:24",
-      "secteur": "Banques/Finance",
-      "cout_total": 2105.2,
-      "frais_achat": 10.53,
-      "stop_pct": 0.0452,
-      "tp_pct": 0.0904,
-      "score_entree": 91
-    },
     "Teleperformance": {
       "nb_actions": 17,
       "prix_entree": 69.46,
@@ -81,7 +69,7 @@
     "2026-08-28": 9807.34,
     "2026-08-29": 9746.4,
     "2026-08-31": 9741.2,
-    "2026-09-01": 9718.68
+    "2026-09-01": 9719.1
   },
   "trades": [
     {
@@ -203,6 +191,17 @@
       "heure_sortie": "11:31",
       "pnl_pct": -2.82,
       "frais_total": 23.23,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 105.26,
+      "sortie": 102.5,
+      "date_entree": "2026-07-24",
+      "date_sortie": "2026-09-01",
+      "heure_sortie": "14:01",
+      "pnl_pct": -3.11,
+      "frais_total": 20.78,
       "raison_sortie": "ÉVITER intraday"
     }
   ],

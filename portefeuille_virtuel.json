@@ -1,15 +1,6 @@
 {
-  "capital": 1684.8199999999997,
+  "capital": 3520.5999999999995,
   "positions": {
-    "BNP Paribas": {
-      "nb_actions": 18,
-      "prix_entree": 105.72,
-      "date_entree": "2026-08-28",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1902.96,
-      "frais_achat": 9.51
-    },
     "Eurofins Scientific": {
       "nb_actions": 27,
       "prix_entree": 73.0,
@@ -90,7 +81,7 @@
     "2026-08-28": 9537.46,
     "2026-08-29": 9410.28,
     "2026-08-31": 9377.11,
-    "2026-09-01": 9380.52
+    "2026-09-01": 9383.47
   },
   "trades": [
     {
@@ -716,6 +707,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -2.46,
       "frais_total": 19.32,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 105.72,
+      "sortie": 102.5,
+      "date_entree": "2026-08-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-01",
+      "heure_sortie": "14:01",
+      "source_sortie": "Intraday",
+      "pnl_pct": -3.53,
+      "frais_total": 18.73,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
