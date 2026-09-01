@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-31",
-  "heure": "20:07",
+  "date": "2026-09-01",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.64,
-      "nb_news": 11,
+      "sentiment": 0.7,
+      "nb_news": 10,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS",
