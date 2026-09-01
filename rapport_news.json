@@ -1,15 +1,15 @@
 {
   "date": "2026-09-01",
-  "heure": "06:45",
+  "heure": "11:36",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
+      "Bourses européennes: Paris en hausse à contre-courant des autres marchés en Europe",
       "La Bourse de Paris plie sous le poids de la hausse des prix de l'énergie",
       "CAC 40 : la Bourse de Paris en hausse avant le rendez-vous très attendu de Jackson Hole",
-      "La Bourse de Paris en recul malgré Nvidia",
-      "Les actions européennes chutent, tirées par le CAC 40 et l’énergie"
+      "La Bourse de Paris en recul malgré Nvidia"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.22,
+      "sentiment": 0.33,
       "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
@@ -87,7 +87,7 @@
     },
     "Air Liquide": {
       "sentiment": 1.0,
-      "nb_news": 8,
+      "nb_news": 9,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.08,
+      "sentiment": 0.0,
       "nb_news": 13,
       "titres_cles": [
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech",
         "Capgemini relève ses perspectives pour 2026",
-        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques"
+        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
+        "World Wealth Report : deux millions de personnes deviennent millionnaires en 2025"
       ]
     },
     "Renault": {
