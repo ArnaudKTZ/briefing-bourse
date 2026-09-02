@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-01",
-  "heure": "17:31",
+  "date": "2026-09-02",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
@@ -168,11 +168,11 @@
     },
     "Pernod Ricard": {
       "sentiment": 0.0,
-      "nb_news": 11,
+      "nb_news": 12,
       "titres_cles": [
         "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
         "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
-        "Pernod Ricard : le bénéfice 2025/2026 chute de 26%, pénalisé par les marchés américain et chinois"
+        "Pernod Ricard : après la gueule de bois du siècle en Bourse, une opportunité en or ? L'oeil du Loup de Zurich"
       ]
     },
     "Michelin": {
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.46,
-      "nb_news": 13,
+      "sentiment": 0.5,
+      "nb_news": 12,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
