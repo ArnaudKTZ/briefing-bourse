@@ -3788,5 +3788,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 92/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-02",
+    "heure": "11:30",
+    "nom": "Air Liquide",
+    "cours": 173.42,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-02",
+    "heure": "11:30",
+    "nom": "Michelin",
+    "cours": 34.22,
+    "score": 31,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -2.41%",
+    "envoyee": false
   }
 ]
