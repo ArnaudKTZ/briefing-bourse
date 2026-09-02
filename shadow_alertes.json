@@ -3818,5 +3818,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.17%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-02",
+    "heure": "15:48",
+    "nom": "Accor",
+    "cours": 46.77,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 83/100)",
+    "envoyee": false
   }
 ]
