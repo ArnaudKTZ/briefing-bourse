@@ -1,5 +1,5 @@
 {
-  "capital": 3637.7199999999993,
+  "capital": 1240.5199999999995,
   "positions": {
     "Teleperformance": {
       "nb_actions": 17,
@@ -36,6 +36,18 @@
       "stop_pct": 0.0284,
       "tp_pct": 0.0568,
       "score_entree": 94
+    },
+    "Accor": {
+      "nb_actions": 51,
+      "prix_entree": 46.77,
+      "date_entree": "2026-09-02",
+      "heure_entree": "15:48",
+      "secteur": "Conso/Autre",
+      "cout_total": 2385.27,
+      "frais_achat": 11.93,
+      "stop_pct": 0.033,
+      "tp_pct": 0.066,
+      "score_entree": 83
     }
   },
   "historique_valeur": {
@@ -70,7 +82,7 @@
     "2026-08-29": 9746.4,
     "2026-08-31": 9741.2,
     "2026-09-01": 9675.01,
-    "2026-09-02": 9606.77
+    "2026-09-02": 9614.13
   },
   "trades": [
     {

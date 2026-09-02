@@ -1,5 +1,5 @@
 {
-  "capital": 3487.7899999999995,
+  "capital": 1513.6299999999994,
   "positions": {
     "Eurofins Scientific": {
       "nb_actions": 27,
@@ -26,6 +26,15 @@
       "heure_entree": "05:01",
       "source_entree": "Briefing",
       "cout_total": 1963.78,
+      "frais_achat": 9.82
+    },
+    "Accor": {
+      "nb_actions": 42,
+      "prix_entree": 46.77,
+      "date_entree": "2026-09-02",
+      "heure_entree": "15:48",
+      "source_entree": "Intraday",
+      "cout_total": 1964.3400000000001,
       "frais_achat": 9.82
     }
   },
@@ -82,7 +91,7 @@
     "2026-08-29": 9410.28,
     "2026-08-31": 9377.11,
     "2026-09-01": 9345.86,
-    "2026-09-02": 9350.86
+    "2026-09-02": 9354.09
   },
   "trades": [
     {
