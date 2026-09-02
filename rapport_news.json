@@ -1,6 +1,6 @@
 {
   "date": "2026-09-02",
-  "heure": "06:45",
+  "heure": "11:04",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
+        "Alstom choisit Belfort pour produire une nouvelle gamme de locomotives",
         "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
-        "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom",
-        "ALSTOM S.A : Un consortium mené par Alstom a signé quatre contrats historiques d’une valeur globale de 690 millions d’euros pour moderniser les axes ferroviaires stratégiques de l’Égypte"
+        "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom"
       ]
     },
     "Worldline": {
