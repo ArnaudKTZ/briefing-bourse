@@ -1,5 +1,5 @@
 {
-  "capital": 3520.5999999999995,
+  "capital": 1546.9999999999995,
   "positions": {
     "Eurofins Scientific": {
       "nb_actions": 27,
@@ -27,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1988.73,
       "frais_achat": 9.94
+    },
+    "TotalEnergies": {
+      "nb_actions": 26,
+      "prix_entree": 75.53,
+      "date_entree": "2026-09-02",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1963.78,
+      "frais_achat": 9.82
     }
   },
   "historique_valeur": {
@@ -81,7 +90,8 @@
     "2026-08-28": 9537.46,
     "2026-08-29": 9410.28,
     "2026-08-31": 9377.11,
-    "2026-09-01": 9345.86
+    "2026-09-01": 9345.86,
+    "2026-09-02": 9329.3
   },
   "trades": [
     {

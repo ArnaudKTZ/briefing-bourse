@@ -22216,43 +22216,474 @@
         "golden_cross": false,
         "death_cross": false
       }
+    },
+    "2026-09-02": {
+      "LVMH": {
+        "signal": "SURVEILLER",
+        "score": 59,
+        "prix": 453.3,
+        "secteur": "Luxe",
+        "rsi": 44.4,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (34.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "TotalEnergies": {
+        "signal": "ACHETER",
+        "score": 93,
+        "prix": 75.53,
+        "secteur": "Énergie",
+        "rsi": 52.1,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (47.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Hermès": {
+        "signal": "SURVEILLER",
+        "score": 50,
+        "prix": 1581.0,
+        "secteur": "Luxe",
+        "rsi": 48.7,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (49.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Airbus": {
+        "signal": "SURVEILLER",
+        "score": 52,
+        "prix": 197.24,
+        "secteur": "Industrie/Défense",
+        "rsi": 37.1,
+        "macd": "baissier",
+        "boll_zone": "SOUS bande inf (survendu, -6.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Schneider Electric": {
+        "signal": "SURVEILLER",
+        "score": 56,
+        "prix": 294.6,
+        "secteur": "Industrie/Défense",
+        "rsi": 51.2,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (23.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "L'Oréal": {
+        "signal": "SURVEILLER",
+        "score": 52,
+        "prix": 384.7,
+        "secteur": "Luxe",
+        "rsi": 50.5,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (50.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Sanofi": {
+        "signal": "SURVEILLER",
+        "score": 43,
+        "prix": 76.81,
+        "secteur": "Santé",
+        "rsi": 49.7,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (53.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "BNP Paribas": {
+        "signal": "ACHETER",
+        "score": 80,
+        "prix": 102.78,
+        "secteur": "Banques/Finance",
+        "rsi": 39.7,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (12.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Air Liquide": {
+        "signal": "ACHETER",
+        "score": 89,
+        "prix": 169.54,
+        "secteur": "Santé",
+        "rsi": 48.8,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (52.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Safran": {
+        "signal": "SURVEILLER",
+        "score": 52,
+        "prix": 337.0,
+        "secteur": "Industrie/Défense",
+        "rsi": 42.5,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (4.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Danone": {
+        "signal": "ÉVITER",
+        "score": 8,
+        "prix": 64.28,
+        "secteur": "Conso/Autre",
+        "rsi": 32.6,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (8.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Vinci": {
+        "signal": "SURVEILLER",
+        "score": 59,
+        "prix": 113.15,
+        "secteur": "Industrie/Défense",
+        "rsi": 28.0,
+        "macd": "baissier",
+        "boll_zone": "SOUS bande inf (survendu, -0.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Kering": {
+        "signal": "ÉVITER",
+        "score": 0,
+        "prix": 254.05,
+        "secteur": "Luxe",
+        "rsi": 44.9,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (29.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Société Générale": {
+        "signal": "ACHETER",
+        "score": 93,
+        "prix": 72.65,
+        "secteur": "Banques/Finance",
+        "rsi": 32.7,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (13.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Stellantis": {
+        "signal": "ACHETER",
+        "score": 69,
+        "prix": 4.76,
+        "secteur": "Conso/Autre",
+        "rsi": 50.7,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (66.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Saint-Gobain": {
+        "signal": "ÉVITER",
+        "score": 35,
+        "prix": 78.32,
+        "secteur": "Industrie/Défense",
+        "rsi": 42.7,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (6.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "ArcelorMittal": {
+        "signal": "ÉVITER",
+        "score": 32,
+        "prix": 73.31,
+        "secteur": "Industrie/Défense",
+        "rsi": 54.5,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (43.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Pernod Ricard": {
+        "signal": "ÉVITER",
+        "score": 17,
+        "prix": 64.5,
+        "secteur": "Luxe",
+        "rsi": 41.9,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (3.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Michelin": {
+        "signal": "ACHETER",
+        "score": 100,
+        "prix": 35.0,
+        "secteur": "Conso/Autre",
+        "rsi": 55.1,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (83.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Capgemini": {
+        "signal": "ÉVITER",
+        "score": 30,
+        "prix": 107.25,
+        "secteur": "Tech",
+        "rsi": 53.2,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (31.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Renault": {
+        "signal": "ACHETER",
+        "score": 99,
+        "prix": 29.72,
+        "secteur": "Conso/Autre",
+        "rsi": 63.2,
+        "macd": "haussier",
+        "boll_zone": "AU-DESSUS bande sup (suracheté, 105.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Legrand": {
+        "signal": "SURVEILLER",
+        "score": 37,
+        "prix": 136.55,
+        "secteur": "Industrie/Défense",
+        "rsi": 48.2,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (37.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Publicis": {
+        "signal": "SURVEILLER",
+        "score": 47,
+        "prix": 100.95,
+        "secteur": "Télécom/Média",
+        "rsi": 59.5,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (54.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Bouygues": {
+        "signal": "ACHETER",
+        "score": 81,
+        "prix": 44.22,
+        "secteur": "Industrie/Défense",
+        "rsi": 29.5,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (7.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Engie": {
+        "signal": "SURVEILLER",
+        "score": 41,
+        "prix": 24.6,
+        "secteur": "Énergie",
+        "rsi": 35.6,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (15.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Orange": {
+        "signal": "SURVEILLER",
+        "score": 58,
+        "prix": 15.4,
+        "secteur": "Télécom/Média",
+        "rsi": 37.8,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (10.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Vivendi": {
+        "signal": "SURVEILLER",
+        "score": 54,
+        "prix": 1.61,
+        "secteur": "Télécom/Média",
+        "rsi": 34.1,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (0.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Eurofins Scientific": {
+        "signal": "ACHETER",
+        "score": 78,
+        "prix": 72.54,
+        "secteur": "Santé",
+        "rsi": 60.6,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (73.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Teleperformance": {
+        "signal": "SURVEILLER",
+        "score": 45,
+        "prix": 69.7,
+        "secteur": "Télécom/Média",
+        "rsi": 57.0,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (49.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Alstom": {
+        "signal": "SURVEILLER",
+        "score": 37,
+        "prix": 16.36,
+        "secteur": "Industrie/Défense",
+        "rsi": 52.2,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (54.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Worldline": {
+        "signal": "SURVEILLER",
+        "score": 64,
+        "prix": 13.7,
+        "secteur": "Tech",
+        "rsi": 63.5,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (86.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Veolia": {
+        "signal": "SURVEILLER",
+        "score": 59,
+        "prix": 32.6,
+        "secteur": "Conso/Autre",
+        "rsi": 29.4,
+        "macd": "baissier",
+        "boll_zone": "SOUS bande inf (survendu, -1.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "STMicroelectronics": {
+        "signal": "ACHETER",
+        "score": 85,
+        "prix": 49.4,
+        "secteur": "Tech",
+        "rsi": 39.4,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (21.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Dassault Systèmes": {
+        "signal": "ÉVITER",
+        "score": 16,
+        "prix": 22.84,
+        "secteur": "Tech",
+        "rsi": 65.7,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (81.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Edenred": {
+        "signal": "SURVEILLER",
+        "score": 46,
+        "prix": 30.08,
+        "secteur": "Conso/Autre",
+        "rsi": 65.7,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (79.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Accor": {
+        "signal": "SURVEILLER",
+        "score": 53,
+        "prix": 46.52,
+        "secteur": "Conso/Autre",
+        "rsi": 49.6,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (54.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Eurazeo": {
+        "signal": "SURVEILLER",
+        "score": 41,
+        "prix": 50.25,
+        "secteur": "Banques/Finance",
+        "rsi": 54.3,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (29.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Thales": {
+        "signal": "SURVEILLER",
+        "score": 43,
+        "prix": 243.7,
+        "secteur": "Industrie/Défense",
+        "rsi": 39.1,
+        "macd": "baissier",
+        "boll_zone": "dans les bandes (6.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      },
+      "Forvia": {
+        "signal": "ACHETER",
+        "score": 70,
+        "prix": 9.14,
+        "secteur": "Industrie/Défense",
+        "rsi": 52.8,
+        "macd": "haussier",
+        "boll_zone": "dans les bandes (62.0%)",
+        "golden_cross": false,
+        "death_cross": false
+      }
     }
   },
   "stats": {
-    "total": 2200,
-    "corrects": 969,
-    "precision": 44.0,
-    "acheter_total": 1540,
-    "acheter_corrects": 645,
-    "eviter_total": 660,
+    "total": 2216,
+    "corrects": 973,
+    "precision": 43.9,
+    "acheter_total": 1550,
+    "acheter_corrects": 649,
+    "eviter_total": 666,
     "eviter_corrects": 324,
     "par_secteur": {
       "Luxe": {
-        "total": 292,
+        "total": 293,
         "corrects": 121
       },
       "Santé": {
-        "total": 189,
-        "corrects": 84
+        "total": 191,
+        "corrects": 85
       },
       "Conso/Autre": {
-        "total": 366,
-        "corrects": 150
+        "total": 369,
+        "corrects": 153
       },
       "Industrie/Défense": {
-        "total": 593,
+        "total": 599,
         "corrects": 256
       },
       "Télécom/Média": {
-        "total": 230,
+        "total": 232,
         "corrects": 114
       },
       "Énergie": {
-        "total": 118,
+        "total": 119,
         "corrects": 62
       },
       "Tech": {
-        "total": 206,
+        "total": 207,
         "corrects": 84
       },
       "Banques/Finance": {
@@ -22272,7 +22703,7 @@
     },
     "Industrie/Défense": {
       "rsi_fiabilite": 1.0,
-      "macd_fiabilite": 0.4
+      "macd_fiabilite": 0.667
     },
     "Télécom/Média": {},
     "Énergie": {},
