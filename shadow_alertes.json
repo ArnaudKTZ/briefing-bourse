@@ -3808,5 +3808,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -2.41%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-02",
+    "heure": "14:01",
+    "nom": "Accor",
+    "cours": 46.6,
+    "score": 73,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.17%",
+    "envoyee": false
   }
 ]
