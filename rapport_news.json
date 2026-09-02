@@ -1,6 +1,6 @@
 {
   "date": "2026-09-02",
-  "heure": "14:16",
+  "heure": "17:16",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.71,
-      "nb_news": 14,
+      "sentiment": 0.67,
+      "nb_news": 15,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
