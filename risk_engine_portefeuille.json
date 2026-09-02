@@ -1,5 +1,5 @@
 {
-  "capital": 1288.3499999999995,
+  "capital": 3637.7199999999993,
   "positions": {
     "Teleperformance": {
       "nb_actions": 17,
@@ -36,18 +36,6 @@
       "stop_pct": 0.0284,
       "tp_pct": 0.0568,
       "score_entree": 94
-    },
-    "Michelin": {
-      "nb_actions": 69,
-      "prix_entree": 34.83,
-      "date_entree": "2026-09-01",
-      "heure_entree": "16:15",
-      "secteur": "Conso/Autre",
-      "cout_total": 2403.27,
-      "frais_achat": 12.02,
-      "stop_pct": 0.0322,
-      "tp_pct": 0.0644,
-      "score_entree": 81
     }
   },
   "historique_valeur": {
@@ -82,7 +70,7 @@
     "2026-08-29": 9746.4,
     "2026-08-31": 9741.2,
     "2026-09-01": 9675.01,
-    "2026-09-02": 9631.17
+    "2026-09-02": 9605.52
   },
   "trades": [
     {
@@ -215,6 +203,17 @@
       "heure_sortie": "14:01",
       "pnl_pct": -3.11,
       "frais_total": 20.78,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Michelin",
+      "entree": 34.83,
+      "sortie": 34.22,
+      "date_entree": "2026-09-01",
+      "date_sortie": "2026-09-02",
+      "heure_sortie": "11:30",
+      "pnl_pct": -2.24,
+      "frais_total": 23.83,
       "raison_sortie": "ÉVITER intraday"
     }
   ],

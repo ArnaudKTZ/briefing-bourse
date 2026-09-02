@@ -1,5 +1,5 @@
 {
-  "capital": 1546.9999999999995,
+  "capital": 3487.7899999999995,
   "positions": {
     "Eurofins Scientific": {
       "nb_actions": 27,
@@ -18,15 +18,6 @@
       "source_entree": "Intraday",
       "cout_total": 1876.38,
       "frais_achat": 9.38
-    },
-    "Michelin": {
-      "nb_actions": 57,
-      "prix_entree": 34.89,
-      "date_entree": "2026-09-01",
-      "heure_entree": "11:31",
-      "source_entree": "Intraday",
-      "cout_total": 1988.73,
-      "frais_achat": 9.94
     },
     "TotalEnergies": {
       "nb_actions": 26,
@@ -91,7 +82,7 @@
     "2026-08-29": 9410.28,
     "2026-08-31": 9377.11,
     "2026-09-01": 9345.86,
-    "2026-09-02": 9351.6
+    "2026-09-02": 9341.01
   },
   "trades": [
     {
@@ -731,6 +722,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -3.53,
       "frais_total": 18.73,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Michelin",
+      "entree": 34.89,
+      "sortie": 34.22,
+      "date_entree": "2026-09-01",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-09-02",
+      "heure_sortie": "11:30",
+      "source_sortie": "Intraday",
+      "pnl_pct": -2.41,
+      "frais_total": 19.69,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
