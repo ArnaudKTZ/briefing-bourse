@@ -3828,5 +3828,15 @@
     "signal": "ACHETER",
     "raison": "Position ouverte en portefeuille virtuel (score 83/100)",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-02",
+    "heure": "17:53",
+    "nom": "Worldline",
+    "cours": 13.93,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.42%",
+    "envoyee": false
   }
 ]
