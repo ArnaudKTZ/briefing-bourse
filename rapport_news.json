@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "heure": "06:45",
+  "heure": "11:12",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.33,
+      "sentiment": 0.22,
       "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "TotalEnergies : éolien, solaire… rachat à Shell d’actifs d’énergies renouvelables en Europe",
-        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure"
+        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
+        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
       ]
     },
     "Hermès": {
@@ -104,12 +104,12 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.08,
+      "nb_news": 12,
       "titres_cles": [
-        "Danone va acquérir MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
-        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé"
+        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé",
+        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat"
       ]
     },
     "Vinci": {
