@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "heure": "14:15",
+  "heure": "17:09",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.47,
-      "nb_news": 15,
+      "sentiment": 0.44,
+      "nb_news": 16,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
