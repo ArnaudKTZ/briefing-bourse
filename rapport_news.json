@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "heure": "11:12",
+  "heure": "14:15",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
@@ -176,11 +176,11 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.2,
+      "sentiment": 0.1,
       "nb_news": 10,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
-        "Michelin réalise au premier semestre 2026 une progression du résultat opérationnel des secteurs à périmètre et changes constants, ainsi que du cash-flow libre avant M&A. Le Groupe confirme sa guidance annuelle.",
+        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
         "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026"
       ]
     },
