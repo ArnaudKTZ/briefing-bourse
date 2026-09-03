@@ -3838,5 +3838,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +4.42%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-03",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 173.18,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-03",
+    "heure": "09:01",
+    "nom": "Michelin",
+    "cours": 34.88,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
   }
 ]
