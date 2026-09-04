@@ -1,70 +1,65 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-09-04",
   "faits": {
-    "date_reunion": "2026-08-04",
+    "date_reunion": "2026-09-04",
     "nature_portefeuilles": "TOUS VIRTUELS (paper trading). Aucun argent réel engagé par les agents.",
     "coeur_dm": {
       "allocation": "50% Amundi MSCI World Screened + 50% Amundi MSCI USA Screened",
-      "valeur": 10256.94,
-      "perf_pct": 2.5694,
+      "valeur": 10349.19,
+      "perf_pct": 3.4919,
       "drawdown_max": -2.61
     },
     "crypto_dm": {
       "position": "Stable",
       "valeur_usd": 995.0,
-      "bh_btc_usd": 984.13,
+      "bh_btc_usd": 1220.88,
       "n_rotations": 1,
       "drawdown_max": 0.0
     },
     "satellite_v4": {
-      "valeur": 10269.61,
-      "drawdown_max": -2.95,
+      "valeur": 9302.61,
+      "drawdown_max": -10.62,
       "positions_ouvertes": [
         {
-          "nom": "BNP Paribas",
-          "cout_eur": 1906.56,
-          "date": "2026-07-27"
+          "nom": "Eurofins Scientific",
+          "cout_eur": 1971.0,
+          "date": "2026-08-29"
         },
         {
-          "nom": "L'Oréal",
-          "cout_eur": 1917.5,
-          "date": "2026-07-31"
+          "nom": "Air Liquide",
+          "cout_eur": 1876.38,
+          "date": "2026-08-31"
         },
         {
           "nom": "TotalEnergies",
-          "cout_eur": 1986.92,
-          "date": "2026-08-03"
+          "cout_eur": 1963.78,
+          "date": "2026-09-02"
         },
         {
-          "nom": "Schneider Electric",
-          "cout_eur": 1737.6000000000001,
-          "date": "2026-08-03"
-        },
-        {
-          "nom": "Safran",
-          "cout_eur": 1692.0,
-          "date": "2026-08-03"
+          "nom": "Accor",
+          "cout_eur": 1964.3400000000001,
+          "date": "2026-09-02"
         }
       ],
-      "n_trades_clos": 25,
-      "pct_gagnants": 44,
-      "gain_moyen_pct": 4.2,
-      "perte_moyenne_pct": -2.25,
-      "frais_cumules_eur": 454.53,
+      "n_trades_clos": 49,
+      "pct_gagnants": 41,
+      "gain_moyen_pct": 3.49,
+      "perte_moyenne_pct": -2.85,
+      "frais_cumules_eur": 904.79,
       "taille_position": "2000 EUR fixes, quelle que soit la volatilite (constat code)"
     },
     "evaluateur": {
-      "date": "2026-08-01",
-      "n_obs": 1169,
-      "edge_brut_j5": -0.18,
-      "edge_net_j5": -1.18,
-      "ic_j5": 0.0193,
-      "verdict": "Sur 371 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.18 pts bruts à J+5), soit -1.18 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-1.01 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.019 : le score n'a aucun pouvoir de classement."
+      "date": "2026-08-29",
+      "n_obs": 1949,
+      "edge_brut_j5": -0.17,
+      "edge_net_j5": -1.17,
+      "ic_j5": 0.0471,
+      "verdict": "Sur 740 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.17 pts bruts à J+5), soit -1.17 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-1.10 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.047 : pouvoir de classement faible."
     },
     "shadow": {
-      "date": "2026-07-31",
+      "date": "2026-08-29",
       "verdict": "NUISIBLES",
-      "edge_j5": -0.76
+      "edge_j5": -0.66
     },
     "professeur": [
       {
@@ -80,55 +75,50 @@
       {
         "agent": "Briefing V4 (signaux)",
         "note": "E",
-        "verdict": "Précision 44.0% : sous le hasard. À cantonner en poche satellite."
+        "verdict": "Précision 44.3% : sous le hasard. À cantonner en poche satellite."
       },
       {
         "agent": "Portefeuille virtuel V4",
-        "note": "C",
-        "verdict": "PF +1.9% fait jeu égal avec le CAC (+1.1%)."
+        "note": "E",
+        "verdict": "PF -5.9% sous le CAC (-0.2%) : ne crée pas de valeur."
       },
       {
         "agent": "Agent News",
         "note": "C",
         "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
-      },
-      {
-        "agent": "Agent Espion",
-        "note": "C",
-        "verdict": "Suit l'argent institutionnel. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
       }
     ],
     "data_quality_7_derniers": [
       {
-        "date": "2026-07-30",
+        "date": "2026-09-01",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-07-31",
+        "date": "2026-09-02",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-07-31",
+        "date": "2026-09-02",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-08-03",
+        "date": "2026-09-03",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-08-03",
+        "date": "2026-09-03",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-08-04",
+        "date": "2026-09-04",
         "nb_erreurs": 0
       },
       {
-        "date": "2026-08-04",
+        "date": "2026-09-04",
         "nb_erreurs": 0
       }
     ],
-    "cout_api_30j_usd": 5.046
+    "cout_api_30j_usd": 5.492
   },
-  "conseil": "<h3>Lecture du mois</h3>\n<p>\nLe système est en paper trading intégral, aucun argent réel n'est en jeu. Le coeur Dual Momentum progresse tranquillement à +2.57% avec un drawdown max contenu à -2.61%, il joue son rôle d'airbag comme prévu. La poche Crypto DM est trop jeune pour être jugée (2 points mensuels) mais dépasse déjà le buy-and-hold BTC de +1.1 point, drawdown nul à ce stade. Le satellite V4 est le dossier qui brûle : sur 25 trades clos, 44% de gagnants, edge brut de -0.18 point à J+5 et edge net de -1.18 point après les 454.53 EUR de frais accumulés. L'Évaluateur le dit sans détour et le Shadow confirme avec -0.76 point : le signal V4 est actuellement <strong>perdant en conditions réelles</strong>. Seule lumière dans ce tableau : la qualité des données est irréprochable sur les 7 derniers jours, zéro erreur, et les coûts API restent à 5.05 USD sur 30 jours.\n</p>\n\n<h3>Conformité aux principes des maîtres</h3>\n<ul>\n  <li>\n    <strong>P15 - Edge mesuré NET de frais (statut OK, signal de régression) :</strong> le principe est en place et il fait son travail, c'est lui qui révèle le problème. Mais le fait que l'edge net V4 soit à <em>-1.18 point</em> sur 25 trades clos signifie qu'on a laissé tourner un moteur en négatif le temps de mesurer. C'est le bon usage du principe, mais le résultat doit conduire à une action.\n  </li>\n  <li>\n    <strong>P1 et P2 - Risque max par position et taille selon la volatilité (statut ABSENT, confirmation) :</strong> le code confirme des positions à <em>2000 EUR fixes quelle que soit la volatilité</em>. Sur un portefeuille virtuel de 10 269 EUR, c'est environ 19.5% du capital par ligne, soit un facteur 10 au-dessus des 1-2% des Turtles. Ce n'est pas une surprise mais c'est aggravé par le fait que le signal est perdant : on prend du risque surdimensionné sur un edge négatif.\n  </li>\n  <li>\n    <strong>P5 - Asymétrie gain/risque (statut ABSENT, quantifié ce mois) :</strong> gain moyen +4.2%, perte moyenne -2.25%, ratio 1.87. On est juste sous le seuil minimal de 2:1. Seul élément qui évite la catastrophe totale, mais insuffisant pour compenser un taux de réussite à 44%.\n  </li>\n  <li>\n    <strong>P20 - Mesurer, pas raconter (statut OK, pleinement opérationnel) :</strong> l'Évaluateur, le Shadow et le Professeur produisent des verdicts chiffrés convergents. Ce mois est une démonstration que P20 fonctionne : sans ces mesures, on continuerait à opérer avec un signal perdant en croyant avancer.\n  </li>\n  <li>\n    <strong>P11 - Limites d'exposition corrélée par secteur (statut ABSENT, fait nouveau) :</strong> le satellite V4 ouvre simultanément BNP Paribas, L'Oréal, TotalEnergies, Schneider Electric et Safran, soit 5 positions françaises large-cap très corrélées aux mêmes facteurs macro domestiques. Aucune limite sectorielle ne s'applique.\n  </li>\n</ul>\n\n<h3>La proposition du mois</h3>\n<p>\n<strong>La proposition unique : connecter les agents News et Espion au harnais de l'Évaluateur, avant toute autre modification.</strong> Voici pourquoi c'est la priorité absolue maintenant. Le Professeur note les deux agents C avec le même verdict : \"impact réel sur la précision pas encore mesuré\". Or l'Évaluateur dispose déjà d'un IC de Spearman calculé sur 1169 observations. La question qui compte n'est pas \"le score global discrimine-t-il ?\" mais \"le signal News ou le signal Espion, seul ou en interaction avec le score V4, déplace-t-il l'edge net au-dessus de zéro sur un sous-ensemble identifiable ?\". Si la réponse est non sur données historiques, on éteint ces agents ou on les décharge. Si la réponse est oui, on tient une piste d'amélioration concrète avant de toucher à quoi que ce soit d'autre dans l'architecture. <strong>Protocole de test :</strong> (1) exporter les signaux News et Espion horodatés en les appariant aux trades déjà clos dans le harnais Évaluateur, (2) calculer l'edge brut et net à J+5 en segmentant sur trois groupes : \"News positif + signal V4 fort\", \"Espion positif + signal V4 fort\", et \"les deux neutres/absents\", (3) appliquer le même IC de Spearman pour chaque segment, (4) critère de validation : edge net > +0.5 point sur au minimum 30 observations dans au moins un segment, sans sélection de données a posteriori. Cette mesure rétroactive sur données existantes ne coûte rien, ne change rien en prod, et donne une réponse propre en moins d'une réunion. Si le résultat est négatif, le mois prochain on peut parler de l'arrêt du satellite V4 avec des arguments complets. Si positif, on a une hypothèse testable en walk-forward.\n</p>\n\n<h3>Ce que dirait un maître</h3>\n<p>\nEd Seykota a résumé sa philosophie en une ligne : les éléments essentiels du trading sont couper vite les pertes et laisser courir les gains. Appliqué au système, Seykota regarderait un edge net à -1.18 point sur 25 trades et poserait une seule question : pourquoi le signal V4 tourne-t-il encore ? Il ne verrait pas de cruauté à couper un système qui perd, il y verrait de la discipline. Il ajouterait probablement que les 454.53 EUR de frais accumulés sur un paper portfolio ne font pas encore mal, et que c'est précisément pour cela que le paper trading existe : pour apprendre à reconnaître un signal mort avant de le payer en vrai.\n</p>"
+  "conseil": "<h3>Lecture du mois</h3>\n<p>\nLe coeur Dual Momentum affiche +3.49% pour une valeur de 10 349.19 EUR, avec un drawdown maximum contenu à -2.61% : le Professeur le qualifie d'airbag, pas de moteur, et les faits lui donnent raison. La poche Crypto DM reste stable à 995.00 USD avec un drawdown nul, mais n'a que 2 points de données mensuels, ce qui rend tout jugement prématuré. Le satellite V4 est le point noir du mois : 9 302.61 EUR, drawdown maximum à -10.62%, 49 trades clos avec seulement 41% de gagnants, 904.79 EUR de frais cumulés, et surtout un edge net à J+5 de -1.17 point selon l'Évaluateur et -0.66 point selon le Shadow -- les deux agents convergent vers le même verdict : <strong>perdant net de frais</strong>. La qualité des données est irréprochable sur les 7 derniers jours (zéro erreur), et le coût API sur 30 jours reste anecdotique à 5.49 USD. Le système mesure honnêtement, ce qui est le minimum nécessaire pour ne pas se raconter des histoires.\n</p>\n\n<h3>Conformité aux principes des maîtres</h3>\n<ul>\n  <li>\n    <strong>P1 -- Risque max 1-2% par position (ABSENT, inchangé) :</strong> avec des positions fixes à 2 000 EUR sur un satellite de 9 302.61 EUR, chaque entrée représente environ 21.5% du capital satellite. Ce n'est pas du sizing, c'est de la roulette en four-ball.\n  </li>\n  <li>\n    <strong>P2 -- Taille inversement proportionnelle à la volatilité (ABSENT, inchangé) :</strong> le code confirme des tailles fixes \"quelle que soit la volatilité\". Eurofins, Air Liquide, TotalEnergies et Accor ont des volatilités très différentes ; les traiter identiquement revient à prendre des risques réels très inégaux sans le voir.\n  </li>\n  <li>\n    <strong>P12 -- Frein après drawdown (ABSENT, inchangé) :</strong> le satellite est à -10.62% de drawdown maximum et continue d'ouvrir des positions au rythme normal (4 ouvertures en août-septembre). Aucun mécanisme ne réduit la voilure quand le système souffre.\n  </li>\n  <li>\n    <strong>P15 -- Edge mesuré NET de frais avant de risquer (OK, mais signal de régression à surveiller) :</strong> l'edge est bien mesuré -- c'est le point positif. Mais le verdict est -1.17 pt net sur 740 signaux ACHETER. Le principe est respecté dans sa forme (on mesure), violé dans son esprit (on continue malgré le rouge).\n  </li>\n  <li>\n    <strong>P5 -- Asymétrie gain/risque >= 2 (ABSENT, inchangé) :</strong> gain moyen +3.49% contre perte moyenne -2.85% sur 49 trades clos. Le ratio brut est 1.22, loin du 2:1 exigé, et devient négatif en espérance avec 41% de gagnants.\n  </li>\n  <li>\n    <strong>P20 -- Mesurer, pas raconter (OK, confirmé) :</strong> l'Évaluateur et le Shadow produisent des chiffres convergents et défavorables sans les édulcorer. C'est la seule bonne nouvelle du satellite ce mois-ci.\n  </li>\n</ul>\n\n<h3>La proposition du mois</h3>\n<p>\n<strong>Proposition unique : implémenter un frein de drawdown automatique sur le satellite V4, avec protocole de test rétroactif sur les 49 trades clos.</strong>\n</p>\n<p>\nPourquoi maintenant ? Le satellite est à -10.62% de drawdown, l'edge net est négatif (-1.17 pt), et le système continue d'ouvrir des positions sans frein -- violation directe de P12 et aggravation mécanique du drawdown. Continuer sans garde-fou, c'est dépenser du capital réel (même virtuel pour l'instant) à tester un signal qui a déjà rendu son verdict.\n</p>\n<p>\nLa règle proposée est simple : <em>si le drawdown du satellite dépasse -8% depuis le dernier plus-haut, la taille des nouvelles positions est réduite de 50% ; si le drawdown dépasse -15%, aucune nouvelle position n'est ouverte jusqu'au retour au-dessus de -10%.</em>\n</p>\n<p>\nProtocole de test : (1) reprendre les 49 trades clos avec leurs dates d'entrée et les valeurs de portefeuille à ces dates, recalculer le drawdown courant au moment de chaque entrée ; (2) simuler rétroactivement l'application de la règle (quelles entrées auraient été bloquées ou réduites) ; (3) comparer la courbe d'équité simulée à la courbe réelle, frais inclus proportionnellement à la taille ; (4) mesurer le drawdown maximum simulé, le gain moyen, la perte moyenne, et le nombre de trades filtrés ; (5) si le ratio gain/perte simulé s'améliore et que le drawdown maximum est réduit d'au moins 30% sans effondrement du nombre de trades utiles, la règle est intégrée au code du satellite ; sinon, on documente et on cherche un seuil différent. Tout cela avant la prochaine réunion, sur données existantes, sans toucher à la production.\n</p>\n\n<h3>Ce que dirait un maître</h3>\n<p>\nPaul Tudor Jones regarderait les 49 trades, le ratio gain/perte à 1.22 brut, l'edge net négatif, et les 4 positions ouvertes malgré le drawdown de -10.62%, et poserait une seule question : à quel moment précisément le système a-t-il décidé que les règles ne s'appliquaient plus à lui ? Jones a toujours dit que les perdants moyennent les perdants -- ici, ce n'est pas une position qu'on moyenne, c'est un système entier qu'on persiste à alimenter alors que ses propres mesures crient stop. La discipline ne consiste pas à mesurer l'échec proprement ; elle consiste à en tirer une conséquence opérationnelle.\n</p>"
 }
