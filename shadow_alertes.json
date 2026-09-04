@@ -3898,5 +3898,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +4.42%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-04",
+    "heure": "15:42",
+    "nom": "ArcelorMittal",
+    "cours": 78.09,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.23%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-04",
+    "heure": "15:42",
+    "nom": "STMicroelectronics",
+    "cours": 52.23,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.59%",
+    "envoyee": false
   }
 ]
