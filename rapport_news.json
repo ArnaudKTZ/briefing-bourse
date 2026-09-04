@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "heure": "06:45",
+  "heure": "11:04",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.4,
-      "nb_news": 5,
+      "sentiment": 0.0,
+      "nb_news": 4,
       "titres_cles": [
-        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "CAC 40 : la Bourse de Paris progresse ce mercredi, à l'inverse des autres marchés prudents",
-        "La Bourse de Paris à contre-courant du reste des marchés"
+        "La Bourse de Paris à contre-courant du reste des marchés",
+        "Patrick Martin très offensif contre les politiques avant le débat présidentiel devant le Medef"
       ]
     },
     "Saint-Gobain": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.14,
-      "nb_news": 7,
+      "sentiment": 0.17,
+      "nb_news": 6,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
