@@ -1,8 +1,8 @@
 {
   "date": "2026-09-04",
-  "heure": "11:04",
+  "heure": "14:15",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 3,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris progresse ce mercredi, à l'inverse des autres marchés prudents",
         "La Bourse de Paris à contre-courant du reste des marchés",
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.5,
-      "nb_news": 12,
+      "sentiment": 0.55,
+      "nb_news": 11,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.15,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
+        "Alstom décroche un contrat de 3 milliards d’euros au Canada pour des trains longue distance",
         "Alstom S.A.:  Alstom remporte un contrat majeur pour le renouvellement de la flotte de trains longue distance de VIA Rail Canada",
-        "Alstom choisit Belfort pour produire une nouvelle gamme de locomotives",
-        "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22"
+        "Alstom choisit Belfort pour produire une nouvelle gamme de locomotives"
       ]
     },
     "Worldline": {
