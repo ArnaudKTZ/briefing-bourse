@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-03",
-  "heure": "17:09",
+  "date": "2026-09-04",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.11,
-      "nb_news": 9,
+      "sentiment": 0.0,
+      "nb_news": 6,
       "titres_cles": [
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
         "LVMH : Déclaration des transactions sur actions propres",
-        "Michael Saylor explique comment investir comme un milliardaire et pourquoi Bitcoin fonctionne"
+        "Michael Saylor explique comment investir comme un milliardaire et pourquoi Bitcoin fonctionne",
+        "LVMH : INFORMATION MENSUELLE RELATIVE AU NOMBRE TOTAL DE DROITS DE VOTE ET D’ACTIONS COMPOSANT LE CAPITAL SOCIAL"
       ]
     },
     "TotalEnergies": {
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.19,
+      "nb_news": 16,
       "titres_cles": [
         "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
         "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.22,
+      "nb_news": 9,
       "titres_cles": [
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 8,
+      "sentiment": 0.4,
+      "nb_news": 5,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ?",
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
+        "CAC 40 : la Bourse de Paris progresse ce mercredi, à l'inverse des autres marchés prudents",
+        "La Bourse de Paris à contre-courant du reste des marchés"
       ]
     },
     "Saint-Gobain": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.1,
-      "nb_news": 10,
+      "sentiment": 0.14,
+      "nb_news": 7,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.0,
-      "nb_news": 13,
+      "sentiment": 0.06,
+      "nb_news": 17,
       "titres_cles": [
-        "Capgemini relève ses perspectives pour 2026",
-        "TotalEnergies SE fait appel du jugement du 25 juin 2026 dans l’affaire relative au devoir de vigilance et aux risques climatiques",
-        "World Wealth Report : deux millions de personnes deviennent millionnaires en 2025"
+        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
+        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse",
+        "Les Bourses européennes mitigées à l'ouverture de la séance, résistent à la hausse du pétrole"
       ]
     },
     "Renault": {
@@ -249,11 +249,11 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
+        "VIVENDI : RÉSULTATS DU PREMIER SEMESTRE 2026",
         "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE",
-        "VIVENDI PREND ACTE DE LA DÉCISION DE LA COUR D’APPEL DE PARIS"
+        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
       ]
     },
     "Eurofins Scientific": {
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.61,
-      "nb_news": 18,
+      "sentiment": 0.38,
+      "nb_news": 16,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.11,
-      "nb_news": 19,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
+        "Alstom S.A.:  Alstom remporte un contrat majeur pour le renouvellement de la flotte de trains longue distance de VIA Rail Canada",
         "Alstom choisit Belfort pour produire une nouvelle gamme de locomotives",
-        "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22",
-        "ALSTOM S.A : Communiqué établissant le bilan semestriel du contrat de liquidité de la société Alstom"
+        "ALSTOM S.A : Information relative à l’enquête de l’AMF ouverte en 2021/22"
       ]
     },
     "Worldline": {
@@ -299,7 +299,7 @@
     },
     "STMicroelectronics": {
       "sentiment": 0.33,
-      "nb_news": 9,
+      "nb_news": 12,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
