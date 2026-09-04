@@ -3918,5 +3918,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.59%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-04",
+    "heure": "16:01",
+    "nom": "Michelin",
+    "cours": 34.98,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
