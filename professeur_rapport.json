@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30",
+  "date": "2026-09-06",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -10,41 +10,41 @@
     },
     {
       "agent": "Crypto DM (BTC/ETH)",
-      "metrique": "-0.5% vs B&H BTC -1.6%",
-      "note": "C",
+      "metrique": "-0.5% vs B&H BTC +22.1%",
+      "note": "D",
       "confiance": "faible",
-      "verdict": "Trop tôt pour juger (2 point(s) mensuel(s)). Stratégie -0.5% vs B&H BTC -1.6%. L'attendu validé par la recette est l'airbag (drawdown réduit), pas le rendement.",
-      "valeur_suivie": 1.1
+      "verdict": "Stratégie -0.5% vs B&H BTC +22.1% (-22.6 pts). Rappel anti-leakage : live très sous le backtest = suspicion de contamination.",
+      "valeur_suivie": -22.6
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "44.3% précision (2100 signaux)",
+      "metrique": "43.5% précision (2322 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 44.3% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 44.3,
+      "verdict": "Précision 43.5% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 43.5,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "-5.9% (44 trades)",
+      "metrique": "-7.0% (49 trades)",
       "note": "E",
       "confiance": "moyenne",
-      "verdict": "PF -5.9% sous le CAC (-0.2%) : ne crée pas de valeur.",
-      "valeur_suivie": -5.9
+      "verdict": "PF -7.0% sous le CAC (-1.7%) : ne crée pas de valeur.",
+      "valeur_suivie": -7.0
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-08-28)",
+      "metrique": "actif (rapport du 2026-09-04)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
   "evolution": {
-    "Crypto DM (BTC/ETH)": 0.0,
-    "Briefing V4 (signaux)": 1.2,
-    "Portefeuille virtuel V4": -4.6
+    "Crypto DM (BTC/ETH)": -23.7,
+    "Briefing V4 (signaux)": -0.8,
+    "Portefeuille virtuel V4": -1.1
   },
   "doutes_meta": [],
   "historique": [
@@ -442,6 +442,41 @@
           "agent": "Portefeuille virtuel V4",
           "note": "E",
           "valeur": -5.9,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Crypto DM (BTC/ETH)",
+          "note": "D",
+          "valeur": -22.6,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 43.5,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "E",
+          "valeur": -7.0,
           "meta_borne": false
         },
         {
