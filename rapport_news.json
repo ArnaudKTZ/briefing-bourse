@@ -1,6 +1,6 @@
 {
   "date": "2026-09-07",
-  "heure": "11:45",
+  "heure": "15:41",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.67,
-      "nb_news": 6,
+      "sentiment": 0.57,
+      "nb_news": 7,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.38,
-      "nb_news": 8,
+      "sentiment": 0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.53,
       "nb_news": 15,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 17 au 21 août 2026"
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026"
       ]
     },
     "Alstom": {
