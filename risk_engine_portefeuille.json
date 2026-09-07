@@ -1,18 +1,6 @@
 {
-  "capital": 1240.5199999999995,
+  "capital": 545.8599999999997,
   "positions": {
-    "Teleperformance": {
-      "nb_actions": 17,
-      "prix_entree": 69.46,
-      "date_entree": "2026-08-19",
-      "heure_entree": "11:31",
-      "secteur": "Télécom/Média",
-      "cout_total": 1180.82,
-      "frais_achat": 5.9,
-      "stop_pct": 0.0814,
-      "tp_pct": 0.1628,
-      "score_entree": 88
-    },
     "Eurofins Scientific": {
       "nb_actions": 35,
       "prix_entree": 70.66,
@@ -48,6 +36,18 @@
       "stop_pct": 0.033,
       "tp_pct": 0.066,
       "score_entree": 83
+    },
+    "Legrand": {
+      "nb_actions": 13,
+      "prix_entree": 143.15,
+      "date_entree": "2026-09-07",
+      "heure_entree": "11:31",
+      "secteur": "Industrie/Défense",
+      "cout_total": 1860.95,
+      "frais_achat": 9.3,
+      "stop_pct": 0.0492,
+      "tp_pct": 0.0984,
+      "score_entree": 88
     }
   },
   "historique_valeur": {
@@ -85,7 +85,7 @@
     "2026-09-02": 9594.28,
     "2026-09-03": 9606.25,
     "2026-09-04": 9590.82,
-    "2026-09-07": 9590.82
+    "2026-09-07": 9534.24
   },
   "trades": [
     {
@@ -229,6 +229,17 @@
       "heure_sortie": "11:30",
       "pnl_pct": -2.24,
       "frais_total": 23.83,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Teleperformance",
+      "entree": 69.46,
+      "sortie": 69.5,
+      "date_entree": "2026-08-19",
+      "date_sortie": "2026-09-07",
+      "heure_sortie": "11:31",
+      "pnl_pct": -0.44,
+      "frais_total": 11.81,
       "raison_sortie": "ÉVITER intraday"
     }
   ],

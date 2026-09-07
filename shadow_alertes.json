@@ -3938,5 +3938,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-07",
+    "heure": "11:31",
+    "nom": "Legrand",
+    "cours": 143.15,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-07",
+    "heure": "11:31",
+    "nom": "Accor",
+    "cours": 47.17,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
