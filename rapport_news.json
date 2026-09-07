@@ -1,11 +1,11 @@
 {
   "date": "2026-09-07",
-  "heure": "15:41",
+  "heure": "18:38",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
-      "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
+      "La Bourse de Paris termine en légère hausse",
       "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu",
       "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain",
       "La Bourse de Paris limite les dégâts face à la hausse du brut, du gaz et des taux",
@@ -24,7 +24,7 @@
     },
     "TotalEnergies": {
       "sentiment": 0.11,
-      "nb_news": 18,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.17,
-      "nb_news": 6,
+      "sentiment": 0.14,
+      "nb_news": 7,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.9,
-      "nb_news": 10,
+      "sentiment": 0.82,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
