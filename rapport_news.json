@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-04",
-  "heure": "17:05",
+  "date": "2026-09-07",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris profite d'un rebond, avant Jackson Hole",
+      "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain",
       "La Bourse de Paris limite les dégâts face à la hausse du brut, du gaz et des taux",
       "Bourses européennes: Paris en hausse à contre-courant des autres marchés en Europe",
-      "La Bourse de Paris plie sous le poids de la hausse des prix de l'énergie",
-      "CAC 40 : la Bourse de Paris en hausse avant le rendez-vous très attendu de Jackson Hole"
+      "La Bourse de Paris plie sous le poids de la hausse des prix de l'énergie"
     ]
   },
   "valeurs": {
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
         "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long",
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.37,
-      "nb_news": 19,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
         "Eramet : Bilan semestriel du contrat de liquidité au 30 juin 2026",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.69,
-      "nb_news": 13,
+      "sentiment": 0.6,
+      "nb_news": 15,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -104,12 +104,12 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.08,
+      "sentiment": 0.17,
       "nb_news": 12,
       "titres_cles": [
+        "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
-        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé",
-        "Jefferies remanie les valeurs alimentaires suisses : Danone dégradé, Nestlé relevé à l’achat"
+        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé"
       ]
     },
     "Vinci": {
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.06,
-      "nb_news": 17,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse",
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.55,
-      "nb_news": 11,
+      "sentiment": 0.7,
+      "nb_news": 10,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.38,
-      "nb_news": 16,
+      "sentiment": 0.4,
+      "nb_news": 15,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.33,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.27,
-      "nb_news": 11,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.82,
-      "nb_news": 11,
+      "sentiment": 0.9,
+      "nb_news": 10,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
