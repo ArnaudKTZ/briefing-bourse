@@ -1,8 +1,8 @@
 {
   "date": "2026-09-08",
-  "heure": "06:45",
+  "heure": "11:06",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en légère hausse",
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.11,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 4,
       "titres_cles": [
         "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
         "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.14,
-      "nb_news": 7,
+      "sentiment": 0.17,
+      "nb_news": 6,
       "titres_cles": [
         "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
@@ -185,21 +185,21 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.11,
+      "sentiment": 0.06,
       "nb_news": 18,
       "titres_cles": [
-        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
+        "La majorité des organisations estiment qu’une souveraineté numérique totale est un objectif irréaliste, les entreprises privilégiant la résilience à l’indépendance complète",
         "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse",
         "Les Bourses européennes mitigées à l'ouverture de la séance, résistent à la hausse du pétrole"
       ]
     },
     "Renault": {
-      "sentiment": 0.21,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "NextRise 2026, le principal salon asiatique dédié aux start-ups, co-organisé par la KITA et la KDB, s'achève avec succès à Séoul"
+        "Avec sa nouvelle Spring, Dacia veut se relancer face à l'offensive chinoise"
       ]
     },
     "Legrand": {
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.68,
-      "nb_news": 19,
+      "sentiment": 0.75,
+      "nb_news": 16,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
         "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
