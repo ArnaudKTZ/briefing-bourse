@@ -107,7 +107,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <div class="card">
     <div class="card-title">Agent Dual Momentum <span class="badge badge-coeur">CŒUR</span></div>
     <div class="card-freq">1×/mois — le 1er, 8h</div>
-    <div class="card-body">Le conseiller patrimonial. Hybride 50/50 : 50% World en permanence + 50% qui tourne entre World et USA selon le momentum 12 mois (refuge cash si tout baisse). Email : « rien à faire » ou « bascule X→Y ». Portefeuille virtuel 10 000€ (depuis le 26/06) suivi chaque jour dans le briefing, comparé au World buy &amp; hold.</div>
+    <div class="card-body">Le conseiller patrimonial. Chaque mois, le capital suit le meilleur momentum 12 mois (World ou USA), ou se met à l'abri sur le <strong>monétaire</strong> (Amundi PEA Euro Court Terme) si tout baisse. Email : « rien à faire » ou « bascule X→Y ». Portefeuille virtuel 10 000€ (depuis le 26/06) suivi chaque jour dans le briefing, comparé au World buy &amp; hold. <strong>Évolution du 08/09/2026 (recette <code>piste1_bridage_pea.py</code>) :</strong> le socle 50% World permanent a été supprimé (<code>SOCLE_PONDERATION = 0</code>) et le refuge cash dormant remplacé par le monétaire. Sur 22 ans : pire chute −20% (contre −35%), Sharpe 0,76 (contre 0,66). Reste en forward virtuel avant tout euro réel.</div>
   </div>
   <div class="card">
     <div class="card-title">Agent Crypto Dual Momentum <span class="badge badge-coeur">CRYPTO</span></div>
@@ -176,22 +176,25 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   </div>
 </div>
 
-<h2>3. La stratégie du cœur — Dual Momentum hybride</h2>
+<h2>3. La stratégie du cœur — Dual Momentum (GEM)</h2>
 
-<p>Idée simple : ce qui monte depuis un moment a tendance à continuer. Chaque mois on compare World et USA sur 12 mois, on garde le meilleur s'il monte (momentum absolu positif), sinon cash. Anti-whipsaw de +3% pour éviter les allers-retours stériles. Hybride : 50% du capital reste toujours sur le World (buy &amp; hold), 50% applique la rotation.</p>
+<p>Idée simple : ce qui monte depuis un moment a tendance à continuer. Chaque mois on compare World et USA sur 12 mois, on garde le meilleur s'il monte (momentum absolu positif), sinon on file au refuge. Anti-whipsaw de +3% pour éviter les allers-retours stériles.</p>
+
+<div class="alert">
+  <strong>Évolution du 08/09/2026 (recette <code>piste1_bridage_pea.py</code>, 22 ans).</strong> La version d'origine était bridée sur deux points, corrigés : <strong>(1)</strong> un <em>socle</em> de 50% du capital restait collé en permanence sur le World, quoi qu'il arrive. La recette a montré que ce socle coûtait à la fois du rendement ET de la protection (chaque tranche de socle aggrave la pire chute). Il est ramené à 0 (<code>SOCLE_PONDERATION</code>, réglable à 0,25 pour un compromis). <strong>(2)</strong> le refuge était du cash <em>dormant</em> à 0% ; il devient le <strong>monétaire</strong> (Amundi PEA Euro Court Terme, ~€STR), qui rapporte et, contrairement aux obligations, ne s'effondre pas quand actions et taux chutent ensemble (2022). Le vrai levier n'était donc ni l'univers ni les obligations, mais de <strong>sortir vraiment du marché</strong> quand le momentum absolu passe au rouge.</div>
 
 <h3>ETF PEA Boursobank retenus</h3>
 <table>
   <tr><th>Rôle</th><th>ETF</th><th>Ticker</th></tr>
-  <tr><td>World (socle + rotation)</td><td>Amundi MSCI World Screened</td><td>CW8 / proxy calcul</td></tr>
+  <tr><td>World (rotation)</td><td>Amundi MSCI World Screened</td><td>CW8 / proxy calcul</td></tr>
   <tr><td>USA (rotation)</td><td>Amundi MSCI USA Screened</td><td>ESE / proxy calcul</td></tr>
-  <tr><td>Refuge</td><td>Liquidités (cash)</td><td>—</td></tr>
+  <tr><td>Refuge</td><td>Monétaire (Amundi PEA Euro Court Terme, ~€STR)</td><td>FR0013346681</td></tr>
 </table>
 <p>Le cerveau calcule le momentum sur des proxies à longue histoire ; Arnaud achète les ETF Screened équivalents de sa liste Boursobank.</p>
 
 <h3>Résultat de la recette (walk-forward, 204 mois jamais vus)</h3>
 <table>
-  <tr><th>Mesure</th><th>Hybride Dual Momentum</th><th>World buy &amp; hold</th></tr>
+  <tr><th>Mesure</th><th>DM version d'origine</th><th>World buy &amp; hold</th></tr>
   <tr><td>Rendement annuel</td><td>10,74%</td><td>12,53%</td></tr>
   <tr><td>Pire chute (drawdown)</td><td>−20,4%</td><td>−25,3%</td></tr>
   <tr><td>Volatilité</td><td>12,7%</td><td>14,3%</td></tr>
@@ -199,8 +202,17 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 </table>
 
 <div class="alert">
-  <strong>Vérité hors-échantillon :</strong> l'hybride <strong>ne bat pas</strong> le buy &amp; hold en rendement (le backtest in-sample qui « écrasait » le World était une illusion d'optimisation). Son vrai gain, prouvé sur données non vues : <strong>moins de risque</strong> (chute et volatilité réduites). C'est un <strong>airbag, pas un accélérateur</strong>. Les émergents ont été testés et <strong>rejetés par la recette</strong> (ils dégradaient tout en hors-échantillon).
+  <strong>Vérité hors-échantillon :</strong> le cœur <strong>ne bat pas</strong> le buy &amp; hold en rendement pur (le backtest in-sample qui « écrasait » le World était une illusion d'optimisation). Son vrai gain, prouvé sur données non vues : <strong>moins de risque</strong> (chute et volatilité réduites). C'est un <strong>airbag, pas un accélérateur</strong>. Les émergents ont été testés et <strong>rejetés deux fois</strong> (walk-forward, puis à nouveau par la recette du 08/09 : ils aggravent la pire chute).
 </div>
+
+<h3>Effet de l'évolution du 08/09 (recette 22 ans, structure identique, on ne change que 2 leviers)</h3>
+<table>
+  <tr><th>Mesure</th><th>Ancien (socle 50% + cash)</th><th>Nouveau (socle 0% + monétaire)</th></tr>
+  <tr><td>Rendement annuel</td><td>10,48%</td><td><strong>11,36%</strong></td></tr>
+  <tr><td>Pire chute (drawdown)</td><td>−34,7%</td><td><strong>−20,1%</strong></td></tr>
+  <tr><td>Sharpe</td><td>0,66</td><td><strong>0,76</strong></td></tr>
+</table>
+<p>Balayage du socle sur 22 ans : 0% → chute −27%, 50% → −39%, 100% → −54%. Monotone : chaque point de socle permanent coûtait rendement <em>et</em> protection. Mêmes ETF qu'avant, aucun achat nouveau. Reste en forward virtuel avant tout euro réel (discipline du pivot 23/08).</p>
 
 <h2>4. Rythme hebdomadaire — qui reçoit quoi</h2>
 
@@ -301,7 +313,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <h3>A.3 Qui fait quoi — le trombinoscope</h3>
 <table>
   <tr><th>Agent</th><th>Son métier</th><th>Ce qu'il fait, en clair</th></tr>
-  <tr><td><strong>Dual Momentum</strong></td><td>Le gérant du cœur</td><td>Une fois par mois, il regarde ce qui a le mieux monté depuis un an (marché mondial ou marché américain), garde le plus fort, et met tout à l'abri en liquidités si tout baisse. Son email dit « rien à faire » ou « il faut basculer ». C'est lui qui guide l'essentiel du capital.</td></tr>
+  <tr><td><strong>Dual Momentum</strong></td><td>Le gérant du cœur</td><td>Une fois par mois, il regarde ce qui a le mieux monté depuis un an (marché mondial ou marché américain), garde le plus fort, et met tout à l'abri sur le monétaire (une sorte de livret rémunéré au taux du jour) si tout baisse. Son email dit « rien à faire » ou « il faut basculer ». C'est lui qui guide l'essentiel du capital.</td></tr>
   <tr><td><strong>Crypto DM</strong></td><td>Le gérant de la poche crypto</td><td>Même principe que le gérant du cœur, appliqué au Bitcoin et à l'Ethereum, dans une poche complètement à part (rien à voir avec le PEA). Sa vraie mission n'est pas de gagner plus : c'est le parachute. Quand tout baisse depuis un an, il se réfugie dans une crypto stable qui ne bouge pas, pour éviter les chutes de -70% dont la crypto a le secret. Dès son premier jour (13/07), il a d'ailleurs dit : tout baisse, restez à l'abri.</td></tr>
   <tr><td><strong>Briefing</strong></td><td>Le journaliste du matin</td><td>Chaque matin à 7h, il envoie le journal : état du marché, note sur 100 pour chacune des 39 valeurs du CAC 40, position du cœur, portefeuilles d'entraînement. Il informe, il ne décide rien.</td></tr>
   <tr><td><strong>Scoring intraday</strong></td><td>La vigie</td><td>Quatre fois par jour, il re-note les 39 valeurs et guette les mouvements brusques. Ses alertes « achetez / vendez » sont suspendues le temps de prouver qu'elles rapportent plus qu'elles ne coûtent.</td></tr>
@@ -327,7 +339,7 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 <p>Depuis le 13/07 s'ajoute une <strong>troisième poche, crypto</strong>, encore plus étanche que les deux autres : elle ne vit même pas au même endroit (un compte d'échange crypto, pas le PEA de la banque). Elle applique la même recette lente que le cœur, au Bitcoin et à l'Ethereum, avec un rôle assumé de parachute plutôt que de moteur.</p>
 
 <h3>B.2 Le momentum et le Dual Momentum</h3>
-<p>Le <strong>momentum</strong>, c'est l'observation, vérifiée sur plus d'un siècle de données, que ce qui monte depuis plusieurs mois a un peu plus de chances de continuer à monter que le reste. Le <strong>Dual Momentum</strong> l'applique deux fois : on compare deux marchés (mondial et américain) et on garde le plus fort (momentum <em>relatif</em>) ; puis on vérifie que ce gagnant monte vraiment dans l'absolu, sinon on se met à l'abri en liquidités (momentum <em>absolu</em>). Notre version est volontairement prudente : la moitié du capital reste en permanence sur le marché mondial, seule l'autre moitié tourne. Pourquoi un rythme mensuel ? Parce que la recherche récente montre que les stratégies rapides (quelques jours) ont perdu leur avantage depuis 2009, alors que les stratégies lentes survivent.</p>
+<p>Le <strong>momentum</strong>, c'est l'observation, vérifiée sur plus d'un siècle de données, que ce qui monte depuis plusieurs mois a un peu plus de chances de continuer à monter que le reste. Le <strong>Dual Momentum</strong> l'applique deux fois : on compare deux marchés (mondial et américain) et on garde le plus fort (momentum <em>relatif</em>) ; puis on vérifie que ce gagnant monte vraiment dans l'absolu, sinon on se met à l'abri sur le monétaire (momentum <em>absolu</em>). <strong>Depuis le 08/09/2026</strong>, tout le capital suit ce signal : on a retiré le « socle » qui gardait 50% collé en permanence sur le marché mondial. L'image : ce socle, c'était comme rouler avec un pied toujours sur l'accélérateur même en descente de montagne. La recette sur 22 ans a montré qu'il faisait plus de mal que de bien (il empêchait de vraiment freiner dans les krachs). On peut le remettre à un quart si l'idée de tout mettre à l'abri est trop inconfortable. Pourquoi un rythme mensuel ? Parce que la recherche récente montre que les stratégies rapides (quelques jours) ont perdu leur avantage depuis 2009, alors que les stratégies lentes survivent.</p>
 
 <h3>B.3 Le buy &amp; hold, l'adversaire à respecter</h3>
 <p>Acheter et ne plus jamais toucher : c'est la stratégie la plus bête du monde, et l'une des plus dures à battre. Toute stratégie doit se comparer à elle. Verdict honnête chez nous : notre cœur ne la bat <em>pas</em> en rendement, il fait mieux en <em>risque</em> (les chutes sont moins profondes). C'est un airbag, pas un accélérateur.</p>
