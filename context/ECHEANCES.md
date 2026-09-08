@@ -26,6 +26,7 @@
 - [ ] ~2027-06-16 — **Renouveler le token GitHub (PAT) des jobs cron-job.org** : il expire le 23/06/2027 (vu dans la réponse GitHub lors des tests du 13/07). À l'expiration, les 12 jobs tomberont en 401 d'un coup. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
 - [ ] Idée évidence-based sans urgence (issue du pivot 23/08) : élargir le cœur Dual Momentum à quelques ETF sectoriels (le seul mécanisme qui marche vraiment), via le harnais. À sortir quand Arnaud a de l'énergie pour le projet. (Agent Bourse)
+- [ ] ~2026-12-08 — **Suivi forward de l'évolution DM (piste 1)** : socle 0% + refuge monétaire appliqués le 08/09. Après ~3 mois de forward, vérifier que le cœur se comporte comme la recette (moins de socle = moins de casse en baisse, refuge qui rapporte). Aucun euro réel avant que le forward confirme. Rappel : passer SOCLE_PONDERATION à 0.25 dans agent_dual_momentum.py si le whipsaw du 0% dérange. (Agent Bourse)
 
 ## Fait
 

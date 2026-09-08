@@ -7,6 +7,20 @@
 
 ---
 
+## 2026-09-08 (soir)
+
+### Piste 1 : le cœur Dual Momentum live était bridé — évolution prouvée et appliquée
+
+- **Découverte dans le code même** : `agent_dual_momentum.py` (live) tournait une version AFFAIBLIE de la stratégie validée par `dual_momentum_backtest.py`. Live = rotation World vs USA (quasi-jumeaux, le World = ~70% USA) + refuge CASH dormant + socle 50% World collé en permanence. Recette validée = univers USA/exUS/Émergents + refuge obligataire, sans socle.
+- **Recette écrite** (`piste1_bridage_pea.py`, 22,4 ans 2003-2026, params a priori) qui isole chaque levier en gardant la structure live. Résultats qui RENVERSENT l'hypothèse de départ :
+  - ❌ Élargir l'univers : réfuté, empire la pire chute à tous les niveaux de socle (émergents volatils + socle figé). Idée abandonnée.
+  - ✅✅ **Le socle 50% permanent était le vrai boulet** : balayage 0/25/50/75/100% = monotone, chaque tranche de socle coûte du rendement ET aggrave la chute. Socle 0% domine sur les deux axes.
+  - ⚠️ Refuge obligataire : gain réel en backtest MAIS **pas implémentable en PEA** (aucun ETF obligataire éligible ; l'ex-Lyxor PEA Oblig a été converti en monétaire €STR en oct. 2024). Le refuge PEA réaliste = monétaire (Amundi PEA Euro Court Terme, ~2%/an).
+- **Config gagnante, 100% PEA avec les ETF actuels** : World/USA + refuge monétaire + socle 0% = CAGR 11,36% (vs 10,48% live), pire chute **-20,1% (vs -34,7%)**, Sharpe **0,76 (vs 0,66)**. Le World/USA "quasi-jumeaux" marche car ce qui compte n'est pas la diversification relative mais la SORTIE par momentum absolu vers un refuge qui tient (le monétaire ne s'effondre pas comme les obligations en 2022).
+- **Décision Arnaud ("fais tout")** : appliquer les deux leviers à l'agent — socle 0% + refuge monétaire. Reste virtuel/forward avant tout euro réel (discipline pivot). Deux modifs paramétrées dans `agent_dual_momentum.py`.
+
+---
+
 ## 2026-09-08
 
 ### Point chiffré bourse + décision crypto tranchée

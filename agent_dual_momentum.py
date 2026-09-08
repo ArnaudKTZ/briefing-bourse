@@ -2,13 +2,20 @@
 """
 Agent Dual Momentum — le conseiller patrimonial mensuel.
 
-Stratégie (hybride 50/50, validée par backtest sur 22 ans) :
-  - 50% du capital reste TOUJOURS sur le World (buy & hold, le socle).
-  - 50% tourne chaque mois selon le momentum :
+Stratégie (GEM, évolution du 08/09/2026 prouvée par piste1_bridage_pea.py) :
+  - Poche rotative sur le momentum 12 mois :
       * compare World vs USA sur 12 mois
       * garde le meilleur s'il est en hausse (momentum absolu positif)
-      * sinon, se met à l'abri en cash
+      * sinon, se met à l'abri sur le MONÉTAIRE (Amundi PEA Euro Court Terme)
       * ne change que si le challenger bat la position en cours de +3% (anti-whipsaw)
+  - SOCLE_PONDERATION : part du capital collée en permanence sur le World.
+      Mise à 0 le 08/09/2026 : la recette sur 22 ans a montré que le socle
+      permanent coûtait à la fois du rendement ET de la protection (pire chute
+      -20% sans socle vs -35% à 50% de socle). Mettre 0.25 pour un compromis.
+
+Recette : World/USA + refuge monétaire + socle 0% = CAGR 11,4% / pire chute
+-20% / Sharpe 0,76, contre 10,5% / -35% / 0,66 pour l'ancienne version bridée.
+Reste virtuel/forward tant qu'aucun euro réel n'est engagé (discipline pivot).
 
 Tourne 1x par mois (1er du mois). Pas d'appel API payant.
 Le cerveau calcule sur des données fiables longue histoire (CW8, ESE).
@@ -42,6 +49,11 @@ CAPITAL_DEPART = 10000.0
 
 LOOKBACK_MOIS = 12
 BUFFER_SWITCH = 0.03   # +3% requis pour changer la poche rotative
+
+# Évolution 08/09/2026 (piste1_bridage_pea.py) :
+SOCLE_PONDERATION       = 0.0    # part collée en permanence sur le World (0 = GEM pur ; 0.25 = compromis)
+MONETAIRE_TAUX_ANNUEL   = 0.02   # rendement du refuge monétaire (Amundi PEA Euro Court Terme, ~€STR)
+ETF_MONETAIRE           = "Amundi PEA Euro Court Terme"
 
 # Univers de rotation. proxy = ticker fiable pour le CALCUL du momentum.
 # etf_achat = ce que l'utilisateur achète réellement dans son PEA Boursobank.
@@ -119,6 +131,11 @@ def gerer_portefeuille_dm(momentums, poche, now):
               "units_world": 0.0, "units_usa": 0.0, "cash": 0.0,
               "historique_valeur": {}}
 
+    # Le refuge monétaire rapporte : on accroît le cash détenu d'un mois d'intérêts
+    # avant de valoriser (approx mensuelle du taux €STR du fonds PEA Euro Court Terme).
+    if pf["historique_valeur"] and pf.get("cash", 0) > 0:
+        pf["cash"] = round(pf["cash"] * (1 + MONETAIRE_TAUX_ANNUEL / 12), 2)
+
     # Valeur courante (marquée au prix du jour) avant rééquilibrage
     if pf["historique_valeur"]:
         valeur = pf["units_world"] * world_px + pf["units_usa"] * usa_px + pf["cash"]
@@ -144,12 +161,15 @@ def gerer_portefeuille_dm(momentums, poche, now):
 
 
 def construire_allocation(poche_rotative):
-    """Combine le socle (50% World) et la poche rotative (50%) en allocation finale."""
-    alloc = {SOCLE: 50.0}
-    if poche_rotative == "Cash":
-        alloc["Cash"] = alloc.get("Cash", 0) + 50.0
-    else:
-        alloc[poche_rotative] = alloc.get(poche_rotative, 0) + 50.0
+    """Combine le socle permanent (SOCLE_PONDERATION sur World) et la poche
+    rotative (le reste) en allocation finale. À socle 0, c'est du GEM pur."""
+    socle_pct = SOCLE_PONDERATION * 100
+    rot_pct   = 100.0 - socle_pct
+    alloc = {}
+    if socle_pct > 0:
+        alloc[SOCLE] = socle_pct
+    cle = "Cash" if poche_rotative == "Cash" else poche_rotative
+    alloc[cle] = alloc.get(cle, 0) + rot_pct
     return alloc
 
 
@@ -157,7 +177,7 @@ def formater_alloc(alloc):
     parts = []
     for actif, pct in alloc.items():
         if actif == "Cash":
-            parts.append(f"{pct:.0f}% liquidités")
+            parts.append(f"{pct:.0f}% {ETF_MONETAIRE}")
         else:
             parts.append(f"{pct:.0f}% {UNIVERS[actif]['etf_achat']}")
     return " + ".join(parts)
@@ -218,7 +238,8 @@ def generer_html(now, momentums, ancienne, nouvelle, alloc_av, alloc_ap, action)
     <tbody>{lignes_mom}</tbody>
   </table>
   <p style='margin-top:16px;font-size:12px;color:#999;'>
-    Règle : 50% toujours sur le World, 50% sur le meilleur momentum (ou cash si tout baisse).
+    Règle : le capital suit le meilleur momentum 12 mois (World ou USA), ou se met au
+    monétaire si tout baisse. Socle World permanent : {int(SOCLE_PONDERATION*100)}%.
     Revue le 1er de chaque mois. Ceci est une aide à la décision, tu restes maître de tes ordres.
   </p>
 </div>
@@ -249,7 +270,7 @@ if __name__ == "__main__":
 
     def libelle(poche):
         if poche is None:   return "—"
-        if poche == "Cash": return "liquidités"
+        if poche == "Cash": return ETF_MONETAIRE
         return UNIVERS[poche]["etf_achat"]
 
     # Mise à jour de l'état
