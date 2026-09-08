@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "heure": "11:06",
+  "heure": "14:17",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.18,
+      "sentiment": 0.12,
       "nb_news": 17,
       "titres_cles": [
         "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
-        "24 heures dans les airs, deux levers et deux couchers de soleil, l'Airbus qui bat le record du vol le plus long",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
       ]
     },
     "Schneider Electric": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "La majorité des organisations estiment qu’une souveraineté numérique totale est un objectif irréaliste, les entreprises privilégiant la résilience à l’indépendance complète",
         "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse",
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.75,
-      "nb_news": 16,
+      "sentiment": 0.8,
+      "nb_news": 15,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
         "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.6,
+      "sentiment": 0.47,
       "nb_news": 15,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
