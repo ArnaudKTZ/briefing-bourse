@@ -7,6 +7,27 @@
 
 ---
 
+## 2026-09-08
+
+### Point chiffré bourse + décision crypto tranchée
+
+- **Point chiffré (données 01-07/09, repo resynchronisé)** : le pivot du 23/08 tient. Cœur Dual Momentum (passif) 10 232,91€ = **+2,33%** (poche USA, note B), le seul qui crée de la valeur. Satellite baseline 9 294,29€ = -7,06%, Risk Engine 9 530,04€ = -4,70% (bat toujours la baseline de +2,4 pts mais perd vs CAC). Crypto DM 995$ toujours en refuge. Verdicts labo inchangés : Évaluateur ACHETER -1,10 pt net (perdant réel), Shadow NUISIBLES -0,66 pt, Professeur satellite note E. Flotte watchdog 07/09 tout vert, 0 problème. Aucune action urgente.
+- **DÉCISION CRYPTO (en suspens depuis le 13/07) tranchée.** Fait déclencheur : le signal Crypto DM a raté +22% de BTC en restant en refuge stablecoin = preuve forward du mode d'échec du trading actif, cohérent avec le pivot. Décision : (1) Crypto DM = labo d'observation, zéro euro réel piloté ; (2) les **250€ de crypto réelle** d'Arnaud (position test) restent en **buy & hold**, on ne suit pas le signal (faire tourner 250€ = manger le capital en frais) ; (3) principe pérenne : crypto réelle future = passif buy & hold, jamais le signal de rotation. Même logique que le cœur ETF.
+
+---
+
+## 2026-09-05
+
+### Nouveau projet perso : qualification UTMB (trail)
+
+- **Contexte découvert** : Arnaud a un vrai passé de trail longue distance (CCC finie, 80 km du Mont-Blanc, 3x Marathon du Mont-Blanc). Objectif : décrocher un dossard UTMB à Chamonix.
+- **Point clé du système** : le dossard passe par un tirage au sort. Conditions minimales = 1 Running Stone valide (gagnée < 24 mois) + UTMB Index valide. Mais 1 stone = 1 ticket ; plus de stones = plus de chances (sélectionnés UTMB 2026 : ~11 stones en moyenne, ~15-20 réaliste, ~25 = 50% de chances).
+- **Situation d'Arnaud** : repart de 0 stone (les anciennes ont expiré ; le Marathon et le 80 du Mont-Blanc ne sont PAS des courses World Series → 0 stone rapportée).
+- **Stratégie posée** : accumuler des stones sur 2026-2027 avec **Nice Côte d'Azur by UTMB** comme pivot local (~1h30, fin sept., 100K=3 stones / 100M=4 stones) + 1 ultra World Series/an (Restonica Corse, Trail 100 Andorra, Val d'Aran). Viser ~15 stones valides pour le tirage de janvier 2028.
+- **Fichiers mis à jour** : CONTEXT.md (nouveau projet), ECHEANCES.md (Nice sept. 2026, ultra juillet 2026, pré-inscription janvier 2028).
+
+---
+
 ## 2026-08-23
 
 ### Audit complet + recette 22/08 + stress-test krach + évolution momentum testée et REJETÉE comme moteur
