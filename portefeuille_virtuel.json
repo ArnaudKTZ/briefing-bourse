@@ -1,5 +1,5 @@
 {
-  "capital": 1425.109999999999,
+  "capital": 3362.489999999999,
   "positions": {
     "Air Liquide": {
       "nb_actions": 11,
@@ -27,15 +27,6 @@
       "source_entree": "Intraday",
       "cout_total": 1964.3400000000001,
       "frais_achat": 9.82
-    },
-    "BNP Paribas": {
-      "nb_actions": 19,
-      "prix_entree": 104.54,
-      "date_entree": "2026-09-09",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1986.2600000000002,
-      "frais_achat": 9.93
     }
   },
   "historique_valeur": {
@@ -96,7 +87,7 @@
     "2026-09-04": 9300.31,
     "2026-09-07": 9294.29,
     "2026-09-08": 9321.56,
-    "2026-09-09": 9253.31
+    "2026-09-09": 9245.75
   },
   "trades": [
     {
@@ -777,6 +768,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -1.81,
       "frais_total": 19.73,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 104.54,
+      "sortie": 102.48,
+      "date_entree": "2026-09-09",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-09",
+      "heure_sortie": "11:30",
+      "source_sortie": "Intraday",
+      "pnl_pct": -2.46,
+      "frais_total": 19.67,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
