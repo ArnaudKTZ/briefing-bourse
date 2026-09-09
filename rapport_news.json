@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-08",
-  "heure": "17:17",
+  "date": "2026-09-09",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie",
       "La Bourse de Paris termine en légère hausse",
       "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu",
       "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain",
-      "La Bourse de Paris limite les dégâts face à la hausse du brut, du gaz et des taux",
-      "Bourses européennes: Paris en hausse à contre-courant des autres marchés en Europe"
+      "La Bourse de Paris limite les dégâts face à la hausse du brut, du gaz et des taux"
     ]
   },
   "valeurs": {
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
@@ -141,11 +141,11 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 5,
       "titres_cles": [
         "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
         "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Stellantis présentera sa vision d'une mobilité centrée sur l'humain lors du discours d'ouverture du CES 2027"
+        "CAC 40 : la Bourse de Paris progresse ce mercredi, à l'inverse des autres marchés prudents"
       ]
     },
     "Saint-Gobain": {
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.8,
-      "nb_news": 15,
+      "sentiment": 0.75,
+      "nb_news": 16,
       "titres_cles": [
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
         "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
