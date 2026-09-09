@@ -87,7 +87,7 @@
     "2026-09-04": 9590.82,
     "2026-09-07": 9530.04,
     "2026-09-08": 9585.89,
-    "2026-09-09": 9530.38
+    "2026-09-09": 9509.16
   },
   "trades": [
     {
@@ -245,5 +245,5 @@
       "raison_sortie": "ÉVITER intraday"
     }
   ],
-  "regime_dernier": "haussier"
+  "regime_dernier": "baissier"
 }
