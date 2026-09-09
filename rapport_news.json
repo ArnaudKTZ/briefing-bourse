@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "heure": "14:28",
+  "heure": "17:15",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -59,13 +59,9 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.62,
-      "nb_news": 16,
-      "titres_cles": [
-        "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
-        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Sanofi": {
       "sentiment": 0.29,
@@ -140,13 +136,9 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 4,
-      "titres_cles": [
-        "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Stellantis présentera sa vision d'une mobilité centrée sur l'humain lors du discours d'ouverture du CES 2027"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Saint-Gobain": {
       "sentiment": 0.78,
@@ -262,13 +254,9 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.47,
-      "nb_news": 15,
-      "titres_cles": [
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 07 2026"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Alstom": {
       "sentiment": 0.2,
@@ -280,13 +268,9 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.08,
-      "nb_news": 12,
-      "titres_cles": [
-        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
-        "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "WORLDLINE : Worldline et le Crédit Agricole font évoluer leur partenariat - Communiqué"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Veolia": {
       "sentiment": 0.33,
@@ -351,9 +335,13 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.82,
+      "nb_news": 11,
+      "titres_cles": [
+        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
+        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
+      ]
     }
   },
   "signaux_forts": []
