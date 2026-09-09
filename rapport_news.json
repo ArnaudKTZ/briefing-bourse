@@ -1,15 +1,15 @@
 {
   "date": "2026-09-09",
-  "heure": "11:12",
+  "heure": "14:28",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
       "La Bourse de Paris recule face au pétrole à 100 dollars",
       "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie",
       "La Bourse de Paris termine en légère hausse",
-      "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu",
-      "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain"
+      "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
     ]
   },
   "valeurs": {
@@ -351,13 +351,9 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.82,
-      "nb_news": 11,
-      "titres_cles": [
-        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
-        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     }
   },
   "signaux_forts": []
