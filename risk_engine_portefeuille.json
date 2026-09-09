@@ -1,18 +1,6 @@
 {
-  "capital": 2875.06,
+  "capital": 5351.81,
   "positions": {
-    "Eurofins Scientific": {
-      "nb_actions": 35,
-      "prix_entree": 70.66,
-      "date_entree": "2026-08-19",
-      "heure_entree": "16:33",
-      "secteur": "Santé",
-      "cout_total": 2473.1,
-      "frais_achat": 12.37,
-      "stop_pct": 0.032,
-      "tp_pct": 0.064,
-      "score_entree": 93
-    },
     "Air Liquide": {
       "nb_actions": 13,
       "prix_entree": 174.04,
@@ -75,7 +63,7 @@
     "2026-09-04": 9590.82,
     "2026-09-07": 9530.04,
     "2026-09-08": 9585.89,
-    "2026-09-09": 9422.19
+    "2026-09-09": 9408.85
   },
   "trades": [
     {
@@ -241,6 +229,17 @@
       "heure_sortie": "14:01",
       "pnl_pct": -2.35,
       "frais_total": 23.63,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Eurofins Scientific",
+      "entree": 70.66,
+      "sortie": 71.12,
+      "date_entree": "2026-08-19",
+      "date_sortie": "2026-09-09",
+      "heure_sortie": "15:51",
+      "pnl_pct": 0.15,
+      "frais_total": 24.82,
       "raison_sortie": "ÉVITER intraday"
     }
   ],
