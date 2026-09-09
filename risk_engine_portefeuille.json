@@ -1,18 +1,6 @@
 {
-  "capital": 5351.81,
+  "capital": 7529.030000000001,
   "positions": {
-    "Air Liquide": {
-      "nb_actions": 13,
-      "prix_entree": 174.04,
-      "date_entree": "2026-09-01",
-      "heure_entree": "11:31",
-      "secteur": "Santé",
-      "cout_total": 2262.52,
-      "frais_achat": 11.31,
-      "stop_pct": 0.0284,
-      "tp_pct": 0.0568,
-      "score_entree": 94
-    },
     "Legrand": {
       "nb_actions": 13,
       "prix_entree": 143.15,
@@ -63,7 +51,7 @@
     "2026-09-04": 9590.82,
     "2026-09-07": 9530.04,
     "2026-09-08": 9585.89,
-    "2026-09-09": 9377.78
+    "2026-09-09": 9353.58
   },
   "trades": [
     {
@@ -241,6 +229,17 @@
       "pnl_pct": 0.15,
       "frais_total": 24.82,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Air Liquide",
+      "entree": 174.04,
+      "sortie": 168.32,
+      "date_entree": "2026-09-01",
+      "date_sortie": "2026-09-09",
+      "heure_sortie": "19:37",
+      "pnl_pct": -3.77,
+      "frais_total": 22.25,
+      "raison_sortie": "Stop -3.3% (ATR)"
     }
   ],
   "regime_dernier": "baissier"
