@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-09",
-  "heure": "17:15",
+  "date": "2026-09-10",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -15,11 +15,11 @@
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
+        "HSBC dégrade LVMH et Burberry en raison de perspectives difficiles pour le second semestre",
         "LVMH : Déclaration des transactions sur actions propres",
-        "Michael Saylor explique comment investir comme un milliardaire et pourquoi Bitcoin fonctionne",
-        "LVMH : INFORMATION MENSUELLE RELATIVE AU NOMBRE TOTAL DE DROITS DE VOTE ET D’ACTIONS COMPOSANT LE CAPITAL SOCIAL"
+        "Bourse : 6 raisons d'investir sur le CAC 40 et des actions européennes, quels placements privilégier ?"
       ]
     },
     "TotalEnergies": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.12,
+      "sentiment": 0.06,
       "nb_news": 17,
       "titres_cles": [
-        "Le PDG d’Airbus confirme un objectif de livraisons 2026 entre 850 et 890 appareils",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine"
+        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
+        "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
     },
     "Schneider Electric": {
@@ -59,9 +59,13 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.62,
+      "nb_news": 16,
+      "titres_cles": [
+        "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
+        "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
+        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée"
+      ]
     },
     "Sanofi": {
       "sentiment": 0.29,
@@ -77,13 +81,13 @@
       "nb_news": 20,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Eramet : Bilan semestriel du contrat de liquidité au 30 juin 2026",
-        "Getlink SE : Bilan semestriel du contrat de liquidité"
+        "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros",
+        "Eramet : Bilan semestriel du contrat de liquidité au 30 juin 2026"
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.6,
-      "nb_news": 15,
+      "sentiment": 0.64,
+      "nb_news": 14,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -136,13 +140,17 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 4,
+      "titres_cles": [
+        "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
+        "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
+        "Stellantis présentera sa vision d'une mobilité centrée sur l'humain lors du discours d'ouverture du CES 2027"
+      ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.78,
-      "nb_news": 9,
+      "sentiment": 0.7,
+      "nb_news": 10,
       "titres_cles": [
         "Saint-Gobain profite de «hausses de prix réussies» ! En Bourse, les actions sont-elles à acheter ?",
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
@@ -254,9 +262,13 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.31,
+      "nb_news": 16,
+      "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
+        "Smith Micro annonce le premier lancement mondial en partenariat de la solution de sécurité familiale SafePath Connect™"
+      ]
     },
     "Alstom": {
       "sentiment": 0.2,
@@ -268,9 +280,13 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.08,
+      "nb_news": 12,
+      "titres_cles": [
+        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
+        "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
+        "WORLDLINE : Worldline et le Crédit Agricole font évoluer leur partenariat - Communiqué"
+      ]
     },
     "Veolia": {
       "sentiment": 0.33,
