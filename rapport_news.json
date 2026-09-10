@@ -1,15 +1,15 @@
 {
   "date": "2026-09-10",
-  "heure": "06:45",
+  "heure": "11:11",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
+      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
       "La Bourse de Paris recule face au pétrole à 100 dollars",
       "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie",
-      "La Bourse de Paris termine en légère hausse",
-      "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
+      "La Bourse de Paris termine en légère hausse"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.16,
+      "sentiment": 0.05,
       "nb_news": 19,
       "titres_cles": [
-        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
-        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges"
+        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges",
+        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse"
       ]
     },
     "Hermès": {
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.2,
+      "sentiment": 0.0,
       "nb_news": 5,
       "titres_cles": [
-        "Les actions Michelin et Nokian Tyres progressent après les relèvements de JPMorgan",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
-        "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026"
+        "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026",
+        "Michelin : Déclaration des transactions sur actions propres - 10 septembre 2026"
       ]
     },
     "Capgemini": {
