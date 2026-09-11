@@ -4038,5 +4038,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-11",
+    "heure": "16:01",
+    "nom": "Legrand",
+    "cours": 142.0,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
