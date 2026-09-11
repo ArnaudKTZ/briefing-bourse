@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "heure": "11:09",
+  "heure": "14:21",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -15,7 +15,7 @@
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 7,
+      "nb_news": 6,
       "titres_cles": [
         "HSBC dégrade LVMH et Burberry en raison de perspectives difficiles pour le second semestre",
         "LVMH : Déclaration des transactions sur actions propres",
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
+        "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni",
         "Trains à batterie: Alstom décroche un contrat de 1,2 milliard d'euros au Royaume-Uni",
-        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique",
-        "Alstom décroche un contrat de 3 milliards d’euros au Canada pour des trains longue distance"
+        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique"
       ]
     },
     "Worldline": {
