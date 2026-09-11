@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-10",
-  "heure": "17:08",
+  "date": "2026-09-11",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
+      "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
       "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
       "La Bourse de Paris recule face au pétrole à 100 dollars",
-      "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie",
-      "La Bourse de Paris termine en légère hausse"
+      "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie"
     ]
   },
   "valeurs": {
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.06,
-      "nb_news": 17,
+      "sentiment": 0.12,
+      "nb_news": 16,
       "titres_cles": [
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
         "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
@@ -262,11 +262,11 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.31,
-      "nb_news": 16,
+      "sentiment": 0.29,
+      "nb_news": 17,
       "titres_cles": [
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 24 au 28 août 2026",
         "Smith Micro annonce le premier lancement mondial en partenariat de la solution de sécurité familiale SafePath Connect™"
       ]
     },
