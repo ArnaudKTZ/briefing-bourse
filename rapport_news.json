@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "heure": "14:21",
+  "heure": "17:11",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.13,
-      "nb_news": 15,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
