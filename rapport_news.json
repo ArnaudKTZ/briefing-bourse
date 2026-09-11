@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "heure": "06:45",
+  "heure": "11:09",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -24,7 +24,7 @@
     },
     "TotalEnergies": {
       "sentiment": 0.05,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
         "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges",
@@ -44,7 +44,7 @@
       "sentiment": 0.12,
       "nb_news": 16,
       "titres_cles": [
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "Les Bourses européennes naviguent en hausse dans un contexte agité",
         "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
         "Qantas atteint un sommet d’un mois après un accord avec le syndicat des pilotes"
       ]
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.19,
+      "sentiment": 0.25,
       "nb_news": 16,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Bourse : Safran - Exail Technologies, «un mariage discret qui peut changer la donne», selon le Loup de Zurich"
+        "Les Bourses européennes naviguent en hausse dans un contexte agité",
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.2,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
-        "Alstom décroche un contrat de 3 milliards d’euros au Canada pour des trains longue distance",
-        "Alstom S.A.:  Alstom remporte un contrat majeur pour le renouvellement de la flotte de trains longue distance de VIA Rail Canada",
-        "Alstom choisit Belfort pour produire une nouvelle gamme de locomotives"
+        "Trains à batterie: Alstom décroche un contrat de 1,2 milliard d'euros au Royaume-Uni",
+        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique",
+        "Alstom décroche un contrat de 3 milliards d’euros au Canada pour des trains longue distance"
       ]
     },
     "Worldline": {
