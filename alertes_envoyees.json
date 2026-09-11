@@ -1,9 +1,4 @@
 {
-  "2026-09-03_Air Liquide": "09:01",
-  "2026-09-03_Michelin": "09:01",
-  "2026-09-03_TotalEnergies": "11:30",
-  "2026-09-03_Forvia": "11:30",
-  "2026-09-03_Eurofins Scientific": "14:01",
   "2026-09-04_Worldline": "09:01",
   "2026-09-04_ArcelorMittal": "15:42",
   "2026-09-04_STMicroelectronics": "15:42",
@@ -16,5 +11,6 @@
   "2026-09-08_Renault": "14:03",
   "2026-09-09_BNP Paribas_vente": "11:30",
   "2026-09-09_Accor_vente": "14:01",
-  "2026-09-10_Forvia": "11:31"
+  "2026-09-10_Forvia": "11:31",
+  "2026-09-11_TotalEnergies": "09:01"
 }
