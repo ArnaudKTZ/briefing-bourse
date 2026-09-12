@@ -1,50 +1,19 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-12",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "Equity Strategy Backtesting: Luck or Edge? The MinervaScore as a Statistical Robustness Grade",
-      "lien": "https://arxiv.org/abs/2608.23808v2",
-      "date": "2026-08-24",
-      "score": 18,
+      "titre": "Deep Learning of Robust Market Making under Regime-Switching Order Flow",
+      "lien": "https://arxiv.org/abs/2609.11614v1",
+      "date": "2026-09-10",
+      "score": 12,
       "hits": [
         "regime",
-        "out-of-sample",
-        "overfit",
-        "backtest",
         "robust",
+        "deep learning",
         "drawdown"
       ],
-      "extrait": "Backtests of trading strategies are often selected after many parameter trials. A strong historical result can therefore reflect search luck rather than a persistent signal."
-    },
-    {
-      "titre": "What survives honest evaluation? Leakage-safe, search-aware assessment of LLM-driven trading strategy discovery",
-      "lien": "https://arxiv.org/abs/2608.27734v1",
-      "date": "2026-08-27",
-      "score": 16,
-      "hits": [
-        "out-of-sample",
-        "overfit",
-        "backtest",
-        "llm",
-        "language model",
-        "agent"
-      ],
-      "extrait": "Large language models (LLMs) are increasingly used to discover trading strategies, and much of the resulting literature shares a methodological weakness: many candidate strategies are generated, the best is reported, and neither look-ahead bias nor the intensity of the search behind the reported result is corrected for. We present a strategy-discovery system that makes both corrections structural rather than…"
-    },
-    {
-      "titre": "Tabular Deep Learning for Algorithmic Trading: Cross-Regime Bayesian Optimisation for Equity Signal Generation",
-      "lien": "https://arxiv.org/abs/2608.27076v1",
-      "date": "2026-08-27",
-      "score": 15,
-      "hits": [
-        "regime",
-        "out-of-sample",
-        "robust",
-        "ensemble",
-        "deep learning"
-      ],
-      "extrait": "Algorithmic trading now represents a market exceeding $20 billion, where even marginal gains in signal robustness can translate into economically significant returns. Existing evaluations of equity prediction models do not explicitly target regime robustness during hyperparameter selection."
+      "extrait": "Classical market-making strategies based on stochastic control, such as the Avellaneda-Stoikov and the Guéant-Lehalle-Fernandez-Tapia (GLFT) extension, provide closed-form quoting rules, but rest on assumptions that break down at realistic microstructure timescales. One of them is that order flow is stationary, while empirical evidence points to the existence of regimes, possibly associated with algorithmic…"
     },
     {
       "titre": "Agentic Empirical Asset Pricing: Methodological Foundations",
@@ -61,30 +30,18 @@
       "extrait": "Recent advances in LLM agents enable a new paradigm for asset pricing, which we call Agentic Empirical Asset Pricing (AEAP): systems that autonomously conduct the scientific discovery process itself. We define AEAP and identify its core building blocks."
     },
     {
-      "titre": "Harvesting the Volatility Risk Premium: A Learning-to-Rank Approach",
-      "lien": "https://arxiv.org/abs/2608.24786v1",
-      "date": "2026-08-25",
-      "score": 12,
+      "titre": "Artificial Intelligence in Equity and Crypto Markets: Progress, Profitability Evidence, and the Limits of Automated Investing",
+      "lien": "https://arxiv.org/abs/2609.04917v1",
+      "date": "2026-09-04",
+      "score": 9,
       "hits": [
-        "cross-sectional",
         "regime",
-        "walk-forward",
-        "drawdown"
+        "reinforcement learning",
+        "language model",
+        "agent",
+        "machine learning"
       ],
-      "extrait": "This paper develops the first end-to-end application of cross-sectional learning-to-rank to the S&P 500 weekly options (SPXW) zero-day-to-expiration surface, integrated with margin-aware position sizing, an abstention rule driven by model uncertainty, and a strict out-of-time integrity check. A LightGBM LambdaRank ranker scores a daily nine-strategy cross-section composed of eight delta-targeted short-put positions…"
-    },
-    {
-      "titre": "End-to-End Neural Shrinkage of Indefinite Pairwise Correlation Matrices for Small-Cap-Inclusive Portfolios",
-      "lien": "https://arxiv.org/abs/2608.30446v1",
-      "date": "2026-08-31",
-      "score": 10,
-      "hits": [
-        "factor",
-        "rotation",
-        "out-of-sample",
-        "drawdown"
-      ],
-      "extrait": "Small-cap-inclusive equity universes contain recently listed and intermittently traded securities, so enforcing a common look-back discards a substantial fraction of the available information. Pairwise-complete estimation preserves the longest overlap for each asset pair, but the resulting correlation matrix can be indefinite because its entries are computed on different samples."
+      "extrait": "Artificial intelligence (AI) now supports investment workflows from data and prediction through research, portfolios, execution, and tool use. Technical capability, however, is not evidence of investment profitability."
     },
     {
       "titre": "Eliciting ESG Preferences for Reinforcement Learning-Based Portfolio Optimization",
@@ -99,15 +56,47 @@
       "extrait": "Modern portfolio management increasingly demands a balance between traditional risk-adjusted returns and strict Environmental, Social, and Governance (ESG) mandates. Current Reinforcement Learning (RL) approaches typically optimize for a single ESG provider, neglecting the significant divergence in rating methodologies across the industry and the unintuitive nature of manually weighting conflicting objectives."
     },
     {
-      "titre": "Deep Hedging Under Realistic Market Frictions: A Regime-Conditional Empirical Study of Dynamic Option Hedging on Bitcoin Options",
-      "lien": "https://arxiv.org/abs/2608.29025v1",
-      "date": "2026-08-29",
-      "score": 8,
+      "titre": "Signal Correlation, IC, and PnL Dependence",
+      "lien": "https://arxiv.org/abs/2609.09588v1",
+      "date": "2026-09-09",
+      "score": 7,
       "hits": [
-        "regime",
-        "transaction cost"
+        "cross-sectional",
+        "rotation",
+        "ensemble"
       ],
-      "extrait": "Classical option-hedging methods like Black-Scholes delta assume constant, free rebalancing, which real markets don't allow. Deep hedging trains a neural network to handle these frictions directly, and prior work reports strong results."
+      "extrait": "Signal correlation and PnL correlation are correlations over different index sets - across assets at each date versus across dates for scalar payoffs - and practitioners often treat the first as a proxy for the second. We give an exact decomposition that shows what that proxy sees and what it discards."
+    },
+    {
+      "titre": "Nyström Attention Matches Full Attention for Cross-Sectional Stock Prediction",
+      "lien": "https://arxiv.org/abs/2609.08106v1",
+      "date": "2026-09-08",
+      "score": 6,
+      "hits": [
+        "cross-sectional"
+      ],
+      "extrait": "MASTER's inter-stock multi-head attention -- the module responsible for modeling cross-sectional stock relationships -- accounts for 42.5% of model parameters and 25% of predictive value. We systematically decompose this module and uncover a surprising structure: the learned attention is near-uniform (perplexity 278/300), yet forcing exact uniformity eliminates all cross-sectional discrimination."
+    },
+    {
+      "titre": "Regimes in the Order Flow",
+      "lien": "https://arxiv.org/abs/2609.07989v1",
+      "date": "2026-09-07",
+      "score": 6,
+      "hits": [
+        "regime"
+      ],
+      "extrait": "Financial markets alternate between periods of relative stability and instability, with structural breaks marking the transitions between these regimes. Identifying such breaks in real time is a central requirement for any trading or risk system operating at high frequency."
+    },
+    {
+      "titre": "An Entropic Factor Model for Robust Portfolio Replication",
+      "lien": "https://arxiv.org/abs/2609.03552v1",
+      "date": "2026-09-03",
+      "score": 6,
+      "hits": [
+        "factor",
+        "robust"
+      ],
+      "extrait": "Portfolio replication, or the construction of a tradable basket of assets to match the risk-return profile of a target benchmark, is fundamentally an ill-posed inverse problem. When restricted to a subset of available assets, classical variance-minimizing models often yield unstable, over-leveraged portfolios highly vulnerable to market shocks."
     }
   ]
 }
