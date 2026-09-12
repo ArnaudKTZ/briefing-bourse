@@ -1,106 +1,106 @@
 {
-  "date": "2026-09-05",
-  "n_jours": 55,
-  "n_obs": 2144,
+  "date": "2026-09-12",
+  "n_jours": 60,
+  "n_obs": 2339,
   "horizons": {
     "J+1": {
-      "univers_moy": -0.09,
+      "univers_moy": -0.15,
       "acheter": {
-        "n": 874,
-        "moy": -0.15,
-        "edge": -0.06,
-        "edge_net": -1.06
-      },
-      "eviter": {
-        "n": 393,
-        "moy": 0.07,
-        "edge": -0.16
-      }
-    },
-    "J+3": {
-      "univers_moy": -0.03,
-      "acheter": {
-        "n": 859,
-        "moy": -0.07,
-        "edge": -0.04,
-        "edge_net": -1.04
-      },
-      "eviter": {
-        "n": 371,
-        "moy": 0.65,
-        "edge": -0.68
-      }
-    },
-    "J+5": {
-      "univers_moy": 0.09,
-      "acheter": {
-        "n": 817,
-        "moy": -0.01,
-        "edge": -0.1,
-        "edge_net": -1.1
-      },
-      "eviter": {
-        "n": 362,
-        "moy": 1.06,
-        "edge": -0.97
-      }
-    },
-    "J+10": {
-      "univers_moy": 0.47,
-      "acheter": {
-        "n": 740,
-        "moy": 0.45,
+        "n": 934,
+        "moy": -0.17,
         "edge": -0.02,
         "edge_net": -1.02
       },
       "eviter": {
-        "n": 324,
-        "moy": 1.33,
-        "edge": -0.86
+        "n": 446,
+        "moy": -0.05,
+        "edge": -0.1
+      }
+    },
+    "J+3": {
+      "univers_moy": -0.14,
+      "acheter": {
+        "n": 920,
+        "moy": -0.16,
+        "edge": -0.02,
+        "edge_net": -1.02
+      },
+      "eviter": {
+        "n": 413,
+        "moy": 0.51,
+        "edge": -0.65
+      }
+    },
+    "J+5": {
+      "univers_moy": -0.03,
+      "acheter": {
+        "n": 874,
+        "moy": -0.03,
+        "edge": 0.0,
+        "edge_net": -1.0
+      },
+      "eviter": {
+        "n": 393,
+        "moy": 0.8,
+        "edge": -0.83
+      }
+    },
+    "J+10": {
+      "univers_moy": 0.21,
+      "acheter": {
+        "n": 799,
+        "moy": 0.25,
+        "edge": 0.04,
+        "edge_net": -0.96
+      },
+      "eviter": {
+        "n": 356,
+        "moy": 1.02,
+        "edge": -0.81
       }
     }
   },
   "buckets_j5": {
     "85+": {
-      "n": 315,
-      "moy": 0.45
+      "n": 339,
+      "moy": 0.49
     },
     "75-84": {
-      "n": 226,
-      "moy": 0.04
+      "n": 242,
+      "moy": -0.01
     },
     "65-74": {
-      "n": 276,
-      "moy": -0.59
+      "n": 293,
+      "moy": -0.65
     }
   },
   "ic_j5": {
-    "ic_moyen": 0.0514,
-    "n_jours": 49,
-    "pct_positifs": 67
+    "ic_moyen": 0.0771,
+    "n_jours": 53,
+    "pct_positifs": 70
   },
   "regimes": {
     "haussier": {
-      "n_obs": 2144,
+      "n_obs": 2261,
       "stats": {
-        "univers_moy": 0.09,
+        "univers_moy": -0.03,
         "acheter": {
-          "n": 817,
-          "moy": -0.01,
-          "edge": -0.1,
-          "edge_net": -1.1
+          "n": 874,
+          "moy": -0.03,
+          "edge": 0.0,
+          "edge_net": -1.0
         },
         "eviter": {
-          "n": 362,
-          "moy": 1.06,
-          "edge": -0.97
+          "n": 393,
+          "moy": 0.8,
+          "edge": -0.83
         }
       },
-      "ic_moyen": 0.0514,
-      "n_jours_ic": 49
+      "ic_moyen": 0.0771,
+      "n_jours_ic": 53
     },
     "baissier": {
-      "n_obs": 0,
+      "n_obs": 78,
       "stats": null,
       "ic_moyen": null,
       "n_jours_ic": 0
@@ -127,50 +127,50 @@
       "n_jours_ic": 1
     },
     "calme": {
-      "n_obs": 2105,
+      "n_obs": 2300,
       "stats": {
-        "univers_moy": 0.05,
+        "univers_moy": -0.07,
         "acheter": {
-          "n": 810,
-          "moy": -0.03,
-          "edge": -0.08,
-          "edge_net": -1.08
+          "n": 867,
+          "moy": -0.04,
+          "edge": 0.03,
+          "edge_net": -0.97
         },
         "eviter": {
-          "n": 349,
-          "moy": 0.97,
-          "edge": -0.92
+          "n": 380,
+          "moy": 0.7,
+          "edge": -0.77
         }
       },
-      "ic_moyen": 0.0544,
-      "n_jours_ic": 48
+      "ic_moyen": 0.0804,
+      "n_jours_ic": 52
     }
   },
-  "verdict": "Sur 817 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.10 pts bruts à J+5), soit -1.10 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.97 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.051 : pouvoir de classement exploitable (avant frais).",
+  "verdict": "Sur 874 ACHETER : les ACHETER ne se distinguent pas de l'univers (+0.00 pts bruts à J+5), soit -1.00 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.83 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.077 : pouvoir de classement exploitable (avant frais).",
   "fenetre_propre": {
     "depuis": "2026-07-02",
-    "n_obs": 1794,
-    "n_jours": 46,
+    "n_obs": 1989,
+    "n_jours": 51,
     "j5": {
-      "univers_moy": 0.18,
+      "univers_moy": 0.03,
       "acheter": {
-        "n": 675,
-        "moy": -0.02,
-        "edge": -0.2,
-        "edge_net": -1.2
+        "n": 732,
+        "moy": -0.04,
+        "edge": -0.07,
+        "edge_net": -1.07
       },
       "eviter": {
-        "n": 293,
-        "moy": 1.41,
-        "edge": -1.23
+        "n": 324,
+        "moy": 1.05,
+        "edge": -1.02
       }
     },
     "ic_j5": {
-      "ic_moyen": 0.0628,
-      "n_jours": 40,
-      "pct_positifs": 72
+      "ic_moyen": 0.0927,
+      "n_jours": 44,
+      "pct_positifs": 75
     },
-    "edge_net_j5": -1.2,
+    "edge_net_j5": -1.07,
     "cas_grille": 1,
     "verdict": "CAS 1 de la grille figée (IC <= 0 OU edge net <= 0) : satellite maintenu 100% virtuel, aucun passage en réel, effort sur la Phase 1 V5."
   }
