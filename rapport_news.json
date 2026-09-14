@@ -1,15 +1,15 @@
 {
   "date": "2026-09-14",
-  "heure": "16:24",
+  "heure": "19:02",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
+      "La Bourse de Paris bousculée par l'IA et la dette",
       "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
       "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
-      "La Bourse de Paris recule face au pétrole à 100 dollars",
-      "La Bourse de Paris termine en légère hausse, sous la pression des prix de l'énergie"
+      "La Bourse de Paris recule face au pétrole à 100 dollars"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -131,12 +131,12 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.14,
-      "nb_news": 14,
+      "sentiment": 0.0,
+      "nb_news": 13,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
-        "Société Générale : Descriptif du programme de rachat d’actions, sous réserve de l’approbation de l’Assemblée générale de 2026",
-        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée"
+        "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée",
+        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel"
       ]
     },
     "Stellantis": {
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.16,
+      "sentiment": 0.21,
       "nb_news": 19,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "Information relative au nombre total de droits de vote et de capital  - 31 août 2026"
+        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »",
+        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
       ]
     },
     "Legrand": {
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.41,
-      "nb_news": 17,
+      "sentiment": 0.39,
+      "nb_news": 18,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.8,
-      "nb_news": 10,
+      "sentiment": 0.73,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
