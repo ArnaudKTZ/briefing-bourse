@@ -1,5 +1,5 @@
 {
-  "capital": 2991.1799999999994,
+  "capital": 1025.6999999999994,
   "positions": {
     "Renault": {
       "nb_actions": 67,
@@ -27,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1942.72,
       "frais_achat": 9.71
+    },
+    "Capgemini": {
+      "nb_actions": 18,
+      "prix_entree": 108.65,
+      "date_entree": "2026-09-14",
+      "heure_entree": "10:20",
+      "source_entree": "Briefing",
+      "cout_total": 1955.7,
+      "frais_achat": 9.78
     }
   },
   "historique_valeur": {
@@ -90,7 +99,7 @@
     "2026-09-09": 9165.63,
     "2026-09-10": 9017.06,
     "2026-09-11": 9064.06,
-    "2026-09-14": 8881.56
+    "2026-09-14": 8876.78
   },
   "trades": [
     {
