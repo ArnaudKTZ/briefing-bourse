@@ -1,8 +1,8 @@
 {
   "date": "2026-09-14",
-  "heure": "12:07",
+  "heure": "16:24",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
@@ -51,7 +51,7 @@
     },
     "Schneider Electric": {
       "sentiment": 0.05,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
         "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley",
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.62,
-      "nb_news": 16,
+      "sentiment": 0.67,
+      "nb_news": 15,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -68,7 +68,7 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.29,
+      "sentiment": 0.35,
       "nb_news": 17,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.29,
+      "sentiment": 0.41,
       "nb_news": 17,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026",
-        "Smith Micro annonce le premier lancement mondial en partenariat de la solution de sécurité familiale SafePath Connect™"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026"
       ]
     },
     "Alstom": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.27,
-      "nb_news": 15,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
