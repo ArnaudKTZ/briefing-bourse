@@ -1,19 +1,6 @@
 {
-  "capital": 7529.030000000001,
-  "positions": {
-    "Legrand": {
-      "nb_actions": 13,
-      "prix_entree": 143.15,
-      "date_entree": "2026-09-07",
-      "heure_entree": "11:31",
-      "secteur": "Industrie/Défense",
-      "cout_total": 1860.95,
-      "frais_achat": 9.3,
-      "stop_pct": 0.0492,
-      "tp_pct": 0.0984,
-      "score_entree": 88
-    }
-  },
+  "capital": 9266.2,
+  "positions": {},
   "historique_valeur": {
     "2026-07-22": 9982.15,
     "2026-07-23": 9972.88,
@@ -54,7 +41,7 @@
     "2026-09-09": 9353.58,
     "2026-09-10": 9342.53,
     "2026-09-11": 9373.08,
-    "2026-09-14": 9373.08
+    "2026-09-14": 9266.2
   },
   "trades": [
     {
@@ -243,6 +230,17 @@
       "pnl_pct": -3.77,
       "frais_total": 22.25,
       "raison_sortie": "Stop -3.3% (ATR)"
+    },
+    {
+      "nom": "Legrand",
+      "entree": 143.15,
+      "sortie": 134.3,
+      "date_entree": "2026-09-07",
+      "date_sortie": "2026-09-14",
+      "heure_sortie": "11:31",
+      "pnl_pct": -6.65,
+      "frais_total": 18.03,
+      "raison_sortie": "ÉVITER intraday"
     }
   ],
   "regime_dernier": "baissier"
