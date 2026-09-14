@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-11",
-  "heure": "17:11",
+  "date": "2026-09-14",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
@@ -15,7 +15,7 @@
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 4,
       "titres_cles": [
         "HSBC dégrade LVMH et Burberry en raison de perspectives difficiles pour le second semestre",
         "LVMH : Déclaration des transactions sur actions propres",
@@ -24,7 +24,7 @@
     },
     "TotalEnergies": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
         "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -122,16 +122,16 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.22,
-      "nb_news": 9,
+      "sentiment": 0.12,
+      "nb_news": 8,
       "titres_cles": [
         "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)"
+        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)",
+        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum"
       ]
     },
     "Société Générale": {
-      "sentiment": 0.21,
+      "sentiment": 0.14,
       "nb_news": 14,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
@@ -141,11 +141,11 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 5,
       "titres_cles": [
+        "Stellantis vend son usine de Toronto inactive à Roshel Canada",
         "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Stellantis présentera sa vision d'une mobilité centrée sur l'humain lors du discours d'ouverture du CES 2027"
+        "Dieselgate: Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée"
       ]
     },
     "Saint-Gobain": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
-        "La majorité des organisations estiment qu’une souveraineté numérique totale est un objectif irréaliste, les entreprises privilégiant la résilience à l’indépendance complète",
-        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse",
-        "Les Bourses européennes mitigées à l'ouverture de la séance, résistent à la hausse du pétrole"
+        "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
+        "Capgemini signe un accord définitif de vente de Capgemini Government Solutions",
+        "La majorité des organisations estiment qu’une souveraineté numérique totale est un objectif irréaliste, les entreprises privilégiant la résilience à l’indépendance complète"
       ]
     },
     "Renault": {
@@ -199,7 +199,7 @@
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026",
-        "Avec sa nouvelle Spring, Dacia veut se relancer face à l'offensive chinoise"
+        "Information relative au nombre total de droits de vote et de capital  - 31 août 2026"
       ]
     },
     "Legrand": {
@@ -298,7 +298,7 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.23,
+      "sentiment": 0.31,
       "nb_news": 13,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.82,
-      "nb_news": 11,
+      "sentiment": 0.8,
+      "nb_news": 10,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
