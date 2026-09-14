@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "heure": "06:45",
+  "heure": "12:07",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.12,
-      "nb_news": 16,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
         "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
@@ -50,8 +50,8 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.06,
-      "nb_news": 17,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
         "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley",
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.37,
+      "nb_news": 19,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
         "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.64,
-      "nb_news": 14,
+      "sentiment": 0.69,
+      "nb_news": 13,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.12,
-      "nb_news": 8,
+      "sentiment": 0.0,
+      "nb_news": 7,
       "titres_cles": [
-        "Kering - Résultats semestriels 2026 : retour à la croissance, amélioration de la performance & exécution de la stratégie en ligne avec le plan",
         "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)",
-        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum"
+        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum",
+        "CAC 40 : la Bourse plombée par la remontée du pétrole, Hermès et Kering font le grand écart"
       ]
     },
     "Société Générale": {
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.31,
-      "nb_news": 13,
+      "sentiment": 0.27,
+      "nb_news": 15,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
