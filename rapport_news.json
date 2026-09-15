@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-14",
-  "heure": "19:02",
+  "date": "2026-09-15",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
+        "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?",
         "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley",
-        "Schneider Electric lance Schneider Charge, un chargeur de véhicule électrique résidentiel de niveau 2 avec gestion dynamique de la charge"
+        "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley"
       ]
     },
     "L'Oréal": {
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
