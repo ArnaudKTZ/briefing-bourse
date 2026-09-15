@@ -1,8 +1,8 @@
 {
   "date": "2026-09-15",
-  "heure": "06:45",
+  "heure": "11:36",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.05,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
-        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure",
-        "Augmenter les salaires nets : le patron de Total Patrick Pouyanné milite pour une baisse des charges",
-        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse"
+        "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
+        "TotalEnergies annonce un partenariat avec Mistral en vue de développer des modèles de frontière d’intelligence artificielle dédiés à l’exploration et à l’ingénierie des réservoirs",
+        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure"
       ]
     },
     "Hermès": {
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.3,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Les valeurs européennes de défense reculent après la chute de Rheinmetall",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»"
+        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
+        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
       ]
     },
     "Forvia": {
