@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "heure": "11:36",
+  "heure": "14:53",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.14,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.43,
-      "nb_news": 7,
+      "sentiment": 0.38,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.39,
-      "nb_news": 18,
+      "sentiment": 0.37,
+      "nb_news": 19,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
