@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "heure": "14:53",
+  "heure": "17:40",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -14,21 +14,21 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.0,
-      "nb_news": 4,
+      "sentiment": -0.2,
+      "nb_news": 5,
       "titres_cles": [
+        "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
         "HSBC dégrade LVMH et Burberry en raison de perspectives difficiles pour le second semestre",
-        "LVMH : Déclaration des transactions sur actions propres",
-        "Bourse : 6 raisons d'investir sur le CAC 40 et des actions européennes, quels placements privilégier ?"
+        "LVMH : Déclaration des transactions sur actions propres"
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.19,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
         "TotalEnergies annonce un partenariat avec Mistral en vue de développer des modèles de frontière d’intelligence artificielle dédiés à l’exploration et à l’ingénierie des réservoirs",
-        "TotalEnergies s'engage à maintenir le plafonnement des prix de ses carburants a 1,99 et 2,25 euros tant que la crise dure"
+        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse"
       ]
     },
     "Hermès": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
