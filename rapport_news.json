@@ -1,24 +1,24 @@
 {
   "date": "2026-09-16",
-  "heure": "06:45",
+  "heure": "11:31",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
+      "La Bourse de Paris en légère hausse avant la Fed",
       "La Bourse de Paris bousculée par l'IA et la dette",
       "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
-      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
-      "La Bourse de Paris recule face au pétrole à 100 dollars"
+      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.43,
-      "nb_news": 7,
+      "sentiment": -0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
-        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
+        "La Bourse de Paris en légère hausse avant la Fed",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH"
       ]
     },
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.47,
+      "sentiment": 0.41,
       "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
-        "Jefferies relève l’objectif de L’Oréal à 328€, mais juge l’action surévaluée"
+        "La Bourse de Paris en légère hausse avant la Fed"
       ]
     },
     "Sanofi": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
         "Capgemini signe un accord définitif de vente de Capgemini Government Solutions",
-        "La majorité des organisations estiment qu’une souveraineté numérique totale est un objectif irréaliste, les entreprises privilégiant la résilience à l’indépendance complète"
+        "Les entreprises accélèrent leurs investissements dans l’adaptation climatique, mais seules 15 % mesurent pleinement l’impact financier des risques climatiques"
       ]
     },
     "Renault": {
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.33,
-      "nb_news": 9,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
+        "Actionnariat salarié : une participation record qui renforce le statut de premier actionnaire des salariés Veolia",
         "Veolia émet avec succès 1,15 Md € sur le marché obligataire",
-        "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta",
-        "Bilan semestriel du contrat de liquidité de la société VEOLIA ENVIRONNEMENT"
+        "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta"
       ]
     },
     "STMicroelectronics": {
