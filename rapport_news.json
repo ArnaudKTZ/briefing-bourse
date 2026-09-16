@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "heure": "14:50",
+  "heure": "17:31",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.0,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
+        "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique",
         "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?",
-        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $",
-        "Cette valeur européenne de biens d’équipement devient le premier choix de Morgan Stanley"
+        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $"
       ]
     },
     "L'Oréal": {
@@ -158,13 +158,9 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.0,
-      "nb_news": 5,
-      "titres_cles": [
-        "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
-        "Un entrepôt Wildberries brûle près de Moscou lors de frappes russes en Ukraine"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Pernod Ricard": {
       "sentiment": 0.0,
