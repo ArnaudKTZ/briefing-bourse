@@ -1,5 +1,5 @@
 {
-  "capital": 2742.239999999999,
+  "capital": 749.4499999999989,
   "positions": {
     "Renault": {
       "nb_actions": 67,
@@ -27,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1991.5,
       "frais_achat": 9.96
+    },
+    "Société Générale": {
+      "nb_actions": 27,
+      "prix_entree": 73.44,
+      "date_entree": "2026-09-16",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1982.8799999999999,
+      "frais_achat": 9.91
     }
   },
   "historique_valeur": {
@@ -91,7 +100,8 @@
     "2026-09-10": 9017.06,
     "2026-09-11": 9064.06,
     "2026-09-14": 8865.11,
-    "2026-09-15": 8736.89
+    "2026-09-15": 8736.89,
+    "2026-09-16": 8696.7
   },
   "trades": [
     {
