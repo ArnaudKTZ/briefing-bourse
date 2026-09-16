@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "heure": "11:31",
+  "heure": "14:50",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.25,
-      "nb_news": 8,
+      "sentiment": -0.22,
+      "nb_news": 9,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
         "La Bourse de Paris en légère hausse avant la Fed",
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.41,
+      "sentiment": 0.29,
       "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
-        "La Bourse de Paris en légère hausse avant la Fed"
+        "La Bourse de Paris en légère hausse avant la Fed",
+        "La Bourse de Paris en recul, L'Oréal passe devant LVMH"
       ]
     },
     "Sanofi": {
@@ -132,7 +132,7 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 13,
+      "nb_news": 12,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée",
