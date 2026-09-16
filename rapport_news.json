@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-15",
-  "heure": "17:40",
+  "date": "2026-09-16",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
@@ -14,16 +14,16 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.2,
-      "nb_news": 5,
+      "sentiment": -0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
-        "HSBC dégrade LVMH et Burberry en raison de perspectives difficiles pour le second semestre",
-        "LVMH : Déclaration des transactions sur actions propres"
+        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
+        "La Bourse de Paris en recul, L'Oréal passe devant LVMH"
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
+      "sentiment": 0.19,
       "nb_news": 21,
       "titres_cles": [
         "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.67,
-      "nb_news": 15,
+      "sentiment": 0.47,
+      "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "L’Oréal relevé à l’achat par Citi grâce à des perspectives de croissance solides",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
@@ -113,8 +113,8 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.37,
-      "nb_news": 19,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 31 août au 04 septembre 2026"
+        "Smith Micro annonce le premier lancement mondial en partenariat de la solution de sécurité familiale SafePath Connect™"
       ]
     },
     "Alstom": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.33,
-      "nb_news": 12,
+      "sentiment": 0.31,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
