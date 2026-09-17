@@ -1,34 +1,34 @@
 {
-  "date": "2026-09-16",
-  "heure": "17:31",
+  "date": "2026-09-17",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
-      "La Bourse de Paris en légère hausse avant la Fed",
       "La Bourse de Paris bousculée par l'IA et la dette",
       "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
-      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?"
+      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
+      "La Bourse de Paris recule face au pétrole à 100 dollars"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.22,
-      "nb_news": 9,
+      "sentiment": -0.4,
+      "nb_news": 10,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
-        "La Bourse de Paris en légère hausse avant la Fed",
-        "La Bourse de Paris en recul, L'Oréal passe devant LVMH"
+        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
+        "La Bourse de Paris prend des risques calculés avant la Fed"
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.19,
-      "nb_news": 21,
+      "sentiment": 0.15,
+      "nb_news": 20,
       "titres_cles": [
         "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
         "TotalEnergies annonce un partenariat avec Mistral en vue de développer des modèles de frontière d’intelligence artificielle dédiés à l’exploration et à l’ingénierie des réservoirs",
-        "La Bourse de Paris revient vers l'équilibre après un début de séance en hausse"
+        "Bourses européennes: Paris en hausse à contre-courant des autres marchés en Europe"
       ]
     },
     "Hermès": {
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.29,
+      "sentiment": 0.18,
       "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "La Bourse de Paris en légère hausse avant la Fed",
-        "La Bourse de Paris en recul, L'Oréal passe devant LVMH"
+        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
+        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
       ]
     },
     "Sanofi": {
@@ -113,7 +113,7 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
@@ -125,9 +125,9 @@
       "sentiment": 0.0,
       "nb_news": 7,
       "titres_cles": [
-        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)",
-        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum",
-        "CAC 40 : la Bourse plombée par la remontée du pétrole, Hermès et Kering font le grand écart"
+        "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?",
+        "Kering : Publication Nombre d'actions et droits de vote",
+        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)"
       ]
     },
     "Société Générale": {
@@ -158,16 +158,20 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 5,
+      "titres_cles": [
+        "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
+        "Un entrepôt Wildberries brûle près de Moscou lors de frappes russes en Ukraine"
+      ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.0,
+      "sentiment": -0.08,
       "nb_news": 12,
       "titres_cles": [
         "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-        "Deutsche Bank relève Pernod Ricard à \"conserver\" après la sous-performance de l’action",
+        "Mise à disposition du Document d’Enregistrement Universel Pernod Ricard 2025/26",
         "Pernod Ricard : déclaration des droits de vote - août 2026"
       ]
     },
@@ -181,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
         "Capgemini signe un accord définitif de vente de Capgemini Government Solutions",
@@ -208,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.56,
+      "nb_news": 9,
       "titres_cles": [
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité",
-        "Infobip et Digitas Middle East annoncent l'extension de leur partenariat stratégique afin de renforcer l'engagement client basé sur l'IA pour les marques internationales"
+        "Publicis Groupe place avec succès 500 millions d’euros d’emprunts obligataires",
+        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
       ]
     },
     "Bouygues": {
@@ -258,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
-        "Smith Micro annonce le premier lancement mondial en partenariat de la solution de sécurité familiale SafePath Connect™"
+        "TOUAX : RÉSULTATS DU 1er SEMESTRE 2026 Un recul conjoncturel des activités mais plusieurs avancées stratégiques majeures"
       ]
     },
     "Alstom": {
@@ -294,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
         "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
