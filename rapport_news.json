@@ -1,15 +1,15 @@
 {
   "date": "2026-09-17",
-  "heure": "11:39",
+  "heure": "14:46",
   "marche": {
-    "sentiment_global": -0.3,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
-      "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
       "La Bourse de Paris bousculée par l'IA et la dette",
       "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
-      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?"
+      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
+      "La Bourse de Paris prend des risques calculés avant la Fed"
     ]
   },
   "valeurs": {
@@ -176,13 +176,9 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.0,
-      "nb_news": 6,
-      "titres_cles": [
-        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
-        "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026",
-        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Capgemini": {
       "sentiment": 0.16,
