@@ -4078,5 +4078,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -4.84%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-17",
+    "heure": "09:01",
+    "nom": "Renault",
+    "cours": 29.6,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
