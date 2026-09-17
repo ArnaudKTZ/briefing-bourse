@@ -1,15 +1,15 @@
 {
   "date": "2026-09-17",
-  "heure": "06:45",
+  "heure": "11:39",
   "marche": {
     "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, un pétrole à trois chiffres accroît les risques et la pression sur la Fed et la BCE",
+      "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
       "La Bourse de Paris bousculée par l'IA et la dette",
       "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
-      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?",
-      "La Bourse de Paris recule face au pétrole à 100 dollars"
+      "Taux à 10 ans français au plus haut depuis la crise de 2008 : Que faire en bourse ?"
     ]
   },
   "valeurs": {
@@ -51,7 +51,7 @@
     },
     "Schneider Electric": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 19,
       "titres_cles": [
         "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique",
         "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?",
@@ -132,7 +132,7 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 12,
+      "nb_news": 11,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée",
@@ -177,11 +177,11 @@
     },
     "Michelin": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
         "Michelin : Déclaration des transactions sur actions propres - 27 AOUT 2026",
-        "Michelin : Déclaration des transactions sur actions propres - 10 septembre 2026"
+        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026"
       ]
     },
     "Capgemini": {
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »",
-        "Renault SA : Bilan semestriel du contrat de liquidité – S1 2026"
+        "Information relative au nombre total de droits de vote et de capital  - 31 août 2026"
       ]
     },
     "Legrand": {
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.44,
-      "nb_news": 16,
+      "sentiment": 0.4,
+      "nb_news": 15,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
