@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "heure": "14:46",
+  "heure": "17:38",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -176,9 +176,13 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 5,
+      "titres_cles": [
+        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
+        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026",
+        "Michelin : Déclaration des transactions sur actions propres - 10 septembre 2026"
+      ]
     },
     "Capgemini": {
       "sentiment": 0.16,
@@ -226,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.38,
-      "nb_news": 8,
+      "sentiment": 0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
