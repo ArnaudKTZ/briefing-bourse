@@ -1,8 +1,8 @@
 {
   "date": "2026-09-18",
-  "n_alertes": 415,
-  "n_achats": 375,
-  "en_attente": 2,
+  "n_alertes": 420,
+  "n_achats": 376,
+  "en_attente": 3,
   "stats": {
     "J+1": {
       "n": 373,
