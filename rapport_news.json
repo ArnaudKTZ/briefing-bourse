@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "heure": "14:22",
+  "heure": "17:07",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
         "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
