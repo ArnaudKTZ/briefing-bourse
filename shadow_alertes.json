@@ -4118,5 +4118,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.51%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 80.03,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
