@@ -1,5 +1,5 @@
 {
-  "capital": 2511.239999999999,
+  "capital": 575.2099999999987,
   "positions": {
     "TotalEnergies": {
       "nb_actions": 25,
@@ -27,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1982.8799999999999,
       "frais_achat": 9.91
+    },
+    "Thales": {
+      "nb_actions": 8,
+      "prix_entree": 240.8,
+      "date_entree": "2026-09-18",
+      "heure_entree": "14:01",
+      "source_entree": "Intraday",
+      "cout_total": 1926.4,
+      "frais_achat": 9.63
     }
   },
   "historique_valeur": {
@@ -94,7 +103,7 @@
     "2026-09-15": 8736.89,
     "2026-09-16": 8669.24,
     "2026-09-17": 8613.4,
-    "2026-09-18": 8521.64
+    "2026-09-18": 8485.24
   },
   "trades": [
     {
