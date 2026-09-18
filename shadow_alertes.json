@@ -4148,5 +4148,55 @@
     "signal": "ACHETER",
     "raison": "Position ouverte en portefeuille virtuel (score 83/100)",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "19:32",
+    "nom": "Schneider Electric",
+    "cours": 285.75,
+    "score": 50,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +3.01% avec volume x3.2",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "19:32",
+    "nom": "Stellantis",
+    "cours": 4.2,
+    "score": 21,
+    "signal": "ÉVITER",
+    "raison": "Gap haussier +2.07% avec volume x2.5",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "19:32",
+    "nom": "Eurofins Scientific",
+    "cours": 76.44,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +2.38% avec volume x2.6",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "19:32",
+    "nom": "Eurofins Scientific",
+    "cours": 76.44,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 84/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "19:32",
+    "nom": "Edenred",
+    "cours": 28.38,
+    "score": 34,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -0.74%",
+    "envoyee": false
   }
 ]
