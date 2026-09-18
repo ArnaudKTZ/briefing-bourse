@@ -1,5 +1,5 @@
 {
-  "capital": 575.2099999999987,
+  "capital": 554.4999999999982,
   "positions": {
     "TotalEnergies": {
       "nb_actions": 25,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 1969.25,
       "frais_achat": 9.85
-    },
-    "Edenred": {
-      "nb_actions": 70,
-      "prix_entree": 28.45,
-      "date_entree": "2026-09-15",
-      "heure_entree": "09:47",
-      "source_entree": "Briefing",
-      "cout_total": 1991.5,
-      "frais_achat": 9.96
     },
     "Société Générale": {
       "nb_actions": 27,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1926.4,
       "frais_achat": 9.63
+    },
+    "Eurofins Scientific": {
+      "nb_actions": 26,
+      "prix_entree": 76.44,
+      "date_entree": "2026-09-18",
+      "heure_entree": "19:32",
+      "source_entree": "Intraday",
+      "cout_total": 1987.44,
+      "frais_achat": 9.94
     }
   },
   "historique_valeur": {
@@ -103,7 +103,7 @@
     "2026-09-15": 8736.89,
     "2026-09-16": 8669.24,
     "2026-09-17": 8613.4,
-    "2026-09-18": 8424.92
+    "2026-09-18": 8390.47
   },
   "trades": [
     {
@@ -946,6 +946,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -0.31,
       "frais_total": 19.46,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Edenred",
+      "entree": 28.45,
+      "sortie": 28.38,
+      "date_entree": "2026-09-15",
+      "heure_entree": "09:47",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-18",
+      "heure_sortie": "19:32",
+      "source_sortie": "Intraday",
+      "pnl_pct": -0.74,
+      "frais_total": 19.89,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
