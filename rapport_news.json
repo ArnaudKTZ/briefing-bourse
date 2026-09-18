@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-17",
-  "heure": "17:38",
+  "date": "2026-09-18",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.37,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
@@ -149,8 +149,8 @@
       ]
     },
     "Saint-Gobain": {
-      "sentiment": 0.7,
-      "nb_news": 10,
+      "sentiment": 0.78,
+      "nb_news": 9,
       "titres_cles": [
         "Saint-Gobain profite de «hausses de prix réussies» ! En Bourse, les actions sont-elles à acheter ?",
         "RBC relève Saint-Gobain à « surperformance » grâce au pouvoir de fixation des prix et à la capacité de F&A",
@@ -199,7 +199,7 @@
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »",
-        "Information relative au nombre total de droits de vote et de capital  - 31 août 2026"
+        "Jugée pour \"un pacte de corruption\" avec Ghosn, Dati assène avoir \"exercé comme avocate\""
       ]
     },
     "Legrand": {
