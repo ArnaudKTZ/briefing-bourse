@@ -4128,5 +4128,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-18",
+    "heure": "11:31",
+    "nom": "BNP Paribas",
+    "cours": 102.52,
+    "score": 34,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -0.31%",
+    "envoyee": false
   }
 ]
