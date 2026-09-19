@@ -12,9 +12,9 @@
         "edge_net": -1.03
       },
       "eviter": {
-        "n": 508,
-        "moy": 0.02,
-        "edge": -0.15
+        "n": 509,
+        "moy": 0.01,
+        "edge": -0.14
       }
     },
     "J+3": {
@@ -26,9 +26,9 @@
         "edge_net": -1.04
       },
       "eviter": {
-        "n": 479,
-        "moy": 0.48,
-        "edge": -0.62
+        "n": 480,
+        "moy": 0.46,
+        "edge": -0.6
       }
     },
     "J+5": {
@@ -40,23 +40,23 @@
         "edge_net": -1.02
       },
       "eviter": {
-        "n": 446,
-        "moy": 0.61,
-        "edge": -0.78
+        "n": 447,
+        "moy": 0.59,
+        "edge": -0.76
       }
     },
     "J+10": {
-      "univers_moy": -0.02,
+      "univers_moy": -0.03,
       "acheter": {
-        "n": 874,
-        "moy": 0.06,
-        "edge": 0.08,
-        "edge_net": -0.92
+        "n": 875,
+        "moy": 0.04,
+        "edge": 0.07,
+        "edge_net": -0.93
       },
       "eviter": {
         "n": 393,
         "moy": 0.72,
-        "edge": -0.74
+        "edge": -0.75
       }
     }
   },
@@ -102,17 +102,17 @@
     "baissier": {
       "n_obs": 273,
       "stats": {
-        "univers_moy": -3.15,
+        "univers_moy": -4.03,
         "acheter": {
           "n": 3,
           "moy": -3.08,
-          "edge": 0.07,
-          "edge_net": -0.93
+          "edge": 0.95,
+          "edge_net": -0.05
         },
         "eviter": {
-          "n": 0,
-          "moy": null,
-          "edge": null
+          "n": 1,
+          "moy": -7.56,
+          "edge": 3.53
         }
       },
       "ic_moyen": null,
@@ -150,16 +150,16 @@
           "edge_net": -0.99
         },
         "eviter": {
-          "n": 433,
-          "moy": 0.52,
-          "edge": -0.73
+          "n": 434,
+          "moy": 0.51,
+          "edge": -0.72
         }
       },
       "ic_moyen": 0.0651,
       "n_jours_ic": 57
     }
   },
-  "verdict": "Sur 935 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.02 pts bruts à J+5), soit -1.02 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.78 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.062 : pouvoir de classement exploitable (avant frais).",
+  "verdict": "Sur 935 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.02 pts bruts à J+5), soit -1.02 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.76 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.062 : pouvoir de classement exploitable (avant frais).",
   "fenetre_propre": {
     "depuis": "2026-07-02",
     "n_obs": 2184,
@@ -173,9 +173,9 @@
         "edge_net": -1.08
       },
       "eviter": {
-        "n": 377,
-        "moy": 0.79,
-        "edge": -0.93
+        "n": 378,
+        "moy": 0.77,
+        "edge": -0.91
       }
     },
     "ic_j5": {
