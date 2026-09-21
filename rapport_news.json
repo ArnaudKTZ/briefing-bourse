@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-18",
-  "heure": "17:07",
+  "date": "2026-09-21",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.25,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
       "La Bourse de Paris bousculée par l'IA et la dette",
-      "La Bourse de Paris souffre de la hausse de l'énergie, le \"spread\" franco-allemand au plus haut depuis 2012",
       "CAC 40 : la Bourse de Paris recule, le marché actions scrute les taux et le budget français !",
-      "La Bourse de Paris en léger recul"
+      "La Bourse de Paris en léger recul",
+      "La Bourse de Paris prend des risques calculés avant la Fed"
     ]
   },
   "valeurs": {
@@ -68,7 +68,7 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.35,
+      "sentiment": 0.29,
       "nb_news": 17,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
@@ -132,7 +132,7 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 11,
+      "nb_news": 12,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée",
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.43,
-      "nb_news": 7,
+      "sentiment": 0.38,
+      "nb_news": 8,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
-        "Engie : le géant de l’énergie du CAC 40 a-t-il du potentiel en Bourse, avec sa transformation stratégique ?"
+        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum"
       ]
     },
     "Orange": {
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.26,
+      "sentiment": 0.11,
       "nb_news": 19,
       "titres_cles": [
-        "STMicro progresse après la mise à niveau de BofA à l’achat avec un objectif cours record",
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens"
+        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
+        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA"
       ]
     },
     "Dassault Systèmes": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.4,
-      "nb_news": 20,
+      "sentiment": 0.38,
+      "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
@@ -351,13 +351,9 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.73,
-      "nb_news": 11,
-      "titres_cles": [
-        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
-        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     }
   },
   "signaux_forts": []
