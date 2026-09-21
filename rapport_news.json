@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "heure": "16:32",
+  "heure": "19:10",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -132,7 +132,7 @@
     },
     "Société Générale": {
       "sentiment": 0.08,
-      "nb_news": 13,
+      "nb_news": 12,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
