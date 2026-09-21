@@ -4198,5 +4198,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -0.74%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-21",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 50.18,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]

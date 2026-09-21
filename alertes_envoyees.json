@@ -1,7 +1,4 @@
 {
-  "2026-09-11_TotalEnergies": "09:01",
-  "2026-09-11_Renault": "15:44",
-  "2026-09-11_Legrand": "16:01",
   "2026-09-14_Legrand_vente": "11:31",
   "2026-09-15_Société Générale_vente": "11:30",
   "2026-09-16_Renault_vente": "11:30",
@@ -16,5 +13,6 @@
   "2026-09-18_Stellantis": "19:32",
   "2026-09-18_Eurofins Scientific": "19:32",
   "2026-09-18_Eurofins Scientific_achat": "19:32",
-  "2026-09-18_Edenred_vente": "19:32"
+  "2026-09-18_Edenred_vente": "19:32",
+  "2026-09-21_STMicroelectronics": "09:01"
 }
