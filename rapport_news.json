@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "heure": "06:45",
+  "heure": "12:13",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.12,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
         "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
@@ -132,7 +132,7 @@
     },
     "Société Générale": {
       "sentiment": 0.0,
-      "nb_news": 12,
+      "nb_news": 14,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
         "Société Générale annonce le lancement d’une nouvelle émission obligataire senior préférée",
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.38,
-      "nb_news": 8,
+      "sentiment": 0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Engie revoit à la hausse ses objectifs, porté par le gaz et l’accélération de l’électrification",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.2,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 14 au 18 septembre 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026",
-        "TOUAX : RÉSULTATS DU 1er SEMESTRE 2026 Un recul conjoncturel des activités mais plusieurs avancées stratégiques majeures"
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026"
       ]
     },
     "Alstom": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.11,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
@@ -351,9 +351,13 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.73,
+      "nb_news": 11,
+      "titres_cles": [
+        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
+        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
+      ]
     }
   },
   "signaux_forts": []
