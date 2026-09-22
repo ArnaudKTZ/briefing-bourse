@@ -4218,5 +4218,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-22",
+    "heure": "11:30",
+    "nom": "Schneider Electric",
+    "cours": 296.05,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-22",
+    "heure": "11:30",
+    "nom": "L'Oréal",
+    "cours": 386.8,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-22",
+    "heure": "11:30",
+    "nom": "Legrand",
+    "cours": 140.6,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100",
+    "envoyee": false
   }
 ]
