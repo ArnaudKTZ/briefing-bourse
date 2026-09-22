@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "heure": "06:45",
+  "heure": "11:29",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -212,8 +212,8 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.56,
-      "nb_news": 9,
+      "sentiment": 0.62,
+      "nb_news": 8,
       "titres_cles": [
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
         "Publicis Groupe place avec succès 500 millions d’euros d’emprunts obligataires",
