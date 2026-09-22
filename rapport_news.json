@@ -1,15 +1,15 @@
 {
   "date": "2026-09-22",
-  "heure": "11:29",
+  "heure": "14:49",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
       "La Bourse de Paris bousculée par l'IA et la dette",
+      "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
       "CAC 40 : la Bourse de Paris recule, le marché actions scrute les taux et le budget français !",
-      "La Bourse de Paris en léger recul",
-      "La Bourse de Paris prend des risques calculés avant la Fed"
+      "La Bourse de Paris en léger recul"
     ]
   },
   "valeurs": {
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies signe un accord avec GIP portant sur des actifs d’infrastructures énergétiques en Afrique",
         "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
@@ -104,12 +104,12 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
+        "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
-        "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation",
-        "DANONE : Forte performance au T2 et résultats solides au 1er semestre, reflétant la pertinence de notre portefeuille de produits axé sur la santé"
+        "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation"
       ]
     },
     "Vinci": {
@@ -123,7 +123,7 @@
     },
     "Kering": {
       "sentiment": 0.0,
-      "nb_news": 7,
+      "nb_news": 6,
       "titres_cles": [
         "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?",
         "Kering : Publication Nombre d'actions et droits de vote",
@@ -141,7 +141,7 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 4,
+      "nb_news": 5,
       "titres_cles": [
         "Stellantis vend son usine de Toronto inactive à Roshel Canada",
         "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
         "Capgemini signe un accord définitif de vente de Capgemini Government Solutions",
@@ -230,11 +230,11 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.17,
+      "sentiment": 0.5,
       "nb_news": 6,
       "titres_cles": [
+        "Bernstein relève Engie à « surperformance » sur la valorisation",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
-        "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum",
         "CAC 40, Dassault Aviation, Thales, Engie, Axa… les actions en Bourse au programme de Momentum"
       ]
     },
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
