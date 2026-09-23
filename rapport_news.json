@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-22",
-  "heure": "17:39",
+  "date": "2026-09-23",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.4,
-      "nb_news": 10,
+      "sentiment": -0.36,
+      "nb_news": 11,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -141,11 +141,11 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
+        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?",
         "Stellantis vend son usine de Toronto inactive à Roshel Canada",
-        "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée",
-        "Les constructeurs auto européens face à la menace existentielle de la Chine"
+        "Dieselgate : Fiat Chrysler (Stellantis) renvoyé devant le tribunal correctionnel pour tromperie aggravée"
       ]
     },
     "Saint-Gobain": {
@@ -199,7 +199,7 @@
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »",
-        "Jugée pour \"un pacte de corruption\" avec Ghosn, Dati assène avoir \"exercé comme avocate\""
+        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?"
       ]
     },
     "Legrand": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.31,
-      "nb_news": 13,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
-        "Morgan Stanley relève IHG à \"equal-weight\" grâce à des bénéfices résilients",
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
+        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
       ]
     },
     "Eurazeo": {
