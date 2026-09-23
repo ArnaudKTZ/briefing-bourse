@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "heure": "11:33",
+  "heure": "15:00",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -248,13 +248,9 @@
       ]
     },
     "Vivendi": {
-      "sentiment": 0.0,
-      "nb_news": 6,
-      "titres_cles": [
-        "VIVENDI : RÉSULTATS DU PREMIER SEMESTRE 2026",
-        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Eurofins Scientific": {
       "sentiment": 0,
@@ -271,12 +267,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
+        "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
         "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni",
-        "Trains à batterie: Alstom décroche un contrat de 1,2 milliard d'euros au Royaume-Uni",
-        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique"
+        "Trains à batterie: Alstom décroche un contrat de 1,2 milliard d'euros au Royaume-Uni"
       ]
     },
     "Worldline": {
