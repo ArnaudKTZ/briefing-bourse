@@ -4338,5 +4338,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-24",
+    "heure": "11:30",
+    "nom": "TotalEnergies",
+    "cours": 80.74,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-24",
+    "heure": "11:30",
+    "nom": "Eurofins Scientific",
+    "cours": 76.84,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
