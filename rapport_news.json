@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "heure": "14:53",
+  "heure": "17:54",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.18,
+      "sentiment": 0.12,
       "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »",
-        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?"
+        "\"Fichez-moi la paix!\": à son procès, journée de tensions entre Dati et les parties civiles",
+        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »"
       ]
     },
     "Legrand": {
