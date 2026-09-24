@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "heure": "06:45",
+  "heure": "11:33",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.16,
+      "sentiment": 0.11,
       "nb_news": 19,
       "titres_cles": [
         "TotalEnergies signe un accord avec GIP portant sur des actifs d’infrastructures énergétiques en Afrique",
@@ -41,11 +41,11 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.0,
+      "sentiment": 0.07,
       "nb_news": 14,
       "titres_cles": [
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
-        "CAC 40 : la Bourse recule, freinée par le pétrole avant l’inflation américaine",
+        "Sous-marins, drones, blindés... Airbus va sécuriser les communications de l'armée pour 25 ans",
         "Airbus : les livraisons d'avions chutent en août, mais un record est toujours prévu pour 2026"
       ]
     },
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -177,15 +177,15 @@
     },
     "Michelin": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
-        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026",
-        "Michelin : Déclaration des transactions sur actions propres - 10 septembre 2026"
+        "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026",
+        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.17,
+      "sentiment": 0.11,
       "nb_news": 18,
       "titres_cles": [
         "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
