@@ -1,21 +1,21 @@
 {
-  "date": "2026-09-24",
-  "heure": "17:54",
+  "date": "2026-09-25",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.25,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
+      "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
+      "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»",
       "La Bourse de Paris termine prudemment, nouvelle flambée du coût de la dette",
-      "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
-      "CAC 40 : la Bourse de Paris recule, le marché actions scrute les taux et le budget français !",
-      "La Bourse de Paris en léger recul"
+      "Les actions Danone progressent après la révision à la hausse de Deutsche Bank"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.33,
-      "nb_news": 12,
+      "sentiment": -0.3,
+      "nb_news": 10,
       "titres_cles": [
         "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.07,
-      "nb_news": 14,
+      "nb_news": 15,
       "titres_cles": [
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
         "Sous-marins, drones, blindés... Airbus va sécuriser les communications de l'armée pour 25 ans",
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.32,
+      "sentiment": 0.42,
       "nb_news": 19,
       "titres_cles": [
+        "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros",
         "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros",
-        "Eramet : Bilan semestriel du contrat de liquidité au 30 juin 2026"
+        "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros"
       ]
     },
     "Air Liquide": {
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.75,
-      "nb_news": 16,
+      "sentiment": 0.88,
+      "nb_news": 17,
       "titres_cles": [
+        "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions.",
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
-        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France",
-        "Orange : Orange annonce la signature d’un financement de 1,3 milliard d’euros avec CaixaBank et BNP Paribas, destiné au rachat de Scorefit"
+        "Communiqué Orange : Orange signe un accord pour l’acquisition conjointe de SFR, une étape décisive pour renforcer son leadership en France"
       ]
     },
     "Vivendi": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.3,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 14 au 18 septembre 2026",
