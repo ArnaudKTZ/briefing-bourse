@@ -1,5 +1,5 @@
 {
-  "capital": 719.6299999999987,
+  "capital": 536.0699999999986,
   "positions": {
     "Société Générale": {
       "nb_actions": 27,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 1982.8799999999999,
       "frais_achat": 9.91
-    },
-    "Thales": {
-      "nb_actions": 8,
-      "prix_entree": 240.8,
-      "date_entree": "2026-09-18",
-      "heure_entree": "14:01",
-      "source_entree": "Intraday",
-      "cout_total": 1926.4,
-      "frais_achat": 9.63
     },
     "Eurofins Scientific": {
       "nb_actions": 26,
@@ -36,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1770.0,
       "frais_achat": 8.85
+    },
+    "TotalEnergies": {
+      "nb_actions": 25,
+      "prix_entree": 79.73,
+      "date_entree": "2026-09-25",
+      "heure_entree": "10:00",
+      "source_entree": "Briefing",
+      "cout_total": 1993.25,
+      "frais_achat": 9.97
     }
   },
   "historique_valeur": {
@@ -108,7 +108,7 @@
     "2026-09-22": 8399.14,
     "2026-09-23": 8385.51,
     "2026-09-24": 8223.24,
-    "2026-09-25": 8293.12
+    "2026-09-25": 8265.87
   },
   "trades": [
     {
@@ -979,6 +979,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.28,
       "frais_total": 19.62
+    },
+    {
+      "nom": "Thales",
+      "entree": 240.8,
+      "sortie": 228.6,
+      "date_entree": "2026-09-18",
+      "heure_entree": "14:01",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-09-25",
+      "heure_sortie": "10:00",
+      "source_sortie": "Briefing",
+      "pnl_pct": -5.54,
+      "frais_total": 18.77
     }
   ]
 }
