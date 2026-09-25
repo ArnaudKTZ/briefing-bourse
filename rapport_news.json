@@ -1,8 +1,8 @@
 {
   "date": "2026-09-25",
-  "heure": "06:45",
+  "heure": "11:48",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.11,
+      "sentiment": 0.21,
       "nb_news": 19,
       "titres_cles": [
+        "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "TotalEnergies signe un accord avec GIP portant sur des actifs d’infrastructures énergétiques en Afrique",
-        "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans",
-        "TotalEnergies annonce un partenariat avec Mistral en vue de développer des modèles de frontière d’intelligence artificielle dédiés à l’exploration et à l’ingénierie des réservoirs"
+        "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans"
       ]
     },
     "Hermès": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.0,
+      "nb_news": 16,
       "titres_cles": [
+        "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
-        "Sous-marins, drones, blindés... Airbus va sécuriser les communications de l'armée pour 25 ans",
-        "Airbus : les livraisons d'avions chutent en août, mais un record est toujours prévu pour 2026"
+        "Sous-marins, drones, blindés... Airbus va sécuriser les communications de l'armée pour 25 ans"
       ]
     },
     "Schneider Electric": {
@@ -141,11 +141,11 @@
     },
     "Stellantis": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
         "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?",
         "Stellantis vend son usine de Toronto inactive à Roshel Canada",
-        "La bataille sur la définition du \"Made in Europe\" relancée"
+        "Renault va investir 600 millions d’euros en Espagne pour produire cinq nouveaux modèles"
       ]
     },
     "Saint-Gobain": {
@@ -186,11 +186,11 @@
     },
     "Capgemini": {
       "sentiment": 0.11,
-      "nb_news": 18,
+      "nb_news": 19,
       "titres_cles": [
-        "Capgemini vend sa filiale critiquée pour son contrat avec la police américaine de l'immigration",
-        "Capgemini signe un accord définitif de vente de Capgemini Government Solutions",
-        "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements"
+        "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
+        "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
+        "Les entreprises accélèrent leurs investissements dans l’adaptation climatique, mais seules 15 % mesurent pleinement l’impact financier des risques climatiques"
       ]
     },
     "Renault": {
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.5,
-      "nb_news": 6,
+      "sentiment": 0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
         "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
-        "CAC 40, Dassault Aviation, Thales, Engie, Axa… les actions en Bourse au programme de Momentum"
+        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros"
       ]
     },
     "Orange": {
