@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-25",
-  "heure": "17:54",
+  "date": "2026-09-28",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
-      "La Bourse de Paris dans le vert, soutenue par le recul des prix du pétrole",
+      "La Bourse de Paris moins optimiste que ses voisines",
       "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
       "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»",
       "La Bourse de Paris termine prudemment, nouvelle flambée du coût de la dette",
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.3,
-      "nb_news": 10,
+      "sentiment": -0.22,
+      "nb_news": 9,
       "titres_cles": [
-        "Bernstein abaisse son objectif sur LVMH, la reprise en Chine marque une pause",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
-        "La Bourse de Paris prend des risques calculés avant la Fed"
+        "La Bourse de Paris prend des risques calculés avant la Fed",
+        "Antoine, le fils aîné de Bernard Arnault, investit dans les automobiles Delage"
       ]
     },
     "TotalEnergies": {
@@ -46,7 +46,7 @@
       "titres_cles": [
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
-        "Sous-marins, drones, blindés... Airbus va sécuriser les communications de l'armée pour 25 ans"
+        "Airbus : un défaut de fabrication repéré sur 500 appareils, quel modèle est concerné ?"
       ]
     },
     "Schneider Electric": {
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 5,
       "titres_cles": [
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
         "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026",
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.67,
-      "nb_news": 9,
+      "sentiment": 0.6,
+      "nb_news": 10,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.43,
-      "nb_news": 7,
+      "sentiment": 0.33,
+      "nb_news": 6,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
-        "Engie profite en Bourse du boom des réseaux d'électricité et de gaz et des énergies renouvelables, à acheter ?",
-        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros"
+        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros",
+        "CAC 40, Dassault Aviation, Thales, Engie, Axa… les actions en Bourse au programme de Momentum"
       ]
     },
     "Orange": {
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.11,
-      "nb_news": 19,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
