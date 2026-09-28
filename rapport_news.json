@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "heure": "13:14",
+  "heure": "17:58",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.28,
+      "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.16,
-      "nb_news": 19,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
@@ -221,9 +221,13 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.6,
+      "nb_news": 10,
+      "titres_cles": [
+        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
+        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+      ]
     },
     "Engie": {
       "sentiment": 0.33,
