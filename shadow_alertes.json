@@ -4428,5 +4428,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-28",
+    "heure": "14:01",
+    "nom": "Schneider Electric",
+    "cours": 291.65,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100",
+    "envoyee": false
   }
 ]
