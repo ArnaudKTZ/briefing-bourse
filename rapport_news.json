@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "heure": "06:45",
+  "heure": "13:14",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.21,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "TotalEnergies signe un accord avec GIP portant sur des actifs d’infrastructures énergétiques en Afrique",
-        "Intelligence artificielle: TotalEnergies annonce un partenariat avec Mistral, 100 millions d'euros sur 3 ans"
+        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035",
+        "TotalEnergies vise une croissance de 2 à 3% par an de sa production de pétrole et gaz entre 2030 et 2035"
       ]
     },
     "Hermès": {
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.0,
-      "nb_news": 16,
+      "nb_news": 17,
       "titres_cles": [
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
         "Les Bourses européennes naviguent en hausse dans un contexte agité",
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.11,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
@@ -221,13 +221,9 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.6,
-      "nb_news": 10,
-      "titres_cles": [
-        "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Engie": {
       "sentiment": 0.33,
@@ -262,12 +258,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 14 au 18 septembre 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 07 au 11 septembre 2026",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 08 2026"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
+        "Groupe DEKUPLE : RÉSULTATS DU 1ER SEMESTRE 2026 | CROISSANCE DU MARKETING DIGITAL ET PROGRESSION DE LA RENTABILITÉ",
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 14 au 18 septembre 2026"
       ]
     },
     "Alstom": {
