@@ -1,8 +1,8 @@
 {
   "date": "2026-09-28",
-  "heure": "17:58",
+  "heure": "20:42",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris moins optimiste que ses voisines",
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.57,
-      "nb_news": 7,
+      "sentiment": 0.5,
+      "nb_news": 8,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
