@@ -1,12 +1,4 @@
 {
-  "2026-09-18_TotalEnergies": "09:01",
-  "2026-09-18_BNP Paribas_vente": "11:31",
-  "2026-09-18_Thales_achat": "14:01",
-  "2026-09-18_Schneider Electric": "19:32",
-  "2026-09-18_Stellantis": "19:32",
-  "2026-09-18_Eurofins Scientific": "19:32",
-  "2026-09-18_Eurofins Scientific_achat": "19:32",
-  "2026-09-18_Edenred_vente": "19:32",
   "2026-09-21_STMicroelectronics": "09:01",
   "2026-09-22_STMicroelectronics": "09:01",
   "2026-09-22_Schneider Electric": "11:30",
@@ -27,5 +19,6 @@
   "2026-09-25_Legrand": "09:01",
   "2026-09-25_STMicroelectronics": "09:01",
   "2026-09-25_L'Oréal": "11:31",
-  "2026-09-25_Teleperformance": "14:40"
+  "2026-09-25_Teleperformance": "14:40",
+  "2026-09-28_Teleperformance": "09:01"
 }
