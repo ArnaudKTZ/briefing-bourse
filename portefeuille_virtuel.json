@@ -1,24 +1,6 @@
 {
-  "capital": 536.0699999999986,
+  "capital": 794.1399999999983,
   "positions": {
-    "Société Générale": {
-      "nb_actions": 27,
-      "prix_entree": 73.44,
-      "date_entree": "2026-09-16",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1982.8799999999999,
-      "frais_achat": 9.91
-    },
-    "Eurofins Scientific": {
-      "nb_actions": 26,
-      "prix_entree": 76.44,
-      "date_entree": "2026-09-18",
-      "heure_entree": "19:32",
-      "source_entree": "Intraday",
-      "cout_total": 1987.44,
-      "frais_achat": 9.94
-    },
     "Schneider Electric": {
       "nb_actions": 6,
       "prix_entree": 295.0,
@@ -36,6 +18,24 @@
       "source_entree": "Briefing",
       "cout_total": 1993.25,
       "frais_achat": 9.97
+    },
+    "BNP Paribas": {
+      "nb_actions": 20,
+      "prix_entree": 99.3,
+      "date_entree": "2026-09-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1986.0,
+      "frais_achat": 9.93
+    },
+    "Safran": {
+      "nb_actions": 5,
+      "prix_entree": 336.3,
+      "date_entree": "2026-09-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1681.5,
+      "frais_achat": 8.41
     }
   },
   "historique_valeur": {
@@ -108,7 +108,8 @@
     "2026-09-22": 8399.14,
     "2026-09-23": 8385.51,
     "2026-09-24": 8223.24,
-    "2026-09-25": 8245.55
+    "2026-09-25": 8245.55,
+    "2026-09-28": 8207.39
   },
   "trades": [
     {
@@ -992,6 +993,32 @@
       "source_sortie": "Briefing",
       "pnl_pct": -5.54,
       "frais_total": 18.77
+    },
+    {
+      "nom": "Société Générale",
+      "entree": 73.44,
+      "sortie": 72.31,
+      "date_entree": "2026-09-16",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-28",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -2.03,
+      "frais_total": 19.67
+    },
+    {
+      "nom": "Eurofins Scientific",
+      "entree": 76.44,
+      "sortie": 77.36,
+      "date_entree": "2026-09-18",
+      "heure_entree": "19:32",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-09-28",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 0.7,
+      "frais_total": 20.0
     }
   ]
 }
