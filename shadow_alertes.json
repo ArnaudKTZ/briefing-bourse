@@ -4478,5 +4478,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-29",
+    "heure": "14:01",
+    "nom": "Safran",
+    "cours": 338.1,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-29",
+    "heure": "14:01",
+    "nom": "Accor",
+    "cours": 46.47,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
