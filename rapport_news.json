@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
-  "heure": "06:45",
+  "heure": "12:54",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris moins optimiste que ses voisines",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.28,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035",
@@ -51,7 +51,7 @@
     },
     "Schneider Electric": {
       "sentiment": 0.05,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique",
         "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.12,
+      "nb_news": 17,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.44,
+      "nb_news": 9,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -271,7 +271,7 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.4,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
