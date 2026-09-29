@@ -1,24 +1,24 @@
 {
   "date": "2026-09-29",
-  "heure": "16:21",
+  "heure": "19:00",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%",
       "La Bourse de Paris moins optimiste que ses voisines",
       "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
       "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»",
-      "La Bourse de Paris termine prudemment, nouvelle flambée du coût de la dette",
-      "Les actions Danone progressent après la révision à la hausse de Deutsche Bank"
+      "La Bourse de Paris termine prudemment, nouvelle flambée du coût de la dette"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.22,
-      "nb_news": 9,
+      "sentiment": -0.12,
+      "nb_news": 8,
       "titres_cles": [
-        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
         "La Bourse de Paris prend des risques calculés avant la Fed",
+        "LVMH : Déclaration des transactions sur actions propres",
         "Antoine, le fils aîné de Bernard Arnault, investit dans les automobiles Delage"
       ]
     },
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.33,
-      "nb_news": 6,
+      "sentiment": 0.43,
+      "nb_news": 7,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
-        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros",
-        "CAC 40, Dassault Aviation, Thales, Engie, Axa… les actions en Bourse au programme de Momentum"
+        "Prix du gaz : comment limiter la hausse de sa facture en 2027",
+        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros"
       ]
     },
     "Orange": {
