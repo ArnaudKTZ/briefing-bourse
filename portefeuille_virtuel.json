@@ -1,5 +1,5 @@
 {
-  "capital": 794.1399999999983,
+  "capital": 787.2799999999984,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -19,15 +19,6 @@
       "cout_total": 1993.25,
       "frais_achat": 9.97
     },
-    "BNP Paribas": {
-      "nb_actions": 20,
-      "prix_entree": 99.3,
-      "date_entree": "2026-09-28",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1986.0,
-      "frais_achat": 9.93
-    },
     "Safran": {
       "nb_actions": 5,
       "prix_entree": 336.3,
@@ -36,6 +27,15 @@
       "source_entree": "Briefing",
       "cout_total": 1681.5,
       "frais_achat": 8.41
+    },
+    "L'Oréal": {
+      "nb_actions": 5,
+      "prix_entree": 383.8,
+      "date_entree": "2026-09-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "cout_total": 1919.0,
+      "frais_achat": 9.6
     }
   },
   "historique_valeur": {
@@ -111,7 +111,7 @@
     "2026-09-25": 8245.55,
     "2026-09-28": 8167.34,
     "2026-09-29": 8148.24,
-    "2026-09-30": 8167.34
+    "2026-09-30": 8065.43
   },
   "trades": [
     {
@@ -1021,6 +1021,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": 0.7,
       "frais_total": 20.0
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 99.3,
+      "sortie": 96.57,
+      "date_entree": "2026-09-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-30",
+      "heure_sortie": "11:31",
+      "source_sortie": "Intraday",
+      "pnl_pct": -3.24,
+      "frais_total": 19.59,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }
