@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-29",
-  "heure": "19:00",
+  "date": "2026-09-30",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.0,
-      "nb_news": 5,
+      "sentiment": 0.17,
+      "nb_news": 6,
       "titres_cles": [
+        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
         "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?",
-        "Renault va investir 600 millions d’euros en Espagne pour produire cinq nouveaux modèles",
-        "La bataille sur la définition du \"Made in Europe\" relancée"
+        "Renault va investir 600 millions d’euros en Espagne pour produire cinq nouveaux modèles"
       ]
     },
     "Saint-Gobain": {
@@ -177,7 +177,7 @@
     },
     "Michelin": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 4,
       "titres_cles": [
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
         "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026",
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.12,
+      "sentiment": 0.18,
       "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
-        "\"Fichez-moi la paix!\": à son procès, journée de tensions entre Dati et les parties civiles",
-        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »"
+        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
+        "\"Fichez-moi la paix!\": à son procès, journée de tensions entre Dati et les parties civiles"
       ]
     },
     "Legrand": {
