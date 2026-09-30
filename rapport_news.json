@@ -1,8 +1,8 @@
 {
   "date": "2026-09-30",
-  "heure": "16:14",
+  "heure": "18:59",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "Les Bourses européennes en hausse",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.23,
+      "nb_news": 13,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -159,7 +159,7 @@
     },
     "ArcelorMittal": {
       "sentiment": 0.0,
-      "nb_news": 5,
+      "nb_news": 6,
       "titres_cles": [
         "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
         "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
