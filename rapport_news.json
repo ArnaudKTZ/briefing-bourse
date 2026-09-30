@@ -1,25 +1,25 @@
 {
   "date": "2026-09-30",
-  "heure": "06:45",
+  "heure": "12:44",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
+      "Les Bourses européennes en hausse",
       "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%",
       "La Bourse de Paris moins optimiste que ses voisines",
       "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
-      "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»",
-      "La Bourse de Paris termine prudemment, nouvelle flambée du coût de la dette"
+      "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.12,
+      "sentiment": -0.25,
       "nb_news": 8,
       "titres_cles": [
+        "Les cosmétiques, un luxe plus accessible qui résiste à la crise",
         "La Bourse de Paris prend des risques calculés avant la Fed",
-        "LVMH : Déclaration des transactions sur actions propres",
-        "Antoine, le fils aîné de Bernard Arnault, investit dans les automobiles Delage"
+        "LVMH : Déclaration des transactions sur actions propres"
       ]
     },
     "TotalEnergies": {
@@ -131,12 +131,12 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.09,
-      "nb_news": 11,
+      "sentiment": 0.2,
+      "nb_news": 10,
       "titres_cles": [
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
-        "Société Générale : Mise à disposition du deuxième amendement au document d’enregistrement universel 2026 et du rapport financier semestriel",
-        "Société Générale : Réduction de capital par annulation d'actions auto-détenues"
+        "Société Générale : Réduction de capital par annulation d'actions auto-détenues",
+        "CAC 40 : la Bourse de Paris rebondit, portée par la baisse du pétrole"
       ]
     },
     "Stellantis": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.43,
-      "nb_news": 21,
+      "sentiment": 0.45,
+      "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
