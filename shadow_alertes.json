@@ -4508,5 +4508,75 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "L'Oréal",
+    "cours": 383.8,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "Air Liquide",
+    "cours": 169.86,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "Safran",
+    "cours": 337.9,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "Legrand",
+    "cours": 142.45,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "Accor",
+    "cours": 46.5,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "L'Oréal",
+    "cours": 383.8,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 91/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "11:31",
+    "nom": "BNP Paribas",
+    "cours": 96.57,
+    "score": 29,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -3.24%",
+    "envoyee": false
   }
 ]
