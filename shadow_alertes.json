@@ -4578,5 +4578,25 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -3.24%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "15:30",
+    "nom": "Air Liquide",
+    "cours": 170.34,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 92/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "15:30",
+    "nom": "TotalEnergies",
+    "cours": 75.86,
+    "score": 31,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -5.33%",
+    "envoyee": false
   }
 ]

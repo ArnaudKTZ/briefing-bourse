@@ -1,5 +1,5 @@
 {
-  "capital": 787.2799999999984,
+  "capital": 791.1899999999985,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 1770.0,
       "frais_achat": 8.85
-    },
-    "TotalEnergies": {
-      "nb_actions": 25,
-      "prix_entree": 79.73,
-      "date_entree": "2026-09-25",
-      "heure_entree": "10:00",
-      "source_entree": "Briefing",
-      "cout_total": 1993.25,
-      "frais_achat": 9.97
     },
     "Safran": {
       "nb_actions": 5,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1919.0,
       "frais_achat": 9.6
+    },
+    "Air Liquide": {
+      "nb_actions": 11,
+      "prix_entree": 170.34,
+      "date_entree": "2026-09-30",
+      "heure_entree": "15:30",
+      "source_entree": "Intraday",
+      "cout_total": 1873.74,
+      "frais_achat": 9.37
     }
   },
   "historique_valeur": {
@@ -111,7 +111,7 @@
     "2026-09-25": 8245.55,
     "2026-09-28": 8167.34,
     "2026-09-29": 8148.24,
-    "2026-09-30": 8046.73
+    "2026-09-30": 8023.98
   },
   "trades": [
     {
@@ -1034,6 +1034,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -3.24,
       "frais_total": 19.59,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 79.73,
+      "sortie": 75.86,
+      "date_entree": "2026-09-25",
+      "heure_entree": "10:00",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-09-30",
+      "heure_sortie": "15:30",
+      "source_sortie": "Intraday",
+      "pnl_pct": -5.33,
+      "frais_total": 19.45,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
