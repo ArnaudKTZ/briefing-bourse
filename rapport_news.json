@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "heure": "12:44",
+  "heure": "16:14",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.45,
+      "nb_news": 11,
       "titres_cles": [
+        "Veolia remporte un contrat majeur de 1Md€ sur 25 ans pour les services d’eau potable en Espagne",
         "Actionnariat salarié : une participation record qui renforce le statut de premier actionnaire des salariés Veolia",
-        "Veolia émet avec succès 1,15 Md € sur le marché obligataire",
-        "Veolia renforce son leadership en Amérique latine avec un contrat majeur dans l'eau en Colombie pour moderniser les infrastructures hydriques de Cúcuta"
+        "Veolia émet avec succès 1,15 Md € sur le marché obligataire"
       ]
     },
     "STMicroelectronics": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
         "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
