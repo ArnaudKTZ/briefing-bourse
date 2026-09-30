@@ -4598,5 +4598,25 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -5.33%",
     "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "18:02",
+    "nom": "Legrand",
+    "cours": 141.6,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 89/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-09-30",
+    "heure": "18:02",
+    "nom": "L'Oréal",
+    "cours": 379.45,
+    "score": 26,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -1.63%",
+    "envoyee": false
   }
 ]

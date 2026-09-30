@@ -1,5 +1,5 @@
 {
-  "capital": 791.1899999999985,
+  "capital": 686.6399999999985,
   "positions": {
     "Schneider Electric": {
       "nb_actions": 6,
@@ -19,15 +19,6 @@
       "cout_total": 1681.5,
       "frais_achat": 8.41
     },
-    "L'Oréal": {
-      "nb_actions": 5,
-      "prix_entree": 383.8,
-      "date_entree": "2026-09-30",
-      "heure_entree": "11:31",
-      "source_entree": "Intraday",
-      "cout_total": 1919.0,
-      "frais_achat": 9.6
-    },
     "Air Liquide": {
       "nb_actions": 11,
       "prix_entree": 170.34,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1873.74,
       "frais_achat": 9.37
+    },
+    "Legrand": {
+      "nb_actions": 14,
+      "prix_entree": 141.6,
+      "date_entree": "2026-09-30",
+      "heure_entree": "18:02",
+      "source_entree": "Intraday",
+      "cout_total": 1982.3999999999999,
+      "frais_achat": 9.91
     }
   },
   "historique_valeur": {
@@ -111,7 +111,7 @@
     "2026-09-25": 8245.55,
     "2026-09-28": 8167.34,
     "2026-09-29": 8148.24,
-    "2026-09-30": 7979.59
+    "2026-09-30": 7972.72
   },
   "trades": [
     {
@@ -1048,6 +1048,20 @@
       "source_sortie": "Intraday",
       "pnl_pct": -5.33,
       "frais_total": 19.45,
+      "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "L'Oréal",
+      "entree": 383.8,
+      "sortie": 379.45,
+      "date_entree": "2026-09-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-09-30",
+      "heure_sortie": "18:02",
+      "source_sortie": "Intraday",
+      "pnl_pct": -1.63,
+      "frais_total": 19.09,
       "raison_sortie": "ÉVITER intraday"
     }
   ]
