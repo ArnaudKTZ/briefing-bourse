@@ -1,6 +1,6 @@
 {
   "position": "Stable",
-  "date": "2026-09-01",
+  "date": "2026-10-01",
   "historique": [
     {
       "date": "2026-07-13",
@@ -64,6 +64,14 @@
       "momentums": {
         "BTC": -27.4,
         "ETH": -43.8
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "position": "Stable",
+      "momentums": {
+        "BTC": -26.7,
+        "ETH": -35.4
       }
     }
   ]
