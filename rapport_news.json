@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "heure": "16:46",
+  "heure": "19:28",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.23,
-      "nb_news": 13,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -113,8 +113,8 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
@@ -131,12 +131,12 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.5,
+      "nb_news": 12,
       "titres_cles": [
+        "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
-        "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
-        "Société Générale : Réduction de capital par annulation d'actions auto-détenues"
+        "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions"
       ]
     },
     "Stellantis": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
