@@ -1,8 +1,4 @@
 {
-  "2026-09-23_STMicroelectronics": "09:01",
-  "2026-09-23_Schneider Electric": "11:31",
-  "2026-09-23_L'Oréal": "11:31",
-  "2026-09-23_Legrand": "11:31",
   "2026-09-24_Schneider Electric": "09:01",
   "2026-09-24_L'Oréal": "09:01",
   "2026-09-24_Legrand": "09:01",
@@ -34,5 +30,9 @@
   "2026-09-30_Air Liquide_achat": "15:30",
   "2026-09-30_TotalEnergies_vente": "15:30",
   "2026-09-30_Legrand_achat": "18:02",
-  "2026-09-30_L'Oréal_vente": "18:02"
+  "2026-09-30_L'Oréal_vente": "18:02",
+  "2026-10-01_Schneider Electric": "09:01",
+  "2026-10-01_Safran": "09:01",
+  "2026-10-01_Legrand": "09:01",
+  "2026-10-01_STMicroelectronics": "09:01"
 }

@@ -4618,5 +4618,45 @@
     "signal": "VENTE",
     "raison": "Position fermée — ÉVITER intraday | P&L : -1.63%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "09:01",
+    "nom": "Schneider Electric",
+    "cours": 296.35,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "09:01",
+    "nom": "Safran",
+    "cours": 335.1,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 143.05,
+    "score": 100,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 100/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 53.36,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
