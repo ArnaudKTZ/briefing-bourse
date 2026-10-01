@@ -4658,5 +4658,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "14:01",
+    "nom": "Air Liquide",
+    "cours": 169.52,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "14:01",
+    "nom": "Capgemini",
+    "cours": 111.65,
+    "score": 78,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +8.4%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-01",
+    "heure": "14:01",
+    "nom": "Veolia",
+    "cours": 30.53,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
