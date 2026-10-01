@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-30",
-  "heure": "18:59",
+  "date": "2026-10-01",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
+      "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
       "Les Bourses européennes en hausse",
       "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%",
       "La Bourse de Paris moins optimiste que ses voisines",
-      "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
-      "Crédit agricole : opportunité en Bourse, «des résultats solides et une stratégie de croissance européenne !»"
+      "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole"
     ]
   },
   "valeurs": {
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.22,
+      "sentiment": 0.17,
       "nb_news": 18,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH",
-        "Hermès International : bilan du contrat de liquidité au 30 juin 2026"
+        "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Airbus": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.42,
-      "nb_news": 19,
+      "sentiment": 0.6,
+      "nb_news": 20,
       "titres_cles": [
+        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
         "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros",
-        "Société Générale, BNP Paribas… le secteur des banques en recul, les embauches au plus bas depuis 2013",
-        "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros"
+        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits"
       ]
     },
     "Air Liquide": {
@@ -131,12 +131,12 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.2,
+      "sentiment": 0.4,
       "nb_news": 10,
       "titres_cles": [
+        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
         "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions",
-        "Société Générale : Réduction de capital par annulation d'actions auto-détenues",
-        "CAC 40 : la Bourse de Paris rebondit, portée par la baisse du pétrole"
+        "Société Générale : Réduction de capital par annulation d'actions auto-détenues"
       ]
     },
     "Stellantis": {
