@@ -1,15 +1,15 @@
 {
   "date": "2026-10-01",
-  "heure": "06:45",
+  "heure": "13:10",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
+      "La Bourse de Paris en net recul, le taux français au plus haut depuis 2002",
+      "Profitez d’InvestingPro à -55% avant les nouveaux choix d’actions de notre IA, à 14h",
       "Les Bourses européennes en hausse",
-      "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%",
-      "La Bourse de Paris moins optimiste que ses voisines",
-      "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole"
+      "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
+      "sentiment": 0.29,
       "nb_news": 17,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035",
-        "TotalEnergies vise une croissance de 2 à 3% par an de sa production de pétrole et gaz entre 2030 et 2035"
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?",
+        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035"
       ]
     },
     "Hermès": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.29,
-      "nb_news": 17,
+      "sentiment": 0.33,
+      "nb_news": 18,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "Sanofi : Berlin autorisé à accorder une subvention pour sécuriser l’approvisionnement européen en insuline",
-        "ADOCIA annonce l’expiration du droit exclusif à négocier un partenariat pour M1Pram avec SANOFI"
+        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
+        "Sanofi : Berlin autorisé à accorder une subvention pour sécuriser l’approvisionnement européen en insuline"
       ]
     },
     "BNP Paribas": {
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.69,
-      "nb_news": 13,
+      "sentiment": 0.73,
+      "nb_news": 11,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : des investissements record qui préparent la croissance future",
@@ -179,13 +179,13 @@
       "sentiment": 0.0,
       "nb_news": 4,
       "titres_cles": [
-        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
+        "Michelin : Déclaration des transactions sur actions propres - 1er octobre 2026",
         "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026",
         "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.12,
+      "sentiment": 0.18,
       "nb_news": 17,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.43,
-      "nb_news": 7,
+      "sentiment": 0.5,
+      "nb_news": 8,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
-        "Prix du gaz : comment limiter la hausse de sa facture en 2027",
-        "Engie : 720 000 bénéficiaires du chèque énergie vont recevoir 75 euros"
+        "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud",
+        "Prix du gaz : comment limiter la hausse de sa facture en 2027"
       ]
     },
     "Orange": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.12,
+      "nb_news": 17,
       "titres_cles": [
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
         "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Bourse : Dassault Aviation (Rafale), Thales… «La défense profitera d’un très long cycle d’investissement !»",
-        "Singapour choisit Thales pour déployer son futur système de gestion du trafic aérien : une innovation portée par l’IA pour l’un des espaces aériens les plus denses d'Asie"
+        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
+        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA"
       ]
     },
     "Forvia": {
