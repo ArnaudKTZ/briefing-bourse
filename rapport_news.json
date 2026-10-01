@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "heure": "13:10",
+  "heure": "16:46",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.17,
-      "nb_news": 6,
+      "sentiment": 0.14,
+      "nb_news": 7,
       "titres_cles": [
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
         "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?",
-        "Renault va investir 600 millions d’euros en Espagne pour produire cinq nouveaux modèles"
+        "Les constructeurs américains perdent du terrain face aux marques asiatiques"
       ]
     },
     "Saint-Gobain": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.18,
+      "sentiment": 0.24,
       "nb_news": 17,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
-        "Les entreprises accélèrent leurs investissements dans l’adaptation climatique, mais seules 15 % mesurent pleinement l’impact financier des risques climatiques"
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
       ]
     },
     "Renault": {
@@ -249,11 +249,11 @@
     },
     "Vivendi": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
+        "Vivendi: Information relative au nombre total de droits de vote et d’actions composant le capital social",
         "VIVENDI : RÉSULTATS DU PREMIER SEMESTRE 2026",
-        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social",
-        "VIVENDI VA FORMER UN RECOURS DEVANT LA COUR DE JUSTICE DE L’UNION EUROPÉENNE"
+        "Vivendi : Information relative au nombre total de droits de vote et d’actions composant le capital social"
       ]
     },
     "Eurofins Scientific": {
@@ -342,7 +342,7 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.4,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
