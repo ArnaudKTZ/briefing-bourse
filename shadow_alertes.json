@@ -4688,5 +4688,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-02",
+    "heure": "09:01",
+    "nom": "Schneider Electric",
+    "cours": 292.0,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-02",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 141.6,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-02",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 53.5,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
   }
 ]
