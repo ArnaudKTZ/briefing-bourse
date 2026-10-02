@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "heure": "16:08",
+  "heure": "18:48",
   "marche": {
     "sentiment_global": 0.25,
     "nb_articles": 20,
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
         "Groupe DEKUPLE : RÉSULTATS DU 1ER SEMESTRE 2026 | CROISSANCE DU MARKETING DIGITAL ET PROGRESSION DE LA RENTABILITÉ",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 14 au 18 septembre 2026"
+        "Vicat - Projet d’acquisition par le groupe Vicat des filiales de béton prêt à l’emploi et granulats du groupe Cemex dans le Sud-Est de la France"
       ]
     },
     "Alstom": {
