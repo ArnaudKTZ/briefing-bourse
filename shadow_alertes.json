@@ -4718,5 +4718,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-02",
+    "heure": "11:30",
+    "nom": "Air Liquide",
+    "cours": 169.66,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-02",
+    "heure": "11:30",
+    "nom": "Safran",
+    "cours": 333.1,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
