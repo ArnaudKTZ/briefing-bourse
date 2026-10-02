@@ -1,15 +1,15 @@
 {
   "date": "2026-10-02",
-  "heure": "06:45",
+  "heure": "12:44",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.25,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
+      "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»",
+      "La Bourse de Paris prudente, la dette française sous pression",
       "La Bourse de Paris en net recul, le taux français au plus haut depuis 2002",
-      "Profitez d’InvestingPro à -55% avant les nouveaux choix d’actions de notre IA, à 14h",
-      "Les Bourses européennes en hausse",
-      "La Bourse de Paris lestée par les incertitudes budgétaires, le taux français dépasse 4,80%"
+      "Profitez d’InvestingPro à -55% avant les nouveaux choix d’actions de notre IA, à 14h"
     ]
   },
   "valeurs": {
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.22,
+      "sentiment": 0.17,
       "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
