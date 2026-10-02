@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-01",
-  "heure": "19:28",
+  "date": "2026-10-02",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.0,
+      "sentiment": 0.12,
       "nb_news": 17,
       "titres_cles": [
+        "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
-        "Les Bourses européennes naviguent en hausse dans un contexte agité",
-        "Airbus : un défaut de fabrication repéré sur 500 appareils, quel modèle est concerné ?"
+        "Les Bourses européennes naviguent en hausse dans un contexte agité"
       ]
     },
     "Schneider Electric": {
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
