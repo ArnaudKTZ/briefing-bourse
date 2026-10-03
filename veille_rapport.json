@@ -1,5 +1,104 @@
 {
-  "date": "2026-09-26",
-  "nb_articles": 0,
-  "top": []
+  "date": "2026-10-03",
+  "nb_articles": 40,
+  "top": [
+    {
+      "titre": "From Cointegration to Out-of-Sample Failure: A Pairs-Trading Case Study on PEP-KO",
+      "lien": "https://arxiv.org/abs/2609.35359v1",
+      "date": "2026-09-28",
+      "score": 13,
+      "hits": [
+        "walk-forward",
+        "out-of-sample",
+        "robust"
+      ],
+      "extrait": "This paper examines whether a cointegration-based pairs trading strategy between PepsiCo and The Coca-Cola Company is statistically robust and economically exploitable. We first test for cointegration and estimate the spread's mean-reversion dynamics over 2013-2018, then hold these statistical parameters fixed and optimise a threshold-based trading strategy in-sample over 2018-2023."
+    },
+    {
+      "titre": "PPO-HRAP: Proximal Policy Optimization with a Hybrid Regime-Aware Policy for Risk-Controlled Trading",
+      "lien": "https://arxiv.org/abs/2610.01325v1",
+      "date": "2026-10-01",
+      "score": 12,
+      "hits": [
+        "regime",
+        "robust",
+        "reinforcement learning",
+        "agent",
+        "drawdown"
+      ],
+      "extrait": "Reinforcement learning for trading often struggles to balance upside participation with drawdown control. Profit-only policies can collapse toward passive long exposure on upward-drifting assets, while aggressively risk-penalized rewards can become too defensive during volatile periods."
+    },
+    {
+      "titre": "Optimal Reinsurance-Dividend Strategy with Fixed Transaction Costs in a Regime-Switching Brownian Risk Model: A Viscosity Solution to the Impulse Control Problem",
+      "lien": "https://arxiv.org/abs/2609.32686v1",
+      "date": "2026-09-26",
+      "score": 12,
+      "hits": [
+        "regime",
+        "transaction cost",
+        "llm"
+      ],
+      "extrait": "We consider a problem of optimal proportional reinsurance-dividend distribution under a Brownian risk model, where both the drift and volatility coefficients are subject to endogenous regime-switching. Dividend payments are subject to fixed transaction costs."
+    },
+    {
+      "titre": "Taming the Greeks: Option Portfolios with Inductive Biases",
+      "lien": "https://arxiv.org/abs/2609.33767v1",
+      "date": "2026-09-27",
+      "score": 9,
+      "hits": [
+        "factor",
+        "out-of-sample",
+        "reinforcement learning",
+        "deep learning"
+      ],
+      "extrait": "We present an end-to-end deep learning framework for systematic options trading that directly embeds hedging behavior through explicit control of portfolio-level risk exposures. While neural networks trained to optimize risk-adjusted performance have been shown to outperform traditional rules-based strategies, such approaches remain agnostic to the sensitivities of the resulting portfolios with respect to specific…"
+    },
+    {
+      "titre": "Multiperiod bond portfolio optimization with transaction costs using a Markov Decision process",
+      "lien": "https://arxiv.org/abs/2609.38765v1",
+      "date": "2026-09-30",
+      "score": 8,
+      "hits": [
+        "factor",
+        "transaction cost",
+        "drawdown"
+      ],
+      "extrait": "Bank treasury portfolios must balance yield, liquidity, and interest-rate risk across bonds of different maturities. Static allocation rules are ill-suited to this task: portfolios concentrated in long-duration securities with no dynamic adjust- ment mechanism can accumulate large mark-to-market losses and liquidity stress under rising interest rates, as illustrated by the failure of Silicon Valley Bank in 2023."
+    },
+    {
+      "titre": "LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs",
+      "lien": "https://arxiv.org/abs/2609.33470v1",
+      "date": "2026-09-27",
+      "score": 8,
+      "hits": [
+        "llm",
+        "language model",
+        "agent"
+      ],
+      "extrait": "Large language models (LLMs) and multi-agent systems (MAS) have shown promise in financial decision-making, yet existing evaluations focus on equity trading and primarily assess directional prediction, overlooking the structural complexity of derivative markets. Option trading introduces fundamentally different challenges, including nonlinear payoffs and multi-leg strategy construction, requiring structured…"
+    },
+    {
+      "titre": "QuantCode Model: Specializing Language Models for Executable Algorithmic Trading Code",
+      "lien": "https://arxiv.org/abs/2609.39420v1",
+      "date": "2026-09-30",
+      "score": 7,
+      "hits": [
+        "backtest",
+        "language model",
+        "agent"
+      ],
+      "extrait": "Large language models are strong general-purpose code generators, but executable algorithmic trading remains a demanding specialization target: a model must translate a natural-language strategy specification into correct program logic for a specialized trading framework, execute on historical data, produce trades, and remain semantically faithful to the request. We study two complementary mechanisms for…"
+    },
+    {
+      "titre": "Retrieval-Augmented Diffusion Modeling for Stochastic Discount Factor Portfolios",
+      "lien": "https://arxiv.org/abs/2609.35086v1",
+      "date": "2026-09-28",
+      "score": 7,
+      "hits": [
+        "factor",
+        "regime"
+      ],
+      "extrait": "In this work, we study portfolio optimization under the stochastic discount factor (SDF) framework by learning market state representations that capture the underlying risk structures of financial data. This is challenging due to several factors: financial markets exhibit non-stationary dynamics with shifting regimes, multimodal inputs such as price and news data often contain stochastic noise, and existing…"
+    }
+  ]
 }
