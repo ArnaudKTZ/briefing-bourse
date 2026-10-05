@@ -1,15 +1,6 @@
 {
-  "capital": 686.6399999999985,
+  "capital": 668.4599999999984,
   "positions": {
-    "Schneider Electric": {
-      "nb_actions": 6,
-      "prix_entree": 295.0,
-      "date_entree": "2026-09-24",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1770.0,
-      "frais_achat": 8.85
-    },
     "Safran": {
       "nb_actions": 5,
       "prix_entree": 336.3,
@@ -36,6 +27,15 @@
       "source_entree": "Intraday",
       "cout_total": 1982.3999999999999,
       "frais_achat": 9.91
+    },
+    "Schneider Electric": {
+      "nb_actions": 6,
+      "prix_entree": 303.0,
+      "date_entree": "2026-10-05",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "cout_total": 1818.0,
+      "frais_achat": 9.09
     }
   },
   "historique_valeur": {
@@ -113,7 +113,8 @@
     "2026-09-29": 8148.24,
     "2026-09-30": 7972.72,
     "2026-10-01": 7864.58,
-    "2026-10-02": 8050.6
+    "2026-10-02": 8050.6,
+    "2026-10-05": 8032.42
   },
   "trades": [
     {
@@ -1065,6 +1066,19 @@
       "pnl_pct": -1.63,
       "frais_total": 19.09,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "Schneider Electric",
+      "entree": 295.0,
+      "sortie": 303.0,
+      "date_entree": "2026-09-24",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-10-05",
+      "heure_sortie": "05:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 2.2,
+      "frais_total": 17.94
     }
   ]
 }
