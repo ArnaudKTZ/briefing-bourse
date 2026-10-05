@@ -1,5 +1,5 @@
 {
-  "capital": 668.4599999999984,
+  "capital": 350.6599999999987,
   "positions": {
     "Safran": {
       "nb_actions": 5,
@@ -28,14 +28,14 @@
       "cout_total": 1982.3999999999999,
       "frais_achat": 9.91
     },
-    "Schneider Electric": {
-      "nb_actions": 6,
-      "prix_entree": 303.0,
+    "STMicroelectronics": {
+      "nb_actions": 34,
+      "prix_entree": 57.26,
       "date_entree": "2026-10-05",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1818.0,
-      "frais_achat": 9.09
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "cout_total": 1946.84,
+      "frais_achat": 9.73
     }
   },
   "historique_valeur": {
@@ -114,7 +114,7 @@
     "2026-09-30": 7972.72,
     "2026-10-01": 7864.58,
     "2026-10-02": 8050.6,
-    "2026-10-05": 8032.42
+    "2026-10-05": 7823.3
   },
   "trades": [
     {
@@ -1079,6 +1079,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": 2.2,
       "frais_total": 17.94
+    },
+    {
+      "nom": "Schneider Electric",
+      "entree": 303.0,
+      "sortie": 274.5,
+      "date_entree": "2026-10-05",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-10-05",
+      "heure_sortie": "11:31",
+      "source_sortie": "Intraday",
+      "pnl_pct": -9.86,
+      "frais_total": 17.32,
+      "raison_sortie": "Stop-loss -9.4%"
     }
   ]
 }
