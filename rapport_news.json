@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-02",
-  "heure": "18:48",
+  "date": "2026-10-05",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.25,
+    "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.29,
-      "nb_news": 17,
+      "sentiment": 0.28,
+      "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?",
@@ -32,7 +32,7 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.17,
+      "sentiment": 0.11,
       "nb_news": 18,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
@@ -51,16 +51,16 @@
     },
     "Schneider Electric": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
+        "Schneider Electric proche d’un accord à 20 milliards $ pour PTC",
         "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique",
-        "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?",
-        "Aker bondit après l’accord de Schneider Electric pour racheter Cognite pour 3,1 milliards $"
+        "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?"
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.19,
+      "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.88,
-      "nb_news": 17,
+      "sentiment": 0.83,
+      "nb_news": 18,
       "titres_cles": [
         "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions.",
         "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité",
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.45,
-      "nb_news": 11,
+      "sentiment": 0.42,
+      "nb_news": 12,
       "titres_cles": [
         "Veolia remporte un contrat majeur de 1Md€ sur 25 ans pour les services d’eau potable en Espagne",
         "Actionnariat salarié : une participation record qui renforce le statut de premier actionnaire des salariés Veolia",
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.4,
-      "nb_news": 15,
+      "sentiment": 0.43,
+      "nb_news": 14,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.33,
+      "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.73,
-      "nb_news": 11,
+      "sentiment": 0.7,
+      "nb_news": 10,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
