@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "heure": "18:23",
+  "heure": "21:49",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -53,8 +53,8 @@
       "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
-        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
         "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition",
+        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
         "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique"
       ]
     },
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.83,
-      "nb_news": 12,
+      "sentiment": 0.77,
+      "nb_news": 13,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.16,
+      "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.12,
-      "nb_news": 17,
+      "sentiment": 0.0,
+      "nb_news": 18,
       "titres_cles": [
         "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
-        "Jefferies relève ses objectifs sur ASML et STMicro après la réévaluation des semi-conducteurs européens",
-        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA"
+        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
+        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
       ]
     },
     "Dassault Systèmes": {
