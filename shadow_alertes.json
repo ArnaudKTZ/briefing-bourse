@@ -4798,5 +4798,25 @@
     "signal": "VENTE",
     "raison": "Position fermée — Stop-loss -9.4% | P&L : -9.86%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "17:45",
+    "nom": "Capgemini",
+    "cours": 108.45,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "17:45",
+    "nom": "Alstom",
+    "cours": 15.42,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.32%",
+    "envoyee": false
   }
 ]
