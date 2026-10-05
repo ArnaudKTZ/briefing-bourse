@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "heure": "13:51",
+  "heure": "18:23",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
-        "Groupe DEKUPLE : RÉSULTATS DU 1ER SEMESTRE 2026 | CROISSANCE DU MARKETING DIGITAL ET PROGRESSION DE LA RENTABILITÉ",
-        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 28 septembre au 02 octobre 2026",
+        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums",
+        "AkzoNobel en hausse après la cession de son activité Asie-Pacifique à Nippon Paint pour 1,35 milliard $"
       ]
     },
     "Alstom": {
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.7,
-      "nb_news": 10,
+      "sentiment": 0.64,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
