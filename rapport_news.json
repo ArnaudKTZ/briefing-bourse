@@ -1,15 +1,15 @@
 {
   "date": "2026-10-05",
-  "heure": "06:45",
+  "heure": "13:51",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
+      "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
       "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»",
       "La Bourse de Paris prudente, la dette française sous pression",
-      "La Bourse de Paris en net recul, le taux français au plus haut depuis 2002",
-      "Profitez d’InvestingPro à -55% avant les nouveaux choix d’actions de notre IA, à 14h"
+      "La Bourse de Paris en net recul, le taux français au plus haut depuis 2002"
     ]
   },
   "valeurs": {
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.05,
+      "sentiment": 0.14,
       "nb_news": 21,
       "titres_cles": [
-        "Schneider Electric proche d’un accord à 20 milliards $ pour PTC",
-        "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique",
-        "Bourse : Schneider Electric, Legrand, Nexans… Investir sur les actions de l’électrification après leur chute ?"
+        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
+        "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition",
+        "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique"
       ]
     },
     "L'Oréal": {
@@ -86,12 +86,12 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.73,
-      "nb_news": 11,
+      "sentiment": 0.83,
+      "nb_news": 12,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
-        "Air Liquide : des investissements record qui préparent la croissance future",
-        "Kepler Cheuvreux relève l’objectif de cours d’Air Liquide, le qualifiant de \"valeur refuge\""
+        "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
+        "Air Liquide : des investissements record qui préparent la croissance future"
       ]
     },
     "Safran": {
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.2,
+      "nb_news": 15,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.0,
-      "nb_news": 4,
+      "sentiment": 0.4,
+      "nb_news": 5,
       "titres_cles": [
+        "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "Michelin : Déclaration des transactions sur actions propres - 1er octobre 2026",
-        "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026",
-        "Michelin : Déclaration des transactions sur actions propres - 17 septembre 2026"
+        "Michelin : Déclaration des transactions sur actions propres - 24 septembre 2026"
       ]
     },
     "Capgemini": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 21 au 25 septembre 2026",
         "Groupe DEKUPLE : RÉSULTATS DU 1ER SEMESTRE 2026 | CROISSANCE DU MARKETING DIGITAL ET PROGRESSION DE LA RENTABILITÉ",
-        "Vicat - Projet d’acquisition par le groupe Vicat des filiales de béton prêt à l’emploi et granulats du groupe Cemex dans le Sud-Est de la France"
+        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums"
       ]
     },
     "Alstom": {
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.43,
-      "nb_news": 14,
+      "sentiment": 0.38,
+      "nb_news": 16,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
