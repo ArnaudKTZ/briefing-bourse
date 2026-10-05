@@ -4778,5 +4778,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.45%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "11:31",
+    "nom": "STMicroelectronics",
+    "cours": 57.26,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 84/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "11:31",
+    "nom": "Schneider Electric",
+    "cours": 274.5,
+    "score": 37,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -9.4% | P&L : -9.86%",
+    "envoyee": false
   }
 ]
