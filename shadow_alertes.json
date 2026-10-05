@@ -4738,5 +4738,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "09:01",
+    "nom": "Schneider Electric",
+    "cours": 303.0,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100 | Momentum intraday fort +2.21%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 170.16,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 144.55,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100 | Momentum intraday fort +2.45%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-05",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 57.26,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.45%",
+    "envoyee": false
   }
 ]
