@@ -1,15 +1,6 @@
 [
   {
     "date": "2026-07-28",
-    "heure": "05:03",
-    "agent": "briefing",
-    "model": "claude-sonnet-4-6",
-    "input": 7684,
-    "output": 5507,
-    "usd": 0.105657
-  },
-  {
-    "date": "2026-07-28",
     "heure": "07:39",
     "agent": "briefing",
     "model": "claude-sonnet-4-6",
@@ -4498,5 +4489,14 @@
     "input": 362,
     "output": 62,
     "usd": 0.000672
+  },
+  {
+    "date": "2026-10-06",
+    "heure": "05:03",
+    "agent": "briefing",
+    "model": "claude-sonnet-4-6",
+    "input": 7523,
+    "output": 6437,
+    "usd": 0.119124
   }
 ]
