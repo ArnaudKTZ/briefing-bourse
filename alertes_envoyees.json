@@ -1,7 +1,4 @@
 {
-  "2026-09-28_Teleperformance": "09:01",
-  "2026-09-28_TotalEnergies": "11:31",
-  "2026-09-28_Schneider Electric": "14:01",
   "2026-09-29_Teleperformance": "09:01",
   "2026-09-29_Schneider Electric": "11:31",
   "2026-09-29_Legrand": "11:31",
@@ -39,5 +36,8 @@
   "2026-10-05_STMicroelectronics_achat": "11:31",
   "2026-10-05_Schneider Electric_vente": "11:31",
   "2026-10-05_Capgemini": "17:45",
-  "2026-10-05_Alstom": "17:45"
+  "2026-10-05_Alstom": "17:45",
+  "2026-10-06_Schneider Electric": "09:01",
+  "2026-10-06_Air Liquide": "09:01",
+  "2026-10-06_Legrand": "09:01"
 }
