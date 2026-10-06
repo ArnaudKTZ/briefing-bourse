@@ -4848,5 +4848,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 94/100 | Momentum intraday fort +2.45%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-06",
+    "heure": "11:30",
+    "nom": "Capgemini",
+    "cours": 111.8,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100 | Momentum intraday fort +2.05%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-06",
+    "heure": "11:30",
+    "nom": "Alstom",
+    "cours": 16.25,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.11%",
+    "envoyee": false
   }
 ]
