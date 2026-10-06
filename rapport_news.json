@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "heure": "13:31",
+  "heure": "16:27",
   "marche": {
     "sentiment_global": 0.3,
     "nb_articles": 20,
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.71,
-      "nb_news": 14,
+      "sentiment": 0.62,
+      "nb_news": 13,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
