@@ -1,8 +1,8 @@
 {
   "date": "2026-10-06",
-  "heure": "16:27",
+  "heure": "19:23",
   "marche": {
-    "sentiment_global": 0.3,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.28,
+      "sentiment": 0.22,
       "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.65,
+      "sentiment": 0.6,
       "nb_news": 20,
       "titres_cles": [
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -113,7 +113,7 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
+      "sentiment": 0.26,
       "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.17,
+      "sentiment": 0.22,
       "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "La généralisation des stablecoins et des dépôts tokenisés risque de faire perdre aux banques 230 milliards de dollars de chiffre d’affaires lié aux paiements",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?",
+        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035"
       ]
     },
     "Renault": {
@@ -307,13 +307,9 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.38,
-      "nb_news": 16,
-      "titres_cles": [
-        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Edenred": {
       "sentiment": 0.0,
@@ -351,8 +347,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.64,
-      "nb_news": 11,
+      "sentiment": 0.67,
+      "nb_news": 12,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
