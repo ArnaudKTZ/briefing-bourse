@@ -4868,5 +4868,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.11%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-06",
+    "heure": "14:01",
+    "nom": "Engie",
+    "cours": 23.39,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.01%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-06",
+    "heure": "14:01",
+    "nom": "Veolia",
+    "cours": 31.25,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.09%",
+    "envoyee": false
   }
 ]
