@@ -4918,5 +4918,35 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +4.29%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "14:01",
+    "nom": "Pernod Ricard",
+    "cours": 60.28,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.03%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "14:01",
+    "nom": "Legrand",
+    "cours": 142.95,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "14:01",
+    "nom": "Safran",
+    "cours": 321.2,
+    "score": 29,
+    "signal": "VENTE",
+    "raison": "Position fermée — ÉVITER intraday | P&L : -4.97%",
+    "envoyee": false
   }
 ]
