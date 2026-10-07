@@ -1,15 +1,15 @@
 {
   "date": "2026-10-07",
-  "heure": "06:45",
+  "heure": "13:21",
   "marche": {
-    "sentiment_global": 0.2,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
+      "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»",
       "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
       "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»",
-      "La Bourse de Paris prudente, la dette française sous pression",
-      "La Bourse de Paris en net recul, le taux français au plus haut depuis 2002"
+      "La Bourse de Paris prudente, la dette française sous pression"
     ]
   },
   "valeurs": {
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.5,
-      "nb_news": 12,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -299,9 +299,11 @@
     },
     "STMicroelectronics": {
       "sentiment": 0.0,
-      "nb_news": 1,
+      "nb_news": 17,
       "titres_cles": [
-        "STMicroelectronics : en Bourse, la fusée du CAC 40 «arrive sur une zone décisive !» L’oeil du Loup de Zurich"
+        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
+        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
+        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
       ]
     },
     "Dassault Systèmes": {
