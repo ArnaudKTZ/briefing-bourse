@@ -4908,5 +4908,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.46%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "11:30",
+    "nom": "Forvia",
+    "cours": 10.45,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.29%",
+    "envoyee": false
   }
 ]
