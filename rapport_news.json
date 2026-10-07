@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-06",
-  "heure": "19:23",
+  "date": "2026-10-07",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -299,17 +299,19 @@
     },
     "STMicroelectronics": {
       "sentiment": 0.0,
-      "nb_news": 18,
+      "nb_news": 1,
       "titres_cles": [
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
-        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
+        "STMicroelectronics : en Bourse, la fusée du CAC 40 «arrive sur une zone décisive !» L’oeil du Loup de Zurich"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.38,
+      "nb_news": 16,
+      "titres_cles": [
+        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
+        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+      ]
     },
     "Edenred": {
       "sentiment": 0.0,
@@ -347,8 +349,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.67,
-      "nb_news": 12,
+      "sentiment": 0.73,
+      "nb_news": 11,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
