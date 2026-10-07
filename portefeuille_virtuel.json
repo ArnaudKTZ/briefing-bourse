@@ -1,15 +1,6 @@
 {
-  "capital": 350.6599999999987,
+  "capital": 1948.6299999999987,
   "positions": {
-    "Safran": {
-      "nb_actions": 5,
-      "prix_entree": 336.3,
-      "date_entree": "2026-09-28",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1681.5,
-      "frais_achat": 8.41
-    },
     "Air Liquide": {
       "nb_actions": 11,
       "prix_entree": 170.34,
@@ -116,7 +107,7 @@
     "2026-10-02": 8050.6,
     "2026-10-05": 7842.54,
     "2026-10-06": 7944.08,
-    "2026-10-07": 7829.14
+    "2026-10-07": 7801.89
   },
   "trades": [
     {
@@ -1095,6 +1086,20 @@
       "pnl_pct": -9.86,
       "frais_total": 17.32,
       "raison_sortie": "Stop-loss -9.4%"
+    },
+    {
+      "nom": "Safran",
+      "entree": 336.3,
+      "sortie": 321.2,
+      "date_entree": "2026-09-28",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-10-07",
+      "heure_sortie": "14:01",
+      "source_sortie": "Intraday",
+      "pnl_pct": -4.97,
+      "frais_total": 16.44,
+      "raison_sortie": "ÉVITER intraday"
     }
   ]
 }
