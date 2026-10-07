@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "heure": "13:21",
+  "heure": "16:44",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 09 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 28 septembre au 02 octobre 2026",
-        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums",
-        "AkzoNobel en hausse après la cession de son activité Asie-Pacifique à Nippon Paint pour 1,35 milliard $"
+        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums"
       ]
     },
     "Alstom": {
