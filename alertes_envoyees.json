@@ -1,10 +1,4 @@
 {
-  "2026-09-29_Teleperformance": "09:01",
-  "2026-09-29_Schneider Electric": "11:31",
-  "2026-09-29_Legrand": "11:31",
-  "2026-09-29_Eurofins Scientific": "11:31",
-  "2026-09-29_Safran": "14:01",
-  "2026-09-29_Accor": "14:01",
   "2026-09-30_Schneider Electric": "09:01",
   "2026-09-30_L'Oréal": "11:31",
   "2026-09-30_Air Liquide": "11:31",
@@ -44,5 +38,6 @@
   "2026-10-06_Alstom": "11:30",
   "2026-10-06_Engie": "14:01",
   "2026-10-06_Veolia": "14:01",
-  "2026-10-06_STMicroelectronics": "19:50"
+  "2026-10-06_STMicroelectronics": "19:50",
+  "2026-10-07_Alstom": "09:01"
 }

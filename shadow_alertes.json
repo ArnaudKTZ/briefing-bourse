@@ -4898,5 +4898,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.12%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "09:01",
+    "nom": "Alstom",
+    "cours": 15.44,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.46%",
+    "envoyee": false
   }
 ]
