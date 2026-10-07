@@ -4958,5 +4958,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "18:49",
+    "nom": "Capgemini",
+    "cours": 110.9,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-07",
+    "heure": "18:49",
+    "nom": "Dassault Systèmes",
+    "cours": 21.61,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
   }
 ]
