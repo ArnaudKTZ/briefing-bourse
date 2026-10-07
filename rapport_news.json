@@ -1,8 +1,8 @@
 {
   "date": "2026-10-07",
-  "heure": "16:44",
+  "heure": "19:57",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.15,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
+        "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
         "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition",
-        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
-        "Schneider Electric clôture le Sommet sur l'innovation au Moyen-Orient et en Afrique, et met en avant l'intelligence énergétique comme pilier clé de la prochaine phase de la transformation énergétique"
+        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux"
       ]
     },
     "L'Oréal": {
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -203,13 +203,9 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.5,
-      "nb_news": 8,
-      "titres_cles": [
-        "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
-        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
-        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Publicis": {
       "sentiment": 0.62,
