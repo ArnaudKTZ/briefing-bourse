@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-07",
-  "heure": "19:57",
+  "date": "2026-10-08",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.19,
+      "nb_news": 16,
       "titres_cles": [
         "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -203,9 +203,13 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.5,
+      "nb_news": 8,
+      "titres_cles": [
+        "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
+        "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
+        "Legrand annonce l’acquisition de Girtz Industries aux États-Unis"
+      ]
     },
     "Publicis": {
       "sentiment": 0.62,
