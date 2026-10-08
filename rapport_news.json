@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "heure": "13:37",
+  "heure": "16:56",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -168,11 +168,11 @@
     },
     "Pernod Ricard": {
       "sentiment": -0.08,
-      "nb_news": 12,
+      "nb_news": 13,
       "titres_cles": [
         "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-        "Mise à disposition du Document d’Enregistrement Universel Pernod Ricard 2025/26",
-        "Pernod Ricard : déclaration des droits de vote - août 2026"
+        "Pernod Ricard : déclaration des droits de vote - septembre 2026",
+        "Mise à disposition du Document d’Enregistrement Universel Pernod Ricard 2025/26"
       ]
     },
     "Michelin": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.3,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 09 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 28 septembre au 02 octobre 2026",
-        "Barclays voit Givaudan rebondir grâce à la reprise des arômes et parfums"
+        "Artprice publie son 33ème Rapport sur le Marché de l'Art Contemporain 2026 : transactions record, évolution des prix, répartition des forces et artistes du Sud Global"
       ]
     },
     "Alstom": {
