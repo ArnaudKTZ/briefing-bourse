@@ -1,15 +1,15 @@
 {
   "date": "2026-10-08",
-  "heure": "16:56",
+  "heure": "19:59",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris minée par la hausse des taux et du pétrole",
       "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?",
       "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»",
       "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
-      "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»",
-      "La Bourse de Paris prudente, la dette française sous pression"
+      "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»"
     ]
   },
   "valeurs": {
@@ -27,7 +27,7 @@
       "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "Grève TotalEnergies : les expéditions de carburants bloquées dans plusieurs raffineries, selon la CGT",
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
         "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
       ]
     },
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
-        "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition",
-        "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux"
+        "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada",
+        "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition"
       ]
     },
     "L'Oréal": {
