@@ -1,5 +1,5 @@
 {
-  "capital": 1948.6299999999987,
+  "capital": 1850.5699999999986,
   "positions": {
     "Air Liquide": {
       "nb_actions": 11,
@@ -19,14 +19,14 @@
       "cout_total": 1982.3999999999999,
       "frais_achat": 9.91
     },
-    "STMicroelectronics": {
-      "nb_actions": 34,
-      "prix_entree": 57.26,
-      "date_entree": "2026-10-05",
-      "heure_entree": "11:31",
+    "Capgemini": {
+      "nb_actions": 17,
+      "prix_entree": 112.15,
+      "date_entree": "2026-10-08",
+      "heure_entree": "16:01",
       "source_entree": "Intraday",
-      "cout_total": 1946.84,
-      "frais_achat": 9.73
+      "cout_total": 1906.5500000000002,
+      "frais_achat": 9.53
     }
   },
   "historique_valeur": {
@@ -108,7 +108,7 @@
     "2026-10-05": 7842.54,
     "2026-10-06": 7944.08,
     "2026-10-07": 7693.07,
-    "2026-10-08": 7637.77
+    "2026-10-08": 7550.46
   },
   "trades": [
     {
@@ -1101,6 +1101,20 @@
       "pnl_pct": -4.97,
       "frais_total": 16.44,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "STMicroelectronics",
+      "entree": 57.26,
+      "sortie": 53.74,
+      "date_entree": "2026-10-05",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-10-08",
+      "heure_sortie": "16:01",
+      "source_sortie": "Intraday",
+      "pnl_pct": -6.62,
+      "frais_total": 18.87,
+      "raison_sortie": "Stop-loss -6.1%"
     }
   ]
 }

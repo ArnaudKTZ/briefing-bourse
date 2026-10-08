@@ -5038,5 +5038,35 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.03%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "16:01",
+    "nom": "TotalEnergies",
+    "cours": 78.04,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.72%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "16:01",
+    "nom": "Capgemini",
+    "cours": 112.15,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 89/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "16:01",
+    "nom": "STMicroelectronics",
+    "cours": 53.74,
+    "score": 76,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -6.1% | P&L : -6.62%",
+    "envoyee": false
   }
 ]
