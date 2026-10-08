@@ -4978,5 +4978,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 85/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 148.4,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +2.7%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "09:01",
+    "nom": "Engie",
+    "cours": 23.45,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.27%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "09:01",
+    "nom": "Alstom",
+    "cours": 16.18,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +2.66%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "09:01",
+    "nom": "Veolia",
+    "cours": 31.34,
+    "score": 84,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.38%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-08",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 56.18,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
   }
 ]
