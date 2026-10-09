@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-08",
-  "heure": "19:59",
+  "date": "2026-10-09",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -189,7 +189,7 @@
       "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "Grève TotalEnergies : les expéditions de carburants bloquées dans plusieurs raffineries, selon la CGT",
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
         "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
       ]
     },
