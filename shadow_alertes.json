@@ -5068,5 +5068,45 @@
     "signal": "VENTE",
     "raison": "Position fermée — Stop-loss -6.1% | P&L : -6.62%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "09:01",
+    "nom": "Pernod Ricard",
+    "cours": 60.86,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.01%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 110.9,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 141.15,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "09:01",
+    "nom": "Forvia",
+    "cours": 9.7,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100 | Gap haussier +5.58% avec volume x2.4",
+    "envoyee": false
   }
 ]
