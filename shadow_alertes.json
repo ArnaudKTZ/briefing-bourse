@@ -5108,5 +5108,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100 | Gap haussier +5.58% avec volume x2.4",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "11:30",
+    "nom": "Air Liquide",
+    "cours": 169.4,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "11:30",
+    "nom": "Publicis",
+    "cours": 97.64,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-09",
+    "heure": "11:30",
+    "nom": "Edenred",
+    "cours": 28.22,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
