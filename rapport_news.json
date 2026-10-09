@@ -1,15 +1,15 @@
 {
   "date": "2026-10-09",
-  "heure": "06:45",
+  "heure": "13:31",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
       "La Bourse de Paris minée par la hausse des taux et du pétrole",
       "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?",
       "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»",
-      "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux",
-      "CAC 40 : la Bourse rebondit, mais les tensions sur les taux de la France «surviennent au pire moment possible»"
+      "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux"
     ]
   },
   "valeurs": {
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.28,
-      "nb_news": 18,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
         "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
@@ -123,11 +123,11 @@
     },
     "Kering": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
+        "Kering : Saint Laurent annonce le départ de son directeur artistique, Anthony Vaccarello",
         "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?",
-        "Kering : Publication Nombre d'actions et droits de vote",
-        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Août 2026)"
+        "Kering : Publication Nombre d'actions et droits de vote"
       ]
     },
     "Société Générale": {
@@ -239,7 +239,7 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.83,
+      "sentiment": 0.72,
       "nb_news": 18,
       "titres_cles": [
         "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions.",
