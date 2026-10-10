@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-10",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "From Cointegration to Out-of-Sample Failure: A Pairs-Trading Case Study on PEP-KO",
-      "lien": "https://arxiv.org/abs/2609.35359v1",
-      "date": "2026-09-28",
-      "score": 13,
+      "titre": "Latent Continuum of Regimes in Limit Order Book Dynamics",
+      "lien": "https://arxiv.org/abs/2610.05740v2",
+      "date": "2026-10-05",
+      "score": 14,
       "hits": [
+        "regime",
         "walk-forward",
-        "out-of-sample",
-        "robust"
+        "out-of-sample"
       ],
-      "extrait": "This paper examines whether a cointegration-based pairs trading strategy between PepsiCo and The Coca-Cola Company is statistically robust and economically exploitable. We first test for cointegration and estimate the spread's mean-reversion dynamics over 2013-2018, then hold these statistical parameters fixed and optimise a threshold-based trading strategy in-sample over 2018-2023."
+      "extrait": "Market-regime models typically assume a finite set of discrete latent states. We examine whether high frequency limit-order-book dynamics exhibit distinct regime separation or apparent regimes result from discretising an underlying continuum, analysing deep limit-order book data for EURO STOXX 50 index futures across 987 clean trading days from 2022 to 2025 using 30, 45 and 60-second aggregation windows."
     },
     {
       "titre": "PPO-HRAP: Proximal Policy Optimization with a Hybrid Regime-Aware Policy for Risk-Controlled Trading",
@@ -29,76 +29,76 @@
       "extrait": "Reinforcement learning for trading often struggles to balance upside participation with drawdown control. Profit-only policies can collapse toward passive long exposure on upward-drifting assets, while aggressively risk-penalized rewards can become too defensive during volatile periods."
     },
     {
-      "titre": "Optimal Reinsurance-Dividend Strategy with Fixed Transaction Costs in a Regime-Switching Brownian Risk Model: A Viscosity Solution to the Impulse Control Problem",
-      "lien": "https://arxiv.org/abs/2609.32686v1",
-      "date": "2026-09-26",
-      "score": 12,
+      "titre": "SOTA: Stock Options Trading Agents Guided by Option-Implied Return Distributions",
+      "lien": "https://arxiv.org/abs/2610.10407v1",
+      "date": "2026-10-07",
+      "score": 10,
       "hits": [
-        "regime",
-        "transaction cost",
-        "llm"
+        "out-of-sample",
+        "reinforcement learning",
+        "agent",
+        "drawdown"
       ],
-      "extrait": "We consider a problem of optimal proportional reinsurance-dividend distribution under a Brownian risk model, where both the drift and volatility coefficients are subject to endogenous regime-switching. Dividend payments are subject to fixed transaction costs."
+      "extrait": "As option markets grow and AI advances, agentic systems for option trading are gaining increasing attention. Language-model-based agents can reason over contextual information such as news, but option trading presents a particularly challenging decision problem: a single stock can have thousands of contracts, and the agent must decide both which contracts to trade and how to combine them."
     },
     {
-      "titre": "Taming the Greeks: Option Portfolios with Inductive Biases",
-      "lien": "https://arxiv.org/abs/2609.33767v1",
-      "date": "2026-09-27",
+      "titre": "FactorBench: A Portfolio-Aware Benchmark for Automated Factor Mining",
+      "lien": "https://arxiv.org/abs/2610.06947v1",
+      "date": "2026-10-03",
       "score": 9,
       "hits": [
         "factor",
-        "out-of-sample",
         "reinforcement learning",
-        "deep learning"
-      ],
-      "extrait": "We present an end-to-end deep learning framework for systematic options trading that directly embeds hedging behavior through explicit control of portfolio-level risk exposures. While neural networks trained to optimize risk-adjusted performance have been shown to outperform traditional rules-based strategies, such approaches remain agnostic to the sensitivities of the resulting portfolios with respect to specific…"
-    },
-    {
-      "titre": "Multiperiod bond portfolio optimization with transaction costs using a Markov Decision process",
-      "lien": "https://arxiv.org/abs/2609.38765v1",
-      "date": "2026-09-30",
-      "score": 8,
-      "hits": [
-        "factor",
-        "transaction cost",
-        "drawdown"
-      ],
-      "extrait": "Bank treasury portfolios must balance yield, liquidity, and interest-rate risk across bonds of different maturities. Static allocation rules are ill-suited to this task: portfolios concentrated in long-duration securities with no dynamic adjust- ment mechanism can accumulate large mark-to-market losses and liquidity stress under rising interest rates, as illustrated by the failure of Silicon Valley Bank in 2023."
-    },
-    {
-      "titre": "LiveOption: Evaluating LLM Agents in Structured Option Trading with Nonlinear Payoffs",
-      "lien": "https://arxiv.org/abs/2609.33470v1",
-      "date": "2026-09-27",
-      "score": 8,
-      "hits": [
-        "llm",
         "language model",
         "agent"
       ],
-      "extrait": "Large language models (LLMs) and multi-agent systems (MAS) have shown promise in financial decision-making, yet existing evaluations focus on equity trading and primarily assess directional prediction, overlooking the structural complexity of derivative markets. Option trading introduces fundamentally different challenges, including nonlinear payoffs and multi-leg strategy construction, requiring structured…"
+      "extrait": "Factor mining seeks to discover signals from financial data that predict future asset returns and guide portfolio construction. Automated factor mining now spans genetic programming, reinforcement learning, generative models, and large language model agents."
     },
     {
-      "titre": "QuantCode Model: Specializing Language Models for Executable Algorithmic Trading Code",
-      "lien": "https://arxiv.org/abs/2609.39420v1",
-      "date": "2026-09-30",
-      "score": 7,
+      "titre": "Robust enhanced index tracking portfolio selection under distributional uncertainty",
+      "lien": "https://arxiv.org/abs/2610.04221v1",
+      "date": "2026-10-03",
+      "score": 8,
+      "hits": [
+        "factor",
+        "out-of-sample",
+        "robust"
+      ],
+      "extrait": "The enhanced index tracking (EIT) portfolio selection problem aims to construct a portfolio that is expected to outperform a benchmark index. In practice, investors face uncertainty in the joint distribution of asset and index losses, as the true distribution is typically unknown and only partial information is available."
+    },
+    {
+      "titre": "MintEval: Do LLMs Implement the Trading Strategy You Asked For? A Behavioural-Equivalence Benchmark for Natural-Language-to-Strategy Code",
+      "lien": "https://arxiv.org/abs/2610.03080v1",
+      "date": "2026-10-02",
+      "score": 8,
       "hits": [
         "backtest",
-        "language model",
-        "agent"
+        "llm",
+        "language model"
       ],
-      "extrait": "Large language models are strong general-purpose code generators, but executable algorithmic trading remains a demanding specialization target: a model must translate a natural-language strategy specification into correct program logic for a specialized trading framework, execute on historical data, produce trades, and remain semantically faithful to the request. We study two complementary mechanisms for…"
+      "extrait": "Large language models are moving from producing trading signals to writing the code that executes them. The failure mode of the second role is silent: generated code runs, a backtest plots, yet the risk logic that the trader described is not the logic being executed."
     },
     {
-      "titre": "Retrieval-Augmented Diffusion Modeling for Stochastic Discount Factor Portfolios",
-      "lien": "https://arxiv.org/abs/2609.35086v1",
-      "date": "2026-09-28",
+      "titre": "Modelling Regime Shifts in Continuous Intraday Electricity Markets with State-dependent Hawkes Processes",
+      "lien": "https://arxiv.org/abs/2610.08169v1",
+      "date": "2026-10-06",
       "score": 7,
       "hits": [
-        "factor",
-        "regime"
+        "regime",
+        "robust"
       ],
-      "extrait": "In this work, we study portfolio optimization under the stochastic discount factor (SDF) framework by learning market state representations that capture the underlying risk structures of financial data. This is challenging due to several factors: financial markets exhibit non-stationary dynamics with shifting regimes, multimodal inputs such as price and news data often contain stochastic noise, and existing…"
+      "extrait": "The growing importance of intraday trading in Europe, driven by the increasing penetration of renewable energy sources, has led to higher volatility and periods of market stress. Understanding how order flow behaves under varying liquidity conditions requires models that adapt to the state of the market."
+    },
+    {
+      "titre": "STOCK-JEPA: Prior-Anchored Latent Revision Representation Learning in Equity Markets",
+      "lien": "https://arxiv.org/abs/2610.07006v1",
+      "date": "2026-10-04",
+      "score": 6,
+      "hits": [
+        "cross-sectional",
+        "overfit"
+      ],
+      "extrait": "Learning effective representations helps characterize the structure and dynamics of equity markets from financial data with a low signal-to-noise ratio. Black-box deep models can capture complex patterns but may overfit sample noise and lack explicit economic structure."
     }
   ]
 }
