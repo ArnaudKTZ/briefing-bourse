@@ -1,0 +1,118 @@
+{
+  "horizons": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "seuil_votes": 2,
+  "periode": "2018-09-30 → 2026-10-31",
+  "resultats": {
+    "BTC seul": {
+      "fixe_12m": {
+        "cagr": 0.3322,
+        "max_dd": -0.4068,
+        "vol": 0.5131,
+        "sharpe": 0.61,
+        "mult": 10.41,
+        "n_mois": 98,
+        "trades_an": 1.0
+      },
+      "ensemble": {
+        "cagr": 0.4022,
+        "max_dd": -0.5255,
+        "vol": 0.5523,
+        "sharpe": 0.69,
+        "mult": 15.81,
+        "n_mois": 98,
+        "trades_an": 2.0
+      },
+      "critere_passe": true,
+      "derniers_signaux_ensemble": [
+        [
+          "2022-05-31",
+          "Cash",
+          null
+        ],
+        [
+          "2023-02-28",
+          "BTC",
+          2
+        ],
+        [
+          "2024-09-30",
+          "Cash",
+          null
+        ],
+        [
+          "2024-10-31",
+          "BTC",
+          3
+        ],
+        [
+          "2025-12-31",
+          "Cash",
+          null
+        ],
+        [
+          "2026-09-30",
+          "BTC",
+          3
+        ]
+      ]
+    },
+    "BTC/ETH": {
+      "fixe_12m": {
+        "cagr": 0.4454,
+        "max_dd": -0.5058,
+        "vol": 0.5954,
+        "sharpe": 0.71,
+        "mult": 20.25,
+        "n_mois": 98,
+        "trades_an": 1.3
+      },
+      "ensemble": {
+        "cagr": 0.414,
+        "max_dd": -0.6181,
+        "vol": 0.575,
+        "sharpe": 0.69,
+        "mult": 16.93,
+        "n_mois": 98,
+        "trades_an": 2.8
+      },
+      "critere_passe": false,
+      "derniers_signaux_ensemble": [
+        [
+          "2025-10-31",
+          "BTC",
+          4
+        ],
+        [
+          "2025-11-30",
+          "ETH",
+          3
+        ],
+        [
+          "2025-12-31",
+          "Cash",
+          null
+        ],
+        [
+          "2026-04-30",
+          "ETH",
+          2
+        ],
+        [
+          "2026-06-30",
+          "Cash",
+          null
+        ],
+        [
+          "2026-09-30",
+          "BTC",
+          3
+        ]
+      ]
+    }
+  }
+}
