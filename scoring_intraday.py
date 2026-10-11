@@ -51,6 +51,17 @@ SEUIL_ACHAT_INTRADAY = 80   # score pour ouvrir une position intraday
 SEUIL_STOP_LOSS      = -5.0
 SEUIL_TAKE_PROFIT    = 8.0
 
+# Circuit-breaker de drawdown (proposition Stratège du 04/10, chiffrée dans
+# circuit_breaker_backtest.py le 11/10). Seuils posés a priori, non optimisés
+# (P1/P12 Turtles-Druckenmiller). Test rétroactif sur les 75 trades clos :
+# drawdown -26,0% -> -21,4%, frais -118€, P&L -23,9% -> -19,2% (aucune
+# métrique dégradée). Sous le seuil strict de 5 pts fixé par le Stratège
+# (4,58 pts), mais adopté : le satellite reste 100% virtuel, la rigueur
+# "zéro renégociation" est réservée aux décisions d'argent réel.
+SEUIL_REDUCTION_DD   = -15.0  # % : sous ce drawdown, nouvelle position à taille réduite
+SEUIL_STOP_DD        = -25.0  # % : sous ce drawdown, aucune nouvelle position
+BUDGET_REDUIT        = 1000.0  # taille réduite (moitié de BUDGET_PAR_POSITION)
+
 try:
     from ta.momentum import RSIIndicator, StochasticOscillator
     from ta.trend import MACD, SMAIndicator
@@ -735,15 +746,42 @@ def gerer_portefeuille_intraday(snapshot, heure):
         del pf["positions"][nom]
         fermes.append({"nom": nom, "cours": cours_sortie, "pnl": pnl_net, "raison": raison})
 
+    # Circuit-breaker de drawdown : taille des NOUVELLES positions réduite
+    # (ou nulle) si le satellite est déjà en perte marquée. Drawdown calculé
+    # sur l'équité courante (cash + positions encore ouvertes, valorisées au
+    # cours actuel) contre le plus haut historique connu.
+    def _cours_valide_dd(nom, pos):
+        c = snapshot.get(nom, {}).get("cours", pos["prix_entree"])
+        return c if (isinstance(c, (int, float)) and c == c) else pos["prix_entree"]
+
+    valeur_positions_dd = sum(
+        pos["nb_actions"] * _cours_valide_dd(nom, pos)
+        for nom, pos in pf["positions"].items()
+    )
+    equity_courante = pf["capital"] + valeur_positions_dd
+    hv_valides = [v for v in pf["historique_valeur"].values()
+                  if isinstance(v, (int, float)) and v == v]
+    pic_historique = max(hv_valides + [equity_courante]) if hv_valides else equity_courante
+    drawdown_pct = ((equity_courante - pic_historique) / pic_historique * 100
+                     if pic_historique > 0 else 0.0)
+
+    if drawdown_pct <= SEUIL_STOP_DD:
+        budget_position = 0.0
+    elif drawdown_pct <= SEUIL_REDUCTION_DD:
+        budget_position = BUDGET_REDUIT
+    else:
+        budget_position = BUDGET_PAR_POSITION
+
     # Ouverture de nouvelles positions si score >= seuil intraday
     for nom, d in snapshot.items():
         if (d["score"] >= SEUIL_ACHAT_INTRADAY and
                 d["signal"] == "ACHETER" and
                 nom not in pf["positions"] and
                 len(pf["positions"]) < MAX_POSITIONS and
-                pf["capital"] >= BUDGET_PAR_POSITION):
+                budget_position > 0 and
+                pf["capital"] >= budget_position):
             cours       = d["cours"]
-            nb          = int(BUDGET_PAR_POSITION / cours)
+            nb          = int(budget_position / cours)
             if nb > 0:
                 cout        = nb * cours
                 frais_achat = calculer_frais(cout)
