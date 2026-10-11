@@ -25,6 +25,21 @@
 
 ---
 
+## 2026-10-11 (suite)
+
+### Trois pistes de la recherche testées rigoureusement : 2 rejetées, 1 cadre prêt (rien à déployer)
+
+Suite de l'audit du jour : les 4 pistes "à tester vite" du rapport de recherche ont commencé à être chiffrées, avec un critère de validation fixé AVANT de lancer chaque test (même discipline que le circuit-breaker).
+
+- **Piste 1 (signal canari émergents/obligataire, DAA) — REJETÉE nettement.** `piste2_canari_emergents.py` : reproduit la recette live exacte (World/USA, refuge monétaire 2%/an, socle 0%) comme bras A (CAGR 11,28%, pire chute -20,1% — cohérent avec le chiffre du 08/09, bonne validation de la reproduction). Bras B (même moteur + canari EEM/IEF en signal pur, jamais détenu) : pire chute à peine meilleure (-19,5%, +0,6 pt) mais CAGR détruit (8,77%, -2,51 pts/an). Critère fixé a priori (DD ≥ +2 pts ET CAGR ≥ -1 pt) : **ne passe pas, largement**. Le canari se déclenche trop souvent pendant des phases haussières normales (2023-2025) et coûte cher sans protéger grand-chose sur un cœur à seulement 2 actifs — confirme la limite déjà signalée par la recherche (aucune publication ne teste un canari sur un univers aussi restreint).
+- **Piste 4 (lookback crypto en ensemble de fenêtres canoniques) — REJETÉE pour la config en prod.** `piste3_crypto_ensemble.py` (réutilise crypto_dm_backtest.py) : sur BTC seul, l'ensemble (1/3/6/12 mois, vote majoritaire) bat le fixe-12 en Sharpe (0,69 vs 0,61) mais au prix d'un drawdown bien pire (-52,5% vs -40,7%) et d'un turnover doublé. Sur **BTC/ETH (la config réellement en prod)** : Sharpe légèrement pire (0,69 vs 0,71), drawdown pire (-61,8% vs -50,6%), turnover presque triplé (2,8 vs 1,3 trades/an, au-delà du garde-fou ×2 fixé a priori). Verdict : ne résout pas le problème du rally raté sans prendre beaucoup plus de risque et de frais. Pas d'évolution recommandée sur ce point pour l'instant.
+- **Piste 3 (risk parity inter-poches, inverse-volatilité) — cadre calculé, rien à déployer (100% virtuel).** `piste4_risk_parity_poches.py` : vol cœur DM 12,3%/an, vol Crypto DM (BTC/ETH) 59,5%/an → poids inverse-vol 82,9% cœur / 17,1% crypto. Règle de garde explicite : ne s'applique jamais au satellite (edge négatif prouvé, le risk parity est agnostique au rendement et lui redonnerait du capital à tort). Pas d'action immédiate (aucun euro réel sur plusieurs poches à la fois aujourd'hui), mais le calcul est prêt pour le jour où ça change.
+- Piste 2 du rapport (remplacer le satellite par des ETF facteur BNP Paribas Easy Quality/Low Vol Europe) pas encore chiffrée — nécessite de récupérer l'historique de ces ETF, à faire dans une prochaine session.
+- Tous les scripts commités : `circuit_breaker_backtest.py`, `piste2_canari_emergents.py`, `piste3_crypto_ensemble.py`, `piste4_risk_parity_poches.py`, + leurs `*_resultats.json`. `test_agents.py` toujours au vert.
+- Leçon méthodologique confirmée une fois de plus : fixer le critère de passage AVANT de voir les chiffres a évité d'être tenté de garder le canari malgré son échec net, et a permis de voir que même la piste crypto "gagnante" sur Sharpe (BTC seul) perdait largement sur le drawdown — un angle que le critère initial n'avait pas couvert, corrigé en cours de route plutôt que caché.
+
+---
+
 ## 2026-09-08 (soir)
 
 ### Piste 1 : le cœur Dual Momentum live était bridé — évolution prouvée et appliquée

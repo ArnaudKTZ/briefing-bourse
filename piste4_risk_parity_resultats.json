@@ -1,0 +1,13 @@
+{
+  "volatilites_annualisees": {
+    "Cœur Dual Momentum": 0.12300000000000001,
+    "Crypto DM (BTC/ETH)": 0.5954
+  },
+  "poids_inverse_vol_pct": {
+    "Cœur Dual Momentum": 82.9,
+    "Crypto DM (BTC/ETH)": 17.1
+  },
+  "ratio_vol_crypto_sur_coeur": 4.84,
+  "regle_de_garde": "Applicable seulement entre poches a edge positif ou en cours de validation (coeur DM, crypto DM). Jamais au satellite (edge net negatif prouve) : le risk parity ignore le rendement attendu, l'appliquer au satellite lui redonnerait du capital par le seul fait qu'il n'est pas infiniment volatil.",
+  "statut": "Cadre pret, aucun euro reel deplace. A activer le jour ou du capital reel entre sur plus d'une poche a la fois."
+}
