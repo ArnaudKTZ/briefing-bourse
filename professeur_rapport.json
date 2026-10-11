@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-11",
   "evaluations": [
     {
       "agent": "Dual Momentum (cœur)",
@@ -18,77 +18,36 @@
     },
     {
       "agent": "Briefing V4 (signaux)",
-      "metrique": "42.9% précision (3198 signaux)",
+      "metrique": "43.0% précision (3416 signaux)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "Précision 42.9% : sous le hasard. À cantonner en poche satellite.",
-      "valeur_suivie": 42.9,
+      "verdict": "Précision 43.0% : sous le hasard. À cantonner en poche satellite.",
+      "valeur_suivie": 43.0,
       "meta_borne": true
     },
     {
       "agent": "Portefeuille virtuel V4",
-      "metrique": "-19.5% (71 trades)",
+      "metrique": "-23.8% (75 trades)",
       "note": "E",
       "confiance": "forte",
-      "verdict": "PF -19.5% sous le CAC (-6.2%) : ne crée pas de valeur.",
-      "valeur_suivie": -19.5
+      "verdict": "PF -23.8% sous le CAC (-7.3%) : ne crée pas de valeur.",
+      "valeur_suivie": -23.8
     },
     {
       "agent": "Agent News",
-      "metrique": "actif (rapport du 2026-10-02)",
+      "metrique": "actif (rapport du 2026-10-09)",
       "note": "C",
       "confiance": "faible",
       "verdict": "Collecte le sentiment presse. Impact réel sur la précision pas encore mesuré (à connecter au harnais)."
     }
   ],
   "evolution": {
-    "Crypto DM (BTC/ETH)": -8.4,
-    "Briefing V4 (signaux)": -0.1,
-    "Portefeuille virtuel V4": -2.0
+    "Crypto DM (BTC/ETH)": 0.0,
+    "Briefing V4 (signaux)": 0.1,
+    "Portefeuille virtuel V4": -4.3
   },
   "doutes_meta": [],
   "historique": [
-    {
-      "date": "2026-07-19",
-      "evals": [
-        {
-          "agent": "Dual Momentum (cœur)",
-          "note": "B",
-          "valeur": null,
-          "meta_borne": false
-        },
-        {
-          "agent": "Crypto DM (BTC/ETH)",
-          "note": "C",
-          "valeur": -0.5,
-          "meta_borne": false
-        },
-        {
-          "agent": "Briefing V4 (signaux)",
-          "note": "E",
-          "valeur": 45.2,
-          "meta_borne": true
-        },
-        {
-          "agent": "Portefeuille virtuel V4",
-          "note": "C",
-          "valeur": -0.7,
-          "meta_borne": false
-        },
-        {
-          "agent": "Agent News",
-          "note": "C",
-          "valeur": null,
-          "meta_borne": false
-        },
-        {
-          "agent": "Agent Espion",
-          "note": "C",
-          "valeur": null,
-          "meta_borne": false
-        }
-      ]
-    },
     {
       "date": "2026-07-26",
       "evals": [
@@ -482,6 +441,41 @@
           "agent": "Portefeuille virtuel V4",
           "note": "E",
           "valeur": -19.5,
+          "meta_borne": false
+        },
+        {
+          "agent": "Agent News",
+          "note": "C",
+          "valeur": null,
+          "meta_borne": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "evals": [
+        {
+          "agent": "Dual Momentum (cœur)",
+          "note": "B",
+          "valeur": null,
+          "meta_borne": false
+        },
+        {
+          "agent": "Crypto DM (BTC/ETH)",
+          "note": "D",
+          "valeur": -31.0,
+          "meta_borne": false
+        },
+        {
+          "agent": "Briefing V4 (signaux)",
+          "note": "E",
+          "valeur": 43.0,
+          "meta_borne": true
+        },
+        {
+          "agent": "Portefeuille virtuel V4",
+          "note": "E",
+          "valeur": -23.8,
           "meta_borne": false
         },
         {
