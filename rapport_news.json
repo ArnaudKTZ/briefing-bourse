@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-09",
-  "heure": "19:32",
+  "date": "2026-10-12",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.12,
+      "sentiment": 0.06,
       "nb_news": 17,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
-        "Les Bourses européennes naviguent en hausse dans un contexte agité"
+        "Airbus accélère les livraisons malgré les perturbations sur les A330"
       ]
     },
     "Schneider Electric": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.47,
+      "sentiment": 0.37,
       "nb_news": 19,
       "titres_cles": [
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
         "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros",
-        "Nexans réalise avec succès un emprunt obligataire de 500 millions d’euros"
+        "Bourse : BNP Paribas, Crédit agricole et SG plombés par l’envol des taux, opportunité d’investissement ou risque réel ?"
       ]
     },
     "Air Liquide": {
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.33,
-      "nb_news": 15,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Les Bourses européennes naviguent en hausse dans un contexte agité",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
+        "Dassault Aviation signe un accord de coopération avec l’AED Cluster Portugal"
       ]
     },
     "Danone": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.14,
+      "sentiment": 0.29,
       "nb_news": 7,
       "titres_cles": [
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?",
-        "Les constructeurs américains perdent du terrain face aux marques asiatiques"
+        "Les constructeurs européens soulagés par un accord UE-Chine sur les hybrides",
+        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?"
       ]
     },
     "Saint-Gobain": {
@@ -176,35 +176,35 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.33,
-      "nb_news": 6,
+      "sentiment": 0.25,
+      "nb_news": 8,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "Renault s’apprête à nommer la dirigeante de Michelin Carine Damois comme nouvelle directrice financière",
-        "Michelin : Déclaration des transactions sur actions propres - 8 octobre 2026"
+        "CAC 40, Capgemini, Airbus, Safran, Michelin, Legrand… les actions en Bourse au programme de Momentum"
       ]
     },
     "Capgemini": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
-        "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?",
+        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035"
       ]
     },
     "Renault": {
-      "sentiment": 0.2,
-      "nb_news": 15,
+      "sentiment": 0.0,
+      "nb_news": 14,
       "titres_cles": [
-        "Bourse : les bénéfices des entreprises européennes bondissent de 22% au 2e trimestre, un record depuis 2022",
+        "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
         "\"Fichez-moi la paix!\": à son procès, journée de tensions entre Dati et les parties civiles"
       ]
     },
     "Legrand": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.44,
+      "nb_news": 9,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -239,7 +239,7 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.72,
+      "sentiment": 0.67,
       "nb_news": 18,
       "titres_cles": [
         "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions.",
@@ -271,12 +271,12 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.33,
-      "nb_news": 21,
+      "sentiment": 0.35,
+      "nb_news": 20,
       "titres_cles": [
         "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
         "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni",
-        "Trains à batterie: Alstom décroche un contrat de 1,2 milliard d'euros au Royaume-Uni"
+        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique"
       ]
     },
     "Worldline": {
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.42,
-      "nb_news": 12,
+      "sentiment": 0.5,
+      "nb_news": 10,
       "titres_cles": [
         "Veolia remporte un contrat majeur de 1Md€ sur 25 ans pour les services d’eau potable en Espagne",
         "Actionnariat salarié : une participation record qui renforce le statut de premier actionnaire des salariés Veolia",
@@ -342,17 +342,17 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.33,
+      "sentiment": 0.24,
       "nb_news": 21,
       "titres_cles": [
         "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
-        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
-        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA"
+        "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
+        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique"
       ]
     },
     "Forvia": {
-      "sentiment": 0.67,
-      "nb_news": 12,
+      "sentiment": 0.62,
+      "nb_news": 13,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
