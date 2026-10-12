@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "heure": "06:45",
+  "heure": "14:28",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.16,
+      "sentiment": 0.21,
       "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.29,
-      "nb_news": 7,
+      "sentiment": 0.5,
+      "nb_news": 8,
       "titres_cles": [
+        "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "Les constructeurs européens soulagés par un accord UE-Chine sur les hybrides",
-        "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 ?"
+        "Les constructeurs européens soulagés par un accord UE-Chine sur les hybrides"
       ]
     },
     "Saint-Gobain": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.11,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
+        "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN",
         "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?",
-        "TotalEnergies accélère dans le pétrole et le gaz avec une croissance visée de 2 à 3% par an entre 2030 et 2035"
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
       ]
     },
     "Renault": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 09 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 28 septembre au 02 octobre 2026"
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 09 2026"
       ]
     },
     "Alstom": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.24,
-      "nb_news": 21,
+      "sentiment": 0.05,
+      "nb_news": 20,
       "titres_cles": [
-        "Thales : en Bourse, le géant de la défense profitera du rachat d’Exail et des belles perspectives du SAMP/T NG",
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
-        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique"
+        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
+        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA"
       ]
     },
     "Forvia": {
