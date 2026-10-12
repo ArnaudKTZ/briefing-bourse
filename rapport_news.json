@@ -1,25 +1,25 @@
 {
   "date": "2026-10-12",
-  "heure": "14:28",
+  "heure": "19:00",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
       "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
       "La Bourse de Paris minée par la hausse des taux et du pétrole",
       "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?",
-      "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»",
-      "CAC 40 : la Bourse plombée par le plongeon de Schneider Electric après son achat et les craintes sur les taux"
+      "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.12,
-      "nb_news": 8,
+      "sentiment": 0.1,
+      "nb_news": 10,
       "titres_cles": [
-        "Les cosmétiques, un luxe plus accessible qui résiste à la crise",
-        "LVMH : Déclaration des transactions sur actions propres",
-        "Antoine, le fils aîné de Bernard Arnault, investit dans les automobiles Delage"
+        "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
+        "LVMH : Poursuite de la croissance au troisième trimestre 2026",
+        "Les cosmétiques, un luxe plus accessible qui résiste à la crise"
       ]
     },
     "TotalEnergies": {
@@ -27,8 +27,8 @@
       "nb_news": 19,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
-        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
+        "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT"
       ]
     },
     "Hermès": {
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.19,
-      "nb_news": 16,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.56,
+      "nb_news": 9,
       "titres_cles": [
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "Les constructeurs européens soulagés par un accord UE-Chine sur les hybrides"
+        "Avant-bourse : Iren bondit après un accord avec Anthropic, CCC s’envole"
       ]
     },
     "Saint-Gobain": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.16,
+      "sentiment": 0.05,
       "nb_news": 19,
       "titres_cles": [
+        "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
         "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN",
-        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT"
       ]
     },
     "Renault": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.45,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
