@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "heure": "19:00",
+  "heure": "22:24",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.06,
-      "nb_news": 17,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
