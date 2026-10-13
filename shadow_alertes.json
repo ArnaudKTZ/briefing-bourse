@@ -5218,5 +5218,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 90/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 169.68,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 115.05,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.27%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "09:01",
+    "nom": "Legrand",
+    "cours": 138.9,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 97.28,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "09:01",
+    "nom": "Edenred",
+    "cours": 28.25,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
