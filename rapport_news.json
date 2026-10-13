@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "heure": "17:16",
+  "heure": "20:29",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.26,
+      "sentiment": 0.21,
       "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "Vinci relevé à l’achat chez Kepler Cheuvreux, valorisation attractive"
+        "VINCI Energies remporte un nouveau contrat de maintenance pluriannuelle d’un réseau de distribution électrique en Suède"
       ]
     },
     "Kering": {
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.0,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
         "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN",
