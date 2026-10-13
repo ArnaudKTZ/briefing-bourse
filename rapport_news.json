@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "heure": "06:45",
+  "heure": "14:11",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -14,17 +14,17 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.1,
-      "nb_news": 10,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
+        "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
-        "LVMH : Poursuite de la croissance au troisième trimestre 2026",
-        "Les cosmétiques, un luxe plus accessible qui résiste à la crise"
+        "LVMH : Poursuite de la croissance au troisième trimestre 2026"
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
@@ -50,8 +50,8 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
         "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada",
@@ -176,12 +176,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.25,
-      "nb_news": 8,
+      "sentiment": 0.22,
+      "nb_news": 9,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
-        "Renault s’apprête à nommer la dirigeante de Michelin Carine Damois comme nouvelle directrice financière",
-        "CAC 40, Capgemini, Airbus, Safran, Michelin, Legrand… les actions en Bourse au programme de Momentum"
+        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
+        "Renault s’apprête à nommer la dirigeante de Michelin Carine Damois comme nouvelle directrice financière"
       ]
     },
     "Capgemini": {
@@ -212,8 +212,8 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.62,
-      "nb_news": 8,
+      "sentiment": 0.56,
+      "nb_news": 9,
       "titres_cles": [
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
         "Publicis Groupe place avec succès 500 millions d’euros d’emprunts obligataires",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.0,
-      "nb_news": 17,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
-        "Les actions européennes des semi-conducteurs chutent après l’avertissement de STMicro",
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
+        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed",
+        "La Bourse de Paris bousculée par l'IA et la dette"
       ]
     },
     "Dassault Systèmes": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
-      "nb_news": 20,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
