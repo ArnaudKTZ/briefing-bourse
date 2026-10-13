@@ -1,12 +1,4 @@
 {
-  "2026-10-05_Schneider Electric": "09:01",
-  "2026-10-05_Air Liquide": "09:01",
-  "2026-10-05_Legrand": "09:01",
-  "2026-10-05_STMicroelectronics": "09:01",
-  "2026-10-05_STMicroelectronics_achat": "11:31",
-  "2026-10-05_Schneider Electric_vente": "11:31",
-  "2026-10-05_Capgemini": "17:45",
-  "2026-10-05_Alstom": "17:45",
   "2026-10-06_Schneider Electric": "09:01",
   "2026-10-06_Air Liquide": "09:01",
   "2026-10-06_Legrand": "09:01",
@@ -46,5 +38,10 @@
   "2026-10-12_Publicis": "09:01",
   "2026-10-12_Edenred": "09:01",
   "2026-10-12_TotalEnergies": "11:31",
-  "2026-10-12_L'Oréal": "14:01"
+  "2026-10-12_L'Oréal": "14:01",
+  "2026-10-13_Air Liquide": "09:01",
+  "2026-10-13_Capgemini": "09:01",
+  "2026-10-13_Legrand": "09:01",
+  "2026-10-13_Publicis": "09:01",
+  "2026-10-13_Edenred": "09:01"
 }
