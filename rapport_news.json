@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-12",
-  "heure": "22:24",
+  "date": "2026-10-13",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.05,
+      "sentiment": 0.0,
       "nb_news": 19,
       "titres_cles": [
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
