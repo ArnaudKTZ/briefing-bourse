@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "heure": "14:11",
+  "heure": "17:16",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 14,
+      "nb_news": 15,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
