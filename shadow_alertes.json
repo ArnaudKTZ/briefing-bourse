@@ -5268,5 +5268,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "11:31",
+    "nom": "TotalEnergies",
+    "cours": 79.26,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "11:31",
+    "nom": "L'Oréal",
+    "cours": 387.1,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-13",
+    "heure": "11:31",
+    "nom": "Alstom",
+    "cours": 16.25,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
