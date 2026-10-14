@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-13",
-  "heure": "20:29",
+  "date": "2026-10-14",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -59,7 +59,7 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.24,
+      "sentiment": 0.18,
       "nb_news": 17,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
