@@ -1,8 +1,8 @@
 {
   "date": "2026-10-14",
-  "heure": "06:45",
+  "heure": "11:44",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -50,8 +50,8 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.28,
+      "nb_news": 18,
       "titres_cles": [
         "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
         "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.26,
-      "nb_news": 19,
+      "sentiment": 0.2,
+      "nb_news": 20,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
-        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
-        "Sanofi : Berlin autorisé à accorder une subvention pour sécuriser l’approvisionnement européen en insuline"
+        "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
+        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars"
       ]
     },
     "BNP Paribas": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les Bourses européennes terminent en hausse avant l'annonce de la Fed",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.62,
-      "nb_news": 13,
+      "sentiment": 0.53,
+      "nb_news": 15,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
