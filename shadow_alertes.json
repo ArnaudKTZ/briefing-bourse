@@ -5398,5 +5398,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-14",
+    "heure": "14:46",
+    "nom": "Eurofins Scientific",
+    "cours": 78.08,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-14",
+    "heure": "14:46",
+    "nom": "Teleperformance",
+    "cours": 73.7,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
