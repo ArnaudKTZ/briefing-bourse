@@ -5338,5 +5338,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-14",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 78.98,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-14",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 383.05,
+    "score": 90,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 90/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-14",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 98.74,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
   }
 ]
