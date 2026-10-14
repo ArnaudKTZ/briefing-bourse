@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "heure": "15:04",
+  "heure": "17:56",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
-        "Airbus accélère les livraisons malgré les perturbations sur les A330"
+        "Airbus prend au sérieux la concurrence chinoise et prépare son avion de prochaine génération"
       ]
     },
     "Schneider Electric": {
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.2,
-      "nb_news": 20,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
         "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.21,
+      "sentiment": 0.26,
       "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies remporte un nouveau contrat de maintenance pluriannuelle d’un réseau de distribution électrique en Suède"
+        "VINCI Energies finalise l’acquisition de la société allemande All for One"
       ]
     },
     "Kering": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
@@ -343,7 +343,7 @@
     },
     "Thales": {
       "sentiment": 0.11,
-      "nb_news": 19,
+      "nb_news": 18,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
