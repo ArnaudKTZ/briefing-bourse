@@ -5498,5 +5498,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 90/100 | Momentum intraday fort +2.82%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "11:31",
+    "nom": "Airbus",
+    "cours": 193.18,
+    "score": 73,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.65%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "11:31",
+    "nom": "Michelin",
+    "cours": 34.06,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "11:31",
+    "nom": "Engie",
+    "cours": 23.6,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "11:31",
+    "nom": "Veolia",
+    "cours": 32.44,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
