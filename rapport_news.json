@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "heure": "11:26",
+  "heure": "14:51",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
         "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
