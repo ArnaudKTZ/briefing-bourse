@@ -5578,5 +5578,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 91/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "18:12",
+    "nom": "Capgemini",
+    "cours": 122.1,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.18%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "18:12",
+    "nom": "Dassault Systèmes",
+    "cours": 23.16,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.93%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "18:12",
+    "nom": "Capgemini",
+    "cours": 122.1,
+    "score": 83,
+    "signal": "VENTE",
+    "raison": "Position fermée — Take-profit 8.9% | P&L : +8.33%",
+    "envoyee": false
   }
 ]
