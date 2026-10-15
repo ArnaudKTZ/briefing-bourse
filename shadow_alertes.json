@@ -5558,5 +5558,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.4%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "16:21",
+    "nom": "Hermès",
+    "cours": 1334.5,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.73%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-15",
+    "heure": "16:21",
+    "nom": "Accor",
+    "cours": 45.96,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
   }
 ]
