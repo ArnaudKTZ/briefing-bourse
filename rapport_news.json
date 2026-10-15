@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-14",
-  "heure": "17:56",
+  "date": "2026-10-15",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
       "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
       "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
       "La Bourse de Paris minée par la hausse des taux et du pétrole",
-      "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?",
-      "CAC 40 : la Bourse rechute, «le prix du pétrole demeure un facteur de pression déterminant»"
+      "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.22,
+      "sentiment": 0.11,
       "nb_news": 18,
       "titres_cles": [
-        "HSBC remanie ses notes pétrolières et relève BP et TotalEnergies à l’achat",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
-        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT"
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
+        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
       ]
     },
     "Hermès": {
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
         "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
@@ -262,17 +262,17 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.45,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 09 2026"
+        "VINCI Energies finalise l’acquisition de la société allemande All for One"
       ]
     },
     "Alstom": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.37,
+      "nb_news": 19,
       "titres_cles": [
         "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
         "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.13,
+      "sentiment": 0.2,
       "nb_news": 15,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les Bourses européennes terminent en hausse avant l'annonce de la Fed",
-        "La Bourse de Paris bousculée par l'IA et la dette"
+        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
       ]
     },
     "Dassault Systèmes": {
