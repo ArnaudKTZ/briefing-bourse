@@ -1,15 +1,15 @@
 {
   "date": "2026-10-15",
-  "heure": "06:45",
+  "heure": "11:26",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
+      "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
       "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
       "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
-      "La Bourse de Paris minée par la hausse des taux et du pétrole",
-      "Bourse : les investisseurs fuient la dette de la France, faut-il s’inquiéter pour les taux et le CAC 40 ?"
+      "La Bourse de Paris minée par la hausse des taux et du pétrole"
     ]
   },
   "valeurs": {
@@ -167,17 +167,17 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.08,
-      "nb_news": 13,
+      "sentiment": -0.14,
+      "nb_news": 14,
       "titres_cles": [
+        "Pernod Ricard : le chiffre d’affaires chute de 6% au premier trimestre, pénalisé par la Chine et les Etats-Unis",
         "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-        "Pernod Ricard : déclaration des droits de vote - septembre 2026",
-        "Mise à disposition du Document d’Enregistrement Universel Pernod Ricard 2025/26"
+        "Pernod Ricard: amélioration séquentielle au T1, dans un environnement contrasté"
       ]
     },
     "Michelin": {
-      "sentiment": 0.22,
-      "nb_news": 9,
+      "sentiment": 0.2,
+      "nb_news": 10,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.0,
-      "nb_news": 20,
+      "nb_news": 21,
       "titres_cles": [
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
         "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.2,
-      "nb_news": 15,
+      "sentiment": 0.12,
+      "nb_news": 16,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed",
-        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
+        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
+        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
       ]
     },
     "Dassault Systèmes": {
