@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-15",
-  "heure": "17:42",
+  "date": "2026-10-16",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
+      "La Bourse de Paris profite de sa faible exposition à l'IA",
       "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
       "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
-      "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»",
-      "La Bourse de Paris minée par la hausse des taux et du pétrole"
+      "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»"
     ]
   },
   "valeurs": {
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
-        "Airbus prend au sérieux la concurrence chinoise et prépare son avion de prochaine génération"
+        "Rare dans les médias, le patron d'Airbus explique le «parcours du combattant» pour investir en France"
       ]
     },
     "Schneider Electric": {
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "La Bourse de Paris en recul, L'Oréal passe devant LVMH",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans"
+        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans",
+        "La Bourse de Paris termine en hausse avant une semaine chargée en publications"
       ]
     },
     "Sanofi": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.37,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
+        "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme ?",
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
-        "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros",
-        "Bourse : BNP Paribas, Crédit agricole et SG plombés par l’envol des taux, opportunité d’investissement ou risque réel ?"
+        "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros"
       ]
     },
     "Air Liquide": {
@@ -131,7 +131,7 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.46,
+      "sentiment": 0.62,
       "nb_news": 13,
       "titres_cles": [
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
@@ -274,9 +274,9 @@
       "sentiment": 0.37,
       "nb_news": 19,
       "titres_cles": [
+        "ALSTOM S.A : Alstom signe une prolongation de contrat de services de 15 ans, d’une valeur de près de 1 milliard d’euros, avec Greater Anglia, au Royaume-Uni",
         "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
-        "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni",
-        "ALSTOM S.A : Alstom et TransPennine Express signent des contrats d'une valeur de 1,2 milliard d'euros pour les premiers trains à batterie destinés au réseau ferroviaire britannique"
+        "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni"
       ]
     },
     "Worldline": {
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.38,
-      "nb_news": 16,
+      "sentiment": 0.36,
+      "nb_news": 14,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
