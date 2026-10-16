@@ -5708,5 +5708,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "17:59",
+    "nom": "Veolia",
+    "cours": 32.4,
+    "score": 92,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 92/100",
+    "envoyee": false
   }
 ]
