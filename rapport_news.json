@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "heure": "06:45",
+  "heure": "11:18",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.11,
+      "sentiment": 0.22,
       "nb_news": 18,
       "titres_cles": [
+        "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
-        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT",
-        "TotalEnergies dégringole de -6.8% en 3 séances : Timing idéal pour un achat ?"
+        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT"
       ]
     },
     "Hermès": {
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.05,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.28,
+      "sentiment": 0.5,
       "nb_news": 18,
       "titres_cles": [
+        "Schneider Electric signe un trimestre record et relève une nouvelle fois ses objectifs pour 2026",
         "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
-        "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada",
-        "Schneider Electric débourse pour plus de 20 milliards d'euros pour PTC, sa plus grosse acquisition"
+        "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada"
       ]
     },
     "L'Oréal": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.0,
+      "sentiment": 0.1,
       "nb_news": 21,
       "titres_cles": [
+        "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
-        "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN",
-        "Grève TotalEnergies : les expéditions de carburants ont été bloquées dans plusieurs raffineries, selon la CGT"
+        "VALLOUREC REMPORTE UN CONTRAT MAJEUR AUPRÈS DE TOTALENERGIES POUR LE DÉVELOPPEMENT DU CHAMP GAZIER D’ABSHERON, EN AZERBAÏDJAN"
       ]
     },
     "Renault": {
@@ -342,7 +342,7 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.11,
+      "sentiment": 0.06,
       "nb_news": 18,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
