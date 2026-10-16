@@ -1,8 +1,8 @@
 {
   "date": "2026-10-16",
-  "heure": "11:18",
+  "heure": "14:44",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.6,
-      "nb_news": 10,
+      "sentiment": 0.55,
+      "nb_news": 11,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "VINCI Energies finalise l’acquisition de la société allemande All for One"
+        "Les actions des satellites européens prolongent leur hausse après les restrictions sur Starlink"
       ]
     },
     "Alstom": {
