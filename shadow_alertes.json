@@ -5698,5 +5698,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "16:01",
+    "nom": "Teleperformance",
+    "cours": 75.94,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
