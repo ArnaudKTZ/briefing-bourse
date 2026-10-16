@@ -5638,5 +5638,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "11:31",
+    "nom": "Renault",
+    "cours": 27.79,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100 | Momentum intraday fort +3.35%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "11:31",
+    "nom": "Alstom",
+    "cours": 16.33,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "11:31",
+    "nom": "Edenred",
+    "cours": 30.41,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.74%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "11:31",
+    "nom": "Accor",
+    "cours": 46.46,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "11:31",
+    "nom": "Forvia",
+    "cours": 9.33,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100 | Momentum intraday fort +4.71%",
+    "envoyee": false
   }
 ]
