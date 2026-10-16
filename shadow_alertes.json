@@ -5688,5 +5688,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100 | Momentum intraday fort +4.71%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "14:01",
+    "nom": "Eurofins Scientific",
+    "cours": 78.64,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
