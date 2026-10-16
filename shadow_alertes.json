@@ -5608,5 +5608,35 @@
     "signal": "VENTE",
     "raison": "Position fermée — Take-profit 8.9% | P&L : +8.33%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 80.17,
+    "score": 91,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 91/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 170.34,
+    "score": 97,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 97/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-16",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 100.05,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
