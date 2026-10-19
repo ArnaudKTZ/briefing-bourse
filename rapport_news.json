@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-16",
-  "heure": "17:31",
+  "date": "2026-10-19",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
+      "Malgré un rebond, la Bourse de Paris reste très en retard sur ses voisines européennes",
       "La Bourse de Paris profite de sa faible exposition à l'IA",
       "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
-      "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
-      "CAC 40 : la Bourse bondit, mais «avec la guerre au Moyen-Orient, le risque d'un choc plus persistant augmente»"
+      "La Bourse de Paris termine en hausse avant une semaine chargée en publications"
     ]
   },
   "valeurs": {
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": 0.1,
+      "sentiment": 0.05,
       "nb_news": 20,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "Hermès International : Actions et droits de vote au 30 septembre 2026"
       ]
     },
     "Airbus": {
@@ -59,7 +59,7 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.25,
+      "sentiment": 0.31,
       "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.2,
-      "nb_news": 15,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -123,11 +123,11 @@
     },
     "Kering": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 8,
       "titres_cles": [
+        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Octobre 2026)",
         "Kering : Saint Laurent annonce le départ de son directeur artistique, Anthony Vaccarello",
-        "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?",
-        "Kering : Publication Nombre d'actions et droits de vote"
+        "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?"
       ]
     },
     "Société Générale": {
@@ -159,11 +159,11 @@
     },
     "ArcelorMittal": {
       "sentiment": 0.0,
-      "nb_news": 6,
+      "nb_news": 7,
       "titres_cles": [
         "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
         "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
-        "Un entrepôt Wildberries brûle près de Moscou lors de frappes russes en Ukraine"
+        "La Russie affirme avoir frappé des aciéries et des infrastructures énergétiques en Ukraine"
       ]
     },
     "Pernod Ricard": {
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.36,
+      "nb_news": 11,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
         "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "Les actions des satellites européens prolongent leur hausse après les restrictions sur Starlink"
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
       ]
     },
     "Alstom": {
@@ -298,21 +298,21 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.12,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
-        "Les Bourses européennes terminent en hausse avant l'annonce de la Fed"
+        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.36,
-      "nb_news": 14,
+      "sentiment": 0.31,
+      "nb_news": 13,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes place avec succès 1 milliard d’euros d’obligations et refinance sa ligne de crédit revolving",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !"
+        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Edenred": {
@@ -325,8 +325,8 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.33,
+      "nb_news": 9,
       "titres_cles": [
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
         "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
