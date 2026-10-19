@@ -1,15 +1,6 @@
 [
   {
     "date": "2026-08-10",
-    "heure": "06:11",
-    "agent": "briefing",
-    "model": "claude-sonnet-4-6",
-    "input": 7945,
-    "output": 5712,
-    "usd": 0.109515
-  },
-  {
-    "date": "2026-08-10",
     "heure": "09:00",
     "agent": "scoring_intraday",
     "model": "claude-haiku-4-5-20251001",
@@ -4498,5 +4489,14 @@
     "input": 362,
     "output": 62,
     "usd": 0.000672
+  },
+  {
+    "date": "2026-10-19",
+    "heure": "05:03",
+    "agent": "briefing",
+    "model": "claude-sonnet-4-6",
+    "input": 7623,
+    "output": 6102,
+    "usd": 0.114399
   }
 ]
