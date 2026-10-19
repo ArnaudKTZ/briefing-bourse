@@ -5808,5 +5808,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-19",
+    "heure": "16:30",
+    "nom": "Eurofins Scientific",
+    "cours": 79.1,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
   }
 ]
