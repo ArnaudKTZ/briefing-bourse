@@ -5778,5 +5778,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 93/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-19",
+    "heure": "11:31",
+    "nom": "L'Oréal",
+    "cours": 400.95,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-19",
+    "heure": "11:31",
+    "nom": "Air Liquide",
+    "cours": 172.16,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-19",
+    "heure": "11:31",
+    "nom": "Teleperformance",
+    "cours": 75.52,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100",
+    "envoyee": false
   }
 ]
