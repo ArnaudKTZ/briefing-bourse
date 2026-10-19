@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "heure": "12:18",
+  "heure": "16:58",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -33,7 +33,7 @@
     },
     "Hermès": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 19,
       "titres_cles": [
         "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
         "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
@@ -265,9 +265,9 @@
       "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026",
         "Egide - Résultats semestriels au 30 juin 2026 : perte nette réduite de plus de moitié, à 0,87 M€, endettement financier net ramené à 4,99 M€",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026"
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
       ]
     },
     "Alstom": {
