@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "heure": "16:58",
+  "heure": "19:45",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.35,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026",
