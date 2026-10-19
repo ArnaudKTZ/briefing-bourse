@@ -1,15 +1,15 @@
 {
   "date": "2026-10-19",
-  "heure": "06:45",
+  "heure": "12:18",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
+      "Bourse de Paris: la dette française sous tension après les violences du week-end",
       "Malgré un rebond, la Bourse de Paris reste très en retard sur ses voisines européennes",
-      "La Bourse de Paris profite de sa faible exposition à l'IA",
-      "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
-      "La Bourse de Paris termine en hausse avant une semaine chargée en publications"
+      "La Bourse de Paris profite de sa faible exposition à l'IA"
     ]
   },
   "valeurs": {
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.05,
-      "nb_news": 20,
+      "nb_news": 19,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
         "Les actions Airbus chutent après la découverte d’un défaut sur l’A321neo",
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.27,
-      "nb_news": 15,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.2,
-      "nb_news": 10,
+      "sentiment": 0.22,
+      "nb_news": 9,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social",
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.1,
-      "nb_news": 21,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.44,
-      "nb_news": 9,
+      "sentiment": 0.5,
+      "nb_news": 8,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -262,21 +262,21 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.45,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
+        "Egide - Résultats semestriels au 30 juin 2026 : perte nette réduite de plus de moitié, à 0,87 M€, endettement financier net ramené à 4,99 M€",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 05 au 09 octobre 2026"
       ]
     },
     "Alstom": {
-      "sentiment": 0.37,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
+        "Alstom signe un contrat de 800 millions d’euros pour fournir des trains au Vietnam",
         "ALSTOM S.A : Alstom signe une prolongation de contrat de services de 15 ans, d’une valeur de près de 1 milliard d’euros, avec Greater Anglia, au Royaume-Uni",
-        "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande",
-        "Alstom décroche un contrat en or de 29 trains à batterie au Royaume-Uni"
+        "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande"
       ]
     },
     "Worldline": {
