@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-19",
-  "heure": "19:45",
+  "date": "2026-10-20",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.56,
-      "nb_news": 9,
+      "sentiment": 0.73,
+      "nb_news": 11,
       "titres_cles": [
+        "PUBLICIS GROUPE CONCLUT UN ACCORD AVEC LA FTC DANS LE CADRE DE L’ACQUISITION DE LIVERAMP",
         "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe place avec succès 500 millions d’euros d’emprunts obligataires",
-        "Publicis Groupe - Bilan semestriel du contrat de liquidité"
+        "L’action LiveRamp progresse après l’approbation de l’acquisition par Publicis"
       ]
     },
     "Bouygues": {
