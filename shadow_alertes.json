@@ -5888,5 +5888,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 87/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "18:16",
+    "nom": "Forvia",
+    "cours": 9.1,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
