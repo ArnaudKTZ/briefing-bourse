@@ -5818,5 +5818,65 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 80.71,
+    "score": 96,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 96/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "Renault",
+    "cours": 27.59,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.6%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 102.45,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "Veolia",
+    "cours": 32.4,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "Edenred",
+    "cours": 30.05,
+    "score": 86,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 86/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-20",
+    "heure": "09:01",
+    "nom": "Accor",
+    "cours": 46.9,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
