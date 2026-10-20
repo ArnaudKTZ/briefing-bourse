@@ -1,15 +1,15 @@
 {
   "date": "2026-10-20",
-  "heure": "06:45",
+  "heure": "11:38",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
-      "Bourse de Paris: la dette française sous tension après les violences du week-end",
-      "Malgré un rebond, la Bourse de Paris reste très en retard sur ses voisines européennes",
-      "La Bourse de Paris profite de sa faible exposition à l'IA"
+      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française",
+      "Bourse de Paris: la dette française sous tension après les violences du week-end"
     ]
   },
   "valeurs": {
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
@@ -113,12 +113,12 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.26,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI Energies finalise l’acquisition de la société allemande All for One"
+        "VINCI remporte un contrat pour un data center dans la péninsule Ibérique"
       ]
     },
     "Kering": {
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": -0.14,
-      "nb_news": 14,
+      "sentiment": 0.0,
+      "nb_news": 15,
       "titres_cles": [
+        "PERNOD RICARD ANNONCE LE LANCEMENT D'UNE OFFRE DE RACHAT SUR SEPT SOUCHES D'OBLIGATIONS EXISTANTES VENANT A ECHEANCE EN SEPTEMBRE 2027, OCTOBRE 2027, NOVEMBRE 2028, AVRIL 2030, NOVEMBRE 2030, MARS 2032 ET NOVEMBRE 2032, ET ANNONCE SON INTENTION ...",
         "Pernod Ricard : le chiffre d’affaires chute de 6% au premier trimestre, pénalisé par la Chine et les Etats-Unis",
-        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie",
-        "Pernod Ricard: amélioration séquentielle au T1, dans un environnement contrasté"
+        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie"
       ]
     },
     "Michelin": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR",
