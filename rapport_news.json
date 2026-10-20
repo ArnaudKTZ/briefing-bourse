@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "heure": "11:38",
+  "heure": "14:58",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -50,12 +50,12 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.5,
+      "sentiment": 0.39,
       "nb_news": 18,
       "titres_cles": [
         "Schneider Electric signe un trimestre record et relève une nouvelle fois ses objectifs pour 2026",
         "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?",
-        "L’avenir énergétique du Canada au cœur des débats : Schneider Electric lance les Journées de l’innovation Canada"
+        "Schneider Electric lève 6 milliards € via un placement accéléré, l’action recule"
       ]
     },
     "L'Oréal": {
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.07,
+      "sentiment": 0.0,
       "nb_news": 14,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt",
-        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
+        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
+        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt"
       ]
     },
     "Dassault Systèmes": {
