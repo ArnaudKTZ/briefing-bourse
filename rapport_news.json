@@ -1,21 +1,21 @@
 {
   "date": "2026-10-21",
-  "heure": "06:45",
+  "heure": "11:39",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.25,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
       "La Bourse de Paris finit en hausse malgré une inflation américaine plus forte que prévu",
-      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française",
-      "Bourse de Paris: la dette française sous tension après les violences du week-end"
+      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
+      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -176,13 +176,9 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.3,
-      "nb_news": 10,
-      "titres_cles": [
-        "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
-        "Michelin : Le chiffre d'affaires du Groupe progresse de 1,0 % hors effet de change et 0,1 % à iso-périmètre et change, tiré par la marque MICHELIN, un mix favorable et des acquisitions ciblées en PCS. Guidance annuelle confirmée.",
-        "Michelin | Déclaration du nombre total des droits de vote et du nombre d’actions composant le capital social"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Capgemini": {
       "sentiment": 0.05,
@@ -299,7 +295,7 @@
     },
     "STMicroelectronics": {
       "sentiment": 0.0,
-      "nb_news": 14,
+      "nb_news": 12,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
