@@ -5958,5 +5958,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 88/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-21",
+    "heure": "16:01",
+    "nom": "Airbus",
+    "cours": 198.58,
+    "score": 78,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.69%",
+    "envoyee": false
   }
 ]
