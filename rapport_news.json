@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "heure": "11:39",
+  "heure": "15:14",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -176,9 +176,13 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.18,
+      "nb_news": 11,
+      "titres_cles": [
+        "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
+        "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
+        "Michelin : Le chiffre d'affaires du Groupe progresse de 1,0 % hors effet de change et 0,1 % à iso-périmètre et change, tiré par la marque MICHELIN, un mix favorable et des acquisitions ciblées en PCS. Guidance annuelle confirmée."
+      ]
     },
     "Capgemini": {
       "sentiment": 0.05,
