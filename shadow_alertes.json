@@ -5968,5 +5968,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.69%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-21",
+    "heure": "18:31",
+    "nom": "Eurazeo",
+    "cours": 46.76,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.5%",
+    "envoyee": false
   }
 ]
