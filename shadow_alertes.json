@@ -5898,5 +5898,25 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-21",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 101.55,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-21",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 76.4,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
   }
 ]
