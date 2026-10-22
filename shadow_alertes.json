@@ -6058,5 +6058,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.6%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "18:32",
+    "nom": "Sanofi",
+    "cours": 74.95,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.03%",
+    "envoyee": false
   }
 ]
