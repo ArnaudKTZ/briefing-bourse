@@ -6028,5 +6028,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "14:52",
+    "nom": "Eurofins Scientific",
+    "cours": 82.34,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.01%",
+    "envoyee": false
   }
 ]
