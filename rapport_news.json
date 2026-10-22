@@ -1,15 +1,15 @@
 {
   "date": "2026-10-22",
-  "heure": "06:45",
+  "heure": "11:38",
   "marche": {
-    "sentiment_global": -0.3,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
+      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
       "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
-      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française",
-      "Bourse de Paris: la dette française sous tension après les violences du week-end"
+      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française"
     ]
   },
   "valeurs": {
@@ -33,11 +33,11 @@
     },
     "Hermès": {
       "sentiment": 0.05,
-      "nb_news": 19,
+      "nb_news": 20,
       "titres_cles": [
-        "Hermès : bénéfice stable, les ventes en hausse dopées en particulier par la maroquinerie",
+        "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
-        "Hermès International : Actions et droits de vote au 30 septembre 2026"
+        "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
       ]
     },
     "Airbus": {
@@ -168,7 +168,7 @@
     },
     "Pernod Ricard": {
       "sentiment": 0.0,
-      "nb_news": 15,
+      "nb_news": 16,
       "titres_cles": [
         "PERNOD RICARD ANNONCE LE LANCEMENT D'UNE OFFRE DE RACHAT SUR SEPT SOUCHES D'OBLIGATIONS EXISTANTES VENANT A ECHEANCE EN SEPTEMBRE 2027, OCTOBRE 2027, NOVEMBRE 2028, AVRIL 2030, NOVEMBRE 2030, MARS 2032 ET NOVEMBRE 2032, ET ANNONCE SON INTENTION ...",
         "Pernod Ricard : le chiffre d’affaires chute de 6% au premier trimestre, pénalisé par la Chine et les Etats-Unis",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.18,
-      "nb_news": 11,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
