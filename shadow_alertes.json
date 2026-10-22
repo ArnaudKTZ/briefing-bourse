@@ -6038,5 +6038,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.01%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "16:36",
+    "nom": "L'Oréal",
+    "cours": 409.9,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "16:36",
+    "nom": "Vivendi",
+    "cours": 1.58,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.6%",
+    "envoyee": false
   }
 ]
