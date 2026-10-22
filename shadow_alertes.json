@@ -5978,5 +5978,35 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.5%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 172.24,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "09:01",
+    "nom": "Accor",
+    "cours": 46.79,
+    "score": 88,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 88/100 | Momentum intraday fort +2.74%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-22",
+    "heure": "09:01",
+    "nom": "Forvia",
+    "cours": 9.1,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
