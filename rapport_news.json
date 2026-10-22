@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "heure": "15:11",
+  "heure": "18:00",
   "marche": {
     "sentiment_global": -0.25,
     "nb_articles": 20,
@@ -113,21 +113,21 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
+      "sentiment": 0.37,
       "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "Les actions Vinci bondissent de 5% après des résultats semestriels supérieurs aux attentes",
-        "VINCI remporte un contrat pour un data center dans la péninsule Ibérique"
+        "VINCI - 9M 2026 - NOUVELLES HAUSSES DU CHIFFRE D’AFFAIRES ET DES PRISES DE COMMANDES"
       ]
     },
     "Kering": {
       "sentiment": 0.0,
-      "nb_news": 8,
+      "nb_news": 9,
       "titres_cles": [
+        "Kering : Chiffre d'affaires du troisième trimestre 2026",
         "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Octobre 2026)",
-        "Kering : Saint Laurent annonce le départ de son directeur artistique, Anthony Vaccarello",
-        "LVMH, Hermès, Kering… En Bourse, les actions du luxe à des niveaux charnière, faut-il investir ?"
+        "Kering : Saint Laurent annonce le départ de son directeur artistique, Anthony Vaccarello"
       ]
     },
     "Société Générale": {
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 15,
+      "nb_news": 16,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.53,
-      "nb_news": 15,
+      "sentiment": 0.56,
+      "nb_news": 16,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
