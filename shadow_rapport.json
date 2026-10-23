@@ -1,31 +1,31 @@
 {
-  "date": "2026-10-16",
-  "n_alertes": 572,
-  "n_achats": 516,
-  "en_attente": 11,
+  "date": "2026-10-23",
+  "n_alertes": 615,
+  "n_achats": 559,
+  "en_attente": 8,
   "stats": {
     "J+1": {
-      "n": 505,
-      "gagnants_pct": 32.3,
-      "moyenne_nette": -1.05,
-      "cac_moyen": 0.0,
-      "edge": -1.05
+      "n": 551,
+      "gagnants_pct": 30.9,
+      "moyenne_nette": -1.24,
+      "cac_moyen": -0.04,
+      "edge": -1.2
     },
     "J+3": {
-      "n": 479,
-      "gagnants_pct": 34.0,
-      "moyenne_nette": -1.19,
-      "cac_moyen": -0.02,
-      "edge": -1.17
+      "n": 534,
+      "gagnants_pct": 38.2,
+      "moyenne_nette": -0.95,
+      "cac_moyen": -0.12,
+      "edge": -0.83
     },
     "J+5": {
-      "n": 460,
-      "gagnants_pct": 35.0,
-      "moyenne_nette": -1.21,
-      "cac_moyen": -0.28,
-      "edge": -0.93
+      "n": 516,
+      "gagnants_pct": 40.1,
+      "moyenne_nette": -0.56,
+      "cac_moyen": -0.37,
+      "edge": -0.19
     }
   },
-  "verdict": "NUISIBLES",
-  "verdict_txt": "Les alertes font -0.93 pts SOUS le CAC net de frais sur 460 cas. Les suivre aurait détruit de la valeur."
+  "verdict": "NEUTRES",
+  "verdict_txt": "Ni edge ni contre-performance nets (-0.19 pts vs CAC, 40.1% gagnantes sur 516). La suspension ne coûte rien."
 }
