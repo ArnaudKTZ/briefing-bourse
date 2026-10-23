@@ -6068,5 +6068,65 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.03%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 80.9,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "Airbus",
+    "cours": 198.78,
+    "score": 78,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.79%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 173.6,
+    "score": 99,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 99/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 78.54,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.92%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "Accor",
+    "cours": 46.78,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "09:01",
+    "nom": "Eurazeo",
+    "cours": 46.76,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.5%",
+    "envoyee": false
   }
 ]
