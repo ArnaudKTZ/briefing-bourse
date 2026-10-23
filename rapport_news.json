@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-22",
-  "heure": "18:00",
+  "date": "2026-10-23",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.25,
+    "sentiment_global": -0.35,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
+      "La Bourse de Paris termine dans le rouge, la dette française flambe",
       "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
-      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
-      "CAC 40 : la Bourse pénalisée par les tensions sur la dette française"
+      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole"
     ]
   },
   "valeurs": {
@@ -32,12 +32,12 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.05,
+      "sentiment": -0.1,
       "nb_news": 20,
       "titres_cles": [
+        "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
-        "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
-        "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine"
+        "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
       ]
     },
     "Airbus": {
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.31,
+      "sentiment": 0.25,
       "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "Kering : accord d'envergure entre Gucci et L'Oréal pour une licence beauté de 50 ans",
-        "La Bourse de Paris termine en hausse avant une semaine chargée en publications"
+        "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
+        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
       ]
     },
     "Sanofi": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.29,
+      "nb_news": 17,
       "titres_cles": [
         "Alstom signe un contrat de 800 millions d’euros pour fournir des trains au Vietnam",
         "ALSTOM S.A : Alstom signe une prolongation de contrat de services de 15 ans, d’une valeur de près de 1 milliard d’euros, avec Greater Anglia, au Royaume-Uni",
