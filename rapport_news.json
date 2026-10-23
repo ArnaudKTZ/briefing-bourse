@@ -1,15 +1,15 @@
 {
   "date": "2026-10-23",
-  "heure": "06:45",
+  "heure": "11:35",
   "marche": {
-    "sentiment_global": -0.35,
+    "sentiment_global": -0.5,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
+      "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
       "La Bourse de Paris termine dans le rouge, la dette française flambe",
-      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
-      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole"
+      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
     ]
   },
   "valeurs": {
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.29,
+      "sentiment": 0.21,
       "nb_news": 14,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "Dassault Aviation signe un accord de coopération avec l’AED Cluster Portugal"
+        "La Bourse de Paris recule après des résultats en cascade"
       ]
     },
     "Danone": {
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": 0.0,
-      "nb_news": 9,
+      "sentiment": -0.27,
+      "nb_news": 11,
       "titres_cles": [
-        "Kering : Chiffre d'affaires du troisième trimestre 2026",
-        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Octobre 2026)",
-        "Kering : Saint Laurent annonce le départ de son directeur artistique, Anthony Vaccarello"
+        "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+        "La Bourse de Paris recule après des résultats en cascade",
+        "Kering : Chiffre d'affaires du troisième trimestre 2026"
       ]
     },
     "Société Générale": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.6,
-      "nb_news": 10,
+      "sentiment": 0.44,
+      "nb_news": 9,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Signature d’un protocole d’accord en vue de l’acquisition de SFR",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd",
+        "UBS optimiste sur Bouygues, les flux de trésorerie amortissent les risques fiscaux français"
       ]
     },
     "Engie": {
