@@ -6128,5 +6128,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.5%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "18:22",
+    "nom": "L'Oréal",
+    "cours": 436.3,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +5.33% avec volume x2.7",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-23",
+    "heure": "18:22",
+    "nom": "Veolia",
+    "cours": 32.09,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
