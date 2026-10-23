@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "heure": "11:35",
+  "heure": "14:51",
   "marche": {
     "sentiment_global": -0.5,
     "nb_articles": 20,
@@ -95,12 +95,12 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.21,
+      "sentiment": 0.07,
       "nb_news": 14,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
-        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?",
-        "La Bourse de Paris recule après des résultats en cascade"
+        "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+        "Safran «profite des retards de livraison d’Airbus et Boeing !» En Bourse, les actions ont-elles du potentiel ?"
       ]
     },
     "Danone": {
