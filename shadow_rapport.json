@@ -6,10 +6,10 @@
   "stats": {
     "J+1": {
       "n": 551,
-      "gagnants_pct": 30.9,
-      "moyenne_nette": -1.24,
+      "gagnants_pct": 31.0,
+      "moyenne_nette": -1.23,
       "cac_moyen": -0.04,
-      "edge": -1.2
+      "edge": -1.19
     },
     "J+3": {
       "n": 534,
@@ -20,12 +20,12 @@
     },
     "J+5": {
       "n": 516,
-      "gagnants_pct": 40.1,
-      "moyenne_nette": -0.56,
+      "gagnants_pct": 41.3,
+      "moyenne_nette": -0.5,
       "cac_moyen": -0.37,
-      "edge": -0.19
+      "edge": -0.13
     }
   },
   "verdict": "NEUTRES",
-  "verdict_txt": "Ni edge ni contre-performance nets (-0.19 pts vs CAC, 40.1% gagnantes sur 516). La suspension ne coûte rien."
+  "verdict_txt": "Ni edge ni contre-performance nets (-0.13 pts vs CAC, 41.3% gagnantes sur 516). La suspension ne coûte rien."
 }
