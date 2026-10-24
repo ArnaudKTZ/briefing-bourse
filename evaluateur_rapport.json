@@ -6,77 +6,77 @@
     "J+1": {
       "univers_moy": -0.29,
       "acheter": {
-        "n": 1413,
-        "moy": -0.39,
-        "edge": -0.1,
-        "edge_net": -1.1
+        "n": 1426,
+        "moy": -0.38,
+        "edge": -0.09,
+        "edge_net": -1.09
       },
       "eviter": {
-        "n": 658,
-        "moy": -0.08,
-        "edge": -0.21
+        "n": 663,
+        "moy": -0.12,
+        "edge": -0.17
       }
     },
     "J+3": {
-      "univers_moy": -0.34,
+      "univers_moy": -0.36,
       "acheter": {
-        "n": 1376,
-        "moy": -0.45,
-        "edge": -0.11,
-        "edge_net": -1.11
+        "n": 1390,
+        "moy": -0.44,
+        "edge": -0.08,
+        "edge_net": -1.08
       },
       "eviter": {
-        "n": 654,
+        "n": 657,
         "moy": 0.1,
-        "edge": -0.44
+        "edge": -0.46
       }
     },
     "J+5": {
-      "univers_moy": -0.43,
+      "univers_moy": -0.44,
       "acheter": {
-        "n": 1324,
-        "moy": -0.54,
+        "n": 1349,
+        "moy": -0.51,
+        "edge": -0.07,
+        "edge_net": -1.07
+      },
+      "eviter": {
+        "n": 653,
+        "moy": 0.06,
+        "edge": -0.5
+      }
+    },
+    "J+10": {
+      "univers_moy": -0.65,
+      "acheter": {
+        "n": 1222,
+        "moy": -0.76,
         "edge": -0.11,
         "edge_net": -1.11
       },
       "eviter": {
-        "n": 651,
-        "moy": 0.08,
-        "edge": -0.51
-      }
-    },
-    "J+10": {
-      "univers_moy": -0.66,
-      "acheter": {
-        "n": 1202,
-        "moy": -0.81,
-        "edge": -0.15,
-        "edge_net": -1.15
-      },
-      "eviter": {
-        "n": 636,
-        "moy": -0.15,
-        "edge": -0.51
+        "n": 640,
+        "moy": -0.21,
+        "edge": -0.44
       }
     }
   },
   "buckets_j5": {
     "85+": {
-      "n": 518,
+      "n": 531,
       "moy": -0.19
     },
     "75-84": {
-      "n": 372,
-      "moy": -0.51
+      "n": 378,
+      "moy": -0.44
     },
     "65-74": {
-      "n": 434,
-      "moy": -0.98
+      "n": 440,
+      "moy": -0.97
     }
   },
   "ic_j5": {
-    "ic_moyen": -0.0011,
-    "n_jours": 84,
+    "ic_moyen": 0.003,
+    "n_jours": 85,
     "pct_positifs": 54
   },
   "regimes": {
@@ -102,21 +102,21 @@
     "baissier": {
       "n_obs": 1248,
       "stats": {
-        "univers_moy": -0.65,
+        "univers_moy": -0.67,
         "acheter": {
-          "n": 392,
-          "moy": -0.71,
-          "edge": -0.06,
-          "edge_net": -1.06
+          "n": 417,
+          "moy": -0.62,
+          "edge": 0.05,
+          "edge_net": -0.95
         },
         "eviter": {
-          "n": 205,
-          "moy": -1.0,
-          "edge": 0.35
+          "n": 207,
+          "moy": -1.05,
+          "edge": 0.38
         }
       },
-      "ic_moyen": -0.06,
-      "n_jours_ic": 26
+      "ic_moyen": -0.0448,
+      "n_jours_ic": 27
     }
   },
   "chocs": {
@@ -142,48 +142,48 @@
     "calme": {
       "n_obs": 3470,
       "stats": {
-        "univers_moy": -0.46,
+        "univers_moy": -0.47,
         "acheter": {
-          "n": 1317,
-          "moy": -0.55,
-          "edge": -0.09,
-          "edge_net": -1.09
+          "n": 1342,
+          "moy": -0.52,
+          "edge": -0.05,
+          "edge_net": -1.05
         },
         "eviter": {
-          "n": 638,
-          "moy": 0.01,
-          "edge": -0.47
+          "n": 640,
+          "moy": -0.01,
+          "edge": -0.46
         }
       },
-      "ic_moyen": 0.0011,
-      "n_jours_ic": 83
+      "ic_moyen": 0.0052,
+      "n_jours_ic": 84
     }
   },
-  "verdict": "Sur 1324 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.11 pts bruts à J+5), soit -1.11 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.51 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman -0.001 : le score n'a aucun pouvoir de classement.",
+  "verdict": "Sur 1349 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.07 pts bruts à J+5), soit -1.07 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.50 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.003 : le score n'a aucun pouvoir de classement.",
   "fenetre_propre": {
     "depuis": "2026-07-02",
     "n_obs": 3159,
     "n_jours": 81,
     "j5": {
-      "univers_moy": -0.42,
+      "univers_moy": -0.43,
       "acheter": {
-        "n": 1182,
-        "moy": -0.56,
-        "edge": -0.14,
-        "edge_net": -1.14
+        "n": 1207,
+        "moy": -0.53,
+        "edge": -0.1,
+        "edge_net": -1.1
       },
       "eviter": {
-        "n": 582,
-        "moy": 0.14,
-        "edge": -0.56
+        "n": 584,
+        "moy": 0.12,
+        "edge": -0.55
       }
     },
     "ic_j5": {
-      "ic_moyen": 0.0017,
-      "n_jours": 75,
-      "pct_positifs": 56
+      "ic_moyen": 0.0063,
+      "n_jours": 76,
+      "pct_positifs": 57
     },
-    "edge_net_j5": -1.14,
+    "edge_net_j5": -1.1,
     "cas_grille": 1,
     "verdict": "CAS 1 de la grille figée (IC <= 0 OU edge net <= 0) : satellite maintenu 100% virtuel, aucun passage en réel, effort sur la Phase 1 V5."
   }
