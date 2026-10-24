@@ -1,97 +1,110 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-24",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "Regime Detection in Latent Factor Models -- A Bayesian Decision-Theoretic Approach",
-      "lien": "https://arxiv.org/abs/2610.20366v1",
-      "date": "2026-10-14",
-      "score": 11,
+      "titre": "Market Regime-Based Multi-Asset Portfolio Optimization Using Nested Clustered Optimization for Tactical Asset Allocation",
+      "lien": "https://arxiv.org/abs/2610.27751v1",
+      "date": "2026-10-20",
+      "score": 28,
+      "hits": [
+        "regime",
+        "asset allocation",
+        "risk parity",
+        "walk-forward",
+        "out-of-sample",
+        "backtest",
+        "drawdown",
+        "tail risk"
+      ],
+      "extrait": "We propose a regime-aware tactical asset allocation (TAA) framework integrating market regime detection with Nested Clustered Optimization (NCO) for multi-asset portfolio construction. The central hypothesis is that incorporating market regime information into the NCO pipeline, specifically at the stages of covariance estimation, hierarchical clustering, and weight optimization, yields portfolios with improved…"
+    },
+    {
+      "titre": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
+      "lien": "https://arxiv.org/abs/2610.30564v1",
+      "date": "2026-10-22",
+      "score": 16,
+      "hits": [
+        "portfolio allocation",
+        "reinforcement learning",
+        "llm",
+        "language model"
+      ],
+      "extrait": "Financial news can influence investment decisions long after publication. Timely news may reach an investor before prices fully adjust, whereas older news may already be reflected in prices."
+    },
+    {
+      "titre": "Regime-Aware Interpretable Ranking for Sector Rotation",
+      "lien": "https://arxiv.org/abs/2610.26456v1",
+      "date": "2026-10-19",
+      "score": 12,
       "hits": [
         "factor",
         "regime",
-        "agent"
+        "rotation"
       ],
-      "extrait": "Regime-switching multi-factor models are widely used in quantitative finance, but filtering does not by itself determine when an agent should act on inferred regime changes. We formulate online regime detection with latent factors and hidden regimes as a Bayesian decision problem balancing false alarms, detection delay, and misclassification."
+      "extrait": "Sector rotation is a common decision in benchmark-relative portfolio management, where portfolio managers rank sectors for overweight and underweight positions. We formulate this task as ranking sector actions by expected future risk-adjusted active performance, measured with forward sector-benchmark Sharpe ratios."
     },
     {
-      "titre": "AlphaRLM: Aligning Language Models for Literature-Grounded Symbolic Factor Discovery",
-      "lien": "https://arxiv.org/abs/2610.14959v3",
-      "date": "2026-10-10",
+      "titre": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+      "lien": "https://arxiv.org/abs/2610.30557v1",
+      "date": "2026-10-22",
+      "score": 10,
+      "hits": [
+        "backtest",
+        "llm",
+        "agent",
+        "drawdown"
+      ],
+      "extrait": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content."
+    },
+    {
+      "titre": "Lineage-Aware Search Control for LLM-Based Evolutionary Factor Mining",
+      "lien": "https://arxiv.org/abs/2610.29663v1",
+      "date": "2026-10-21",
       "score": 10,
       "hits": [
         "factor",
         "llm",
         "language model"
       ],
-      "extrait": "Formulaic alpha mining seeks to discover executable expressions that capture predictive market signals in a vast, noisy search space. Recent LLM-based approaches use prompting, iterative search, or seed-factor evolution, leaving direct factor construction through policy learning less explored."
+      "extrait": "Formulaic alpha factor mining searches for symbolic expressions that transform market data into predictive signals. Recent LLM-based evolutionary factor mining methods use large language models as semantic variation operators."
     },
     {
-      "titre": "MLP-Initialized Reinforcement Learning for Exit Timing in SPX Short-Straddle Portfolios",
-      "lien": "https://arxiv.org/abs/2610.13126v1",
-      "date": "2026-10-09",
+      "titre": "Agentic AI in Automated Markets",
+      "lien": "https://arxiv.org/abs/2610.22522v1",
+      "date": "2026-10-15",
+      "score": 9,
+      "hits": [
+        "momentum",
+        "reinforcement learning",
+        "agent",
+        "drawdown"
+      ],
+      "extrait": "Automated markets increasingly host autonomous, learning trading agents and are powered by formulaic automated market makers (AMMs). We study how heterogeneous agent behavior shapes stress, risk-adjusted performance, liquidity, and volatility in these types of markets."
+    },
+    {
+      "titre": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting",
+      "lien": "https://arxiv.org/abs/2610.25468v1",
+      "date": "2026-10-18",
       "score": 8,
       "hits": [
         "out-of-sample",
-        "reinforcement learning"
+        "llm",
+        "language model"
       ],
-      "extrait": "This paper studies exit timing for SPX short-straddle portfolios using a two-stage supervised and reinforcement-learning framework. Historical episodes first generate ex-post optimal hold/exit labels for training a multilayer perceptron (MLP) using only contemporaneously available state variables at deployment."
+      "extrait": "Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LLM) embeddings of WSB posts attains an out-of-sample $R^2$ of 0.13 for log realized variance."
     },
     {
-      "titre": "Reinforcement Learning with Hawkes-Structured Networks for Market Making",
-      "lien": "https://arxiv.org/abs/2610.16524v1",
-      "date": "2026-10-12",
+      "titre": "The Control Layer Behind Rule-Following Agents Trading Across Market Conditions",
+      "lien": "https://arxiv.org/abs/2610.26324v1",
+      "date": "2026-10-19",
       "score": 7,
       "hits": [
         "regime",
-        "reinforcement learning"
+        "agent",
+        "drawdown"
       ],
-      "extrait": "Market making under realistic order-flow dynamics is challenging due to the clustered, self-exciting nature of order arrivals, which are naturally modeled by non-Markovian Hawkes processes. We propose a model-free reinforcement learning (RL) framework for market making with general Hawkes order-flow dynamics."
-    },
-    {
-      "titre": "StochLOB: Heavy-Tailed Score Matching for Robust Limit Order Book Trend Prediction",
-      "lien": "https://arxiv.org/abs/2610.21081v1",
-      "date": "2026-10-15",
-      "score": 6,
-      "hits": [
-        "factor",
-        "transaction cost",
-        "robust"
-      ],
-      "extrait": "Score-based diffusion methods usually perturb data with Brownian Gaussian noise, corresponding to a light-tailed forward stochastic differential equation (SDE). For market time series this SDE can be a poor abstraction: limit order book (LOB) order flow is heavy-tailed, bursty, and occasionally jump-like."
-    },
-    {
-      "titre": "Data-Driven Dynamic Portfolio Selection with Vine Copula Simulation and Reinforcement Learning",
-      "lien": "https://arxiv.org/abs/2610.20037v1",
-      "date": "2026-10-14",
-      "score": 6,
-      "hits": [
-        "reinforcement learning",
-        "ensemble"
-      ],
-      "extrait": "We develop a data-driven approach to dynamic portfolio selection that combines vine-copula simulation with reinforcement learning. The investor has constant relative risk aversion and maximises expected terminal utility with a running penalty on the conditional value-at-risk (CVaR) of one-period losses."
-    },
-    {
-      "titre": "Do Rollups Self-Organize? Multi-Agent Reinforcement Learning in the EIP-4844 Blob Fee Market",
-      "lien": "https://arxiv.org/abs/2610.15256v1",
-      "date": "2026-10-11",
-      "score": 6,
-      "hits": [
-        "reinforcement learning",
-        "agent"
-      ],
-      "extrait": "EIP-4844 gave Ethereum rollups a separate fee dimension for data, governed by a multiplicative update rule that targets three ``blobs'' per block. Whether this target is reached depends on how many independent, self-interested rollups choose to post data, a question that closed-form models address only for a single agent under exogenous prices or in a static equilibrium."
-    },
-    {
-      "titre": "$L_0$ Feature Selection via Monte Carlo Tree Search in High-Dimensional Financial Regression",
-      "lien": "https://arxiv.org/abs/2610.13574v1",
-      "date": "2026-10-09",
-      "score": 6,
-      "hits": [
-        "factor",
-        "out-of-sample"
-      ],
-      "extrait": "Feature selection is a central problem in high-dimensional financial regression, where large numbers of engineered variables and strong correlations among predictors reduce model stability and interpretability. $L_1$ regularization (Lasso) is widely used for sparse regression, but its shrinkage can be restrictive when informative signals are spread across correlated variables."
+      "extrait": "Trading discipline often fails people. Our study tested whether four AI trading agents followed their strategies and risk rules."
     }
   ]
 }
