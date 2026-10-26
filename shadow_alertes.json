@@ -6198,5 +6198,45 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "11:30",
+    "nom": "Capgemini",
+    "cours": 126.4,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.1%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "11:30",
+    "nom": "Publicis",
+    "cours": 101.75,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "11:30",
+    "nom": "Engie",
+    "cours": 23.16,
+    "score": 85,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 85/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "11:30",
+    "nom": "Eurazeo",
+    "cours": 48.4,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.98%",
+    "envoyee": false
   }
 ]
