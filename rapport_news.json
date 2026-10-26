@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "heure": "06:45",
+  "heure": "11:32",
   "marche": {
     "sentiment_global": -0.7,
     "nb_articles": 20,
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.26,
+      "sentiment": 0.37,
       "nb_news": 19,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 19 au 23 octobre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026",
-        "Egide - Résultats semestriels au 30 juin 2026 : perte nette réduite de plus de moitié, à 0,87 M€, endettement financier net ramené à 4,99 M€"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026"
       ]
     },
     "Alstom": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
