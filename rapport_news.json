@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-23",
-  "heure": "17:53",
+  "date": "2026-10-26",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.5,
+    "sentiment_global": -0.7,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.27,
-      "nb_news": 11,
+      "sentiment": -0.3,
+      "nb_news": 10,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
         "La Bourse de Paris recule après des résultats en cascade",
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.67,
-      "nb_news": 9,
+      "sentiment": 0.75,
+      "nb_news": 8,
       "titres_cles": [
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.0,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 14,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "\"Fichez-moi la paix!\": à son procès, journée de tensions entre Dati et les parties civiles"
+        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »"
       ]
     },
     "Legrand": {
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.36,
-      "nb_news": 11,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
         "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.25,
-      "nb_news": 20,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 12 au 16 octobre 2026",
-        "Egide - Résultats semestriels au 30 juin 2026 : perte nette réduite de plus de moitié, à 0,87 M€, endettement financier net ramené à 4,99 M€",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
+        "Egide - Résultats semestriels au 30 juin 2026 : perte nette réduite de plus de moitié, à 0,87 M€, endettement financier net ramené à 4,99 M€"
       ]
     },
     "Alstom": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
