@@ -1,8 +1,8 @@
 {
   "date": "2026-10-26",
-  "heure": "11:32",
+  "heure": "15:33",
   "marche": {
-    "sentiment_global": -0.7,
+    "sentiment_global": -0.65,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
