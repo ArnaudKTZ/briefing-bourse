@@ -6148,5 +6148,55 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "09:01",
+    "nom": "TotalEnergies",
+    "cours": 83.45,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.64%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 436.3,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +5.33% avec volume x2.7",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 174.68,
+    "score": 94,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 94/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 80.58,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.1%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "09:01",
+    "nom": "Veolia",
+    "cours": 32.09,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
   }
 ]
