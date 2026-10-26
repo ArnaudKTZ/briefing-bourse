@@ -6238,5 +6238,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.98%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-26",
+    "heure": "15:03",
+    "nom": "Thales",
+    "cours": 232.8,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.06%",
+    "envoyee": false
   }
 ]
