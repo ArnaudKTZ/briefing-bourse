@@ -6248,5 +6248,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.06%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-27",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 436.3,
+    "score": 64,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +5.33% avec volume x2.7",
+    "envoyee": false
   }
 ]
