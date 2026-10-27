@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-26",
-  "heure": "18:37",
+  "date": "2026-10-27",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.5,
     "nb_articles": 20,
@@ -77,7 +77,7 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme ?",
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.62,
-      "nb_news": 13,
+      "sentiment": 0.57,
+      "nb_news": 14,
       "titres_cles": [
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
         "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
