@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "heure": "14:34",
+  "heure": "17:50",
   "marche": {
     "sentiment_global": -0.5,
     "nb_articles": 20,
@@ -221,8 +221,8 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.44,
-      "nb_news": 9,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
