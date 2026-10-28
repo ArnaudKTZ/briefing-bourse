@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-27",
-  "heure": "17:50",
+  "date": "2026-10-28",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.5,
     "nb_articles": 20,
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.27,
+      "nb_news": 15,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.11,
-      "nb_news": 18,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.37,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 19 au 23 octobre 2026",
@@ -281,7 +281,7 @@
     },
     "Worldline": {
       "sentiment": 0.08,
-      "nb_news": 12,
+      "nb_news": 13,
       "titres_cles": [
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
         "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
