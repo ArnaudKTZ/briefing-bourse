@@ -1,15 +1,15 @@
 {
   "date": "2026-10-28",
-  "heure": "06:45",
+  "heure": "11:50",
   "marche": {
-    "sentiment_global": -0.5,
+    "sentiment_global": -0.35,
     "nb_articles": 20,
     "titres_cles": [
-      "La Bourse de Paris recule, les inquiétudes sur la dette française persistent",
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
       "La Bourse de Paris termine en hausse, aidée par le reflux des taux",
       "La Bourse de Paris termine dans le rouge, la dette française flambe",
-      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
+      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
+      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.18,
+      "sentiment": 0.24,
       "nb_news": 17,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
-        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies",
-        "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR"
+        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis",
+        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies"
       ]
     },
     "Hermès": {
@@ -45,8 +45,8 @@
       "nb_news": 19,
       "titres_cles": [
         "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
-        "Rare dans les médias, le patron d'Airbus explique le «parcours du combattant» pour investir en France",
-        "Airbus prend au sérieux la concurrence chinoise et prépare son avion de prochaine génération"
+        "Airbus et Air France-KLM s'associent dans Alpha Component Solutions pour la maintenance des A350",
+        "Rare dans les médias, le patron d'Airbus explique le «parcours du combattant» pour investir en France"
       ]
     },
     "Schneider Electric": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.4,
-      "nb_news": 20,
+      "sentiment": 0.47,
+      "nb_news": 19,
       "titres_cles": [
+        "BNP PARIBAS LANCE SON PROGRAMME  DE RACHAT D’ACTIONS AU TITRE DE L’EXERCICE 2026  D’UN MONTANT DE 1,3 MILLIARD D’EUROS",
         "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme ?",
-        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
-        "SPIE annonce les résultats du rachat de ses ORNANEs à échéance janvier 2028 pour un montant d’environ 388 millions euros"
+        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits"
       ]
     },
     "Air Liquide": {
@@ -96,7 +96,7 @@
     },
     "Safran": {
       "sentiment": 0.07,
-      "nb_news": 14,
+      "nb_news": 15,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.27,
+      "nb_news": 15,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.11,
+      "sentiment": 0.16,
       "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
-        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies",
-        "Déstockage de gazole : TotalEnergies s'engage à baisser les prix de 8 à 12 centimes pour les particuliers, de 20 centimes pour le GNR"
+        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis",
+        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies"
       ]
     },
     "Renault": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.31,
-      "nb_news": 13,
+      "sentiment": 0.36,
+      "nb_news": 14,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
         "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "Dassault Systèmes : solide performance au 3ème trimestre, amélioration des objectifs 2026 et nouvelle étape franchie dans les Sciences de la vie"
       ]
     },
     "Edenred": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
