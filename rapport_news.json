@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "heure": "15:30",
+  "heure": "18:21",
   "marche": {
     "sentiment_global": -0.35,
     "nb_articles": 20,
@@ -113,8 +113,8 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "VINCI - 9M 2026 - NOUVELLES HAUSSES DU CHIFFRE D’AFFAIRES ET DES PRISES DE COMMANDES",
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.62,
-      "nb_news": 8,
+      "sentiment": 0.56,
+      "nb_news": 9,
       "titres_cles": [
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
         "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
@@ -167,12 +167,12 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.0,
-      "nb_news": 16,
+      "sentiment": 0.12,
+      "nb_news": 17,
       "titres_cles": [
+        "SUCCES DE L'OFFRE DE RACHAT SUR LES OBLIGATIONS DE PERNOD RICARD",
         "PERNOD RICARD ANNONCE LE LANCEMENT D'UNE OFFRE DE RACHAT SUR SEPT SOUCHES D'OBLIGATIONS EXISTANTES VENANT A ECHEANCE EN SEPTEMBRE 2027, OCTOBRE 2027, NOVEMBRE 2028, AVRIL 2030, NOVEMBRE 2030, MARS 2032 ET NOVEMBRE 2032, ET ANNONCE SON INTENTION ...",
-        "Pernod Ricard : le chiffre d’affaires chute de 6% au premier trimestre, pénalisé par la Chine et les Etats-Unis",
-        "Les actions européennes chutent, tirées par le CAC 40 et l’énergie"
+        "Pernod Ricard : le chiffre d’affaires chute de 6% au premier trimestre, pénalisé par la Chine et les Etats-Unis"
       ]
     },
     "Michelin": {
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 19 au 23 octobre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
