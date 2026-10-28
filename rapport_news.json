@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "heure": "11:50",
+  "heure": "15:30",
   "marche": {
     "sentiment_global": -0.35,
     "nb_articles": 20,
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.75,
+      "sentiment": 0.62,
       "nb_news": 8,
       "titres_cles": [
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
-        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "Les législateurs de l’UE s’accordent pour assouplir les objectifs d’émissions automobiles de 2035"
+        "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
+        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?"
       ]
     },
     "Saint-Gobain": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
