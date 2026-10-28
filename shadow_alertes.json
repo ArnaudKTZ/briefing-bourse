@@ -6258,5 +6258,15 @@
     "signal": "SURVEILLER",
     "raison": "Gap haussier +5.33% avec volume x2.7",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-28",
+    "heure": "11:31",
+    "nom": "Worldline",
+    "cours": 11.51,
+    "score": 47,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +15.19% avec volume x2.2",
+    "envoyee": false
   }
 ]
