@@ -6268,5 +6268,15 @@
     "signal": "SURVEILLER",
     "raison": "Gap haussier +15.19% avec volume x2.2",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-28",
+    "heure": "17:13",
+    "nom": "Stellantis",
+    "cours": 4.29,
+    "score": 65,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +3.77% avec volume x2.2",
+    "envoyee": false
   }
 ]
