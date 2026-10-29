@@ -6278,5 +6278,15 @@
     "signal": "ACHETER",
     "raison": "Gap haussier +3.77% avec volume x2.2",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-29",
+    "heure": "15:01",
+    "nom": "Accor",
+    "cours": 47.07,
+    "score": 78,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.15%",
+    "envoyee": false
   }
 ]
