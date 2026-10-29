@@ -6288,5 +6288,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.15%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-29",
+    "heure": "18:57",
+    "nom": "Renault",
+    "cours": 28.17,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +4.8%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-29",
+    "heure": "18:57",
+    "nom": "Dassault Systèmes",
+    "cours": 25.07,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +5.47%",
+    "envoyee": false
   }
 ]
