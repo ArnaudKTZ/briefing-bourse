@@ -1,15 +1,15 @@
 {
   "date": "2026-10-29",
-  "heure": "06:45",
+  "heure": "12:06",
   "marche": {
-    "sentiment_global": -0.3,
+    "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+      "La Bourse de Paris en hausse après une salve de résultats",
       "La Bourse de Paris termine en hausse, aidée par le reflux des taux",
       "La Bourse de Paris termine dans le rouge, la dette française flambe",
-      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge",
-      "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole"
+      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.32,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
-        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis",
-        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies"
+        "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
+        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis"
       ]
     },
     "Hermès": {
@@ -131,12 +131,12 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.57,
-      "nb_news": 14,
+      "sentiment": 0.73,
+      "nb_news": 15,
       "titres_cles": [
+        "Société Générale dépasse les attentes : bénéfice net record au troisième trimestre",
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
-        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits",
-        "Société Générale : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions"
+        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits"
       ]
     },
     "Stellantis": {
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
@@ -185,17 +185,17 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.16,
+      "sentiment": 0.26,
       "nb_news": 19,
       "titres_cles": [
+        "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
-        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis",
-        "TotalEnergies renforce le partage de la valeur avec ses salariés et le soutien à leur pouvoir d’achat d’énergies"
+        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis"
       ]
     },
     "Renault": {
-      "sentiment": 0.07,
-      "nb_news": 14,
+      "sentiment": 0.06,
+      "nb_news": 17,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
