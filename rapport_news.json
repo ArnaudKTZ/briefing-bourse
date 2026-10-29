@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-28",
-  "heure": "18:21",
+  "date": "2026-10-29",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.35,
+    "sentiment_global": -0.3,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.11,
-      "nb_news": 19,
+      "sentiment": 0.0,
+      "nb_news": 18,
       "titres_cles": [
-        "Bourse : Airbus profite du boom de la défense et d’une demande d’avions «très forte !» Quel potentiel ?",
-        "Airbus et Air France-KLM s'associent dans Alpha Component Solutions pour la maintenance des A350",
-        "Rare dans les médias, le patron d'Airbus explique le «parcours du combattant» pour investir en France"
+        "euroAtlantic Airways intègre un second A330-300 augmentant ainsi sa capacité en appareils gros-porteurs",
+        "Le chiffre d’affaires d’Airbus au T3 déçoit ; les objectifs 2026 maintenus",
+        "Airbus et Air France-KLM s'associent dans Alpha Component Solutions pour la maintenance des A350"
       ]
     },
     "Schneider Electric": {
