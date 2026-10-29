@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "heure": "12:06",
+  "heure": "15:38",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.32,
+      "sentiment": 0.26,
       "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.26,
+      "sentiment": 0.32,
       "nb_news": 19,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
