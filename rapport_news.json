@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "heure": "15:38",
+  "heure": "18:31",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
@@ -131,8 +131,8 @@
       ]
     },
     "Société Générale": {
-      "sentiment": 0.73,
-      "nb_news": 15,
+      "sentiment": 0.62,
+      "nb_news": 16,
       "titres_cles": [
         "Société Générale dépasse les attentes : bénéfice net record au troisième trimestre",
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.36,
+      "nb_news": 11,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd",
-        "UBS optimiste sur Bouygues, les flux de trésorerie amortissent les risques fiscaux français"
+        "Pourquoi Orange, Bouygues, Free et SFR augmentent les prix de leurs forfaits mobiles en même temps"
       ]
     },
     "Engie": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.3,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 19 au 23 octobre 2026",
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.56,
-      "nb_news": 16,
+      "sentiment": 0.59,
+      "nb_news": 17,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
