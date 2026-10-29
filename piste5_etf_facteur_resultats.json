@@ -1,0 +1,58 @@
+{
+  "depuis_2016__Quality Europe (EQUA)": {
+    "depuis": "2016-06-07",
+    "jusqu_a": "2026-10-27",
+    "n_annees": 10.39,
+    "rendement_total_pct": 108.2,
+    "cagr_pct": 7.31,
+    "max_drawdown_pct": -33.5,
+    "vol_pct": 15.2,
+    "sharpe": 0.35
+  },
+  "depuis_2016__Low Vol Europe (EVOE)": {
+    "depuis": "2016-06-07",
+    "jusqu_a": "2026-10-27",
+    "n_annees": 10.39,
+    "rendement_total_pct": 124.7,
+    "cagr_pct": 8.11,
+    "max_drawdown_pct": -32.0,
+    "vol_pct": 13.4,
+    "sharpe": 0.46
+  },
+  "depuis_2016__CAC 40": {
+    "depuis": "2016-01-04",
+    "jusqu_a": "2026-10-28",
+    "n_annees": 10.81,
+    "rendement_total_pct": 74.4,
+    "cagr_pct": 5.28,
+    "max_drawdown_pct": -38.6,
+    "vol_pct": 17.7,
+    "sharpe": 0.18
+  },
+  "depuis_2016__Blend 50/50 Quality+LowVol": {
+    "depuis": "2016-06-07",
+    "jusqu_a": "2026-10-27",
+    "n_annees": 10.39,
+    "rendement_total_pct": 117.66,
+    "cagr_pct": 7.77,
+    "max_drawdown_pct": -32.7,
+    "vol_pct": 13.9,
+    "sharpe": 0.42
+  },
+  "fenetre_satellite__Quality Europe (EQUA)": {
+    "perf_pct": 0.85,
+    "max_drawdown_pct": -4.7
+  },
+  "fenetre_satellite__Low Vol Europe (EVOE)": {
+    "perf_pct": 2.79,
+    "max_drawdown_pct": -5.3
+  },
+  "fenetre_satellite__CAC 40": {
+    "perf_pct": -6.34,
+    "max_drawdown_pct": -11.4
+  },
+  "fenetre_satellite__Satellite (réel)": {
+    "perf_pct": -22.55,
+    "max_drawdown_pct": -27.8
+  }
+}

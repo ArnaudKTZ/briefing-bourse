@@ -1328,6 +1328,15 @@ def sauvegarder_recommandations(perf, donnees_actuelles):
 FRAIS_TAUX    = 0.005
 FRAIS_MINIMUM = 0.50
 
+# Circuit-breaker de drawdown (ajouté le 11/10 dans scoring_intraday.py, mais
+# OUBLIÉ ICI jusqu'au 29/10 : ce fichier gère sa propre ouverture de positions
+# sur le MÊME portefeuille_virtuel.json, et représente 78% des trades clos du
+# satellite (64/82) — donc le frein ne protégeait en pratique qu'une minorité
+# des ouvertures. Mêmes seuils, même mécanique que scoring_intraday.py.
+SEUIL_REDUCTION_DD = -15.0
+SEUIL_STOP_DD       = -25.0
+BUDGET_REDUIT       = 1000.0
+
 def calculer_frais(montant):
     return round(max(FRAIS_MINIMUM, montant * FRAIS_TAUX), 2)
 
@@ -1383,10 +1392,29 @@ def gerer_portefeuille_virtuel(donnees_actuelles, perf):
     max_positions = 5
     budget_par_position = 2000.0
 
+    # Circuit-breaker de drawdown : même calcul que scoring_intraday.py, sur
+    # l'équité courante (cash + positions déjà ouvertes, valorisées au cours
+    # du jour) contre le plus haut historique connu.
+    valeur_positions_dd = sum(
+        pos["nb_actions"] * donnees_dict.get(nom, {}).get("cours", pos["prix_entree"])
+        for nom, pos in pf["positions"].items()
+    )
+    equity_courante = pf["capital"] + valeur_positions_dd
+    hv_valides = [v for v in pf["historique_valeur"].values()
+                  if isinstance(v, (int, float)) and v == v]
+    pic_historique = max(hv_valides + [equity_courante]) if hv_valides else equity_courante
+    drawdown_pct = ((equity_courante - pic_historique) / pic_historique * 100
+                     if pic_historique > 0 else 0.0)
+    if drawdown_pct <= SEUIL_STOP_DD:
+        budget_par_position = 0.0
+    elif drawdown_pct <= SEUIL_REDUCTION_DD:
+        budget_par_position = BUDGET_REDUIT
+
     for nom, d in donnees_dict.items():
         if (d.get("signal") == "ACHETER" and
                 nom not in pf["positions"] and
                 len(pf["positions"]) < max_positions and
+                budget_par_position > 0 and
                 pf["capital"] >= budget_par_position and
                 d.get("score", 0) >= 70):
             cours       = d["cours"]

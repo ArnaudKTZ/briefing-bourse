@@ -25,6 +25,20 @@
 
 ---
 
+## 2026-10-29
+
+### Bug trouvé : le circuit-breaker du 11/10 ne protégeait que 22% des trades + piste ETF facteur testée, résultat net
+
+- **Repo resynchronisé** (226 commits de retard, 1 mois de flotte automatique).
+- **État des poches** : cœur DM stable (+7,47%, DD -2,61%). Satellite baseline toujours en chute : -22,55% (7 744,79€), DD max -27,8%, 82 trades clos (33% gagnants). Risk Engine stable à -7,3% (DD -12,19%, 0 position ouverte). Crypto DM toujours gelé en stablecoin (995$ vs 1 305$ B&H BTC). Évaluateur (24/10) : edge net J+5 -1,07 pt, IC +0,006 (toujours sans pouvoir de classement). Shadow (23/10) : verdict passé de NUISIBLES à **NEUTRES** (edge -0,13 pt, amélioration mais toujours négatif). Infra saine (watchdog 0 problème).
+- **BUG TROUVÉ : le circuit-breaker de drawdown du 11/10 était incomplet depuis le premier jour.** Il n'avait été câblé que dans `scoring_intraday.py` (`gerer_portefeuille_intraday`). Or `briefing_bourse_v3.py` a sa PROPRE fonction `gerer_portefeuille_virtuel`, indépendante, qui ouvre des positions sur le MÊME `portefeuille_virtuel.json` — et génère 78% des trades clos du satellite (64/82, contre 18 pour l'intraday). Preuve concrète : 4 positions pleine taille (2000€, frais ~19-20€) ouvertes entre le 12 et le 16/10 alors que le drawdown réel était à -25/-27%, sous le seuil de blocage. Le frein n'a donc protégé qu'une minorité des ouvertures pendant 2 semaines et demie.
+- **Corrigé** : mêmes constantes (`SEUIL_REDUCTION_DD=-15`, `SEUIL_STOP_DD=-25`, `BUDGET_REDUIT=1000`) et même calcul de drawdown ajoutés dans `briefing_bourse_v3.py::gerer_portefeuille_virtuel`, avant la boucle d'ouverture. `test_agents.py` toujours au vert.
+- **Piste ETF facteur (dernière piste "à tester vite" du rapport du 11/10, enfin chiffrée)** : tickers trouvés par recherche web (BNP Paribas Easy Quality Europe = EQUA.PA, Low Vol Europe = EVOE.PA, PEA-éligibles). `piste5_etf_facteur.py` : sur 10 ans d'historique réel du fonds (depuis 06/2016, pas un backtest optimisé), Quality CAGR 7,31% et Low Vol CAGR 8,11%, les deux battent le CAC 40 (5,28%) EN RENDEMENT ET EN RISQUE (pire chute -33,5%/-32% vs -38,6%, Sharpe 0,35/0,46 vs 0,18). **Sur la fenêtre exacte du satellite (depuis le 19/06/2026)** : Quality +0,85%, Low Vol +2,79%, CAC 40 -6,34%, satellite réel **-22,55%** (pire chute -27,8% vs -4,7%/-5,3% pour les ETF). Résultat net et sans ambiguïté, aucun paramètre à optimiser (buy & hold pur). Réserve posée par la recherche : aucune version World/USA de ces facteurs n'est PEA-éligible, seulement 100% Europe — ce n'est pas un remplacement géographiquement neutre, c'est une vraie décision de surpondération Europe à assumer.
+- Doc mise à jour : annexe B.19 (correction du bug) + nouvelle annexe B.20 (ETF facteur) + carte agent "Scoring intraday".
+- **Décision en attente d'Arnaud** : remplacer le satellite stock-picking par Quality/Low Vol Europe (ou les deux en complément), partiellement ou totalement. Pas d'automatisation à coder ici (c'est un choix d'allocation manuelle, pas un agent), juste une recommandation chiffrée.
+
+---
+
 ## 2026-10-11 (suite)
 
 ### Trois pistes de la recherche testées rigoureusement : 2 rejetées, 1 cadre prêt (rien à déployer)
