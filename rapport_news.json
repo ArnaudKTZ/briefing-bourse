@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-29",
-  "heure": "18:31",
+  "date": "2026-10-30",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.2,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+      "La Bourse de Paris termine en hausse, portée par les résultats d'entreprises",
       "La Bourse de Paris en hausse après une salve de résultats",
       "La Bourse de Paris termine en hausse, aidée par le reflux des taux",
-      "La Bourse de Paris termine dans le rouge, la dette française flambe",
-      "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
+      "La Bourse de Paris termine dans le rouge, la dette française flambe"
     ]
   },
   "valeurs": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
