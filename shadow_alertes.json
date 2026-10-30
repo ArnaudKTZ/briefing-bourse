@@ -6308,5 +6308,65 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +5.47%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "Air Liquide",
+    "cours": 174.24,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "Danone",
+    "cours": 63.24,
+    "score": 87,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 87/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "Stellantis",
+    "cours": 4.28,
+    "score": 80,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +3.77% avec volume x2.6 | Momentum intraday fort +11.17%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "Worldline",
+    "cours": 10.7,
+    "score": 55,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +15.19% avec volume x3.8",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "Veolia",
+    "cours": 32.74,
+    "score": 89,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 89/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "09:01",
+    "nom": "STMicroelectronics",
+    "cours": 49.99,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.95%",
+    "envoyee": false
   }
 ]
