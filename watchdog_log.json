@@ -1,14 +1,14 @@
 {
   "date": "2026-10-30",
-  "heure": "07:30",
+  "heure": "12:29",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.20"
+      "msg": "OK — 20 articles, sentiment -0.15"
     },
     "Briefing 7h": {
-      "ok": false,
-      "msg": "Aucune trace du briefing pour 2026-10-30 (dernier : 2026-10-29)"
+      "ok": true,
+      "msg": "OK — briefing du jour envoyé à 12:13"
     },
     "Scoring intraday": {
       "ok": true,
@@ -47,7 +47,5 @@
       "msg": "OK — run mensuel du 2026-10-04"
     }
   },
-  "problemes": [
-    "Briefing 7h"
-  ]
+  "problemes": []
 }
