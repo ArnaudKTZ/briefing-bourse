@@ -6448,5 +6448,15 @@
     "signal": "ACHETER",
     "raison": "Gap haussier +4.07% avec volume x2.1",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "18:39",
+    "nom": "L'Oréal",
+    "cours": 436.95,
+    "score": 100,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 100/100",
+    "envoyee": false
   }
 ]
