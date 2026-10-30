@@ -6438,5 +6438,15 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 89/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "16:01",
+    "nom": "Sanofi",
+    "cours": 79.73,
+    "score": 83,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +4.07% avec volume x2.1",
+    "envoyee": false
   }
 ]
