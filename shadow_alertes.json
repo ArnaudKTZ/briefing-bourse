@@ -6418,5 +6418,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — Take-profit 8.3% | P&L : +7.72%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "14:01",
+    "nom": "Capgemini",
+    "cours": 126.35,
+    "score": 77,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.64%",
+    "envoyee": false
   }
 ]
