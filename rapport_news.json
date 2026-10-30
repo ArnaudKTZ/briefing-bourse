@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "heure": "12:01",
+  "heure": "15:30",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -230,12 +230,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.4,
+      "sentiment": 0.5,
       "nb_news": 10,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
-        "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud",
-        "Prix du gaz : comment limiter la hausse de sa facture en 2027"
+        "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées",
+        "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud"
       ]
     },
     "Orange": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
