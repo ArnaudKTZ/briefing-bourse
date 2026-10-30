@@ -1,5 +1,5 @@
 {
-  "capital": 737.4699999999981,
+  "capital": 996.7599999999976,
   "positions": {
     "TotalEnergies": {
       "nb_actions": 25,
@@ -19,15 +19,6 @@
       "cout_total": 1935.8000000000002,
       "frais_achat": 9.68
     },
-    "Sanofi": {
-      "nb_actions": 27,
-      "prix_entree": 73.58,
-      "date_entree": "2026-10-22",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1986.6599999999999,
-      "frais_achat": 9.93
-    },
     "BNP Paribas": {
       "nb_actions": 11,
       "prix_entree": 86.78,
@@ -36,6 +27,24 @@
       "source_entree": "Briefing",
       "cout_total": 954.58,
       "frais_achat": 4.77
+    },
+    "Air Liquide": {
+      "nb_actions": 5,
+      "prix_entree": 180.22,
+      "date_entree": "2026-10-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "cout_total": 901.1,
+      "frais_achat": 4.51
+    },
+    "Teleperformance": {
+      "nb_actions": 12,
+      "prix_entree": 80.86,
+      "date_entree": "2026-10-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "cout_total": 970.3199999999999,
+      "frais_achat": 4.85
     }
   },
   "historique_valeur": {
@@ -133,7 +142,7 @@
     "2026-10-27": 7728.27,
     "2026-10-28": 7744.79,
     "2026-10-29": 7836.07,
-    "2026-10-30": 7744.64
+    "2026-10-30": 7888.42
   },
   "trades": [
     {
@@ -1232,6 +1241,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.22,
       "frais_total": 19.41
+    },
+    {
+      "nom": "Sanofi",
+      "entree": 73.58,
+      "sortie": 79.66,
+      "date_entree": "2026-10-22",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-10-30",
+      "heure_sortie": "11:31",
+      "source_sortie": "Intraday",
+      "pnl_pct": 7.72,
+      "frais_total": 20.68,
+      "raison_sortie": "Take-profit 8.3%"
     }
   ]
 }

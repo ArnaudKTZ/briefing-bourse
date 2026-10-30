@@ -6368,5 +6368,55 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +3.95%",
     "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "11:31",
+    "nom": "Vivendi",
+    "cours": 1.64,
+    "score": 74,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +5.81%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "11:31",
+    "nom": "Accor",
+    "cours": 46.46,
+    "score": 93,
+    "signal": "ACHETER",
+    "raison": "Score exceptionnel 93/100",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "11:31",
+    "nom": "Air Liquide",
+    "cours": 180.22,
+    "score": 82,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 82/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "11:31",
+    "nom": "Teleperformance",
+    "cours": 80.86,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Position ouverte en portefeuille virtuel (score 81/100)",
+    "envoyee": false
+  },
+  {
+    "date": "2026-10-30",
+    "heure": "11:31",
+    "nom": "Sanofi",
+    "cours": 79.66,
+    "score": 70,
+    "signal": "VENTE",
+    "raison": "Position fermée — Take-profit 8.3% | P&L : +7.72%",
+    "envoyee": false
   }
 ]
