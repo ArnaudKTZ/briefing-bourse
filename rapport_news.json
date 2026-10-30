@@ -1,8 +1,8 @@
 {
   "date": "2026-10-30",
-  "heure": "06:45",
+  "heure": "12:01",
   "marche": {
-    "sentiment_global": -0.2,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.27,
+      "nb_news": 11,
       "titres_cles": [
         "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.26,
-      "nb_news": 19,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis"
+        "Nigéria : TotalEnergies renforce son partenariat avec SAPETRO en vue d’un développement rapide du bloc OPL257"
       ]
     },
     "Hermès": {
@@ -71,7 +71,7 @@
       "sentiment": 0.24,
       "nb_news": 17,
       "titres_cles": [
-        "Sanofi relève ses objectifs, porté par les lancements récents et le Dupixent",
+        "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
         "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
         "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars"
       ]
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.3,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
-        "États-Unis : TotalEnergies entre dans 26 permis d’exploration offshore opérés par Chevron, renforçant le partenariat entre les deux Compagnies aux États-Unis"
+        "Nigéria : TotalEnergies renforce son partenariat avec SAPETRO en vue d’un développement rapide du bloc OPL257"
       ]
     },
     "Renault": {
@@ -221,12 +221,12 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.36,
-      "nb_news": 11,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
         "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd",
-        "Pourquoi Orange, Bouygues, Free et SFR augmentent les prix de leurs forfaits mobiles en même temps"
+        "Bouygues enregistre une dépréciation comptable de sa participation dans TF1, sans incidence sur sa trésorerie. Le Groupe réaffirme sa confiance dans la stratégie de transformation de TF1."
       ]
     },
     "Engie": {
@@ -299,7 +299,7 @@
     },
     "STMicroelectronics": {
       "sentiment": 0.0,
-      "nb_news": 12,
+      "nb_news": 14,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
