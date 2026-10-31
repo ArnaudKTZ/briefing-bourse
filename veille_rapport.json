@@ -1,24 +1,7 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-31",
   "nb_articles": 40,
   "top": [
-    {
-      "titre": "Market Regime-Based Multi-Asset Portfolio Optimization Using Nested Clustered Optimization for Tactical Asset Allocation",
-      "lien": "https://arxiv.org/abs/2610.27751v1",
-      "date": "2026-10-20",
-      "score": 28,
-      "hits": [
-        "regime",
-        "asset allocation",
-        "risk parity",
-        "walk-forward",
-        "out-of-sample",
-        "backtest",
-        "drawdown",
-        "tail risk"
-      ],
-      "extrait": "We propose a regime-aware tactical asset allocation (TAA) framework integrating market regime detection with Nested Clustered Optimization (NCO) for multi-asset portfolio construction. The central hypothesis is that incorporating market regime information into the NCO pipeline, specifically at the stages of covariance estimation, hierarchical clustering, and weight optimization, yields portfolios with improved…"
-    },
     {
       "titre": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
       "lien": "https://arxiv.org/abs/2610.30564v1",
@@ -33,16 +16,17 @@
       "extrait": "Financial news can influence investment decisions long after publication. Timely news may reach an investor before prices fully adjust, whereas older news may already be reflected in prices."
     },
     {
-      "titre": "Regime-Aware Interpretable Ranking for Sector Rotation",
-      "lien": "https://arxiv.org/abs/2610.26456v1",
-      "date": "2026-10-19",
-      "score": 12,
+      "titre": "Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check",
+      "lien": "https://arxiv.org/abs/2610.33453v1",
+      "date": "2026-10-24",
+      "score": 10,
       "hits": [
-        "factor",
-        "regime",
-        "rotation"
+        "cross-sectional",
+        "out-of-sample",
+        "ensemble",
+        "machine learning"
       ],
-      "extrait": "Sector rotation is a common decision in benchmark-relative portfolio management, where portfolio managers rank sectors for overweight and underweight positions. We formulate this task as ranking sector actions by expected future risk-adjusted active performance, measured with forward sector-benchmark Sharpe ratios."
+      "extrait": "Recent advances in financial machine learning have prompted growing interest in applying deep neural networks to convertible bond valuation and forecasting. However, existing studies often focus on in-sample valuation fit or cross-sectional return rankings, leaving out-of-sample next-day price forecasting insufficiently benchmarked against persistence."
     },
     {
       "titre": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
@@ -70,41 +54,52 @@
       "extrait": "Formulaic alpha factor mining searches for symbolic expressions that transform market data into predictive signals. Recent LLM-based evolutionary factor mining methods use large language models as semantic variation operators."
     },
     {
-      "titre": "Agentic AI in Automated Markets",
-      "lien": "https://arxiv.org/abs/2610.22522v1",
-      "date": "2026-10-15",
+      "titre": "Simple Portfolios that Deliver Consistent Decent Returns",
+      "lien": "https://arxiv.org/abs/2610.36491v1",
+      "date": "2026-10-27",
       "score": 9,
       "hits": [
         "momentum",
-        "reinforcement learning",
-        "agent",
-        "drawdown"
+        "factor",
+        "risk parity",
+        "backtest"
       ],
-      "extrait": "Automated markets increasingly host autonomous, learning trading agents and are powered by formulaic automated market makers (AMMs). We study how heterogeneous agent behavior shapes stress, risk-adjusted performance, liquidity, and volatility in these types of markets."
+      "extrait": "Portfolio construction has been studied extensively in both academia and industry. Its applications range from pension funds and hedge funds to private savings."
     },
     {
-      "titre": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting",
-      "lien": "https://arxiv.org/abs/2610.25468v1",
-      "date": "2026-10-18",
+      "titre": "Det-MASO: Diversity-Regularized Multi-Agent Sequential Optimization for Factor Generation",
+      "lien": "https://arxiv.org/abs/2610.34936v1",
+      "date": "2026-10-26",
+      "score": 9,
+      "hits": [
+        "factor",
+        "regime",
+        "agent"
+      ],
+      "extrait": "Quantitative investment requires alpha factors that are both predictive and diverse. However, existing factor generation methods, including formulaic mining and neural end-to-end models, are mostly based on a single-agent design, which limits exploration of the factor space and reduces adaptability to changing markets."
+    },
+    {
+      "titre": "Sparse Autoencoders as Implicit Diversification Regularisers for Cross-Sectional Cryptocurrency Returns",
+      "lien": "https://arxiv.org/abs/2610.39205v1",
+      "date": "2026-10-29",
       "score": 8,
       "hits": [
-        "out-of-sample",
-        "llm",
-        "language model"
+        "factor",
+        "cross-sectional"
       ],
-      "extrait": "Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LLM) embeddings of WSB posts attains an out-of-sample $R^2$ of 0.13 for log realized variance."
+      "extrait": "Factor models are central to asset pricing and portfolio construction, but neural factors are often difficult to interpret, and their effect on portfolio risk is unclear. A sparse autoencoder (SAE) may address both concerns by describing daily returns across many assets with only a few active features."
     },
     {
-      "titre": "The Control Layer Behind Rule-Following Agents Trading Across Market Conditions",
-      "lien": "https://arxiv.org/abs/2610.26324v1",
-      "date": "2026-10-19",
-      "score": 7,
+      "titre": "Financial Context-Rich Strategy for Actor-Critic based Agents: A Deep Reinforcement Learning Approach for Stock Trading",
+      "lien": "https://arxiv.org/abs/2610.32237v1",
+      "date": "2026-10-23",
+      "score": 8,
       "hits": [
-        "regime",
-        "agent",
-        "drawdown"
+        "factor",
+        "reinforcement learning",
+        "agent"
       ],
-      "extrait": "Trading discipline often fails people. Our study tested whether four AI trading agents followed their strategies and risk rules."
+      "extrait": "In modern financial markets, more than 3/4th of the large volume trade is executed by algorithmic trading based on advanced trading strategies to attain higher precision and speed than traditional human traders. The conventional strategies focused on price-based indicators are inadequate in capturing the market dynamism arising from real-world events such as social sentiments, political instability, or sudden…"
     }
   ]
 }
