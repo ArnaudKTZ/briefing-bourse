@@ -25,6 +25,16 @@
 
 ---
 
+## 2026-11-01 (suite 4)
+
+### Les deux dernières pistes du jour : RSI testé en rigueur, Auditeur de coûts enquêté puis écarté
+
+- **RSI isolé, test de robustesse complet** (`rsi_isole_robustesse.py`, nouveau) : méthodologie façon "Retail Trader's Ruin" appliquée au signal RSI isolé (le seul qui avait montré un edge réel le matin). Bootstrap (2000 tirages) + correction Bonferroni pour les 8 comparaisons testées (2 buckets × 4 horizons) + coût réel du PEA (1% l'aller-retour) déduit. **Résultat en deux temps** : le signal brut est statistiquement robuste (edge J+5 +1,22 pt, IC corrigé [+0,57 ; +1,93], exclut toujours zéro) — ce n'est PAS un faux positif de tests multiples, contrairement à ce qu'on craignait. Mais une fois les frais réels déduits, l'edge NET tombe à +0,22 pt et la borne basse de l'IC corrigé passe négative (-0,43 pt). **Verdict : pas assez solide pour un système dédié**, le signal existe mais le péage du PEA le mange presque entièrement. Cohérent avec la conclusion de fond du projet. Rappel important noté dans le script : le bucket "surachat" (RSI>=70) ne peut jamais être un trade indépendant en PEA (pas de vente à découvert) — au mieux un filtre ou un signal de sortie anticipée.
+- **Auditeur de Coûts d'Exécution : enquêté, PAS construit.** Deux obstacles trouvés : (1) yfinance ne fournit aucun bid/ask exploitable sur les CAC40/ETF PEA (tous à zéro ou absents, vérifié en live) — impossible de mesurer un vrai spread sans API payante. (2) Recherche web sur la grille tarifaire Boursobank PEA : les frais sont plafonnés à 0,5% de l'ordre par la loi PACTE, quelle que soit la formule. Le `FRAIS_TAUX=0,5%` déjà utilisé partout dans le code EST donc déjà le plafond légal, pas une estimation arbitraire — confirmé par une source externe indépendante. Décision consciente de ne pas créer d'agent : aucune donnée récurrente à surveiller, aucun paramètre à corriger. Un agent qui répéterait le même constat statique chaque mois serait de la prolifération sans valeur.
+- `test_agents.py` au vert (rien à enregistrer, ce sont des scripts d'audit ponctuels comme les piste*.py, pas des agents cron). Doc : annexes B.25 et B.26.
+
+---
+
 ## 2026-11-01 (suite 3)
 
 ### Deux nouveaux agents : Sentinelle Look-Ahead + Screener Fondamental CAC40
