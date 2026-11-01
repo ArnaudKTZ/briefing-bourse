@@ -191,7 +191,35 @@ def collecter_faits(now):
     faits["cout_api_30j_usd"] = round(
         sum(e.get("usd", 0) for e in cl if e.get("date", "") >= date_limite), 3)
 
+    # Statut du dernier Watchdog (ajout du 01/11) : preuve factuelle plutôt que
+    # supposition pour juger si une proposition récente (ex. circuit-breaker)
+    # est effectivement respectée en continu, pas seulement codée une fois.
+    wd = charger("watchdog_log.json") or {}
+    faits["dernier_watchdog"] = {
+        "date": wd.get("date"),
+        "statuts": {k: v.get("ok") for k, v in (wd.get("statuts") or {}).items()},
+    }
+
     return faits
+
+
+def extraire_section(html, titre):
+    """Extrait le texte entre <h3>titre</h3> et le prochain <h3> (ou la fin).
+    Sert à retrouver LA PROPOSITION DU MOIS PRÉCÉDENT dans le conseil déjà
+    généré, pour que le Stratège soit forcé d'y revenir avant d'en proposer
+    une nouvelle (ajout du 01/11 : avant ça, chaque conseil mensuel écrasait
+    le précédent sans jamais vérifier s'il avait été suivi — exactement le
+    trou qui a laissé le circuit-breaker du 04/10 à moitié codé 3 semaines)."""
+    if not html:
+        return None
+    marqueur = f"<h3>{titre}</h3>"
+    i = html.find(marqueur)
+    if i == -1:
+        return None
+    debut = i + len(marqueur)
+    j = html.find("<h3>", debut)
+    section = html[debut:j if j != -1 else None].strip()
+    return section or None
 
 # ─── L'APPEL AU CONSEILLER ────────────────────────────────────────────────────
 
@@ -217,6 +245,13 @@ Règles absolues :
 Format de sortie : UNIQUEMENT un fragment HTML (pas de balise html/head/body), avec cette
 structure exacte :
 <h3>Lecture du mois</h3> (un paragraphe : l'état du système en 4-5 phrases, les faits saillants)
+<h3>Suivi de la proposition précédente</h3> (un paragraphe COURT et honnête : si
+"proposition_mois_precedent" est fourni dans les faits, dis EXPLICITEMENT, à partir des faits
+chiffrés de ce mois, si elle semble avoir été testée/implémentée, si rien ne le montre, ou si
+elle a été remplacée par autre chose. Ne devine pas au-delà des faits fournis : si les chiffres
+ne permettent pas de trancher, dis-le ("aucune preuve dans les faits de ce mois"). Si
+"proposition_mois_precedent" est absent ou vide, écris une seule phrase : "Pas de proposition
+le mois précédent à suivre.")
 <h3>Conformité aux principes des maîtres</h3> (une liste <ul> courte : uniquement les principes
 dont le statut mérite commentaire ce mois-ci, avec le fait chiffré qui le justifie)
 <h3>La proposition du mois</h3> (un paragraphe : LA proposition, pourquoi maintenant, et son
@@ -314,6 +349,15 @@ if __name__ == "__main__":
     faits = collecter_faits(now)
     print(f"  Coût API 30j : ${faits['cout_api_30j_usd']}")
 
+    precedent = charger(FICHIER_RAPPORT) or {}
+    proposition_precedente = extraire_section(precedent.get("conseil", ""), "La proposition du mois")
+    faits["proposition_mois_precedent"] = proposition_precedente
+    if proposition_precedente:
+        print(f"  Proposition du mois précédent ({precedent.get('date', '?')}) relue, "
+              f"à suivre dans ce conseil : {proposition_precedente[:100]}...")
+    else:
+        print("  Pas de proposition précédente trouvée (premier conseil, ou champ absent).")
+
     if not ANTHROPIC_API_KEY:
         print("Pas de clé API — dry-run : faits collectés, pas de conseil généré.")
         print(json.dumps(faits, ensure_ascii=False, indent=1))
@@ -330,10 +374,19 @@ if __name__ == "__main__":
                 "<p>Vérifier le crédit sur console.anthropic.com puis relancer le workflow stratege.yml.</p>")
         raise SystemExit(0)
 
+    # Historique léger des propositions (jamais gardé avant le 01/11 : chaque
+    # conseil mensuel écrasait le précédent, aucune trace de ce qui avait été
+    # demandé les mois d'avant une fois le fichier réécrit).
+    historique = precedent.get("historique_propositions", [])
+    proposition_du_mois = extraire_section(conseil_html, "La proposition du mois")
+    historique.append({"date": now.date().isoformat(), "proposition": proposition_du_mois})
+    historique = historique[-12:]
+
     rapport = {
         "date":    now.date().isoformat(),
         "faits":   faits,
         "conseil": conseil_html,
+        "historique_propositions": historique,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)

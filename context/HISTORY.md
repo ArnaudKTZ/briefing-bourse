@@ -25,6 +25,20 @@
 
 ---
 
+## 2026-11-01 (suite)
+
+### 6 évolutions priorité haute + moyenne, implémentées et testées sur données réelles
+
+- **Évaluateur (#1, haute) : contribution de chaque sous-indicateur mesurée séparément du score composite.** Découverte : `scoring_intraday.py` calculait déjà `f = {"rsi":..., "macd":..., "bollinger":...}` (contribution par facteur) depuis le 29/06, mais ces champs étaient aussi déjà écrits dans `performance.json` (rsi numérique, macd haussier/baissier, boll_zone, golden/death cross) sans jamais être exploités. Ajouté `rendements_forward()` + `stats_par_indicateur()` + `verdict_indicateurs()` dans `agent_evaluateur.py`. Résultat sur 90 jours / 3 510 obs : **RSI a un vrai edge dans les deux sens** (survente <30 : +1,21 pt, n=157 ; surachat >=70 : -0,84 pt, n=120 — cohérent, le mean-reversion fonctionne). **MACD n'a AUCUN edge** (ni haussier ni baissier, n=1500+ chacun) malgré un poids identique à RSI dans le score — candidat direct à couper comme News/Espion. Bollinger "au-dessus bande haute" montre un edge positif (+0,40, n=188) alors que le code le traite comme un signal baissier — à surveiller, potentiel signe inversé. Death cross +0,92 pt (n=44, échantillon limite). Rien coupé ce jour : la mesure doit tourner quelques semaines avant toute décision, même règle que pour News en juillet.
+- **Risk Engine (#2, haute) : journal permanent des déclenchements P7/P12.** Nouveau fichier `risk_engine_evenements.json`, alimenté à chaque passage de `gerer_portefeuille_risk_engine` (4x/jour) : régime, drawdown, p7_declenche, p12_declenche. Avant ça, on ne le découvrait que par audit ponctuel (23/08). Fenêtre glissante 1 an.
+- **Stratège (#3, haute) : relit sa propre proposition du mois précédent.** `agent_stratege.py` extrait maintenant la section "La proposition du mois" du rapport précédent (`extraire_section()`) et la réinjecte dans les faits du mois suivant (`proposition_mois_precedent`), avec obligation de commenter son suivi dans une nouvelle section du prompt. Ajout aussi du statut du dernier Watchdog dans les faits (preuve factuelle plutôt que supposition). Historique léger des propositions conservé (`historique_propositions`, 12 derniers mois) — avant, chaque rapport écrasait le précédent sans aucune trace.
+- **Veille (#4, haute) : registre des hypothèses déjà tranchées.** `DEJA_TRANCHE` dans `agent_veille.py` : VIX, Fear & Greed, canari, breadth momentum, émergents détenus, famille RSI/MACD/Bollinger retail. Un article qui recoupe un sujet déjà réfuté est annoté "déjà tranché ici" dans le digest (pénalité de score légère, pas d'exclusion).
+- **Crypto DM (#5, moyenne) : la "suspicion de contamination" déboulonnée.** Vérifié : la formule `momentum_12m` de `agent_crypto_dm.py` est structurellement identique à celle du cœur DM, aucun bug trouvé. Le texte dans `agent_professeur.py::evaluer_crypto_dm` affirmait une "suspicion de contamination" à CHAQUE run en retard sur B&H, sans aucun calcul réel derrière (boilerplate, pas un diagnostic). Corrigé : le texte renvoie maintenant à la vraie explication, déjà établie le 08/09 (coût d'opportunité de l'airbag momentum absolu, pas un bug).
+- **Sentiment News (#6, moyenne) : remesuré avec 4 mois de données en plus.** Nouveau script `audit_news_sentiment.py` : reconstruit l'historique via `git show` sur les 72 commits quotidiens de `rapport_news.json` (jamais conservé en historique dans le fichier lui-même), 2 808 observations valeur×jour reconstruites. IC de Spearman sentiment/rendement J+5 = **-0,005** (toujours aucun pouvoir de classement). Un bucket ("négatif modéré", n=64) dépasse le seuil de 0,3 pt mais le pattern n'est pas monotone (le bucket "très négatif" va dans l'autre sens) — probable faux positif de comparaisons multiples, pas un signal robuste. **POIDS_NEWS=0 reste justifié par des données fraîches**, pas seulement par la décision de juillet.
+- `test_agents.py` au vert après chaque étape. Doc : annexe B.22.
+
+---
+
 ## 2026-11-01
 
 ### Demande "les agents n'apprennent pas" : audit en 3 étapes, 2 garde-fous implémentés (logique + stagnation)

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "n_jours": 90,
   "n_obs": 3510,
   "horizons": {
@@ -186,5 +186,77 @@
     "edge_net_j5": -1.04,
     "cas_grille": 1,
     "verdict": "CAS 1 de la grille figée (IC <= 0 OU edge net <= 0) : satellite maintenu 100% virtuel, aucun passage en réel, effort sur la Phase 1 V5."
-  }
+  },
+  "contribution_par_indicateur_j5": {
+    "univers_moy": -0.35,
+    "rsi": {
+      "survente (<30)": {
+        "n": 157,
+        "moy": 0.86,
+        "edge": 1.21
+      },
+      "bas (30-45)": {
+        "n": 1203,
+        "moy": -0.5,
+        "edge": -0.15
+      },
+      "neutre (45-55)": {
+        "n": 1012,
+        "moy": -0.41,
+        "edge": -0.06
+      },
+      "haut (55-70)": {
+        "n": 823,
+        "moy": -0.19,
+        "edge": 0.16
+      },
+      "surachat (>=70)": {
+        "n": 120,
+        "moy": -1.19,
+        "edge": -0.84
+      }
+    },
+    "macd": {
+      "haussier": {
+        "n": 1535,
+        "moy": -0.13,
+        "edge": 0.22
+      },
+      "baissier": {
+        "n": 1780,
+        "moy": -0.55,
+        "edge": -0.2
+      }
+    },
+    "bollinger": {
+      "sous bande basse (survendu)": {
+        "n": 181,
+        "moy": -0.08,
+        "edge": 0.27
+      },
+      "dans les bandes": {
+        "n": 2946,
+        "moy": -0.4,
+        "edge": -0.05
+      },
+      "au-dessus bande haute (suracheté)": {
+        "n": 188,
+        "moy": 0.05,
+        "edge": 0.4
+      }
+    },
+    "cross": {
+      "golden cross actif": {
+        "n": 35,
+        "moy": -0.36,
+        "edge": -0.01
+      },
+      "death cross actif": {
+        "n": 44,
+        "moy": 0.57,
+        "edge": 0.92
+      }
+    }
+  },
+  "verdict_par_indicateur": "Indicateurs avec edge mesurable pris seuls : rsi=survente (<30) : edge positif +1.21 pts (n=157) ; rsi=surachat (>=70) : edge NÉGATIF -0.84 pts (n=120) ; bollinger=au-dessus bande haute (suracheté) : edge positif +0.40 pts (n=188) ; cross=death cross actif : edge positif +0.92 pts (n=44). Sans edge mesurable : rsi=bas (30-45) (n=1203), rsi=neutre (45-55) (n=1012), rsi=haut (55-70) (n=823), macd=haussier (n=1535), macd=baissier (n=1780), bollinger=sous bande basse (survendu) (n=181), bollinger=dans les bandes (n=2946), cross=golden cross actif (n=35)."
 }

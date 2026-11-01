@@ -851,6 +851,37 @@ def regime_cac_actuel():
         return None
 
 
+FICHIER_RISK_EVENEMENTS = "risk_engine_evenements.json"
+JOURS_CONSERVES_RISK_EVENEMENTS = 365
+
+
+def journaliser_evenement_risk_engine(now, today, heure, regime, drawdown, equity):
+    """Journal permanent (ajout du 01/11) des déclenchements RÉELS de P7
+    (filtre régime) et P12 (frein drawdown). Avant ça, on ne le découvrait
+    que par audit manuel ponctuel (ex. le 23/08 : P7/P12 jamais déclenchés
+    sur la fenêtre forward de l'époque). Ici l'historique s'accumule tout
+    seul, run après run, sans jugement ni action — juste la mesure."""
+    log = []
+    if os.path.exists(FICHIER_RISK_EVENEMENTS):
+        try:
+            with open(FICHIER_RISK_EVENEMENTS, "r", encoding="utf-8") as f:
+                log = json.load(f)
+        except Exception:
+            log = []
+    log.append({
+        "date": today, "heure": heure,
+        "regime": regime,
+        "drawdown_pct": round(drawdown * 100, 2),
+        "equity": equity,
+        "p7_declenche":  regime == "baissier",
+        "p12_declenche": drawdown <= PARAMS_RISK.dd_seuil,
+    })
+    borne = (now.date() - datetime.timedelta(days=JOURS_CONSERVES_RISK_EVENEMENTS)).isoformat()
+    log = [e for e in log if e["date"] >= borne]
+    with open(FICHIER_RISK_EVENEMENTS, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+
+
 def gerer_portefeuille_risk_engine(snapshot, heure, regime, now):
     """Portefeuille virtuel géré par le Risk Engine. Ouvre via selectionner()
     (concentration top-K, sizing volatilité, plafond secteur, filtre régime,
@@ -910,6 +941,7 @@ def gerer_portefeuille_risk_engine(snapshot, heure, regime, now):
     pic = max([v for v in hv.values() if _valide_cours(v)] + [equity]) if hv else equity
     drawdown = (equity - pic) / pic if pic > 0 else 0.0
     contexte = {"regime": regime, "drawdown": drawdown}
+    journaliser_evenement_risk_engine(now, today, heure, regime, drawdown, equity)
 
     # 3. Candidats enrichis (secteur + ATR% viennent du snapshot) et décisions
     candidats = [{"nom": n, "score": d.get("score", 0), "prix": d.get("cours"),

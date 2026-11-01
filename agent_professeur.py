@@ -185,8 +185,19 @@ def evaluer_crypto_dm():
         verdict = f"Stratégie {perf:+.1f}% vs B&H BTC {perf_bh:+.1f}% ({ecart:+.1f} pts) : l'airbag fait son travail."
     else:
         note    = "C" if ecart > -10 else "D"
+        # Correction du 01/11 : ce texte affirmait une "suspicion de
+        # contamination" à chaque run en retard sur B&H, sans aucun calcul
+        # derrière (vérifié : la formule de momentum 12 mois est identique à
+        # celle du cœur DM, pas de bug trouvé). Un seul point de data (une
+        # rotation depuis le 13/07) ne permet de toute façon pas de comparer
+        # un Sharpe live à un Sharpe backtest. La vraie explication, déjà
+        # établie le 08/09, est plus simple : l'airbag momentum absolu s'est
+        # mis en refuge juste avant un rally, un coût d'opportunité attendu
+        # de ce type de signal, pas une preuve de bug.
         verdict = (f"Stratégie {perf:+.1f}% vs B&H BTC {perf_bh:+.1f}% ({ecart:+.1f} pts). "
-                   "Rappel anti-leakage : live très sous le backtest = suspicion de contamination.")
+                   "Explication établie le 08/09 : l'airbag momentum absolu s'est mis en refuge "
+                   "juste avant un rally, coût d'opportunité attendu de ce type de signal "
+                   "(pas un bug : formule identique au cœur DM, vérifiée le 01/11).")
     return {"agent": "Crypto DM (BTC/ETH)", "metrique": f"{perf:+.1f}% vs B&H BTC {perf_bh:+.1f}%",
             "note": note, "confiance": conf, "verdict": verdict, "valeur_suivie": round(ecart, 1)}
 
