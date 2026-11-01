@@ -379,7 +379,14 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
             score += d_div
             f["divergence_rsi"] = d_div
 
-            # MACD
+            # MACD — neutralisé le 01/11 (même traitement que News/Espion en
+            # 07/26). L'audit par indicateur (agent_evaluateur.py) sur 90
+            # jours / ~1500 obs haussier et baissier ne trouve AUCUN edge
+            # mesurable dans les deux sens, malgré un poids identique au RSI
+            # qui lui en a un (survente +1,21 pt, surachat -0,84 pt). Calculé
+            # pour le diagnostic (f["macd"]), jamais ajouté au score.
+            # Réactivation = remettre MACD_ACTIF à True.
+            MACD_ACTIF = False
             macd_ind  = MACD(close)
             macd_line = macd_ind.macd().iloc[-1]
             macd_sig  = macd_ind.macd_signal().iloc[-1]
@@ -392,7 +399,8 @@ def scorer_action(nom, ticker, malus_global=0, rapport_news=None, signaux_etf=No
                 if not pd.isna(h1) and not pd.isna(h2):
                     if h1 > h2 and h1 > 0:   d_macd += round(5 * p["macd"])
                     elif h1 < h2 and h1 < 0:  d_macd -= round(5 * p["macd"])
-            score += d_macd
+            if MACD_ACTIF:
+                score += d_macd
             f["macd"] = d_macd
 
             # Moyennes mobiles (poids fixe)
