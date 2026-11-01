@@ -1,0 +1,40 @@
+name: Screener Fondamental CAC40 (mensuel)
+
+on:
+  schedule:
+    - cron: '30 6 2 * *'  # 8h30 heure française (UTC+2 en été), le 2 de chaque mois
+  workflow_dispatch:        # lancement manuel depuis GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  screener-fondamental:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install yfinance
+
+      - name: Lancer le Screener Fondamental
+        env:
+          ZOHO_EMAIL: ${{ secrets.ZOHO_EMAIL }}
+          ZOHO_PASSWORD: ${{ secrets.ZOHO_PASSWORD }}
+        run: python agent_screener_fondamental.py
+
+      - name: Sauvegarder l'état sur GitHub
+        run: |
+          git config user.name "Agent Screener Fondamental"
+          git config user.email "actions@github.com"
+          git add screener_fondamental_cac40.json || true
+          git diff --staged --quiet || git commit -m "Screener fondamental $(date +%Y-%m)" || true
+          git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

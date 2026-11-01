@@ -25,6 +25,19 @@
 
 ---
 
+## 2026-11-01 (suite 3)
+
+### Deux nouveaux agents : Sentinelle Look-Ahead + Screener Fondamental CAC40
+
+- Suite de la recherche "Super agents et compétences bourse" du jour (rapport envoyé à Arnaud). Les deux pistes jugées les mieux justifiées ont été construites, testées et câblées.
+- **Sentinelle Look-Ahead** (`lookahead_guard.py`) : audite le dépôt pour tout usage de données fondamentales/consensus (regex sur `.info`, `returnOnEquity`, `freeCashflow`, `grossMargins`, `profitMargins`, `recommendationMean`, `targetMeanPrice`), confronte à un registre de verdicts (`FICHIERS_AUDITES`). Un fichier non recensé est signalé "À VÉRIFIER", jamais classé sûr par défaut. Câblée dans `agent_watchdog.py` (nouvelle fonction `verifier_lookahead`, tourne à chaque passage). **Audit baseline du jour : 3 fichiers trouvés, tous déjà sûrs** — `briefing_bourse_v3.py` et `scoring_intraday.py` l'utilisent en live (pas de simulation du passé), `selection_qm.py` neutralise déjà explicitement la porte qualité en mode backtest (décision du 23/08, confirmée a posteriori comme la bonne pratique que la recherche recommande). Contient aussi `verifier_lag_publication()`, un garde-fou réutilisable pour un futur backtest qui voudrait historiciser des données fondamentales (lag minimum 45 jours).
+- **Preuve que ça marche** : en créant le Screener (ci-dessous), le premier run du Watchdog a immédiatement flaggé `agent_screener_fondamental.py` comme "non audité" — exactement le comportement voulu. Audité manuellement (usage live uniquement, jamais de backtest sur le passé) et ajouté au registre.
+- **Screener Fondamental CAC40** (`agent_screener_fondamental.py`, nouveau workflow `screener_fondamental.yml`, le 2 du mois 8h30) : automatise le quality-screen manuel du jour sur les 39 valeurs. Simplification assumée et documentée : yfinance donne un instantané 12 mois par appel (`.info`), pas 5-10 ans comme la recherche web manuelle du matin. 5-6 critères (ROE>=15%, FCF positif, marge brute>=15%, marge nette>=5%, couverture dette EBITDA/dette>=15% exemptée pour les banques, dilution<2%/mois à partir du 2e mois). Score sur 39 valeurs, top candidats pour revue humaine, zéro achat automatique.
+- **Validation croisée encourageante** : testé sur données réelles, LVMH et L'Oréal ressortent tous deux à 5/5 en qualité — mais l'upside vs cible analystes (+27% LVMH, -0,9% L'Oréal, +11,2% Air Liquide) reproduit fidèlement, avec une méthode entièrement différente (consensus analystes vs scénarios 3-points faits à la main), la conclusion de la recherche manuelle du matin : LVMH a une vraie marge de sécurité, L'Oréal est une bonne affaire mais trop chère au prix actuel. Les deux méthodes, indépendantes, pointent dans la même direction.
+- `test_agents.py` étendu (nouveau agent + workflow enregistrés), au vert. Doc : annexe B.24 + nouvelle carte agent.
+
+---
+
 ## 2026-11-01 (suite 2)
 
 ### Les 5 idées restantes : 1 coupée (MACD), 1 volontairement laissée de côté (Bollinger), 1 reconnue infeasible (Shadow), 2 transformées en suivi mensuel
