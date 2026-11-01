@@ -25,6 +25,21 @@
 
 ---
 
+## 2026-11-01
+
+### Demande "les agents n'apprennent pas" : audit en 3 étapes, 2 garde-fous implémentés (logique + stagnation)
+
+- **Contexte** : Arnaud veut que les agents "étudient sur eux-mêmes et progressent", pas seulement qu'ils fassent leur travail. Recherche de valeurs individuelles (L'Oréal/Air Liquide/LVMH, skills quality-screen + investment-checklist du pack ai-berkshire) faite juste avant : LVMH seule passe les 6 points du checklist Buffett (marge de sécurité), les deux autres sont de bonnes affaires trop chères au prix actuel. Décision en attente, notes sauvegardées dans `context/import/recherche_valeurs_individuelles_2026-11-01.md`, rien commité (recherche personnelle, pas un agent).
+- **Étape 1 (audit par agent)** : passage en revue de chaque agent sous l'angle "apprend-il de lui-même ?". Constat honnête : un auto-ajustement des paramètres sur les résultats récents est EXACTEMENT ce qui a déjà été testé et a toujours échoué (walk-forward crypto, score auto-pondéré) — sur un historique court et bruité, apprendre de ses erreurs récentes = apprendre le bruit. Ce qui marche déjà : la boucle mesurer (Évaluateur/Shadow/Professeur) → proposer avec critère fixé a priori (Stratège) → décider avec Arnaud. Le vrai trou n'était pas l'absence d'apprentissage, c'était une boucle cassée : la proposition du Stratège du 04/10 a été codée à moitié (bug trouvé le 29/10) sans qu'aucun contrôle continu ne le détecte.
+- **Étape 2 (audit des skills)** : les skills Claude (quality-screen, investment-checklist, etc.) sont des outils de MA session, pas des skills que les agents GitHub Actions (scripts Python autonomes) peuvent utiliser — aucun pont direct. Pas de skill Claude pour du "auto-apprentissage ML", et ce n'est de toute façon pas souhaitable ici (cf. étape 1). Option envisagée et écartée : un registre JSON séparé de suivi des propositions — redondant avec ECHEANCES.md, aurait ajouté un système à maintenir en double sans résoudre le vrai problème (l'implémentation incomplète, pas l'oubli de la proposition).
+- **Étape 3 (nouveaux agents / évolutions) — 2 implémentés, testés sur données réelles, zéro impact sur le trading :**
+  - **Watchdog : vérification de LOGIQUE, pas seulement de plomberie.** Nouvelle fonction `verifier_circuit_breaker_satellite()` dans `agent_watchdog.py` : à chaque passage (2x/jour), rejoue le calcul de drawdown pour chaque trade satellite récent (fenêtre glissante 3 jours) et vérifie que la taille réellement utilisée correspond au palier attendu. Testée : détecte correctement les 3 violations historiques du 12/10 (hors fenêtre, donc pas de ré-alerte infinie) et confirme 0 violation récente (fix du 29/10 tient).
+  - **Professeur : détection de stagnation.** Nouvelle fonction `detecter_stagnation()` : si un agent est noté D/E pendant 4 bilans consécutifs sans qu'aucune évolution n'ait été testée, il le signale explicitement dans l'email ("mérite une décision : couper, retester, ou accepter"), au lieu de répéter la même note en silence indéfiniment. Testée sur l'historique réel (12 semaines) : détecte correctement Portefeuille virtuel V4, Crypto DM et Briefing V4, stagnants en D/E depuis début octobre — cohérent avec ce qu'on sait déjà, confirme que le détecteur fonctionne.
+  - **Reporté, pas implémenté sans feu vert** : extension de l'Évaluateur pour mesurer la contribution marginale de CHAQUE sous-score (technique/momentum/fondamental/news) plutôt que seulement le score composite final — permettrait de couper les composants morts comme on l'a fait pour News/Espion, mais touche le cœur de la logique de mesure, donc proposé pour une prochaine session plutôt que codé dans la foulée.
+- `test_agents.py` toujours au vert après les deux changements.
+
+---
+
 ## 2026-10-29
 
 ### Bug trouvé : le circuit-breaker du 11/10 ne protégeait que 22% des trades + piste ETF facteur testée, résultat net
