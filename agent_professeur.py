@@ -261,6 +261,44 @@ def meta_garde_fou(historique):
     return doutes, None
 
 
+SEUIL_STAGNATION_EVALS = 4   # nb d'évaluations consécutives en D/E avant de signaler
+
+
+def detecter_stagnation(historique):
+    """
+    Signale les agents notés D/E depuis plusieurs évaluations consécutives
+    SANS QUE RIEN N'AIT CHANGÉ dans l'intervalle — le symptôme exact qu'Arnaud
+    a pointé le 01/11 : "les agents ne progressent pas, ils n'apprennent pas".
+    Le Professeur notait déjà chaque semaine, mais rien ne remontait le fait
+    qu'un agent stagne en bas de classement pendant des mois sans qu'aucune
+    décision (couper / retester / accepter) ne soit jamais prise. Comme le
+    garde-fou méta, ce n'est qu'un SIGNAL : le Professeur ne coupe rien seul.
+    """
+    if len(historique) < SEUIL_STAGNATION_EVALS:
+        return []
+
+    fenetre_snaps = historique[-SEUIL_STAGNATION_EVALS:]
+    tous_agents = {e["agent"] for snap in fenetre_snaps for e in snap.get("evals", [])}
+
+    stagnations = []
+    for agent in tous_agents:
+        fenetre = []
+        for snap in fenetre_snaps:
+            note = next((e.get("note") for e in snap.get("evals", []) if e["agent"] == agent), None)
+            fenetre.append(note)
+        if len(fenetre) < SEUIL_STAGNATION_EVALS or any(n is None for n in fenetre):
+            continue   # série incomplète (agent pas encore suivi sur toute la fenêtre)
+        if all(n in ("D", "E") for n in fenetre):
+            premiere_date = historique[-SEUIL_STAGNATION_EVALS].get("date", "?")
+            stagnations.append(
+                f"{agent} : noté D ou E lors des {SEUIL_STAGNATION_EVALS} dernières "
+                f"évaluations sans amélioration (depuis le {premiere_date}). "
+                f"Aucune évolution testée sur cette période à ma connaissance — "
+                f"mérite une décision explicite (couper, retester, ou accepter tel quel).")
+
+    return stagnations
+
+
 def generer_bloc_couts(couts):
     if not couts:
         return ("<div style='margin-top:16px;padding:12px;background:#f5f5f5;border-radius:6px;"
@@ -281,7 +319,7 @@ def generer_bloc_couts(couts):
     )
 
 
-def generer_html(now, evals, evo, doutes, meta_msg, couts=None):
+def generer_html(now, evals, evo, doutes, meta_msg, couts=None, stagnations=None):
     couleurs = {"A": "#1b5e20", "B": "#2e7d32", "C": "#e65100",
                 "D": "#b71c1c", "E": "#b71c1c", "—": "#999"}
     lignes = ""
@@ -319,6 +357,17 @@ def generer_html(now, evals, evo, doutes, meta_msg, couts=None):
                      "font-size:13px;color:#2e7d32;'><strong>Garde-fou méta :</strong> mes notes passées sont "
                      "cohérentes avec ce qui s'est passé ensuite. Rien à signaler.</div>")
 
+    if stagnations:
+        items_stag = "".join(f"<li style='margin-bottom:6px;'>{s}</li>" for s in stagnations)
+        bloc_stagnation = (f"<div style='margin-top:16px;padding:12px;background:#fce4ec;border-left:4px solid #ad1457;"
+                     f"border-radius:6px;font-size:13px;color:#222;'>"
+                     f"<strong style='color:#ad1457;'>Stagnation détectée :</strong>"
+                     f"<ul style='margin:8px 0 0;padding-left:20px;'>{items_stag}</ul>"
+                     f"<p style='margin:8px 0 0;font-size:12px;color:#666;'>Je ne coupe rien seul : "
+                     f"à toi de décider.</p></div>")
+    else:
+        bloc_stagnation = ""
+
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
 <div style='background:linear-gradient(135deg,#3c3489,#534ab7);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
   <h2 style='margin:0;font-size:18px;'>Réunion hebdomadaire — Agent Professeur</h2>
@@ -335,6 +384,7 @@ def generer_html(now, evals, evo, doutes, meta_msg, couts=None):
     <tbody>{lignes}</tbody>
   </table>
   {bloc_meta}
+  {bloc_stagnation}
   {generer_bloc_couts(couts)}
   <div style='margin-top:16px;padding:12px;background:#ede7f6;border-radius:6px;font-size:13px;color:#3c3489;'>
     <strong>Règle d'or :</strong> aucune amélioration ne passe en production sans réussir la recette
@@ -398,11 +448,20 @@ if __name__ == "__main__":
     else:
         print("  Garde-fou méta : notes cohérentes, rien à signaler")
 
+    stagnations = detecter_stagnation(historique)
+    if stagnations:
+        print(f"  Stagnation détectée : {len(stagnations)} agent(s)")
+        for s in stagnations:
+            print(f"    - {s}")
+    else:
+        print("  Stagnation : aucune (ou pas assez d'historique)")
+
     rapport = {
         "date": now.date().isoformat(),
         "evaluations": evals,
         "evolution": evo,
         "doutes_meta": doutes,
+        "stagnations": stagnations,
         "historique": historique,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
@@ -410,7 +469,7 @@ if __name__ == "__main__":
 
     print("Envoi compte-rendu hebdo...")
     couts = charger_couts_semaine()
-    html = generer_html(now, evals, evo, doutes, meta_msg, couts)
+    html = generer_html(now, evals, evo, doutes, meta_msg, couts, stagnations)
     envoyer(f"Professeur — réunion hebdo des agents — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")

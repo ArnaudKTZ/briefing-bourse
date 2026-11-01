@@ -30,6 +30,7 @@ FICHIER_RAPPORT_NEWS    = "rapport_news.json"
 FICHIER_INTRADAY        = "intraday_scores.json"
 FICHIER_PERFORMANCE     = "performance.json"
 FICHIER_WATCHDOG_LOG    = "watchdog_log.json"
+FICHIER_PORTEFEUILLE    = "portefeuille_virtuel.json"
 FICHIER_DERNIER_BRIEFING = "dernier_briefing.json"
 
 
@@ -89,6 +90,90 @@ def verifier_intraday_hier():
     if datetime.datetime.now(TZ_PARIS).date().weekday() == 0:
         return None, "Lundi — pas de données intraday attendues hier"
     return False, f"Aucun scoring intraday pour hier ({hier})"
+
+
+# Vérification d'invariant (ajout du 01/11) : le Watchdog ne surveillait que
+# la PLOMBERIE (agents silencieux), jamais la LOGIQUE. Le bug du circuit-
+# breaker (câblé dans scoring_intraday.py le 11/10, oublié dans
+# briefing_bourse_v3.py, 4 positions pleine taille ouvertes sous -25% de
+# drawdown entre le 12 et le 16/10, découvert seulement le 29/10 par audit
+# manuel) est resté invisible 18 jours parce que rien ne vérifiait en continu
+# que la règle elle-même était respectée. Ce check rejoue, pour chaque trade
+# ouvert depuis le déploiement du circuit-breaker, le calcul de drawdown qui
+# AURAIT DÛ s'appliquer, et compare à la taille réellement observée (déduite
+# des frais, 0,5%/côté). Il ne corrige rien, il alerte.
+DATE_DEPLOIEMENT_CIRCUIT_BREAKER = "2026-10-11"
+FENETRE_VERIFICATION_JOURS = 3   # ne re-signale pas indéfiniment un incident déjà vu et corrigé
+SEUIL_REDUCTION_DD = -15.0
+SEUIL_STOP_DD       = -25.0
+
+
+def _taille_approx(frais_total):
+    """Reconstruit la taille de position à partir des frais (achat + vente,
+    0,5%/côté) : frais_total / 0.01 ≈ taille d'origine, à ±quelques % près
+    (arrondi au nombre entier d'actions)."""
+    if not frais_total:
+        return None
+    return frais_total / 0.01
+
+
+def verifier_circuit_breaker_satellite():
+    """Pour chaque trade satellite ouvert depuis le 11/10, vérifie que la
+    taille réellement utilisée correspond au palier de drawdown attendu à la
+    date d'ouverture (plein tarif / réduit à 1000€ / aucune ouverture)."""
+    pf = charger_json(FICHIER_PORTEFEUILLE)
+    if not pf:
+        return None, "portefeuille_virtuel.json introuvable"
+
+    hv = pf.get("historique_valeur", {})
+    hv_valides = {k: v for k, v in hv.items() if isinstance(v, (int, float)) and v == v}
+    if not hv_valides:
+        return None, "historique_valeur vide, rien à vérifier"
+    dates_triees = sorted(hv_valides)
+
+    def drawdown_avant(date_cible):
+        """Drawdown connu à la veille de date_cible (dernier point < date_cible)."""
+        anterieurs = [d for d in dates_triees if d < date_cible]
+        if not anterieurs:
+            return None
+        pic = max(hv_valides[d] for d in dates_triees if d <= anterieurs[-1])
+        valeur = hv_valides[anterieurs[-1]]
+        return (valeur - pic) / pic * 100 if pic > 0 else 0.0
+
+    today = datetime.datetime.now(TZ_PARIS).date()
+    borne_recente = max(
+        DATE_DEPLOIEMENT_CIRCUIT_BREAKER,
+        (today - datetime.timedelta(days=FENETRE_VERIFICATION_JOURS)).isoformat(),
+    )
+
+    violations = []
+    trades_verifies = 0
+    for t in pf.get("trades", []):
+        # Fenêtre glissante récente seulement : un incident déjà détecté et
+        # corrigé ne doit pas re-déclencher une alerte à chaque run, pour
+        # toujours. Passé la fenêtre, il appartient à l'historique (HISTORY.md).
+        if t.get("date_entree", "") < borne_recente:
+            continue
+        dd = drawdown_avant(t["date_entree"])
+        if dd is None:
+            continue
+        trades_verifies += 1
+        taille = _taille_approx(t.get("frais_total"))
+
+        if dd <= SEUIL_STOP_DD:
+            violations.append(
+                f"{t['nom']} ouvert le {t['date_entree']} à {taille:.0f}€ "
+                f"alors que le drawdown était {dd:.1f}% (<= {SEUIL_STOP_DD}%, "
+                f"AUCUNE ouverture attendue)")
+        elif dd <= SEUIL_REDUCTION_DD and taille and taille > 1300:
+            violations.append(
+                f"{t['nom']} ouvert le {t['date_entree']} à {taille:.0f}€ "
+                f"(taille pleine) alors que le drawdown était {dd:.1f}% "
+                f"(<= {SEUIL_REDUCTION_DD}%, taille réduite ~1000€ attendue)")
+
+    if violations:
+        return False, f"{len(violations)} violation(s) sur {trades_verifies} trade(s) vérifié(s) : " + " | ".join(violations[:3])
+    return True, f"OK — {trades_verifies} trade(s) vérifié(s) depuis le {DATE_DEPLOIEMENT_CIRCUIT_BREAKER}, aucune violation"
 
 
 # Agents hebdo et mensuels (ajout du 18/07 : la panne du cron Dividendes était
@@ -226,6 +311,11 @@ if __name__ == "__main__":
     print("Vérification Scoring intraday (hier)...")
     ok, msg = verifier_intraday_hier()
     statuts["Scoring intraday"] = (ok, msg)
+    print(f"  {'OK' if ok else ('IGNORÉ' if ok is None else 'ECHEC')} : {msg}")
+
+    print("Vérification cohérence circuit-breaker satellite...")
+    ok, msg = verifier_circuit_breaker_satellite()
+    statuts["Circuit-breaker satellite"] = (ok, msg)
     print(f"  {'OK' if ok else ('IGNORÉ' if ok is None else 'ECHEC')} : {msg}")
 
     print("Vérification agents hebdo/mensuels...")
