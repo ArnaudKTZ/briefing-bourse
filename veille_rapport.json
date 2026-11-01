@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "nb_articles": 40,
   "top": [
     {
@@ -13,45 +13,8 @@
         "llm",
         "language model"
       ],
+      "deja_tranche": [],
       "extrait": "Financial news can influence investment decisions long after publication. Timely news may reach an investor before prices fully adjust, whereas older news may already be reflected in prices."
-    },
-    {
-      "titre": "Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check",
-      "lien": "https://arxiv.org/abs/2610.33453v1",
-      "date": "2026-10-24",
-      "score": 10,
-      "hits": [
-        "cross-sectional",
-        "out-of-sample",
-        "ensemble",
-        "machine learning"
-      ],
-      "extrait": "Recent advances in financial machine learning have prompted growing interest in applying deep neural networks to convertible bond valuation and forecasting. However, existing studies often focus on in-sample valuation fit or cross-sectional return rankings, leaving out-of-sample next-day price forecasting insufficiently benchmarked against persistence."
-    },
-    {
-      "titre": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
-      "lien": "https://arxiv.org/abs/2610.30557v1",
-      "date": "2026-10-22",
-      "score": 10,
-      "hits": [
-        "backtest",
-        "llm",
-        "agent",
-        "drawdown"
-      ],
-      "extrait": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content."
-    },
-    {
-      "titre": "Lineage-Aware Search Control for LLM-Based Evolutionary Factor Mining",
-      "lien": "https://arxiv.org/abs/2610.29663v1",
-      "date": "2026-10-21",
-      "score": 10,
-      "hits": [
-        "factor",
-        "llm",
-        "language model"
-      ],
-      "extrait": "Formulaic alpha factor mining searches for symbolic expressions that transform market data into predictive signals. Recent LLM-based evolutionary factor mining methods use large language models as semantic variation operators."
     },
     {
       "titre": "Simple Portfolios that Deliver Consistent Decent Returns",
@@ -64,30 +27,8 @@
         "risk parity",
         "backtest"
       ],
+      "deja_tranche": [],
       "extrait": "Portfolio construction has been studied extensively in both academia and industry. Its applications range from pension funds and hedge funds to private savings."
-    },
-    {
-      "titre": "Det-MASO: Diversity-Regularized Multi-Agent Sequential Optimization for Factor Generation",
-      "lien": "https://arxiv.org/abs/2610.34936v1",
-      "date": "2026-10-26",
-      "score": 9,
-      "hits": [
-        "factor",
-        "regime",
-        "agent"
-      ],
-      "extrait": "Quantitative investment requires alpha factors that are both predictive and diverse. However, existing factor generation methods, including formulaic mining and neural end-to-end models, are mostly based on a single-agent design, which limits exploration of the factor space and reduces adaptability to changing markets."
-    },
-    {
-      "titre": "Sparse Autoencoders as Implicit Diversification Regularisers for Cross-Sectional Cryptocurrency Returns",
-      "lien": "https://arxiv.org/abs/2610.39205v1",
-      "date": "2026-10-29",
-      "score": 8,
-      "hits": [
-        "factor",
-        "cross-sectional"
-      ],
-      "extrait": "Factor models are central to asset pricing and portfolio construction, but neural factors are often difficult to interpret, and their effect on portfolio risk is unclear. A sparse autoencoder (SAE) may address both concerns by describing daily returns across many assets with only a few active features."
     },
     {
       "titre": "Financial Context-Rich Strategy for Actor-Critic based Agents: A Deep Reinforcement Learning Approach for Stock Trading",
@@ -99,7 +40,77 @@
         "reinforcement learning",
         "agent"
       ],
+      "deja_tranche": [],
       "extrait": "In modern financial markets, more than 3/4th of the large volume trade is executed by algorithmic trading based on advanced trading strategies to attain higher precision and speed than traditional human traders. The conventional strategies focused on price-based indicators are inadequate in capturing the market dynamism arising from real-world events such as social sentiments, political instability, or sudden…"
+    },
+    {
+      "titre": "Certifying Reward Alignment in Portfolio Reinforcement Learning",
+      "lien": "https://arxiv.org/abs/2610.34153v2",
+      "date": "2026-10-25",
+      "score": 7,
+      "hits": [
+        "backtest",
+        "reinforcement learning",
+        "agent"
+      ],
+      "deja_tranche": [],
+      "extrait": "Financial reinforcement learning often translates an investment objective into an additive risk-adjusted reward. An agent can optimise that reward accurately yet implement a different financial preference."
+    },
+    {
+      "titre": "FinLLM-KG: Knowledge Graph-Enhanced LLMs for Financial Sentiment Analysis in Algorithmic Trading",
+      "lien": "https://arxiv.org/abs/2610.36083v1",
+      "date": "2026-10-26",
+      "score": 6,
+      "hits": [
+        "llm",
+        "language model"
+      ],
+      "deja_tranche": [],
+      "extrait": "Recent advances in Generative AI have substantially improved financial sentiment analysis through post-trained financial large language models (LLMs). However, existing approaches remain confined to predicting the sentiment of each article in isolation and operate as black boxes, which limits contextual understanding and hinders deployment in high-stakes financial decision-making."
+    },
+    {
+      "titre": "Weekend Crypto Volatility and Monday Market Risk",
+      "lien": "https://arxiv.org/abs/2610.35702v1",
+      "date": "2026-10-26",
+      "score": 6,
+      "hits": [
+        "factor",
+        "out-of-sample"
+      ],
+      "deja_tranche": [],
+      "extrait": "Cryptocurrencies trade continuously while major traditional markets close over the weekend. We examine whether weekend cryptocurrency volatility predicts Monday variance in equity, commodity and fixed-income markets."
+    },
+    {
+      "titre": "Cross-Bond Panel Learning for Next-Day Price Forecasting of Chinese Convertible Bonds: A Reality Check",
+      "lien": "https://arxiv.org/abs/2610.33453v1",
+      "date": "2026-10-24",
+      "score": 5,
+      "hits": [
+        "cross-sectional",
+        "out-of-sample",
+        "ensemble",
+        "machine learning"
+      ],
+      "deja_tranche": [
+        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
+      ],
+      "extrait": "Recent advances in financial machine learning have prompted growing interest in applying deep neural networks to convertible bond valuation and forecasting. However, existing studies often focus on in-sample valuation fit or cross-sectional return rankings, leaving out-of-sample next-day price forecasting insufficiently benchmarked against persistence."
+    },
+    {
+      "titre": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+      "lien": "https://arxiv.org/abs/2610.30557v1",
+      "date": "2026-10-22",
+      "score": 5,
+      "hits": [
+        "backtest",
+        "llm",
+        "agent",
+        "drawdown"
+      ],
+      "deja_tranche": [
+        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
+      ],
+      "extrait": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content."
     }
   ]
 }

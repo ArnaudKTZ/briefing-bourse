@@ -1,0 +1,35 @@
+{
+  "periode": "2026-07-16 -> 2026-10-23",
+  "n_jours": 72,
+  "n_obs": 2808,
+  "univers_moy_j5": -0.176,
+  "buckets": {
+    "très négatif (<=-0.3)": {
+      "n": 10,
+      "moy": -2.797,
+      "edge": -2.62
+    },
+    "négatif (-0.3 à -0.05)": {
+      "n": 64,
+      "moy": 1.646,
+      "edge": 1.82
+    },
+    "neutre (-0.05 à 0.05)": {
+      "n": 616,
+      "moy": -0.322,
+      "edge": -0.15
+    },
+    "positif (0.05 à 0.3)": {
+      "n": 976,
+      "moy": -0.361,
+      "edge": -0.18
+    },
+    "très positif (>=0.3)": {
+      "n": 1142,
+      "moy": -0.018,
+      "edge": 0.16
+    }
+  },
+  "ic_spearman_j5": -0.0049,
+  "verdict": "Signal mesurable : IC=-0.0049 ; buckets porteurs : négatif (-0.3 à -0.05) (+1.82 pts, n=64). À confirmer avant de remonter POIDS_NEWS (passer par scoring_intraday.py, jamais en aveugle)."
+}

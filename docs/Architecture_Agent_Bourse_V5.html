@@ -406,6 +406,17 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
 </ul>
 <p>Ni l'un ni l'autre ne change quoi que ce soit automatiquement. Les deux se contentent de rendre visible, sans attendre un audit manuel, ce qu'avant on ne découvrait qu'en épluchant les fichiers à la main toutes les quelques semaines.</p>
 
+<h3>B.22 Six évolutions du 01/11 : mesurer chaque brique, pas juste le tout</h3>
+<p>Suite directe de B.21. Demande d'Arnaud : proposer des évolutions concrètes pour chaque agent, priorité haute et moyenne. Six faites le même jour, toutes testées sur données réelles avant d'être déployées :</p>
+<ul>
+  <li><strong>Évaluateur — chaque indicateur jugé seul.</strong> Le code calculait déjà la contribution de chaque facteur (RSI, MACD, Bollinger, momentum...) au score, mais ne la mesurait jamais contre le rendement réel. Résultat sur ~90 jours : le RSI a un vrai edge dans les deux sens (survente +1,2 pt, surachat -0,8 pt) ; le MACD n'en a aucun malgré un poids identique. Un signal mort pourrait enfin être coupé comme le poids News/Espion en 07/26, mais pas avant de laisser la mesure tourner quelques semaines.</li>
+  <li><strong>Risk Engine — journal des vrais déclenchements.</strong> P7 (régime) et P12 (drawdown) n'étaient audités qu'à la main, ponctuellement. Un journal (<code>risk_engine_evenements.json</code>) s'alimente maintenant tout seul à chaque passage.</li>
+  <li><strong>Stratège — relit sa propre proposition du mois dernier.</strong> Avant, chaque conseil écrasait le précédent sans jamais vérifier s'il avait été suivi. Il doit maintenant commenter, à partir des faits (dont le statut du Watchdog), si sa proposition a été appliquée.</li>
+  <li><strong>Veille — registre des idées déjà tranchées.</strong> VIX, Fear & Greed, canari, RSI/MACD/Bollinger retail : si un nouvel article arXiv recoupe un sujet déjà testé et rejeté ici, le digest le dit explicitement au lieu de laisser croire à une découverte.</li>
+  <li><strong>Crypto DM — la "suspicion de contamination" n'en était pas une.</strong> Le Professeur affichait ce texte à chaque run en retard sur B&H, sans aucun calcul réel derrière. Vérifié : la formule de momentum est identique à celle du cœur DM, aucun bug. Texte corrigé pour dire la vraie explication (établie le 08/09) : l'airbag s'est mis en refuge juste avant un rally.</li>
+  <li><strong>Sentiment News — remesuré avec 4 mois de données en plus.</strong> Rejoué via l'historique git de <code>rapport_news.json</code> (72 jours, 2 808 observations). IC de Spearman -0,005 : toujours aucun pouvoir de classement. Le poids à 0 depuis juillet reste justifié par des données fraîches, pas seulement par une décision ancienne.</li>
+</ul>
+
 <h2 id="annexe-c">Annexe C — Glossaire</h2>
 
 <h3>C.1 Termes de bourse et de mesure</h3>

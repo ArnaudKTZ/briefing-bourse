@@ -84,6 +84,30 @@ def fetch_arxiv():
     return articles
 
 
+# Registre des hypothèses déjà tranchées par ce projet (ajout du 01/11). Avant
+# ça, rien n'empêchait de ré-explorer deux fois la même idée déjà réfutée (le
+# VIX et le Fear & Greed ont chacun été proposés puis rejetés à deux reprises
+# dans l'historique). Ne bloque rien : annote seulement, pour que le digest
+# dise "déjà tranché, voir HISTORY.md" au lieu de refaire semblant de découvrir.
+DEJA_TRANCHE = {
+    "vix": "Malus VIX testé et retiré le 05/07/2026 : un VIX élevé précède des rendements CAC SUPÉRIEURS, pas inférieurs (26 ans de données).",
+    "fear and greed": "Indice Fear & Greed testé et retiré le 26/06/2026 : contre-productif, même conclusion que le VIX.",
+    "fear & greed": "Indice Fear & Greed testé et retiré le 26/06/2026 : contre-productif, même conclusion que le VIX.",
+    "canary": "Signal canari (DAA, Keller & Keuning) testé sur le cœur Dual Momentum le 11/10/2026 : rejeté (CAGR -2,51 pts/an pour seulement +0,6 pt de drawdown en moins).",
+    "breadth momentum": "Breadth momentum façon VAA/PAA écarté le 11/10/2026 : aucune publication ne le valide sur un univers investi à seulement 2 actifs (World/USA).",
+    "emerging market": "Les marchés émergents comme 3e classe d'actif DÉTENUE ont été rejetés deux fois (dual_momentum_backtest puis piste1_bridage_pea du 08/09/2026) : ils aggravent la pire chute du cœur.",
+    "rsi": "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE.",
+}
+
+
+def verifier_deja_tranche(article):
+    """Articles qui recoupent une hypothèse déjà testée et tranchée ici.
+    N'exclut rien (un nouvel angle sur un vieux sujet peut rester utile),
+    annote seulement pour éviter de perdre du temps à redécouvrir."""
+    texte = (article["titre"] + " " + article["resume"]).lower()
+    return [v for cle, v in DEJA_TRANCHE.items() if cle in texte]
+
+
 def scorer_pertinence(article):
     texte = (article["titre"] + " " + article["resume"]).lower()
     score = 0
@@ -147,11 +171,19 @@ def generer_html(now, top):
         extrait_safe = html.escape(extrait_resume(a.get("resume", "")))
         bloc_extrait = (f"<p style='margin:6px 0 0;font-size:13px;color:#444;line-height:1.45;'>{extrait_safe}</p>"
                         if extrait_safe else "")
+        deja = a.get("deja_tranche") or []
+        bloc_deja = ""
+        if deja:
+            verdicts_safe = "".join(f"<li>{html.escape(v)}</li>" for v in deja)
+            bloc_deja = (f"<div style='margin:8px 0 0;padding:8px 10px;background:#fff3e0;border-left:3px solid #e65100;"
+                         f"border-radius:4px;font-size:11px;color:#8a4b00;'>"
+                         f"<strong>Déjà tranché ici :</strong><ul style='margin:4px 0 0;padding-left:16px;'>{verdicts_safe}</ul></div>")
         cartes += f"""<div style='border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:12px;'>
           <a href='{lien_safe}' style='font-size:15px;font-weight:600;color:#185fa5;text-decoration:none;'>{titre_safe}</a>
           {bloc_extrait}
           <p style='margin:6px 0 0;font-size:12px;color:#0f6e56;'>{pourquoi(h)}</p>
           <p style='margin:4px 0 0;font-size:12px;color:#999;'>{a['date']} · mots-clés : {', '.join(a['hits'][:5])}</p>
+          {bloc_deja}
         </div>"""
 
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
@@ -179,6 +211,9 @@ if __name__ == "__main__":
 
     for a in articles:
         a["score"], a["hits"] = scorer_pertinence(a)
+        a["deja_tranche"] = verifier_deja_tranche(a)
+        if a["deja_tranche"]:
+            a["score"] = max(0, a["score"] - 5)   # ne disparaît pas, mais cède la place aux idées neuves
 
     pertinents = [a for a in articles if a["score"] >= 3]
     pertinents.sort(key=lambda x: x["score"], reverse=True)
@@ -193,6 +228,7 @@ if __name__ == "__main__":
         "nb_articles": len(articles),
         "top": [{"titre": a["titre"], "lien": a["lien"], "date": a["date"],
                  "score": a["score"], "hits": a["hits"],
+                 "deja_tranche": a.get("deja_tranche") or [],
                  "extrait": extrait_resume(a.get("resume", ""))} for a in top],
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:

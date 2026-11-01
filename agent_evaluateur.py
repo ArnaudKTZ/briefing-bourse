@@ -129,13 +129,106 @@ def rendements_forward(historique, closes):
                 px = close_apres(closes[nom], date, h)
                 rends[h] = round((px / prix - 1) * 100, 2) if (px and prix_ok(px)) else None
             obs.append({
-                "date":   date,
-                "nom":    nom,
-                "signal": d.get("signal", "SURVEILLER"),
-                "score":  d.get("score", 50),
-                "rends":  rends,
+                "date":         date,
+                "nom":          nom,
+                "signal":       d.get("signal", "SURVEILLER"),
+                "score":        d.get("score", 50),
+                "rends":        rends,
+                # Champs bruts du briefing, non encore exploités avant le 01/11 :
+                # le score composite était mesuré, jamais ses composants un par
+                # un. Permet de reproduire l'audit News/Espion (02/07) sur
+                # chaque indicateur technique plutôt que sur le score global.
+                "rsi":          d.get("rsi"),
+                "macd":         d.get("macd"),
+                "boll_zone":    d.get("boll_zone"),
+                "golden_cross": d.get("golden_cross"),
+                "death_cross":  d.get("death_cross"),
             })
     return obs
+
+
+def rsi_bucket(rsi):
+    if rsi is None or rsi != rsi:
+        return None
+    if rsi < 30:  return "survente (<30)"
+    if rsi < 45:  return "bas (30-45)"
+    if rsi < 55:  return "neutre (45-55)"
+    if rsi < 70:  return "haut (55-70)"
+    return "surachat (>=70)"
+
+
+def boll_bucket(boll_zone):
+    if not boll_zone:
+        return None
+    if boll_zone.startswith("SOUS bande inf"):
+        return "sous bande basse (survendu)"
+    if boll_zone.startswith("AU-DESSUS bande sup"):
+        return "au-dessus bande haute (suracheté)"
+    if boll_zone.startswith("dans les bandes"):
+        return "dans les bandes"
+    return None
+
+
+def stats_par_indicateur(obs, h=5):
+    """Edge de l'univers pour chaque sous-indicateur technique PRIS SEUL,
+    indépendamment du score composite final. Même logique que l'audit
+    News/Espion du 02/07 (poids mis à 0 après preuve d'absence d'edge),
+    étendue à RSI/MACD/Bollinger/golden-death cross : ce n'est pas le score
+    final qui doit être jugé en bloc, mais chaque brique qui le compose."""
+    univers = [o["rends"].get(h) for o in obs]
+    m_uni = moyenne(univers)
+    if m_uni is None:
+        return None
+
+    def _bucket(vals):
+        vals = [v for v in vals if v is not None]
+        m = moyenne(vals)
+        return {"n": len(vals), "moy": m, "edge": round(m - m_uni, 2) if m is not None else None}
+
+    rsi_res = {label: _bucket([o["rends"].get(h) for o in obs if rsi_bucket(o.get("rsi")) == label])
+               for label in ["survente (<30)", "bas (30-45)", "neutre (45-55)", "haut (55-70)", "surachat (>=70)"]}
+
+    macd_res = {label: _bucket([o["rends"].get(h) for o in obs if o.get("macd") == label])
+                for label in ["haussier", "baissier"]}
+
+    boll_res = {label: _bucket([o["rends"].get(h) for o in obs if boll_bucket(o.get("boll_zone")) == label])
+                for label in ["sous bande basse (survendu)", "dans les bandes", "au-dessus bande haute (suracheté)"]}
+
+    cross_res = {
+        "golden cross actif": _bucket([o["rends"].get(h) for o in obs if o.get("golden_cross") is True]),
+        "death cross actif":  _bucket([o["rends"].get(h) for o in obs if o.get("death_cross") is True]),
+    }
+
+    return {"univers_moy": m_uni, "rsi": rsi_res, "macd": macd_res,
+            "bollinger": boll_res, "cross": cross_res}
+
+
+def verdict_indicateurs(contrib, seuil_n=30, seuil_edge=0.3):
+    """Résume quels sous-indicateurs portent un edge mesurable (positif ou
+    négatif) et lesquels sont du poids mort — mêmes seuils de lecture que le
+    verdict composite (0.3 pt minimum, n>=30 pour ne pas juger sur du bruit)."""
+    if not contrib:
+        return "Pas encore assez de données pour juger indicateur par indicateur."
+    porteurs, morts = [], []
+    for famille, buckets in contrib.items():
+        if famille == "univers_moy":
+            continue
+        for label, s in buckets.items():
+            if s["n"] < seuil_n or s["edge"] is None:
+                continue
+            if abs(s["edge"]) >= seuil_edge:
+                signe = "edge positif" if s["edge"] > 0 else "edge NÉGATIF"
+                porteurs.append(f"{famille}={label} : {signe} {s['edge']:+.2f} pts (n={s['n']})")
+            else:
+                morts.append(f"{famille}={label} (n={s['n']})")
+    if not porteurs:
+        return ("Aucun sous-indicateur ne montre d'edge mesurable pris seul (tous proches de "
+                "l'univers, <0,3 pt) : le score composite n'est probablement porté par aucun "
+                "facteur technique individuel clair.")
+    texte = "Indicateurs avec edge mesurable pris seuls : " + " ; ".join(porteurs) + "."
+    if morts:
+        texte += f" Sans edge mesurable : {', '.join(morts)}."
+    return texte
 
 
 def moyenne(vals):
@@ -390,7 +483,8 @@ def bloc_html_fenetre_propre(propre):
   </div>"""
 
 
-def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_txt, propre=None):
+def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_txt, propre=None,
+                  contrib_indicateurs=None, verdict_indic_txt=None):
     n_jours = len({o["date"] for o in obs})
 
     lignes = ""
@@ -441,6 +535,38 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
   <h3 style='font-size:14px;margin:20px 0 8px;'>Pouvoir de classement du score (IC de Spearman à J+5)</h3>
   <p style='margin:0;font-size:13px;color:#999;'>Pas encore assez de coupes quotidiennes avec recul J+5.</p>"""
 
+    if contrib_indicateurs:
+        lignes_indic = ""
+        for famille, label_famille in [("rsi", "RSI"), ("macd", "MACD"),
+                                        ("bollinger", "Bollinger"), ("cross", "Golden/Death cross")]:
+            for label, s in contrib_indicateurs.get(famille, {}).items():
+                m, e = s.get("moy"), s.get("edge")
+                c = "#2e7d32" if (e or 0) > 0 else "#c62828"
+                lignes_indic += f"""<tr style='border-bottom:1px solid #eee;'>
+                  <td style='padding:6px 10px;font-size:12px;color:#999;'>{label_famille}</td>
+                  <td style='padding:6px 10px;'>{label}</td>
+                  <td style='padding:6px 10px;text-align:center;'>{s.get('n', 0)}</td>
+                  <td style='padding:6px 10px;text-align:right;'>{'—' if m is None else format(m, '+.2f') + '%'}</td>
+                  <td style='padding:6px 10px;text-align:right;color:{c};font-weight:600;'>{'—' if e is None else format(e, '+.2f') + ' pts'}</td>
+                </tr>"""
+        bloc_indicateurs = f"""
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Chaque brique du score, prise seule (nouveau 01/11)</h3>
+  <p style='margin:0 0 8px;font-size:12px;color:#666;'>Le score final est un composite. Ici chaque sous-indicateur est
+    jugé indépendamment, à J+5, contre l'univers — même logique que l'audit qui a mis le poids News à 0 en juillet.</p>
+  <table style='width:100%;border-collapse:collapse;font-size:13px;'>
+    <thead><tr style='background:#f5f5f5;'>
+      <th style='padding:6px 10px;text-align:left;'>Famille</th>
+      <th style='padding:6px 10px;text-align:left;'>Bucket</th>
+      <th style='padding:6px 10px;'>N</th>
+      <th style='padding:6px 10px;text-align:right;'>Rdt moyen</th>
+      <th style='padding:6px 10px;text-align:right;'>Edge vs univers</th>
+    </tr></thead>
+    <tbody>{lignes_indic}</tbody>
+  </table>
+  <p style='margin:8px 0 0;font-size:12px;color:#555;'><strong>Verdict :</strong> {verdict_indic_txt or ''}</p>"""
+    else:
+        bloc_indicateurs = ""
+
     lignes_regimes = lignes_tableau_groupes(regimes, [
         ("haussier", "Haussier (CAC ≥ MM200)"), ("baissier", "Baissier (CAC < MM200)")])
     lignes_chocs = lignes_tableau_groupes(chocs, [
@@ -480,6 +606,7 @@ def generer_html(now, obs, stats_h, buckets_j5, ic_j5, regimes, chocs, verdict_t
     </tr></thead>
     <tbody>{lignes_buckets}</tbody>
   </table>
+  {bloc_indicateurs}
   {bloc_ic}
   <h3 style='font-size:14px;margin:20px 0 8px;'>Par régime de marché (à J+5)</h3>
   <table style='width:100%;border-collapse:collapse;font-size:13px;'>
@@ -562,12 +689,15 @@ if __name__ == "__main__":
     regimes = stats_groupes(obs, ics_par_jour, regime_par_date, "regime", ["haussier", "baissier"])
     chocs   = stats_groupes(obs, ics_par_jour, choc_par_date, "choc", ["post-choc", "calme"])
     verdict_txt = verdict(stats_h, buckets_j5, ic_resume)
+    contrib_indicateurs = stats_par_indicateur(obs, 5)
+    verdict_indic_txt = verdict_indicateurs(contrib_indicateurs)
     propre = bilan_fenetre_propre(obs)
     print(f"IC J+5 : {ic_resume}")
     print(f"Fenêtre propre depuis {propre['depuis']} : edge net J+5 = {propre['edge_net_j5']}, "
           f"IC = {(propre['ic_j5'] or {}).get('ic_moyen')}, {propre['n_obs']} obs -> {propre['verdict']}")
     print(f"Jours post-choc dans l'historique : {len([d for d, c in choc_par_date.items() if c == 'post-choc'])}")
     print(f"Verdict : {verdict_txt}")
+    print(f"Verdict par indicateur (J+5) : {verdict_indic_txt}")
 
     rapport = {
         "date":       now.date().isoformat(),
@@ -580,12 +710,15 @@ if __name__ == "__main__":
         "chocs":      chocs,
         "verdict":    verdict_txt,
         "fenetre_propre": propre,
+        "contribution_par_indicateur_j5": contrib_indicateurs,
+        "verdict_par_indicateur": verdict_indic_txt,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
     print("Envoi rapport hebdo...")
-    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt, propre)
+    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt, propre,
+                         contrib_indicateurs, verdict_indic_txt)
     envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")
