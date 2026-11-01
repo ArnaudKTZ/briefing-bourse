@@ -33,6 +33,7 @@ AGENTS = [
     "agent_veille.py",
     "agent_shadow.py",
     "agent_evaluateur.py",
+    "agent_screener_fondamental.py",
 ]
 
 # Packages tiers connus (stdlib exclus)
@@ -54,6 +55,7 @@ WORKFLOWS = {
     ".github/workflows/veille.yml":            "agent_veille.py",
     ".github/workflows/shadow.yml":            "agent_shadow.py",
     ".github/workflows/evaluateur.yml":        "agent_evaluateur.py",
+    ".github/workflows/screener_fondamental.yml": "agent_screener_fondamental.py",
 }
 
 # Secrets requis par agent (si l'agent envoie des emails ou appelle l'API)
@@ -69,6 +71,7 @@ SECRETS_REQUIS = {
     "agent_veille.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
     "agent_shadow.py":         {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
     "agent_evaluateur.py":     {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
+    "agent_screener_fondamental.py": {"ZOHO_EMAIL", "ZOHO_PASSWORD"},
 }
 
 # JSON produits → fraîcheur max attendue en heures (None = pas vérifié)
@@ -85,6 +88,7 @@ JSON_FRAICHEUR = {
     "professeur_rapport.json":        None,
     "shadow_rapport.json":            None,
     "evaluateur_rapport.json":        None,
+    "screener_fondamental_cac40.json": None,
 }
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────

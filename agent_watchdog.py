@@ -18,6 +18,8 @@ import zoneinfo
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+from lookahead_guard import auditer_usage_fondamentaux
+
 TZ_PARIS = zoneinfo.ZoneInfo("Europe/Paris")
 
 ZOHO_EMAIL    = os.environ.get("ZOHO_EMAIL", "Arnaud.kuntz@zoho.eu")
@@ -176,6 +178,18 @@ def verifier_circuit_breaker_satellite():
     return True, f"OK — {trades_verifies} trade(s) vérifié(s) depuis le {DATE_DEPLOIEMENT_CIRCUIT_BREAKER}, aucune violation"
 
 
+def verifier_lookahead():
+    """Sentinelle Look-Ahead (ajout du 01/11) : un nouveau script qui touche
+    des données fondamentales/consensus sans être recensé dans le registre
+    de lookahead_guard.py est signalé, plutôt que silencieusement considéré
+    sûr. Ne bloque rien, alerte seulement."""
+    resultats = auditer_usage_fondamentaux()
+    non_verifies = [f for f, v in resultats.items() if v.startswith("À VÉRIFIER")]
+    if non_verifies:
+        return False, f"{len(non_verifies)} fichier(s) non audité(s) touchent des données fondamentales/consensus : {non_verifies}"
+    return True, f"OK — {len(resultats)} fichier(s) utilisant des données fondamentales/consensus, tous vérifiés sûrs"
+
+
 # Agents hebdo et mensuels (ajout du 18/07 : la panne du cron Dividendes était
 # passée inaperçue une semaine, découverte par hasard le 13/07). Hebdo : alerte
 # si le dernier rapport a plus de max_age_jours. Mensuel : alerte si aucun run
@@ -317,6 +331,11 @@ if __name__ == "__main__":
     ok, msg = verifier_circuit_breaker_satellite()
     statuts["Circuit-breaker satellite"] = (ok, msg)
     print(f"  {'OK' if ok else ('IGNORÉ' if ok is None else 'ECHEC')} : {msg}")
+
+    print("Vérification Sentinelle Look-Ahead...")
+    ok, msg = verifier_lookahead()
+    statuts["Sentinelle Look-Ahead"] = (ok, msg)
+    print(f"  {'OK' if ok else 'ECHEC'} : {msg}")
 
     print("Vérification agents hebdo/mensuels...")
     for libelle, fichier, cadence in SURVEILLANCE_PERIODIQUE:
