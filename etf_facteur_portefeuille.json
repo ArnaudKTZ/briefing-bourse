@@ -1,0 +1,15 @@
+{
+  "date_init": "2026-11-01",
+  "capital_depart": 10000.0,
+  "historique_valeur": {
+    "2026-11-01": 10000.0
+  },
+  "units": {
+    "Quality Europe": 24.044242,
+    "Low Vol Europe": 22.197558
+  },
+  "dernier_cours": {
+    "Quality Europe": 207.9499969482422,
+    "Low Vol Europe": 225.25
+  }
+}

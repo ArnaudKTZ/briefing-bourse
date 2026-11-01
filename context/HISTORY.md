@@ -25,6 +25,21 @@
 
 ---
 
+## 2026-11-01 (suite 2)
+
+### Les 5 idées restantes : 1 coupée (MACD), 1 volontairement laissée de côté (Bollinger), 1 reconnue infeasible (Shadow), 2 transformées en suivi mensuel
+
+- **Mémoire étendue dans `performance.json`** : `briefing_bourse_v3.py::sauvegarder_recommandations` sauvegarde maintenant aussi `volume_anormal`, `pct_52w_bas`, `divergence_rsi`, `pente_ma200`, `bonus_momentum_rel`, `bonus_analystes`, `bonus_fondamentaux`, `bonus_convergence_tf`, `malus_macro`, `malus_fear_greed`, `malus_banque_centrale` — tous déjà calculés avant d'être additionnés au score, jamais conservés avant. Zéro changement du scoring, juste de la mémoire en plus pour pouvoir un jour les juger comme RSI/MACD/Bollinger.
+- **MACD neutralisé** dans `scoring_intraday.py` et `briefing_bourse_v3.py` (constante `MACD_ACTIF = False`, même pattern que `POIDS_NEWS`/`POIDS_ESPION`). Preuve : aucun edge dans ~1500 obs haussières et ~1800 baissières (voir audit du jour), contre un edge réel pour le RSI à poids identique.
+- **Bollinger : vérifié plus en profondeur, PAS touché.** Avant de suivre l'intuition "le signe est peut-être inversé", test de robustesse multi-horizon (J+1/3/5/10) sur `stats_par_indicateur` : RSI survente/surachat est cohérent et même croissant sur les 4 horizons (ex. surachat : -0.45 → -0.62 → -0.84 → -1.59) — signal robuste. Bollinger "au-dessus bande haute" oscille sans tendance (+0.32 / +0.10 / +0.40 / +0.18) — ressemble à du bruit sur un échantillon encore petit (n~190). Décision : ne rien inverser en prod sur une preuve aussi fragile, garder sous surveillance pour la prochaine mesure.
+- **Confirmation croisée via Shadow : abandonnée après vérification, pas par facilité.** `shadow_alertes.json` journalise les raisons des ALERTES (score≥85, momentum intraday, gap+volume), pas les composantes RSI/MACD du score quotidien — aucune vraie confirmation indépendante possible avec ces données. Le test de robustesse multi-horizon ci-dessus a rempli ce rôle à la place, plus rigoureusement.
+- **ETF facteur + risk parity transformés en suivi mensuel réel**, dans `agent_dual_momentum.py` (déjà mensuel, pas de nouvel agent) :
+  - `gerer_portefeuille_etf_facteur()` : buy & hold virtuel Quality Europe (EQUA.PA) + Low Vol Europe (EVOE.PA), 50/50, initialisé aujourd'hui dans `etf_facteur_portefeuille.json`. Zéro trading, suit juste la valeur.
+  - `calculer_risk_parity()` : recalcule chaque mois la volatilité trailing réelle du cœur DM (60 derniers jours, annualisée ×√252) et de Crypto DM (6 derniers points mensuels, ×√12), en déduit les poids inverse-volatilité. **Bug trouvé et corrigé en cours de route** : la première version appliquait le même facteur d'annualisation (×√12) aux deux poches alors que le cœur est marqué au marché quotidiennement — sous-estimait sa vol d'un ordre de grandeur (2,9% au lieu de ~10,3% une fois corrigé, cohérent avec le ~12,3% du backtest d'origine). **Premier calcul réel** : Crypto DM étant immobile depuis juillet (refuge stablecoin, valeur plate à 995$), sa volatilité réalisée est exactement nulle — le risk parity n'a mathématiquement pas de sens tant qu'une poche ne bouge pas du tout. La fonction le reconnaît explicitement plutôt que de forcer un chiffre ou planter sur une division par zéro.
+- `test_agents.py` au vert après chaque étape. Doc : annexe B.23.
+
+---
+
 ## 2026-11-01 (suite)
 
 ### 6 évolutions priorité haute + moyenne, implémentées et testées sur données réelles

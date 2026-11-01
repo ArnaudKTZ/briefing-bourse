@@ -643,13 +643,18 @@ def calculer_score_confiance(d, persistance_intraday=None):
         if sk < 20:   score += 10
         elif sk > 80: score -= 10
 
-    # MACD
-    if d.get("macd") == "haussier":   score += 10
-    elif d.get("macd") == "baissier": score -= 10
+    # MACD — neutralisé le 01/11 (même traitement que News/Espion en 07/26) :
+    # l'audit par indicateur sur 90 jours / ~1500 obs dans chaque sens ne
+    # trouve aucun edge mesurable, contrairement au RSI (poids identique).
+    # Réactivation = repasser MACD_ACTIF à True.
+    MACD_ACTIF = False
+    if MACD_ACTIF:
+        if d.get("macd") == "haussier":   score += 10
+        elif d.get("macd") == "baissier": score -= 10
 
-    # Histogramme MACD (accélération)
-    if d.get("macd_hist_accelere") == "positif":  score += 5
-    elif d.get("macd_hist_accelere") == "negatif": score -= 5
+        # Histogramme MACD (accélération)
+        if d.get("macd_hist_accelere") == "positif":  score += 5
+        elif d.get("macd_hist_accelere") == "negatif": score -= 5
 
     # Moyennes mobiles
     cours = d.get("cours", 0)
@@ -1312,6 +1317,23 @@ def sauvegarder_recommandations(perf, donnees_actuelles):
             "boll_zone":    d.get("boll_zone", ""),
             "golden_cross": d.get("golden_cross", False),
             "death_cross":  d.get("death_cross", False),
+            # Ajout du 01/11 : ces champs existaient déjà dans d (calculés
+            # avant d'être additionnés dans le score), mais n'étaient jamais
+            # conservés dans performance.json. Sans eux, impossible de juger
+            # un jour si ces composantes ont un edge, comme on vient de le
+            # faire pour RSI/MACD/Bollinger. Aucun changement du scoring,
+            # juste de la mémoire en plus.
+            "volume_anormal":    d.get("volume_anormal"),
+            "pct_52w_bas":       d.get("pct_52w_bas"),
+            "divergence_rsi":    d.get("divergence_rsi"),
+            "pente_ma200":       d.get("pente_ma200"),
+            "bonus_momentum_rel":   d.get("bonus_momentum_rel", 0),
+            "bonus_analystes":      d.get("bonus_analystes", 0),
+            "bonus_fondamentaux":   d.get("bonus_fondamentaux", 0),
+            "bonus_convergence_tf": d.get("bonus_convergence_tf", 0),
+            "malus_macro":          d.get("malus_macro", 0),
+            "malus_fear_greed":     d.get("malus_fear_greed", 0),
+            "malus_banque_centrale": d.get("malus_banque_centrale", 0),
         }
 
     # Garde 90 jours

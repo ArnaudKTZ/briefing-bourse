@@ -417,6 +417,16 @@ Remplace la roadmap V5 « plus d'agents sur la V4 ». Le virage du 25/06 change 
   <li><strong>Sentiment News — remesuré avec 4 mois de données en plus.</strong> Rejoué via l'historique git de <code>rapport_news.json</code> (72 jours, 2 808 observations). IC de Spearman -0,005 : toujours aucun pouvoir de classement. Le poids à 0 depuis juillet reste justifié par des données fraîches, pas seulement par une décision ancienne.</li>
 </ul>
 
+<h3>B.23 Les 5 idées suivantes du 01/11 : une coupée, une volontairement laissée de côté</h3>
+<p>Suite de B.22. Arnaud a demandé d'aller plus loin sur toutes les pistes identifiées, pas seulement les deux prioritaires.</p>
+<ul>
+  <li><strong>Mémoire étendue (performance.json).</strong> Les deux moteurs de score (scoring intraday ET briefing quotidien) calculaient déjà des sous-composantes (momentum relatif, consensus analystes, fondamentaux, convergence multi-horizon, malus macro/Fed/Fear&Greed) jamais conservées dans l'historique permanent — seuls RSI/MACD/Bollinger/golden-death cross l'étaient. Ajoutées, sans toucher au calcul du score lui-même.</li>
+  <li><strong>MACD neutralisé.</strong> Même traitement que News/Espion en 07/26 : poids mis à 0 dans les deux moteurs de score, avec le même commentaire de réactivation si besoin. Preuve : aucun edge mesurable dans ~1500 observations haussières et ~1800 baissières, contre un edge réel et robuste pour le RSI à poids identique.</li>
+  <li><strong>Bollinger : PAS touché, volontairement.</strong> Le signe du signal "au-dessus de la bande haute" semblait inversé (edge positif mesuré contre un traitement codé comme baissier). Vérification de robustesse sur 4 horizons (J+1/3/5/10) : l'edge RSI est cohérent et croissant sur les 4 ; celui du Bollinger oscille sans tendance (+0,32 / +0,10 / +0,40 / +0,18). Conclusion honnête : probablement du bruit sur un échantillon encore petit, pas assez solide pour inverser un signe en production. Laissé sous surveillance, pas touché.</li>
+  <li><strong>Confirmation indépendante via Shadow : abandonnée, pour une bonne raison.</strong> Vérifié que `shadow_alertes.json` ne journalise pas les mêmes données (alertes score≥85/momentum/gap, pas RSI/MACD) : aucune vraie confirmation croisée possible avec les données actuelles. Remplacé par le test de robustesse multi-horizon ci-dessus, plus rigoureux dans ce cas.</li>
+  <li><strong>ETF facteur et risk parity, transformés en suivi mensuel.</strong> Les deux étaient des calculs ponctuels du 29/10. Le cœur DM (1x/mois) alimente maintenant `etf_facteur_portefeuille.json` (buy & hold Quality+Low Vol Europe, zéro trading) et `risk_parity_poches.json` (poids inverse-volatilité cœur DM/Crypto DM, volatilité trailing recalculée chaque mois, satellite toujours exclu). Premier calcul réel : Crypto DM étant immobile depuis juillet (refuge stablecoin), sa volatilité réalisée est nulle — le risk parity n'a mathématiquement pas de sens tant qu'une poche ne bouge pas du tout. Rien ne force un chiffre dans ce cas, le calcul se contente d'attendre.</li>
+</ul>
+
 <h2 id="annexe-c">Annexe C — Glossaire</h2>
 
 <h3>C.1 Termes de bourse et de mesure</h3>

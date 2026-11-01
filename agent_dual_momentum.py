@@ -160,6 +160,127 @@ def gerer_portefeuille_dm(momentums, poche, now):
     return round(valeur, 2), round(perf, 2), pf["date_init"]
 
 
+# ─── SUIVI ETF FACTEUR (Quality/Low Vol Europe) — ajout du 01/11 ──────────────
+# Recommandation chiffrée le 29/10 (piste5_etf_facteur.py) pour remplacer le
+# satellite stock-picking : sur 10 ans ET sur la fenêtre exacte du satellite,
+# les deux ETF battent le CAC 40 ET le satellite, sans aucun trading. Restait
+# un calcul ponctuel ; transformé ici en suivi mensuel buy & hold (zéro euro
+# réel, zéro trading, juste accumuler un historique comparable au cœur DM
+# plutôt que de refaire le calcul à la main chaque fois qu'on veut un chiffre
+# à jour). Aucune décision d'allocation réelle : Arnaud décide, pas l'agent.
+
+FICHIER_ETF_FACTEUR = "etf_facteur_portefeuille.json"
+ETF_FACTEUR = {"Quality Europe": "EQUA.PA", "Low Vol Europe": "EVOE.PA"}
+
+
+def gerer_portefeuille_etf_facteur(now):
+    today = now.date().isoformat()
+    if os.path.exists(FICHIER_ETF_FACTEUR):
+        with open(FICHIER_ETF_FACTEUR, "r", encoding="utf-8") as f:
+            pf = json.load(f)
+    else:
+        pf = {"date_init": today, "capital_depart": CAPITAL_DEPART, "historique_valeur": {}}
+
+    prix = {}
+    for nom, ticker in ETF_FACTEUR.items():
+        try:
+            h = yf.Ticker(ticker).history(period="5d")["Close"].dropna()
+            if not h.empty:
+                prix[nom] = float(h.iloc[-1])
+        except Exception as e:
+            print(f"  ETF facteur {nom} : indisponible ({e})")
+
+    if len(prix) < len(ETF_FACTEUR):
+        print("  ETF facteur : prix incomplets, pas de mise à jour ce mois-ci")
+        return None
+
+    if "units" not in pf:
+        budget_par_etf = pf["capital_depart"] / len(prix)
+        pf["units"] = {nom: round(budget_par_etf / p, 6) for nom, p in prix.items()}
+
+    valeur = sum(pf["units"].get(nom, 0) * p for nom, p in prix.items())
+    pf["historique_valeur"][today] = round(valeur, 2)
+    pf["dernier_cours"] = prix
+
+    with open(FICHIER_ETF_FACTEUR, "w", encoding="utf-8") as f:
+        json.dump(pf, f, ensure_ascii=False, indent=2)
+
+    perf = (valeur - pf["capital_depart"]) / pf["capital_depart"] * 100
+    return round(valeur, 2), round(perf, 2)
+
+
+# ─── SUIVI RISK PARITY INTER-POCHES — ajout du 01/11 ──────────────────────────
+# Cadre calculé le 29/10 (piste4_risk_parity_poches.py) : répartir le capital
+# RÉEL futur entre poches à edge positif (cœur DM, Crypto DM) par inverse de
+# leur volatilité réalisée, plutôt qu'un pourcentage choisi à la main. Le
+# satellite reste exclu (edge net négatif prouvé, le risk parity est agnostique
+# au rendement et lui redonnerait du capital à tort). Recalculé chaque mois
+# avec la volatilité TRAILING réelle des deux poches, pas figé une fois pour
+# toutes. Rien n'est déplacé : c'est un chiffre de référence, pas une action.
+
+FICHIER_RISK_PARITY = "risk_parity_poches.json"
+
+
+def volatilite_annualisee(historique_valeur, n_derniers, facteur_annualisation):
+    """Écart-type des rendements successifs sur les n_derniers points connus,
+    annualisé par facteur_annualisation. ATTENTION fréquence : le cœur DM est
+    marqué au marché CHAQUE JOUR (facteur 252), Crypto DM seulement une fois
+    par mois (facteur 12) — appliquer le même facteur aux deux aurait sous-
+    estimé la vol du cœur d'un ordre de grandeur (bug corrigé le 01/11, avant
+    le premier test de cette fonction)."""
+    dates = sorted(historique_valeur.keys())
+    vals = [historique_valeur[d] for d in dates if isinstance(historique_valeur[d], (int, float))]
+    vals = vals[-n_derniers:]
+    if len(vals) < 3:
+        return None, "historique trop court"
+    rends = [(vals[i] / vals[i - 1] - 1) for i in range(1, len(vals)) if vals[i - 1] > 0]
+    if len(rends) < 2:
+        return None, "historique trop court"
+    moy = sum(rends) / len(rends)
+    var = sum((r - moy) ** 2 for r in rends) / (len(rends) - 1)
+    vol = (var ** 0.5) * (facteur_annualisation ** 0.5)
+    if vol < 1e-6:
+        return 0.0, "poche immobile sur la fenêtre (volatilité réalisée nulle, ex. refuge stablecoin)"
+    return vol, None
+
+
+def calculer_risk_parity(now):
+    today = now.date().isoformat()
+
+    def _charger(fichier):
+        if os.path.exists(fichier):
+            with open(fichier, "r", encoding="utf-8") as f:
+                return json.load(f)
+        return {}
+
+    vol_coeur, msg_coeur = volatilite_annualisee(
+        (_charger(FICHIER_PF_DM) or {}).get("historique_valeur", {}), n_derniers=60, facteur_annualisation=252)
+    vol_crypto, msg_crypto = volatilite_annualisee(
+        (_charger("crypto_dm_portefeuille.json") or {}).get("historique_valeur", {}), n_derniers=6, facteur_annualisation=12)
+
+    if vol_coeur is None or vol_crypto is None:
+        print(f"  Risk parity : pas calculable (cœur : {msg_coeur or 'ok'} ; crypto : {msg_crypto or 'ok'})")
+        return None
+    if vol_coeur == 0 or vol_crypto == 0:
+        print(f"  Risk parity : une poche est immobile ({msg_coeur or msg_crypto}), "
+              f"le poids inverse-vol n'a pas de sens tant que les deux ne bougent pas")
+        return None
+
+    inv = {"coeur_dm": 1 / vol_coeur, "crypto_dm": 1 / vol_crypto}
+    total = sum(inv.values())
+    poids = {k: round(v / total * 100, 1) for k, v in inv.items()}
+
+    log = _charger(FICHIER_RISK_PARITY)
+    historique = log.get("historique", [])
+    historique.append({"date": today, "vol_coeur_pct": round(vol_coeur * 100, 1),
+                        "vol_crypto_pct": round(vol_crypto * 100, 1), "poids": poids})
+    historique = historique[-24:]
+    with open(FICHIER_RISK_PARITY, "w", encoding="utf-8") as f:
+        json.dump({"date": today, "poids_actuel": poids, "historique": historique},
+                   f, ensure_ascii=False, indent=2)
+    return poids
+
+
 def construire_allocation(poche_rotative):
     """Combine le socle permanent (SOCLE_PONDERATION sur World) et la poche
     rotative (le reste) en allocation finale. À socle 0, c'est du GEM pur."""
@@ -287,6 +408,16 @@ if __name__ == "__main__":
     # Portefeuille virtuel V5 (cœur)
     pf_valeur, pf_perf, pf_date_init = gerer_portefeuille_dm(momentums, nouvelle_poche, now)
     print(f"Portefeuille V5 : {pf_valeur}€ ({pf_perf:+.2f}% depuis {pf_date_init})")
+
+    print("Suivi ETF facteur (Quality/Low Vol Europe)...")
+    etf = gerer_portefeuille_etf_facteur(now)
+    if etf:
+        print(f"  Valeur : {etf[0]}€ ({etf[1]:+.2f}%)")
+
+    print("Risk parity inter-poches (cœur DM / Crypto DM, cadre du 29/10)...")
+    poids_rp = calculer_risk_parity(now)
+    if poids_rp:
+        print(f"  Poids recommandé : {poids_rp}")
 
     # Statut court pour le briefing quotidien
     statut = {
