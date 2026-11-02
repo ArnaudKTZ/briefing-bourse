@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "heure": "06:45",
+  "heure": "13:53",
   "marche": {
     "sentiment_global": -0.15,
     "nb_articles": 20,
@@ -28,12 +28,12 @@
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "TotalEnergies renforce sa coopération avec PETRONAS, SONANGOL et OIL INDIA LIMITED pour réduire les émissions de méthane"
+        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
       ]
     },
     "Hermès": {
-      "sentiment": -0.1,
-      "nb_news": 20,
+      "sentiment": -0.16,
+      "nb_news": 19,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -185,11 +185,11 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
+        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs",
         "TotalEnergies renforce sa coopération avec PETRONAS, SONANGOL et OIL INDIA LIMITED pour réduire les émissions de méthane"
       ]
     },
@@ -271,21 +271,21 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.29,
-      "nb_news": 17,
+      "sentiment": 0.21,
+      "nb_news": 19,
       "titres_cles": [
-        "Alstom signe un contrat de 800 millions d’euros pour fournir des trains au Vietnam",
-        "ALSTOM S.A : Alstom signe une prolongation de contrat de services de 15 ans, d’une valeur de près de 1 milliard d’euros, avec Greater Anglia, au Royaume-Uni",
-        "Fabriquées à Belfort, les nouvelles locomotives d'Alstom décrochent une première commande"
+        "Alstom revoit fortement ses objectifs de rentabilité pour 2026-2027 et plonge de 30% en Bourse",
+        "ALSTOM S.A : Résultats préliminaires d’Alstom pour le premier semestre de l’exercice fiscal 2026/27 Perspectives 2026/27 ajustées en raison de certaines difficultés d’exécution en Europe. Plans opérationnels et mesures de désendettement",
+        "Alstom signe un contrat de 800 millions d’euros pour fournir des trains au Vietnam"
       ]
     },
     "Worldline": {
-      "sentiment": 0.08,
-      "nb_news": 13,
+      "sentiment": 0.21,
+      "nb_news": 14,
       "titres_cles": [
+        "Worldline annonce le lancement d’une offre de rachat sur ses obligations arrivant à échéance en juin 2027",
         "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
-        "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles",
-        "WORLDLINE : Worldline et le Crédit Agricole font évoluer leur partenariat - Communiqué"
+        "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles"
       ]
     },
     "Veolia": {
@@ -307,12 +307,12 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.36,
+      "sentiment": 0.29,
       "nb_news": 14,
       "titres_cles": [
         "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes : quel potentiel en Bourse ? La croissance promise se fait attendre !",
-        "Dassault Systèmes : solide performance au 3ème trimestre, amélioration des objectifs 2026 et nouvelle étape franchie dans les Sciences de la vie"
+        "Dassault Systèmes : solide performance au 3ème trimestre, amélioration des objectifs 2026 et nouvelle étape franchie dans les Sciences de la vie",
+        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
       ]
     },
     "Edenred": {
@@ -351,8 +351,8 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.59,
-      "nb_news": 17,
+      "sentiment": 0.61,
+      "nb_news": 18,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
