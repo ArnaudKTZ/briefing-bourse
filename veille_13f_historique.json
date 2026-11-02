@@ -1,0 +1,209 @@
+{
+  "0001067983": {
+    "date_position": "2026-06-30",
+    "positions": {
+      "02005N100": {
+        "nom": "ALLY FINL INC",
+        "valeur": 1240650000
+      },
+      "02079K107": {
+        "nom": "ALPHABET INC",
+        "valeur": 9606489032
+      },
+      "02079K305": {
+        "nom": "ALPHABET INC",
+        "valeur": 28157599351
+      },
+      "025816109": {
+        "nom": "AMERICAN EXPRESS CO",
+        "valeur": 51282319275
+      },
+      "037833100": {
+        "nom": "APPLE INC",
+        "valeur": 65950296923
+      },
+      "060505104": {
+        "nom": "BANK OF AMER CORP",
+        "valeur": 27543790975
+      },
+      "14040H105": {
+        "nom": "CAPITAL ONE FINL CORP",
+        "valeur": 601860000
+      },
+      "166764100": {
+        "nom": "CHEVRON CORPORATION",
+        "valeur": 13986141890
+      },
+      "191216100": {
+        "nom": "COCA COLA CO",
+        "valeur": 32508000000
+      },
+      "23331A109": {
+        "nom": "D R HORTON INC",
+        "valeur": 580504
+      },
+      "23918K108": {
+        "nom": "DAVITA INC",
+        "valeur": 6425268898
+      },
+      "247361702": {
+        "nom": "DELTA AIR LINES INC",
+        "valeur": 5368591200
+      },
+      "47233W109": {
+        "nom": "JEFFERIES FINANCIAL GROUP IN",
+        "valeur": 21669229
+      },
+      "500754106": {
+        "nom": "KRAFT HEINZ CO",
+        "valeur": 7691494401
+      },
+      "501044101": {
+        "nom": "KROGER CO",
+        "valeur": 2165670000
+      },
+      "526057104": {
+        "nom": "LENNAR CORP",
+        "valeur": 1186481443
+      },
+      "526057302": {
+        "nom": "LENNAR CORP",
+        "valeur": 26445959
+      },
+      "530909100": {
+        "nom": "LIBERTY LIVE HOLDINGS INC",
+        "valeur": 504941901
+      },
+      "530909308": {
+        "nom": "LIBERTY LIVE HOLDINGS INC",
+        "valeur": 1118425787
+      },
+      "546347105": {
+        "nom": "LOUISIANA PAC CORP",
+        "valeur": 445592617
+      },
+      "55616P104": {
+        "nom": "MACYS INC",
+        "valeur": 173031882
+      },
+      "615369105": {
+        "nom": "MOODYS CORP",
+        "valeur": 11173435852
+      },
+      "62944T105": {
+        "nom": "NVR INC",
+        "valeur": 75710501
+      },
+      "650111107": {
+        "nom": "NEW YORK TIMES CO MTN BE",
+        "valeur": 1098686000
+      },
+      "670346105": {
+        "nom": "NUCOR CORP",
+        "valeur": 413814258
+      },
+      "674599105": {
+        "nom": "OCCIDENTAL PETE CORP",
+        "valeur": 12868205304
+      },
+      "829933100": {
+        "nom": "SIRIUSXM HOLDINGS INC",
+        "valeur": 3686802237
+      },
+      "92343E102": {
+        "nom": "VERISIGN INC",
+        "valeur": 2261494212
+      },
+      "H1467J104": {
+        "nom": "CHUBB LIMITED",
+        "valeur": 11670066615
+      }
+    }
+  },
+  "0001336528": {
+    "date_position": "2026-03-31",
+    "positions": {
+      "02079K305": {
+        "nom": "ALPHABET INC",
+        "valeur": 9310043
+      },
+      "02079K107": {
+        "nom": "ALPHABET INC",
+        "valeur": 89421720
+      },
+      "023135106": {
+        "nom": "AMAZON COM INC",
+        "valeur": 2385104083
+      },
+      "11271J107": {
+        "nom": "BROOKFIELD CORP",
+        "valeur": 2415946008
+      },
+      "42806J700": {
+        "nom": "HERTZ GLOBAL HLDGS INC",
+        "valeur": 70261595
+      },
+      "44267T102": {
+        "nom": "HOWARD HUGHES HOLDINGS INC",
+        "valeur": 1192581569
+      },
+      "30303M102": {
+        "nom": "META PLATFORMS INC",
+        "valeur": 1522358404
+      },
+      "594918104": {
+        "nom": "MICROSOFT CORP",
+        "valeur": 2092970053
+      },
+      "76131D103": {
+        "nom": "RESTAURANT BRANDS INTL INC",
+        "valeur": 1673501194
+      },
+      "812215200": {
+        "nom": "SEAPORT ENTMT GROUP INC",
+        "valeur": 107910794
+      },
+      "90353T100": {
+        "nom": "UBER TECHNOLOGIES INC",
+        "valeur": 2154934398
+      }
+    }
+  },
+  "0001709323": {
+    "date_position": "2026-06-30",
+    "positions": {
+      "02079K305": {
+        "nom": "ALPHABET INC",
+        "valeur": 908899121
+      },
+      "02079K107": {
+        "nom": "ALPHABET INC",
+        "valeur": 866117829
+      },
+      "037833100": {
+        "nom": "APPLE INC",
+        "valeur": 32003216
+      },
+      "084670702": {
+        "nom": "BERKSHIRE HATHAWAY INC DEL",
+        "valeur": 554591244
+      },
+      "227046109": {
+        "nom": "CROCS INC",
+        "valeur": 107018900
+      },
+      "27579R104": {
+        "nom": "EAST WEST BANCORP INC",
+        "valeur": 358399151
+      },
+      "722304102": {
+        "nom": "PDD HOLDINGS INC",
+        "valeur": 820858157
+      },
+      "88034P109": {
+        "nom": "TENCENT MUSIC ENTERTAINM",
+        "valeur": 55033481
+      }
+    }
+  }
+}

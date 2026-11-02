@@ -25,6 +25,22 @@
 
 ---
 
+## 2026-11-02
+
+### "Loup de Wall Street" demandé : version honnête construite (suivi 13F dans la Veille)
+
+- **Contexte** : Arnaud demande un agent qui apprendrait des méthodes des traders des grandes écoles et étudierait chaque jour ce que font les meilleurs, un "stagiaire qui devient le meilleur". Rappel fait : ça existe déjà en partie (agent Stratège, créé le 15/07, exactement sur cette demande — 20 principes des grands traders). L'angle vraiment neuf ("regarder ce qu'ils font chaque jour") a deux problèmes de fond signalés avant de construire : (1) l'auto-amélioration continue sur données bruitées est le piège déjà vu échouer (B.21) ; (2) les grands gérants américains ne publient leurs positions qu'avec 45 jours de retard légal (dépôt 13F SEC), et leur échelle ne se transpose pas au retail.
+- **Version construite, modeste et assumée comme telle** : extension de `agent_veille.py` (pas un nouvel agent séparé, même cadence hebdo). Suit 3 gérants réputés orientés qualité/valeur (cohérent avec ce qui marche déjà dans le projet) via l'API publique SEC EDGAR, gratuite, sans clé :
+  - Warren Buffett / Berkshire Hathaway (CIK 0001067983)
+  - Bill Ackman / Pershing Square (CIK 0001336528)
+  - Li Lu / Himalaya Capital (CIK 0001709323, l'un des "4 maîtres" du pack de recherche fondamentale déjà utilisé le 01/11)
+- **Mécanique** : `dernier_13f()` interroge l'API submissions SEC pour le dépôt 13F-HR le plus récent par gérant ; `holdings_13f()` télécharge et parse la table XML des positions (en les agrégeant par CUSIP, un même titre pouvant apparaître sur plusieurs lignes selon la filiale qui détient la discrétion de vote) ; `comparer_13f()` calcule nouvelles positions / sorties / plus fortes variations vs le relevé précédent, stocké dans `veille_13f_historique.json`. Ne redéclenche rien si aucun nouveau dépôt n'est paru (les 13F ne changent que ~4x/an par gérant).
+- **Testé en réel contre l'API SEC** : fonctionne de bout en bout. Résultat amusant et probant : le dépôt le plus récent de Pershing Square date du 31/03/2026, soit **216 jours de retard** au moment du test — la preuve, dans les données elles-mêmes et pas juste en théorie, que "suivre ce que font les meilleurs traders" n'a aucun sens au jour le jour. Berkshire et Himalaya sont un peu plus à jour (125 jours de retard, positions au 30/06/2026).
+- Email hebdo de la Veille enrichi d'un bloc "Dépôts 13F" avec le retard affiché en gros, uniquement quand il y a du nouveau. Aucune position n'est un signal : explicitement présenté comme une piste à vérifier soi-même.
+- `test_agents.py` au vert (extension d'un agent existant, pas de nouvel enregistrement nécessaire). Doc : annexe B.27 + mise à jour de la carte Veille.
+
+---
+
 ## 2026-11-01 (suite 4)
 
 ### Les deux dernières pistes du jour : RSI testé en rigueur, Auditeur de coûts enquêté puis écarté
