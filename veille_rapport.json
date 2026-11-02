@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "nb_articles": 40,
   "top": [
     {
@@ -112,5 +112,6 @@
       ],
       "extrait": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content."
     }
-  ]
+  ],
+  "depots_13f": []
 }

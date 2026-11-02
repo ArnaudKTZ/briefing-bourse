@@ -136,6 +136,131 @@ def extrait_resume(resume, n_phrases=2, max_chars=420):
     return texte
 
 
+# ─── SUIVI 13F — version modeste du "Loup de Wall Street" (ajout du 02/11) ────
+# Idée d'Arnaud (01-02/11) : un agent qui étudie ce que font les meilleurs
+# traders chaque jour. Version honnête plutôt que la promesse intenable d'un
+# agent qui "apprend et devient le meilleur" : les grands gérants américains
+# publient leurs positions (formulaire 13F, SEC) avec un RETARD STRUCTUREL de
+# 45 jours après la fin du trimestre — pas du temps réel, et leur échelle
+# (des centaines de millions de dollars, souvent du trading institutionnel)
+# ne se transpose pas à un portefeuille retail. Ce n'est donc jamais un
+# signal à suivre, seulement une source d'idées à vérifier soi-même, dans le
+# même esprit que les papiers arXiv ci-dessus.
+GERANTS_SUIVIS = {
+    "Berkshire Hathaway (Buffett)": "0001067983",
+    "Pershing Square (Ackman)":     "0001336528",
+    "Himalaya Capital (Li Lu)":     "0001709323",
+}
+FICHIER_13F = "veille_13f_historique.json"
+SEC_HEADERS = {"User-Agent": "JarvisAgentBourse/1.0 (recherche personnelle; arnaud.kuntz@zoho.eu)"}
+NS_13F = "{http://www.sec.gov/edgar/document/thirteenf/informationtable}"
+
+
+def _requete_sec(url):
+    req = urllib.request.Request(url, headers=SEC_HEADERS)
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return r.read()
+
+
+def dernier_13f(cik):
+    """Dernier dépôt 13F-HR connu : (accession, date_dépôt, date_des_positions)."""
+    try:
+        data = json.loads(_requete_sec(f"https://data.sec.gov/submissions/CIK{cik}.json"))
+        recent = data["filings"]["recent"]
+        for i, forme in enumerate(recent["form"]):
+            if forme == "13F-HR":
+                return recent["accessionNumber"][i], recent["filingDate"][i], recent["reportDate"][i]
+    except Exception as e:
+        print(f"  SEC indisponible pour {cik} : {e}")
+    return None
+
+
+def holdings_13f(cik, accession):
+    """Positions agrégées par CUSIP (un même titre peut apparaître plusieurs
+    fois dans le dépôt, une ligne par filiale ayant une discrétion de vote
+    séparée — il faut sommer, pas prendre la première ligne)."""
+    acc_nodash = accession.replace("-", "")
+    base = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc_nodash}"
+    try:
+        index = json.loads(_requete_sec(f"{base}/index.json"))
+        fichiers_xml = [it["name"] for it in index["directory"]["item"] if it["name"].endswith(".xml")]
+        candidats = [f for f in fichiers_xml if f != "primary_doc.xml"]
+        if not candidats:
+            return {}
+        table_xml = _requete_sec(f"{base}/{candidats[0]}")
+    except Exception as e:
+        print(f"  Table de positions indisponible ({cik}, {accession}) : {e}")
+        return {}
+
+    try:
+        root = ET.fromstring(table_xml)
+    except Exception as e:
+        print(f"  XML illisible ({cik}, {accession}) : {e}")
+        return {}
+
+    positions = {}
+    for entry in root.findall(f"{NS_13F}infoTable"):
+        cusip = entry.findtext(f"{NS_13F}cusip")
+        nom   = entry.findtext(f"{NS_13F}nameOfIssuer")
+        valeur = entry.findtext(f"{NS_13F}value")
+        if not cusip:
+            continue
+        p = positions.setdefault(cusip, {"nom": nom, "valeur": 0})
+        p["valeur"] += int(valeur or 0)
+    return positions
+
+
+def comparer_13f(actuel, precedent):
+    """Nouvelles positions, sorties, plus fortes variations de valeur (%)."""
+    cusips_actuels, cusips_precedents = set(actuel), set(precedent)
+    nouvelles = [actuel[c]["nom"] for c in cusips_actuels - cusips_precedents]
+    sorties   = [precedent[c]["nom"] for c in cusips_precedents - cusips_actuels]
+    variations = []
+    for c in cusips_actuels & cusips_precedents:
+        v0, v1 = precedent[c]["valeur"], actuel[c]["valeur"]
+        if v0 > 0:
+            variations.append((actuel[c]["nom"], round((v1 - v0) / v0 * 100, 1)))
+    variations.sort(key=lambda x: abs(x[1]), reverse=True)
+    return nouvelles[:10], sorties[:10], variations[:8]
+
+
+def suivre_gerants():
+    """Pour chaque gérant suivi, vérifie s'il y a un dépôt 13F plus récent que
+    la dernière fois vérifiée, et si oui compare les positions. Les 13F ne
+    changent que ~4x/an par gérant : la plupart des semaines, rien de neuf."""
+    historique = {}
+    if os.path.exists(FICHIER_13F):
+        with open(FICHIER_13F, "r", encoding="utf-8") as f:
+            historique = json.load(f)
+
+    comptes_rendus = []
+    for nom_gerant, cik in GERANTS_SUIVIS.items():
+        info = dernier_13f(cik)
+        if not info:
+            continue
+        accession, date_depot, date_position = info
+        connu = historique.get(cik, {})
+        if connu.get("date_position") == date_position:
+            continue  # déjà vu
+
+        positions = holdings_13f(cik, accession)
+        if not positions:
+            continue
+        nouvelles, sorties, variations = comparer_13f(positions, connu.get("positions", {}))
+        retard_jours = (datetime.date.today() - datetime.date.fromisoformat(date_position)).days
+
+        comptes_rendus.append({
+            "gerant": nom_gerant, "date_position": date_position, "date_depot": date_depot,
+            "retard_jours": retard_jours, "nouvelles": nouvelles, "sorties": sorties,
+            "variations": variations, "premier_releve": not connu,
+        })
+        historique[cik] = {"date_position": date_position, "positions": positions}
+
+    with open(FICHIER_13F, "w", encoding="utf-8") as f:
+        json.dump(historique, f, ensure_ascii=False, indent=2)
+    return comptes_rendus
+
+
 def pourquoi(hits):
     """Phrase courte expliquant l'intérêt selon les mots-clés trouvés."""
     rigueur = {"walk-forward", "out-of-sample", "overfit", "data snooping", "transaction cost"}
@@ -162,7 +287,42 @@ def envoyer(sujet, html):
     print(f"  Email envoyé à {', '.join(DESTINATAIRES)}")
 
 
-def generer_html(now, top):
+def bloc_html_13f(comptes_rendus):
+    if not comptes_rendus:
+        return ""
+    cartes = ""
+    for cr in comptes_rendus:
+        if cr["premier_releve"]:
+            detail = (f"<p style='margin:6px 0 0;font-size:12px;color:#666;'>Premier relevé : "
+                      f"{len(cr['variations']) + len(cr['nouvelles'])} positions enregistrées comme référence, "
+                      f"rien à comparer encore.</p>")
+        else:
+            lignes = []
+            if cr["nouvelles"]:
+                lignes.append("<strong>Nouvelles :</strong> " + ", ".join(cr["nouvelles"][:6]))
+            if cr["sorties"]:
+                lignes.append("<strong>Sorties :</strong> " + ", ".join(cr["sorties"][:6]))
+            if cr["variations"]:
+                var_txt = ", ".join(f"{nom} ({v:+.0f}%)" for nom, v in cr["variations"][:5])
+                lignes.append("<strong>Plus fortes variations :</strong> " + var_txt)
+            detail = "".join(f"<p style='margin:4px 0 0;font-size:12px;color:#444;'>{l}</p>" for l in lignes)
+        cartes += f"""<div style='border:1px solid #e0e0e0;border-radius:8px;padding:12px 16px;margin-bottom:10px;'>
+          <p style='margin:0;font-weight:600;font-size:13px;'>{cr['gerant']}</p>
+          <p style='margin:2px 0 0;font-size:11px;color:#b71c1c;'>Positions au {cr['date_position']},
+            dépôt publié le {cr['date_depot']} — déjà {cr['retard_jours']} jours de retard structurel.</p>
+          {detail}
+        </div>"""
+    return f"""
+  <h3 style='font-size:14px;margin:20px 0 8px;'>Dépôts 13F — ce que font quelques gérants réputés (avec retard)</h3>
+  <div style='background:#fff3e0;border-left:4px solid #e65100;padding:10px 14px;border-radius:6px;font-size:12px;color:#8a4b00;margin-bottom:10px;'>
+    Pas un signal à suivre : ces positions datent d'il y a 1,5 à 3 mois (délai légal de 45 jours après
+    la fin du trimestre), et l'échelle de ces gérants ne se transpose pas à un portefeuille retail.
+    Une idée à vérifier soi-même, jamais un ordre à copier.
+  </div>
+  {cartes}"""
+
+
+def generer_html(now, top, comptes_rendus_13f=None):
     cartes = ""
     for a in top:
         h = set(a["hits"])
@@ -197,6 +357,7 @@ def generer_html(now, top):
   <div style='margin-top:8px;padding:12px;background:#e8f0fb;border-radius:6px;font-size:13px;color:#0c447c;'>
     <strong>Rappel :</strong> aucune de ces idées ne va en production sans passer la recette (backtest hors-échantillon). On prend chez les caïds, mais on vérifie chez nous.
   </div>
+  {bloc_html_13f(comptes_rendus_13f)}
 </div>
 </body></html>"""
 
@@ -223,6 +384,14 @@ if __name__ == "__main__":
     for a in top:
         print(f"    [{a['score']:>2}] {a['titre'][:70]}")
 
+    print("Vérification des dépôts 13F (gérants suivis)...")
+    comptes_rendus_13f = suivre_gerants()
+    for cr in comptes_rendus_13f:
+        print(f"  {cr['gerant']} : nouveau dépôt du {cr['date_depot']} "
+              f"(positions au {cr['date_position']}, {cr['retard_jours']} j de retard)")
+    if not comptes_rendus_13f:
+        print("  Rien de neuf (13F inchangés depuis la dernière vérification)")
+
     rapport = {
         "date": now.date().isoformat(),
         "nb_articles": len(articles),
@@ -230,15 +399,19 @@ if __name__ == "__main__":
                  "score": a["score"], "hits": a["hits"],
                  "deja_tranche": a.get("deja_tranche") or [],
                  "extrait": extrait_resume(a.get("resume", ""))} for a in top],
+        "depots_13f": comptes_rendus_13f,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
-    if top:
+    if top or comptes_rendus_13f:
         print("Envoi digest veille...")
-        html = generer_html(now, top)
-        envoyer(f"Veille — {len(top)} idées à explorer — {now.strftime('%d/%m/%Y')}", html)
+        html = generer_html(now, top, comptes_rendus_13f)
+        sujet = f"Veille — {len(top)} idées"
+        if comptes_rendus_13f:
+            sujet += f" + {len(comptes_rendus_13f)} dépôt(s) 13F"
+        envoyer(f"{sujet} — {now.strftime('%d/%m/%Y')}", html)
     else:
-        print("  Aucun article pertinent cette semaine, pas d'email.")
+        print("  Rien à signaler cette semaine, pas d'email.")
 
     print("Terminé.")
