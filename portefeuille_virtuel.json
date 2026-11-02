@@ -1,24 +1,6 @@
 {
-  "capital": 996.7599999999976,
+  "capital": 3213.509999999997,
   "positions": {
-    "TotalEnergies": {
-      "nb_actions": 25,
-      "prix_entree": 79.94,
-      "date_entree": "2026-10-22",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1998.5,
-      "frais_achat": 9.99
-    },
-    "Airbus": {
-      "nb_actions": 10,
-      "prix_entree": 193.58,
-      "date_entree": "2026-10-22",
-      "heure_entree": "05:01",
-      "source_entree": "Briefing",
-      "cout_total": 1935.8000000000002,
-      "frais_achat": 9.68
-    },
     "BNP Paribas": {
       "nb_actions": 11,
       "prix_entree": 86.78,
@@ -45,6 +27,24 @@
       "source_entree": "Intraday",
       "cout_total": 970.3199999999999,
       "frais_achat": 4.85
+    },
+    "TotalEnergies": {
+      "nb_actions": 11,
+      "prix_entree": 85.43,
+      "date_entree": "2026-11-02",
+      "heure_entree": "06:01",
+      "source_entree": "Briefing",
+      "cout_total": 939.73,
+      "frais_achat": 4.7
+    },
+    "L'Oréal": {
+      "nb_actions": 2,
+      "prix_entree": 436.95,
+      "date_entree": "2026-11-02",
+      "heure_entree": "06:01",
+      "source_entree": "Briefing",
+      "cout_total": 873.9,
+      "frais_achat": 4.37
     }
   },
   "historique_valeur": {
@@ -142,7 +142,8 @@
     "2026-10-27": 7728.27,
     "2026-10-28": 7744.79,
     "2026-10-29": 7836.07,
-    "2026-10-30": 7866.76
+    "2026-10-30": 7866.76,
+    "2026-11-02": 7837.39
   },
   "trades": [
     {
@@ -1255,6 +1256,32 @@
       "pnl_pct": 7.72,
       "frais_total": 20.68,
       "raison_sortie": "Take-profit 8.3%"
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 79.94,
+      "sortie": 85.43,
+      "date_entree": "2026-10-22",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-02",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 6.33,
+      "frais_total": 20.67
+    },
+    {
+      "nom": "Airbus",
+      "entree": 193.58,
+      "sortie": 192.4,
+      "date_entree": "2026-10-22",
+      "heure_entree": "05:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-02",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": -1.11,
+      "frais_total": 19.3
     }
   ]
 }
