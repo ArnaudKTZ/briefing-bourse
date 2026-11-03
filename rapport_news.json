@@ -1,15 +1,15 @@
 {
   "date": "2026-11-03",
-  "heure": "06:45",
+  "heure": "13:22",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+      "CAC 40 : la Bourse baisse, pénalisée par les géants de la tech avant les élections américaines",
+      "La Bourse de Paris en baisse, plombée par la tech",
       "La Bourse de Paris termine en hausse, portée par les résultats d'entreprises",
-      "La Bourse de Paris en hausse après une salve de résultats",
-      "La Bourse de Paris termine en hausse, aidée par le reflux des taux",
-      "La Bourse de Paris termine en hausse, profitant de la chute du pétrole"
+      "La Bourse de Paris en hausse après une salve de résultats"
     ]
   },
   "valeurs": {
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.25,
+      "sentiment": 0.35,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
+        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas"
       ]
     },
     "Hermès": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
+      "sentiment": 0.25,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs",
-        "TotalEnergies renforce sa coopération avec PETRONAS, SONANGOL et OIL INDIA LIMITED pour réduire les émissions de méthane"
+        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas",
+        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
       ]
     },
     "Renault": {
@@ -262,21 +262,21 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.42,
+      "sentiment": 0.53,
       "nb_news": 19,
       "titres_cles": [
+        "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 26 au 30 octobre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 19 au 23 octobre 2026"
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
       ]
     },
     "Alstom": {
-      "sentiment": 0.21,
-      "nb_news": 19,
+      "sentiment": 0.1,
+      "nb_news": 20,
       "titres_cles": [
+        "Les actions Alstom chutent de 6% après des avertissements de J.P. Morgan et Citi",
         "Alstom revoit fortement ses objectifs de rentabilité pour 2026-2027 et plonge de 30% en Bourse",
-        "ALSTOM S.A : Résultats préliminaires d’Alstom pour le premier semestre de l’exercice fiscal 2026/27 Perspectives 2026/27 ajustées en raison de certaines difficultés d’exécution en Europe. Plans opérationnels et mesures de désendettement",
-        "Alstom signe un contrat de 800 millions d’euros pour fournir des trains au Vietnam"
+        "ALSTOM S.A : Résultats préliminaires d’Alstom pour le premier semestre de l’exercice fiscal 2026/27 Perspectives 2026/27 ajustées en raison de certaines difficultés d’exécution en Europe. Plans opérationnels et mesures de désendettement"
       ]
     },
     "Worldline": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
