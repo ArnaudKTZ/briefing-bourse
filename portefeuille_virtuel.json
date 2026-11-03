@@ -1,5 +1,5 @@
 {
-  "capital": 3213.509999999997,
+  "capital": 3073.1799999999967,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 11,
@@ -37,14 +37,14 @@
       "cout_total": 939.73,
       "frais_achat": 4.7
     },
-    "L'Oréal": {
-      "nb_actions": 2,
-      "prix_entree": 436.95,
-      "date_entree": "2026-11-02",
-      "heure_entree": "06:01",
+    "Publicis": {
+      "nb_actions": 10,
+      "prix_entree": 99.86,
+      "date_entree": "2026-11-03",
+      "heure_entree": "12:38",
       "source_entree": "Briefing",
-      "cout_total": 873.9,
-      "frais_achat": 4.37
+      "cout_total": 998.6,
+      "frais_achat": 4.99
     }
   },
   "historique_valeur": {
@@ -144,7 +144,7 @@
     "2026-10-29": 7836.07,
     "2026-10-30": 7866.76,
     "2026-11-02": 7858.82,
-    "2026-11-03": 7831.91
+    "2026-11-03": 7818.26
   },
   "trades": [
     {
@@ -1283,6 +1283,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.11,
       "frais_total": 19.3
+    },
+    {
+      "nom": "L'Oréal",
+      "entree": 436.95,
+      "sortie": 433.8,
+      "date_entree": "2026-11-02",
+      "heure_entree": "06:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-03",
+      "heure_sortie": "12:38",
+      "source_sortie": "Briefing",
+      "pnl_pct": -1.22,
+      "frais_total": 8.71
     }
   ]
 }
