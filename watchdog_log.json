@@ -1,18 +1,18 @@
 {
-  "date": "2026-11-02",
-  "heure": "14:42",
+  "date": "2026-11-03",
+  "heure": "07:30",
   "statuts": {
     "Agent News": {
       "ok": true,
-      "msg": "OK — 20 articles, sentiment -0.15"
+      "msg": "OK — 20 articles, sentiment -0.05"
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 14:09"
+      "msg": "OK — briefing du jour envoyé à 07:03"
     },
     "Scoring intraday": {
-      "ok": null,
-      "msg": "Lundi — pas de données intraday attendues hier"
+      "ok": true,
+      "msg": "OK hier — 8 snapshot(s) enregistré(s)"
     },
     "Circuit-breaker satellite": {
       "ok": true,
@@ -24,31 +24,31 @@
     },
     "Dividendes (lundi 8h05)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-11-02 (il y a 0 j)"
+      "msg": "OK — dernier rapport le 2026-11-02 (il y a 1 j)"
     },
     "Shadow (vendredi 18h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-10-30 (il y a 3 j)"
+      "msg": "OK — dernier rapport le 2026-10-30 (il y a 4 j)"
     },
     "Évaluateur (samedi 7h35)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-11-01 (il y a 1 j)"
+      "msg": "OK — dernier rapport le 2026-11-01 (il y a 2 j)"
     },
     "Veille (samedi 9h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-11-01 (il y a 1 j)"
+      "msg": "OK — dernier rapport le 2026-11-02 (il y a 1 j)"
     },
     "Professeur (dimanche 18h)": {
       "ok": true,
-      "msg": "OK — dernier rapport le 2026-11-01 (il y a 1 j)"
+      "msg": "OK — dernier rapport le 2026-11-01 (il y a 2 j)"
     },
     "Dual Momentum (1er, 8h)": {
-      "ok": null,
-      "msg": "pas encore exigible ce mois-ci (dernier : 2026-11-01)"
+      "ok": true,
+      "msg": "OK — run mensuel du 2026-11-01"
     },
     "Crypto DM (1er, 8h15)": {
-      "ok": null,
-      "msg": "pas encore exigible ce mois-ci (dernier : 2026-11-01)"
+      "ok": true,
+      "msg": "OK — run mensuel du 2026-11-01"
     },
     "Stratège (le 4, 18h)": {
       "ok": null,
