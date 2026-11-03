@@ -6468,5 +6468,15 @@
     "signal": "SURVEILLER",
     "raison": "Gap haussier +4.07% avec volume x3.4",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-03",
+    "heure": "09:01",
+    "nom": "Sanofi",
+    "cours": 79.74,
+    "score": 53,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +4.07% avec volume x3.4",
+    "envoyee": false
   }
 ]
