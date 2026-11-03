@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "heure": "07:30",
+  "heure": "13:55",
   "statuts": {
     "Agent News": {
       "ok": true,
@@ -8,7 +8,7 @@
     },
     "Briefing 7h": {
       "ok": true,
-      "msg": "OK — briefing du jour envoyé à 07:03"
+      "msg": "OK — briefing du jour envoyé à 13:40"
     },
     "Scoring intraday": {
       "ok": true,
@@ -16,7 +16,7 @@
     },
     "Circuit-breaker satellite": {
       "ok": true,
-      "msg": "OK — 0 trade(s) vérifié(s) depuis le 2026-10-11, aucune violation"
+      "msg": "OK — 1 trade(s) vérifié(s) depuis le 2026-10-11, aucune violation"
     },
     "Sentinelle Look-Ahead": {
       "ok": true,
