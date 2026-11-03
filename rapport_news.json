@@ -1,11 +1,11 @@
 {
   "date": "2026-11-03",
-  "heure": "16:28",
+  "heure": "19:38",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
-      "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
+      "La Bourse de Paris termine en baisse, les mid-terms captent l'attention",
       "CAC 40 : la Bourse baisse, pénalisée par les géants de la tech avant les élections américaines",
       "La Bourse de Paris en baisse, plombée par la tech",
       "La Bourse de Paris termine en hausse, portée par les résultats d'entreprises",
@@ -59,8 +59,8 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.27,
-      "nb_news": 15,
+      "sentiment": 0.25,
+      "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.25,
+      "sentiment": 0.2,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
@@ -239,12 +239,12 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.72,
-      "nb_news": 18,
+      "sentiment": 0.84,
+      "nb_news": 19,
       "titres_cles": [
+        "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions",
         "Orange : Orange maintient une solide croissance de son chiffre d’affaires au troisième trimestre et relève son objectif de croissance d’EBITDAaL sur l’année",
-        "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions.",
-        "Orange : Information sur les opérations effectuées dans le cadre d’un programme de rachat d’actions, hors contrat de liquidité"
+        "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions."
       ]
     },
     "Vivendi": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
         "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe",
