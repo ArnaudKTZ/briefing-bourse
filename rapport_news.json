@@ -1,8 +1,8 @@
 {
   "date": "2026-11-04",
-  "heure": "06:45",
+  "heure": "13:33",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en baisse, les mid-terms captent l'attention",
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.84,
-      "nb_news": 19,
+      "sentiment": 0.82,
+      "nb_news": 17,
       "titres_cles": [
         "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions",
         "Orange : Orange maintient une solide croissance de son chiffre d’affaires au troisième trimestre et relève son objectif de croissance d’EBITDAaL sur l’année",
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
