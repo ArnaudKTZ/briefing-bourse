@@ -1,5 +1,5 @@
 {
-  "capital": 3073.1799999999967,
+  "capital": 2993.209999999997,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 11,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 954.58,
       "frais_achat": 4.77
-    },
-    "Air Liquide": {
-      "nb_actions": 5,
-      "prix_entree": 180.22,
-      "date_entree": "2026-10-30",
-      "heure_entree": "11:31",
-      "source_entree": "Intraday",
-      "cout_total": 901.1,
-      "frais_achat": 4.51
     },
     "Teleperformance": {
       "nb_actions": 12,
@@ -45,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 998.6,
       "frais_achat": 4.99
+    },
+    "Edenred": {
+      "nb_actions": 41,
+      "prix_entree": 23.92,
+      "date_entree": "2026-11-04",
+      "heure_entree": "06:01",
+      "source_entree": "Briefing",
+      "cout_total": 980.72,
+      "frais_achat": 4.9
     }
   },
   "historique_valeur": {
@@ -144,7 +144,8 @@
     "2026-10-29": 7836.07,
     "2026-10-30": 7866.76,
     "2026-11-02": 7858.82,
-    "2026-11-03": 7842.76
+    "2026-11-03": 7842.76,
+    "2026-11-04": 7846.04
   },
   "trades": [
     {
@@ -1296,6 +1297,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": -1.22,
       "frais_total": 8.71
+    },
+    {
+      "nom": "Air Liquide",
+      "entree": 180.22,
+      "sortie": 182.04,
+      "date_entree": "2026-10-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-11-04",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 0.5,
+      "frais_total": 9.06
     }
   ]
 }
