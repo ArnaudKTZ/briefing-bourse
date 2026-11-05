@@ -1,5 +1,5 @@
 {
-  "capital": 3874.499999999997,
+  "capital": 2897.759999999997,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 11,
@@ -36,6 +36,15 @@
       "source_entree": "Briefing",
       "cout_total": 980.72,
       "frais_achat": 4.9
+    },
+    "TotalEnergies": {
+      "nb_actions": 12,
+      "prix_entree": 80.99,
+      "date_entree": "2026-11-05",
+      "heure_entree": "12:56",
+      "source_entree": "Briefing",
+      "cout_total": 971.8799999999999,
+      "frais_achat": 4.86
     }
   },
   "historique_valeur": {
@@ -137,7 +146,7 @@
     "2026-11-02": 7858.82,
     "2026-11-03": 7842.76,
     "2026-11-04": 7937.69,
-    "2026-11-05": 7916.23
+    "2026-11-05": 7922.57
   },
   "trades": [
     {
