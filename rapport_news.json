@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-04",
-  "heure": "19:51",
+  "date": "2026-11-05",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -51,7 +51,7 @@
     },
     "Schneider Electric": {
       "sentiment": 0.53,
-      "nb_news": 19,
+      "nb_news": 17,
       "titres_cles": [
         "Schneider Electric finira-t-il par profiter en Bourse du rachat de PTC ? Faut-il investir sur l’action ?",
         "Schneider Electric signe un trimestre record et relève une nouvelle fois ses objectifs pour 2026",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.62,
-      "nb_news": 13,
+      "sentiment": 0.67,
+      "nb_news": 12,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
@@ -185,7 +185,7 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.2,
+      "sentiment": 0.15,
       "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
@@ -194,12 +194,12 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.06,
+      "sentiment": 0.0,
       "nb_news": 17,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
-        "Renault Group salue le relèvement de sa note de crédit par Moody’s à « Baa3 », en catégorie « investment grade »"
+        "Renault fabrique un drone militaire avec des pièces de voitures, et l’armée française va le tester"
       ]
     },
     "Legrand": {
