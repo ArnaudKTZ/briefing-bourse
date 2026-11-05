@@ -6488,5 +6488,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — Stop-loss -5.7% | P&L : -6.22%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-05",
+    "heure": "14:01",
+    "nom": "TotalEnergies",
+    "cours": 80.96,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.46%",
+    "envoyee": false
   }
 ]
