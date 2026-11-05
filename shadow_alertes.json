@@ -6478,5 +6478,15 @@
     "signal": "SURVEILLER",
     "raison": "Gap haussier +4.07% avec volume x3.4",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-05",
+    "heure": "11:31",
+    "nom": "TotalEnergies",
+    "cours": 80.52,
+    "score": 71,
+    "signal": "VENTE",
+    "raison": "Position fermée — Stop-loss -5.7% | P&L : -6.22%",
+    "envoyee": false
   }
 ]
