@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "heure": "06:45",
+  "heure": "13:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -50,8 +50,8 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.53,
-      "nb_news": 17,
+      "sentiment": 0.56,
+      "nb_news": 16,
       "titres_cles": [
         "Schneider Electric finira-t-il par profiter en Bourse du rachat de PTC ? Faut-il investir sur l’action ?",
         "Schneider Electric signe un trimestre record et relève une nouvelle fois ses objectifs pour 2026",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.14,
+      "nb_news": 14,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
@@ -185,10 +185,10 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.15,
+      "sentiment": -0.05,
       "nb_news": 20,
       "titres_cles": [
-        "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
+        "Capgemini sélectionné par la Commission européenne pour diriger un consortium dédié à la sécurité de l’IA et à l’évaluation des cyber-risques liés aux modèles d’IA avancés",
         "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas",
         "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
       ]
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.5,
-      "nb_news": 8,
+      "sentiment": 0.36,
+      "nb_news": 11,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
@@ -221,21 +221,21 @@
       ]
     },
     "Bouygues": {
-      "sentiment": 0.33,
-      "nb_news": 12,
+      "sentiment": 0.38,
+      "nb_news": 13,
       "titres_cles": [
         "Bouygues : bénéfice net en forte hausse, «malgré l'impact» de la contribution exceptionnelle sur les bénéfices",
-        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd",
-        "Bouygues : Publication mensuelle du nombre d’actions composant le capital et du nombre de droits de vote"
+        "Bouygues : Résultats du Groupe des neuf premiers mois très solides, ROCA annuel du Groupe désormais attendu en légère hausse",
+        "Equans annonce l’acquisition d’une participation majoritaire dans l’entreprise australienne CV Services Pty Ltd"
       ]
     },
     "Engie": {
-      "sentiment": 0.5,
-      "nb_news": 10,
+      "sentiment": 0.55,
+      "nb_news": 11,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
-        "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées",
-        "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud"
+        "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
+        "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées"
       ]
     },
     "Orange": {
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.1,
-      "nb_news": 20,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
         "Les actions Alstom chutent de 6% après des avertissements de J.P. Morgan et Citi",
         "Alstom revoit fortement ses objectifs de rentabilité pour 2026-2027 et plonge de 30% en Bourse",
@@ -289,12 +289,12 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.45,
-      "nb_news": 11,
+      "sentiment": 0.64,
+      "nb_news": 14,
       "titres_cles": [
-        "Veolia remporte un contrat majeur de 1Md€ sur 25 ans pour les services d’eau potable en Espagne",
-        "Actionnariat salarié : une participation record qui renforce le statut de premier actionnaire des salariés Veolia",
-        "Veolia émet avec succès 1,15 Md € sur le marché obligataire"
+        "Dessalement : Veolia conforte sa position de leader avec des contrats d'envergure au Moyen-Orient",
+        "Veolia accélère la transformation de son portefeuille, axée sur la croissance, avec 570 M€ de cessions déjà signées en 2026 sur un total de 2 Md€",
+        "Le renforcement de la croissance au troisième trimestre et les solides résultats tirés par l’international confirment la valeur du positionnement stratégique de Veolia."
       ]
     },
     "STMicroelectronics": {
