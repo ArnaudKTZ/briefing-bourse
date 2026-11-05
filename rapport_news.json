@@ -1,15 +1,15 @@
 {
   "date": "2026-11-05",
-  "heure": "16:48",
+  "heure": "19:57",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
+      "Bourse : pourquoi le CAC 40 profite-t-il de la victoire des démocrates ? La sélection d’actions de Momentum s’envole",
+      "La Bourse de Paris termine en légère hausse",
       "La Bourse de Paris en nette hausse après les \"midterms\"",
       "La Bourse de Paris termine en baisse, les mid-terms captent l'attention",
-      "CAC 40 : la Bourse baisse, pénalisée par les géants de la tech avant les élections américaines",
-      "La Bourse de Paris en baisse, plombée par la tech",
-      "La Bourse de Paris termine en hausse, portée par les résultats d'entreprises"
+      "CAC 40 : la Bourse baisse, pénalisée par les géants de la tech avant les élections américaines"
     ]
   },
   "valeurs": {
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.67,
-      "nb_news": 12,
+      "sentiment": 0.69,
+      "nb_news": 13,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.3,
-      "nb_news": 10,
+      "sentiment": -0.27,
+      "nb_news": 11,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
         "La Bourse de Paris recule après des résultats en cascade",
-        "Kering : Chiffre d'affaires du troisième trimestre 2026"
+        "Kering : Balenciaga annonce le départ du Directeur de la Création Pierpaolo Piccioli"
       ]
     },
     "Société Générale": {
@@ -167,8 +167,8 @@
       ]
     },
     "Pernod Ricard": {
-      "sentiment": 0.12,
-      "nb_news": 17,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
         "SUCCES DE L'OFFRE DE RACHAT SUR LES OBLIGATIONS DE PERNOD RICARD",
         "PERNOD RICARD ANNONCE LE LANCEMENT D'UNE OFFRE DE RACHAT SUR SEPT SOUCHES D'OBLIGATIONS EXISTANTES VENANT A ECHEANCE EN SEPTEMBRE 2027, OCTOBRE 2027, NOVEMBRE 2028, AVRIL 2030, NOVEMBRE 2030, MARS 2032 ET NOVEMBRE 2032, ET ANNONCE SON INTENTION ...",
