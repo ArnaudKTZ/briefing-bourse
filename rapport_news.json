@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "heure": "13:29",
+  "heure": "16:23",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -212,12 +212,12 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.75,
-      "nb_news": 12,
+      "sentiment": 0.85,
+      "nb_news": 13,
       "titres_cles": [
+        "L’acquisition de LiveRamp pourrait transformer les perspectives de croissance de Publicis, selon J.P. Morgan",
         "PUBLICIS GROUPE CONCLUT UN ACCORD AVEC LA FTC DANS LE CADRE DE L’ACQUISITION DE LIVERAMP",
-        "Publicis relève ses prévisions de croissance 2026 après un T2 solide",
-        "Publicis Groupe finalise l’acquisition de LiveRamp et lance le premier AI Growth Engine « Plug & Play » entièrement détenu et contrôlé par ses clients"
+        "Publicis relève ses prévisions de croissance 2026 après un T2 solide"
       ]
     },
     "Bouygues": {
