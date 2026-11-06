@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-09-04",
-    "heure": "07:01",
-    "total": 39,
-    "nb_erreurs": 0,
-    "tickers_erreur": []
-  },
-  {
-    "date": "2026-09-04",
     "heure": "11:20",
     "total": 39,
     "nb_erreurs": 0,
@@ -625,6 +618,13 @@
   {
     "date": "2026-11-06",
     "heure": "07:01",
+    "total": 39,
+    "nb_erreurs": 0,
+    "tickers_erreur": []
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "13:43",
     "total": 39,
     "nb_erreurs": 0,
     "tickers_erreur": []
