@@ -1,5 +1,5 @@
 {
-  "capital": 2897.759999999997,
+  "capital": 3702.0399999999972,
   "positions": {
     "BNP Paribas": {
       "nb_actions": 11,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 954.58,
       "frais_achat": 4.77
-    },
-    "Teleperformance": {
-      "nb_actions": 12,
-      "prix_entree": 80.86,
-      "date_entree": "2026-10-30",
-      "heure_entree": "11:31",
-      "source_entree": "Intraday",
-      "cout_total": 970.3199999999999,
-      "frais_achat": 4.85
     },
     "Publicis": {
       "nb_actions": 10,
@@ -147,7 +138,7 @@
     "2026-11-03": 7842.76,
     "2026-11-04": 7937.69,
     "2026-11-05": 7928.07,
-    "2026-11-06": 7923.81
+    "2026-11-06": 7699.08
   },
   "trades": [
     {
@@ -1326,6 +1317,20 @@
       "pnl_pct": -6.22,
       "frais_total": 9.13,
       "raison_sortie": "Stop-loss -5.7%"
+    },
+    {
+      "nom": "Teleperformance",
+      "entree": 80.86,
+      "sortie": 67.36,
+      "date_entree": "2026-10-30",
+      "heure_entree": "11:31",
+      "source_entree": "Intraday",
+      "date_sortie": "2026-11-06",
+      "heure_sortie": "11:31",
+      "source_sortie": "Intraday",
+      "pnl_pct": -17.11,
+      "frais_total": 8.89,
+      "raison_sortie": "Stop-loss -16.7%"
     }
   ]
 }
