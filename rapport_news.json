@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-05",
-  "heure": "19:57",
+  "date": "2026-11-06",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -158,12 +158,12 @@
       ]
     },
     "ArcelorMittal": {
-      "sentiment": 0.0,
-      "nb_news": 8,
+      "sentiment": -0.11,
+      "nb_news": 9,
       "titres_cles": [
         "Morgan Stanley optimiste sur ArcelorMittal grâce aux restrictions commerciales",
-        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital",
-        "La Russie affirme avoir frappé des aciéries et des infrastructures énergétiques en Ukraine"
+        "Les actions européennes effacent leurs gains après la chute des indices américains",
+        "Les actions Vallourec chutent après qu’ArcelorMittal cède 10% du capital"
       ]
     },
     "Pernod Ricard": {
@@ -262,8 +262,8 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.5,
+      "nb_news": 20,
       "titres_cles": [
         "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 26 au 30 octobre 2026",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
