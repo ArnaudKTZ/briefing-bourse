@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "heure": "06:45",
+  "heure": "13:29",
   "marche": {
     "sentiment_global": 0.2,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.0,
+      "sentiment": 0.11,
       "nb_news": 18,
       "titres_cles": [
-        "euroAtlantic Airways intègre un second A330-300 augmentant ainsi sa capacité en appareils gros-porteurs",
-        "Le chiffre d’affaires d’Airbus au T3 déçoit ; les objectifs 2026 maintenus",
-        "Airbus et Air France-KLM s'associent dans Alpha Component Solutions pour la maintenance des A350"
+        "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
+        "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
+        "euroAtlantic Airways intègre un second A330-300 augmentant ainsi sa capacité en appareils gros-porteurs"
       ]
     },
     "Schneider Electric": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.5,
+      "sentiment": 0.4,
       "nb_news": 20,
       "titres_cles": [
         "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe",
@@ -271,7 +271,7 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.11,
+      "sentiment": 0.05,
       "nb_news": 19,
       "titres_cles": [
         "Les actions Alstom chutent de 6% après des avertissements de J.P. Morgan et Citi",
