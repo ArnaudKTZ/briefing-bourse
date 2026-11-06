@@ -6498,5 +6498,85 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.46%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "Airbus",
+    "cours": 200.1,
+    "score": 75,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.68%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "L'Oréal",
+    "cours": 444.75,
+    "score": 79,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.25%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "BNP Paribas",
+    "cours": 91.7,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.13%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "ArcelorMittal",
+    "cours": 60.42,
+    "score": 48,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +2.54% avec volume x2.1",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "Publicis",
+    "cours": 104.45,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.6%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "Engie",
+    "cours": 24.07,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.6%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "Teleperformance",
+    "cours": 82.22,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.65%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-06",
+    "heure": "09:01",
+    "nom": "Dassault Systèmes",
+    "cours": 25.84,
+    "score": 70,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +3.98%",
+    "envoyee": false
   }
 ]
