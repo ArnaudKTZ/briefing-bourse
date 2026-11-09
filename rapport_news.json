@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "heure": "14:23",
+  "heure": "18:48",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -23,12 +23,12 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.37,
+      "sentiment": 0.26,
       "nb_news": 19,
       "titres_cles": [
-        "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
-        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas"
+        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas",
+        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
       ]
     },
     "Hermès": {
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.42,
+      "sentiment": 0.53,
       "nb_news": 19,
       "titres_cles": [
+        "BNP Paribas SA : Rachat d'actions - déclaration des transactions sur actions propres du 2 novembre au 6 novembre 2026",
         "BNP PARIBAS LANCE SON PROGRAMME  DE RACHAT D’ACTIONS AU TITRE DE L’EXERCICE 2026  D’UN MONTANT DE 1,3 MILLIARD D’EUROS",
-        "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme ?",
-        "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits"
+        "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme ?"
       ]
     },
     "Air Liquide": {
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 16,
+      "nb_news": 17,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.47,
-      "nb_news": 19,
+      "sentiment": 0.55,
+      "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 2 au 6 novembre 2026",
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 26 au 30 octobre 2026"
+        "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe"
       ]
     },
     "Alstom": {
