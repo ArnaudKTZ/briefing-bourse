@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-06",
-  "heure": "19:25",
+  "date": "2026-11-09",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.3,
-      "nb_news": 10,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.35,
-      "nb_news": 20,
+      "sentiment": 0.37,
+      "nb_news": 19,
       "titres_cles": [
         "TotalEnergies enregistre une hausse record de ses marges de raffinage au troisième trimestre 2026",
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.17,
-      "nb_news": 18,
+      "sentiment": -0.21,
+      "nb_news": 19,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.25,
+      "sentiment": 0.19,
       "nb_news": 16,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
-        "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
+        "La Bourse de Paris termine en hausse avant une semaine chargée en publications"
       ]
     },
     "Sanofi": {
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.06,
+      "nb_news": 16,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.27,
-      "nb_news": 11,
+      "sentiment": -0.33,
+      "nb_news": 12,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
-        "La Bourse de Paris recule après des résultats en cascade",
-        "Kering : Balenciaga annonce le départ du Directeur de la Création Pierpaolo Piccioli"
+        "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
+        "La Bourse de Paris recule après des résultats en cascade"
       ]
     },
     "Société Générale": {
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 18,
+      "nb_news": 17,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.55,
-      "nb_news": 11,
+      "sentiment": 0.46,
+      "nb_news": 13,
       "titres_cles": [
         "Bernstein relève Engie à « surperformance » sur la valorisation",
         "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
@@ -342,17 +342,17 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
-        "Soupçons de corruption : le parquet national financier enquête sur les activités de Thales en Azerbaïdjan",
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
-        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA"
+        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA",
+        "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?"
       ]
     },
     "Forvia": {
-      "sentiment": 0.61,
-      "nb_news": 18,
+      "sentiment": 0.65,
+      "nb_news": 17,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
