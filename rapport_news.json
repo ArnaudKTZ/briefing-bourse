@@ -1,15 +1,15 @@
 {
   "date": "2026-11-09",
-  "heure": "06:45",
+  "heure": "14:23",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
+      "La Bourse de Paris dans le vert, entre baisse du pétrole et accalmie sur la tech",
       "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
       "Bourse : pourquoi le CAC 40 profite-t-il de la victoire des démocrates ? La sélection d’actions de Momentum s’envole",
-      "La Bourse de Paris termine en légère hausse",
-      "La Bourse de Paris en nette hausse après les \"midterms\"",
-      "La Bourse de Paris termine en baisse, les mid-terms captent l'attention"
+      "La Bourse de Paris termine en légère hausse"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.21,
-      "nb_news": 19,
+      "sentiment": -0.22,
+      "nb_news": 18,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 17,
+      "nb_news": 16,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.42,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
