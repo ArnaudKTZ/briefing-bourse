@@ -6588,5 +6588,15 @@
     "signal": "VENTE",
     "raison": "Position fermée — Stop-loss -16.7% | P&L : -17.11%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-09",
+    "heure": "14:01",
+    "nom": "BNP Paribas",
+    "cours": 93.54,
+    "score": 81,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.62%",
+    "envoyee": false
   }
 ]
