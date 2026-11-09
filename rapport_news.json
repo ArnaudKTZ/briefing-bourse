@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "heure": "18:48",
+  "heure": "22:37",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -203,8 +203,8 @@
       ]
     },
     "Legrand": {
-      "sentiment": 0.36,
-      "nb_news": 11,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "RBC relève Legrand à « surperformance » grâce à la demande des datacentres",
         "Legrand progresse après des upgrades de Barclays et Kepler sur l’IA",
