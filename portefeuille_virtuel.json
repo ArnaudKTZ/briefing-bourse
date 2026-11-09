@@ -1,15 +1,6 @@
 {
-  "capital": 3702.0399999999972,
+  "capital": 4708.209999999997,
   "positions": {
-    "BNP Paribas": {
-      "nb_actions": 11,
-      "prix_entree": 86.78,
-      "date_entree": "2026-10-29",
-      "heure_entree": "11:18",
-      "source_entree": "Briefing",
-      "cout_total": 954.58,
-      "frais_achat": 4.77
-    },
     "Publicis": {
       "nb_actions": 10,
       "prix_entree": 99.86,
@@ -138,7 +129,8 @@
     "2026-11-03": 7842.76,
     "2026-11-04": 7937.69,
     "2026-11-05": 7928.07,
-    "2026-11-06": 7708.13
+    "2026-11-06": 7708.13,
+    "2026-11-09": 7703.07
   },
   "trades": [
     {
@@ -1331,6 +1323,19 @@
       "pnl_pct": -17.11,
       "frais_total": 8.89,
       "raison_sortie": "Stop-loss -16.7%"
+    },
+    {
+      "nom": "BNP Paribas",
+      "entree": 86.78,
+      "sortie": 91.93,
+      "date_entree": "2026-10-29",
+      "heure_entree": "11:18",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-09",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 5.4,
+      "frais_total": 9.83
     }
   ]
 }
