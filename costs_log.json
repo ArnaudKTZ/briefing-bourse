@@ -1,15 +1,6 @@
 [
   {
     "date": "2026-08-28",
-    "heure": "23:41",
-    "agent": "scoring_intraday",
-    "model": "claude-haiku-4-5-20251001",
-    "input": 362,
-    "output": 62,
-    "usd": 0.000672
-  },
-  {
-    "date": "2026-08-28",
     "heure": "01:26",
     "agent": "scoring_intraday",
     "model": "claude-haiku-4-5-20251001",
@@ -4498,5 +4489,14 @@
     "input": 7776,
     "output": 6025,
     "usd": 0.113703
+  },
+  {
+    "date": "2026-11-09",
+    "heure": "16:01",
+    "agent": "scoring_intraday",
+    "model": "claude-haiku-4-5-20251001",
+    "input": 362,
+    "output": 57,
+    "usd": 0.000647
   }
 ]
