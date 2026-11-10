@@ -1,5 +1,5 @@
 {
-  "capital": 8231.550000000001,
+  "capital": 7683.620000000001,
   "positions": {
     "Publicis": {
       "nb_actions": 10,
@@ -11,6 +11,18 @@
       "frais_achat": 5.15,
       "stop_pct": 0.0422,
       "tp_pct": 0.0844,
+      "score_entree": 80
+    },
+    "Legrand": {
+      "nb_actions": 4,
+      "prix_entree": 136.3,
+      "date_entree": "2026-11-10",
+      "heure_entree": "16:29",
+      "secteur": "Industrie/Défense",
+      "cout_total": 545.2,
+      "frais_achat": 2.73,
+      "stop_pct": 0.08,
+      "tp_pct": 0.16,
       "score_entree": 80
     }
   },
@@ -95,7 +107,7 @@
     "2026-11-05": 9266.2,
     "2026-11-06": 9266.2,
     "2026-11-09": 9266.2,
-    "2026-11-10": 9271.05
+    "2026-11-10": 9266.82
   },
   "trades": [
     {
