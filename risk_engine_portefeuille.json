@@ -1,6 +1,19 @@
 {
-  "capital": 9266.2,
-  "positions": {},
+  "capital": 8231.550000000001,
+  "positions": {
+    "Publicis": {
+      "nb_actions": 10,
+      "prix_entree": 102.95,
+      "date_entree": "2026-11-10",
+      "heure_entree": "09:01",
+      "secteur": "Télécom/Média",
+      "cout_total": 1029.5,
+      "frais_achat": 5.15,
+      "stop_pct": 0.0422,
+      "tp_pct": 0.0844,
+      "score_entree": 80
+    }
+  },
   "historique_valeur": {
     "2026-07-22": 9982.15,
     "2026-07-23": 9972.88,
@@ -82,7 +95,7 @@
     "2026-11-05": 9266.2,
     "2026-11-06": 9266.2,
     "2026-11-09": 9266.2,
-    "2026-11-10": 9266.2
+    "2026-11-10": 9261.05
   },
   "trades": [
     {
@@ -284,5 +297,5 @@
       "raison_sortie": "ÉVITER intraday"
     }
   ],
-  "regime_dernier": "baissier"
+  "regime_dernier": "haussier"
 }
