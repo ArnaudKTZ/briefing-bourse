@@ -1,8 +1,8 @@
 {
   "date": "2026-11-10",
-  "heure": "16:47",
+  "heure": "19:48",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
@@ -14,8 +14,8 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.14,
+      "nb_news": 14,
       "titres_cles": [
         "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "La Bourse de Paris termine en hausse avant une semaine chargée en publications",
@@ -104,8 +104,8 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.27,
-      "nb_news": 15,
+      "sentiment": 0.29,
+      "nb_news": 14,
       "titres_cles": [
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
         "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.55,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 10 2026",
