@@ -1,8 +1,8 @@
 {
   "date": "2026-11-10",
-  "heure": "06:45",
+  "heure": "14:00",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
@@ -46,7 +46,7 @@
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
-        "euroAtlantic Airways intègre un second A330-300 augmentant ainsi sa capacité en appareils gros-porteurs"
+        "L’armée française commande deux satellites espions à Airbus et Thales pour plus de 1,5 milliard d’euros"
       ]
     },
     "Schneider Electric": {
@@ -265,9 +265,9 @@
       "sentiment": 0.55,
       "nb_news": 20,
       "titres_cles": [
+        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 10 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 2 au 6 novembre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "Porté par sa pharmacie, Bayer relève ses objectifs et met en garde l'Europe"
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
       ]
     },
     "Alstom": {
@@ -280,12 +280,12 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.21,
-      "nb_news": 14,
+      "sentiment": 0.4,
+      "nb_news": 15,
       "titres_cles": [
+        "Worldline annonce le succès de l’offre de rachat sur ses obligations d’un montant de 500.000.000 euros portant intérêt au taux fixe de 0,875% arrivant à échéance en juin 2027",
         "Worldline annonce le lancement d’une offre de rachat sur ses obligations arrivant à échéance en juin 2027",
-        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole",
-        "Goldman Sachs abaisse Worldline à \"vendre\" en raison de perspectives de flux de trésorerie faibles"
+        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole"
       ]
     },
     "Veolia": {
@@ -325,12 +325,12 @@
       ]
     },
     "Accor": {
-      "sentiment": 0.33,
-      "nb_news": 9,
+      "sentiment": 0.4,
+      "nb_news": 10,
       "titres_cles": [
+        "Accor Group et Hard Rock International signent un partenariat stratégique mondial",
         "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs",
-        "Morgan Stanley reprend la couverture d’Accor avec un objectif de 51€"
+        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
       ]
     },
     "Eurazeo": {
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.05,
+      "nb_news": 19,
       "titres_cles": [
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
         "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA",
