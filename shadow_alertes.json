@@ -6608,5 +6608,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.1%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-10",
+    "heure": "18:14",
+    "nom": "Edenred",
+    "cours": 25.89,
+    "score": 59,
+    "signal": "VENTE",
+    "raison": "Position fermée — Take-profit 8.2% | P&L : +7.69%",
+    "envoyee": false
   }
 ]
