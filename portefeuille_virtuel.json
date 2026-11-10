@@ -1,5 +1,5 @@
 {
-  "capital": 4708.209999999997,
+  "capital": 5764.389999999998,
   "positions": {
     "Publicis": {
       "nb_actions": 10,
@@ -9,15 +9,6 @@
       "source_entree": "Briefing",
       "cout_total": 998.6,
       "frais_achat": 4.99
-    },
-    "Edenred": {
-      "nb_actions": 41,
-      "prix_entree": 23.92,
-      "date_entree": "2026-11-04",
-      "heure_entree": "06:01",
-      "source_entree": "Briefing",
-      "cout_total": 980.72,
-      "frais_achat": 4.9
     },
     "TotalEnergies": {
       "nb_actions": 12,
@@ -131,7 +122,7 @@
     "2026-11-05": 7928.07,
     "2026-11-06": 7708.13,
     "2026-11-09": 7683.65,
-    "2026-11-10": 7726.71
+    "2026-11-10": 7742.29
   },
   "trades": [
     {
@@ -1337,6 +1328,20 @@
       "source_sortie": "Briefing",
       "pnl_pct": 5.4,
       "frais_total": 9.83
+    },
+    {
+      "nom": "Edenred",
+      "entree": 23.92,
+      "sortie": 25.89,
+      "date_entree": "2026-11-04",
+      "heure_entree": "06:01",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-10",
+      "heure_sortie": "18:14",
+      "source_sortie": "Intraday",
+      "pnl_pct": 7.69,
+      "frais_total": 10.21,
+      "raison_sortie": "Take-profit 8.2%"
     }
   ]
 }
