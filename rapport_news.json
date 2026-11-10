@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "heure": "14:00",
+  "heure": "16:47",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -46,7 +46,7 @@
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
-        "L’armée française commande deux satellites espions à Airbus et Thales pour plus de 1,5 milliard d’euros"
+        "Un Airbus entre dans le Guinness Book, plus de 24 heures sans escale entre Melbourne et Toulouse"
       ]
     },
     "Schneider Electric": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
