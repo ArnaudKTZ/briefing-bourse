@@ -1,8 +1,8 @@
 {
   "date": "2026-11-11",
-  "heure": "06:45",
+  "heure": "13:11",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.11,
-      "nb_news": 18,
+      "sentiment": 0.12,
+      "nb_news": 17,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
@@ -342,8 +342,8 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
         "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA",
