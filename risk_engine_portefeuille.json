@@ -1,5 +1,5 @@
 {
-  "capital": 7683.620000000001,
+  "capital": 6881.2300000000005,
   "positions": {
     "Publicis": {
       "nb_actions": 10,
@@ -24,6 +24,18 @@
       "stop_pct": 0.08,
       "tp_pct": 0.16,
       "score_entree": 80
+    },
+    "Eurazeo": {
+      "nb_actions": 16,
+      "prix_entree": 49.9,
+      "date_entree": "2026-11-12",
+      "heure_entree": "11:31",
+      "secteur": "Banques/Finance",
+      "cout_total": 798.4,
+      "frais_achat": 3.99,
+      "stop_pct": 0.0548,
+      "tp_pct": 0.1096,
+      "score_entree": 83
     }
   },
   "historique_valeur": {
@@ -109,7 +121,7 @@
     "2026-11-09": 9266.2,
     "2026-11-10": 9265.52,
     "2026-11-11": 9284.02,
-    "2026-11-12": 9265.52
+    "2026-11-12": 9285.43
   },
   "trades": [
     {
