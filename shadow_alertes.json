@@ -6638,5 +6638,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.8%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-12",
+    "heure": "16:52",
+    "nom": "STMicroelectronics",
+    "cours": 46.6,
+    "score": 76,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.31%",
+    "envoyee": false
   }
 ]
