@@ -1,8 +1,8 @@
 {
   "date": "2026-11-12",
-  "heure": "06:45",
+  "heure": "14:17",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.05,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.08,
-      "nb_news": 13,
+      "sentiment": 0.0,
+      "nb_news": 11,
       "titres_cles": [
-        "LVMH en petite croissance cet été mais la mode et la maroquinerie sont à la peine",
         "LVMH : Poursuite de la croissance au troisième trimestre 2026",
-        "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque"
+        "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
+        "LVMH :    Déclaration des transactions sur actions propres"
       ]
     },
     "TotalEnergies": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.22,
-      "nb_news": 18,
+      "sentiment": -0.24,
+      "nb_news": 17,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.14,
-      "nb_news": 14,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
         "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": -0.05,
+      "sentiment": 0.0,
       "nb_news": 20,
       "titres_cles": [
         "Capgemini sélectionné par la Commission européenne pour diriger un consortium dédié à la sécurité de l’IA et à l’évaluation des cyber-risques liés aux modèles d’IA avancés",
-        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas",
-        "Malaisie : TotalEnergies signe des accords pour acquérir une participation opérée dans deux champs gaziers offshore majeurs"
+        "La plupart des entreprises prévoient d’adopter une stratégie d’IA multi-modèles, alors que près de six sur dix ont subi des coûts liés à l’IA significativement supérieurs aux prévisions",
+        "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas"
       ]
     },
     "Renault": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 10 2026",
@@ -298,8 +298,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.0,
-      "nb_news": 14,
+      "sentiment": -0.08,
+      "nb_news": 13,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
