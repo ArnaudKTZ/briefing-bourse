@@ -1,8 +1,8 @@
 {
   "date": "2026-11-12",
-  "heure": "17:15",
+  "heure": "20:06",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
@@ -15,7 +15,7 @@
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 11,
+      "nb_news": 10,
       "titres_cles": [
         "LVMH : Poursuite de la croissance au troisième trimestre 2026",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.24,
-      "nb_news": 17,
+      "sentiment": -0.25,
+      "nb_news": 16,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -104,12 +104,12 @@
       ]
     },
     "Danone": {
-      "sentiment": 0.29,
+      "sentiment": 0.5,
       "nb_news": 14,
       "titres_cles": [
+        "Danone finalise l’acquisition de MADE Group, renforçant ainsi sa présence dans les segments en forte croissance de la nutrition saine en Asie-Pacifique",
         "Les actions Danone progressent après la révision à la hausse de Deutsche Bank",
-        "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle",
-        "Danone se redresse malgré un «environnement difficile» lié à la crise du lait infantile et l'inflation"
+        "Danone finalise l’acquisition de Huel et étend son portefeuille dans la Nutrition fonctionnelle"
       ]
     },
     "Vinci": {
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.0,
-      "nb_news": 17,
+      "nb_news": 16,
       "titres_cles": [
         "Renault et EDF veulent faire baisser votre facture d’électricité",
         "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?",
@@ -298,9 +298,13 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 13,
+      "titres_cles": [
+        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
+        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
+        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt"
+      ]
     },
     "Dassault Systèmes": {
       "sentiment": 0.29,
