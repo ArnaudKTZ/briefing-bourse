@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "heure": "14:17",
+  "heure": "17:15",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -289,8 +289,8 @@
       ]
     },
     "Veolia": {
-      "sentiment": 0.64,
-      "nb_news": 14,
+      "sentiment": 0.6,
+      "nb_news": 15,
       "titres_cles": [
         "Dessalement : Veolia conforte sa position de leader avec des contrats d'envergure au Moyen-Orient",
         "Veolia accélère la transformation de son portefeuille, axée sur la croissance, avec 570 M€ de cessions déjà signées en 2026 sur un total de 2 Md€",
@@ -298,13 +298,9 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": -0.08,
-      "nb_news": 13,
-      "titres_cles": [
-        "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
-        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Dassault Systèmes": {
       "sentiment": 0.29,
@@ -320,8 +316,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
