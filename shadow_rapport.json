@@ -1,31 +1,31 @@
 {
-  "date": "2026-11-06",
-  "n_alertes": 659,
-  "n_achats": 593,
-  "en_attente": 7,
+  "date": "2026-11-13",
+  "n_alertes": 666,
+  "n_achats": 599,
+  "en_attente": 1,
   "stats": {
     "J+1": {
-      "n": 586,
-      "gagnants_pct": 37.4,
-      "moyenne_nette": 0.31,
-      "cac_moyen": -0.12,
-      "edge": 0.43
+      "n": 598,
+      "gagnants_pct": 36.6,
+      "moyenne_nette": -0.21,
+      "cac_moyen": -0.1,
+      "edge": -0.11
     },
     "J+3": {
-      "n": 585,
-      "gagnants_pct": 40.3,
-      "moyenne_nette": 0.01,
-      "cac_moyen": -0.3,
-      "edge": 0.31
+      "n": 595,
+      "gagnants_pct": 39.3,
+      "moyenne_nette": -0.51,
+      "cac_moyen": -0.19,
+      "edge": -0.32
     },
     "J+5": {
-      "n": 585,
-      "gagnants_pct": 40.3,
-      "moyenne_nette": -0.38,
-      "cac_moyen": -0.54,
-      "edge": 0.16
+      "n": 593,
+      "gagnants_pct": 42.3,
+      "moyenne_nette": -0.44,
+      "cac_moyen": -0.36,
+      "edge": -0.08
     }
   },
   "verdict": "NEUTRES",
-  "verdict_txt": "Ni edge ni contre-performance nets (+0.16 pts vs CAC, 40.3% gagnantes sur 585). La suspension ne coûte rien."
+  "verdict_txt": "Ni edge ni contre-performance nets (-0.08 pts vs CAC, 42.3% gagnantes sur 593). La suspension ne coûte rien."
 }
