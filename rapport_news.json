@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "heure": "13:38",
+  "heure": "16:41",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -42,7 +42,7 @@
     },
     "Airbus": {
       "sentiment": 0.12,
-      "nb_news": 17,
+      "nb_news": 16,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.31,
+      "nb_news": 16,
       "titres_cles": [
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
-        "Soupçons d'entrave à la concurrence: Sanofi échappe à une amende de l'UE",
-        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars"
+        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
+        "Sanofi : Berlin autorisé à accorder une subvention pour sécuriser l’approvisionnement européen en insuline"
       ]
     },
     "BNP Paribas": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
