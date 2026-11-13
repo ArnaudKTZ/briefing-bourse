@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "heure": "16:41",
+  "heure": "19:44",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.31,
-      "nb_news": 13,
+      "sentiment": 0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
         "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées",
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.45,
-      "nb_news": 20,
+      "sentiment": 0.42,
+      "nb_news": 19,
       "titres_cles": [
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
         "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 10 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 2 au 6 novembre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
+        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 2 au 6 novembre 2026"
       ]
     },
     "Alstom": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
