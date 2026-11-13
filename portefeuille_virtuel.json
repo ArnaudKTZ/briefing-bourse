@@ -1,15 +1,6 @@
 {
-  "capital": 5764.389999999998,
+  "capital": 6805.159999999998,
   "positions": {
-    "Publicis": {
-      "nb_actions": 10,
-      "prix_entree": 99.86,
-      "date_entree": "2026-11-03",
-      "heure_entree": "12:38",
-      "source_entree": "Briefing",
-      "cout_total": 998.6,
-      "frais_achat": 4.99
-    },
     "TotalEnergies": {
       "nb_actions": 12,
       "prix_entree": 80.99,
@@ -124,7 +115,8 @@
     "2026-11-09": 7683.65,
     "2026-11-10": 7742.29,
     "2026-11-11": 7762.83,
-    "2026-11-12": 7783.95
+    "2026-11-12": 7783.95,
+    "2026-11-13": 7757.6
   },
   "trades": [
     {
@@ -1344,6 +1336,19 @@
       "pnl_pct": 7.69,
       "frais_total": 10.21,
       "raison_sortie": "Take-profit 8.2%"
+    },
+    {
+      "nom": "Publicis",
+      "entree": 99.86,
+      "sortie": 104.6,
+      "date_entree": "2026-11-03",
+      "heure_entree": "12:38",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-13",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 4.22,
+      "frais_total": 10.22
     }
   ]
 }
