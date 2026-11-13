@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-12",
-  "heure": "20:06",
+  "date": "2026-11-13",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.69,
-      "nb_news": 13,
+      "sentiment": 0.73,
+      "nb_news": 15,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
@@ -239,8 +239,8 @@
       ]
     },
     "Orange": {
-      "sentiment": 0.78,
-      "nb_news": 18,
+      "sentiment": 0.82,
+      "nb_news": 17,
       "titres_cles": [
         "Orange : Orange annonce avoir procédé à l'acquisition d'actions propres dans le cadre de son programme de rachat d'actions",
         "Orange : Orange maintient une solide croissance de son chiffre d’affaires au troisième trimestre et relève son objectif de croissance d’EBITDAaL sur l’année",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
