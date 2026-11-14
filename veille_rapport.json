@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-14",
   "nb_articles": 40,
   "top": [
     {
@@ -24,6 +24,70 @@
       "extrait": "Hierarchical clustering and Nested Clustered Optimization (NCO) mitigate the mathematical ill-conditioning of classical Markowitz covariance matrices. However, two structural vulnerabilities persist in equity markets: (1) symmetric variance penalizes upside and downside return dispersion identically, inducing acute return drag against soaring momentum sectors; and (2) unconstrained Hidden Markov Models (HMM) exhibit…"
     },
     {
+      "titre": "Idiosyncratic Market Effects in Global Time Series Momentum",
+      "lien": "https://arxiv.org/abs/2611.15646v1",
+      "date": "2026-11-11",
+      "score": 19,
+      "hits": [
+        "momentum",
+        "factor",
+        "time series momentum",
+        "out-of-sample",
+        "robust"
+      ],
+      "deja_tranche": [],
+      "extrait": "Time series momentum is a pervasive explanatory factor in financial markets whereby a market's recent historical average return positively predicts future returns. Recent applications of statistical learning augment the traditional linear model definition with a more descriptive global nonlinear factor model."
+    },
+    {
+      "titre": "Trained, Frozen, or Absent: Identifying What a Quantum Layer Contributes to Cross-Sectional Equity Ranking",
+      "lien": "https://arxiv.org/abs/2611.10801v1",
+      "date": "2026-11-07",
+      "score": 16,
+      "hits": [
+        "cross-sectional",
+        "walk-forward",
+        "out-of-sample",
+        "backtest"
+      ],
+      "deja_tranche": [],
+      "extrait": "Hybrid quantumclassical models are increasingly proposed for nancial prediction, but reported gains are rarely separated from the classical components around them. We study a hybrid quantum temporal convolutional network for daily cross-sectional ranking of 2000 Tokyo Stock Exchange equities under a protocol built to make the quantum contribution identiable: six conditions (circuit trained, frozen or absent, a…"
+    },
+    {
+      "titre": "Global Seasonality Factor Investing",
+      "lien": "https://arxiv.org/abs/2611.15657v1",
+      "date": "2026-11-11",
+      "score": 14,
+      "hits": [
+        "momentum",
+        "factor",
+        "walk-forward",
+        "out-of-sample",
+        "transaction cost",
+        "ensemble"
+      ],
+      "deja_tranche": [
+        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
+      ],
+      "extrait": "We study seasonality as a factor for predicting risk-adjusted returns across global futures markets. We document five seasonality anomalies that, in aggregate, are pervasive across bond, commodity and equity markets."
+    },
+    {
+      "titre": "Diversification Across Predictors: Heterogeneous Ensemble Learning for Cross-Sectional Return Prediction",
+      "lien": "https://arxiv.org/abs/2611.12389v1",
+      "date": "2026-11-09",
+      "score": 13,
+      "hits": [
+        "factor",
+        "cross-sectional",
+        "regime",
+        "overfit",
+        "ensemble"
+      ],
+      "deja_tranche": [
+        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
+      ],
+      "extrait": "Cross-sectional stock return prediction remains challenging due to extremely low signal-to-noise ratios, high-dimensional factor spaces, and non-stationary predictor effectiveness. Individual model classes exhibit complementary failure modes in this regime: neural networks overfit noise due to high variance, while linear models underfit nonlinear structure due to high bias."
+    },
+    {
       "titre": "Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found",
       "lien": "https://arxiv.org/abs/2611.06607v1",
       "date": "2026-11-04",
@@ -40,86 +104,33 @@
       "extrait": "Agentic research loops that let a language model propose a change, run a fixed experiment and keep whatever improves the metric work well in machine learning. In trading research the same loop is a machine for producing false discoveries: a backtest that \"improves the metric\" is, by default, overfit, look-ahead, a multiple-comparisons artifact, cost-free, or market drift wearing a strategy."
     },
     {
-      "titre": "Multidimensional Views Behind Target-Price Revisions: An LLM-Based Representation of Analyst Outlooks",
-      "lien": "https://arxiv.org/abs/2611.04119v1",
-      "date": "2026-11-03",
-      "score": 11,
-      "hits": [
-        "momentum",
-        "walk-forward",
-        "llm"
-      ],
-      "deja_tranche": [],
-      "extrait": "A target price compresses an analyst's multidimensional views into a single number. We propose an LLM-based text representation that extracts these views from research reports as question-based outlook scores with supporting evidence."
-    },
-    {
-      "titre": "Honest Small Decision Models for Finance: Scale, Specialization Collapse, and Mixed-Corpus Remediation",
-      "lien": "https://arxiv.org/abs/2611.03755v1",
-      "date": "2026-11-02",
-      "score": 9,
+      "titre": "Risk-Sensitive Reinforcement Learning for an Options Market Maker: An Empirical Study with Real S&P 500 Options",
+      "lien": "https://arxiv.org/abs/2611.10956v1",
+      "date": "2026-11-07",
+      "score": 8,
       "hits": [
         "regime",
-        "walk-forward",
-        "language model"
-      ],
-      "deja_tranche": [],
-      "extrait": "Financial workflows need fast, calibrated, auditable decisions, not just generated text. We train System-1 decision models, small language models fine-tuned to answer typed questions (choice/score/noul) with a probability in a single forward pass, across two model families (K2-Horizon and Qwen3.5/3.8) and nine rungs from 0.8B to 32B parameters, using one frozen LoRA recipe on a public decision benchmark and two new…"
-    },
-    {
-      "titre": "Neural Realized Measures: Forecast-Supervised Intraday Aggregation for Volatility Forecasting",
-      "lien": "https://arxiv.org/abs/2611.07287v1",
-      "date": "2026-11-05",
-      "score": 7,
-      "hits": [
-        "regime",
-        "out-of-sample"
-      ],
-      "deja_tranche": [],
-      "extrait": "High-frequency volatility forecasting typically separates measurement from prediction: intraday observations are first compressed into a daily realized measure using a fixed aggregation rule, and the resulting statistic is then passed to a forecasting model. This conventional pipeline therefore treats measure construction as forecast-agnostic preprocessing."
-    },
-    {
-      "titre": "Are LLM Research Agents Reliable Judges of Predictability? Evidence from Planted-Signal Worlds",
-      "lien": "https://arxiv.org/abs/2611.04070v1",
-      "date": "2026-11-02",
-      "score": 7,
-      "hits": [
-        "out-of-sample",
-        "llm",
-        "language model",
+        "reinforcement learning",
         "agent"
+      ],
+      "deja_tranche": [],
+      "extrait": "Options market makers absorb client order flow and must hedge the resulting inventory risk under trading frictions. We study whether an option hedging reinforcement learning (RL) agent trained on historical market data outperforms three alternatives in tail-risk protection: (i) traditional delta hedging, (ii) simple hedge-ratio rules, and (iii) the same agent trained in simulated markets."
+    },
+    {
+      "titre": "Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach",
+      "lien": "https://arxiv.org/abs/2611.14699v1",
+      "date": "2026-11-10",
+      "score": 7,
+      "hits": [
+        "factor",
+        "walk-forward",
+        "out-of-sample",
+        "language model"
       ],
       "deja_tranche": [
         "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
       ],
-      "extrait": "Researchers ask large language model (LLM) research agents whether a forecasting model beats a static benchmark, a verdict that real data cannot check. We treat the agent as a statistical test and score pre-specified runs of three frontier models and one open-weight model in simulated worlds with a planted signal."
-    },
-    {
-      "titre": "Thinking Fast, Trading Late: System One Decision Models vs the Market",
-      "lien": "https://arxiv.org/abs/2611.03985v1",
-      "date": "2026-11-02",
-      "score": 6,
-      "hits": [
-        "backtest",
-        "llm",
-        "language model"
-      ],
-      "deja_tranche": [],
-      "extrait": "Large language models (LLMs) read company news at scale, and backtests suggest that their readings predict stock returns. We ask how much of that predictability survives a test that rules out look-ahead, memorization and selection."
-    },
-    {
-      "titre": "Can We Stop the Backtest Yet? Anytime-Valid Promotion Tests for Adaptive Financial Research Agents",
-      "lien": "https://arxiv.org/abs/2611.03384v1",
-      "date": "2026-11-02",
-      "score": 5,
-      "hits": [
-        "out-of-sample",
-        "backtest",
-        "agent"
-      ],
-      "deja_tranche": [
-        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
-      ],
-      "extrait": "Financial research agents can generate and monitor trading rules faster than a human can document the resulting selection process. Candidates appear at data-dependent times, weak rules are abandoned, and promising ones are watched until they cross a reporting threshold."
+      "extrait": "Reinforcement-learning portfolio policies can optimize allocations from prices, covariances, and prior positions, yet they lack a calibrated, replayable mechanism for certifying that a proposed allocation respects a bounded risk envelope before execution. Regulators increasingly expect automated portfolio systems to provide exactly this kind of pre-trade audit trail, interpretable risk limit, and human-oversight…"
     }
   ],
   "depots_13f": []
