@@ -4,100 +4,100 @@
   "n_obs": 3510,
   "horizons": {
     "J+1": {
-      "univers_moy": -0.15,
+      "univers_moy": -0.14,
       "acheter": {
-        "n": 1360,
-        "moy": -0.25,
+        "n": 1375,
+        "moy": -0.24,
         "edge": -0.1,
         "edge_net": -1.1
       },
       "eviter": {
-        "n": 640,
-        "moy": -0.04,
-        "edge": -0.11
+        "n": 644,
+        "moy": -0.05,
+        "edge": -0.09
       }
     },
     "J+3": {
-      "univers_moy": -0.09,
+      "univers_moy": -0.1,
       "acheter": {
-        "n": 1326,
+        "n": 1344,
         "moy": -0.2,
-        "edge": -0.11,
-        "edge_net": -1.11
-      },
-      "eviter": {
-        "n": 633,
-        "moy": 0.31,
-        "edge": -0.4
-      }
-    },
-    "J+5": {
-      "univers_moy": -0.13,
-      "acheter": {
-        "n": 1293,
-        "moy": -0.23,
         "edge": -0.1,
         "edge_net": -1.1
       },
       "eviter": {
-        "n": 626,
+        "n": 636,
         "moy": 0.29,
-        "edge": -0.42
+        "edge": -0.39
+      }
+    },
+    "J+5": {
+      "univers_moy": -0.1,
+      "acheter": {
+        "n": 1311,
+        "moy": -0.17,
+        "edge": -0.07,
+        "edge_net": -1.07
+      },
+      "eviter": {
+        "n": 631,
+        "moy": 0.28,
+        "edge": -0.38
       }
     },
     "J+10": {
-      "univers_moy": -0.19,
+      "univers_moy": -0.15,
       "acheter": {
-        "n": 1240,
-        "moy": -0.2,
-        "edge": -0.01,
-        "edge_net": -1.01
+        "n": 1265,
+        "moy": -0.11,
+        "edge": 0.04,
+        "edge_net": -0.96
       },
       "eviter": {
-        "n": 592,
-        "moy": 0.13,
-        "edge": -0.32
+        "n": 594,
+        "moy": 0.14,
+        "edge": -0.29
       }
     }
   },
   "buckets_j5": {
     "85+": {
-      "n": 500,
-      "moy": -0.04
+      "n": 503,
+      "moy": -0.01
     },
     "75-84": {
-      "n": 354,
-      "moy": -0.2
+      "n": 360,
+      "moy": -0.13
     },
     "65-74": {
-      "n": 439,
-      "moy": -0.49
+      "n": 448,
+      "moy": -0.39
     }
   },
   "ic_j5": {
-    "ic_moyen": 0.0084,
-    "n_jours": 84,
-    "pct_positifs": 57
+    "ic_moyen": 0.0134,
+    "n_jours": 85,
+    "pct_positifs": 58
   },
   "regimes": {
     "haussier": {
       "n_obs": 1872,
       "stats": {
-        "univers_moy": -0.29,
+        "univers_moy": -0.23,
         "acheter": {
-          "n": 685,
-          "moy": -0.41,
-          "edge": -0.12,
-          "edge_net": -1.12
+          "n": 703,
+          "moy": -0.29,
+          "edge": -0.06,
+          "edge_net": -1.06
         },
         "eviter": {
-          "n": 336,
-          "moy": 0.64,
-          "edge": -0.93
+          "n": 341,
+          "moy": 0.61,
+          "edge": -0.84
         }
       },
-      "ic_moyen": 0.0466,
-      "n_jours_ic": 43
+      "ic_moyen": 0.0554,
+      "n_jours_ic": 44
     },
     "baissier": {
       "n_obs": 1638,
@@ -129,121 +129,121 @@
     "calme": {
       "n_obs": 3510,
       "stats": {
-        "univers_moy": -0.13,
+        "univers_moy": -0.1,
         "acheter": {
-          "n": 1293,
-          "moy": -0.23,
-          "edge": -0.1,
-          "edge_net": -1.1
+          "n": 1311,
+          "moy": -0.17,
+          "edge": -0.07,
+          "edge_net": -1.07
         },
         "eviter": {
-          "n": 626,
-          "moy": 0.29,
-          "edge": -0.42
+          "n": 631,
+          "moy": 0.28,
+          "edge": -0.38
         }
       },
-      "ic_moyen": 0.0084,
-      "n_jours_ic": 84
+      "ic_moyen": 0.0134,
+      "n_jours_ic": 85
     }
   },
-  "verdict": "Sur 1293 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.10 pts bruts à J+5), soit -1.10 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.42 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.008 : le score n'a aucun pouvoir de classement.",
+  "verdict": "Sur 1311 ACHETER : les ACHETER ne se distinguent pas de l'univers (-0.07 pts bruts à J+5), soit -1.07 pts NETS de frais : perdant en réel ; les ÉVITER sont contre-productifs (-0.38 pts) ; le score discrimine (85+ bat 65-74) ; IC de Spearman +0.013 : le score n'a aucun pouvoir de classement.",
   "fenetre_propre": {
     "depuis": "2026-07-02",
     "n_obs": 3510,
     "n_jours": 90,
     "j5": {
-      "univers_moy": -0.13,
+      "univers_moy": -0.1,
       "acheter": {
-        "n": 1293,
-        "moy": -0.23,
-        "edge": -0.1,
-        "edge_net": -1.1
+        "n": 1311,
+        "moy": -0.17,
+        "edge": -0.07,
+        "edge_net": -1.07
       },
       "eviter": {
-        "n": 626,
-        "moy": 0.29,
-        "edge": -0.42
+        "n": 631,
+        "moy": 0.28,
+        "edge": -0.38
       }
     },
     "ic_j5": {
-      "ic_moyen": 0.0084,
-      "n_jours": 84,
-      "pct_positifs": 57
+      "ic_moyen": 0.0134,
+      "n_jours": 85,
+      "pct_positifs": 58
     },
-    "edge_net_j5": -1.1,
+    "edge_net_j5": -1.07,
     "cas_grille": 1,
     "verdict": "CAS 1 de la grille figée (IC <= 0 OU edge net <= 0) : satellite maintenu 100% virtuel, aucun passage en réel, effort sur la Phase 1 V5."
   },
   "contribution_par_indicateur_j5": {
-    "univers_moy": -0.13,
+    "univers_moy": -0.1,
     "rsi": {
       "survente (<30)": {
-        "n": 157,
-        "moy": 1.0,
-        "edge": 1.13
+        "n": 158,
+        "moy": 0.96,
+        "edge": 1.06
       },
       "bas (30-45)": {
-        "n": 1176,
-        "moy": -0.33,
+        "n": 1183,
+        "moy": -0.3,
         "edge": -0.2
       },
       "neutre (45-55)": {
-        "n": 975,
-        "moy": -0.21,
-        "edge": -0.08
+        "n": 986,
+        "moy": -0.2,
+        "edge": -0.1
       },
       "haut (55-70)": {
-        "n": 826,
-        "moy": 0.07,
-        "edge": 0.2
+        "n": 843,
+        "moy": 0.13,
+        "edge": 0.23
       },
       "surachat (>=70)": {
-        "n": 144,
-        "moy": -0.24,
-        "edge": -0.11
+        "n": 145,
+        "moy": -0.22,
+        "edge": -0.12
       }
     },
     "macd": {
       "haussier": {
-        "n": 1647,
-        "moy": 0.22,
+        "n": 1677,
+        "moy": 0.25,
         "edge": 0.35
       },
       "baissier": {
-        "n": 1631,
-        "moy": -0.47,
-        "edge": -0.34
+        "n": 1638,
+        "moy": -0.46,
+        "edge": -0.36
       }
     },
     "bollinger": {
       "sous bande basse (survendu)": {
-        "n": 175,
-        "moy": -0.23,
-        "edge": -0.1
+        "n": 176,
+        "moy": -0.18,
+        "edge": -0.08
       },
       "dans les bandes": {
-        "n": 2888,
-        "moy": -0.19,
+        "n": 2924,
+        "moy": -0.16,
         "edge": -0.06
       },
       "au-dessus bande haute (suracheté)": {
         "n": 215,
         "moy": 0.77,
-        "edge": 0.9
+        "edge": 0.87
       }
     },
     "cross": {
       "golden cross actif": {
-        "n": 37,
-        "moy": -0.56,
-        "edge": -0.43
+        "n": 38,
+        "moy": -0.41,
+        "edge": -0.31
       },
       "death cross actif": {
         "n": 44,
         "moy": 0.58,
-        "edge": 0.71
+        "edge": 0.68
       }
     }
   },
-  "verdict_par_indicateur": "Indicateurs avec edge mesurable pris seuls : rsi=survente (<30) : edge positif +1.13 pts (n=157) ; macd=haussier : edge positif +0.35 pts (n=1647) ; macd=baissier : edge NÉGATIF -0.34 pts (n=1631) ; bollinger=au-dessus bande haute (suracheté) : edge positif +0.90 pts (n=215) ; cross=golden cross actif : edge NÉGATIF -0.43 pts (n=37) ; cross=death cross actif : edge positif +0.71 pts (n=44). Sans edge mesurable : rsi=bas (30-45) (n=1176), rsi=neutre (45-55) (n=975), rsi=haut (55-70) (n=826), rsi=surachat (>=70) (n=144), bollinger=sous bande basse (survendu) (n=175), bollinger=dans les bandes (n=2888)."
+  "verdict_par_indicateur": "Indicateurs avec edge mesurable pris seuls : rsi=survente (<30) : edge positif +1.06 pts (n=158) ; macd=haussier : edge positif +0.35 pts (n=1677) ; macd=baissier : edge NÉGATIF -0.36 pts (n=1638) ; bollinger=au-dessus bande haute (suracheté) : edge positif +0.87 pts (n=215) ; cross=golden cross actif : edge NÉGATIF -0.31 pts (n=38) ; cross=death cross actif : edge positif +0.68 pts (n=44). Sans edge mesurable : rsi=bas (30-45) (n=1183), rsi=neutre (45-55) (n=986), rsi=haut (55-70) (n=843), rsi=surachat (>=70) (n=145), bollinger=sous bande basse (survendu) (n=176), bollinger=dans les bandes (n=2924)."
 }
