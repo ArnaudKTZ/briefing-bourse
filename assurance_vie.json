@@ -13,8 +13,8 @@
     }
   },
   "versement_mensuel": {
-    "actif": false,
-    "jour": null,
+    "actif": true,
+    "jour": 10,
     "debut": "2026-12-01",
     "repartition": {
       "ETF": 25,
