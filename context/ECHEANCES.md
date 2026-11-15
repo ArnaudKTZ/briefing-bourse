@@ -11,6 +11,8 @@
 
 ## À venir
 
+- [ ] ~2026-11-21 — Vérifier le premier digest de la Veille avec le tri resserré (3 idées maximum, sujets hors de portée écartés). (Agent Bourse)
+- [ ] ~2026-11-25 — Quand le contrat BoursoVie apparaît dans l'espace client : donner à Claude la vraie date d'investissement, le nombre de parts de l'ETF et le jour réel du prélèvement mensuel (provisoirement le 10) pour corriger assurance_vie.json. (Assurance vie)
 - [ ] **PIVOT STRATÉGIQUE acté le 23/08 : le trading actif ne bat pas le buy&hold à cette échelle.** Chapitre "battre le marché par le satellite actif" fermé. Le Risk Engine reste airbag de krach uniquement (continue en forward). Satellite = labo d'apprentissage, pas machine à gains. Argent réel éventuel → cœur passif ETF, jamais le joueur. Rien à faire d'urgent, c'est un cadre de décision. (Agent Bourse)
 
 ## Sans date ferme (à sortir quand le moment est bon)

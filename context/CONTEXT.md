@@ -52,6 +52,7 @@ Responsable de travaux pour la maintenance des bateaux de la Marine Nationale ch
 - **Projet KTZ71.com :** relance/refonte comme service de recherche personnalisée de véhicules d'exception. Audit réalisé, plan d'action établi.
 - **Promotion professionnelle :** améliorer la visibilité et la communication auprès de la hiérarchie chez Naval Group
 - **Projet UTMB (trail) :** objectif décrocher un dossard à Chamonix (UTMB World Series). Palmarès déjà réalisé : CCC finie, 80 km du Mont-Blanc, 3x Marathon du Mont-Blanc. Repart de 0 stone (les anciennes ont expiré ; le Marathon et le 80 du Mont-Blanc ne sont pas des courses World Series, donc 0 stone). Stratégie : accumuler des Running Stones sur 2026-2027 avec Nice Côte d'Azur by UTMB comme pivot local (~1h30 de Six-Fours, fin septembre), + 1 ultra World Series/an. Viser ~15 stones valides pour le tirage UTMB de janvier 2028. Rappel mécanique : 1 stone = 1 ticket de loterie, stones valides 24 mois.
+- **Assurance vie BoursoVie (Generali), souscrite le 2026-11-15 :** gestion libre, 300 € à l'ouverture (210 € ETF Amundi MSCI World Screened, 90 € fonds euros Euro Exclusif) puis 50 € par mois (25 € / 25 €). Premier argent réel suivi dans le briefing du matin.
 
 ---
 

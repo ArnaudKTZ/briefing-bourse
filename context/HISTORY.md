@@ -7,21 +7,17 @@
 
 ---
 
-## 2026-10-11
+## 2026-11-15
 
-### Audit complet Agent Bourse (1 mois sans session) + circuit-breaker de drawdown implémenté sur le satellite
+### Assurance vie BoursoVie souscrite et suivie dans le briefing, Veille resserrée, piste de l'or fermée
 
-- **Repo resynchronisé** (1 pull, 22 fichiers). Fichier `docs/Architecture_Agent_Bourse_V5.html` retrouvé supprimé en local sans commit (probablement un accident de manipulation), restauré depuis git.
-- **Infrastructure saine** : watchdog 11 agents surveillés, 0 problème ; qualité données 0 erreur/7j ; coût API 12,09$ sur 2 mois.
-- **Cœur Dual Momentum** : +7,44% depuis le 26/06 (10 743€), drawdown max -2,61%, 100% USA. L'évolution du 08/09 (socle 0% + refuge monétaire) n'a pas encore été vraiment testée : les momentums sont restés positifs tout le mois, le refuge monétaire n'a jamais été déclenché. Échéance de suivi 08/12 inchangée.
-- **Satellite V4 (baseline) : dégradation sévère.** -7,06% en septembre → **-23,8%** aujourd'hui (7 617€/10 000€), drawdown max **-27,8%**, 32% de trades gagnants sur 75 clos, 1 402€ de frais cumulés (14% du capital). Évaluateur (10/10) : edge net J+5 -1,22 pt, IC +0,004 (score sans pouvoir de classement). Shadow (09/10) : NUISIBLES, -0,88 pt sous le CAC.
-- **Risk Engine (satellite alternatif, virtuel)** : -7,3% depuis le 22/07, drawdown max -12,19% (vs -27,8% baseline) — confirme son rôle d'airbag (perd moins), mais win rate pire (22%) et toujours négatif.
-- **Crypto DM** : bloqué en refuge stablecoin depuis l'unique rotation du 13/07, 995$ contre 1 305$ en B&H BTC (-31 pts). Le Professeur signale un "soupçon de contamination" (écart live/backtest anormal), jamais creusé — point en réserve, pas urgent (zéro euro réel dessus).
-- **Le Stratège (04/10) avait déjà proposé un circuit-breaker de drawdown** pour le satellite (taille réduite à 1 000€ sous -15% de DD, aucune ouverture sous -25%), jamais implémenté (0 commit de code depuis le 08/09).
-- **Testé rétroactivement** (`circuit_breaker_backtest.py`, nouveau, sur les 75 trades clos, mécanique de frais identique au code de prod) : drawdown -26,0% → -21,4% (+4,58 pts), frais -118€, P&L -23,9% → -19,2%. Toutes les métriques s'améliorent, aucune ne se dégrade. **Sous le seuil de validation fixé par le Stratège (5 pts), de 0,42 point.**
-- **Décision Arnaud, après hésitation** : adopté quand même. Raisonnement posé explicitement : la discipline "zéro renégociation après avoir vu les chiffres" (grilles CAS 1/2/3, edge net, etc.) protège les décisions d'**argent réel** ; ici il s'agit d'un réglage de gestion du risque sur une poche qui reste 100% virtuelle, où chaque métrique s'améliore sans aucune contrepartie négative. Même logique que l'adoption du Risk Engine en juillet (verdict "encourageant, pas prouvé" à l'époque, déployé virtuel quand même).
-- **Implémenté dans `scoring_intraday.py`** (fonction `gerer_portefeuille_intraday`) : nouvelles constantes `SEUIL_REDUCTION_DD=-15.0`, `SEUIL_STOP_DD=-25.0`, `BUDGET_REDUIT=1000.0`. Le drawdown est calculé sur l'équité courante (cash + positions ouvertes valorisées au cours live, donc plus réactif que le backtest qui n'avait que les prix d'entrée/sortie). Vérifié : `test_agents.py` toujours au vert (0 erreur), et au 09/10 le satellite est déjà à -26/-27% de drawdown réel → la prochaine exécution du scoring n'ouvrira donc AUCUNE nouvelle position jusqu'à un retour au-dessus de -15%.
-- Doc mise à jour : annexe B.19 (explication vulgarisée) + carte "Scoring intraday" (section 2).
+- **Souscription BoursoVie (Generali) en gestion libre** : 300 € à l'ouverture (210 € sur l'ETF Amundi MSCI World Screened, IE000QWCYQT0, 90 € sur le fonds euros Euro Exclusif), puis 50 € par mois en 25/25. Contrat pas encore visible dans l'espace client le jour même (délai normal).
+- **Briefing de 7h et appli web** : nouveau bloc assurance vie (cours de l'ETF WLSC.PA, variation du jour, parts, prix moyen, valeur, gain, évolution par semaine). Données dans `assurance_vie.json`. Prélèvement mensuel réglé provisoirement sur le 10, parts estimées au cours de clôture, intérêts du fonds euros estimés à 3 %. À corriger quand les vrais chiffres seront connus.
+- **Veille resserrée** après le digest du 14/11 (8 articles dont 5 inexploitables) : recherche par mot entier (le mot-clé "rsi" était trouvé dans "diversification"), sujets hors de portée écartés (quantique, options, contrats à terme, tenue de marché, haute fréquence), 3 idées maximum, étiquette qui dit quels mots ont fait remonter l'article.
+- **Revue des 115 articles remontés depuis le 25/06** : aucun à adopter. 4 lus en entier : rotation QQQ-DIA rejetée (frais supérieurs au gain en PEA), rotation sectorielle rejetée (aucun résultat en argent), MinervaScore rejeté comme note globale (2 outils de mesure classiques à garder en tête), "Simple Portfolios" retenu comme piste à tester.
+- **Test "trois poches"** (`piste6_trois_poches.py`, Monde / fonds euros / or, 2008-2026, en euros, critère fixé avant résultats) : l'or métal passe le critère et amortit les chutes (pire chute -17,5 % contre -25,6 % à risque égal), mais son avantage en rendement n'existe que dans 48 % des fenêtres de 5 ans. BoursoVie ne propose pas d'or physique, seulement des fonds de minières d'or, qui échouent au même test (-1,92 pt/an, -21 % en 2008). **Piste fermée, rien à changer au contrat.**
+- Réglage `disable-model-invocation: true` ajouté aux 20 commandes ai-berkshire (Claude ne peut plus les lancer de lui-même).
+- Doc : annexes B.28, B.29, B.30.
 
 ---
 
@@ -134,6 +130,24 @@ Suite de l'audit du jour : les 4 pistes "à tester vite" du rapport de recherche
 - Piste 2 du rapport (remplacer le satellite par des ETF facteur BNP Paribas Easy Quality/Low Vol Europe) pas encore chiffrée — nécessite de récupérer l'historique de ces ETF, à faire dans une prochaine session.
 - Tous les scripts commités : `circuit_breaker_backtest.py`, `piste2_canari_emergents.py`, `piste3_crypto_ensemble.py`, `piste4_risk_parity_poches.py`, + leurs `*_resultats.json`. `test_agents.py` toujours au vert.
 - Leçon méthodologique confirmée une fois de plus : fixer le critère de passage AVANT de voir les chiffres a évité d'être tenté de garder le canari malgré son échec net, et a permis de voir que même la piste crypto "gagnante" sur Sharpe (BTC seul) perdait largement sur le drawdown — un angle que le critère initial n'avait pas couvert, corrigé en cours de route plutôt que caché.
+
+---
+
+## 2026-10-11
+
+### Audit complet Agent Bourse (1 mois sans session) + circuit-breaker de drawdown implémenté sur le satellite
+
+- **Repo resynchronisé** (1 pull, 22 fichiers). Fichier `docs/Architecture_Agent_Bourse_V5.html` retrouvé supprimé en local sans commit (probablement un accident de manipulation), restauré depuis git.
+- **Infrastructure saine** : watchdog 11 agents surveillés, 0 problème ; qualité données 0 erreur/7j ; coût API 12,09$ sur 2 mois.
+- **Cœur Dual Momentum** : +7,44% depuis le 26/06 (10 743€), drawdown max -2,61%, 100% USA. L'évolution du 08/09 (socle 0% + refuge monétaire) n'a pas encore été vraiment testée : les momentums sont restés positifs tout le mois, le refuge monétaire n'a jamais été déclenché. Échéance de suivi 08/12 inchangée.
+- **Satellite V4 (baseline) : dégradation sévère.** -7,06% en septembre → **-23,8%** aujourd'hui (7 617€/10 000€), drawdown max **-27,8%**, 32% de trades gagnants sur 75 clos, 1 402€ de frais cumulés (14% du capital). Évaluateur (10/10) : edge net J+5 -1,22 pt, IC +0,004 (score sans pouvoir de classement). Shadow (09/10) : NUISIBLES, -0,88 pt sous le CAC.
+- **Risk Engine (satellite alternatif, virtuel)** : -7,3% depuis le 22/07, drawdown max -12,19% (vs -27,8% baseline) — confirme son rôle d'airbag (perd moins), mais win rate pire (22%) et toujours négatif.
+- **Crypto DM** : bloqué en refuge stablecoin depuis l'unique rotation du 13/07, 995$ contre 1 305$ en B&H BTC (-31 pts). Le Professeur signale un "soupçon de contamination" (écart live/backtest anormal), jamais creusé — point en réserve, pas urgent (zéro euro réel dessus).
+- **Le Stratège (04/10) avait déjà proposé un circuit-breaker de drawdown** pour le satellite (taille réduite à 1 000€ sous -15% de DD, aucune ouverture sous -25%), jamais implémenté (0 commit de code depuis le 08/09).
+- **Testé rétroactivement** (`circuit_breaker_backtest.py`, nouveau, sur les 75 trades clos, mécanique de frais identique au code de prod) : drawdown -26,0% → -21,4% (+4,58 pts), frais -118€, P&L -23,9% → -19,2%. Toutes les métriques s'améliorent, aucune ne se dégrade. **Sous le seuil de validation fixé par le Stratège (5 pts), de 0,42 point.**
+- **Décision Arnaud, après hésitation** : adopté quand même. Raisonnement posé explicitement : la discipline "zéro renégociation après avoir vu les chiffres" (grilles CAS 1/2/3, edge net, etc.) protège les décisions d'**argent réel** ; ici il s'agit d'un réglage de gestion du risque sur une poche qui reste 100% virtuelle, où chaque métrique s'améliore sans aucune contrepartie négative. Même logique que l'adoption du Risk Engine en juillet (verdict "encourageant, pas prouvé" à l'époque, déployé virtuel quand même).
+- **Implémenté dans `scoring_intraday.py`** (fonction `gerer_portefeuille_intraday`) : nouvelles constantes `SEUIL_REDUCTION_DD=-15.0`, `SEUIL_STOP_DD=-25.0`, `BUDGET_REDUIT=1000.0`. Le drawdown est calculé sur l'équité courante (cash + positions ouvertes valorisées au cours live, donc plus réactif que le backtest qui n'avait que les prix d'entrée/sortie). Vérifié : `test_agents.py` toujours au vert (0 erreur), et au 09/10 le satellite est déjà à -26/-27% de drawdown réel → la prochaine exécution du scoring n'ouvrira donc AUCUNE nouvelle position jusqu'à un retour au-dessus de -15%.
+- Doc mise à jour : annexe B.19 (explication vulgarisée) + carte "Scoring intraday" (section 2).
 
 ---
 
