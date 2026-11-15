@@ -2102,6 +2102,181 @@ def generer_html_dual_momentum():
 </div>"""
 
 
+FICHIER_ASSURANCE_VIE = "assurance_vie.json"
+
+def _versements_mensuels_prevus(av, aujourdhui):
+    """Versements programmés déjà échus, déduits de la config (marqués 'estime')."""
+    vm = av.get("versement_mensuel", {})
+    if not vm.get("actif") or not vm.get("jour"):
+        return []
+    debut = datetime.date.fromisoformat(vm.get("debut", av.get("date_ouverture")))
+    jour = int(vm["jour"])
+    deja = {(v["date"], v["support"]) for v in av.get("versements", [])}
+    prevus = []
+    a, m = debut.year, debut.month
+    while True:
+        try:
+            d = datetime.date(a, m, jour)
+        except ValueError:
+            d = datetime.date(a, m, 28)
+        if d > aujourdhui:
+            break
+        if d >= debut:
+            for sup, mt in vm.get("repartition", {}).items():
+                if (d.isoformat(), sup) not in deja:
+                    prevus.append({"date": d.isoformat(), "support": sup, "montant": mt, "estime": True})
+        m += 1
+        if m > 12:
+            a, m = a + 1, 1
+    return prevus
+
+
+def generer_html_assurance_vie():
+    """Bloc 'Assurance vie' : cours de l'ETF, variation du jour, valeur et gain par support.
+    L'ETF est valorisé au cours de clôture (Generali valorise à J+1/J+2, écart faible).
+    Le fonds euros n'a pas de cours : capital garanti + intérêts courus estimés au taux
+    de l'an passé (crédités réellement en janvier, non acquis avant)."""
+    if not os.path.exists(FICHIER_ASSURANCE_VIE):
+        return ""
+    try:
+        with open(FICHIER_ASSURANCE_VIE, "r", encoding="utf-8") as f:
+            av = json.load(f)
+        aujourdhui = datetime.date.today()
+        sup_etf = av["supports"]["ETF"]
+        sup_eur = av["supports"]["EURO"]
+        versements = av.get("versements", []) + _versements_mensuels_prevus(av, aujourdhui)
+
+        hist = yf.Ticker(sup_etf["ticker"]).history(start=av["date_ouverture"])["Close"].dropna()
+        if hist.empty:
+            hist = yf.Ticker(sup_etf["ticker"]).history(period="5d")["Close"].dropna()
+        cours = float(hist.iloc[-1])
+        var_jour = (cours / float(hist.iloc[-2]) - 1) * 100 if len(hist) >= 2 else None
+        dates_hist = [d.strftime("%Y-%m-%d") for d in hist.index]
+
+        def cours_a(date_str):
+            # 1re clôture à partir du jour du versement (le jour même si séance)
+            for i, d in enumerate(dates_hist):
+                if d >= date_str:
+                    return float(hist.iloc[i])
+            return None
+
+        parts, verse_etf, estime, en_attente = 0.0, 0.0, False, 0.0
+        verse_eur, interets = 0.0, 0.0
+        taux = sup_eur.get("taux_estime", 0) / 100
+        for v in versements:
+            if v["date"] > aujourdhui.isoformat():
+                continue
+            if v.get("estime"):
+                estime = True
+            if v["support"] == "ETF":
+                p = v.get("parts")
+                if not p:
+                    px = cours_a(v["date"])
+                    if px is None:
+                        en_attente += v["montant"]  # pas encore investi (pas de séance depuis)
+                        continue
+                    p = v["montant"] / px
+                    estime = True
+                parts += p
+                verse_etf += v["montant"]
+            else:
+                verse_eur += v["montant"]
+                jours = (aujourdhui - datetime.date.fromisoformat(v["date"])).days
+                interets += v["montant"] * taux * jours / 365
+
+        val_etf = parts * cours
+        val_eur = verse_eur + interets
+        verse = verse_etf + verse_eur
+        valeur = val_etf + val_eur
+        gain = valeur - verse
+        perf = gain / verse * 100 if verse else 0
+
+        av["historique_valeur"][aujourdhui.isoformat()] = round(valeur, 2)
+        av["cours_actuel"] = round(cours, 4)
+        av["var_jour"] = round(var_jour, 2) if var_jour is not None else None
+        av["valeur_actuelle"] = round(valeur, 2)
+        av["total_verse"] = round(verse, 2)
+        with open(FICHIER_ASSURANCE_VIE, "w", encoding="utf-8") as f:
+            json.dump(av, f, ensure_ascii=False, indent=2)
+
+        def c(x):
+            return "#2e7d32" if x >= 0 else "#c62828"
+
+        def sg(x):
+            return "+" if x >= 0 else ""
+
+        g_etf = val_etf - verse_etf
+        p_etf = g_etf / verse_etf * 100 if verse_etf else 0
+        pru = verse_etf / parts if parts else None
+        vj = (f"<span style='color:{c(var_jour)};font-size:11px;'>({sg(var_jour)}{var_jour:.2f}% jour)</span>"
+              if var_jour is not None else "")
+        th = "padding:5px 8px;text-align:right;color:#555;font-weight:600;"
+        td = "padding:5px 8px;text-align:right;"
+        tableau = (
+            f"<table style='margin-top:8px;width:100%;border-collapse:collapse;font-size:13px;'>"
+            f"<thead><tr style='background:#eef3fb;'>"
+            f"<th style='padding:5px 8px;text-align:left;color:#555;font-weight:600;'>Support</th>"
+            f"<th style='{th}'>Versé</th><th style='{th}'>Parts</th><th style='{th}'>Prix moyen</th>"
+            f"<th style='{th}'>Cours</th><th style='{th}'>Valeur</th><th style='{th}'>Gain/perte</th>"
+            f"</tr></thead><tbody>"
+            f"<tr style='border-top:1px solid #ddd;'>"
+            f"<td style='padding:5px 8px;'>MSCI World Screened ({sup_etf['ticker']})</td>"
+            f"<td style='{td}'>{verse_etf:.0f}€</td><td style='{td}'>{parts:.2f}</td>"
+            f"<td style='{td}color:#888;'>{f'{pru:.3f}€' if pru else '—'}</td>"
+            f"<td style='{td}'>{cours:.3f}€ {vj}</td><td style='{td}'>{val_etf:.2f}€</td>"
+            f"<td style='{td}color:{c(g_etf)};font-weight:600;'>{sg(g_etf)}{g_etf:.2f}€ ({sg(p_etf)}{p_etf:.2f}%)</td></tr>"
+            f"<tr style='border-top:1px solid #ddd;'>"
+            f"<td style='padding:5px 8px;'>Euro Exclusif (fonds euros)</td>"
+            f"<td style='{td}'>{verse_eur:.0f}€</td><td style='{td}color:#888;'>—</td>"
+            f"<td style='{td}color:#888;'>—</td><td style='{td}color:#888;'>garanti</td>"
+            f"<td style='{td}'>{val_eur:.2f}€</td>"
+            f"<td style='{td}color:#2e7d32;'>+{interets:.2f}€ <span style='font-size:11px;color:#888;'>(estimé)</span></td></tr>"
+            f"<tr style='border-top:2px solid #3b6fb6;background:#eef3fb;font-weight:600;'>"
+            f"<td style='padding:5px 8px;'>Total</td><td style='{td}'>{verse:.0f}€</td>"
+            f"<td colspan='3'></td><td style='{td}'><strong>{valeur:.2f}€</strong></td>"
+            f"<td style='{td}color:{c(gain)};'>{sg(gain)}{gain:.2f}€ ({sg(perf)}{perf:.2f}%)</td></tr>"
+            f"</tbody></table>"
+        )
+
+        # Évolution : un point par semaine (vendredi ou dernier relevé) + aujourd'hui
+        histo = sorted(av["historique_valeur"].items())
+        points = [(d, v) for d, v in histo
+                  if datetime.date.fromisoformat(d).weekday() == 4]
+        if not points or points[-1][0] != aujourdhui.isoformat():
+            points.append((aujourdhui.isoformat(), valeur))
+        evolution = ""
+        if len(points) >= 2:
+            lignes = "".join(
+                f"<tr style='border-top:1px solid #ddd;'><td style='padding:4px 8px;'>{d[8:10]}/{d[5:7]}</td>"
+                f"<td style='padding:4px 8px;text-align:right;'>{v:.2f}€</td></tr>"
+                for d, v in points[-8:]
+            )
+            evolution = (
+                f"<table style='margin-top:8px;width:50%;border-collapse:collapse;font-size:12px;'>"
+                f"<thead><tr style='background:#eef3fb;'><th style='padding:4px 8px;text-align:left;color:#555;'>Semaine</th>"
+                f"<th style='padding:4px 8px;text-align:right;color:#555;'>Valeur</th></tr></thead>"
+                f"<tbody>{lignes}</tbody></table>"
+            )
+
+        note = ("Fonds euros : intérêts estimés à "
+                f"{sup_eur.get('taux_estime', 0):.2f}%/an, réellement crédités en janvier.")
+        if en_attente:
+            note = f"<strong>{en_attente:.0f}€ en attente d'investissement sur l'ETF</strong> (prochaine séance). " + note
+        if estime:
+            note += " Parts ETF estimées au cours de clôture du jour du versement, à remplacer par les vraies dans assurance_vie.json."
+        ouv = av["date_ouverture"]
+        return f"""
+<div style='margin:0 0 16px;padding:14px 16px;background:#f3f7fd;border-left:4px solid #3b6fb6;border-radius:6px;'>
+  <p style='margin:0;font-size:13px;font-weight:bold;color:#2a5490;'>Assurance vie {av.get('contrat', '')} — argent réel, ouverte le {ouv[8:10]}/{ouv[5:7]}/{ouv[:4]}</p>
+  {tableau}
+  {evolution}
+  <p style='margin:8px 0 0;font-size:11px;color:#888;'>{note}</p>
+</div>"""
+    except Exception as e:
+        print(f"  WARN assurance vie : {e}")
+        return ""
+
+
 FICHIER_QUALITE_DONNEES = "data_quality_log.json"
 
 def logger_qualite_donnees(donnees):
@@ -2424,7 +2599,8 @@ if __name__ == "__main__":
         print(f"  Comparaison CAC indisponible : {e}")
 
     html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict, perf_cac_pf, date_debut_pf)
-    html_dm = generer_html_dual_momentum()
+    # Assurance vie (argent réel) en tête, puis le cœur Dual Momentum
+    html_dm = generer_html_assurance_vie() + generer_html_dual_momentum()
     envoyer_email(briefing, perf["stats"], html_pf, html_dm)
 
     print("Terminé.")

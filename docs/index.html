@@ -337,7 +337,7 @@ async function charger() {
   document.getElementById('content').innerHTML = '<div class="loader"><div class="spinner"></div>Chargement...</div>';
 
   try {
-    const [rPerf, rId, rNews, rEspion, rPf, rDmSt, rDmPf, rProf] = await Promise.allSettled([
+    const [rPerf, rId, rNews, rEspion, rPf, rDmSt, rDmPf, rProf, rAv] = await Promise.allSettled([
       fetchJSON('performance.json'),
       fetchJSON('intraday_scores.json'),
       fetchJSON('rapport_news.json'),
@@ -346,6 +346,7 @@ async function charger() {
       fetchJSON('dual_momentum_statut.json'),
       fetchJSON('dual_momentum_portefeuille.json'),
       fetchJSON('professeur_rapport.json'),
+      fetchJSON('assurance_vie.json'),
     ]);
 
     const perf   = rPerf.status   === 'fulfilled' ? rPerf.value   : null;
@@ -356,6 +357,7 @@ async function charger() {
     const dmSt   = rDmSt.status   === 'fulfilled' ? rDmSt.value   : null;
     const dmPf   = rDmPf.status   === 'fulfilled' ? rDmPf.value   : null;
     const prof = rProf.status === 'fulfilled' ? rProf.value : null;
+    const av   = rAv.status   === 'fulfilled' ? rAv.value   : null;
     if (pf)   _cachePf   = pf;
     if (dmSt) _cacheDmSt = dmSt;
     if (dmPf) _cacheDmPf = dmPf;
@@ -445,6 +447,18 @@ async function charger() {
         html += `</tbody></table></div>`;
       }
       html += `</div>`;
+    }
+
+    // ── ASSURANCE VIE (argent réel) ──
+    if (av && av.valeur_actuelle != null) {
+      const verse = av.total_verse || 0;
+      const gainAv = av.valeur_actuelle - verse;
+      const perfAv = verse ? gainAv / verse * 100 : 0;
+      const hAv = Object.keys(av.historique_valeur || {}).sort();
+      html += `<div class="section"><div class="stitle">Assurance vie BoursoVie</div><div class="cards2">`;
+      html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(gainAv)}">${av.valeur_actuelle.toFixed(2)}€</div><div class="sub ${cp(gainAv)}">${gainAv >= 0 ? '+' : ''}${gainAv.toFixed(2)}€ (${pct(perfAv)})</div></div>`;
+      html += `<div class="card"><div class="lbl">ETF World (WLSC)</div><div class="val">${av.cours_actuel != null ? av.cours_actuel.toFixed(3) + '€' : '—'}</div><div class="sub ${av.var_jour != null ? cp(av.var_jour) : ''}">${av.var_jour != null ? pct(av.var_jour) + ' jour' : '—'}</div></div>`;
+      html += `</div><div class="sub" style="margin-top:6px;font-size:11px;opacity:.7">Versé ${Math.round(verse)}€ · MAJ ${hAv.length ? hAv[hAv.length-1] : '—'}</div></div>`;
     }
 
     // ── DUAL MOMENTUM (CŒUR) ──

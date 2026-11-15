@@ -1,0 +1,38 @@
+{
+  "contrat": "BoursoVie (Generali) - gestion libre",
+  "date_ouverture": "2026-11-15",
+  "supports": {
+    "ETF": {
+      "nom": "Amundi MSCI World Screened UCITS ETF Acc",
+      "isin": "IE000QWCYQT0",
+      "ticker": "WLSC.PA"
+    },
+    "EURO": {
+      "nom": "Fonds euros Euro Exclusif",
+      "taux_estime": 3.0
+    }
+  },
+  "versement_mensuel": {
+    "actif": false,
+    "jour": null,
+    "debut": "2026-12-01",
+    "repartition": {
+      "ETF": 25,
+      "EURO": 25
+    }
+  },
+  "versements": [
+    {
+      "date": "2026-11-15",
+      "support": "ETF",
+      "montant": 210,
+      "parts": null
+    },
+    {
+      "date": "2026-11-15",
+      "support": "EURO",
+      "montant": 90
+    }
+  ],
+  "historique_valeur": {}
+}
