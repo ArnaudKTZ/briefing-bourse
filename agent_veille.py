@@ -15,6 +15,7 @@ import datetime
 import html
 import json
 import os
+import re
 import smtplib
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -46,7 +47,7 @@ ARXIV_URL = (
 MOTS_CLES = {
     # cœur de stratégie (poids fort)
     "momentum": 3, "trend following": 3, "trend-following": 3, "dual momentum": 4,
-    "factor": 2, "cross-sectional": 3, "time series momentum": 3, "regime": 3,
+    "factor": 2, "time series momentum": 3, "regime": 3,
     "asset allocation": 3, "portfolio allocation": 3, "risk parity": 2,
     "tactical allocation": 3, "rotation": 2,
     # rigueur / méthode (poids fort, c'est notre avantage)
@@ -58,6 +59,48 @@ MOTS_CLES = {
     # risque
     "drawdown": 2, "tail risk": 2, "volatility targeting": 3,
 }
+
+
+# Sujets hors de portée d'un PEA à 2 ETF (ajout du 15/11) : écartés d'office.
+# Avant ça, le digest du 14/11 remontait 8 articles dont 5 inexploitables
+# (quantique, options, contrats à terme) et il fallait trier à la main.
+# Cherché dans le titre + les 2 premières phrases du résumé seulement : un
+# article qui cite "futures" en passant au fond de l'abstract reste éligible.
+HORS_PORTEE = {
+    "quantum": "informatique quantique",
+    "option": "options", "hedging": "couverture par dérivés",
+    "market maker": "tenue de marché", "market making": "tenue de marché",
+    "futures": "contrats à terme",
+    "high-frequency": "haute fréquence", "high frequency": "haute fréquence",
+    "limit order book": "carnet d'ordres", "order book": "carnet d'ordres",
+}
+
+# Sans au moins un de ces mots, un article n'est pas retenu, quel que soit son
+# score : la rigueur de méthode ou l'IA seules ne suffisent plus (le 14/11,
+# 7 articles sur 8 portaient l'étiquette "validation rigoureuse").
+MOTS_COEUR = {"momentum", "dual momentum", "time series momentum", "trend following",
+              "trend-following", "asset allocation", "portfolio allocation",
+              "tactical allocation", "rotation", "risk parity", "volatility targeting",
+              "drawdown", "overfit", "data snooping"}
+MOTS_RIGUEUR = {"walk-forward", "out-of-sample", "overfit", "data snooping", "transaction cost"}
+
+SCORE_MIN = 8
+NB_MAX = 3
+
+
+def _contient(mot, texte):
+    """Mot entier (pluriel en s toléré). Le simple `in` faisait matcher "rsi"
+    dans "diversification" et "dispersion" : faux rappels 'déjà tranché'."""
+    return re.search(r"(?<![a-z])" + re.escape(mot) + r"s?(?![a-z])", texte) is not None
+
+
+def motif_hors_portee(article):
+    """Renvoie la raison d'exclusion (str) ou None."""
+    debut = (article["titre"] + " " + extrait_resume(article.get("resume", ""))).lower()
+    for mot, raison in HORS_PORTEE.items():
+        if _contient(mot, debut):
+            return raison
+    return None
 
 
 def fetch_arxiv():
@@ -96,6 +139,8 @@ DEJA_TRANCHE = {
     "canary": "Signal canari (DAA, Keller & Keuning) testé sur le cœur Dual Momentum le 11/10/2026 : rejeté (CAGR -2,51 pts/an pour seulement +0,6 pt de drawdown en moins).",
     "breadth momentum": "Breadth momentum façon VAA/PAA écarté le 11/10/2026 : aucune publication ne le valide sur un univers investi à seulement 2 actifs (World/USA).",
     "emerging market": "Les marchés émergents comme 3e classe d'actif DÉTENUE ont été rejetés deux fois (dual_momentum_backtest puis piste1_bridage_pea du 08/09/2026) : ils aggravent la pire chute du cœur.",
+    "cross-sectional": "Sélection d'actions individuelles : chapitre fermé le 23/08/2026 (tout overlay actif fait moins bien que le buy & hold sur 2020-2026). Le satellite est un labo, pas un moteur.",
+    "stock selection": "Sélection d'actions individuelles : chapitre fermé le 23/08/2026 (tout overlay actif fait moins bien que le buy & hold sur 2020-2026). Le satellite est un labo, pas un moteur.",
     "rsi": "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE.",
 }
 
@@ -105,7 +150,7 @@ def verifier_deja_tranche(article):
     N'exclut rien (un nouvel angle sur un vieux sujet peut rester utile),
     annote seulement pour éviter de perdre du temps à redécouvrir."""
     texte = (article["titre"] + " " + article["resume"]).lower()
-    return [v for cle, v in DEJA_TRANCHE.items() if cle in texte]
+    return list(dict.fromkeys(v for cle, v in DEJA_TRANCHE.items() if _contient(cle, texte)))
 
 
 def scorer_pertinence(article):
@@ -113,9 +158,9 @@ def scorer_pertinence(article):
     score = 0
     hits = []
     for mot, poids in MOTS_CLES.items():
-        if mot in texte:
+        if _contient(mot, texte):
             # bonus si le mot est dans le titre
-            facteur = 2 if mot in article["titre"].lower() else 1
+            facteur = 2 if _contient(mot, article["titre"].lower()) else 1
             score += poids * facteur
             hits.append(mot)
     return score, hits
@@ -262,15 +307,18 @@ def suivre_gerants():
 
 
 def pourquoi(hits):
-    """Phrase courte expliquant l'intérêt selon les mots-clés trouvés."""
-    rigueur = {"walk-forward", "out-of-sample", "overfit", "data snooping", "transaction cost"}
-    coeur   = {"momentum", "dual momentum", "trend following", "trend-following",
-               "regime", "asset allocation", "tactical allocation", "volatility targeting"}
-    if hits & rigueur:
-        return "Méthode de validation rigoureuse — pile notre avantage compétitif."
-    if hits & coeur:
-        return "Touche directement le cœur de ta stratégie (momentum / allocation / régime)."
-    return "Piste IA/risque à explorer."
+    """Dit quels mots ont fait remonter l'article, cœur d'abord. Remplace les
+    phrases toutes faites d'avant le 15/11, qui ne discriminaient plus rien."""
+    coeur   = [m for m in hits if m in MOTS_COEUR and m not in MOTS_RIGUEUR]
+    rigueur = [m for m in hits if m in MOTS_RIGUEUR]
+    morceaux = []
+    if coeur:
+        morceaux.append("Proche du cœur : " + ", ".join(coeur[:3]))
+    if len(rigueur) >= 2:
+        morceaux.append("validation sérieuse annoncée (" + ", ".join(rigueur[:3]) + ")")
+    elif rigueur:
+        morceaux.append("méthode : " + rigueur[0])
+    return (" · ".join(morceaux) or "Piste à explorer") + "."
 
 
 def envoyer(sujet, html):
@@ -322,10 +370,32 @@ def bloc_html_13f(comptes_rendus):
   {cartes}"""
 
 
-def generer_html(now, top, comptes_rendus_13f=None):
+def selectionner(articles):
+    """Renvoie (articles retenus triés par score, {raison: nb} des écartés hors de portée)."""
+    ecartes = {}
+    pertinents = []
+    for a in articles:
+        raison = motif_hors_portee(a)
+        if raison:
+            ecartes[raison] = ecartes.get(raison, 0) + 1
+            continue
+        if a["score"] >= SCORE_MIN and set(a["hits"]) & MOTS_COEUR:
+            pertinents.append(a)
+    pertinents.sort(key=lambda x: x["score"], reverse=True)
+    return pertinents, ecartes
+
+
+def generer_html(now, top, comptes_rendus_13f=None, ecartes=None):
+    ligne_ecartes = ""
+    if ecartes:
+        detail = ", ".join(f"{r} ({n})" for r, n in sorted(ecartes.items(), key=lambda x: -x[1]))
+        ligne_ecartes = (f"<p style='font-size:11px;color:#999;margin:0 0 12px;'>"
+                         f"{sum(ecartes.values())} article(s) écarté(s) car hors de portée d'un PEA : {html.escape(detail)}.</p>")
+    if not top:
+        ligne_ecartes = ("<p style='font-size:13px;color:#555;margin:0 0 12px;'>Aucune idée assez proche "
+                         "de ta stratégie cette semaine. C'est un résultat normal, pas une panne.</p>") + ligne_ecartes
     cartes = ""
     for a in top:
-        h = set(a["hits"])
         titre_safe = html.escape(a["titre"])
         lien_safe  = html.escape(a["lien"], quote=True)
         extrait_safe = html.escape(extrait_resume(a.get("resume", "")))
@@ -341,7 +411,7 @@ def generer_html(now, top, comptes_rendus_13f=None):
         cartes += f"""<div style='border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;margin-bottom:12px;'>
           <a href='{lien_safe}' style='font-size:15px;font-weight:600;color:#185fa5;text-decoration:none;'>{titre_safe}</a>
           {bloc_extrait}
-          <p style='margin:6px 0 0;font-size:12px;color:#0f6e56;'>{pourquoi(h)}</p>
+          <p style='margin:6px 0 0;font-size:12px;color:#0f6e56;'>{pourquoi(a["hits"])}</p>
           <p style='margin:4px 0 0;font-size:12px;color:#999;'>{a['date']} · mots-clés : {', '.join(a['hits'][:5])}</p>
           {bloc_deja}
         </div>"""
@@ -352,8 +422,9 @@ def generer_html(now, top, comptes_rendus_13f=None):
   <p style='margin:6px 0 0;font-size:12px;opacity:0.9;'>{now.strftime('%d/%m/%Y')} — ce qui se fait de mieux en finance quantitative</p>
 </div>
 <div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
-  <p style='font-size:13px;color:#555;margin:0 0 16px;'>Top {len(top)} idées récentes filtrées pour ta stratégie. À évaluer, pas à adopter.</p>
+  <p style='font-size:13px;color:#555;margin:0 0 16px;'>{len(top)} idée(s) récente(s) filtrée(s) pour ta stratégie (maximum {NB_MAX}). À évaluer, pas à adopter.</p>
   {cartes}
+  {ligne_ecartes}
   <div style='margin-top:8px;padding:12px;background:#e8f0fb;border-radius:6px;font-size:13px;color:#0c447c;'>
     <strong>Rappel :</strong> aucune de ces idées ne va en production sans passer la recette (backtest hors-échantillon). On prend chez les caïds, mais on vérifie chez nous.
   </div>
@@ -376,11 +447,11 @@ if __name__ == "__main__":
         if a["deja_tranche"]:
             a["score"] = max(0, a["score"] - 5)   # ne disparaît pas, mais cède la place aux idées neuves
 
-    pertinents = [a for a in articles if a["score"] >= 3]
-    pertinents.sort(key=lambda x: x["score"], reverse=True)
-    top = pertinents[:8]
+    pertinents, ecartes = selectionner(articles)
+    top = pertinents[:NB_MAX]
 
-    print(f"  {len(pertinents)} pertinents, top {len(top)} retenus :")
+    print(f"  {len(pertinents)} pertinents, top {len(top)} retenus, "
+          f"{sum(ecartes.values())} hors de portée écartés :")
     for a in top:
         print(f"    [{a['score']:>2}] {a['titre'][:70]}")
 
@@ -399,6 +470,7 @@ if __name__ == "__main__":
                  "score": a["score"], "hits": a["hits"],
                  "deja_tranche": a.get("deja_tranche") or [],
                  "extrait": extrait_resume(a.get("resume", ""))} for a in top],
+        "ecartes_hors_portee": ecartes,
         "depots_13f": comptes_rendus_13f,
     }
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
@@ -406,7 +478,7 @@ if __name__ == "__main__":
 
     if top or comptes_rendus_13f:
         print("Envoi digest veille...")
-        html = generer_html(now, top, comptes_rendus_13f)
+        html = generer_html(now, top, comptes_rendus_13f, ecartes)
         sujet = f"Veille — {len(top)} idées"
         if comptes_rendus_13f:
             sujet += f" + {len(comptes_rendus_13f)} dépôt(s) 13F"
