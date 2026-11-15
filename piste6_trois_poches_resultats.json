@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-15",
+  "periode": [
+    "2008-04-01",
+    "2026-11-13"
+  ],
+  "tableau": {
+    "100% Monde": {
+      "rendement_annuel": 9.46,
+      "volatilite": 20.92,
+      "pire_chute": -46.5,
+      "pire_annee": -14.0,
+      "rendement_par_risque": 0.45
+    },
+    "70/30 Monde/fonds euros": {
+      "rendement_annuel": 7.61,
+      "volatilite": 14.28,
+      "pire_chute": -33.6,
+      "pire_annee": -9.2,
+      "rendement_par_risque": 0.53
+    },
+    "50/50 Monde/fonds euros": {
+      "rendement_annuel": 6.27,
+      "volatilite": 10.07,
+      "pire_chute": -24.1,
+      "pire_annee": -6.0,
+      "rendement_par_risque": 0.62
+    },
+    "1/3 Monde, 1/3 fonds euros, 1/3 or": {
+      "rendement_annuel": 7.54,
+      "volatilite": 10.73,
+      "pire_chute": -17.5,
+      "pire_annee": -4.2,
+      "rendement_par_risque": 0.7
+    },
+    "60/30/10 (10% d'or)": {
+      "rendement_annuel": 7.72,
+      "volatilite": 12.81,
+      "pire_chute": -27.3,
+      "pire_annee": -7.3,
+      "rendement_par_risque": 0.6
+    },
+    "50/30/20 (20% d'or)": {
+      "rendement_annuel": 7.77,
+      "volatilite": 11.79,
+      "pire_chute": -23.0,
+      "pire_annee": -5.4,
+      "rendement_par_risque": 0.66
+    }
+  },
+  "tests_risque_egal": [
+    {
+      "periode": "1re moitié",
+      "trois_poches": {
+        "rendement_annuel": 6.27,
+        "volatilite": 11.5,
+        "pire_chute": -17.5,
+        "pire_annee": -4.2,
+        "rendement_par_risque": 0.55
+      },
+      "melange_meme_risque": {
+        "part_monde_pct": 52,
+        "rendement_annuel": 5.83,
+        "volatilite": 11.43,
+        "pire_chute": -25.1,
+        "pire_annee": -1.7,
+        "rendement_par_risque": 0.51
+      },
+      "ok": true
+    },
+    {
+      "periode": "2e moitié",
+      "trois_poches": {
+        "rendement_annuel": 8.79,
+        "volatilite": 9.9,
+        "pire_chute": -14.5,
+        "pire_annee": -2.4,
+        "rendement_par_risque": 0.89
+      },
+      "melange_meme_risque": {
+        "part_monde_pct": 54,
+        "rendement_annuel": 7.15,
+        "volatilite": 9.83,
+        "pire_chute": -18.1,
+        "pire_annee": -6.6,
+        "rendement_par_risque": 0.73
+      },
+      "ok": true
+    },
+    {
+      "periode": "Période complète (information)",
+      "trois_poches": {
+        "rendement_annuel": 7.54,
+        "volatilite": 10.73,
+        "pire_chute": -17.5,
+        "pire_annee": -4.2,
+        "rendement_par_risque": 0.7
+      },
+      "melange_meme_risque": {
+        "part_monde_pct": 53,
+        "rendement_annuel": 6.47,
+        "volatilite": 10.7,
+        "pire_chute": -25.6,
+        "pire_annee": -6.4,
+        "rendement_par_risque": 0.61
+      },
+      "ok": true
+    }
+  ],
+  "fenetres_5_ans": {
+    "gagnees_rendement": 78,
+    "moins_de_chute": 158,
+    "total": 164,
+    "ecart_median_pt": -0.25,
+    "ecart_pire_pt": -4.22,
+    "ecart_meilleur_pt": 5.65
+  },
+  "verdict": "VALIDÉ"
+}

@@ -31,6 +31,7 @@
 - [ ] ~2026-07-01 — **1er ultra World Series 2026** à caler (Restonica Corse / Trail 100 Andorra / Val d'Aran Espagne, tous en juillet) pour ajouter ~4 stones à la banque. (UTMB)
 - [ ] ~2028-01-08 — **Pré-inscription tirage au sort UTMB** (fenêtre ~8-19 janvier, résultat ~22 janvier). Vérifier banque de stones valides (viser ~15) + UTMB Index valide. Une pré-inscription "au cas où" possible dès janvier 2027 avec moins de stones. (UTMB)
 
+- [ ] **Décision à prendre par Arnaud : ajouter une poche d'or à l'assurance vie BoursoVie ?** Test du 15/11 (`piste6_trois_poches.py`, 2008-2026, en euros) : critère fixé à l'avance VALIDÉ (à risque égal, 1/3 Monde + 1/3 fonds euros + 1/3 or rapporte +1,07 pt/an de plus que Monde/fonds euros, pire chute -17,5% contre -25,6%). Nuance : l'avantage en rendement n'existe que dans 48% des fenêtres de 5 ans (porté par l'or depuis 2019), l'avantage en protection dans 96%. L'or = amortisseur, pas moteur. À vérifier avant toute décision : quels supports or sont réellement disponibles dans BoursoVie. Détail : annexe B.30. (Assurance vie)
 - [ ] Agent Patrimoine global : nécessite une session dédiée avec les lignes réelles du PEA + épargne. (Agent Bourse)
 - [ ] ~2027-06-16 — **Renouveler le token GitHub (PAT) des jobs cron-job.org** : il expire le 23/06/2027 (vu dans la réponse GitHub lors des tests du 13/07). À l'expiration, les 12 jobs tomberont en 401 d'un coup. (Agent Bourse)
 - [ ] KTZ71.com : reprendre le plan d'action en 15 étapes (mentions légales, RGPD, page e-garage, refonte fiches annonces). (KTZ71)
