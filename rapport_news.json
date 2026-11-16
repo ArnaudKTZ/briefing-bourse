@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-13",
-  "heure": "19:44",
+  "date": "2026-11-16",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.26,
-      "nb_news": 19,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
         "Émirats arabes unis : TotalEnergies signe un accord d’approvisionnement en gaz naturel liquéfié d’une durée de cinq ans avec Adnoc Gas",
@@ -42,11 +42,11 @@
     },
     "Airbus": {
       "sentiment": 0.12,
-      "nb_news": 16,
+      "nb_news": 17,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
-        "Un Airbus entre dans le Guinness Book, plus de 24 heures sans escale entre Melbourne et Toulouse"
+        "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
       ]
     },
     "Schneider Electric": {
@@ -113,8 +113,8 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "VINCI - 9M 2026 - NOUVELLES HAUSSES DU CHIFFRE D’AFFAIRES ET DES PRISES DE COMMANDES",
@@ -194,8 +194,8 @@
       ]
     },
     "Renault": {
-      "sentiment": 0.06,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
         "Renault Group émet avec succès des obligations pour 750 millions d'euros",
         "Renault et EDF veulent faire baisser votre facture d’électricité",
@@ -271,8 +271,8 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "Les actions Alstom chutent de 6% après des avertissements de J.P. Morgan et Citi",
         "Alstom revoit fortement ses objectifs de rentabilité pour 2026-2027 et plonge de 30% en Bourse",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.0,
-      "nb_news": 13,
+      "sentiment": 0.08,
+      "nb_news": 12,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
-        "La Bourse de Paris entre déroute de la tech et recul des taux d'emprunt"
+        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
       ]
     },
     "Dassault Systèmes": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.06,
-      "nb_news": 18,
+      "sentiment": 0.11,
+      "nb_news": 19,
       "titres_cles": [
         "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
-        "Thales renforce sa plateforme Data Security Posture Management face aux risques émergents liés à l’IA",
-        "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?"
+        "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?",
+        "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
       ]
     },
     "Forvia": {
