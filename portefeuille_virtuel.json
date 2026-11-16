@@ -1,16 +1,6 @@
 {
-  "capital": 6805.159999999998,
-  "positions": {
-    "TotalEnergies": {
-      "nb_actions": 12,
-      "prix_entree": 80.99,
-      "date_entree": "2026-11-05",
-      "heure_entree": "12:56",
-      "source_entree": "Briefing",
-      "cout_total": 971.8799999999999,
-      "frais_achat": 4.86
-    }
-  },
+  "capital": 7786.269999999998,
+  "positions": {},
   "historique_valeur": {
     "2026-06-19": 10000.0,
     "2026-06-22": 9900.65,
@@ -116,7 +106,8 @@
     "2026-11-10": 7742.29,
     "2026-11-11": 7762.83,
     "2026-11-12": 7783.95,
-    "2026-11-13": 7791.2
+    "2026-11-13": 7791.2,
+    "2026-11-16": 7786.27
   },
   "trades": [
     {
@@ -1349,6 +1340,19 @@
       "source_sortie": "Briefing",
       "pnl_pct": 4.22,
       "frais_total": 10.22
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 80.99,
+      "sortie": 82.17,
+      "date_entree": "2026-11-05",
+      "heure_entree": "12:56",
+      "source_entree": "Briefing",
+      "date_sortie": "2026-11-16",
+      "heure_sortie": "06:01",
+      "source_sortie": "Briefing",
+      "pnl_pct": 0.95,
+      "frais_total": 9.79
     }
   ]
 }

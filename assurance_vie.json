@@ -34,5 +34,11 @@
       "montant": 90
     }
   ],
-  "historique_valeur": {}
+  "historique_valeur": {
+    "2026-11-16": 90.01
+  },
+  "cours_actuel": 5.115,
+  "var_jour": -1.03,
+  "valeur_actuelle": 90.01,
+  "total_verse": 90.0
 }
