@@ -1,21 +1,21 @@
 {
   "date": "2026-11-17",
-  "heure": "06:45",
+  "heure": "14:52",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
+      "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
       "La Bourse de Paris en léger recul",
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
-      "La Bourse de Paris dans le vert, entre baisse du pétrole et accalmie sur la tech",
-      "La Bourse de Paris termine en légère hausse",
-      "La Bourse de Paris a terminé en petite hausse, entre repli des cours du pétrole et inflation américaine"
+      "La Bourse de Paris dans le vert, entre baisse du pétrole et accalmie sur la tech"
     ]
   },
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 10,
+      "nb_news": 9,
       "titres_cles": [
         "LVMH : Poursuite de la croissance au troisième trimestre 2026",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.25,
-      "nb_news": 16,
+      "sentiment": -0.27,
+      "nb_news": 15,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.12,
+      "sentiment": 0.18,
       "nb_news": 17,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
-        "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
+        "[Communiqué de presse] La croissance du Groupe iliad s'accélère au 3ème trimestre 2026"
       ]
     },
     "Schneider Electric": {
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.06,
-      "nb_news": 16,
+      "sentiment": 0.07,
+      "nb_news": 15,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -186,7 +186,7 @@
     },
     "Capgemini": {
       "sentiment": 0.0,
-      "nb_news": 20,
+      "nb_news": 19,
       "titres_cles": [
         "Capgemini sélectionné par la Commission européenne pour diriger un consortium dédié à la sécurité de l’IA et à l’évaluation des cyber-risques liés aux modèles d’IA avancés",
         "La plupart des entreprises prévoient d’adopter une stratégie d’IA multi-modèles, alors que près de six sur dix ont subi des coûts liés à l’IA significativement supérieurs aux prévisions",
@@ -230,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.33,
-      "nb_news": 12,
+      "sentiment": 0.36,
+      "nb_news": 11,
       "titres_cles": [
         "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
         "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées",
@@ -298,21 +298,21 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.08,
+      "sentiment": -0.08,
       "nb_news": 12,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA",
-        "CAC 40 : la Bourse lestée par «un prix du gaz qui explose», l'inflation à pourrait être plus forte que prévu"
+        "Les actions européennes reculent sous la pression des nouvelles restrictions américaines sur les puces",
+        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA"
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.29,
-      "nb_news": 14,
+      "sentiment": 0.5,
+      "nb_news": 16,
       "titres_cles": [
-        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière",
-        "Dassault Systèmes : solide performance au 3ème trimestre, amélioration des objectifs 2026 et nouvelle étape franchie dans les Sciences de la vie",
-        "CAC 40 : la Bourse repart à la hausse, portée par les banques et la tech"
+        "Journée investisseurs 2026 de Dassault Systèmes : une nouvelle ère industrielle, un nouveau cycle de croissance ; objectif de hausse à deux chiffres du chiffre d’affaires et du BNPA en 2029",
+        "Dassault Systèmes vise une croissance à deux chiffres d’ici 2029",
+        "SOLIZE PARTNERS et Dassault Systèmes concluent un partenariat pour accélérer la transformation numérique dans le secteur de l'industrie manufacturière"
       ]
     },
     "Edenred": {
