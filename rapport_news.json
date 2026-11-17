@@ -1,15 +1,15 @@
 {
   "date": "2026-11-17",
-  "heure": "18:03",
+  "heure": "20:59",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
       "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
       "La Bourse de Paris en léger recul",
       "CAC 40 : la Bourse profite «de la poursuite de la baisse des prix de l’énergie», Crédit Agricole en vedette",
-      "La Bourse de Paris dans le vert, entre baisse du pétrole et accalmie sur la tech"
+      "La Bourse de Paris termine en légère hausse"
     ]
   },
   "valeurs": {
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
+        "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 9 au 13 novembre 2026",
-        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
-        "FLEURY MICHON : DECLARATION MENSUELLE RACHAT/VENTE ACTIONS 10 2026"
+        "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES"
       ]
     },
     "Alstom": {
@@ -334,9 +334,12 @@
       ]
     },
     "Eurazeo": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.0,
+      "nb_news": 2,
+      "titres_cles": [
+        "HappyRobot lève 150 millions de dollars en série C pour développer une superintelligence d'entreprise",
+        "Forsee Power entre en négociation exclusive avec FCAP en vue d’un investissement destiné à accélérer son développement"
+      ]
     },
     "Thales": {
       "sentiment": 0.11,
