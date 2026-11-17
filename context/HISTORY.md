@@ -7,6 +7,17 @@
 
 ---
 
+## 2026-11-17
+
+### Skills tradermonty installées (4 gardées) + audit du cœur Dual Momentum avec backtest-expert
+
+- **Installation** depuis github.com/tradermonty/claude-trading-skills (74 skills, MIT) : sélection de 6 dans `~/.claude/skills`, puis navigator et market-breadth-analyzer retirés (Corbeille). Restent : backtest-expert, data-quality-checker, macro-regime-detector, pre-trade-discipline-gate. Les 68 autres écartées (trading actif actions US, clé FMP payante, contraire au pivot du 23/08).
+- **Audit du cœur DM** (`audit_dm_backtest_expert.py`, 2004-2026, config live) : la stratégie encaisse le réalisme (euros, vrais taux monétaires nuls/négatifs 2012-2022, frais 1 % par bascule) : 10,53 %/an, pire chute -20,3 %, contre 10,29 % / -48,3 % pour le World passif. Réglages en plateau (buffer 0-10 %, lookback 9-15 mois). **Mais** seulement 8 années gagnées sur 22, l'avantage vient presque entièrement de 2008 ; **depuis 2009, -2,7 pts/an** face au World passif, pire chute équivalente. 18 bascules en 22 ans, sous le minimum statistique de 30.
+- Décalage d'un mois trouvé dans les recettes `piste1`/`piste2` (position du mois M décidée sur fin M-2, le live décide sur fin M-1). Effet mesuré -0,3 pt, négligeable, rien corrigé dans ces scripts.
+- **Lecture** : le DM est une assurance contre une baisse longue type 2008 (prime ~2,7 pts/an), pas un moteur. Le point du 08/12 devient une décision de fond : World passif seul ou DM. Rien changé dans le code. Doc : annexe B.31 + encart section 3 + carte agent.
+
+---
+
 ## 2026-11-15
 
 ### Assurance vie BoursoVie souscrite et suivie dans le briefing, Veille resserrée, piste de l'or fermée
