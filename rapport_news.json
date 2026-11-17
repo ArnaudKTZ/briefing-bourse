@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "heure": "14:52",
+  "heure": "18:03",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -15,11 +15,11 @@
   "valeurs": {
     "LVMH": {
       "sentiment": 0.0,
-      "nb_news": 9,
+      "nb_news": 8,
       "titres_cles": [
         "LVMH : Poursuite de la croissance au troisième trimestre 2026",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "LVMH :    Déclaration des transactions sur actions propres"
+        "LVMH : Déclaration des transactions sur actions propres"
       ]
     },
     "TotalEnergies": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.27,
-      "nb_news": 15,
+      "sentiment": -0.29,
+      "nb_news": 14,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -113,8 +113,8 @@
       ]
     },
     "Vinci": {
-      "sentiment": 0.26,
-      "nb_news": 19,
+      "sentiment": 0.25,
+      "nb_news": 20,
       "titres_cles": [
         "VINCI : Mise en œuvre du programme de rachat d’actions propres",
         "VINCI - 9M 2026 - NOUVELLES HAUSSES DU CHIFFRE D’AFFAIRES ET DES PRISES DE COMMANDES",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
@@ -334,12 +334,9 @@
       ]
     },
     "Eurazeo": {
-      "sentiment": 0.0,
-      "nb_news": 2,
-      "titres_cles": [
-        "HappyRobot lève 150 millions de dollars en série C pour développer une superintelligence d'entreprise",
-        "Forsee Power entre en négociation exclusive avec FCAP en vue d’un investissement destiné à accélérer son développement"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Thales": {
       "sentiment": 0.11,
