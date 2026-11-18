@@ -1,8 +1,8 @@
 {
   "date": "2026-11-18",
-  "heure": "17:43",
+  "heure": "20:33",
   "marche": {
-    "sentiment_global": 0.05,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.29,
-      "nb_news": 14,
+      "sentiment": -0.27,
+      "nb_news": 15,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
