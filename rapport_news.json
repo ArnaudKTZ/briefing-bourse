@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "heure": "14:27",
+  "heure": "17:43",
   "marche": {
     "sentiment_global": 0.05,
     "nb_articles": 20,
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.18,
-      "nb_news": 17,
+      "sentiment": 0.17,
+      "nb_news": 18,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
@@ -122,8 +122,8 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.33,
-      "nb_news": 12,
+      "sentiment": -0.31,
+      "nb_news": 13,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
