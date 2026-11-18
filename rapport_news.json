@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-17",
-  "heure": "20:59",
+  "date": "2026-11-18",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.47,
+      "sentiment": 0.53,
       "nb_news": 19,
       "titres_cles": [
         "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
@@ -271,7 +271,7 @@
       ]
     },
     "Alstom": {
-      "sentiment": 0.06,
+      "sentiment": 0.0,
       "nb_news": 18,
       "titres_cles": [
         "Les actions Alstom chutent de 6% après des avertissements de J.P. Morgan et Citi",
