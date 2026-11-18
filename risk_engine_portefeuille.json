@@ -137,7 +137,7 @@
     "2026-11-13": 9277.26,
     "2026-11-16": 9251.75,
     "2026-11-17": 9215.71,
-    "2026-11-18": 9236.3
+    "2026-11-18": 9232.75
   },
   "trades": [
     {
@@ -339,5 +339,5 @@
       "raison_sortie": "ÉVITER intraday"
     }
   ],
-  "regime_dernier": "haussier"
+  "regime_dernier": "baissier"
 }
