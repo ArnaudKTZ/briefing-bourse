@@ -37,10 +37,10 @@
   "historique_valeur": {
     "2026-11-16": 300.01,
     "2026-11-17": 298.41,
-    "2026-11-18": 300.02
+    "2026-11-18": 297.26
   },
-  "cours_actuel": 5.097,
-  "var_jour": null,
-  "valeur_actuelle": 300.02,
+  "cours_actuel": 5.03,
+  "var_jour": 0.94,
+  "valeur_actuelle": 297.26,
   "total_verse": 300.0
 }
