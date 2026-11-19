@@ -1,15 +1,15 @@
 {
   "date": "2026-11-19",
-  "heure": "17:47",
+  "heure": "20:37",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic",
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
       "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
       "La Bourse de Paris en léger recul",
-      "La Bourse de Paris en petite hausse, la tech en vert",
-      "CAC 40 : la Bourse sans élan, «des indices en faveur de hausses de taux pourraient amplifier les ventes d’actions»"
+      "La Bourse de Paris en petite hausse, la tech en vert"
     ]
   },
   "valeurs": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.27,
+      "sentiment": 0.4,
       "nb_news": 15,
       "titres_cles": [
+        "Les actions d’Insmed bondissent de plus de 18% sur des rumeurs de rachat par Sanofi",
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
-        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
-        "Communiqué de presse : Sanofi et Cheplapharm créent un nouveau partenariat stratégique autour des médicaments matures"
+        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars"
       ]
     },
     "BNP Paribas": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.58,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
         "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.5,
-      "nb_news": 16,
+      "sentiment": 0.44,
+      "nb_news": 18,
       "titres_cles": [
         "Journée investisseurs 2026 de Dassault Systèmes : une nouvelle ère industrielle, un nouveau cycle de croissance ; objectif de hausse à deux chiffres du chiffre d’affaires et du BNPA en 2029",
         "Dassault Systèmes vise une croissance à deux chiffres d’ici 2029",
@@ -351,13 +351,9 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.65,
-      "nb_news": 17,
-      "titres_cles": [
-        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
-        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
-        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     }
   },
   "signaux_forts": []
