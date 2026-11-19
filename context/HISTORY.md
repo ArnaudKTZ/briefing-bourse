@@ -7,6 +7,18 @@
 
 ---
 
+## 2026-11-19
+
+### Outils installés (Playwright, trader-analyst) et suivi des résultats des géants du World dans le briefing
+
+- **Perplexity** : skill (cachemoney/agent-toolkit) et serveur MCP officiel installés puis **retirés le jour même**. L'API est payante, il n'existe pas de version gratuite propre (les contournements violent les conditions d'utilisation). La recherche web intégrée suffit.
+- **Playwright** : serveur MCP officiel Microsoft (`@playwright/mcp`) installé pour tous les projets, testé de bout en bout (25 outils, navigation réelle). Intérêt réel limité : Claude in Chrome et le navigateur intégré couvrent déjà la lecture de pages. Utile surtout pour tester l'appli web bourse de façon répétable.
+- **Pack trader-skill** (Jakeschincariol, MIT, code relu avant installation : sources publiques uniquement) : 11 skills installées, **9 mises à la Corbeille** car pensées pour la bourse US (fiscalité US, courtiers Alpaca/IBKR, copie des élus), ou en doublon avec la Veille et le Screener. Gardées : `trader-analyst` (comptes SEC des entreprises US) et `trader-rebalance` (pour le jour où le PEA aura plusieurs ETF). Variable `SEC_USER_AGENT` ajoutée au `~/.bash_profile` par Arnaud.
+- **Nouvel agent Résultats US** (`agent_resultats_us.py` + `sec_facts.py` repris de trader-analyst) : chaque matin avant le briefing de 7h, il lit les dépôts SEC du top 10 du MSCI World (environ un quart de l'ETF de l'assurance vie). Le bloc n'apparaît dans le briefing **que s'il y a une nouvelle publication** : chiffre d'affaires, marge nette, bénéfice par action, comparés à un an plus tôt. L'appli web montre les 7 derniers jours. Information pure, pas un signal. Testé en local (amorçage réel des 10 entreprises, simulation d'un matin à 10 publications), suite de tests OK, poussé (457b8eb). Doc : carte agent, annexe A, B.32, glossaire.
+- **Reste à Arnaud** : créer le secret GitHub `SEC_USER_AGENT`, sans lequel le bloc ne s'affiche jamais. Premier vrai test attendu avec le rapport 10-Q de Nvidia (vérification ~26/11).
+
+---
+
 ## 2026-11-17
 
 ### Skills tradermonty installées (4 gardées) + audit du cœur Dual Momentum avec backtest-expert
