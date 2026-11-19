@@ -134,13 +134,21 @@ def verifier_circuit_breaker_satellite():
     dates_triees = sorted(hv_valides)
 
     def drawdown_avant(date_cible):
-        """Drawdown connu à la veille de date_cible (dernier point < date_cible)."""
+        """Drawdown à l'ouverture. La production calcule sur l'équité EN COURS de
+        séance, qu'on ne connaît pas après coup : on encadre avec la clôture de la
+        veille et celle du jour même, et on garde le moins sévère des deux. Ainsi
+        on ne signale que ce qui viole la règle dans les deux cas (corrigé le
+        19/11 : BNP du 29/10 apparaissait à tort en violation, -25,6% la veille
+        mais -24,7% le jour même, côté production)."""
         anterieurs = [d for d in dates_triees if d < date_cible]
         if not anterieurs:
             return None
-        pic = max(hv_valides[d] for d in dates_triees if d <= anterieurs[-1])
-        valeur = hv_valides[anterieurs[-1]]
-        return (valeur - pic) / pic * 100 if pic > 0 else 0.0
+        candidats = [anterieurs[-1]] + ([date_cible] if date_cible in hv_valides else [])
+        dds = []
+        for d in candidats:
+            pic = max(hv_valides[x] for x in dates_triees if x <= d)
+            dds.append((hv_valides[d] - pic) / pic * 100 if pic > 0 else 0.0)
+        return max(dds)
 
     today = datetime.datetime.now(TZ_PARIS).date()
     borne_recente = max(
@@ -154,7 +162,14 @@ def verifier_circuit_breaker_satellite():
         # Fenêtre glissante récente seulement : un incident déjà détecté et
         # corrigé ne doit pas re-déclencher une alerte à chaque run, pour
         # toujours. Passé la fenêtre, il appartient à l'historique (HISTORY.md).
-        if t.get("date_entree", "") < borne_recente:
+        # Fenêtre sur la date de SORTIE : un trade n'apparaît dans "trades"
+        # qu'une fois clos (6 à 10 jours après l'ouverture en moyenne). Filtrer
+        # sur la date d'entrée, comme avant le 19/11, faisait sortir chaque trade
+        # de la fenêtre de 3 jours avant même qu'il soit visible : le check n'a
+        # vérifié aucun trade entre le 01/11 et le 19/11.
+        if t.get("date_entree", "") < DATE_DEPLOIEMENT_CIRCUIT_BREAKER:
+            continue
+        if max(t.get("date_entree", ""), t.get("date_sortie") or "") < borne_recente:
             continue
         dd = drawdown_avant(t["date_entree"])
         if dd is None:
@@ -175,7 +190,7 @@ def verifier_circuit_breaker_satellite():
 
     if violations:
         return False, f"{len(violations)} violation(s) sur {trades_verifies} trade(s) vérifié(s) : " + " | ".join(violations[:3])
-    return True, f"OK — {trades_verifies} trade(s) vérifié(s) depuis le {DATE_DEPLOIEMENT_CIRCUIT_BREAKER}, aucune violation"
+    return True, f"OK — {trades_verifies} trade(s) clos ces {FENETRE_VERIFICATION_JOURS} derniers jours vérifié(s), aucune violation"
 
 
 def verifier_lookahead():
