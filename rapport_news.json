@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "heure": "14:55",
+  "heure": "17:47",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.27,
+      "nb_news": 15,
       "titres_cles": [
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
@@ -140,9 +140,13 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.56,
+      "nb_news": 9,
+      "titres_cles": [
+        "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
+        "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
+        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?"
+      ]
     },
     "Saint-Gobain": {
       "sentiment": 0.71,
@@ -172,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Sodexo crée un Conseil d’Innovation Culinaire afin de mobiliser l’expertise et la créativité de chefs renommés au bénéfice de ses clients et consommateurs",
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
@@ -226,8 +230,8 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.45,
-      "nb_news": 11,
+      "sentiment": 0.5,
+      "nb_news": 12,
       "titres_cles": [
         "Chauffage au gaz, la patronne d’Engie Catherine MacGregor vous conseille de changer de contrat avant l’hiver",
         "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
@@ -258,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
+      "sentiment": 0.58,
       "nb_news": 19,
       "titres_cles": [
         "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
@@ -294,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": -0.08,
+      "sentiment": 0.0,
       "nb_news": 12,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les actions européennes reculent sous la pression des nouvelles restrictions américaines sur les puces",
-        "Les valeurs européennes des semi-conducteurs chutent, suivant le repli asiatique lié à l’IA"
+        "Les actions mondiales des semi-conducteurs s’envolent après l’introduction en bourse record d’Anthropic",
+        "Les actions européennes reculent sous la pression des nouvelles restrictions américaines sur les puces"
       ]
     },
     "Dassault Systèmes": {
@@ -316,17 +320,17 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
-      "sentiment": 0.4,
-      "nb_news": 10,
+      "sentiment": 0.27,
+      "nb_news": 11,
       "titres_cles": [
+        "Morgan Stanley dégrade Accor en raison de craintes liées à la dette",
         "Accor Group et Hard Rock International signent un partenariat stratégique mondial",
-        "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027",
-        "American Express et ALL Accor annoncent un nouveau partenariat mondial pour enrichir l'expérience des voyageurs"
+        "Morgan Stanley relève Accor à \"surpondérer\" grâce aux perspectives 2027"
       ]
     },
     "Eurazeo": {
