@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "heure": "06:45",
+  "heure": "14:55",
   "marche": {
     "sentiment_global": 0.0,
     "nb_articles": 20,
@@ -8,8 +8,8 @@
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
       "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
       "La Bourse de Paris en léger recul",
-      "CAC 40 : la Bourse sans élan, «des indices en faveur de hausses de taux pourraient amplifier les ventes d’actions»",
-      "La Bourse de Paris termine en légère hausse"
+      "La Bourse de Paris en petite hausse, la tech en vert",
+      "CAC 40 : la Bourse sans élan, «des indices en faveur de hausses de taux pourraient amplifier les ventes d’actions»"
     ]
   },
   "valeurs": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.31,
+      "sentiment": 0.25,
       "nb_news": 16,
       "titres_cles": [
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
         "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars",
-        "Sanofi : Berlin autorisé à accorder une subvention pour sécuriser l’approvisionnement européen en insuline"
+        "Communiqué de presse : Sanofi et Cheplapharm créent un nouveau partenariat stratégique autour des médicaments matures"
       ]
     },
     "BNP Paribas": {
@@ -140,13 +140,9 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.56,
-      "nb_news": 9,
-      "titres_cles": [
-        "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
-        "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
-        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Saint-Gobain": {
       "sentiment": 0.71,
@@ -176,12 +172,12 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.13,
-      "nb_news": 15,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
+        "Sodexo crée un Conseil d’Innovation Culinaire afin de mobiliser l’expertise et la créativité de chefs renommés au bénéfice de ses clients et consommateurs",
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
-        "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole",
-        "Michelin : Le chiffre d'affaires du Groupe progresse de 1,0 % hors effet de change et 0,1 % à iso-périmètre et change, tiré par la marque MICHELIN, un mix favorable et des acquisitions ciblées en PCS. Guidance annuelle confirmée."
+        "CAC 40 : vague de résultats trimestriels, Carrefour chute et EssilorLuxottica s'envole"
       ]
     },
     "Capgemini": {
@@ -230,12 +226,12 @@
       ]
     },
     "Engie": {
-      "sentiment": 0.36,
+      "sentiment": 0.45,
       "nb_news": 11,
       "titres_cles": [
+        "Chauffage au gaz, la patronne d’Engie Catherine MacGregor vous conseille de changer de contrat avant l’hiver",
         "Engie maintient ses objectifs 2026, porté par ses activités au Royaume-Uni",
-        "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées",
-        "Sitetracker choisi par BNZ pour soutenir la croissance évolutive des énergies renouvelables multitechnologiques en Europe du Sud"
+        "Un faux conseiller Engie qui connaît votre numéro de contrat ? Des données de clients ont été volées"
       ]
     },
     "Orange": {
