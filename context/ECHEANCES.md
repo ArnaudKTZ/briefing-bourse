@@ -17,6 +17,9 @@
 
 ## Sans date ferme (à sortir quand le moment est bon)
 
+- [ ] **Reste à Arnaud : créer le secret GitHub `SEC_USER_AGENT`** (valeur "Arnaud ton email") pour l'agent Résultats US du briefing de 7h. Sans lui, le bloc ne s'affiche jamais (aucune erreur visible). Dans le Terminal : `gh secret set SEC_USER_AGENT`, puis coller la valeur quand c'est demandé. (Agent Bourse)
+- [ ] ~2026-11-26 — **Vérifier le premier vrai bloc "Résultats des géants du World"** dans le briefing : Nvidia a publié son communiqué le 17/11, son rapport 10-Q doit suivre sous quelques jours. Contrôler les chiffres affichés contre le communiqué. (Agent Bourse)
+
 - [ ] **Reste à Arnaud : créer le job cron-job.org pour le Screener Fondamental CAC40** (comme Dividendes/Crypto DM), le cron natif GitHub Actions seul n'étant pas fiable (leçon du 24/06). Workflow déjà créé (`.github/workflows/screener_fondamental.yml`, le 2 du mois 8h30).
 - [ ] ~2026-12-02 — **Vérifier le 2e run du Screener Fondamental CAC40** : la dilution (6e critère) ne devient calculable qu'à partir du 2e mois. Vérifier aussi que les données fondamentales yfinance restent disponibles sur les 39 valeurs (connu pour être incomplet sur certains titres européens). (Agent Bourse)
 

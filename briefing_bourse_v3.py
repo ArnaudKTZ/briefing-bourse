@@ -2277,6 +2277,84 @@ def generer_html_assurance_vie():
         return ""
 
 
+FICHIER_RESULTATS_US = "resultats_us.json"
+
+def generer_html_resultats_us():
+    """Bloc 'Résultats des géants du World' : n'apparaît que s'il y a du nouveau ce matin
+    (resultats_us.json écrit juste avant par agent_resultats_us.py). Information, pas signal."""
+    if not os.path.exists(FICHIER_RESULTATS_US):
+        return ""
+    try:
+        with open(FICHIER_RESULTATS_US, "r", encoding="utf-8") as f:
+            ru = json.load(f)
+        if ru.get("maj") != datetime.date.today().isoformat():
+            return ""  # agent pas passé ce matin : on n'affiche pas du vieux
+        nouveaux = ru.get("nouveaux") or []
+        if not nouveaux:
+            return ""
+
+        def c(x):
+            return "#2e7d32" if x is not None and x >= 0 else "#c62828"
+
+        def p(x):
+            return "—" if x is None else f"{'+' if x >= 0 else ''}{x:.1f}%"
+
+        def dfr(d):
+            return f"{d[8:10]}/{d[5:7]}"
+
+        td = "padding:5px 8px;text-align:right;"
+        lignes, annonces = "", []
+        for n in nouveaux:
+            if n["type"] == "annonce":
+                annonces.append(f"<a href='{n['url']}' style='color:#2a5490;'>{n['nom']}</a> ({dfr(n['depose'])})")
+                continue
+            # Date de fin réelle d'abord : Nvidia, Microsoft... ont un exercice décalé
+            fin = n.get("fin_periode") or ""
+            trim = (f"fin {fin[8:10]}/{fin[5:7]}/{fin[2:4]} "
+                    f"<span style='font-size:10px;'>({n.get('trimestre', '')})</span>"
+                    + (" *" if n.get("q4_deduit") else ""))
+            ca = f"{n['ca_mds']:.1f} Md$" if n.get("ca_mds") is not None else "—"
+            mn = f"{n['marge_nette']:.1f}%" if n.get("marge_nette") is not None else "—"  # déjà en %
+            bpa = f"{n['bpa']:.2f}$" if n.get("bpa") is not None else "—"
+            lignes += (
+                f"<tr style='border-top:1px solid #ddd;'>"
+                f"<td style='padding:5px 8px;'><a href='{n['url']}' style='color:#2a5490;'>{n['nom']}</a></td>"
+                f"<td style='{td}color:#888;'>{trim}</td><td style='{td}'>{ca}</td>"
+                f"<td style='{td}color:{c(n.get('ca_yoy'))};'>{p(n.get('ca_yoy'))}</td>"
+                f"<td style='{td}'>{mn}</td><td style='{td}'>{bpa}</td>"
+                f"<td style='{td}color:{c(n.get('bpa_yoy'))};'>{p(n.get('bpa_yoy'))}</td></tr>"
+            )
+        th = "padding:5px 8px;text-align:right;color:#555;font-weight:600;"
+        tableau = ""
+        if lignes:
+            tableau = (
+                f"<table style='margin-top:8px;width:100%;border-collapse:collapse;font-size:13px;'>"
+                f"<thead><tr style='background:#f4f0fa;'>"
+                f"<th style='padding:5px 8px;text-align:left;color:#555;font-weight:600;'>Entreprise</th>"
+                f"<th style='{th}'>Trimestre</th><th style='{th}'>Chiffre d'affaires</th><th style='{th}'>sur 1 an</th>"
+                f"<th style='{th}'>Marge nette</th><th style='{th}'>Bénéfice/action</th><th style='{th}'>sur 1 an</th>"
+                f"</tr></thead><tbody>{lignes}</tbody></table>"
+            )
+        txt_annonces = ""
+        if annonces:
+            txt_annonces = ("<p style='margin:8px 0 0;font-size:12px;'>Résultats annoncés (communiqué, "
+                            "chiffres officiels au prochain rapport) : " + ", ".join(annonces) + "</p>")
+        note = ("Source : comptes déposés à la SEC. Ces 10 entreprises pèsent environ un quart de "
+                "l'ETF World de l'assurance vie. Information, pas un signal d'achat ou de vente.")
+        if any(n.get("q4_deduit") for n in nouveaux):
+            note += " * 4e trimestre déduit du rapport annuel (année moins 3 trimestres)."
+        return f"""
+<div style='margin:0 0 16px;padding:14px 16px;background:#f8f5fc;border-left:4px solid #7b5ea7;border-radius:6px;'>
+  <p style='margin:0;font-size:13px;font-weight:bold;color:#5a3f85;'>Résultats des géants du World (nouveau ce matin)</p>
+  {tableau}
+  {txt_annonces}
+  <p style='margin:8px 0 0;font-size:11px;color:#888;'>{note}</p>
+</div>"""
+    except Exception as e:
+        print(f"  WARN résultats US : {e}")
+        return ""
+
+
 FICHIER_QUALITE_DONNEES = "data_quality_log.json"
 
 def logger_qualite_donnees(donnees):
@@ -2599,8 +2677,9 @@ if __name__ == "__main__":
         print(f"  Comparaison CAC indisponible : {e}")
 
     html_pf = generer_html_portefeuille(pf_data, pf_donnees_dict, perf_cac_pf, date_debut_pf)
-    # Assurance vie (argent réel) en tête, puis le cœur Dual Momentum
-    html_dm = generer_html_assurance_vie() + generer_html_dual_momentum()
+    # Assurance vie (argent réel) en tête, résultats des géants du World s'il y a
+    # du nouveau, puis le cœur Dual Momentum
+    html_dm = generer_html_assurance_vie() + generer_html_resultats_us() + generer_html_dual_momentum()
     envoyer_email(briefing, perf["stats"], html_pf, html_dm)
 
     print("Terminé.")

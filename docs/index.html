@@ -337,7 +337,7 @@ async function charger() {
   document.getElementById('content').innerHTML = '<div class="loader"><div class="spinner"></div>Chargement...</div>';
 
   try {
-    const [rPerf, rId, rNews, rEspion, rPf, rDmSt, rDmPf, rProf, rAv] = await Promise.allSettled([
+    const [rPerf, rId, rNews, rEspion, rPf, rDmSt, rDmPf, rProf, rAv, rRu] = await Promise.allSettled([
       fetchJSON('performance.json'),
       fetchJSON('intraday_scores.json'),
       fetchJSON('rapport_news.json'),
@@ -347,6 +347,7 @@ async function charger() {
       fetchJSON('dual_momentum_portefeuille.json'),
       fetchJSON('professeur_rapport.json'),
       fetchJSON('assurance_vie.json'),
+      fetchJSON('resultats_us.json'),
     ]);
 
     const perf   = rPerf.status   === 'fulfilled' ? rPerf.value   : null;
@@ -358,6 +359,7 @@ async function charger() {
     const dmPf   = rDmPf.status   === 'fulfilled' ? rDmPf.value   : null;
     const prof = rProf.status === 'fulfilled' ? rProf.value : null;
     const av   = rAv.status   === 'fulfilled' ? rAv.value   : null;
+    const ru   = rRu.status   === 'fulfilled' ? rRu.value   : null;
     if (pf)   _cachePf   = pf;
     if (dmSt) _cacheDmSt = dmSt;
     if (dmPf) _cacheDmPf = dmPf;
@@ -459,6 +461,25 @@ async function charger() {
       html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(gainAv)}">${av.valeur_actuelle.toFixed(2)}€</div><div class="sub ${cp(gainAv)}">${gainAv >= 0 ? '+' : ''}${gainAv.toFixed(2)}€ (${pct(perfAv)})</div></div>`;
       html += `<div class="card"><div class="lbl">ETF World (WLSC)</div><div class="val">${av.cours_actuel != null ? av.cours_actuel.toFixed(3) + '€' : '—'}</div><div class="sub ${av.var_jour != null ? cp(av.var_jour) : ''}">${av.var_jour != null ? pct(av.var_jour) + ' jour' : '—'}</div></div>`;
       html += `</div><div class="sub" style="margin-top:6px;font-size:11px;opacity:.7">Versé ${Math.round(verse)}€ · MAJ ${hAv.length ? hAv[hAv.length-1] : '—'}</div></div>`;
+    }
+
+    // ── RÉSULTATS DES GÉANTS DU WORLD (seulement les 7 derniers jours) ──
+    if (ru && Array.isArray(ru.historique)) {
+      const limite = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+      const recents = ru.historique.filter(n => n.type === 'chiffres' && n.detecte >= limite);
+      if (recents.length) {
+        const pc1 = v => v == null ? '—' : pct(v, 1);
+        html += `<div class="section"><div class="stitle">Résultats des géants du World</div><div class="card-wide">`;
+        html += `<table class="pf-table"><thead><tr><th>Entreprise</th><th>Fin trim.</th><th>CA</th><th>1 an</th><th>BPA 1 an</th></tr></thead><tbody>`;
+        recents.forEach(n => {
+          html += `<tr><td><a href="${n.url}" target="_blank" rel="noopener" style="color:inherit">${n.nom}</a></td>
+            <td>${n.fin_periode ? n.fin_periode.slice(5, 7) + '/' + n.fin_periode.slice(2, 4) : '—'}${n.q4_deduit ? '*' : ''}</td>
+            <td>${n.ca_mds != null ? n.ca_mds.toFixed(1) + '&nbsp;Md$' : '—'}</td>
+            <td class="${n.ca_yoy != null ? cp(n.ca_yoy) : ''}">${pc1(n.ca_yoy)}</td>
+            <td class="${n.bpa_yoy != null ? cp(n.bpa_yoy) : ''}">${pc1(n.bpa_yoy)}</td></tr>`;
+        });
+        html += `</tbody></table></div><div class="sub" style="margin-top:6px;font-size:11px;opacity:.7">Comptes SEC · ~1/4 de l'ETF World · information, pas un signal</div></div>`;
+      }
     }
 
     // ── DUAL MOMENTUM (CŒUR) ──

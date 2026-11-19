@@ -24,6 +24,11 @@ jobs:
       - name: Installer les dépendances
         run: pip install anthropic yfinance ta pandas numpy
 
+      - name: Résultats trimestriels du top 10 MSCI World (SEC)
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python agent_resultats_us.py || true
+
       - name: Lancer l'agent bourse V3
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -36,7 +41,7 @@ jobs:
         run: |
           git config user.name "Agent Bourse"
           git config user.email "actions@github.com"
-          git add performance.json portefeuille_virtuel.json dual_momentum_portefeuille.json dernier_briefing.json data_quality_log.json costs_log.json assurance_vie.json || true
+          git add performance.json portefeuille_virtuel.json dual_momentum_portefeuille.json dernier_briefing.json data_quality_log.json costs_log.json assurance_vie.json resultats_us.json || true
           git diff --staged --quiet || git commit -m "Performance update $(date +%Y-%m-%d)" || true
           git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true
