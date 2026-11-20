@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-19",
-  "heure": "20:37",
+  "date": "2026-11-20",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -59,12 +59,12 @@
       ]
     },
     "L'Oréal": {
-      "sentiment": 0.13,
+      "sentiment": 0.07,
       "nb_news": 15,
       "titres_cles": [
         "Jefferies relève L’Oréal à Conserver avec un objectif de 377€",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "Les actions du luxe européen progressent après le retour à la croissance de LVMH"
+        "NIQ nomme Danny Lange et Chris Tung membres de son conseil d’administration"
       ]
     },
     "Sanofi": {
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.47,
+      "sentiment": 0.53,
       "nb_news": 19,
       "titres_cles": [
         "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
@@ -351,9 +351,13 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.65,
+      "nb_news": 17,
+      "titres_cles": [
+        "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
+        "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
+        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
+      ]
     }
   },
   "signaux_forts": []
