@@ -7,16 +7,16 @@
     "J+1": {
       "n": 599,
       "gagnants_pct": 36.1,
-      "moyenne_nette": -0.65,
+      "moyenne_nette": -0.61,
       "cac_moyen": -0.05,
-      "edge": -0.6
+      "edge": -0.56
     },
     "J+3": {
       "n": 599,
       "gagnants_pct": 40.4,
-      "moyenne_nette": -0.37,
+      "moyenne_nette": -0.33,
       "cac_moyen": -0.1,
-      "edge": -0.27
+      "edge": -0.23
     },
     "J+5": {
       "n": 599,
