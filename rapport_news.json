@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "heure": "06:45",
+  "heure": "14:37",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.22,
-      "nb_news": 18,
+      "sentiment": 0.24,
+      "nb_news": 17,
       "titres_cles": [
         "Sodexo crée un Conseil d’Innovation Culinaire afin de mobiliser l’expertise et la créativité de chefs renommés au bénéfice de ses clients et consommateurs",
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
@@ -320,13 +320,13 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
-      "sentiment": 0.27,
-      "nb_news": 11,
+      "sentiment": 0.23,
+      "nb_news": 13,
       "titres_cles": [
         "Morgan Stanley dégrade Accor en raison de craintes liées à la dette",
         "Accor Group et Hard Rock International signent un partenariat stratégique mondial",
