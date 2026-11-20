@@ -1,15 +1,15 @@
 {
   "date": "2026-11-20",
-  "heure": "17:21",
+  "heure": "20:14",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.15,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine",
       "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic",
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
       "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
-      "La Bourse de Paris en léger recul",
-      "La Bourse de Paris en petite hausse, la tech en vert"
+      "La Bourse de Paris en léger recul"
     ]
   },
   "valeurs": {
@@ -342,11 +342,9 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.11,
-      "nb_news": 19,
+      "sentiment": 0.0,
+      "nb_news": 1,
       "titres_cles": [
-        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
-        "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?",
         "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
       ]
     },
