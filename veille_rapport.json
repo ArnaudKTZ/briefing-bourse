@@ -1,27 +1,26 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-21",
   "nb_articles": 40,
   "top": [
     {
-      "titre": "Mitigating Return Drag and Regime Whipsaws in Sector Rotation: An Asymmetric Downside-Aware Nested Clustered Optimization Framework",
-      "lien": "https://arxiv.org/abs/2611.05310v1",
-      "date": "2026-11-03",
-      "score": 24,
+      "titre": "Dynamic Spatio-Temporal Graph Attention Networks with Nested Clustered Optimization for Multi-Asset Portfolios",
+      "lien": "https://arxiv.org/abs/2611.19903v1",
+      "date": "2026-11-15",
+      "score": 27,
       "hits": [
         "momentum",
         "regime",
         "asset allocation",
-        "rotation",
+        "risk parity",
+        "tactical allocation",
         "walk-forward",
         "out-of-sample",
-        "backtest",
+        "transaction cost",
         "machine learning",
         "drawdown"
       ],
-      "deja_tranche": [
-        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
-      ],
-      "extrait": "Hierarchical clustering and Nested Clustered Optimization (NCO) mitigate the mathematical ill-conditioning of classical Markowitz covariance matrices. However, two structural vulnerabilities persist in equity markets: (1) symmetric variance penalizes upside and downside return dispersion identically, inducing acute return drag against soaring momentum sectors; and (2) unconstrained Hidden Markov Models (HMM) exhibit…"
+      "deja_tranche": [],
+      "extrait": "Nested Clustered Optimization (NCO) insulates asset allocation from Markowitz covariance ill-conditioning. However, classical tree clustering relies on static pairwise Pearson correlation, failing to capture time-varying, asymmetric downside risk contagion across multi-asset markets."
     },
     {
       "titre": "Idiosyncratic Market Effects in Global Time Series Momentum",
@@ -39,99 +38,114 @@
       "extrait": "Time series momentum is a pervasive explanatory factor in financial markets whereby a market's recent historical average return positively predicts future returns. Recent applications of statistical learning augment the traditional linear model definition with a more descriptive global nonlinear factor model."
     },
     {
-      "titre": "Trained, Frozen, or Absent: Identifying What a Quantum Layer Contributes to Cross-Sectional Equity Ranking",
-      "lien": "https://arxiv.org/abs/2611.10801v1",
-      "date": "2026-11-07",
-      "score": 16,
-      "hits": [
-        "cross-sectional",
-        "walk-forward",
-        "out-of-sample",
-        "backtest"
-      ],
-      "deja_tranche": [],
-      "extrait": "Hybrid quantumclassical models are increasingly proposed for nancial prediction, but reported gains are rarely separated from the classical components around them. We study a hybrid quantum temporal convolutional network for daily cross-sectional ranking of 2000 Tokyo Stock Exchange equities under a protocol built to make the quantum contribution identiable: six conditions (circuit trained, frozen or absent, a…"
-    },
-    {
-      "titre": "Global Seasonality Factor Investing",
-      "lien": "https://arxiv.org/abs/2611.15657v1",
-      "date": "2026-11-11",
-      "score": 14,
-      "hits": [
-        "momentum",
-        "factor",
-        "walk-forward",
-        "out-of-sample",
-        "transaction cost",
-        "ensemble"
-      ],
-      "deja_tranche": [
-        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
-      ],
-      "extrait": "We study seasonality as a factor for predicting risk-adjusted returns across global futures markets. We document five seasonality anomalies that, in aggregate, are pervasive across bond, commodity and equity markets."
-    },
-    {
-      "titre": "Diversification Across Predictors: Heterogeneous Ensemble Learning for Cross-Sectional Return Prediction",
-      "lien": "https://arxiv.org/abs/2611.12389v1",
-      "date": "2026-11-09",
-      "score": 13,
-      "hits": [
-        "factor",
-        "cross-sectional",
-        "regime",
-        "overfit",
-        "ensemble"
-      ],
-      "deja_tranche": [
-        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
-      ],
-      "extrait": "Cross-sectional stock return prediction remains challenging due to extremely low signal-to-noise ratios, high-dimensional factor spaces, and non-stationary predictor effectiveness. Individual model classes exhibit complementary failure modes in this regime: neural networks overfit noise due to high variance, while linear models underfit nonlinear structure due to high bias."
-    },
-    {
-      "titre": "Hard to Fool: A Bounded LLM Research Loop for Quantitative Finance, and What Two Dozen Campaigns Found",
-      "lien": "https://arxiv.org/abs/2611.06607v1",
-      "date": "2026-11-04",
-      "score": 13,
-      "hits": [
-        "overfit",
-        "backtest",
-        "llm",
-        "language model",
-        "agent",
-        "machine learning"
-      ],
-      "deja_tranche": [],
-      "extrait": "Agentic research loops that let a language model propose a change, run a fixed experiment and keep whatever improves the metric work well in machine learning. In trading research the same loop is a machine for producing false discoveries: a backtest that \"improves the metric\" is, by default, overfit, look-ahead, a multiple-comparisons artifact, cost-free, or market drift wearing a strategy."
-    },
-    {
-      "titre": "Risk-Sensitive Reinforcement Learning for an Options Market Maker: An Empirical Study with Real S&P 500 Options",
-      "lien": "https://arxiv.org/abs/2611.10956v1",
-      "date": "2026-11-07",
+      "titre": "Who Should Be on the Panel? Task-Conditioned Persona Selection for LLM Trading Agents",
+      "lien": "https://arxiv.org/abs/2611.18150v1",
+      "date": "2026-11-13",
       "score": 8,
       "hits": [
-        "regime",
-        "reinforcement learning",
-        "agent"
+        "llm",
+        "agent",
+        "drawdown"
       ],
       "deja_tranche": [],
-      "extrait": "Options market makers absorb client order flow and must hedge the resulting inventory risk under trading frictions. We study whether an option hedging reinforcement learning (RL) agent trained on historical market data outperforms three alternatives in tail-risk protection: (i) traditional delta hedging, (ii) simple hedge-ratio rules, and (iii) the same agent trained in simulated markets."
-    },
-    {
-      "titre": "Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach",
-      "lien": "https://arxiv.org/abs/2611.14699v1",
-      "date": "2026-11-10",
-      "score": 7,
-      "hits": [
-        "factor",
-        "walk-forward",
-        "out-of-sample",
-        "language model"
-      ],
-      "deja_tranche": [
-        "Famille RSI/MACD/Bollinger retail réfutée par 'Retail Trader's Ruin' (arXiv 2607.20093, lu le 29/07/2026) : Sharpe-gap et CAGR-gap significativement négatifs sur NASDAQ-100 et réplique UE."
-      ],
-      "extrait": "Reinforcement-learning portfolio policies can optimize allocations from prices, covariances, and prior positions, yet they lack a calibrated, replayable mechanism for certifying that a proposed allocation respects a bounded risk envelope before execution. Regulators increasingly expect automated portfolio systems to provide exactly this kind of pre-trade audit trail, interpretable risk limit, and human-oversight…"
+      "extrait": "Multi-agent LLM systems are built by fixing a cast of roles and then designing how the cast coordinates. Which agents should make up the group for a given task is left to the designer, and the same cast is reused for every task."
     }
   ],
-  "depots_13f": []
+  "ecartes_hors_portee": {
+    "options": 5,
+    "informatique quantique": 1,
+    "tenue de marché": 2,
+    "couverture par dérivés": 1,
+    "contrats à terme": 2
+  },
+  "depots_13f": [
+    {
+      "gerant": "Berkshire Hathaway (Buffett)",
+      "date_position": "2026-09-30",
+      "date_depot": "2026-11-16",
+      "retard_jours": 52,
+      "nouvelles": [
+        "BENDING SPOONS SPA"
+      ],
+      "sorties": [],
+      "variations": [
+        [
+          "LENNAR CORP",
+          79.0
+        ],
+        [
+          "LENNAR CORP",
+          67.3
+        ],
+        [
+          "CAPITAL ONE FINL CORP",
+          -63.1
+        ],
+        [
+          "VERISIGN INC",
+          -26.2
+        ],
+        [
+          "CHEVRON CORPORATION",
+          23.2
+        ],
+        [
+          "DAVITA INC",
+          -21.9
+        ],
+        [
+          "ALLY FINL INC",
+          -18.1
+        ],
+        [
+          "LOUISIANA PAC CORP",
+          -17.9
+        ]
+      ],
+      "premier_releve": false
+    },
+    {
+      "gerant": "Himalaya Capital (Li Lu)",
+      "date_position": "2026-09-30",
+      "date_depot": "2026-11-16",
+      "retard_jours": 52,
+      "nouvelles": [],
+      "sorties": [],
+      "variations": [
+        [
+          "TENCENT MUSIC ENTERTAINM",
+          113.6
+        ],
+        [
+          "APPLE INC",
+          15.1
+        ],
+        [
+          "PDD HOLDINGS INC",
+          11.7
+        ],
+        [
+          "EAST WEST BANCORP INC",
+          -4.0
+        ],
+        [
+          "ALPHABET INC",
+          -3.7
+        ],
+        [
+          "ALPHABET INC",
+          -3.6
+        ],
+        [
+          "CROCS INC",
+          -2.8
+        ],
+        [
+          "BERKSHIRE HATHAWAY INC DEL",
+          -0.5
+        ]
+      ],
+      "premier_releve": false
+    }
+  ]
 }
