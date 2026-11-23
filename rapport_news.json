@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "heure": "20:29",
+  "heure": "23:54",
   "marche": {
     "sentiment_global": -0.05,
     "nb_articles": 20,
@@ -351,12 +351,12 @@
       ]
     },
     "Forvia": {
-      "sentiment": 0.65,
-      "nb_news": 17,
+      "sentiment": 0.56,
+      "nb_news": 16,
       "titres_cles": [
         "Citi relève Forvia à l’achat, misant sur une confirmation des objectifs",
         "FORVIA : MISE EN OEUVRE DU PROGRAMME DE RACHAT D'ACTIONS APPROUVÉ PAR L'ASSEMBLÉE GÉNÉRALE DU 4 JUIN 2026",
-        "RESULTATS S1 2026: PROGRESSION DE LA MARGE ET CASH FLOW NET ÉLEVÉ, AVANCÉES DU PLAN STRATÉGIQUE IGNITE, OBJECTIFS ANNUELS CONFIRMÉS"
+        "VENTES GLOBALEMENT STABLES AU T3, FINALISATION DE LA CESSION D’INTERIORS AU T4, OBJECTIFS 2026 CONFIRMÉS"
       ]
     }
   },
