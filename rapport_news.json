@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-20",
-  "heure": "20:14",
+  "date": "2026-11-23",
+  "heure": "06:45",
   "marche": {
-    "sentiment_global": -0.15,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine",
       "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic",
       "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
       "La Bourse de Paris recule, les valeurs technologiques sous pression avant Nvidia",
-      "La Bourse de Paris en léger recul"
+      "La Bourse de Paris en petite hausse, la tech en vert"
     ]
   },
   "valeurs": {
@@ -32,17 +32,17 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.27,
-      "nb_news": 15,
+      "sentiment": -0.31,
+      "nb_news": 13,
       "titres_cles": [
-        "La Bourse de Paris termine dans le rouge, la dette française flambe",
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
-        "La Bourse de Paris plombée par la hausse du pétrole et des taux d'emprunt, Hermès plonge"
+        "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
+        "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque"
       ]
     },
     "Airbus": {
-      "sentiment": 0.17,
-      "nb_news": 18,
+      "sentiment": 0.18,
+      "nb_news": 17,
       "titres_cles": [
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
         "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
@@ -86,8 +86,8 @@
       ]
     },
     "Air Liquide": {
-      "sentiment": 0.73,
-      "nb_news": 15,
+      "sentiment": 0.65,
+      "nb_news": 17,
       "titres_cles": [
         "« Mettre l’air dans l’IA » : Air Liquide en hausse après la double upgrade de BofA à Achat",
         "Air Liquide : 4 milliards d'euros de rachats d'actions pour doper le rendement",
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.07,
-      "nb_news": 15,
+      "sentiment": 0.15,
+      "nb_news": 13,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -122,17 +122,17 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.31,
-      "nb_news": 13,
+      "sentiment": -0.25,
+      "nb_news": 12,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "La Bourse de Paris recule après des résultats en cascade"
+        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Novembre 2026)"
       ]
     },
     "Société Générale": {
-      "sentiment": 0.62,
-      "nb_news": 16,
+      "sentiment": 0.59,
+      "nb_news": 17,
       "titres_cles": [
         "Société Générale dépasse les attentes : bénéfice net record au troisième trimestre",
         "Société Générale : Achèvement du programme de rachat d’actions exceptionnel à des fins d’annulation pour un montant total de 1,5 milliard d’euros",
@@ -195,7 +195,7 @@
     },
     "Renault": {
       "sentiment": 0.07,
-      "nb_news": 15,
+      "nb_news": 14,
       "titres_cles": [
         "Renault Group émet avec succès des obligations pour 750 millions d'euros",
         "Renault et EDF veulent faire baisser votre facture d’électricité",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
+      "sentiment": 0.58,
       "nb_news": 19,
       "titres_cles": [
         "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
@@ -342,9 +342,11 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.0,
-      "nb_news": 1,
+      "sentiment": 0.11,
+      "nb_news": 18,
       "titres_cles": [
+        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
+        "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?",
         "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
       ]
     },
