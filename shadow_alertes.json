@@ -6658,5 +6658,35 @@
     "signal": "ACHETER",
     "raison": "Score exceptionnel 86/100",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-23",
+    "heure": "20:06",
+    "nom": "Saint-Gobain",
+    "cours": 73.2,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.04%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-23",
+    "heure": "20:06",
+    "nom": "Edenred",
+    "cours": 24.8,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.14%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-23",
+    "heure": "20:06",
+    "nom": "Accor",
+    "cours": 49.11,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.57%",
+    "envoyee": false
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "capital": 5978.150000000001,
+  "capital": 6826.280000000001,
   "positions": {
     "Publicis": {
       "nb_actions": 10,
@@ -36,18 +36,6 @@
       "stop_pct": 0.0548,
       "tp_pct": 0.1096,
       "score_entree": 83
-    },
-    "TotalEnergies": {
-      "nb_actions": 11,
-      "prix_entree": 81.69,
-      "date_entree": "2026-11-13",
-      "heure_entree": "11:31",
-      "secteur": "Énergie",
-      "cout_total": 898.59,
-      "frais_achat": 4.49,
-      "stop_pct": 0.0502,
-      "tp_pct": 0.1004,
-      "score_entree": 86
     }
   },
   "historique_valeur": {
@@ -140,7 +128,7 @@
     "2026-11-18": 9202.64,
     "2026-11-19": 9174.49,
     "2026-11-20": 9106.28,
-    "2026-11-23": 9122.64
+    "2026-11-23": 9131.64
   },
   "trades": [
     {
@@ -340,6 +328,17 @@
       "pnl_pct": -6.65,
       "frais_total": 18.03,
       "raison_sortie": "ÉVITER intraday"
+    },
+    {
+      "nom": "TotalEnergies",
+      "entree": 81.69,
+      "sortie": 77.49,
+      "date_entree": "2026-11-13",
+      "date_sortie": "2026-11-23",
+      "heure_sortie": "20:06",
+      "pnl_pct": -5.62,
+      "frais_total": 8.75,
+      "raison_sortie": "Stop -5.1% (ATR)"
     }
   ],
   "regime_dernier": "baissier"
