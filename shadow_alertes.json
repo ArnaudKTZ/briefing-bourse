@@ -6708,5 +6708,25 @@
     "signal": "ACHETER",
     "raison": "Gap haussier +5.56% avec volume x2.7",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-25",
+    "heure": "00:23",
+    "nom": "Edenred",
+    "cours": 24.8,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.14%",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-25",
+    "heure": "00:23",
+    "nom": "Accor",
+    "cours": 49.11,
+    "score": 71,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.57%",
+    "envoyee": false
   }
 ]
