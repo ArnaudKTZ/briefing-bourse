@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "heure": "16:17",
+  "heure": "20:05",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -41,12 +41,12 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.19,
+      "sentiment": 0.25,
       "nb_news": 16,
       "titres_cles": [
+        "Cerberus Capital s’accorde pour racheter l’unité spatiale d’Airbus en Floride",
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
-        "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026",
-        "[Communiqué de presse] La croissance du Groupe iliad s'accélère au 3ème trimestre 2026"
+        "Airbus livre 74 appareils en octobre et vise un record de livraisons en 2026"
       ]
     },
     "Schneider Electric": {
@@ -68,7 +68,7 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.53,
+      "sentiment": 0.47,
       "nb_news": 19,
       "titres_cles": [
         "Les actions d’Insmed bondissent de plus de 18% sur des rumeurs de rachat par Sanofi",
@@ -77,12 +77,12 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.45,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
+        "BNP Paribas abaisse sa note sur Micron en raison des risques sur les plans de capacité des hyperscalers",
         "GROUPE BNP PARIBAS : Rachat d'actions - déclaration des transactions sur actions propres du 16 novembre au 20 novembre 2026",
-        "BNP Paribas SA : Rachat d'actions - déclaration des transactions sur actions propres du 9 novembre au 13 novembre 2026",
-        "BNP Paribas SA : Rachat d'actions - déclaration des transactions sur actions propres du 2 novembre au 6 novembre 2026"
+        "BNP Paribas SA : Rachat d'actions - déclaration des transactions sur actions propres du 9 novembre au 13 novembre 2026"
       ]
     },
     "Air Liquide": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
