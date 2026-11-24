@@ -330,7 +330,69 @@ def generer_bloc_couts(couts):
     )
 
 
-def generer_html(now, evals, evo, doutes, meta_msg, couts=None, stagnations=None):
+# ─── BILAN DU DIMANCHE (ajout du 24/11) ──────────────────────────────────────
+# Shadow (vendredi), Évaluateur (samedi), Stratège (le 4) et Screener (le 2)
+# n'envoient plus chacun leur mail : 5 mails sur 11 portaient sur le trading
+# actif abandonné le 23/08, beaucoup de lecture pour un labo. Leurs résumés
+# sont regroupés ici. Un rapport est marqué "nouveau" s'il est plus récent
+# que le bilan précédent (robuste même si deux agents tournent le même jour).
+
+def _date_fr(iso):
+    return f"{iso[8:10]}/{iso[5:7]}" if iso and len(iso) >= 10 else "?"
+
+
+def generer_bloc_labo(dernier_bilan):
+    def nouveau(r):
+        return bool(r and r.get("date") and (not dernier_bilan or r["date"] > dernier_bilan))
+
+    def badge(r):
+        return (" <span style='background:#2e7d32;color:white;font-size:10px;padding:1px 6px;border-radius:3px;'>nouveau</span>"
+                if nouveau(r) else " <span style='color:#999;font-size:11px;'>(inchangé)</span>")
+
+    items = []
+    sh = charger("shadow_rapport.json")
+    if sh:
+        items.append(f"<li><strong>Shadow</strong> ({_date_fr(sh.get('date'))}){badge(sh)} : "
+                     f"alertes suspendues jugées <strong>{html_escape(sh.get('verdict', '?'))}</strong>. "
+                     f"{html_escape(sh.get('verdict_txt', ''))}</li>")
+    ev = charger("evaluateur_rapport.json")
+    if ev:
+        fp = ev.get("fenetre_propre") or {}
+        en = fp.get("edge_net_j5")
+        items.append(f"<li><strong>Évaluateur</strong> ({_date_fr(ev.get('date'))}){badge(ev)} : "
+                     f"edge net J+5 des ACHETER = <strong>{en:+.2f} pt</strong> sur {fp.get('n_obs', '?')} observations. "
+                     f"{html_escape((fp.get('verdict') or '')[:220])}</li>" if en is not None else
+                     f"<li><strong>Évaluateur</strong> ({_date_fr(ev.get('date'))}){badge(ev)} : "
+                     f"{html_escape((ev.get('verdict') or '')[:260])}</li>")
+    sc = charger("screener_fondamental_cac40.json")
+    if sc:
+        top = ", ".join(sc.get("top", [])[:6]) or "aucune"
+        items.append(f"<li><strong>Screener fondamental CAC 40</strong> ({_date_fr(sc.get('date'))}){badge(sc)} : "
+                     f"{len(sc.get('top', []))} valeurs passent le filtre qualité ({html_escape(top)}"
+                     f"{'…' if len(sc.get('top', [])) > 6 else ''}). Piste de recherche, pas un signal.</li>")
+    stg = charger("stratege_rapport.json")
+    bloc_conseil = ""
+    if stg:
+        items.append(f"<li><strong>Stratège</strong> ({_date_fr(stg.get('date'))}){badge(stg)} : "
+                     f"{'conseil du mois ci-dessous.' if nouveau(stg) else 'conseil mensuel déjà présenté.'}</li>")
+        if nouveau(stg) and stg.get("conseil"):
+            bloc_conseil = (f"<div style='margin-top:10px;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:13px;'>"
+                            f"{stg['conseil']}</div>")  # HTML produit par notre propre agent
+    if not items:
+        return ""
+    return (f"<div style='margin-top:20px;'><h3 style='font-size:15px;margin:0 0 8px;'>"
+            f"Labo (100 % virtuel) : les autres bilans</h3>"
+            f"<p style='margin:0 0 8px;font-size:12px;color:#888;'>Regroupés ici depuis le 24/11 au lieu d'un mail chacun.</p>"
+            f"<ul style='margin:0;padding-left:20px;font-size:13px;line-height:1.5;'>{''.join(items)}</ul>"
+            f"{bloc_conseil}</div>")
+
+
+def html_escape(s):
+    import html as _h
+    return _h.escape(str(s))
+
+
+def generer_html(now, evals, evo, doutes, meta_msg, couts=None, stagnations=None, bloc_labo=""):
     couleurs = {"A": "#1b5e20", "B": "#2e7d32", "C": "#e65100",
                 "D": "#b71c1c", "E": "#b71c1c", "—": "#999"}
     lignes = ""
@@ -381,7 +443,7 @@ def generer_html(now, evals, evo, doutes, meta_msg, couts=None, stagnations=None
 
     return f"""<html><body style='font-family:Arial,sans-serif;max-width:680px;margin:auto;padding:20px;color:#222;'>
 <div style='background:linear-gradient(135deg,#3c3489,#534ab7);color:white;padding:16px 20px;border-radius:8px 8px 0 0;'>
-  <h2 style='margin:0;font-size:18px;'>Réunion hebdomadaire — Agent Professeur</h2>
+  <h2 style='margin:0;font-size:18px;'>Bilan du dimanche — Professeur + labo</h2>
   <p style='margin:6px 0 0;font-size:12px;opacity:0.9;'>{now.strftime('%d/%m/%Y')} — bilan des agents</p>
 </div>
 <div style='border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;'>
@@ -396,6 +458,7 @@ def generer_html(now, evals, evo, doutes, meta_msg, couts=None, stagnations=None
   </table>
   {bloc_meta}
   {bloc_stagnation}
+  {bloc_labo}
   {generer_bloc_couts(couts)}
   <div style='margin-top:16px;padding:12px;background:#ede7f6;border-radius:6px;font-size:13px;color:#3c3489;'>
     <strong>Règle d'or :</strong> aucune amélioration ne passe en production sans réussir la recette
@@ -438,6 +501,7 @@ if __name__ == "__main__":
 
     precedent = charger(FICHIER_RAPPORT)
     evo = construire_evolution(evals, precedent)
+    bloc_labo = generer_bloc_labo((precedent or {}).get("date"))
 
     # Historique cumulé (snapshots compacts) pour le garde-fou méta
     historique = (precedent or {}).get("historique", [])
@@ -480,7 +544,7 @@ if __name__ == "__main__":
 
     print("Envoi compte-rendu hebdo...")
     couts = charger_couts_semaine()
-    html = generer_html(now, evals, evo, doutes, meta_msg, couts, stagnations)
-    envoyer(f"Professeur — réunion hebdo des agents — {now.strftime('%d/%m/%Y')}", html)
+    html = generer_html(now, evals, evo, doutes, meta_msg, couts, stagnations, bloc_labo)
+    envoyer(f"Bilan du dimanche — agents et labo — {now.strftime('%d/%m/%Y')}", html)
 
     print("Terminé.")

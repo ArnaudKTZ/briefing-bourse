@@ -235,7 +235,12 @@ if __name__ == "__main__":
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
-    print("Envoi rapport mensuel...")
-    html = generer_html(now, valeurs, top)
-    envoyer(f"Screener Fondamental CAC40 — {len(top)} candidats — {now.strftime('%m/%Y')}", html)
+    # Plus de mail individuel depuis le 24/11 : résumé dans le bilan du dimanche
+    # (agent_professeur.py). Variable EMAIL_INDIVIDUEL=1 pour le rétablir.
+    if os.environ.get("EMAIL_INDIVIDUEL") == "1":
+        print("Envoi rapport mensuel...")
+        html = generer_html(now, valeurs, top)
+        envoyer(f"Screener Fondamental CAC40 — {len(top)} candidats — {now.strftime('%m/%Y')}", html)
+    else:
+        print("Pas de mail : résumé repris dans le bilan du dimanche.")
     print("Terminé.")

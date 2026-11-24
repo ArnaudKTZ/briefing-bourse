@@ -716,9 +716,14 @@ if __name__ == "__main__":
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
-    print("Envoi rapport hebdo...")
-    html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt, propre,
-                         contrib_indicateurs, verdict_indic_txt)
-    envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
+    # Plus de mail individuel depuis le 24/11 : résumé dans le bilan du dimanche
+    # (agent_professeur.py). Variable EMAIL_INDIVIDUEL=1 pour le rétablir.
+    if os.environ.get("EMAIL_INDIVIDUEL") == "1":
+        print("Envoi rapport hebdo...")
+        html = generer_html(now, obs, stats_h, buckets_j5, ic_resume, regimes, chocs, verdict_txt, propre,
+                             contrib_indicateurs, verdict_indic_txt)
+        envoyer(f"Évaluateur — edge réel des signaux multi-horizons — {now.strftime('%d/%m/%Y')}", html)
+    else:
+        print("Pas de mail : résumé repris dans le bilan du dimanche.")
 
     print("Terminé.")

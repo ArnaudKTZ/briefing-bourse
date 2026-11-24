@@ -309,8 +309,13 @@ if __name__ == "__main__":
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
-    print("Envoi rapport hebdo...")
-    html = generer_html(now, achats, evaluations, stats, verdict_label, verdict_txt, en_attente)
-    envoyer(f"Shadow — les alertes suspendues auraient été {verdict_label} — {now.strftime('%d/%m/%Y')}", html)
+    # Plus de mail individuel depuis le 24/11 : le résumé part dans le bilan du
+    # dimanche (agent_professeur.py, generer_bloc_labo). Variable EMAIL_INDIVIDUEL=1 pour le rétablir.
+    if os.environ.get("EMAIL_INDIVIDUEL") == "1":
+        print("Envoi rapport hebdo...")
+        html = generer_html(now, achats, evaluations, stats, verdict_label, verdict_txt, en_attente)
+        envoyer(f"Shadow — les alertes suspendues auraient été {verdict_label} — {now.strftime('%d/%m/%Y')}", html)
+    else:
+        print("Pas de mail : résumé repris dans le bilan du dimanche.")
 
     print("Terminé.")

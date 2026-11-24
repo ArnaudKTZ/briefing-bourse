@@ -391,7 +391,12 @@ if __name__ == "__main__":
     with open(FICHIER_RAPPORT, "w", encoding="utf-8") as f:
         json.dump(rapport, f, ensure_ascii=False, indent=2)
 
-    print("Envoi du conseil mensuel...")
-    envoyer(f"Stratège — conseil mensuel — {now.strftime('%m/%Y')}",
-            generer_html(now, conseil_html))
+    # Plus de mail individuel depuis le 24/11 : le conseil part dans le bilan du
+    # dimanche suivant (agent_professeur.py). Le mail d'ÉCHEC API, lui, reste.
+    if os.environ.get("EMAIL_INDIVIDUEL") == "1":
+        print("Envoi du conseil mensuel...")
+        envoyer(f"Stratège — conseil mensuel — {now.strftime('%m/%Y')}",
+                generer_html(now, conseil_html))
+    else:
+        print("Pas de mail : conseil repris dans le bilan du dimanche.")
     print("Terminé.")
