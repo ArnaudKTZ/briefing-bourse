@@ -2,3 +2,7 @@
 # Newsletter AT26 (Naval Group) : jamais dans ce depot public
 AT26_Newsletter*
 *AT26*.html
+
+# Contexte perso (24/11) : reste en local, jamais dans ce depot public
+context/
+.DS_Store

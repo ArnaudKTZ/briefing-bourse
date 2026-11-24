@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "Agent Veille"
           git config user.email "actions@github.com"
-          git add veille_rapport.json || true
+          git add veille_rapport.json veille_13f_historique.json veille_articles_vus.json || true
           git diff --staged --quiet || git commit -m "Veille $(date +%Y-%m-%d)" || true
           git pull --rebase https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main || true
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || true

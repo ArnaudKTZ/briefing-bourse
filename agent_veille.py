@@ -34,6 +34,10 @@ ZOHO_PORT     = 587
 DESTINATAIRES = ["Arnaud.kuntz@zoho.eu"]
 
 FICHIER_RAPPORT = "veille_rapport.json"
+# Registre des articles déjà montrés dans un digest (ajout du 24/11). Avant ça,
+# un même papier pouvait ressortir chaque semaine tant qu'il restait dans les
+# 40 derniers d'arXiv (2611.15646 dans les digests du 14 ET du 21/11).
+FICHIER_VUS = "veille_articles_vus.json"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 # Catégories arXiv finance quantitative
@@ -55,7 +59,7 @@ MOTS_CLES = {
     "transaction cost": 2, "data snooping": 3, "robust": 1,
     # IA appliquée (poids moyen)
     "reinforcement learning": 2, "llm": 2, "language model": 2, "agent": 1,
-    "ensemble": 2, "machine learning": 1, "deep learning": 1,
+    "ensemble": 2, "machine learning": 1,
     # risque
     "drawdown": 2, "tail risk": 2, "volatility targeting": 3,
 }
@@ -73,6 +77,11 @@ HORS_PORTEE = {
     "futures": "contrats à terme",
     "high-frequency": "haute fréquence", "high frequency": "haute fréquence",
     "limit order book": "carnet d'ordres", "order book": "carnet d'ordres",
+    # Ajout du 24/11 : le digest du 21/11 remontait en n°1 un réseau de neurones
+    # sur graphes. Inapplicable sans infrastructure de deep learning.
+    "deep learning": "deep learning", "neural network": "réseaux de neurones",
+    "graph attention": "réseaux de neurones", "graph neural": "réseaux de neurones",
+    "transformer": "réseaux de neurones", "lstm": "réseaux de neurones",
 }
 
 # Sans au moins un de ces mots, un article n'est pas retenu, quel que soit son
@@ -370,11 +379,37 @@ def bloc_html_13f(comptes_rendus):
   {cartes}"""
 
 
-def selectionner(articles):
-    """Renvoie (articles retenus triés par score, {raison: nb} des écartés hors de portée)."""
+def id_article(lien):
+    """Identifiant stable d'un papier arXiv : 'abs/2611.15646v1' -> '2611.15646'.
+    La version (v1, v2...) est retirée pour qu'une révision ne ressorte pas."""
+    m = re.search(r"abs/([^/?#]+?)(v\d+)?$", lien or "")
+    return m.group(1) if m else (lien or "")
+
+
+def charger_vus():
+    if os.path.exists(FICHIER_VUS):
+        with open(FICHIER_VUS, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def enregistrer_vus(vus, top, date_iso):
+    for a in top:
+        vus.setdefault(id_article(a["lien"]), date_iso)
+    with open(FICHIER_VUS, "w", encoding="utf-8") as f:
+        json.dump(vus, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def selectionner(articles, vus=None):
+    """Renvoie (articles retenus triés par score, {raison: nb} des écartés hors de portée).
+    Les articles déjà montrés dans un digest précédent sont sautés (comptés à part)."""
+    vus = vus or {}
     ecartes = {}
     pertinents = []
     for a in articles:
+        if id_article(a["lien"]) in vus:
+            ecartes["déjà montré"] = ecartes.get("déjà montré", 0) + 1
+            continue
         raison = motif_hors_portee(a)
         if raison:
             ecartes[raison] = ecartes.get(raison, 0) + 1
@@ -388,9 +423,14 @@ def selectionner(articles):
 def generer_html(now, top, comptes_rendus_13f=None, ecartes=None):
     ligne_ecartes = ""
     if ecartes:
-        detail = ", ".join(f"{r} ({n})" for r, n in sorted(ecartes.items(), key=lambda x: -x[1]))
-        ligne_ecartes = (f"<p style='font-size:11px;color:#999;margin:0 0 12px;'>"
-                         f"{sum(ecartes.values())} article(s) écarté(s) car hors de portée d'un PEA : {html.escape(detail)}.</p>")
+        hors = {r: n for r, n in ecartes.items() if r != "déjà montré"}
+        morceaux = []
+        if hors:
+            detail = ", ".join(f"{r} ({n})" for r, n in sorted(hors.items(), key=lambda x: -x[1]))
+            morceaux.append(f"{sum(hors.values())} article(s) écarté(s) car hors de portée d'un PEA : {html.escape(detail)}.")
+        if ecartes.get("déjà montré"):
+            morceaux.append(f"{ecartes['déjà montré']} déjà montré(s) dans un digest précédent.")
+        ligne_ecartes = (f"<p style='font-size:11px;color:#999;margin:0 0 12px;'>{' '.join(morceaux)}</p>")
     if not top:
         ligne_ecartes = ("<p style='font-size:13px;color:#555;margin:0 0 12px;'>Aucune idée assez proche "
                          "de ta stratégie cette semaine. C'est un résultat normal, pas une panne.</p>") + ligne_ecartes
@@ -447,8 +487,10 @@ if __name__ == "__main__":
         if a["deja_tranche"]:
             a["score"] = max(0, a["score"] - 5)   # ne disparaît pas, mais cède la place aux idées neuves
 
-    pertinents, ecartes = selectionner(articles)
+    vus = charger_vus()
+    pertinents, ecartes = selectionner(articles, vus)
     top = pertinents[:NB_MAX]
+    enregistrer_vus(vus, top, now.date().isoformat())
 
     print(f"  {len(pertinents)} pertinents, top {len(top)} retenus, "
           f"{sum(ecartes.values())} hors de portée écartés :")
