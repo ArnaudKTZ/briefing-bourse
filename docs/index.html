@@ -460,7 +460,16 @@ async function charger() {
       html += `<div class="section"><div class="stitle">Assurance vie BoursoVie</div><div class="cards2">`;
       html += `<div class="card"><div class="lbl">Valeur</div><div class="val ${cp(gainAv)}">${av.valeur_actuelle.toFixed(2)}€</div><div class="sub ${cp(gainAv)}">${gainAv >= 0 ? '+' : ''}${gainAv.toFixed(2)}€ (${pct(perfAv)})</div></div>`;
       html += `<div class="card"><div class="lbl">ETF World (WLSC)</div><div class="val">${av.cours_actuel != null ? av.cours_actuel.toFixed(3) + '€' : '—'}</div><div class="sub ${av.var_jour != null ? cp(av.var_jour) : ''}">${av.var_jour != null ? pct(av.var_jour) + ' jour' : '—'}</div></div>`;
-      html += `</div><div class="sub" style="margin-top:6px;font-size:11px;opacity:.7">Versé ${Math.round(verse)}€ · MAJ ${hAv.length ? hAv[hAv.length-1] : '—'}</div></div>`;
+      html += `</div>`;
+      const al = av.allocation;
+      if (al && al.part_etf != null) {
+        html += `<div class="sub" style="margin-top:6px;font-size:12px">Répartition : <strong>${Math.round(al.part_etf)} % ETF / ${Math.round(100 - al.part_etf)} % fonds euros</strong> (cible ${al.cible_etf}/${100 - al.cible_etf})</div>`;
+        if (al.conseil && al.prochain_versement) {
+          const pv = al.prochain_versement;
+          html += `<div class="sub" style="margin-top:4px;font-size:12px;color:#f9a825"><strong>Versement du ${pv.slice(8,10)}/${pv.slice(5,7)} : ${al.conseil.ETF} € ETF, ${al.conseil.EURO} € fonds euros</strong></div>`;
+        }
+      }
+      html += `<div class="sub" style="margin-top:6px;font-size:11px;opacity:.7">Versé ${Math.round(verse)}€ · MAJ ${hAv.length ? hAv[hAv.length-1] : '—'}</div></div>`;
     }
 
     // ── RÉSULTATS DES GÉANTS DU WORLD (seulement les 7 derniers jours) ──

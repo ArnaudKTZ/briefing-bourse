@@ -15,7 +15,7 @@
   "versement_mensuel": {
     "actif": true,
     "jour": 10,
-    "debut": "2026-12-01",
+    "debut": "2027-01-10",
     "repartition": {
       "ETF": 25,
       "EURO": 25
@@ -46,5 +46,10 @@
   "cours_actuel": 4.8025,
   "var_jour": -3.52,
   "valeur_actuelle": 287.93,
-  "total_verse": 300.0
+  "total_verse": 300.0,
+  "cible": {
+    "ETF": 70,
+    "EURO": 30
+  },
+  "minimum_ligne": 25
 }

@@ -2122,13 +2122,57 @@ def _versements_mensuels_prevus(av, aujourdhui):
         if d > aujourdhui:
             break
         if d >= debut:
-            for sup, mt in vm.get("repartition", {}).items():
+            # Si un conseil a été calculé pour ce versement, on suppose qu'il a été suivi
+            # (toujours marqué "estimé" : à remplacer par le réel dans assurance_vie.json).
+            repart = av.get("conseils", {}).get(d.isoformat()) or vm.get("repartition", {})
+            for sup, mt in repart.items():
+                if not mt:
+                    continue
                 if (d.isoformat(), sup) not in deja:
                     prevus.append({"date": d.isoformat(), "support": sup, "montant": mt, "estime": True})
         m += 1
         if m > 12:
             a, m = a + 1, 1
     return prevus
+
+
+def _prochain_versement(av, aujourdhui):
+    """Date du prochain versement programmé (aujourd'hui inclus), ou None."""
+    vm = av.get("versement_mensuel", {})
+    if not vm.get("actif") or not vm.get("jour"):
+        return None
+    debut = datetime.date.fromisoformat(vm.get("debut", av.get("date_ouverture")))
+    a, m = aujourdhui.year, aujourdhui.month
+    for _ in range(14):
+        try:
+            d = datetime.date(a, m, int(vm["jour"]))
+        except ValueError:
+            d = datetime.date(a, m, 28)
+        if d >= aujourdhui and d >= debut:
+            return d
+        m += 1
+        if m > 12:
+            a, m = a + 1, 1
+    return None
+
+
+def conseil_repartition(val_etf, val_eur, montant, cible_etf, minimum_ligne):
+    """Rééquilibrage par les versements (ajout du 24/11) : parmi les répartitions
+    permises par BoursoVie (chaque ligne vaut 0 ou au moins `minimum_ligne` €), choisit
+    celle qui rapproche le plus la part ETF de la cible APRÈS le versement. Aucun
+    arbitrage, donc aucun frais. C'est un thermostat : on chauffe le côté qui est froid.
+    Renvoie (montant_etf, montant_euro, part_etf_apres_en_%)."""
+    total = val_etf + val_eur + montant
+    meilleur = None
+    for etf in range(0, montant + 1, 5):
+        eur = montant - etf
+        if (0 < etf < minimum_ligne) or (0 < eur < minimum_ligne):
+            continue
+        part = (val_etf + etf) / total * 100 if total else 0
+        ecart = abs(part - cible_etf)
+        if meilleur is None or ecart < meilleur[3] - 1e-9:
+            meilleur = (etf, eur, part, ecart)
+    return meilleur[:3] if meilleur else (montant, 0, 0)
 
 
 def generer_html_assurance_vie():
@@ -2190,6 +2234,37 @@ def generer_html_assurance_vie():
         valeur = val_etf + val_eur
         gain = valeur - verse
         perf = gain / verse * 100 if verse else 0
+
+        # Conseil de versement : allocation actuelle vs cible, et répartition du prochain versement
+        bloc_conseil = ""
+        cible = av.get("cible", {})
+        if cible.get("ETF") is not None and valeur > 0:
+            part_etf = val_etf / valeur * 100
+            ligne_alloc = (f"Répartition actuelle : <strong>{part_etf:.0f} % ETF / {100 - part_etf:.0f} % fonds euros</strong> "
+                           f"(cible {cible['ETF']}/{100 - cible['ETF']}).")
+            prochain = _prochain_versement(av, aujourdhui)
+            vm = av.get("versement_mensuel", {})
+            montant = sum(vm.get("repartition", {}).values())
+            if prochain and montant and 0 <= (prochain - aujourdhui).days <= 5:
+                etf_c, eur_c, part_apres = conseil_repartition(
+                    val_etf, val_eur, montant, cible["ETF"], av.get("minimum_ligne", 25))
+                av.setdefault("conseils", {})[prochain.isoformat()] = {"ETF": etf_c, "EURO": eur_c}
+                prog = vm.get("repartition", {})
+                changer = (prog.get("ETF"), prog.get("EURO")) != (etf_c, eur_c)
+                action = (f"<br><span style='color:#b71c1c;'>Ta répartition programmée est {prog.get('ETF', 0)}/{prog.get('EURO', 0)} : "
+                          f"à modifier chez Bourso <strong>avant le {prochain.strftime('%d/%m')}</strong> "
+                          f"(ou faire un versement libre).</span>" if changer else
+                          "<br>C'est ta répartition programmée : rien à changer.")
+                bloc_conseil = (
+                    f"<div style='margin-top:10px;padding:10px 12px;background:#fff8e1;border-left:3px solid #f9a825;border-radius:4px;font-size:13px;'>"
+                    f"<strong>Versement du {prochain.strftime('%d/%m')} ({montant} €) : {etf_c} € sur l'ETF, {eur_c} € sur le fonds euros.</strong>"
+                    f" Après versement : {part_apres:.0f} % ETF.{action}"
+                    f"<br><span style='font-size:11px;color:#888;'>Règle fixée par toi : on oriente chaque versement vers le côté "
+                    f"en retard sur la cible, sans arbitrage ni frais. Pas un pari sur le marché.</span></div>")
+            av["allocation"] = {"part_etf": round(part_etf, 1), "cible_etf": cible["ETF"],
+                                "prochain_versement": prochain.isoformat() if prochain else None,
+                                "conseil": av.get("conseils", {}).get(prochain.isoformat()) if prochain else None}
+            bloc_conseil = f"<p style='margin:8px 0 0;font-size:12px;color:#2a5490;'>{ligne_alloc}</p>" + bloc_conseil
 
         av["historique_valeur"][aujourdhui.isoformat()] = round(valeur, 2)
         av["cours_actuel"] = round(cours, 4)
@@ -2269,6 +2344,7 @@ def generer_html_assurance_vie():
 <div style='margin:0 0 16px;padding:14px 16px;background:#f3f7fd;border-left:4px solid #3b6fb6;border-radius:6px;'>
   <p style='margin:0;font-size:13px;font-weight:bold;color:#2a5490;'>Assurance vie {av.get('contrat', '')} — argent réel, ouverte le {ouv[8:10]}/{ouv[5:7]}/{ouv[:4]}</p>
   {tableau}
+  {bloc_conseil}
   {evolution}
   <p style='margin:8px 0 0;font-size:11px;color:#888;'>{note}</p>
 </div>"""
