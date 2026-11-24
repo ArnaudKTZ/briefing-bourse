@@ -6698,5 +6698,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.65%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-24",
+    "heure": "19:45",
+    "nom": "Sanofi",
+    "cours": 93.58,
+    "score": 69,
+    "signal": "ACHETER",
+    "raison": "Gap haussier +5.56% avec volume x2.7",
+    "envoyee": false
   }
 ]
