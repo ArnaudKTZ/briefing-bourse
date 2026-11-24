@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "heure": "20:05",
+  "heure": "22:29",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -68,8 +68,8 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.47,
-      "nb_news": 19,
+      "sentiment": 0.5,
+      "nb_news": 18,
       "titres_cles": [
         "Les actions d’Insmed bondissent de plus de 18% sur des rumeurs de rachat par Sanofi",
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
@@ -280,13 +280,9 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.38,
-      "nb_news": 16,
-      "titres_cles": [
-        "Worldline annonce le succès de l’offre de rachat sur ses obligations d’un montant de 500.000.000 euros portant intérêt au taux fixe de 0,875% arrivant à échéance en juin 2027",
-        "Worldline annonce le lancement d’une offre de rachat sur ses obligations arrivant à échéance en juin 2027",
-        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "Veolia": {
       "sentiment": 0.6,
