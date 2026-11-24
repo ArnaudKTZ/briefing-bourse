@@ -1,15 +1,15 @@
 {
   "date": "2026-11-24",
-  "heure": "06:45",
+  "heure": "16:17",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
+      "La Bourse de Paris en hausse, soutenue par Sanofi",
       "CAC 40 : la Bourse rebondit après une semaine de turbulences liées à l’IA",
       "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine",
-      "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic",
-      "CAC 40 : la Bourse chute, les résultats de Nvidia auront de lourdes répercussions sur tout le secteur de l’IA",
-      "BNP Paribas, Crédit agricole, SG… Opportunité d’investissement en Bourse après la chute des actions des banques ?"
+      "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic"
     ]
   },
   "valeurs": {
@@ -23,8 +23,8 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.32,
-      "nb_news": 19,
+      "sentiment": 0.28,
+      "nb_news": 18,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
         "États-Unis : TotalEnergies renforce son partenariat avec Continental Resources pour développer sa production de gaz",
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.4,
-      "nb_news": 15,
+      "sentiment": 0.53,
+      "nb_news": 19,
       "titres_cles": [
         "Les actions d’Insmed bondissent de plus de 18% sur des rumeurs de rachat par Sanofi",
         "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
-        "Sanofi progresse après l’élargissement de son partenariat avec Regeneron pour 8 milliards de dollars"
+        "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed"
       ]
     },
     "BNP Paribas": {
@@ -185,8 +185,8 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.05,
-      "nb_news": 19,
+      "sentiment": 0.06,
+      "nb_news": 18,
       "titres_cles": [
         "Capgemini sélectionné par la Commission européenne pour diriger un consortium dédié à la sécurité de l’IA et à l’évaluation des cyber-risques liés aux modèles d’IA avancés",
         "La plupart des entreprises prévoient d’adopter une stratégie d’IA multi-modèles, alors que près de six sur dix ont subi des coûts liés à l’IA significativement supérieurs aux prévisions",
@@ -280,8 +280,8 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0.4,
-      "nb_news": 15,
+      "sentiment": 0.38,
+      "nb_news": 16,
       "titres_cles": [
         "Worldline annonce le succès de l’offre de rachat sur ses obligations d’un montant de 500.000.000 euros portant intérêt au taux fixe de 0,875% arrivant à échéance en juin 2027",
         "Worldline annonce le lancement d’une offre de rachat sur ses obligations arrivant à échéance en juin 2027",
@@ -298,12 +298,12 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.0,
-      "nb_news": 13,
+      "sentiment": 0.14,
+      "nb_news": 14,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
-        "Les actions mondiales des semi-conducteurs s’envolent après l’introduction en bourse record d’Anthropic",
-        "Les actions européennes reculent sous la pression des nouvelles restrictions américaines sur les puces"
+        "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
+        "La Bourse de Paris en hausse, soutenue par Sanofi"
       ]
     },
     "Dassault Systèmes": {
