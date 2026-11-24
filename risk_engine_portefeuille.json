@@ -1,5 +1,5 @@
 {
-  "capital": 6826.280000000001,
+  "capital": 7350.050000000001,
   "positions": {
     "Publicis": {
       "nb_actions": 10,
@@ -11,18 +11,6 @@
       "frais_achat": 5.15,
       "stop_pct": 0.0422,
       "tp_pct": 0.0844,
-      "score_entree": 80
-    },
-    "Legrand": {
-      "nb_actions": 4,
-      "prix_entree": 136.3,
-      "date_entree": "2026-11-10",
-      "heure_entree": "16:29",
-      "secteur": "Industrie/Défense",
-      "cout_total": 545.2,
-      "frais_achat": 2.73,
-      "stop_pct": 0.08,
-      "tp_pct": 0.16,
       "score_entree": 80
     },
     "Eurazeo": {
@@ -129,7 +117,7 @@
     "2026-11-19": 9174.49,
     "2026-11-20": 9106.28,
     "2026-11-23": 9131.64,
-    "2026-11-24": 9094.32
+    "2026-11-24": 9130.21
   },
   "trades": [
     {
@@ -340,6 +328,17 @@
       "pnl_pct": -5.62,
       "frais_total": 8.75,
       "raison_sortie": "Stop -5.1% (ATR)"
+    },
+    {
+      "nom": "Legrand",
+      "entree": 136.3,
+      "sortie": 131.6,
+      "date_entree": "2026-11-10",
+      "date_sortie": "2026-11-24",
+      "heure_sortie": "11:31",
+      "pnl_pct": -3.93,
+      "frais_total": 5.36,
+      "raison_sortie": "ÉVITER intraday"
     }
   ],
   "regime_dernier": "baissier"
