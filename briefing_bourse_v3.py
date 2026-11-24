@@ -2136,6 +2136,12 @@ def _versements_mensuels_prevus(av, aujourdhui):
     return prevus
 
 
+# Le conseil de versement apparaît 7 jours avant le prélèvement (un week-end ne le masque pas).
+JOURS_PREAVIS_VERSEMENT = 7
+# Rempli par generer_html_assurance_vie() si la répartition programmée doit changer.
+ALERTE_ASSURANCE_VIE = ""
+
+
 def _prochain_versement(av, aujourdhui):
     """Date du prochain versement programmé (aujourd'hui inclus), ou None."""
     vm = av.get("versement_mensuel", {})
@@ -2180,6 +2186,7 @@ def generer_html_assurance_vie():
     L'ETF est valorisé au cours de clôture (Generali valorise à J+1/J+2, écart faible).
     Le fonds euros n'a pas de cours : capital garanti + intérêts courus estimés au taux
     de l'an passé (crédités réellement en janvier, non acquis avant)."""
+    global ALERTE_ASSURANCE_VIE
     if not os.path.exists(FICHIER_ASSURANCE_VIE):
         return ""
     try:
@@ -2245,12 +2252,17 @@ def generer_html_assurance_vie():
             prochain = _prochain_versement(av, aujourdhui)
             vm = av.get("versement_mensuel", {})
             montant = sum(vm.get("repartition", {}).values())
-            if prochain and montant and 0 <= (prochain - aujourdhui).days <= 5:
+            if prochain and montant and 0 <= (prochain - aujourdhui).days <= JOURS_PREAVIS_VERSEMENT:
                 etf_c, eur_c, part_apres = conseil_repartition(
                     val_etf, val_eur, montant, cible["ETF"], av.get("minimum_ligne", 25))
                 av.setdefault("conseils", {})[prochain.isoformat()] = {"ETF": etf_c, "EURO": eur_c}
                 prog = vm.get("repartition", {})
                 changer = (prog.get("ETF"), prog.get("EURO")) != (etf_c, eur_c)
+                if changer:
+                    # Remonté dans l'objet du mail : la répartition par défaut chez Bourso
+                    # est 25/25, il faut la changer AVANT le prélèvement (demande du 24/11).
+                    ALERTE_ASSURANCE_VIE = (f"Assurance vie : mettre {etf_c}/{eur_c} "
+                                            f"avant le {prochain.strftime('%d/%m')}")
                 action = (f"<br><span style='color:#b71c1c;'>Ta répartition programmée est {prog.get('ETF', 0)}/{prog.get('EURO', 0)} : "
                           f"à modifier chez Bourso <strong>avant le {prochain.strftime('%d/%m')}</strong> "
                           f"(ou faire un versement libre).</span>" if changer else
@@ -2493,6 +2505,8 @@ def envoyer_email(briefing, perf_stats, html_portefeuille="", html_dual_momentum
     today     = datetime.date.today()
     precision = perf_stats.get("precision", 0)
     sujet     = f"Agent Bourse V5 — {today.strftime('%d/%m/%Y')} | Precision : {precision}%"
+    if ALERTE_ASSURANCE_VIE:
+        sujet = f"⚠️ {ALERTE_ASSURANCE_VIE} | {sujet}"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = sujet
