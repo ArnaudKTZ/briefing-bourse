@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-24",
-  "heure": "22:29",
+  "date": "2026-11-25",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -280,9 +280,13 @@
       ]
     },
     "Worldline": {
-      "sentiment": 0,
-      "nb_news": 0,
-      "titres_cles": []
+      "sentiment": 0.38,
+      "nb_news": 16,
+      "titres_cles": [
+        "Worldline annonce le succès de l’offre de rachat sur ses obligations d’un montant de 500.000.000 euros portant intérêt au taux fixe de 0,875% arrivant à échéance en juin 2027",
+        "Worldline annonce le lancement d’une offre de rachat sur ses obligations arrivant à échéance en juin 2027",
+        "CREDIT AGRICOLE SA : Worldline et le Crédit Agricole font évoluer leur partenariat avec l’acquisition de 100% du capital de CAWL par le Crédit Agricole"
+      ]
     },
     "Veolia": {
       "sentiment": 0.6,
@@ -316,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
