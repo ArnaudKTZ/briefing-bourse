@@ -1,8 +1,8 @@
 {
   "date": "2026-11-25",
-  "heure": "19:11",
+  "heure": "21:37",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": -0.1,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris termine en baisse, entraînée par le décrochage de Wall Street",
@@ -14,11 +14,11 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": 0.0,
-      "nb_news": 8,
+      "sentiment": -0.11,
+      "nb_news": 9,
       "titres_cles": [
-        "LVMH : Poursuite de la croissance au troisième trimestre 2026",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
+        "LVMH, Hermès, Kering, Dior… «Opportunité d’investissement en Bourse pour un placement à long terme !»",
         "LVMH : Déclaration des transactions sur actions propres"
       ]
     },
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.33,
-      "nb_news": 12,
+      "sentiment": -0.31,
+      "nb_news": 13,
       "titres_cles": [
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
@@ -122,12 +122,12 @@
       ]
     },
     "Kering": {
-      "sentiment": -0.25,
-      "nb_news": 12,
+      "sentiment": -0.21,
+      "nb_news": 14,
       "titres_cles": [
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "Kering : Publication mensuelle du nombre d’actions composant le capital et du nombre total de droits de vote (Novembre 2026)"
+        "LVMH, Hermès, Kering, Dior… «Opportunité d’investissement en Bourse pour un placement à long terme !»"
       ]
     },
     "Société Générale": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
