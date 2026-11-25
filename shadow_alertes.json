@@ -6728,5 +6728,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.57%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-25",
+    "heure": "09:01",
+    "nom": "Saint-Gobain",
+    "cours": 73.2,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.04%",
+    "envoyee": false
   }
 ]
