@@ -1,15 +1,15 @@
 {
   "date": "2026-11-25",
-  "heure": "15:58",
+  "heure": "19:11",
   "marche": {
-    "sentiment_global": 0.0,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris termine en baisse, entraînée par le décrochage de Wall Street",
       "La Bourse de Paris avance, entre recul du pétrole et inflation américaine",
       "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
       "La Bourse de Paris en hausse, soutenue par Sanofi",
-      "CAC 40 : la Bourse rebondit après une semaine de turbulences liées à l’IA",
-      "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine"
+      "CAC 40 : la Bourse rebondit après une semaine de turbulences liées à l’IA"
     ]
   },
   "valeurs": {
@@ -32,8 +32,8 @@
       ]
     },
     "Hermès": {
-      "sentiment": -0.31,
-      "nb_news": 13,
+      "sentiment": -0.33,
+      "nb_news": 12,
       "titres_cles": [
         "Hermès : l’action chute en Bourse après des ventes trimestrielles sous les attentes",
         "Citi abaisse son objectif de cours sur Hermès en raison de la faiblesse persistante en Chine",
@@ -77,8 +77,8 @@
       ]
     },
     "BNP Paribas": {
-      "sentiment": 0.3,
-      "nb_news": 20,
+      "sentiment": 0.26,
+      "nb_news": 19,
       "titres_cles": [
         "BNP Paribas abaisse sa note sur Micron en raison des risques sur les plans de capacité des hyperscalers",
         "GROUPE BNP PARIBAS : Rachat d'actions - déclaration des transactions sur actions propres du 16 novembre au 20 novembre 2026",
@@ -212,8 +212,8 @@
       ]
     },
     "Publicis": {
-      "sentiment": 0.85,
-      "nb_news": 13,
+      "sentiment": 0.92,
+      "nb_news": 12,
       "titres_cles": [
         "L’acquisition de LiveRamp pourrait transformer les perspectives de croissance de Publicis, selon J.P. Morgan",
         "PUBLICIS GROUPE CONCLUT UN ACCORD AVEC LA FTC DANS LE CADRE DE L’ACQUISITION DE LIVERAMP",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.68,
+      "sentiment": 0.63,
       "nb_news": 19,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 16 au 20 novembre 2026",
