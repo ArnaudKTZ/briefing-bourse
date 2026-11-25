@@ -1,15 +1,15 @@
 {
   "date": "2026-11-25",
-  "heure": "06:45",
+  "heure": "15:58",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.0,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris avance, entre recul du pétrole et inflation américaine",
       "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
       "La Bourse de Paris en hausse, soutenue par Sanofi",
       "CAC 40 : la Bourse rebondit après une semaine de turbulences liées à l’IA",
-      "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine",
-      "La Bourse de Paris recule, éclipsée par les débuts d'Anthropic"
+      "La Bourse de Paris finit dans le rouge et recule de plus de 5% sur la semaine"
     ]
   },
   "valeurs": {
