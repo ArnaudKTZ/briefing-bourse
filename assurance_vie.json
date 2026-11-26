@@ -43,11 +43,11 @@
     "2026-11-23": 290.21,
     "2026-11-24": 291.99,
     "2026-11-25": 287.53,
-    "2026-11-26": 291.47
+    "2026-11-26": 293.02
   },
-  "cours_actuel": 4.888,
-  "var_jour": -1.7,
-  "valeur_actuelle": 291.47,
+  "cours_actuel": 4.9255,
+  "var_jour": 2.98,
+  "valeur_actuelle": 293.02,
   "total_verse": 300.0,
   "cible": {
     "ETF": 70,
@@ -55,7 +55,7 @@
   },
   "minimum_ligne": 25,
   "allocation": {
-    "part_etf": 69.1,
+    "part_etf": 69.3,
     "cible_etf": 70,
     "prochain_versement": "2027-01-10",
     "conseil": null
