@@ -6738,5 +6738,25 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.04%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-26",
+    "heure": "09:01",
+    "nom": "Sanofi",
+    "cours": 93.58,
+    "score": 61,
+    "signal": "SURVEILLER",
+    "raison": "Gap haussier +5.56% avec volume x2.7",
+    "envoyee": false
+  },
+  {
+    "date": "2026-11-26",
+    "heure": "09:01",
+    "nom": "Capgemini",
+    "cours": 119.95,
+    "score": 73,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.61%",
+    "envoyee": false
   }
 ]
