@@ -1,15 +1,15 @@
 {
   "date": "2026-11-26",
-  "heure": "06:45",
+  "heure": "15:29",
   "marche": {
-    "sentiment_global": -0.1,
+    "sentiment_global": -0.05,
     "nb_articles": 20,
     "titres_cles": [
+      "CAC 40 : la Bourse retrouve des couleurs après le rebond de Wall Street",
       "La Bourse de Paris termine en baisse, entraînée par le décrochage de Wall Street",
       "La Bourse de Paris avance, entre recul du pétrole et inflation américaine",
       "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
-      "La Bourse de Paris en hausse, soutenue par Sanofi",
-      "CAC 40 : la Bourse rebondit après une semaine de turbulences liées à l’IA"
+      "La Bourse de Paris en hausse, soutenue par Sanofi"
     ]
   },
   "valeurs": {
@@ -23,7 +23,7 @@
       ]
     },
     "TotalEnergies": {
-      "sentiment": 0.28,
+      "sentiment": 0.22,
       "nb_news": 18,
       "titres_cles": [
         "TotalEnergies décide la distribution d’un troisième acompte sur dividende de 0,90 €/action au titre de l’exercice 2026, en hausse de 5,9 % par rapport à 2025",
@@ -41,8 +41,8 @@
       ]
     },
     "Airbus": {
-      "sentiment": 0.25,
-      "nb_news": 16,
+      "sentiment": 0.27,
+      "nb_news": 15,
       "titres_cles": [
         "Cerberus Capital s’accorde pour racheter l’unité spatiale d’Airbus en Floride",
         "Airbus accélère ses livraisons en octobre et vise un nouveau record en 2026",
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.15,
-      "nb_news": 13,
+      "sentiment": 0.17,
+      "nb_news": 12,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -140,8 +140,8 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.5,
-      "nb_news": 10,
+      "sentiment": 0.45,
+      "nb_news": 11,
       "titres_cles": [
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
         "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
@@ -176,8 +176,8 @@
       ]
     },
     "Michelin": {
-      "sentiment": 0.24,
-      "nb_news": 17,
+      "sentiment": 0.22,
+      "nb_news": 18,
       "titres_cles": [
         "Sodexo crée un Conseil d’Innovation Culinaire afin de mobiliser l’expertise et la créativité de chefs renommés au bénéfice de ses clients et consommateurs",
         "Morgan Stanley optimiste sur Continental grâce à la hausse des marges pneus",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.63,
+      "sentiment": 0.53,
       "nb_news": 19,
       "titres_cles": [
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 16 au 20 novembre 2026",
@@ -307,8 +307,8 @@
       ]
     },
     "Dassault Systèmes": {
-      "sentiment": 0.44,
-      "nb_news": 18,
+      "sentiment": 0.47,
+      "nb_news": 17,
       "titres_cles": [
         "Journée investisseurs 2026 de Dassault Systèmes : une nouvelle ère industrielle, un nouveau cycle de croissance ; objectif de hausse à deux chiffres du chiffre d’affaires et du BNPA en 2029",
         "Dassault Systèmes vise une croissance à deux chiffres d’ici 2029",
