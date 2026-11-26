@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-25",
-  "heure": "21:37",
+  "date": "2026-11-26",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": -0.1,
     "nb_articles": 20,
@@ -14,12 +14,12 @@
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.11,
-      "nb_news": 9,
+      "sentiment": -0.1,
+      "nb_news": 10,
       "titres_cles": [
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "LVMH, Hermès, Kering, Dior… «Opportunité d’investissement en Bourse pour un placement à long terme !»",
-        "LVMH : Déclaration des transactions sur actions propres"
+        "Bernard Arnault pourra diriger la holding familiale de LVMH jusqu'à ses 95 ans",
+        "LVMH, Hermès, Kering, Dior… «Opportunité d’investissement en Bourse pour un placement à long terme !»"
       ]
     },
     "TotalEnergies": {
