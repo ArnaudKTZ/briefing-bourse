@@ -1,15 +1,15 @@
 {
   "date": "2026-11-26",
-  "heure": "15:29",
+  "heure": "18:53",
   "marche": {
-    "sentiment_global": -0.05,
+    "sentiment_global": 0.1,
     "nb_articles": 20,
     "titres_cles": [
+      "La Bourse de Paris en forte hausse jeudi",
       "CAC 40 : la Bourse retrouve des couleurs après le rebond de Wall Street",
       "La Bourse de Paris termine en baisse, entraînée par le décrochage de Wall Street",
       "La Bourse de Paris avance, entre recul du pétrole et inflation américaine",
-      "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
-      "La Bourse de Paris en hausse, soutenue par Sanofi"
+      "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed"
     ]
   },
   "valeurs": {
@@ -140,12 +140,12 @@
       ]
     },
     "Stellantis": {
-      "sentiment": 0.45,
-      "nb_news": 11,
+      "sentiment": 0.58,
+      "nb_news": 12,
       "titres_cles": [
+        "La Bourse de Paris en forte hausse jeudi",
         "Stellantis et Renault en hausse après l’accord UE-Chine sur les hybrides",
-        "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette",
-        "Renault profite de la montée en puissance de la R5, du potentiel en Bourse ?"
+        "Stellantis (Peugeot, Fiat, Chrysler) accroît ses ventes et réduit de 90% sa perte nette"
       ]
     },
     "Saint-Gobain": {
@@ -185,12 +185,12 @@
       ]
     },
     "Capgemini": {
-      "sentiment": 0.06,
+      "sentiment": 0.17,
       "nb_news": 18,
       "titres_cles": [
         "Capgemini sélectionné par la Commission européenne pour diriger un consortium dédié à la sécurité de l’IA et à l’évaluation des cyber-risques liés aux modèles d’IA avancés",
-        "La plupart des entreprises prévoient d’adopter une stratégie d’IA multi-modèles, alors que près de six sur dix ont subi des coûts liés à l’IA significativement supérieurs aux prévisions",
-        "États-Unis : TotalEnergies renforce son partenariat avec Continental Resources pour développer sa production de gaz"
+        "Succès du treizième plan d’actionnariat salarié de Capgemini",
+        "La plupart des entreprises prévoient d’adopter une stratégie d’IA multi-modèles, alors que près de six sur dix ont subi des coûts liés à l’IA significativement supérieurs aux prévisions"
       ]
     },
     "Renault": {
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
       ]
     },
     "Accor": {
