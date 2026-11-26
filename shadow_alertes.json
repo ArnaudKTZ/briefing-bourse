@@ -6758,5 +6758,15 @@
     "signal": "ACHETER",
     "raison": "Momentum intraday fort +2.61%",
     "envoyee": false
+  },
+  {
+    "date": "2026-11-26",
+    "heure": "16:01",
+    "nom": "Renault",
+    "cours": 28.67,
+    "score": 72,
+    "signal": "ACHETER",
+    "raison": "Momentum intraday fort +2.43%",
+    "envoyee": false
   }
 ]
