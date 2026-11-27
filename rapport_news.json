@@ -1,25 +1,25 @@
 {
   "date": "2026-11-27",
-  "heure": "06:45",
+  "heure": "15:22",
   "marche": {
-    "sentiment_global": 0.1,
+    "sentiment_global": 0.15,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en forte hausse jeudi",
+      "Bourse de Paris: hausse timide avant le retour de Wall Street",
       "CAC 40 : la Bourse retrouve des couleurs après le rebond de Wall Street",
       "La Bourse de Paris termine en baisse, entraînée par le décrochage de Wall Street",
-      "La Bourse de Paris avance, entre recul du pétrole et inflation américaine",
-      "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed"
+      "La Bourse de Paris avance, entre recul du pétrole et inflation américaine"
     ]
   },
   "valeurs": {
     "LVMH": {
-      "sentiment": -0.1,
-      "nb_news": 10,
+      "sentiment": 0.0,
+      "nb_news": 11,
       "titres_cles": [
+        "LVMH Acompte sur dividende 2026",
         "La Bourse de Paris termine dans le rouge dans un climat d'aversion pour le risque",
-        "Bernard Arnault pourra diriger la holding familiale de LVMH jusqu'à ses 95 ans",
-        "LVMH, Hermès, Kering, Dior… «Opportunité d’investissement en Bourse pour un placement à long terme !»"
+        "Bernard Arnault pourra diriger la holding familiale de LVMH jusqu'à ses 95 ans"
       ]
     },
     "TotalEnergies": {
@@ -68,12 +68,12 @@
       ]
     },
     "Sanofi": {
-      "sentiment": 0.5,
+      "sentiment": 0.61,
       "nb_news": 18,
       "titres_cles": [
+        "Sanofi profitera en Bourse d’une acquisition historique qui change la donne ! Faut-il investir sur l’action ?",
         "Les actions d’Insmed bondissent de plus de 18% sur des rumeurs de rachat par Sanofi",
-        "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026",
-        "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed"
+        "Communiqué de presse : T3 2026 : croissance à deux chiffres du chiffre d’affaires et du BNPA ; révision à la hausse des perspectives 2026"
       ]
     },
     "BNP Paribas": {
@@ -95,8 +95,8 @@
       ]
     },
     "Safran": {
-      "sentiment": 0.17,
-      "nb_news": 12,
+      "sentiment": 0.18,
+      "nb_news": 11,
       "titres_cles": [
         "Safran porté par une forte demande en moteurs civils et pièces de rechange, rentabilité record",
         "CAC 40 : la Bourse de Paris en baisse avant la décision de Moody’s sur la dette française",
@@ -262,7 +262,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.3,
       "nb_news": 20,
       "titres_cles": [
         "Deutsche Bank voit le risque d’endettement d’Eutelsat augmenter",
@@ -320,8 +320,8 @@
       "nb_news": 3,
       "titres_cles": [
         "Morgan Stanley préfère Edenred à Pluxee pour une reprise plus claire",
-        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique",
-        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»"
+        "Edenred s'envole en Bourse après avoir été «approché par des fonds d'investissement»",
+        "Edenred bondit de 16% après des rumeurs d’OPA d’un fonds britannique"
       ]
     },
     "Accor": {
@@ -342,12 +342,12 @@
       ]
     },
     "Thales": {
-      "sentiment": 0.12,
+      "sentiment": 0.06,
       "nb_news": 17,
       "titres_cles": [
-        "Thales et Google renforcent leur partenariat pour sécuriser l'IA agentique",
         "Défense : Thales profitera-t-il en Bourse des performances d’Exail Technologies ? Faut-il investir ?",
-        "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum"
+        "Thales veut mettre la main sur Lumibird pour bâtir un champion européen du laser",
+        "Thales entame des négociations exclusives pour acquérir 51,6% de Lumibird"
       ]
     },
     "Forvia": {
