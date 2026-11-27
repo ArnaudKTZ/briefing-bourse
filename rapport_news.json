@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-26",
-  "heure": "21:30",
+  "date": "2026-11-27",
+  "heure": "06:45",
   "marche": {
     "sentiment_global": 0.1,
     "nb_articles": 20,
@@ -262,12 +262,12 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.53,
-      "nb_news": 19,
+      "sentiment": 0.4,
+      "nb_news": 20,
       "titres_cles": [
+        "Deutsche Bank voit le risque d’endettement d’Eutelsat augmenter",
         "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 16 au 20 novembre 2026",
-        "CRCAM Alpes Provence : Programme de rachat des CCI 2026",
-        "FLEURY MICHON : Déclaration des opérations de rachat d'actions du 9 au 13 novembre 2026"
+        "CRCAM Alpes Provence : Programme de rachat des CCI 2026"
       ]
     },
     "Alstom": {
