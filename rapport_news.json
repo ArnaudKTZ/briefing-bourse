@@ -1,8 +1,8 @@
 {
   "date": "2026-11-27",
-  "heure": "18:38",
+  "heure": "21:17",
   "marche": {
-    "sentiment_global": 0.15,
+    "sentiment_global": 0.2,
     "nb_articles": 20,
     "titres_cles": [
       "La Bourse de Paris en forte hausse jeudi",
@@ -50,13 +50,9 @@
       ]
     },
     "Schneider Electric": {
-      "sentiment": 0.56,
-      "nb_news": 16,
-      "titres_cles": [
-        "Schneider Electric finira-t-il par profiter en Bourse du rachat de PTC ? Faut-il investir sur l’action ?",
-        "Schneider Electric signe un trimestre record et relève une nouvelle fois ses objectifs pour 2026",
-        "Bourse : faut-il investir sur Schneider Electric, qui signe avec le rachat de PTC un tournant stratégique majeur ?"
-      ]
+      "sentiment": 0,
+      "nb_news": 0,
+      "titres_cles": []
     },
     "L'Oréal": {
       "sentiment": 0.07,
@@ -262,7 +258,7 @@
       "titres_cles": []
     },
     "Teleperformance": {
-      "sentiment": 0.4,
+      "sentiment": 0.45,
       "nb_news": 20,
       "titres_cles": [
         "JACQUET METALS SA : PROGRAMME DE RACHAT DE TITRES",
@@ -298,8 +294,8 @@
       ]
     },
     "STMicroelectronics": {
-      "sentiment": 0.14,
-      "nb_news": 14,
+      "sentiment": 0.13,
+      "nb_news": 15,
       "titres_cles": [
         "Ces 2 valeurs européennes IT pourraient profiter d’une régulation accrue de l’IA",
         "CAC 40 : la Bourse de Paris ouvre en hausse, portée par l'offre de Sanofi pour racheter l'américain Insmed",
