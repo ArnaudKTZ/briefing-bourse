@@ -1,69 +1,21 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-28",
   "nb_articles": 40,
-  "top": [
-    {
-      "titre": "Dynamic Spatio-Temporal Graph Attention Networks with Nested Clustered Optimization for Multi-Asset Portfolios",
-      "lien": "https://arxiv.org/abs/2611.19903v1",
-      "date": "2026-11-15",
-      "score": 27,
-      "hits": [
-        "momentum",
-        "regime",
-        "asset allocation",
-        "risk parity",
-        "tactical allocation",
-        "walk-forward",
-        "out-of-sample",
-        "transaction cost",
-        "machine learning",
-        "drawdown"
-      ],
-      "deja_tranche": [],
-      "extrait": "Nested Clustered Optimization (NCO) insulates asset allocation from Markowitz covariance ill-conditioning. However, classical tree clustering relies on static pairwise Pearson correlation, failing to capture time-varying, asymmetric downside risk contagion across multi-asset markets."
-    },
-    {
-      "titre": "Idiosyncratic Market Effects in Global Time Series Momentum",
-      "lien": "https://arxiv.org/abs/2611.15646v1",
-      "date": "2026-11-11",
-      "score": 19,
-      "hits": [
-        "momentum",
-        "factor",
-        "time series momentum",
-        "out-of-sample",
-        "robust"
-      ],
-      "deja_tranche": [],
-      "extrait": "Time series momentum is a pervasive explanatory factor in financial markets whereby a market's recent historical average return positively predicts future returns. Recent applications of statistical learning augment the traditional linear model definition with a more descriptive global nonlinear factor model."
-    },
-    {
-      "titre": "Who Should Be on the Panel? Task-Conditioned Persona Selection for LLM Trading Agents",
-      "lien": "https://arxiv.org/abs/2611.18150v1",
-      "date": "2026-11-13",
-      "score": 8,
-      "hits": [
-        "llm",
-        "agent",
-        "drawdown"
-      ],
-      "deja_tranche": [],
-      "extrait": "Multi-agent LLM systems are built by fixing a cast of roles and then designing how the cast coordinates. Which agents should make up the group for a given task is left to the designer, and the same cast is reused for every task."
-    }
-  ],
+  "top": [],
   "ecartes_hors_portee": {
-    "options": 5,
+    "options": 4,
+    "deep learning": 1,
+    "couverture par dérivés": 2,
     "informatique quantique": 1,
-    "tenue de marché": 2,
-    "couverture par dérivés": 1,
-    "contrats à terme": 2
+    "tenue de marché": 1,
+    "réseaux de neurones": 1
   },
   "depots_13f": [
     {
       "gerant": "Berkshire Hathaway (Buffett)",
       "date_position": "2026-09-30",
       "date_depot": "2026-11-16",
-      "retard_jours": 52,
+      "retard_jours": 59,
       "nouvelles": [
         "BENDING SPOONS SPA"
       ],
@@ -108,7 +60,7 @@
       "gerant": "Himalaya Capital (Li Lu)",
       "date_position": "2026-09-30",
       "date_depot": "2026-11-16",
-      "retard_jours": 52,
+      "retard_jours": 59,
       "nouvelles": [],
       "sorties": [],
       "variations": [
